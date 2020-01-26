@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ public:
 	}
 
 
-	class UBPC_LookAtFSM_C* TryGetLookAtFSMComponent(class AActor* TargetActor, class UObject* __WorldContext);
+	class UBPC_LookAtFSM_C* STATIC_TryGetLookAtFSMComponent(class AActor* TargetActor, class UObject* __WorldContext);
 	void STATIC_IsWithinASpecifiedAngle180(const struct FVector& TargetLocation, class AActor* SelfActor, float Angle, class UObject* __WorldContext, bool* bIsWithin, struct FRotator* LookAtRotation, float* TargetAngle);
 	void STATIC_LookAtSetup_Initialize(class UBPC_LookAt_C* LookAt, class UObject* __WorldContext);
 	void STATIC_LookAtSetup_ParamaterDefault(class UBPC_LookAt_C* LookAt, class UObject* __WorldContext);

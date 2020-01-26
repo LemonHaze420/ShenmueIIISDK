@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,12 +39,12 @@ public:
 
 	void UpdateDevelopText();
 	void UpdateGameTime();
-	void STATIC_UpdateACName();
+	void UpdateACName();
 	struct FText GetDevelopText();
-	ESlateVisibility STATIC_GetDevelopTextVisibility();
+	ESlateVisibility GetDevelopTextVisibility();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_ExecuteUbergraph_DevelopmentText(int EntryPoint);
+	void ExecuteUbergraph_DevelopmentText(int EntryPoint);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,50 +25,55 @@ public:
 	}
 
 
-	bool RemoveGameplayTag(const struct FGameplayTag& Tag, struct FGameplayTagContainer* TagContainer);
-	bool NotEqual_TagTag(const struct FGameplayTag& A, const struct FString& B);
-	bool NotEqual_TagContainerTagContainer(const struct FGameplayTagContainer& A, const struct FString& B);
-	bool NotEqual_GameplayTagContainer(const struct FGameplayTagContainer& A, const struct FGameplayTagContainer& B);
-	bool NotEqual_GameplayTag(const struct FGameplayTag& A, const struct FGameplayTag& B);
-	bool MatchesTag(const struct FGameplayTag& TagOne, const struct FGameplayTag& TagTwo, bool bExactMatch);
-	bool MatchesAnyTags(const struct FGameplayTag& TagOne, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
-	struct FGameplayTagContainer MakeLiteralGameplayTagContainer(const struct FGameplayTagContainer& Value);
-	struct FGameplayTag MakeLiteralGameplayTag(const struct FGameplayTag& Value);
-	struct FGameplayTagQuery MakeGameplayTagQuery(const struct FGameplayTagQuery& TagQuery);
-	struct FGameplayTagContainer MakeGameplayTagContainerFromTag(const struct FGameplayTag& SingleTag);
-	struct FGameplayTagContainer MakeGameplayTagContainerFromArray(TArray<struct FGameplayTag> GameplayTags);
-	bool IsGameplayTagValid(const struct FGameplayTag& GameplayTag);
-	bool HasTag(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTag& Tag, bool bExactMatch);
-	bool HasAnyTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
-	bool HasAllTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
-	bool HasAllMatchingGameplayTags(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, const struct FGameplayTagContainer& OtherContainer);
-	struct FName GetTagName(const struct FGameplayTag& GameplayTag);
-	int GetNumGameplayTagsInContainer(const struct FGameplayTagContainer& TagContainer);
-	struct FString GetDebugStringFromGameplayTagContainer(const struct FGameplayTagContainer& TagContainer);
-	struct FString GetDebugStringFromGameplayTag(const struct FGameplayTag& GameplayTag);
-	void GetAllActorsOfClassMatchingTagQuery(class UObject* WorldContextObject, class UClass* ActorClass, const struct FGameplayTagQuery& GameplayTagQuery, TArray<class AActor*>* OutActors);
-	bool EqualEqual_GameplayTagContainer(const struct FGameplayTagContainer& A, const struct FGameplayTagContainer& B);
-	bool EqualEqual_GameplayTag(const struct FGameplayTag& A, const struct FGameplayTag& B);
-	bool DoesTagAssetInterfaceHaveTag(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, const struct FGameplayTag& Tag);
-	bool DoesContainerMatchTagQuery(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagQuery& TagQuery);
-	void BreakGameplayTagContainer(const struct FGameplayTagContainer& GameplayTagContainer, TArray<struct FGameplayTag>* GameplayTags);
-	void AppendGameplayTagContainers(const struct FGameplayTagContainer& InTagContainer, struct FGameplayTagContainer* InOutTagContainer);
-	void AddGameplayTag(const struct FGameplayTag& Tag, struct FGameplayTagContainer* TagContainer);
+	bool STATIC_RemoveGameplayTag(const struct FGameplayTag& Tag, struct FGameplayTagContainer* TagContainer);
+	bool STATIC_NotEqual_TagTag(const struct FGameplayTag& A, const struct FString& B);
+	bool STATIC_NotEqual_TagContainerTagContainer(const struct FGameplayTagContainer& A, const struct FString& B);
+	bool STATIC_NotEqual_GameplayTagContainer(const struct FGameplayTagContainer& A, const struct FGameplayTagContainer& B);
+	bool STATIC_NotEqual_GameplayTag(const struct FGameplayTag& A, const struct FGameplayTag& B);
+	bool STATIC_MatchesTag(const struct FGameplayTag& TagOne, const struct FGameplayTag& TagTwo, bool bExactMatch);
+	bool STATIC_MatchesAnyTags(const struct FGameplayTag& TagOne, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
+	struct FGameplayTagContainer STATIC_MakeLiteralGameplayTagContainer(const struct FGameplayTagContainer& Value);
+	struct FGameplayTag STATIC_MakeLiteralGameplayTag(const struct FGameplayTag& Value);
+	struct FGameplayTagQuery STATIC_MakeGameplayTagQuery(const struct FGameplayTagQuery& TagQuery);
+	struct FGameplayTagContainer STATIC_MakeGameplayTagContainerFromTag(const struct FGameplayTag& SingleTag);
+	struct FGameplayTagContainer STATIC_MakeGameplayTagContainerFromArray(TArray<struct FGameplayTag> GameplayTags);
+	bool STATIC_IsGameplayTagValid(const struct FGameplayTag& GameplayTag);
+	bool STATIC_HasTag(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTag& Tag, bool bExactMatch);
+	bool STATIC_HasAnyTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
+	bool STATIC_HasAllTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
+	bool STATIC_HasAllMatchingGameplayTags(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, const struct FGameplayTagContainer& OtherContainer);
+	struct FName STATIC_GetTagName(const struct FGameplayTag& GameplayTag);
+	int STATIC_GetNumGameplayTagsInContainer(const struct FGameplayTagContainer& TagContainer);
+	struct FString STATIC_GetDebugStringFromGameplayTagContainer(const struct FGameplayTagContainer& TagContainer);
+	struct FString STATIC_GetDebugStringFromGameplayTag(const struct FGameplayTag& GameplayTag);
+	void STATIC_GetAllActorsOfClassMatchingTagQuery(class UObject* WorldContextObject, class UClass* ActorClass, const struct FGameplayTagQuery& GameplayTagQuery, TArray<class AActor*>* OutActors);
+	bool STATIC_EqualEqual_GameplayTagContainer(const struct FGameplayTagContainer& A, const struct FGameplayTagContainer& B);
+	bool STATIC_EqualEqual_GameplayTag(const struct FGameplayTag& A, const struct FGameplayTag& B);
+	bool STATIC_DoesTagAssetInterfaceHaveTag(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, const struct FGameplayTag& Tag);
+	bool STATIC_DoesContainerMatchTagQuery(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagQuery& TagQuery);
+	void STATIC_BreakGameplayTagContainer(const struct FGameplayTagContainer& GameplayTagContainer, TArray<struct FGameplayTag>* GameplayTags);
+	void STATIC_AppendGameplayTagContainers(const struct FGameplayTagContainer& InTagContainer, struct FGameplayTagContainer* InOutTagContainer);
+	void STATIC_AddGameplayTag(const struct FGameplayTag& Tag, struct FGameplayTagContainer* TagContainer);
 };
 
 
-// Class GameplayTags.EditableGameplayTagQueryExpression
+// Class GameplayTags.GameplayTagAssetInterface
 // 0x0000 (0x0028 - 0x0028)
-class UEditableGameplayTagQueryExpression : public UObject
+class UGameplayTagAssetInterface : public UInterface
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression");
+		static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagAssetInterface");
 		return ptr;
 	}
 
+
+	bool HasMatchingGameplayTag(const struct FGameplayTag& TagToCheck);
+	bool HasAnyMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer);
+	bool HasAllMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer);
+	void GetOwnedGameplayTags(struct FGameplayTagContainer* TagContainer);
 };
 
 
@@ -91,16 +96,31 @@ public:
 };
 
 
-// Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch
+// Class GameplayTags.EditableGameplayTagQueryExpression
+// 0x0000 (0x0028 - 0x0028)
+class UEditableGameplayTagQueryExpression : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch
 // 0x0020 (0x0048 - 0x0028)
-class UEditableGameplayTagQueryExpression_AnyTagsMatch : public UEditableGameplayTagQueryExpression
+class UEditableGameplayTagQueryExpression_AllTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
 	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0020) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch");
+		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch");
 		return ptr;
 	}
 
@@ -139,22 +159,6 @@ public:
 };
 
 
-// Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
-// 0x0010 (0x0038 - 0x0028)
-class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplayTagQueryExpression
-{
-public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch");
-		return ptr;
-	}
-
-};
-
-
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch
 // 0x0010 (0x0038 - 0x0028)
 class UEditableGameplayTagQueryExpression_AllExprMatch : public UEditableGameplayTagQueryExpression
@@ -165,6 +169,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch");
+		return ptr;
+	}
+
+};
+
+
+// Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
+// 0x0010 (0x0038 - 0x0028)
+class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplayTagQueryExpression
+{
+public:
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch");
 		return ptr;
 	}
 
@@ -269,39 +289,19 @@ public:
 };
 
 
-// Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch
+// Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch
 // 0x0020 (0x0048 - 0x0028)
-class UEditableGameplayTagQueryExpression_AllTagsMatch : public UEditableGameplayTagQueryExpression
+class UEditableGameplayTagQueryExpression_AnyTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
 	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0020) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch");
+		static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch");
 		return ptr;
 	}
 
-};
-
-
-// Class GameplayTags.GameplayTagAssetInterface
-// 0x0000 (0x0028 - 0x0028)
-class UGameplayTagAssetInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagAssetInterface");
-		return ptr;
-	}
-
-
-	bool HasMatchingGameplayTag(const struct FGameplayTag& TagToCheck);
-	bool HasAnyMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer);
-	bool HasAllMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer);
-	void GetOwnedGameplayTags(struct FGameplayTagContainer* TagContainer);
 };
 
 

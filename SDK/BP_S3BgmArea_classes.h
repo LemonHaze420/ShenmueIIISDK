@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,11 +30,11 @@ public:
 	}
 
 
-	void STATIC_GetBGM(class USoundAtomCue** BGM);
-	void STATIC_InitCue();
-	struct FS3BgmAreaSourceInfo STATIC_GetSourceInfo();
+	void GetBGM(class USoundAtomCue** BGM);
+	void InitCue();
+	struct FS3BgmAreaSourceInfo GetSourceInfo();
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_S3BgmArea(int EntryPoint);
 };
 

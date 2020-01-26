@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_UDY_Input.BP_MiniGame_UDY_Input_C.UserConstructionScript
-// (NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_UDY_Input_C::STATIC_UserConstructionScript()
+void ABP_MiniGame_UDY_Input_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDY_Input.BP_MiniGame_UDY_Input_C.UserConstructionScript");
 
@@ -31,11 +31,11 @@ void ABP_MiniGame_UDY_Input_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGame_UDY_Input.BP_MiniGame_UDY_Input_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2
-// (Native, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGame_UDY_Input_C::STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key)
+void ABP_MiniGame_UDY_Input_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDY_Input.BP_MiniGame_UDY_Input_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2");
 
@@ -43,7 +43,6 @@ void ABP_MiniGame_UDY_Input_C::STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActio
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,11 +51,11 @@ void ABP_MiniGame_UDY_Input_C::STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActio
 
 
 // Function BP_MiniGame_UDY_Input.BP_MiniGame_UDY_Input_C.ReceiveTick
-// (NetRequest, Exec, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UDY_Input_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_UDY_Input_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDY_Input.BP_MiniGame_UDY_Input_C.ReceiveTick");
 
@@ -72,11 +71,11 @@ void ABP_MiniGame_UDY_Input_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_UDY_Input.BP_MiniGame_UDY_Input_C.ExecuteUbergraph_BP_MiniGame_UDY_Input
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UDY_Input_C::STATIC_ExecuteUbergraph_BP_MiniGame_UDY_Input(int EntryPoint)
+void ABP_MiniGame_UDY_Input_C::ExecuteUbergraph_BP_MiniGame_UDY_Input(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDY_Input.BP_MiniGame_UDY_Input_C.ExecuteUbergraph_BP_MiniGame_UDY_Input");
 
@@ -84,7 +83,6 @@ void ABP_MiniGame_UDY_Input_C::STATIC_ExecuteUbergraph_BP_MiniGame_UDY_Input(int
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

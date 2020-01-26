@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.UserConstructionScript
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_ForcedEndSerach_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_ForcedEndSerach_C::UserConstructionScript()
 
 
 // Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.EvtFreeState
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_ForcedEndSerach_C::EvtFreeState()
 {
@@ -40,7 +40,6 @@ void ABP_ForcedEndSerach_C::EvtFreeState()
 	ABP_ForcedEndSerach_C_EvtFreeState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,7 +48,7 @@ void ABP_ForcedEndSerach_C::EvtFreeState()
 
 
 // Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_ForcedEndSerach_C::ReceiveBeginPlay()
 {
@@ -58,7 +57,6 @@ void ABP_ForcedEndSerach_C::ReceiveBeginPlay()
 	ABP_ForcedEndSerach_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -67,11 +65,11 @@ void ABP_ForcedEndSerach_C::ReceiveBeginPlay()
 
 
 // Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.ExecuteUbergraph_BP_ForcedEndSerach
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ForcedEndSerach_C::STATIC_ExecuteUbergraph_BP_ForcedEndSerach(int EntryPoint)
+void ABP_ForcedEndSerach_C::ExecuteUbergraph_BP_ForcedEndSerach(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.ExecuteUbergraph_BP_ForcedEndSerach");
 
@@ -79,7 +77,6 @@ void ABP_ForcedEndSerach_C::STATIC_ExecuteUbergraph_BP_ForcedEndSerach(int Entry
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

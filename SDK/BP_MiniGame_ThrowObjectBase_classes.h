@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,24 +35,24 @@ public:
 	}
 
 
-	void STATIC_GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
-	void STATIC_IsGameCenterMode(bool* bGameCenter);
-	void STATIC_SetGameCenterMode(bool bGolfType);
+	void GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
+	void IsGameCenterMode(bool* bGameCenter);
+	void SetGameCenterMode(bool bGolfType);
 	void Throw();
-	void STATIC_IsStoped(bool* bStoped);
-	void STATIC_UserConstructionScript();
-	void STATIC_WinMiniGame();
-	void STATIC_LoseMiniGame();
-	void STATIC_DrawMiniGame();
-	void STATIC_EndMiniGame();
-	void STATIC_StartMiniGame();
-	void STATIC_FinalizeTalk();
-	void STATIC_RestartMiniGame();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_EnterMiniGame(float EnterTime);
+	void IsStoped(bool* bStoped);
+	void UserConstructionScript();
+	void WinMiniGame();
+	void LoseMiniGame();
+	void DrawMiniGame();
+	void EndMiniGame();
+	void StartMiniGame();
+	void FinalizeTalk();
+	void RestartMiniGame();
+	void ReceiveTick(float DeltaSeconds);
+	void EnterMiniGame(float EnterTime);
 	void ExecuteUbergraph_BP_MiniGame_ThrowObjectBase(int EntryPoint);
-	void STATIC_OnStopedDispatcher__DelegateSignature(bool bResult, int Score, const struct FName& GiftName, bool IsSpecial, class USoundAtomCue* SuccessSound, bool IsGameCenter);
-	void STATIC_OnFirstTouchDispatcher__DelegateSignature();
+	void OnStopedDispatcher__DelegateSignature(bool bResult, int Score, const struct FName& GiftName, bool IsSpecial, class USoundAtomCue* SuccessSound, bool IsGameCenter);
+	void OnFirstTouchDispatcher__DelegateSignature();
 };
 
 

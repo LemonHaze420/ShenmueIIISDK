@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_SkillEditorFrame.WBP_SkillEditorFrame_C.SetBackColor
-// (Net, NetReliable, NetRequest, Event, Private, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsSelect                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,11 +34,11 @@ void UWBP_SkillEditorFrame_C::SetBackColor(bool IsSelect)
 
 
 // Function WBP_SkillEditorFrame.WBP_SkillEditorFrame_C.GetVisibility_Background
-// (Net, NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UWBP_SkillEditorFrame_C::STATIC_GetVisibility_Background()
+ESlateVisibility UWBP_SkillEditorFrame_C::GetVisibility_Background()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkillEditorFrame.WBP_SkillEditorFrame_C.GetVisibility_Background");
 
@@ -55,11 +55,11 @@ ESlateVisibility UWBP_SkillEditorFrame_C::STATIC_GetVisibility_Background()
 
 
 // Function WBP_SkillEditorFrame.WBP_SkillEditorFrame_C.GetVisibility_FrameLine
-// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UWBP_SkillEditorFrame_C::STATIC_GetVisibility_FrameLine()
+ESlateVisibility UWBP_SkillEditorFrame_C::GetVisibility_FrameLine()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkillEditorFrame.WBP_SkillEditorFrame_C.GetVisibility_FrameLine");
 
@@ -76,11 +76,11 @@ ESlateVisibility UWBP_SkillEditorFrame_C::STATIC_GetVisibility_FrameLine()
 
 
 // Function WBP_SkillEditorFrame.WBP_SkillEditorFrame_C.PreConstruct
-// (Net, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_SkillEditorFrame_C::STATIC_PreConstruct(bool IsDesignTime)
+void UWBP_SkillEditorFrame_C::PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkillEditorFrame.WBP_SkillEditorFrame_C.PreConstruct");
 
@@ -96,11 +96,11 @@ void UWBP_SkillEditorFrame_C::STATIC_PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_SkillEditorFrame.WBP_SkillEditorFrame_C.ExecuteUbergraph_WBP_SkillEditorFrame
-// (Native, Static, NetMulticast, Public, Protected, NetServer, DLLImport, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_SkillEditorFrame_C::STATIC_ExecuteUbergraph_WBP_SkillEditorFrame(int EntryPoint)
+void UWBP_SkillEditorFrame_C::ExecuteUbergraph_WBP_SkillEditorFrame(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkillEditorFrame.WBP_SkillEditorFrame_C.ExecuteUbergraph_WBP_SkillEditorFrame");
 
@@ -108,7 +108,6 @@ void UWBP_SkillEditorFrame_C::STATIC_ExecuteUbergraph_WBP_SkillEditorFrame(int E
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

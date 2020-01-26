@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,13 +31,13 @@ public:
 	}
 
 
-	void STATIC_IsFarCharacter(bool* Far);
-	void STATIC_IsNearCharacter(bool* bNear);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_EnabledFadeCheck();
-	void STATIC_DisabledFadeCheck();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_BPC_CharacterFadeCamera(int EntryPoint);
+	void IsFarCharacter(bool* Far);
+	void IsNearCharacter(bool* bNear);
+	void ReceiveBeginPlay();
+	void EnabledFadeCheck();
+	void DisabledFadeCheck();
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BPC_CharacterFadeCamera(int EntryPoint);
 };
 
 

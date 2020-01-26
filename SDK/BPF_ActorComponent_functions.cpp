@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_ActorComponent.BPF_ActorComponent_C.SafeDestroyAndRelease
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UActorComponent*         Component                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -27,7 +27,6 @@ void UBPF_ActorComponent_C::STATIC_SafeDestroyAndRelease(class UObject* __WorldC
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

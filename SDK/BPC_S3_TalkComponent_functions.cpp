@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CommandStartShowHP
-// (Net, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Show                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_CommandStartShowHP(bool Show)
+void UBPC_S3_TalkComponent_C::CommandStartShowHP(bool Show)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CommandStartShowHP");
 
@@ -34,7 +34,7 @@ void UBPC_S3_TalkComponent_C::STATIC_CommandStartShowHP(bool Show)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CommandCancelKS
-// (Net, NetReliable, Native, NetResponse, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3_TalkComponent_C::CommandCancelKS()
 {
@@ -43,7 +43,6 @@ void UBPC_S3_TalkComponent_C::CommandCancelKS()
 	UBPC_S3_TalkComponent_C_CommandCancelKS_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,7 +51,7 @@ void UBPC_S3_TalkComponent_C::CommandCancelKS()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CommandStartKS
-// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bNoCancel                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -72,7 +71,7 @@ void UBPC_S3_TalkComponent_C::CommandStartKS(bool bNoCancel)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CommandCancelMessagewaiting
-// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3_TalkComponent_C::CommandCancelMessagewaiting()
 {
@@ -81,7 +80,6 @@ void UBPC_S3_TalkComponent_C::CommandCancelMessagewaiting()
 	UBPC_S3_TalkComponent_C_CommandCancelMessagewaiting_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,16 +88,15 @@ void UBPC_S3_TalkComponent_C::CommandCancelMessagewaiting()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CommandStartMessagewaiting
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_S3_TalkComponent_C::STATIC_CommandStartMessagewaiting()
+void UBPC_S3_TalkComponent_C::CommandStartMessagewaiting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CommandStartMessagewaiting");
 
 	UBPC_S3_TalkComponent_C_CommandStartMessagewaiting_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,7 +105,7 @@ void UBPC_S3_TalkComponent_C::STATIC_CommandStartMessagewaiting()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ShouldDelayAction
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -119,7 +116,6 @@ bool UBPC_S3_TalkComponent_C::ShouldDelayAction()
 	UBPC_S3_TalkComponent_C_ShouldDelayAction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -130,7 +126,7 @@ bool UBPC_S3_TalkComponent_C::ShouldDelayAction()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CheckItem
-// (Native, Event, NetResponse, MulticastDelegate, Public, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TMap<struct FName, int>        ItemMap                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           Possess                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -143,7 +139,6 @@ void UBPC_S3_TalkComponent_C::CheckItem(TMap<struct FName, int> ItemMap, bool* P
 	params.ItemMap = ItemMap;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,12 +150,12 @@ void UBPC_S3_TalkComponent_C::CheckItem(TMap<struct FName, int> ItemMap, bool* P
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetEventIconType
-// (NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           AnimIcon                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_GetEventIconType(ES3ActionIconType* Type, bool* AnimIcon)
+void UBPC_S3_TalkComponent_C::GetEventIconType(ES3ActionIconType* Type, bool* AnimIcon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetEventIconType");
 
@@ -180,12 +175,12 @@ void UBPC_S3_TalkComponent_C::STATIC_GetEventIconType(ES3ActionIconType* Type, b
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.IsShowDLCIcon
-// (NetReliable, Event, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Show                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           AnimIcon                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_IsShowDLCIcon(bool* Show, bool* AnimIcon)
+void UBPC_S3_TalkComponent_C::IsShowDLCIcon(bool* Show, bool* AnimIcon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.IsShowDLCIcon");
 
@@ -205,7 +200,7 @@ void UBPC_S3_TalkComponent_C::STATIC_IsShowDLCIcon(bool* Show, bool* AnimIcon)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.DoCancelButton_Impl
-// (NetRequest, Exec, Event, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3_TalkComponent_C::DoCancelButton_Impl()
 {
@@ -222,14 +217,14 @@ void UBPC_S3_TalkComponent_C::DoCancelButton_Impl()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CheckSubQuest
-// (Net, NetRequest, Static, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UDataTable*              DataTable                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           NeedCheck                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           InProgress                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           AnimIcon                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_CheckSubQuest(class UDataTable* DataTable, bool* NeedCheck, bool* InProgress, bool* AnimIcon)
+void UBPC_S3_TalkComponent_C::CheckSubQuest(class UDataTable* DataTable, bool* NeedCheck, bool* InProgress, bool* AnimIcon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CheckSubQuest");
 
@@ -252,7 +247,7 @@ void UBPC_S3_TalkComponent_C::STATIC_CheckSubQuest(class UDataTable* DataTable, 
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.DoStepButton_Impl
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3_TalkComponent_C::DoStepButton_Impl()
 {
@@ -261,7 +256,6 @@ void UBPC_S3_TalkComponent_C::DoStepButton_Impl()
 	UBPC_S3_TalkComponent_C_DoStepButton_Impl_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -270,19 +264,18 @@ void UBPC_S3_TalkComponent_C::DoStepButton_Impl()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.IsShowSubQuestIcon
-// (NetReliable, NetRequest, Native, Event, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Show                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           AnimIcon                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_IsShowSubQuestIcon(bool* Show, bool* AnimIcon)
+void UBPC_S3_TalkComponent_C::IsShowSubQuestIcon(bool* Show, bool* AnimIcon)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.IsShowSubQuestIcon");
 
 	UBPC_S3_TalkComponent_C_IsShowSubQuestIcon_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -296,7 +289,7 @@ void UBPC_S3_TalkComponent_C::STATIC_IsShowSubQuestIcon(bool* Show, bool* AnimIc
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.IntToGameTime
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            InVal                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -309,7 +302,6 @@ void UBPC_S3_TalkComponent_C::IntToGameTime(int InVal, float* Time)
 	params.InVal = InVal;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -321,7 +313,7 @@ void UBPC_S3_TalkComponent_C::IntToGameTime(int InVal, float* Time)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ParseCurrentStepSchedule
-// (NetRequest, MulticastDelegate, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3_TalkComponent_C::ParseCurrentStepSchedule()
 {
@@ -338,11 +330,11 @@ void UBPC_S3_TalkComponent_C::ParseCurrentStepSchedule()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetIsActionButtonExec
-// (Net, NetReliable, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_S3_TalkComponent_C::STATIC_GetIsActionButtonExec()
+bool UBPC_S3_TalkComponent_C::GetIsActionButtonExec()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetIsActionButtonExec");
 
@@ -359,12 +351,12 @@ bool UBPC_S3_TalkComponent_C::STATIC_GetIsActionButtonExec()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetStartTalkActionType
-// (Net, Exec, NetResponse, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bCanTalk                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FS3DetectActionParam    Params                         (Parm, OutParm)
 
-void UBPC_S3_TalkComponent_C::STATIC_GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params)
+void UBPC_S3_TalkComponent_C::GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetStartTalkActionType");
 
@@ -383,13 +375,13 @@ void UBPC_S3_TalkComponent_C::STATIC_GetStartTalkActionType(bool bCanTalk, struc
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CanSit
-// (Net, NetReliable, Native, Static, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  SitActor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bOutputLog                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bResult                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_CanSit(class AActor* SitActor, bool bOutputLog, bool* bResult)
+void UBPC_S3_TalkComponent_C::CanSit(class AActor* SitActor, bool bOutputLog, bool* bResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.CanSit");
 
@@ -398,7 +390,6 @@ void UBPC_S3_TalkComponent_C::STATIC_CanSit(class AActor* SitActor, bool bOutput
 	params.bOutputLog = bOutputLog;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -410,7 +401,7 @@ void UBPC_S3_TalkComponent_C::STATIC_CanSit(class AActor* SitActor, bool bOutput
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.DebugPrintCurrentDetecttingActor
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3DetectAction_C*    DetectActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -430,11 +421,11 @@ void UBPC_S3_TalkComponent_C::DebugPrintCurrentDetecttingActor(class ABP_S3Detec
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.SetActionButtonExec
-// (NetReliable, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_SetActionButtonExec(bool flag)
+void UBPC_S3_TalkComponent_C::SetActionButtonExec(bool flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.SetActionButtonExec");
 
@@ -450,21 +441,20 @@ void UBPC_S3_TalkComponent_C::STATIC_SetActionButtonExec(bool flag)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetJawPointingParameter
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bFingerPointing                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Yaw                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          AnimBlendTime                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_GetJawPointingParameter(bool* bFingerPointing, float* Yaw, float* Pitch, float* AnimBlendTime)
+void UBPC_S3_TalkComponent_C::GetJawPointingParameter(bool* bFingerPointing, float* Yaw, float* Pitch, float* AnimBlendTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetJawPointingParameter");
 
 	UBPC_S3_TalkComponent_C_GetJawPointingParameter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -482,7 +472,7 @@ void UBPC_S3_TalkComponent_C::STATIC_GetJawPointingParameter(bool* bFingerPointi
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.SetJawPointingParamater
-// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Yaw                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -506,16 +496,15 @@ void UBPC_S3_TalkComponent_C::SetJawPointingParamater(float Yaw, float Pitch, fl
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.JawPointingMotionFlagOFF
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_S3_TalkComponent_C::STATIC_JawPointingMotionFlagOFF()
+void UBPC_S3_TalkComponent_C::JawPointingMotionFlagOFF()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.JawPointingMotionFlagOFF");
 
 	UBPC_S3_TalkComponent_C_JawPointingMotionFlagOFF_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -524,7 +513,7 @@ void UBPC_S3_TalkComponent_C::STATIC_JawPointingMotionFlagOFF()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.JawPointingMotionFlagON
-// (Net, Exec, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3_TalkComponent_C::JawPointingMotionFlagON()
 {
@@ -541,11 +530,11 @@ void UBPC_S3_TalkComponent_C::JawPointingMotionFlagON()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetFingerPointingMode
-// (NetReliable, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3FingerPointingMode          CurrentMode                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_GetFingerPointingMode(ES3FingerPointingMode* CurrentMode)
+void UBPC_S3_TalkComponent_C::GetFingerPointingMode(ES3FingerPointingMode* CurrentMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetFingerPointingMode");
 
@@ -563,11 +552,11 @@ void UBPC_S3_TalkComponent_C::STATIC_GetFingerPointingMode(ES3FingerPointingMode
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.SetFingerPointingMode
-// (Net, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3FingerPointingMode          NewMode                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_SetFingerPointingMode(ES3FingerPointingMode NewMode)
+void UBPC_S3_TalkComponent_C::SetFingerPointingMode(ES3FingerPointingMode NewMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.SetFingerPointingMode");
 
@@ -583,13 +572,13 @@ void UBPC_S3_TalkComponent_C::STATIC_SetFingerPointingMode(ES3FingerPointingMode
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.SetFingerPointingParamater
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Yaw                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          AnimBlendTime                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_SetFingerPointingParamater(float Yaw, float Pitch, float AnimBlendTime)
+void UBPC_S3_TalkComponent_C::SetFingerPointingParamater(float Yaw, float Pitch, float AnimBlendTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.SetFingerPointingParamater");
 
@@ -599,7 +588,6 @@ void UBPC_S3_TalkComponent_C::STATIC_SetFingerPointingParamater(float Yaw, float
 	params.AnimBlendTime = AnimBlendTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -608,7 +596,7 @@ void UBPC_S3_TalkComponent_C::STATIC_SetFingerPointingParamater(float Yaw, float
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.FingerPointingMotionFlagOFF
-// (NetReliable, Native, NetResponse, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3_TalkComponent_C::FingerPointingMotionFlagOFF()
 {
@@ -617,7 +605,6 @@ void UBPC_S3_TalkComponent_C::FingerPointingMotionFlagOFF()
 	UBPC_S3_TalkComponent_C_FingerPointingMotionFlagOFF_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -626,16 +613,15 @@ void UBPC_S3_TalkComponent_C::FingerPointingMotionFlagOFF()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.FingerPointingMotionFlagON
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_S3_TalkComponent_C::STATIC_FingerPointingMotionFlagON()
+void UBPC_S3_TalkComponent_C::FingerPointingMotionFlagON()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.FingerPointingMotionFlagON");
 
 	UBPC_S3_TalkComponent_C_FingerPointingMotionFlagON_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -644,21 +630,20 @@ void UBPC_S3_TalkComponent_C::STATIC_FingerPointingMotionFlagON()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetFingerPointingParameter
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bFingerPointing                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Yaw                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          AnimBlendTime                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_GetFingerPointingParameter(bool* bFingerPointing, float* Yaw, float* Pitch, float* AnimBlendTime)
+void UBPC_S3_TalkComponent_C::GetFingerPointingParameter(bool* bFingerPointing, float* Yaw, float* Pitch, float* AnimBlendTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetFingerPointingParameter");
 
 	UBPC_S3_TalkComponent_C_GetFingerPointingParameter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -675,21 +660,20 @@ void UBPC_S3_TalkComponent_C::STATIC_GetFingerPointingParameter(bool* bFingerPoi
 }
 
 
-// Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetActionType
-// (Net, NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.getActionType
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Sight                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FS3DetectActionParam> Params                         (Parm, OutParm, ZeroConstructor)
 
-void UBPC_S3_TalkComponent_C::GetActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params)
+void UBPC_S3_TalkComponent_C::getActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetActionType");
+	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.getActionType");
 
-	UBPC_S3_TalkComponent_C_GetActionType_Params params;
+	UBPC_S3_TalkComponent_C_getActionType_Params params;
 	params.Sight = Sight;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -701,11 +685,11 @@ void UBPC_S3_TalkComponent_C::GetActionType(bool Sight, TArray<struct FS3DetectA
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.SetEventIdName
-// (Net, NetReliable, NetRequest, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   newParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_SetEventIdName(const struct FName& newParam)
+void UBPC_S3_TalkComponent_C::SetEventIdName(const struct FName& newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.SetEventIdName");
 
@@ -721,9 +705,9 @@ void UBPC_S3_TalkComponent_C::STATIC_SetEventIdName(const struct FName& newParam
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_S3_TalkComponent_C::STATIC_ReceiveBeginPlay()
+void UBPC_S3_TalkComponent_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ReceiveBeginPlay");
 
@@ -738,9 +722,9 @@ void UBPC_S3_TalkComponent_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.doActionButton
-// (NetReliable, NetRequest, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_S3_TalkComponent_C::STATIC_doActionButton()
+void UBPC_S3_TalkComponent_C::doActionButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.doActionButton");
 
@@ -755,9 +739,9 @@ void UBPC_S3_TalkComponent_C::STATIC_doActionButton()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.doStepButton
-// (Net, NetRequest, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_S3_TalkComponent_C::STATIC_doStepButton()
+void UBPC_S3_TalkComponent_C::doStepButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.doStepButton");
 
@@ -772,9 +756,9 @@ void UBPC_S3_TalkComponent_C::STATIC_doStepButton()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.doSkipButton
-// (Net, NetRequest, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_S3_TalkComponent_C::STATIC_doSkipButton()
+void UBPC_S3_TalkComponent_C::doSkipButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.doSkipButton");
 
@@ -789,9 +773,9 @@ void UBPC_S3_TalkComponent_C::STATIC_doSkipButton()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.doCancelButton
-// (NetRequest, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_S3_TalkComponent_C::STATIC_doCancelButton()
+void UBPC_S3_TalkComponent_C::doCancelButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.doCancelButton");
 
@@ -806,12 +790,12 @@ void UBPC_S3_TalkComponent_C::STATIC_doCancelButton()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.OnBSEventStart
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  NpcActors                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTalkScript*             TalkScript                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_OnBSEventStart(class AActor* NpcActors, class UTalkScript* TalkScript)
+void UBPC_S3_TalkComponent_C::OnBSEventStart(class AActor* NpcActors, class UTalkScript* TalkScript)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.OnBSEventStart");
 
@@ -828,16 +812,15 @@ void UBPC_S3_TalkComponent_C::STATIC_OnBSEventStart(class AActor* NpcActors, cla
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.BindsTalkComponent
-// (Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_S3_TalkComponent_C::STATIC_BindsTalkComponent()
+void UBPC_S3_TalkComponent_C::BindsTalkComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.BindsTalkComponent");
 
 	UBPC_S3_TalkComponent_C_BindsTalkComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -846,12 +829,12 @@ void UBPC_S3_TalkComponent_C::STATIC_BindsTalkComponent()
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.InitializeTalk
-// (Native, NetResponse, Static, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3TalkDataListBase*     TalkDataList                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FNPCTalkEventInfo       TalkEventInfo                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_InitializeTalk(class US3TalkDataListBase* TalkDataList, const struct FNPCTalkEventInfo& TalkEventInfo)
+void UBPC_S3_TalkComponent_C::InitializeTalk(class US3TalkDataListBase* TalkDataList, const struct FNPCTalkEventInfo& TalkEventInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.InitializeTalk");
 
@@ -860,7 +843,6 @@ void UBPC_S3_TalkComponent_C::STATIC_InitializeTalk(class US3TalkDataListBase* T
 	params.TalkEventInfo = TalkEventInfo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -869,11 +851,11 @@ void UBPC_S3_TalkComponent_C::STATIC_InitializeTalk(class US3TalkDataListBase* T
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.DecideDetectAction
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              ActionType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_DecideDetectAction(ES3ActionIconType ActionType)
+void UBPC_S3_TalkComponent_C::DecideDetectAction(ES3ActionIconType ActionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.DecideDetectAction");
 
@@ -889,11 +871,11 @@ void UBPC_S3_TalkComponent_C::STATIC_DecideDetectAction(ES3ActionIconType Action
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.OnStepChanged
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_OnStepChanged(int SetSteps)
+void UBPC_S3_TalkComponent_C::OnStepChanged(int SetSteps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.OnStepChanged");
 
@@ -909,11 +891,11 @@ void UBPC_S3_TalkComponent_C::STATIC_OnStepChanged(int SetSteps)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.OnPcEnableScheduleEvent
-// (Net, NetRequest, Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          receiveTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_OnPcEnableScheduleEvent(float receiveTime)
+void UBPC_S3_TalkComponent_C::OnPcEnableScheduleEvent(float receiveTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.OnPcEnableScheduleEvent");
 
@@ -929,11 +911,11 @@ void UBPC_S3_TalkComponent_C::STATIC_OnPcEnableScheduleEvent(float receiveTime)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.OnReceiveTimeEvent
-// (NetRequest, Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_OnReceiveTimeEvent(int EventIndex)
+void UBPC_S3_TalkComponent_C::OnReceiveTimeEvent(int EventIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.OnReceiveTimeEvent");
 
@@ -949,11 +931,11 @@ void UBPC_S3_TalkComponent_C::STATIC_OnReceiveTimeEvent(int EventIndex)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ReceiveEndPlay
-// (Net, NetReliable, Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void UBPC_S3_TalkComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ReceiveEndPlay");
 
@@ -969,11 +951,11 @@ void UBPC_S3_TalkComponent_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> 
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ChangeStep
-// (Net, NetReliable, Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3_TalkComponent_C::STATIC_ChangeStep(int SetSteps)
+void UBPC_S3_TalkComponent_C::ChangeStep(int SetSteps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ChangeStep");
 
@@ -989,7 +971,7 @@ void UBPC_S3_TalkComponent_C::STATIC_ChangeStep(int SetSteps)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ChangeFlag
-// (Exec, Native, NetResponse, NetMulticast, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1003,7 +985,6 @@ void UBPC_S3_TalkComponent_C::ChangeFlag(int ArrayIndex, int SetFlags)
 	params.SetFlags = SetFlags;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1012,7 +993,7 @@ void UBPC_S3_TalkComponent_C::ChangeFlag(int ArrayIndex, int SetFlags)
 
 
 // Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.ExecuteUbergraph_BPC_S3_TalkComponent
-// (Net, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

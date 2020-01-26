@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_TimerStop.BP_TalkProcess_TimerStop_C.Activate
-// (NetReliable, NetRequest, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
 void UBP_TalkProcess_TimerStop_C::Activate()
 {
@@ -31,11 +31,11 @@ void UBP_TalkProcess_TimerStop_C::Activate()
 
 
 // Function BP_TalkProcess_TimerStop.BP_TalkProcess_TimerStop_C.ExecuteUbergraph_BP_TalkProcess_TimerStop
-// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_TimerStop_C::STATIC_ExecuteUbergraph_BP_TalkProcess_TimerStop(int EntryPoint)
+void UBP_TalkProcess_TimerStop_C::ExecuteUbergraph_BP_TalkProcess_TimerStop(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_TimerStop.BP_TalkProcess_TimerStop_C.ExecuteUbergraph_BP_TalkProcess_TimerStop");
 
@@ -43,7 +43,6 @@ void UBP_TalkProcess_TimerStop_C::STATIC_ExecuteUbergraph_BP_TalkProcess_TimerSt
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

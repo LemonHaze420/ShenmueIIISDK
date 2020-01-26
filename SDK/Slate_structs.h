@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,6 +19,16 @@ enum class EVirtualKeyboardDismissAction : uint8_t
 	EVirtualKeyboardDismissAction__TextCommitOnAccept = 1,
 	EVirtualKeyboardDismissAction__TextCommitOnDismiss = 2,
 	EVirtualKeyboardDismissAction__EVirtualKeyboardDismissAction_MAX = 3
+};
+
+
+// Enum Slate.ETableViewMode
+enum class ETableViewMode : uint8_t
+{
+	ETableViewMode__List           = 0,
+	ETableViewMode__Tile           = 1,
+	ETableViewMode__Tree           = 2,
+	ETableViewMode__ETableViewMode_MAX = 3
 };
 
 
@@ -45,16 +55,6 @@ enum class EProgressBarFillType : uint8_t
 };
 
 
-// Enum Slate.ETableViewMode
-enum class ETableViewMode : uint8_t
-{
-	ETableViewMode__List           = 0,
-	ETableViewMode__Tile           = 1,
-	ETableViewMode__Tree           = 2,
-	ETableViewMode__ETableViewMode_MAX = 3
-};
-
-
 // Enum Slate.EStretch
 enum class EStretch : uint8_t
 {
@@ -70,6 +70,16 @@ enum class EStretch : uint8_t
 };
 
 
+// Enum Slate.EStretchDirection
+enum class EStretchDirection : uint8_t
+{
+	EStretchDirection__Both        = 0,
+	EStretchDirection__DownOnly    = 1,
+	EStretchDirection__UpOnly      = 2,
+	EStretchDirection__EStretchDirection_MAX = 3
+};
+
+
 // Enum Slate.EDescendantScrollDestination
 enum class EDescendantScrollDestination : uint8_t
 {
@@ -77,6 +87,30 @@ enum class EDescendantScrollDestination : uint8_t
 	EDescendantScrollDestination__TopOrLeft = 1,
 	EDescendantScrollDestination__Center = 2,
 	EDescendantScrollDestination__EDescendantScrollDestination_MAX = 3
+};
+
+
+// Enum Slate.EListItemAlignment
+enum class EListItemAlignment : uint8_t
+{
+	EListItemAlignment__EvenlyDistributed = 0,
+	EListItemAlignment__EvenlySize = 1,
+	EListItemAlignment__EvenlyWide = 2,
+	EListItemAlignment__LeftAligned = 3,
+	EListItemAlignment__RightAligned = 4,
+	EListItemAlignment__CenterAligned = 5,
+	EListItemAlignment__Fill       = 6,
+	EListItemAlignment__EListItemAlignment_MAX = 7
+};
+
+
+// Enum Slate.ETextFlowDirection
+enum class ETextFlowDirection : uint8_t
+{
+	ETextFlowDirection__Auto       = 0,
+	ETextFlowDirection__LeftToRight = 1,
+	ETextFlowDirection__RightToLeft = 2,
+	ETextFlowDirection__ETextFlowDirection_MAX = 3
 };
 
 
@@ -106,40 +140,6 @@ enum class EMultipleKeyBindingIndex : uint8_t
 	EMultipleKeyBindingIndex__Secondary = 1,
 	EMultipleKeyBindingIndex__NumChords = 2,
 	EMultipleKeyBindingIndex__EMultipleKeyBindingIndex_MAX = 3
-};
-
-
-// Enum Slate.ETextFlowDirection
-enum class ETextFlowDirection : uint8_t
-{
-	ETextFlowDirection__Auto       = 0,
-	ETextFlowDirection__LeftToRight = 1,
-	ETextFlowDirection__RightToLeft = 2,
-	ETextFlowDirection__ETextFlowDirection_MAX = 3
-};
-
-
-// Enum Slate.EListItemAlignment
-enum class EListItemAlignment : uint8_t
-{
-	EListItemAlignment__EvenlyDistributed = 0,
-	EListItemAlignment__EvenlySize = 1,
-	EListItemAlignment__EvenlyWide = 2,
-	EListItemAlignment__LeftAligned = 3,
-	EListItemAlignment__RightAligned = 4,
-	EListItemAlignment__CenterAligned = 5,
-	EListItemAlignment__Fill       = 6,
-	EListItemAlignment__EListItemAlignment_MAX = 7
-};
-
-
-// Enum Slate.EStretchDirection
-enum class EStretchDirection : uint8_t
-{
-	EStretchDirection__Both        = 0,
-	EStretchDirection__DownOnly    = 1,
-	EStretchDirection__UpOnly      = 2,
-	EStretchDirection__EStretchDirection_MAX = 3
 };
 
 

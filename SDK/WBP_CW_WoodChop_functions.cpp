@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetVisibleIconButton
-// (NetRequest, Exec, Native, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UWBP_CW_WoodChop_C::SetVisibleIconButton(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UWBP_CW_WoodChop_C::SetVisibleIconButton(bool Visible)
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.UnBindDispahcer
-// (Net, NetReliable, Exec, Native, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_CW_WoodChop_C::UnBindDispahcer()
 {
@@ -44,7 +43,6 @@ void UWBP_CW_WoodChop_C::UnBindDispahcer()
 	UWBP_CW_WoodChop_C_UnBindDispahcer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +51,7 @@ void UWBP_CW_WoodChop_C::UnBindDispahcer()
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetLocalizeText
-// (Native, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ExcellentText                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   UnbelievableText               (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -71,7 +69,6 @@ void UWBP_CW_WoodChop_C::SetLocalizeText(const struct FText& ExcellentText, cons
 	params.EarningsText = EarningsText;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +77,7 @@ void UWBP_CW_WoodChop_C::SetLocalizeText(const struct FText& ExcellentText, cons
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetProgressCircleVisible
-// (NetRequest, Exec, Native, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -92,7 +89,6 @@ void UWBP_CW_WoodChop_C::SetProgressCircleVisible(ESlateVisibility InVisibility)
 	params.InVisibility = InVisibility;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -101,7 +97,7 @@ void UWBP_CW_WoodChop_C::SetProgressCircleVisible(ESlateVisibility InVisibility)
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetCircleProgress
-// (Net, NetRequest, Exec, Native, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -113,7 +109,6 @@ void UWBP_CW_WoodChop_C::SetCircleProgress(float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -122,11 +117,11 @@ void UWBP_CW_WoodChop_C::SetCircleProgress(float Value)
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetDebugVisible
-// (Net, NetReliable, Event, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_CW_WoodChop_C::STATIC_SetDebugVisible(bool Visible)
+void UWBP_CW_WoodChop_C::SetDebugVisible(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetDebugVisible");
 
@@ -142,7 +137,7 @@ void UWBP_CW_WoodChop_C::STATIC_SetDebugVisible(bool Visible)
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetVolumeDebugText
-// (Net, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -164,11 +159,11 @@ void UWBP_CW_WoodChop_C::SetVolumeDebugText(int Type, float Volume)
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetSuccessedWoodNum
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            WoodNum                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_CW_WoodChop_C::STATIC_SetSuccessedWoodNum(int WoodNum)
+void UWBP_CW_WoodChop_C::SetSuccessedWoodNum(int WoodNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetSuccessedWoodNum");
 
@@ -176,7 +171,6 @@ void UWBP_CW_WoodChop_C::STATIC_SetSuccessedWoodNum(int WoodNum)
 	params.WoodNum = WoodNum;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -185,12 +179,12 @@ void UWBP_CW_WoodChop_C::STATIC_SetSuccessedWoodNum(int WoodNum)
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetTimeProgress
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          MaxTime                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_CW_WoodChop_C::STATIC_SetTimeProgress(float Time, float MaxTime)
+void UWBP_CW_WoodChop_C::SetTimeProgress(float Time, float MaxTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.SetTimeProgress");
 
@@ -199,7 +193,6 @@ void UWBP_CW_WoodChop_C::STATIC_SetTimeProgress(float Time, float MaxTime)
 	params.MaxTime = MaxTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,12 +201,12 @@ void UWBP_CW_WoodChop_C::STATIC_SetTimeProgress(float Time, float MaxTime)
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.DrawResult
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SuccessNum                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ResultNum                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_CW_WoodChop_C::STATIC_DrawResult(int SuccessNum, int ResultNum)
+void UWBP_CW_WoodChop_C::DrawResult(int SuccessNum, int ResultNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.DrawResult");
 
@@ -222,7 +215,6 @@ void UWBP_CW_WoodChop_C::STATIC_DrawResult(int SuccessNum, int ResultNum)
 	params.ResultNum = ResultNum;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -231,7 +223,7 @@ void UWBP_CW_WoodChop_C::STATIC_DrawResult(int SuccessNum, int ResultNum)
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.Construct
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CW_WoodChop_C::Construct()
 {
@@ -248,12 +240,12 @@ void UWBP_CW_WoodChop_C::Construct()
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.Tick
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_CW_WoodChop_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_CW_WoodChop_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.Tick");
 
@@ -270,7 +262,7 @@ void UWBP_CW_WoodChop_C::STATIC_Tick(const struct FGeometry& MyGeometry, float I
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.AppearExcellent
-// (Net, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UWBP_CW_WoodChop_C::AppearExcellent()
 {
@@ -287,7 +279,7 @@ void UWBP_CW_WoodChop_C::AppearExcellent()
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.AppearUnbelievable
-// (NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UWBP_CW_WoodChop_C::AppearUnbelievable()
 {
@@ -304,7 +296,7 @@ void UWBP_CW_WoodChop_C::AppearUnbelievable()
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.ExecuteUbergraph_WBP_CW_WoodChop
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -324,7 +316,7 @@ void UWBP_CW_WoodChop_C::ExecuteUbergraph_WBP_CW_WoodChop(int EntryPoint)
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.OnEndGameDispacher__DelegateSignature
-// (Net, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWBP_CW_WoodChop_C::OnEndGameDispacher__DelegateSignature()
 {
@@ -341,7 +333,7 @@ void UWBP_CW_WoodChop_C::OnEndGameDispacher__DelegateSignature()
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.OnPlaySEResultMoneyDispacher__DelegateSignature
-// (Net, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWBP_CW_WoodChop_C::OnPlaySEResultMoneyDispacher__DelegateSignature()
 {
@@ -358,7 +350,7 @@ void UWBP_CW_WoodChop_C::OnPlaySEResultMoneyDispacher__DelegateSignature()
 
 
 // Function WBP_CW_WoodChop.WBP_CW_WoodChop_C.OnPlaySEResultWoodDispacher__DelegateSignature
-// (Net, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWBP_CW_WoodChop_C::OnPlaySEResultWoodDispacher__DelegateSignature()
 {

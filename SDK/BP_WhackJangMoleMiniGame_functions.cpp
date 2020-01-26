@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_WhackJangMoleMiniGame.BP_WhackJangMoleMiniGame_C.UserConstructionScript
-// (Net, NetResponse, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackJangMoleMiniGame_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_WhackJangMoleMiniGame_C::UserConstructionScript()
 
 
 // Function BP_WhackJangMoleMiniGame.BP_WhackJangMoleMiniGame_C.ReceiveBeginPlay
-// (Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_WhackJangMoleMiniGame_C::ReceiveBeginPlay()
 {
@@ -40,7 +40,6 @@ void ABP_WhackJangMoleMiniGame_C::ReceiveBeginPlay()
 	ABP_WhackJangMoleMiniGame_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,11 +48,11 @@ void ABP_WhackJangMoleMiniGame_C::ReceiveBeginPlay()
 
 
 // Function BP_WhackJangMoleMiniGame.BP_WhackJangMoleMiniGame_C.ReceiveTick
-// (Net, NetReliable, Exec, Native, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackJangMoleMiniGame_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_WhackJangMoleMiniGame_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackJangMoleMiniGame.BP_WhackJangMoleMiniGame_C.ReceiveTick");
 
@@ -61,7 +60,6 @@ void ABP_WhackJangMoleMiniGame_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,11 +68,11 @@ void ABP_WhackJangMoleMiniGame_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_WhackJangMoleMiniGame.BP_WhackJangMoleMiniGame_C.ExecuteUbergraph_BP_WhackJangMoleMiniGame
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackJangMoleMiniGame_C::STATIC_ExecuteUbergraph_BP_WhackJangMoleMiniGame(int EntryPoint)
+void ABP_WhackJangMoleMiniGame_C::ExecuteUbergraph_BP_WhackJangMoleMiniGame(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackJangMoleMiniGame.BP_WhackJangMoleMiniGame_C.ExecuteUbergraph_BP_WhackJangMoleMiniGame");
 
@@ -82,7 +80,6 @@ void ABP_WhackJangMoleMiniGame_C::STATIC_ExecuteUbergraph_BP_WhackJangMoleMiniGa
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

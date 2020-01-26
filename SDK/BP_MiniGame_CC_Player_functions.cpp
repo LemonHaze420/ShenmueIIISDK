@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.IsPlayerCollision
-// (Event, NetResponse, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UActorComponent*         ActorComponent                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -37,7 +37,7 @@ bool ABP_MiniGame_CC_Player_C::IsPlayerCollision(class UActorComponent* ActorCom
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.SetReturnLocation
-// (NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -57,11 +57,11 @@ void ABP_MiniGame_CC_Player_C::SetReturnLocation(const struct FVector& Location)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.AddReturnCount
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            AddCount                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Player_C::STATIC_AddReturnCount(int AddCount)
+void ABP_MiniGame_CC_Player_C::AddReturnCount(int AddCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.AddReturnCount");
 
@@ -69,7 +69,6 @@ void ABP_MiniGame_CC_Player_C::STATIC_AddReturnCount(int AddCount)
 	params.AddCount = AddCount;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +77,7 @@ void ABP_MiniGame_CC_Player_C::STATIC_AddReturnCount(int AddCount)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.SetEnabledPlayer
-// (NetRequest, NetMulticast, MulticastDelegate, Public, Protected, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -98,7 +97,7 @@ void ABP_MiniGame_CC_Player_C::SetEnabledPlayer(bool Enabled)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.UpdateCamera
-// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -118,7 +117,7 @@ void ABP_MiniGame_CC_Player_C::UpdateCamera(float DeltaTime)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.AnimRateUpdate
-// (NetRequest, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -138,9 +137,9 @@ void ABP_MiniGame_CC_Player_C::AnimRateUpdate(float DeltaSeconds)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.StopMove
-// (Exec, NetResponse, Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_CC_Player_C::STATIC_StopMove()
+void ABP_MiniGame_CC_Player_C::StopMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.StopMove");
 
@@ -155,7 +154,7 @@ void ABP_MiniGame_CC_Player_C::STATIC_StopMove()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.MoveUpdate
-// (Net, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -175,11 +174,11 @@ void ABP_MiniGame_CC_Player_C::MoveUpdate(float DeltaSeconds)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.SetAnimMoveRate
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Player_C::STATIC_SetAnimMoveRate(float Rate)
+void ABP_MiniGame_CC_Player_C::SetAnimMoveRate(float Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.SetAnimMoveRate");
 
@@ -187,7 +186,6 @@ void ABP_MiniGame_CC_Player_C::STATIC_SetAnimMoveRate(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,7 +194,7 @@ void ABP_MiniGame_CC_Player_C::STATIC_SetAnimMoveRate(float Rate)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.PlayCatchAnim
-// (Net, Exec, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::PlayCatchAnim()
 {
@@ -213,12 +211,12 @@ void ABP_MiniGame_CC_Player_C::PlayCatchAnim()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InputAxisLook
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          LRAxis                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          UDAxis                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Player_C::STATIC_InputAxisLook(float LRAxis, float UDAxis)
+void ABP_MiniGame_CC_Player_C::InputAxisLook(float LRAxis, float UDAxis)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InputAxisLook");
 
@@ -235,7 +233,7 @@ void ABP_MiniGame_CC_Player_C::STATIC_InputAxisLook(float LRAxis, float UDAxis)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.PreUpdate
-// (NetResponse, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSec                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -255,9 +253,9 @@ void ABP_MiniGame_CC_Player_C::PreUpdate(float DeltaSec)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.UserConstructionScript
-// (Net, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_CC_Player_C::STATIC_UserConstructionScript()
+void ABP_MiniGame_CC_Player_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.UserConstructionScript");
 
@@ -272,7 +270,7 @@ void ABP_MiniGame_CC_Player_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.UnRagdollBlend__FinishedFunc
-// (Net, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::UnRagdollBlend__FinishedFunc()
 {
@@ -281,7 +279,6 @@ void ABP_MiniGame_CC_Player_C::UnRagdollBlend__FinishedFunc()
 	ABP_MiniGame_CC_Player_C_UnRagdollBlend__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -290,7 +287,7 @@ void ABP_MiniGame_CC_Player_C::UnRagdollBlend__FinishedFunc()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.UnRagdollBlend__UpdateFunc
-// (Net, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::UnRagdollBlend__UpdateFunc()
 {
@@ -299,7 +296,6 @@ void ABP_MiniGame_CC_Player_C::UnRagdollBlend__UpdateFunc()
 	ABP_MiniGame_CC_Player_C_UnRagdollBlend__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -308,7 +304,7 @@ void ABP_MiniGame_CC_Player_C::UnRagdollBlend__UpdateFunc()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.RagdollBlend__FinishedFunc
-// (Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::RagdollBlend__FinishedFunc()
 {
@@ -317,7 +313,6 @@ void ABP_MiniGame_CC_Player_C::RagdollBlend__FinishedFunc()
 	ABP_MiniGame_CC_Player_C_RagdollBlend__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -326,7 +321,7 @@ void ABP_MiniGame_CC_Player_C::RagdollBlend__FinishedFunc()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.RagdollBlend__UpdateFunc
-// (Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::RagdollBlend__UpdateFunc()
 {
@@ -335,7 +330,6 @@ void ABP_MiniGame_CC_Player_C::RagdollBlend__UpdateFunc()
 	ABP_MiniGame_CC_Player_C_RagdollBlend__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -344,7 +338,7 @@ void ABP_MiniGame_CC_Player_C::RagdollBlend__UpdateFunc()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.Timeline_0__FinishedFunc
-// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::Timeline_0__FinishedFunc()
 {
@@ -361,7 +355,7 @@ void ABP_MiniGame_CC_Player_C::Timeline_0__FinishedFunc()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.Timeline_0__UpdateFunc
-// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::Timeline_0__UpdateFunc()
 {
@@ -378,7 +372,7 @@ void ABP_MiniGame_CC_Player_C::Timeline_0__UpdateFunc()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InpActEvt_Y_K2Node_InputKeyEvent_4
-// (Net, NetRequest, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -398,11 +392,11 @@ void ABP_MiniGame_CC_Player_C::InpActEvt_Y_K2Node_InputKeyEvent_4(const struct F
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InpActEvt_Y_K2Node_InputKeyEvent_3
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGame_CC_Player_C::STATIC_InpActEvt_Y_K2Node_InputKeyEvent_3(const struct FKey& Key)
+void ABP_MiniGame_CC_Player_C::InpActEvt_Y_K2Node_InputKeyEvent_3(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InpActEvt_Y_K2Node_InputKeyEvent_3");
 
@@ -410,7 +404,6 @@ void ABP_MiniGame_CC_Player_C::STATIC_InpActEvt_Y_K2Node_InputKeyEvent_3(const s
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -419,7 +412,7 @@ void ABP_MiniGame_CC_Player_C::STATIC_InpActEvt_Y_K2Node_InputKeyEvent_3(const s
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.ReceiveBeginPlay
-// (Net, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::ReceiveBeginPlay()
 {
@@ -436,7 +429,7 @@ void ABP_MiniGame_CC_Player_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.ReceiveTick
-// (Net, Event, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -456,7 +449,7 @@ void ABP_MiniGame_CC_Player_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.ChangeLocoState
-// (Net, NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ELocomotionState>  State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -476,7 +469,7 @@ void ABP_MiniGame_CC_Player_C::ChangeLocoState(TEnumAsByte<ELocomotionState> Sta
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.ToRagdoll
-// (Net, NetRequest, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::ToRagdoll()
 {
@@ -485,7 +478,6 @@ void ABP_MiniGame_CC_Player_C::ToRagdoll()
 	ABP_MiniGame_CC_Player_C_ToRagdoll_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -494,7 +486,7 @@ void ABP_MiniGame_CC_Player_C::ToRagdoll()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.UnRagdoll
-// (NetRequest, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::UnRagdoll()
 {
@@ -503,7 +495,6 @@ void ABP_MiniGame_CC_Player_C::UnRagdoll()
 	ABP_MiniGame_CC_Player_C_UnRagdoll_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -512,7 +503,7 @@ void ABP_MiniGame_CC_Player_C::UnRagdoll()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.StopTurningInPlace
-// (NetRequest, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::StopTurningInPlace()
 {
@@ -521,7 +512,6 @@ void ABP_MiniGame_CC_Player_C::StopTurningInPlace()
 	ABP_MiniGame_CC_Player_C_StopTurningInPlace_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -530,7 +520,7 @@ void ABP_MiniGame_CC_Player_C::StopTurningInPlace()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.TurnInPlace
-// (Net, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                TurnInPlaceStart               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                TurnInPlaceTarget              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -556,7 +546,7 @@ void ABP_MiniGame_CC_Player_C::TurnInPlace(const struct FRotator& TurnInPlaceSta
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InputReleasedRun
-// (Net, NetReliable, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::InputReleasedRun()
 {
@@ -565,7 +555,6 @@ void ABP_MiniGame_CC_Player_C::InputReleasedRun()
 	ABP_MiniGame_CC_Player_C_InputReleasedRun_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -574,7 +563,7 @@ void ABP_MiniGame_CC_Player_C::InputReleasedRun()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InputPressedRun
-// (Net, NetReliable, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_CC_Player_C::InputPressedRun()
 {
@@ -583,7 +572,6 @@ void ABP_MiniGame_CC_Player_C::InputPressedRun()
 	ABP_MiniGame_CC_Player_C_InputPressedRun_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -592,7 +580,7 @@ void ABP_MiniGame_CC_Player_C::InputPressedRun()
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InputMoveForward
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -612,11 +600,11 @@ void ABP_MiniGame_CC_Player_C::InputMoveForward(float AxisValue)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InputMoveRight
-// (Native, NetResponse, Static, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Player_C::STATIC_InputMoveRight(float AxisValue)
+void ABP_MiniGame_CC_Player_C::InputMoveRight(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.InputMoveRight");
 
@@ -624,7 +612,6 @@ void ABP_MiniGame_CC_Player_C::STATIC_InputMoveRight(float AxisValue)
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -633,7 +620,7 @@ void ABP_MiniGame_CC_Player_C::STATIC_InputMoveRight(float AxisValue)
 
 
 // Function BP_MiniGame_CC_Player.BP_MiniGame_CC_Player_C.ExecuteUbergraph_BP_MiniGame_CC_Player
-// (Net, NetRequest, Native, Event, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -645,7 +632,6 @@ void ABP_MiniGame_CC_Player_C::ExecuteUbergraph_BP_MiniGame_CC_Player(int EntryP
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.NewInfoEffect
-// (NetReliable, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              ButtonImageType                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3DetectAction_C::STATIC_NewInfoEffect(ES3ActionIconType ButtonImageType)
+void ABP_S3DetectAction_C::NewInfoEffect(ES3ActionIconType ButtonImageType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.NewInfoEffect");
 
@@ -26,7 +26,6 @@ void ABP_S3DetectAction_C::STATIC_NewInfoEffect(ES3ActionIconType ButtonImageTyp
 	params.ButtonImageType = ButtonImageType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void ABP_S3DetectAction_C::STATIC_NewInfoEffect(ES3ActionIconType ButtonImageTyp
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.IsActionGlobalForbidden
-// (Exec, NetResponse, Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3DetectAction_C::STATIC_IsActionGlobalForbidden()
+bool ABP_S3DetectAction_C::IsActionGlobalForbidden()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.IsActionGlobalForbidden");
 
@@ -56,7 +55,7 @@ bool ABP_S3DetectAction_C::STATIC_IsActionGlobalForbidden()
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.IsHelpIconBlink
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           isBlink                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -78,11 +77,11 @@ void ABP_S3DetectAction_C::IsHelpIconBlink(bool* isBlink)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.BlinkHelpIcon
-// (Net, NetReliable, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           End                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3DetectAction_C::STATIC_BlinkHelpIcon(bool End)
+void ABP_S3DetectAction_C::BlinkHelpIcon(bool End)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.BlinkHelpIcon");
 
@@ -90,7 +89,6 @@ void ABP_S3DetectAction_C::STATIC_BlinkHelpIcon(bool End)
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,9 +97,9 @@ void ABP_S3DetectAction_C::STATIC_BlinkHelpIcon(bool End)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.RestoreInputPriority
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3DetectAction_C::STATIC_RestoreInputPriority()
+void ABP_S3DetectAction_C::RestoreInputPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.RestoreInputPriority");
 
@@ -116,11 +114,11 @@ void ABP_S3DetectAction_C::STATIC_RestoreInputPriority()
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.ChangeInputPriority
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            NewPriority                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3DetectAction_C::STATIC_ChangeInputPriority(int NewPriority)
+void ABP_S3DetectAction_C::ChangeInputPriority(int NewPriority)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.ChangeInputPriority");
 
@@ -136,7 +134,7 @@ void ABP_S3DetectAction_C::STATIC_ChangeInputPriority(int NewPriority)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.GetSelectedButtonActionProcess
-// (Net, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            InIndex                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FS3DetectActionParam    OutProcess                     (Parm, OutParm)
@@ -163,12 +161,12 @@ void ABP_S3DetectAction_C::GetSelectedButtonActionProcess(int InIndex, struct FS
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.GetButtonActionProcesses
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            InIndex                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FS3DetectActionParam> OutProcesses                   (Parm, OutParm, ZeroConstructor)
 
-void ABP_S3DetectAction_C::STATIC_GetButtonActionProcesses(int InIndex, TArray<struct FS3DetectActionParam>* OutProcesses)
+void ABP_S3DetectAction_C::GetButtonActionProcesses(int InIndex, TArray<struct FS3DetectActionParam>* OutProcesses)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.GetButtonActionProcesses");
 
@@ -187,12 +185,12 @@ void ABP_S3DetectAction_C::STATIC_GetButtonActionProcesses(int InIndex, TArray<s
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.InputButton
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            InIndex                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bActionSuccess                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3DetectAction_C::STATIC_InputButton(int InIndex, bool* bActionSuccess)
+void ABP_S3DetectAction_C::InputButton(int InIndex, bool* bActionSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.InputButton");
 
@@ -200,7 +198,6 @@ void ABP_S3DetectAction_C::STATIC_InputButton(int InIndex, bool* bActionSuccess)
 	params.InIndex = InIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,7 +209,7 @@ void ABP_S3DetectAction_C::STATIC_InputButton(int InIndex, bool* bActionSuccess)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.IsDetectedActor
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -225,7 +222,6 @@ bool ABP_S3DetectAction_C::IsDetectedActor(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,7 +232,7 @@ bool ABP_S3DetectAction_C::IsDetectedActor(class AActor* Actor)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.SetWidgetVisible
-// (Net, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -248,7 +244,6 @@ void ABP_S3DetectAction_C::SetWidgetVisible(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -257,11 +252,11 @@ void ABP_S3DetectAction_C::SetWidgetVisible(bool Visible)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.AttachPlayer
-// (NetReliable, NetRequest, Static, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           succes                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3DetectAction_C::STATIC_AttachPlayer(bool* succes)
+void ABP_S3DetectAction_C::AttachPlayer(bool* succes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.AttachPlayer");
 
@@ -279,7 +274,7 @@ void ABP_S3DetectAction_C::STATIC_AttachPlayer(bool* succes)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.AddDetectActor
-// (Event, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Unregister                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -301,7 +296,7 @@ void ABP_S3DetectAction_C::AddDetectActor(class AActor* OtherActor, bool Unregis
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.PlayDetectSound
-// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -321,9 +316,9 @@ void ABP_S3DetectAction_C::PlayDetectSound(ES3ActionIconType Type)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.InitWidget
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3DetectAction_C::STATIC_InitWidget()
+void ABP_S3DetectAction_C::InitWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.InitWidget");
 
@@ -338,9 +333,9 @@ void ABP_S3DetectAction_C::STATIC_InitWidget()
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Exec, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3DetectAction_C::STATIC_UserConstructionScript()
+void ABP_S3DetectAction_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.UserConstructionScript");
 
@@ -355,11 +350,11 @@ void ABP_S3DetectAction_C::STATIC_UserConstructionScript()
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_SearchBottomButton_K2Node_InputActionEvent_10
-// (Net, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchBottomButton_K2Node_InputActionEvent_10(const struct FKey& Key)
+void ABP_S3DetectAction_C::InpActEvt_SearchBottomButton_K2Node_InputActionEvent_10(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_SearchBottomButton_K2Node_InputActionEvent_10");
 
@@ -367,7 +362,6 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchBottomButton_K2Node_InputActio
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -376,11 +370,11 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchBottomButton_K2Node_InputActio
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_SearchRightButton_K2Node_InputActionEvent_9
-// (Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchRightButton_K2Node_InputActionEvent_9(const struct FKey& Key)
+void ABP_S3DetectAction_C::InpActEvt_SearchRightButton_K2Node_InputActionEvent_9(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_SearchRightButton_K2Node_InputActionEvent_9");
 
@@ -388,7 +382,6 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchRightButton_K2Node_InputAction
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -397,11 +390,11 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchRightButton_K2Node_InputAction
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_SearchLeftButton_K2Node_InputActionEvent_8
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchLeftButton_K2Node_InputActionEvent_8(const struct FKey& Key)
+void ABP_S3DetectAction_C::InpActEvt_SearchLeftButton_K2Node_InputActionEvent_8(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_SearchLeftButton_K2Node_InputActionEvent_8");
 
@@ -409,7 +402,6 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchLeftButton_K2Node_InputActionE
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -418,11 +410,11 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchLeftButton_K2Node_InputActionE
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_SearchTopButton_K2Node_InputActionEvent_7
-// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchTopButton_K2Node_InputActionEvent_7(const struct FKey& Key)
+void ABP_S3DetectAction_C::InpActEvt_SearchTopButton_K2Node_InputActionEvent_7(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_SearchTopButton_K2Node_InputActionEvent_7");
 
@@ -430,7 +422,6 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchTopButton_K2Node_InputActionEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -439,11 +430,11 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_SearchTopButton_K2Node_InputActionEv
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_Menu_K2Node_InputActionEvent_6
-// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3DetectAction_C::STATIC_InpActEvt_Menu_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_S3DetectAction_C::InpActEvt_Menu_K2Node_InputActionEvent_6(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_Menu_K2Node_InputActionEvent_6");
 
@@ -451,7 +442,6 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_Menu_K2Node_InputActionEvent_6(const
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -460,11 +450,11 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_Menu_K2Node_InputActionEvent_6(const
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_Ctrl+Alt_NumPadNine_K2Node_InputKeyEvent_2
-// (Net, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3DetectAction_C::STATIC_InpActEvt_Ctrl_Alt_NumPadNine_K2Node_InputKeyEvent_2(const struct FKey& Key)
+void ABP_S3DetectAction_C::InpActEvt_Ctrl_Alt_NumPadNine_K2Node_InputKeyEvent_2(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.InpActEvt_Ctrl+Alt_NumPadNine_K2Node_InputKeyEvent_2");
 
@@ -472,7 +462,6 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_Ctrl_Alt_NumPadNine_K2Node_InputKeyE
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -481,16 +470,15 @@ void ABP_S3DetectAction_C::STATIC_InpActEvt_Ctrl_Alt_NumPadNine_K2Node_InputKeyE
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.ReceiveBeginPlay
-// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_S3DetectAction_C::STATIC_ReceiveBeginPlay()
+void ABP_S3DetectAction_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.ReceiveBeginPlay");
 
 	ABP_S3DetectAction_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -499,16 +487,15 @@ void ABP_S3DetectAction_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.delayedFirstAttach
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3DetectAction_C::STATIC_delayedFirstAttach()
+void ABP_S3DetectAction_C::delayedFirstAttach()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.delayedFirstAttach");
 
 	ABP_S3DetectAction_C_delayedFirstAttach_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -517,16 +504,15 @@ void ABP_S3DetectAction_C::STATIC_delayedFirstAttach()
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.UpdateButton
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3DetectAction_C::STATIC_UpdateButton()
+void ABP_S3DetectAction_C::UpdateButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.UpdateButton");
 
 	ABP_S3DetectAction_C_UpdateButton_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -535,11 +521,11 @@ void ABP_S3DetectAction_C::STATIC_UpdateButton()
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.OnStartBS
-// (NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AS3Character*            TalkableActor                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3DetectAction_C::STATIC_OnStartBS(class AS3Character* TalkableActor)
+void ABP_S3DetectAction_C::OnStartBS(class AS3Character* TalkableActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.OnStartBS");
 
@@ -547,7 +533,6 @@ void ABP_S3DetectAction_C::STATIC_OnStartBS(class AS3Character* TalkableActor)
 	params.TalkableActor = TalkableActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -556,11 +541,11 @@ void ABP_S3DetectAction_C::STATIC_OnStartBS(class AS3Character* TalkableActor)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.OnEndTalk
-// (Net, NetReliable, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3DetectAction_C::STATIC_OnEndTalk(class AActor* Actor)
+void ABP_S3DetectAction_C::OnEndTalk(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.OnEndTalk");
 
@@ -568,7 +553,6 @@ void ABP_S3DetectAction_C::STATIC_OnEndTalk(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -577,16 +561,15 @@ void ABP_S3DetectAction_C::STATIC_OnEndTalk(class AActor* Actor)
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.StartInputCooldown
-// (Exec, Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3DetectAction_C::STATIC_StartInputCooldown()
+void ABP_S3DetectAction_C::StartInputCooldown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3DetectAction.BP_S3DetectAction_C.StartInputCooldown");
 
 	ABP_S3DetectAction_C_StartInputCooldown_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -595,7 +578,7 @@ void ABP_S3DetectAction_C::STATIC_StartInputCooldown()
 
 
 // Function BP_S3DetectAction.BP_S3DetectAction_C.ExecuteUbergraph_BP_S3DetectAction
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -607,7 +590,6 @@ void ABP_S3DetectAction_C::ExecuteUbergraph_BP_S3DetectAction(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

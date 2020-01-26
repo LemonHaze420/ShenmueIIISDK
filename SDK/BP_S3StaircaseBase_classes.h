@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,41 +42,41 @@ public:
 
 
 	void CheckInitialOverlaps();
-	void STATIC_GetRelativeStairOnX(const struct FVector& Location, float FudgeDistanceIn, TEnumAsByte<EVerticalDirection>* Relative);
-	void STATIC_GetStepsBaseTransform(struct FTransform* OutTransform);
+	void GetRelativeStairOnX(const struct FVector& Location, float FudgeDistanceIn, TEnumAsByte<EVerticalDirection>* Relative);
+	void GetStepsBaseTransform(struct FTransform* OutTransform);
 	void GetClimbEndPoints_LS(struct FVector* Bottom, struct FVector* top);
-	void STATIC_Editor_UpdateVisualization();
+	void Editor_UpdateVisualization();
 	void SetupDebugStepVisual(class UStaticMeshComponent* Mesh, const struct FVector& StepEnd);
 	void PairToMultiMeshActor(class AActor* Actor, const struct FVector& StepDimension, int NumberOfSteps);
 	void GetBestSnapCandidate(float CloseTo, float Candidate1, float Candidate2, float Candidate3, float PreferredSign, float* Selection);
-	void STATIC_CalculateTriggerBounds();
+	void CalculateTriggerBounds();
 	void PairToAndConfigureMesh(class UStaticMeshComponent* MeshComp);
 	void GetClosestStopLocation(const struct FVector& InLocation, struct FVector* OutLocation);
 	void AnimPositionToStepProgress(float AnimPosition, bool DirUp, float* StepProgress);
-	void STATIC_StepProgressToAnimPosition(float StepProgress, bool DirUp, float* RPosition, float* LPosition);
-	void STATIC_GetStepsClimbedForLocation(const struct FVector& Location, float* Progress);
+	void StepProgressToAnimPosition(float StepProgress, bool DirUp, float* RPosition, float* LPosition);
+	void GetStepsClimbedForLocation(const struct FVector& Location, float* Progress);
 	void GetNextStepStopLocation(const struct FVector& InLocation, bool InDirUp, struct FVector* OutLocation);
-	void STATIC_GetAngleInClimbDirection(const struct FVector& InDirection, bool isUp, float* OutAngle);
-	void STATIC_GetClimbCycleRefTransform(struct FTransform* OutTransform);
+	void GetAngleInClimbDirection(const struct FVector& InDirection, bool IsUp, float* OutAngle);
+	void GetClimbCycleRefTransform(struct FTransform* OutTransform);
 	void GetCollisionActor(class AActor** CollisionActor);
 	void GetIdOfClosestStep(const struct FVector& InLocation, int* OutID);
-	void STATIC_GetStepCycleForLocation(const struct FVector& InLocation, int* OutClimbCycle);
-	void STATIC_GetSlopeAngle(float* AngleDegrees);
+	void GetStepCycleForLocation(const struct FVector& InLocation, int* OutClimbCycle);
+	void GetSlopeAngle(float* AngleDegrees);
 	void DistanceToClosestStopLocation(const struct FVector& Location, float* Distance);
-	void STATIC_RelXToRelZ(float RelX, float* RelZ);
-	void STATIC_ClimbCycleRefToWorldSpace(const struct FVector& Relative, struct FVector* World);
-	void STATIC_WorldToClimbCycleRefSpace(const struct FVector& Location, struct FVector* Relative);
+	void RelXToRelZ(float RelX, float* RelZ);
+	void ClimbCycleRefToWorldSpace(const struct FVector& Relative, struct FVector* World);
+	void WorldToClimbCycleRefSpace(const struct FVector& Location, struct FVector* Relative);
 	void CorrectLocationForStepProgress(const struct FVector& Position, float StepProgress, bool DirUp, struct FVector* Correction);
-	void STATIC_InBounds2D(const struct FVector& Location, const struct FVector& SizeAdjustment, bool* In);
+	void InBounds2D(const struct FVector& Location, const struct FVector& SizeAdjustment, bool* In);
 	void GetSlopeDirection(struct FVector* SlopeDIrection);
-	void STATIC_GetClimbCycleRefLocation(struct FVector* BaseLocation);
+	void GetClimbCycleRefLocation(struct FVector* BaseLocation);
 	void CorrectLocationHeight(const struct FVector& Location, float* Height);
-	void STATIC_GetStepProgressForLocation(const struct FVector& Location, float* Progress);
+	void GetStepProgressForLocation(const struct FVector& Location, float* Progress);
 	void UserConstructionScript();
-	void STATIC_BndEvt__TriggerBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__TriggerBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__TriggerBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BP_S3StaircaseBase(int EntryPoint);
+	void ExecuteUbergraph_BP_S3StaircaseBase(int EntryPoint);
 };
 
 

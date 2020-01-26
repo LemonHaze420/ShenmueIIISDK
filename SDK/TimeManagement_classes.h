@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class TimeManagement.FixedFrameRateCustomTimeStep
+// 0x0008 (0x0030 - 0x0028)
+class UFixedFrameRateCustomTimeStep : public UEngineCustomTimeStep
+{
+public:
+	struct FFrameRate                                  FixedFrameRate;                                           // 0x0028(0x0008) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TimeManagement.FixedFrameRateCustomTimeStep");
+		return ptr;
+	}
+
+};
+
 
 // Class TimeManagement.TimeSynchronizationSource
 // 0x0010 (0x0038 - 0x0028)
@@ -32,22 +48,6 @@ public:
 };
 
 
-// Class TimeManagement.FixedFrameRateCustomTimeStep
-// 0x0008 (0x0030 - 0x0028)
-class UFixedFrameRateCustomTimeStep : public UEngineCustomTimeStep
-{
-public:
-	struct FFrameRate                                  FixedFrameRate;                                           // 0x0028(0x0008) (Edit)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class TimeManagement.FixedFrameRateCustomTimeStep");
-		return ptr;
-	}
-
-};
-
-
 // Class TimeManagement.TimeManagementBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UTimeManagementBlueprintLibrary : public UBlueprintFunctionLibrary
@@ -61,11 +61,11 @@ public:
 	}
 
 
-	struct FFrameTime Multiply_SecondsFrameRate(float TimeInSeconds, const struct FFrameRate& FrameRate);
-	struct FTimecode GetTimecode();
-	struct FString Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay);
-	float Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime);
-	float Conv_FrameRateToSeconds(const struct FFrameRate& InFrameRate);
+	struct FFrameTime STATIC_Multiply_SecondsFrameRate(float TimeInSeconds, const struct FFrameRate& FrameRate);
+	struct FTimecode STATIC_GetTimecode();
+	struct FString STATIC_Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay);
+	float STATIC_Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime);
+	float STATIC_Conv_FrameRateToSeconds(const struct FFrameRate& InFrameRate);
 };
 
 

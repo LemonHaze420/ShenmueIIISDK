@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_LevelData.BPF_LevelData_C.GetACLevelName
-// (Exec, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   LevelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,12 +38,12 @@ void UBPF_LevelData_C::STATIC_GetACLevelName(class UObject* __WorldContext, stru
 
 
 // Function BPF_LevelData.BPF_LevelData_C.IsInChobuRyosya
-// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           In                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_LevelData_C::IsInChobuRyosya(class UObject* __WorldContext, bool* In)
+void UBPF_LevelData_C::STATIC_IsInChobuRyosya(class UObject* __WorldContext, bool* In)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_LevelData.BPF_LevelData_C.IsInChobuRyosya");
 
@@ -62,7 +62,7 @@ void UBPF_LevelData_C::IsInChobuRyosya(class UObject* __WorldContext, bool* In)
 
 
 // Function BPF_LevelData.BPF_LevelData_C.GetBPLevelName
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   LevelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -75,7 +75,6 @@ void UBPF_LevelData_C::STATIC_GetBPLevelName(class UObject* __WorldContext, stru
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +86,7 @@ void UBPF_LevelData_C::STATIC_GetBPLevelName(class UObject* __WorldContext, stru
 
 
 // Function BPF_LevelData.BPF_LevelData_C.GetLookAtLevelName
-// (NetRequest, Native, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   LevelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -100,7 +99,6 @@ void UBPF_LevelData_C::STATIC_GetLookAtLevelName(class UObject* __WorldContext, 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,12 +110,12 @@ void UBPF_LevelData_C::STATIC_GetLookAtLevelName(class UObject* __WorldContext, 
 
 
 // Function BPF_LevelData.BPF_LevelData_C.GetLandscapeLevelNames
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Protected, NetServer, BlueprintCallable)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           LevelNames                     (Parm, OutParm, ZeroConstructor)
 
-void UBPF_LevelData_C::GetLandscapeLevelNames(class UObject* __WorldContext, TArray<struct FName>* LevelNames)
+void UBPF_LevelData_C::STATIC_GetLandscapeLevelNames(class UObject* __WorldContext, TArray<struct FName>* LevelNames)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_LevelData.BPF_LevelData_C.GetLandscapeLevelNames");
 
@@ -125,7 +123,6 @@ void UBPF_LevelData_C::GetLandscapeLevelNames(class UObject* __WorldContext, TAr
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +134,7 @@ void UBPF_LevelData_C::GetLandscapeLevelNames(class UObject* __WorldContext, TAr
 
 
 // Function BPF_LevelData.BPF_LevelData_C.GetMinimapLevelName
-// (NetReliable, Exec, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   LevelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -161,7 +158,7 @@ void UBPF_LevelData_C::STATIC_GetMinimapLevelName(class UObject* __WorldContext,
 
 
 // Function BPF_LevelData.BPF_LevelData_C.GetNaviMeshLevelName
-// (Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   LevelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -185,7 +182,7 @@ void UBPF_LevelData_C::STATIC_GetNaviMeshLevelName(class UObject* __WorldContext
 
 
 // Function BPF_LevelData.BPF_LevelData_C.GetNPCLevelName
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   LevelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -209,7 +206,7 @@ void UBPF_LevelData_C::STATIC_GetNPCLevelName(class UObject* __WorldContext, str
 
 
 // Function BPF_LevelData.BPF_LevelData_C.GetChobuLevelName
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   LevelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -222,7 +219,6 @@ void UBPF_LevelData_C::STATIC_GetChobuLevelName(class UObject* __WorldContext, s
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,7 +230,7 @@ void UBPF_LevelData_C::STATIC_GetChobuLevelName(class UObject* __WorldContext, s
 
 
 // Function BPF_LevelData.BPF_LevelData_C.getLevelNameAndEnum
-// (Net, NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 PersistentLevelName            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           Detail                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -242,7 +238,7 @@ void UBPF_LevelData_C::STATIC_GetChobuLevelName(class UObject* __WorldContext, s
 // struct FString                 nameStr                        (Parm, OutParm, ZeroConstructor)
 // ES3Where                       enWhere                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_LevelData_C::getLevelNameAndEnum(const struct FString& PersistentLevelName, bool Detail, class UObject* __WorldContext, struct FString* nameStr, ES3Where* enWhere)
+void UBPF_LevelData_C::STATIC_getLevelNameAndEnum(const struct FString& PersistentLevelName, bool Detail, class UObject* __WorldContext, struct FString* nameStr, ES3Where* enWhere)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_LevelData.BPF_LevelData_C.getLevelNameAndEnum");
 
@@ -252,7 +248,6 @@ void UBPF_LevelData_C::getLevelNameAndEnum(const struct FString& PersistentLevel
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -266,7 +261,7 @@ void UBPF_LevelData_C::getLevelNameAndEnum(const struct FString& PersistentLevel
 
 
 // Function BPF_LevelData.BPF_LevelData_C.getLevelData
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3LevelDataAsset*       LevelData                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -279,7 +274,6 @@ void UBPF_LevelData_C::STATIC_getLevelData(class UObject* __WorldContext, class 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.OverrideGachaPrice
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameChoose_Gacha_C::STATIC_OverrideGachaPrice()
+void ABP_MiniGameChoose_Gacha_C::OverrideGachaPrice()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.OverrideGachaPrice");
 
@@ -31,16 +31,15 @@ void ABP_MiniGameChoose_Gacha_C::STATIC_OverrideGachaPrice()
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameChoose_Gacha_C::STATIC_UserConstructionScript()
+void ABP_MiniGameChoose_Gacha_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.UserConstructionScript");
 
 	ABP_MiniGameChoose_Gacha_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,7 +48,7 @@ void ABP_MiniGameChoose_Gacha_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.InpActEvt_MG_Right_K2Node_InputActionEvent_8
-// (Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -69,7 +68,7 @@ void ABP_MiniGameChoose_Gacha_C::InpActEvt_MG_Right_K2Node_InputActionEvent_8(co
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.InpActEvt_MG_Left_K2Node_InputActionEvent_7
-// (Net, NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -89,7 +88,7 @@ void ABP_MiniGameChoose_Gacha_C::InpActEvt_MG_Left_K2Node_InputActionEvent_7(con
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_6
-// (Net, NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -109,7 +108,7 @@ void ABP_MiniGameChoose_Gacha_C::InpActEvt_MG_LeftStickLeft_K2Node_InputActionEv
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_5
-// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -129,7 +128,7 @@ void ABP_MiniGameChoose_Gacha_C::InpActEvt_MG_LeftStickRight_K2Node_InputActionE
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGameChoose_Gacha_C::ReceiveBeginPlay()
 {
@@ -146,7 +145,7 @@ void ABP_MiniGameChoose_Gacha_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.DecideDetectAction
-// (Net, Exec, Native, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -158,7 +157,6 @@ void ABP_MiniGameChoose_Gacha_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,7 +165,7 @@ void ABP_MiniGameChoose_Gacha_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.ReceiveTick
-// (Net, Exec, Native, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -179,7 +177,6 @@ void ABP_MiniGameChoose_Gacha_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -188,7 +185,7 @@ void ABP_MiniGameChoose_Gacha_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.ReceiveEndPlay
-// (Net, NetReliable, Native, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -200,7 +197,6 @@ void ABP_MiniGameChoose_Gacha_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndP
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -209,11 +205,11 @@ void ABP_MiniGameChoose_Gacha_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndP
 
 
 // Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.ExecuteUbergraph_BP_MiniGameChoose_Gacha
-// (Exec, Static, Protected, Delegate, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameChoose_Gacha_C::STATIC_ExecuteUbergraph_BP_MiniGameChoose_Gacha(int EntryPoint)
+void ABP_MiniGameChoose_Gacha_C::ExecuteUbergraph_BP_MiniGameChoose_Gacha(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Gacha.BP_MiniGameChoose_Gacha_C.ExecuteUbergraph_BP_MiniGameChoose_Gacha");
 

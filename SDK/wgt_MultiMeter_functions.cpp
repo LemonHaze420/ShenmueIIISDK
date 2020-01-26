@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.CalcMeterRatio
-// (NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Min                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Max                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -39,12 +39,12 @@ float Uwgt_MultiMeter_C::CalcMeterRatio(float Min, float Max)
 
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.GetMaxDisplayableRatio
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float Uwgt_MultiMeter_C::STATIC_GetMaxDisplayableRatio(float A)
+float Uwgt_MultiMeter_C::GetMaxDisplayableRatio(float A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MultiMeter.wgt_MultiMeter_C.GetMaxDisplayableRatio");
 
@@ -52,7 +52,6 @@ float Uwgt_MultiMeter_C::STATIC_GetMaxDisplayableRatio(float A)
 	params.A = A;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,13 +62,13 @@ float Uwgt_MultiMeter_C::STATIC_GetMaxDisplayableRatio(float A)
 
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.GetOrbTresholds
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Min                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Max                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_MultiMeter_C::STATIC_GetOrbTresholds(int Index, float* Min, float* Max)
+void Uwgt_MultiMeter_C::GetOrbTresholds(int Index, float* Min, float* Max)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MultiMeter.wgt_MultiMeter_C.GetOrbTresholds");
 
@@ -77,7 +76,6 @@ void Uwgt_MultiMeter_C::STATIC_GetOrbTresholds(int Index, float* Min, float* Max
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,9 +89,9 @@ void Uwgt_MultiMeter_C::STATIC_GetOrbTresholds(int Index, float* Min, float* Max
 
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.UpdateSubScaleRatios
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_MultiMeter_C::STATIC_UpdateSubScaleRatios()
+void Uwgt_MultiMeter_C::UpdateSubScaleRatios()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MultiMeter.wgt_MultiMeter_C.UpdateSubScaleRatios");
 
@@ -108,7 +106,7 @@ void Uwgt_MultiMeter_C::STATIC_UpdateSubScaleRatios()
 
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.UpdateSubFillRatios
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_MultiMeter_C::UpdateSubFillRatios()
 {
@@ -117,7 +115,6 @@ void Uwgt_MultiMeter_C::UpdateSubFillRatios()
 	Uwgt_MultiMeter_C_UpdateSubFillRatios_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,12 +123,12 @@ void Uwgt_MultiMeter_C::UpdateSubFillRatios()
 
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.SetFillRatio
-// (NetReliable, Exec, Static, NetMulticast, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          FillRatio                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_MultiMeter_C::STATIC_SetFillRatio(float FillRatio, bool* Changed)
+void Uwgt_MultiMeter_C::SetFillRatio(float FillRatio, bool* Changed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MultiMeter.wgt_MultiMeter_C.SetFillRatio");
 
@@ -150,7 +147,7 @@ void Uwgt_MultiMeter_C::STATIC_SetFillRatio(float FillRatio, bool* Changed)
 
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.SetScaleRatio
-// (Net, NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ScaleRatio                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -174,12 +171,12 @@ void Uwgt_MultiMeter_C::SetScaleRatio(float ScaleRatio, bool* Changed)
 
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.FindChildOrbs
-// (Net, Exec, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPanelWidget*            InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Reverse                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_MultiMeter_C::STATIC_FindChildOrbs(class UPanelWidget* InputPin, bool Reverse)
+void Uwgt_MultiMeter_C::FindChildOrbs(class UPanelWidget* InputPin, bool Reverse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MultiMeter.wgt_MultiMeter_C.FindChildOrbs");
 
@@ -196,7 +193,7 @@ void Uwgt_MultiMeter_C::STATIC_FindChildOrbs(class UPanelWidget* InputPin, bool 
 
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.Construct
-// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_MultiMeter_C::Construct()
 {
@@ -213,7 +210,7 @@ void Uwgt_MultiMeter_C::Construct()
 
 
 // Function wgt_MultiMeter.wgt_MultiMeter_C.ExecuteUbergraph_wgt_MultiMeter
-// (Net, Exec, Native, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -225,7 +222,6 @@ void Uwgt_MultiMeter_C::ExecuteUbergraph_wgt_MultiMeter(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

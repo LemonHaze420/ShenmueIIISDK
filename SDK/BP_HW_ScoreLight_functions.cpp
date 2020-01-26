@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.SetEmissivePower
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HW_ScoreLight_C::STATIC_SetEmissivePower(class UPrimitiveComponent* Target, float Value)
+void ABP_HW_ScoreLight_C::SetEmissivePower(class UPrimitiveComponent* Target, float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.SetEmissivePower");
 
@@ -36,7 +36,7 @@ void ABP_HW_ScoreLight_C::STATIC_SetEmissivePower(class UPrimitiveComponent* Tar
 
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.DispScoreLight
-// (NetReliable, Static, NetMulticast, Private, Protected, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Disp                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            TargetNum                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -45,7 +45,7 @@ void ABP_HW_ScoreLight_C::STATIC_SetEmissivePower(class UPrimitiveComponent* Tar
 // bool                           bChange                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UStaticMeshComponent*    ChangeTarget                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_HW_ScoreLight_C::STATIC_DispScoreLight(bool Disp, int TargetNum, TArray<class UStaticMeshComponent*> TargetArray, float EmissivePowerOnTrace, bool* bChange, class UStaticMeshComponent** ChangeTarget)
+void ABP_HW_ScoreLight_C::DispScoreLight(bool Disp, int TargetNum, TArray<class UStaticMeshComponent*> TargetArray, float EmissivePowerOnTrace, bool* bChange, class UStaticMeshComponent** ChangeTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.DispScoreLight");
 
@@ -69,7 +69,7 @@ void ABP_HW_ScoreLight_C::STATIC_DispScoreLight(bool Disp, int TargetNum, TArray
 
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.DispEnemyScoreLight
-// (Net, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ArgDisp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ArgBlinkIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -83,7 +83,6 @@ void ABP_HW_ScoreLight_C::DispEnemyScoreLight(bool ArgDisp, int ArgBlinkIndex)
 	params.ArgBlinkIndex = ArgBlinkIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +91,7 @@ void ABP_HW_ScoreLight_C::DispEnemyScoreLight(bool ArgDisp, int ArgBlinkIndex)
 
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.RegisterScoreLightArray
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Protected, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HW_ScoreLight_C::RegisterScoreLightArray()
 {
@@ -109,12 +108,12 @@ void ABP_HW_ScoreLight_C::RegisterScoreLightArray()
 
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.DispMyScoreLight
-// (NetRequest, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ArgDisp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ArgBlinkIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HW_ScoreLight_C::STATIC_DispMyScoreLight(bool ArgDisp, int ArgBlinkIndex)
+void ABP_HW_ScoreLight_C::DispMyScoreLight(bool ArgDisp, int ArgBlinkIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.DispMyScoreLight");
 
@@ -131,16 +130,15 @@ void ABP_HW_ScoreLight_C::STATIC_DispMyScoreLight(bool ArgDisp, int ArgBlinkInde
 
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.ScoreLightAllOff
-// (NetRequest, Native, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_HW_ScoreLight_C::STATIC_ScoreLightAllOff()
+void ABP_HW_ScoreLight_C::ScoreLightAllOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.ScoreLightAllOff");
 
 	ABP_HW_ScoreLight_C_ScoreLightAllOff_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,16 +147,15 @@ void ABP_HW_ScoreLight_C::STATIC_ScoreLightAllOff()
 
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.UserConstructionScript
-// (Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_HW_ScoreLight_C::STATIC_UserConstructionScript()
+void ABP_HW_ScoreLight_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.UserConstructionScript");
 
 	ABP_HW_ScoreLight_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,9 +164,9 @@ void ABP_HW_ScoreLight_C::STATIC_UserConstructionScript()
 
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.ReceiveBeginPlay
-// (Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_HW_ScoreLight_C::STATIC_ReceiveBeginPlay()
+void ABP_HW_ScoreLight_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.ReceiveBeginPlay");
 
@@ -184,11 +181,11 @@ void ABP_HW_ScoreLight_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.ExecuteUbergraph_BP_HW_ScoreLight
-// (Net, NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HW_ScoreLight_C::STATIC_ExecuteUbergraph_BP_HW_ScoreLight(int EntryPoint)
+void ABP_HW_ScoreLight_C::ExecuteUbergraph_BP_HW_ScoreLight(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.ExecuteUbergraph_BP_HW_ScoreLight");
 
@@ -204,9 +201,9 @@ void ABP_HW_ScoreLight_C::STATIC_ExecuteUbergraph_BP_HW_ScoreLight(int EntryPoin
 
 
 // Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.OnChangeLightDispacher__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_HW_ScoreLight_C::STATIC_OnChangeLightDispacher__DelegateSignature()
+void ABP_HW_ScoreLight_C::OnChangeLightDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_ScoreLight.BP_HW_ScoreLight_C.OnChangeLightDispacher__DelegateSignature");
 

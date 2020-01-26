@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.GetIconIndex
-// (Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            IconIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::GetIconIndex(int* IconIndex)
 	UBPW_UI_DressMode_Clothing_OneLine_C_GetIconIndex_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,13 +36,13 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::GetIconIndex(int* IconIndex)
 
 
 // Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.SetIconIndex
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            IconIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Parts                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // EClothPartsType                PartsType                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_Clothing_OneLine_C::STATIC_SetIconIndex(int IconIndex, struct FName* Parts, EClothPartsType* PartsType)
+void UBPW_UI_DressMode_Clothing_OneLine_C::SetIconIndex(int IconIndex, struct FName* Parts, EClothPartsType* PartsType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.SetIconIndex");
 
@@ -51,7 +50,6 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::STATIC_SetIconIndex(int IconIndex, st
 	params.IconIndex = IconIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,18 +63,17 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::STATIC_SetIconIndex(int IconIndex, st
 
 
 // Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.GetText_1
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBPW_UI_DressMode_Clothing_OneLine_C::STATIC_GetText_1()
+struct FText UBPW_UI_DressMode_Clothing_OneLine_C::GetText_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.GetText_1");
 
 	UBPW_UI_DressMode_Clothing_OneLine_C_GetText_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,11 +84,11 @@ struct FText UBPW_UI_DressMode_Clothing_OneLine_C::STATIC_GetText_1()
 
 
 // Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.SetText
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPW_UI_DressMode_Clothing_OneLine_C::STATIC_SetText(const struct FText& InText)
+void UBPW_UI_DressMode_Clothing_OneLine_C::SetText(const struct FText& InText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.SetText");
 
@@ -99,7 +96,6 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::STATIC_SetText(const struct FText& In
 	params.InText = InText;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,7 +104,7 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::STATIC_SetText(const struct FText& In
 
 
 // Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.InitIconButton
-// (Net, NetReliable, Exec, Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsFocus                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -134,7 +130,7 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::InitIconButton(int ItemId, bool IsFoc
 
 
 // Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.Construct
-// (Net, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_UI_DressMode_Clothing_OneLine_C::Construct()
 {
@@ -143,7 +139,6 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::Construct()
 	UBPW_UI_DressMode_Clothing_OneLine_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -152,7 +147,7 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::Construct()
 
 
 // Function BPW_UI_DressMode_Clothing_OneLine.BPW_UI_DressMode_Clothing_OneLine_C.ExecuteUbergraph_BPW_UI_DressMode_Clothing_OneLine
-// (Net, NetRequest, Native, Event, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -164,7 +159,6 @@ void UBPW_UI_DressMode_Clothing_OneLine_C::ExecuteUbergraph_BPW_UI_DressMode_Clo
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

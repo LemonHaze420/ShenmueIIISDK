@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPIF_AutoTalkCamera.BPIF_AutoTalkCamera_C.ChangeTarget
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AActor*>          NewTarget                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          lerpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPIF_AutoTalkCamera_C::STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
+void UBPIF_AutoTalkCamera_C::ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPIF_AutoTalkCamera.BPIF_AutoTalkCamera_C.ChangeTarget");
 

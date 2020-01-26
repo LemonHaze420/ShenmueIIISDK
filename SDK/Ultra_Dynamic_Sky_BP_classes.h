@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -178,32 +178,32 @@ public:
 
 
 	void SetSunAndMoonMovement(bool Enable);
-	void STATIC_GetCurrentUDMMat(class UMaterialInstanceDynamic** newParam);
+	void GetCurrentUDMMat(class UMaterialInstanceDynamic** newParam);
 	void ForceMoonPosition(float Yaw);
-	void STATIC_ForceUpdateSkylight();
+	void ForceUpdateSkylight();
 	void IsCloudy(bool* Cloudy);
-	void STATIC_ResetCloudSimulateTime();
+	void ResetCloudSimulateTime();
 	void SetWindSpeed(float Speed);
 	void UpdateFogDensity(float DeltaSeconds);
-	void STATIC_AnmateCloudDensity();
+	void AnmateCloudDensity();
 	void UpdateWind(struct FVector* WindVector);
-	void STATIC_SetGameTime(float InGameTime, bool bJump);
+	void SetGameTime(float InGameTime, bool bJump);
 	void GetCloudRatio(float* Ratio);
-	void STATIC_GetSunLocation(struct FVector* Location);
-	void STATIC_SetFogDensity(float Value, bool Force);
-	void STATIC_CanRain(bool* Rain);
+	void GetSunLocation(struct FVector* Location);
+	void SetFogDensity(float Value, bool Force);
+	void CanRain(bool* Rain);
 	void UpdateCloudDensity(float NewDencity, bool Force);
 	void SetCloudChangeSpeed(bool Quick, bool TransitionTest);
-	void STATIC_GetSkyParamater(struct FRotator* Direction, float* Intensity, struct FLinearColor* LightColor);
-	void STATIC_Update_Skylight(bool bAutoTimeOfDay);
+	void GetSkyParamater(struct FRotator* Direction, float* Intensity, struct FLinearColor* LightColor);
+	void Update_Skylight(bool bAutoTimeOfDay);
 	void Set_Material_Variables();
 	void Set_Solar_Angle();
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_Ultra_Dynamic_Sky_BP(int EntryPoint);
+	void ExecuteUbergraph_Ultra_Dynamic_Sky_BP(int EntryPoint);
 	void OnUpdateWind__DelegateSignature(const struct FVector& WindDirection);
-	void STATIC_OnReadyCloud__DelegateSignature();
+	void OnReadyCloud__DelegateSignature();
 };
 
 

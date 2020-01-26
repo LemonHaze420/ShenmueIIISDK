@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3Memopad_textContent_Row8.wgt_S3Memopad_textContent_Row8_C.CheckWriteUnderLine
-// (Net, NetReliable, Exec, Event, NetMulticast, Public, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            MemoId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           WriteUnderLine                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,14 +38,14 @@ void Uwgt_S3Memopad_textContent_Row8_C::CheckWriteUnderLine(int MemoId, bool* Wr
 
 
 // Function wgt_S3Memopad_textContent_Row8.wgt_S3Memopad_textContent_Row8_C.UpdateDisplay
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Body                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FST_RubyInfo            RubyInfo                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            MemoId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3Memopad_textContent_Row8_C::STATIC_UpdateDisplay(const struct FString& Body, const struct FST_RubyInfo& RubyInfo, int MemoId, bool* newParam)
+void Uwgt_S3Memopad_textContent_Row8_C::UpdateDisplay(const struct FString& Body, const struct FST_RubyInfo& RubyInfo, int MemoId, bool* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_Row8.wgt_S3Memopad_textContent_Row8_C.UpdateDisplay");
 
@@ -55,7 +55,6 @@ void Uwgt_S3Memopad_textContent_Row8_C::STATIC_UpdateDisplay(const struct FStrin
 	params.MemoId = MemoId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -67,19 +66,18 @@ void Uwgt_S3Memopad_textContent_Row8_C::STATIC_UpdateDisplay(const struct FStrin
 
 
 // Function wgt_S3Memopad_textContent_Row8.wgt_S3Memopad_textContent_Row8_C.GetRubySize
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          X                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Y                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3Memopad_textContent_Row8_C::STATIC_GetRubySize(float* X, float* Y)
+void Uwgt_S3Memopad_textContent_Row8_C::GetRubySize(float* X, float* Y)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_Row8.wgt_S3Memopad_textContent_Row8_C.GetRubySize");
 
 	Uwgt_S3Memopad_textContent_Row8_C_GetRubySize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,7 +91,7 @@ void Uwgt_S3Memopad_textContent_Row8_C::STATIC_GetRubySize(float* X, float* Y)
 
 
 // Function wgt_S3Memopad_textContent_Row8.wgt_S3Memopad_textContent_Row8_C.Construct
-// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_S3Memopad_textContent_Row8_C::Construct()
 {
@@ -102,7 +100,6 @@ void Uwgt_S3Memopad_textContent_Row8_C::Construct()
 	Uwgt_S3Memopad_textContent_Row8_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,7 +108,7 @@ void Uwgt_S3Memopad_textContent_Row8_C::Construct()
 
 
 // Function wgt_S3Memopad_textContent_Row8.wgt_S3Memopad_textContent_Row8_C.Destruct
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_S3Memopad_textContent_Row8_C::Destruct()
 {
@@ -120,7 +117,6 @@ void Uwgt_S3Memopad_textContent_Row8_C::Destruct()
 	Uwgt_S3Memopad_textContent_Row8_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,11 +125,11 @@ void Uwgt_S3Memopad_textContent_Row8_C::Destruct()
 
 
 // Function wgt_S3Memopad_textContent_Row8.wgt_S3Memopad_textContent_Row8_C.ExecuteUbergraph_wgt_S3Memopad_textContent_Row8
-// (Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3Memopad_textContent_Row8_C::STATIC_ExecuteUbergraph_wgt_S3Memopad_textContent_Row8(int EntryPoint)
+void Uwgt_S3Memopad_textContent_Row8_C::ExecuteUbergraph_wgt_S3Memopad_textContent_Row8(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_Row8.wgt_S3Memopad_textContent_Row8_C.ExecuteUbergraph_wgt_S3Memopad_textContent_Row8");
 

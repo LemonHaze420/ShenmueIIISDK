@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -102,65 +102,65 @@ public:
 	}
 
 
-	void STATIC_SetPlayerMotionSpeed(float PlayRate);
-	int STATIC_GetRewardUnitPrice();
+	void SetPlayerMotionSpeed(float PlayRate);
+	int GetRewardUnitPrice();
 	class UMeshComponent* GetClothMeshComponent();
-	void STATIC_InitAsyncLoad(bool* dummy);
+	void InitAsyncLoad(bool* dummy);
 	bool IsFirstPlayDuck();
 	void SetNPCVisibleOnDuck(bool Visible);
 	void GetMiniGameHelpName(struct FString* String);
-	void STATIC_GetQTEButtonIndex(int* Index);
-	void STATIC_EnableChickenFromPlayer();
+	void GetQTEButtonIndex(int* Index);
+	void EnableChickenFromPlayer();
 	void GetSafeAngle(struct FRotator* newParam);
-	void STATIC_SetSequenceRate();
-	void STATIC_SpawnSequenceActor(class ULevelSequence* InSequence, class AActor* AttachParentActor, const struct FName& AttachSocketName, class ABP_SpawnableSequenceActor_C** SpawnObj);
-	void STATIC_PauseGame();
+	void SetSequenceRate();
+	void SpawnSequenceActor(class ULevelSequence* InSequence, class AActor* AttachParentActor, const struct FName& AttachSocketName, class ABP_SpawnableSequenceActor_C** SpawnObj);
+	void PauseGame();
 	void UpdateProgressTime(float DeltaSeconds);
 	void ForceEndSequence();
 	void SetQTEWaitTime();
 	void InitializeValue();
-	void STATIC_UpdateQte(float DeltaSeconds);
-	void STATIC_ActivateCatch(class ABP_MiniGame_CC_Chicken_C* CCPawn, bool* CanPlay);
-	void STATIC_SpawnPlayer();
+	void UpdateQte(float DeltaSeconds);
+	void ActivateCatch(class ABP_MiniGame_CC_Chicken_C* CCPawn, bool* CanPlay);
+	void SpawnPlayer();
 	void CheckEndGame(bool* End);
 	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
-	void STATIC_SpawnChicken();
-	void STATIC_PlaySequence(class ABP_MiniGame_CC_Chicken_C* CCPawn, bool* CanPlay);
-	void STATIC_UserConstructionScript();
+	void SpawnChicken();
+	void PlaySequence(class ABP_MiniGame_CC_Chicken_C* CCPawn, bool* CanPlay);
+	void UserConstructionScript();
 	void StartMiniGame();
 	void EndMiniGame();
-	void STATIC_OnFinishedFade();
+	void OnFinishedFade();
 	void WinMiniGame();
 	void LoseMiniGame();
 	void DrawMiniGame();
 	void FinalizeTalk();
-	void STATIC_Event_StartMiniGame();
-	void STATIC_Event_EndResult();
-	void STATIC_ClothesChangedCC(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
+	void Event_StartMiniGame();
+	void Event_EndResult();
+	void ClothesChangedCC(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_Event_InputStart();
-	void STATIC_Event_InputEnd();
-	void STATIC_BindFinishSequence();
-	void STATIC_InputQTE(const struct FKey& Input);
-	void STATIC_InputPlayerMoveForward(float AxisValue);
-	void STATIC_InputPlayerMoveRight(float AxisValue);
-	void STATIC_InputPlayerRunPressed();
-	void STATIC_InputPlayerRunReleased();
-	void STATIC_InputCameraRight(float Axis);
-	void STATIC_ChangeLocoState();
-	void STATIC_EndSequence();
-	void STATIC_ExecuteMiniGameResultEvent(TEnumAsByte<E_MiniGameResult> Result);
-	void STATIC_OnFinishedEvent_Sequence();
+	void ReceiveTick(float DeltaSeconds);
+	void Event_InputStart();
+	void Event_InputEnd();
+	void BindFinishSequence();
+	void InputQTE(const struct FKey& Input);
+	void InputPlayerMoveForward(float AxisValue);
+	void InputPlayerMoveRight(float AxisValue);
+	void InputPlayerRunPressed();
+	void InputPlayerRunReleased();
+	void InputCameraRight(float Axis);
+	void ChangeLocoState();
+	void EndSequence();
+	void ExecuteMiniGameResultEvent(TEnumAsByte<E_MiniGameResult> Result);
+	void OnFinishedEvent_Sequence();
 	void BndEvt__SearchFreeMode_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__SearchFreeMode_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_DestroyChicken();
-	void STATIC_ChangeGameTimeEvent(ES3DayTimeEvent EventType);
+	void BndEvt__SearchFreeMode_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void DestroyChicken();
+	void ChangeGameTimeEvent(ES3DayTimeEvent EventType);
 	void CancelMiniGame();
 	void Event_EndMiniGame();
 	void OnBeginOverlapWallCollision(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_OnEndOverlapWallCollision(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void OnEndOverlapWallCollision(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void ExecuteUbergraph_BP_MiniGame_CC_Manager(int EntryPoint);
 };
 

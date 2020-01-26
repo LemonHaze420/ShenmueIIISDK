@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_BattleAdvice.BPF_BattleAdvice_C.BPF_FilterOutBattleAdvice
-// (Net, NetReliable, Exec, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<TEnumAsByte<EBattleAdvice>> TargetList                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<TEnumAsByte<EBattleAdvice>> Remove                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_BattleAdvice_C::BPF_FilterOutBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* TargetList, TArray<TEnumAsByte<EBattleAdvice>>* Remove)
+void UBPF_BattleAdvice_C::STATIC_BPF_FilterOutBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* TargetList, TArray<TEnumAsByte<EBattleAdvice>>* Remove)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BattleAdvice.BPF_BattleAdvice_C.BPF_FilterOutBattleAdvice");
 
@@ -41,7 +41,7 @@ void UBPF_BattleAdvice_C::BPF_FilterOutBattleAdvice(class UObject* __WorldContex
 
 
 // Function BPF_BattleAdvice.BPF_BattleAdvice_C.BPF_IsBattleAdviceRelevant
-// (NetReliable, Exec, NetResponse, Static, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EBattleAdvice>     Advice                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -66,12 +66,12 @@ bool UBPF_BattleAdvice_C::STATIC_BPF_IsBattleAdviceRelevant(TEnumAsByte<EBattleA
 
 
 // Function BPF_BattleAdvice.BPF_BattleAdvice_C.BPF_GetRelevantBattleAdvice
-// (NetReliable, Exec, Event, NetResponse, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<TEnumAsByte<EBattleAdvice>> SortedAdvice                   (Parm, OutParm, ZeroConstructor)
 
-void UBPF_BattleAdvice_C::BPF_GetRelevantBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* SortedAdvice)
+void UBPF_BattleAdvice_C::STATIC_BPF_GetRelevantBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* SortedAdvice)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BattleAdvice.BPF_BattleAdvice_C.BPF_GetRelevantBattleAdvice");
 
@@ -90,12 +90,12 @@ void UBPF_BattleAdvice_C::BPF_GetRelevantBattleAdvice(class UObject* __WorldCont
 
 
 // Function BPF_BattleAdvice.BPF_BattleAdvice_C.BPF_GetMostRelevantBattleAdvice
-// (NetReliable, Exec, Native, Event, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EBattleAdvice>     newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_BattleAdvice_C::BPF_GetMostRelevantBattleAdvice(class UObject* __WorldContext, TEnumAsByte<EBattleAdvice>* newParam)
+void UBPF_BattleAdvice_C::STATIC_BPF_GetMostRelevantBattleAdvice(class UObject* __WorldContext, TEnumAsByte<EBattleAdvice>* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BattleAdvice.BPF_BattleAdvice_C.BPF_GetMostRelevantBattleAdvice");
 
@@ -103,7 +103,6 @@ void UBPF_BattleAdvice_C::BPF_GetMostRelevantBattleAdvice(class UObject* __World
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

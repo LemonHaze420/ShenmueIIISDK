@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void CreateFadeMaterial(class UMaterialInterface* Source, class UObject* __WorldContext, class UMaterialInstanceDynamic** FadeMaterial);
+	void STATIC_CreateFadeMaterial(class UMaterialInterface* Source, class UObject* __WorldContext, class UMaterialInstanceDynamic** FadeMaterial);
 	class UMaterialInstanceDynamic* STATIC_SimpleDuplicateMatParams(class UMaterialInterface* MaterialInstance, class UMaterialInterface* FadeMatTemplate, class UObject* __WorldContext);
-	void SwitchToFadeMaterial(class USkeletalMeshComponent* Component, class UObject* __WorldContext, TArray<class UMaterialInterface*>* Materials);
+	void STATIC_SwitchToFadeMaterial(class USkeletalMeshComponent* Component, class UObject* __WorldContext, TArray<class UMaterialInterface*>* Materials);
 };
 
 

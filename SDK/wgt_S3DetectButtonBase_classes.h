@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,7 +37,7 @@ public:
 	void OnAnimationFinished(class UWidgetAnimation* Animation);
 	void Construct();
 	void ExecuteUbergraph_wgt_S3DetectButtonBase(int EntryPoint);
-	void STATIC_onAnimEnd__DelegateSignature();
+	void onAnimEnd__DelegateSignature();
 };
 
 

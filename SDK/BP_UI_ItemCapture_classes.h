@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,18 +47,18 @@ public:
 	}
 
 
-	void STATIC_ResetItemCamera();
+	void ResetItemCamera();
 	void SetupInterp(const struct FVector& TargetLocation, const struct FVector& PreLocation);
 	void UpdateInterp();
-	void STATIC_InputAxis_Left(float AxisValue);
-	void STATIC_UpdateCamera(float DeltaSecond);
-	void STATIC_InputAxis_Right(bool Vertical, float AxisValue);
+	void InputAxis_Left(float AxisValue);
+	void UpdateCamera(float DeltaSEcond);
+	void InputAxis_Right(bool Vertical, float AxisValue);
 	void SetViewMode(bool IsViewMode);
 	void SetViewMesh(int ItemId);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveDestroyed();
+	void ReceiveDestroyed();
 	void ExecuteUbergraph_BP_UI_ItemCapture(int EntryPoint);
 };
 

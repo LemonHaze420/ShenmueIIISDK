@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,7 +44,7 @@ public:
 
 
 	bool IsLevelSufficient();
-	void STATIC_AddAdvice(TEnumAsByte<EBattleAdvice> Advice, float Score);
+	void AddAdvice(TEnumAsByte<EBattleAdvice> Advice, float Score);
 	bool IsRelevant(TEnumAsByte<EBattleAdvice> ItemToFind);
 	void GetMostRelevantAdvice(TEnumAsByte<EBattleAdvice>* Output);
 	void CalculateAdvice();

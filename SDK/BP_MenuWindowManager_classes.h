@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,8 +39,8 @@ public:
 	}
 
 
-	void STATIC_SetItemListViewerManagerClass(class UClass* Class);
-	bool STATIC_CheckBehaviorState();
+	void SetItemListViewerManagerClass(class UClass* Class);
+	bool CheckBehaviorState();
 	void CheckDoorOpen(bool* DoMenu);
 	void StartAllActor();
 	void StopAllActor();
@@ -48,15 +48,15 @@ public:
 	void IsDetected(bool* IsDetected);
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_doCmd_FirstDetectRetain_Menu_();
-	void STATIC_delayedRegistCheck_detector_();
-	void STATIC_StartMenu();
+	void doCmd_FirstDetectRetain_Menu_();
+	void delayedRegistCheck_detector_();
+	void StartMenu();
 	void ActionStartButton(bool IsPress);
-	void STATIC_FinishMenu();
+	void FinishMenu();
 	void OpenInventory_EatEvent(int ItemId);
-	void STATIC_Open_ItemWindow();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BP_MenuWindowManager(int EntryPoint);
+	void Open_ItemWindow();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_MenuWindowManager(int EntryPoint);
 	void OnMenuClosed__DelegateSignature();
 };
 

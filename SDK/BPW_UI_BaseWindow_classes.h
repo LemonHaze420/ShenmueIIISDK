@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass BPW_UI_BaseWindow.BPW_UI_BaseWindow_C
-// 0x0461 (0x0681 - 0x0220)
+// 0x0459 (0x0679 - 0x0220)
 class UBPW_UI_BaseWindow_C : public US3UserWidget
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0220(0x0008) (Transient, DuplicateTransient)
 	class UWidgetAnimation*                            ArrowAnim;                                                // 0x0228(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UWidgetAnimation*                            ScaleAnim;                                                // 0x0230(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	class UWidgetAnimation*                            CursorAnim;                                               // 0x0238(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	class UWidgetAnimation*                            cursorAnim;                                               // 0x0238(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UWidgetAnimation*                            PageCursorAnim;                                           // 0x0240(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UImage*                                      ArrowLeft;                                                // 0x0248(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UImage*                                      ArrowRight;                                               // 0x0250(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
@@ -147,16 +147,15 @@ public:
 	unsigned char                                      UnknownData05[0x3];                                       // 0x0605(0x0003) MISSED OFFSET
 	class UBPW_UI_ItemViewer_C*                        ItemViewWidget;                                           // 0x0608(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	struct FVector2D                                   ItemViewer_Scale;                                         // 0x0610(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	class UBP_CheatManager_C*                          CheatManager;                                             // 0x0618(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class ABP_UI_ShopBaseManager_C*                    Manager;                                                  // 0x0620(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	int                                                MoxMoney;                                                 // 0x0628(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                MaxKifuda;                                                // 0x062C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FST_SelectSellItem>                  SelecetSellItem;                                          // 0x0630(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FST_SelectSellItem                          SelectSellItem;                                           // 0x0640(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
-	int                                                DrinkItemIDNum;                                           // 0x0668(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x066C(0x0004) MISSED OFFSET
-	TArray<int>                                        SellItemIDList;                                           // 0x0670(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               bShopGrp;                                                 // 0x0680(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class ABP_UI_ShopBaseManager_C*                    Manager;                                                  // 0x0618(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	int                                                MoxMoney;                                                 // 0x0620(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                MaxKifuda;                                                // 0x0624(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FST_SelectSellItem>                  SelecetSellItem;                                          // 0x0628(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FST_SelectSellItem                          SelectSellItem;                                           // 0x0638(0x0028) (Edit, BlueprintVisible, DisableEditOnInstance)
+	int                                                DrinkItemIDNum;                                           // 0x0660(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x4];                                       // 0x0664(0x0004) MISSED OFFSET
+	TArray<int>                                        SellItemIDList;                                           // 0x0668(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               bShopGrp;                                                 // 0x0678(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -165,61 +164,65 @@ public:
 	}
 
 
-	void STATIC_ResetSetName();
-	void STATIC_ClearSelectSellItem();
+	void DefocusExchanges();
+	class UBPW_UI_SetExchangeIcon_C* GetExchangeIconFromFocusIdx(int FocusIdx);
+	int GetNumWithDefaultZero(int Index, TArray<int>* Array);
+	void GetSellListOrDefault(int PageIdx, struct FST_SelectSellItem* Output);
+	void ResetSetName();
+	void ClearSelectSellItem();
 	void ResetSellItem();
-	void STATIC_ResetSellItemIDList();
-	void STATIC_GetSellItemIDList(TArray<int>* SellItemIDList);
+	void ResetSellItemIDList();
+	void GetSellItemIDList(TArray<int>* SellItemIDList);
 	void UpdateHaveItemNum();
-	void STATIC_SetSellItemIDList();
-	void STATIC_IsSellItem(bool* IsSellItem);
+	void SetSellItemIDList();
+	void IsSellItem(bool* IsSellItem);
 	void GetTotalSellPrice(int* TotalPrice);
-	void STATIC_GetSelectSellItemuNum(int PageIndex, int ItemId, int* ItemNum);
-	void STATIC_ResetSelectSellItemNum();
+	void GetSelectSellItemuNum(int PageIndex, int ItemId, int* ItemNum);
+	void ResetSelectSellItemNum();
 	void SetSelectSellItemListSize(int MaxPage);
-	void STATIC_GetFocusItemGroup(int FocusItem, ES3ItemDataGroup* ItemNum);
-	void STATIC_SetExchangeTitle(const struct FText& InText);
+	void GetFocusItemGroup(int FocusItem, ES3ItemDataGroup* ItemNum);
+	void SetExchangeTitle(const struct FText& InText);
 	void SetCursorVisibility(bool SelectCategory);
-	void STATIC_EndViewMode();
+	void EndViewMode();
 	void StartViewMode();
 	void SetShopName_Localize(const struct FString& ShopName);
-	void STATIC_SetShopName_Kanji(const struct FString& ShopName);
-	void STATIC_GetSelectItemIDList(TArray<int>* SelectIDList);
+	void SetShopName_Kanji(const struct FString& ShopName);
+	void GetSelectItemIDList(TArray<int>* SelectIDList);
 	void IsSelectNow(bool* SelectNow, int* SelectNum);
-	void STATIC_CheckCanUseItem(TArray<int>* CanUseItemIDList);
-	void STATIC_SetPriceCheckCanvasVisibility(ESlateVisibility InVisibility);
-	void STATIC_CalcTotalSetPrice();
-	void STATIC_SetPageIconColor(int page);
-	void STATIC_InitPageIcon(int MaxPage);
-	void STATIC_SetVisibilityPageCursor(ESlateVisibility InVisibility);
-	void STATIC_FocusCategory(int FocusNo);
+	void CheckCanUseItem(TArray<int>* CanUseItemIDList);
+	void SetPriceCheckCanvasVisibility(ESlateVisibility InVisibility);
+	void CalcTotalSetPrice();
+	void SetPageIconColor(int page);
+	void InitPageIcon(int MaxPage);
+	void SetVisibilityPageCursor(ESlateVisibility InVisibility);
+	void FocusCategory(int FocusNo);
 	void AddCategory(const struct FString& name_jp, const struct FString& name_eng, const struct FColor& str_col);
-	void STATIC_SetVisibility_PayIcon(bool CanPay);
-	void STATIC_SetItemNum(int ListItemNo);
-	void STATIC_DestroyWidget();
+	void SetVisibility_PayIcon(bool CanPay);
+	void SetItemNum(int ListItemNo);
+	void DestroyWidget();
 	void PriceAnim();
 	void SetPriceAnimeData();
-	void STATIC_SetUITitle(const struct FText& InText);
-	void STATIC_AddHaveItem(TArray<int>* BuyItemList, int* TotalItems);
-	void STATIC_GetFocusItemPrice(int FocusItem, int* ItemPrice);
-	void STATIC_GetTotalPrice(int* Price);
-	void STATIC_CalcTotalPrice(int PageIndex, bool IsSubtraction);
+	void SetUITitle(const struct FText& InText);
+	void AddHaveItem(TArray<int>* BuyItemList, int* TotalItems);
+	void GetFocusItemPrice(int FocusItem, int* ItemPrice);
+	void GetTotalPrice(int* Price);
+	void CalcTotalPrice(int PageIndex, bool IsSubtraction);
 	void SetPriceIconPostion();
 	void SetPriceText(int Money);
 	void GetFocusItemNum(int FocusItem, int* ItemNum);
 	void SubSelectItem(int FocusItem, int SubCount);
-	void STATIC_addSelectItem(int FocusItem, int AddCount, int ItemListPage);
+	void AddSelectItem(int FocusItem, int AddCount, int ItemListPage);
 	void SetDescription(const struct FText& Description);
 	void GetItemMesh(int ItemId);
-	void STATIC_RotateViewItem();
+	void RotateViewItem();
 	void SpawnViewItem();
-	void STATIC_GetRowCol(int* ItemListRow, int* ItemListCol);
+	void GetRowCol(int* ItemListRow, int* ItemListCol);
 	void FocusItem(int FocusItem);
-	void STATIC_SetItemList(int page, TArray<struct FST_ItemList>* itemList);
+	void SetItemList(int page, TArray<struct FST_ItemList>* ItemList);
 	void InitItemList();
-	void STATIC_PreConstruct(bool IsDesignTime);
-	void STATIC_Construct();
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Construct();
+	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_BPW_UI_BaseWindow(int EntryPoint);
 	void ED_PriceAnimFinish__DelegateSignature();
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,23 +53,23 @@ public:
 
 
 	void RelayOnSceneCapture();
-	void STATIC_SetSkillLibrary(class UBTL_CommandLibraryBase* CommandLibrary);
-	bool STATIC_IsLoadingFinished();
-	bool STATIC_IsRenderObjectReady();
+	void SetSkillLibrary(class UBTL_CommandLibraryBase* CommandLibrary);
+	bool IsLoadingFinished();
+	bool IsRenderObjectReady();
 	struct FTransform CalculateRenderObjectTransform();
-	void STATIC_DestroyRenderObject();
+	void DestroyRenderObject();
 	void PlaySingleFrame(const struct FName& InputPin, bool* bSuccess);
-	void STATIC_StopMotion(bool* bSuccess);
+	void StopMotion(bool* bSuccess);
 	void PlayMotionForItem(const struct FName& InputPin, bool* bSuccess);
 	void SpawnRenderObject(class UClass* InputPin, bool* newParam);
-	void STATIC_SetRenderTex(class UTextureRenderTarget2D* Value);
-	void STATIC_OnLoaded_887C3B4A44C26F627DEC4EAAECA73E5C(class UObject* Loaded);
-	void STATIC_OnLoaded_6B67131F435381D27123BE8560D7EF88(class UClass* Loaded);
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void SetRenderTex(class UTextureRenderTarget2D* Value);
+	void OnLoaded_887C3B4A44C26F627DEC4EAAECA73E5C(class UObject* Loaded);
+	void OnLoaded_6B67131F435381D27123BE8560D7EF88(class UClass* Loaded);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Destruct();
 	void RespawnRenderObject();
 	void Construct();
-	void STATIC_ExecuteUbergraph_wgt_BTL_MontagePlayer(int EntryPoint);
+	void ExecuteUbergraph_wgt_BTL_MontagePlayer(int EntryPoint);
 	void OnSceneCapture__DelegateSignature();
 };
 

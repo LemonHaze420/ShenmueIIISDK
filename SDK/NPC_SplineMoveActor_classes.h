@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,17 +31,17 @@ public:
 
 
 	int GetNextAvailableWaitPointIndex(int StartSearch);
-	int STATIC_GetFirstAvailableWaitPointIndex();
+	int GetFirstAvailableWaitPointIndex();
 	void GetStartLocationAndRotation(struct FVector* Location, struct FRotator* Rotation);
 	void TryStartWaitPointEvent(int Index, bool* Success);
-	void STATIC_GetWaitPointActor(int Index, class ABP_NPCLeadWaitPointEvent_C** Actor);
+	void GetWaitPointActor(int Index, class ABP_NPCLeadWaitPointEvent_C** Actor);
 	void GetWidthAtSplineDistance(float Distance, float* Width);
-	void STATIC_GetWaitPointSplineDistance(int PointIndex, float* Next);
+	void GetWaitPointSplineDistance(int PointIndex, float* Next);
 	void GetLocationAtDistance(float InDistance, struct FVector* OutLocation);
-	void STATIC_FindDistanceClosestToLocation(const struct FVector& InLocation, float* OutDistance);
-	void STATIC_GetNearLength(const struct FVector& pos, struct FVector* NearPos, float* NearLength);
+	void FindDistanceClosestToLocation(const struct FVector& InLocation, float* OutDistance);
+	void GetNearLength(const struct FVector& pos, struct FVector* NearPos, float* NearLength);
 	void InitSplinePoint();
-	void STATIC_GetCurrentLocationAndRotation(float NowLength, struct FVector* Location, float* MaxLength, float* RotZ);
+	void GetCurrentLocationAndRotation(float NowLength, struct FVector* Location, float* MaxLength, float* RotZ);
 	void UserConstructionScript();
 };
 

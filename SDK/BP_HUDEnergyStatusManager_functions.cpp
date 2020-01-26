@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.UpdateVisiblity_Impl
-// (Exec, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Instant                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void ABP_HUDEnergyStatusManager_C::UpdateVisiblity_Impl(bool Instant)
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.GetOverrideEnableRequestCounter
-// (Exec, Native, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class URequestCounter_C*       DisableRequestCounter          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -45,7 +45,6 @@ void ABP_HUDEnergyStatusManager_C::GetOverrideEnableRequestCounter(class UReques
 	ABP_HUDEnergyStatusManager_C_GetOverrideEnableRequestCounter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,7 +56,7 @@ void ABP_HUDEnergyStatusManager_C::GetOverrideEnableRequestCounter(class UReques
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.ShouldBeVisible
-// (Exec, Event, NetResponse, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -78,7 +77,7 @@ bool ABP_HUDEnergyStatusManager_C::ShouldBeVisible()
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.GetDisableRequestCounter
-// (Net, NetReliable, NetRequest, Native, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class URequestCounter_C*       DisableRequestCounter          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -89,7 +88,6 @@ void ABP_HUDEnergyStatusManager_C::GetDisableRequestCounter(class URequestCounte
 	ABP_HUDEnergyStatusManager_C_GetDisableRequestCounter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -101,7 +99,7 @@ void ABP_HUDEnergyStatusManager_C::GetDisableRequestCounter(class URequestCounte
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, Private, Protected, Delegate, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HUDEnergyStatusManager_C::UserConstructionScript()
 {
@@ -110,7 +108,6 @@ void ABP_HUDEnergyStatusManager_C::UserConstructionScript()
 	ABP_HUDEnergyStatusManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,7 +116,7 @@ void ABP_HUDEnergyStatusManager_C::UserConstructionScript()
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.ReceiveBeginPlay
-// (Net, NetReliable, Exec, Native, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_HUDEnergyStatusManager_C::ReceiveBeginPlay()
 {
@@ -128,7 +125,6 @@ void ABP_HUDEnergyStatusManager_C::ReceiveBeginPlay()
 	ABP_HUDEnergyStatusManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +133,7 @@ void ABP_HUDEnergyStatusManager_C::ReceiveBeginPlay()
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.ReceiveEndPlay
-// (Net, NetRequest, Native, NetResponse, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -149,7 +145,6 @@ void ABP_HUDEnergyStatusManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,7 +153,7 @@ void ABP_HUDEnergyStatusManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.UpdateVisibility
-// (NetRequest, Native, NetResponse, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Instant                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -170,7 +165,6 @@ void ABP_HUDEnergyStatusManager_C::UpdateVisibility(bool Instant)
 	params.Instant = Instant;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,7 +173,7 @@ void ABP_HUDEnergyStatusManager_C::UpdateVisibility(bool Instant)
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.ReceiveTick
-// (NetReliable, Native, NetResponse, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -191,7 +185,6 @@ void ABP_HUDEnergyStatusManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -200,7 +193,7 @@ void ABP_HUDEnergyStatusManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.OnMinimapValidityChange
-// (Net, NetReliable, Native, NetResponse, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bIsValid                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -212,7 +205,6 @@ void ABP_HUDEnergyStatusManager_C::OnMinimapValidityChange(bool bIsValid)
 	params.bIsValid = bIsValid;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,7 +213,7 @@ void ABP_HUDEnergyStatusManager_C::OnMinimapValidityChange(bool bIsValid)
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.CheckPlayerInBuilding
-// (Net, Exec, Native, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HUDEnergyStatusManager_C::CheckPlayerInBuilding()
 {
@@ -230,7 +222,6 @@ void ABP_HUDEnergyStatusManager_C::CheckPlayerInBuilding()
 	ABP_HUDEnergyStatusManager_C_CheckPlayerInBuilding_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -239,7 +230,7 @@ void ABP_HUDEnergyStatusManager_C::CheckPlayerInBuilding()
 
 
 // Function BP_HUDEnergyStatusManager.BP_HUDEnergyStatusManager_C.ExecuteUbergraph_BP_HUDEnergyStatusManager
-// (Net, NetRequest, Exec, Event, NetMulticast, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

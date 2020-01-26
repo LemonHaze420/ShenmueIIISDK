@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCameraAC_FixShot_SBH_03.BP_TalkCameraAC_FixShot_SBH_03_C.UserConstructionScript
-// (Net, NetReliable, Native, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_TalkCameraAC_FixShot_SBH_03_C::UserConstructionScript()
 {
@@ -23,7 +23,6 @@ void ABP_TalkCameraAC_FixShot_SBH_03_C::UserConstructionScript()
 	ABP_TalkCameraAC_FixShot_SBH_03_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_TalkCameraAC_FixShot_SBH_03_C::UserConstructionScript()
 
 
 // Function BP_TalkCameraAC_FixShot_SBH_03.BP_TalkCameraAC_FixShot_SBH_03_C.ReceiveBeginPlay
-// (Net, NetRequest, Exec, Event, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_TalkCameraAC_FixShot_SBH_03_C::ReceiveBeginPlay()
 {
@@ -49,11 +48,11 @@ void ABP_TalkCameraAC_FixShot_SBH_03_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCameraAC_FixShot_SBH_03.BP_TalkCameraAC_FixShot_SBH_03_C.ReceiveTick
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraAC_FixShot_SBH_03_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_TalkCameraAC_FixShot_SBH_03_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraAC_FixShot_SBH_03.BP_TalkCameraAC_FixShot_SBH_03_C.ReceiveTick");
 
@@ -69,7 +68,7 @@ void ABP_TalkCameraAC_FixShot_SBH_03_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCameraAC_FixShot_SBH_03.BP_TalkCameraAC_FixShot_SBH_03_C.ExecuteUbergraph_BP_TalkCameraAC_FixShot_SBH_03
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

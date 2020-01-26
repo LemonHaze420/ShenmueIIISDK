@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -85,14 +85,14 @@ struct UNavigationSystemV1_UnregisterNavigationInvoker_Params
 struct UNavigationSystemV1_SimpleMoveToLocation_Params
 {
 	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Goal;                                                     // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct FVector                                     goal;                                                     // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
 // Function NavigationSystem.NavigationSystemV1.SimpleMoveToActor
 struct UNavigationSystemV1_SimpleMoveToActor_Params
 {
 	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Goal;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      goal;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function NavigationSystem.NavigationSystemV1.SetMaxSimultaneousTileGenerationJobsCount

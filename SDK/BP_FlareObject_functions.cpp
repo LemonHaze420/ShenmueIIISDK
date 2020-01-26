@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_FlareObject.BP_FlareObject_C.InitiateFlares
-// (Net, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_FlareObject_C::STATIC_InitiateFlares()
+void ABP_FlareObject_C::InitiateFlares()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FlareObject.BP_FlareObject_C.InitiateFlares");
 
@@ -31,7 +31,7 @@ void ABP_FlareObject_C::STATIC_InitiateFlares()
 
 
 // Function BP_FlareObject.BP_FlareObject_C.UpdateFlareVisibility
-// (NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_FlareObject_C::UpdateFlareVisibility()
 {
@@ -48,7 +48,7 @@ void ABP_FlareObject_C::UpdateFlareVisibility()
 
 
 // Function BP_FlareObject.BP_FlareObject_C.UserConstructionScript
-// (Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_FlareObject_C::UserConstructionScript()
 {
@@ -57,7 +57,6 @@ void ABP_FlareObject_C::UserConstructionScript()
 	ABP_FlareObject_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -66,16 +65,15 @@ void ABP_FlareObject_C::UserConstructionScript()
 
 
 // Function BP_FlareObject.BP_FlareObject_C.ReceiveBeginPlay
-// (Net, Exec, Native, Event, Static, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_FlareObject_C::STATIC_ReceiveBeginPlay()
+void ABP_FlareObject_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FlareObject.BP_FlareObject_C.ReceiveBeginPlay");
 
 	ABP_FlareObject_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,7 +82,7 @@ void ABP_FlareObject_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_FlareObject.BP_FlareObject_C.ReceiveTick
-// (NetRequest, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -104,7 +102,7 @@ void ABP_FlareObject_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_FlareObject.BP_FlareObject_C.ExecuteUbergraph_BP_FlareObject
-// (Exec, Event, NetResponse, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

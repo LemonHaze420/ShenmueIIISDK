@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.JudgeLoadingType
-// (Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventStep                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3LoadingType                 Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_JudgeLoadingType(int EventStep, ES3LoadingType* Type)
+void UBP_S3SaveLoadManager_C::JudgeLoadingType(int EventStep, ES3LoadingType* Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.JudgeLoadingType");
 
@@ -27,7 +27,6 @@ void UBP_S3SaveLoadManager_C::STATIC_JudgeLoadingType(int EventStep, ES3LoadingT
 	params.EventStep = EventStep;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,9 +38,9 @@ void UBP_S3SaveLoadManager_C::STATIC_JudgeLoadingType(int EventStep, ES3LoadingT
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ExecRetrySave
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3SaveLoadManager_C::STATIC_ExecRetrySave()
+void UBP_S3SaveLoadManager_C::ExecRetrySave()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ExecRetrySave");
 
@@ -56,7 +55,7 @@ void UBP_S3SaveLoadManager_C::STATIC_ExecRetrySave()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ExecLoadRetrySaveData
-// (NetRequest, NetResponse, NetMulticast, Public, Private, Delegate, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class US3SaveGame*             SaveData                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -81,11 +80,11 @@ void UBP_S3SaveLoadManager_C::ExecLoadRetrySaveData(bool* Success, class US3Save
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenIgnoreDialog
-// (NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_OpenIgnoreDialog(const struct FName& Label)
+void UBP_S3SaveLoadManager_C::OpenIgnoreDialog(const struct FName& Label)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenIgnoreDialog");
 
@@ -101,7 +100,7 @@ void UBP_S3SaveLoadManager_C::STATIC_OpenIgnoreDialog(const struct FName& Label)
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenSaveLoadTestWidget
-// (Exec, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -121,7 +120,7 @@ void UBP_S3SaveLoadManager_C::OpenSaveLoadTestWidget(const struct FName& Type)
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ResetSaveData
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -132,7 +131,6 @@ bool UBP_S3SaveLoadManager_C::ResetSaveData()
 	UBP_S3SaveLoadManager_C_ResetSaveData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,13 +141,13 @@ bool UBP_S3SaveLoadManager_C::ResetSaveData()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenLevel
-// (Exec, Native, Static, Public, NetServer, DLLImport, BlueprintEvent)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3Where                       LocationId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            EventStep                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_S3SaveLoadManager_C::STATIC_OpenLevel(ES3Where LocationId, int EventStep)
+bool UBP_S3SaveLoadManager_C::OpenLevel(ES3Where LocationId, int EventStep)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenLevel");
 
@@ -158,7 +156,6 @@ bool UBP_S3SaveLoadManager_C::STATIC_OpenLevel(ES3Where LocationId, int EventSte
 	params.EventStep = EventStep;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,19 +166,18 @@ bool UBP_S3SaveLoadManager_C::STATIC_OpenLevel(ES3Where LocationId, int EventSte
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ExecLoadAutoSaveData
-// (Net, NetRequest, Native, Event, Static, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class US3SaveGame*             SaveData                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_ExecLoadAutoSaveData(bool* Success, class US3SaveGame** SaveData)
+void UBP_S3SaveLoadManager_C::ExecLoadAutoSaveData(bool* Success, class US3SaveGame** SaveData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ExecLoadAutoSaveData");
 
 	UBP_S3SaveLoadManager_C_ExecLoadAutoSaveData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +191,7 @@ void UBP_S3SaveLoadManager_C::STATIC_ExecLoadAutoSaveData(bool* Success, class U
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenLoadWidget
-// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -206,7 +202,6 @@ bool UBP_S3SaveLoadManager_C::OpenLoadWidget()
 	UBP_S3SaveLoadManager_C_OpenLoadWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,18 +212,17 @@ bool UBP_S3SaveLoadManager_C::OpenLoadWidget()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenSaveWidget
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_S3SaveLoadManager_C::STATIC_OpenSaveWidget()
+bool UBP_S3SaveLoadManager_C::OpenSaveWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenSaveWidget");
 
 	UBP_S3SaveLoadManager_C_OpenSaveWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -239,7 +233,7 @@ bool UBP_S3SaveLoadManager_C::STATIC_OpenSaveWidget()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.UserConstructionScript
-// (Net, Exec, Native, Event, NetMulticast, Public, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::UserConstructionScript()
 {
@@ -248,7 +242,6 @@ void UBP_S3SaveLoadManager_C::UserConstructionScript()
 	UBP_S3SaveLoadManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -257,7 +250,7 @@ void UBP_S3SaveLoadManager_C::UserConstructionScript()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.CustomEvent_1
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::CustomEvent_1()
 {
@@ -266,7 +259,6 @@ void UBP_S3SaveLoadManager_C::CustomEvent_1()
 	UBP_S3SaveLoadManager_C_CustomEvent_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -275,7 +267,7 @@ void UBP_S3SaveLoadManager_C::CustomEvent_1()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.CustomEvent_2
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::CustomEvent_2()
 {
@@ -284,7 +276,6 @@ void UBP_S3SaveLoadManager_C::CustomEvent_2()
 	UBP_S3SaveLoadManager_C_CustomEvent_2_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -293,7 +284,7 @@ void UBP_S3SaveLoadManager_C::CustomEvent_2()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.CustomEvent_3
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::CustomEvent_3()
 {
@@ -302,7 +293,6 @@ void UBP_S3SaveLoadManager_C::CustomEvent_3()
 	UBP_S3SaveLoadManager_C_CustomEvent_3_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -311,7 +301,7 @@ void UBP_S3SaveLoadManager_C::CustomEvent_3()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenLoadWidgetImpl
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::OpenLoadWidgetImpl()
 {
@@ -320,7 +310,6 @@ void UBP_S3SaveLoadManager_C::OpenLoadWidgetImpl()
 	UBP_S3SaveLoadManager_C_OpenLoadWidgetImpl_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -329,7 +318,7 @@ void UBP_S3SaveLoadManager_C::OpenLoadWidgetImpl()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenSaveWidgetImpl
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::OpenSaveWidgetImpl()
 {
@@ -338,7 +327,6 @@ void UBP_S3SaveLoadManager_C::OpenSaveWidgetImpl()
 	UBP_S3SaveLoadManager_C_OpenSaveWidgetImpl_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -347,7 +335,7 @@ void UBP_S3SaveLoadManager_C::OpenSaveWidgetImpl()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.CustomEvent_4
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::CustomEvent_4()
 {
@@ -356,7 +344,6 @@ void UBP_S3SaveLoadManager_C::CustomEvent_4()
 	UBP_S3SaveLoadManager_C_CustomEvent_4_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -365,12 +352,12 @@ void UBP_S3SaveLoadManager_C::CustomEvent_4()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.BeginLoadData
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, BlueprintCallable)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class US3SaveGame*             SaveGame                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bRetryData                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_BeginLoadData(class US3SaveGame* SaveGame, bool bRetryData)
+void UBP_S3SaveLoadManager_C::BeginLoadData(class US3SaveGame* SaveGame, bool bRetryData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.BeginLoadData");
 
@@ -387,11 +374,11 @@ void UBP_S3SaveLoadManager_C::STATIC_BeginLoadData(class US3SaveGame* SaveGame, 
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.CloseIgnoreDialog
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_CloseIgnoreDialog(class AActor* Actor)
+void UBP_S3SaveLoadManager_C::CloseIgnoreDialog(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.CloseIgnoreDialog");
 
@@ -399,7 +386,6 @@ void UBP_S3SaveLoadManager_C::STATIC_CloseIgnoreDialog(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -408,9 +394,9 @@ void UBP_S3SaveLoadManager_C::STATIC_CloseIgnoreDialog(class AActor* Actor)
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ConfirmClearData
-// (Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_S3SaveLoadManager_C::STATIC_ConfirmClearData()
+void UBP_S3SaveLoadManager_C::ConfirmClearData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ConfirmClearData");
 
@@ -425,11 +411,11 @@ void UBP_S3SaveLoadManager_C::STATIC_ConfirmClearData()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.SelectLevel
-// (Net, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_SelectLevel(class AActor* Actor)
+void UBP_S3SaveLoadManager_C::SelectLevel(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.SelectLevel");
 
@@ -437,7 +423,6 @@ void UBP_S3SaveLoadManager_C::STATIC_SelectLevel(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -446,11 +431,11 @@ void UBP_S3SaveLoadManager_C::STATIC_SelectLevel(class AActor* Actor)
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.SelectChobu
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_SelectChobu(class AActor* Actor)
+void UBP_S3SaveLoadManager_C::SelectChobu(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.SelectChobu");
 
@@ -458,7 +443,6 @@ void UBP_S3SaveLoadManager_C::STATIC_SelectChobu(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -467,11 +451,11 @@ void UBP_S3SaveLoadManager_C::STATIC_SelectChobu(class AActor* Actor)
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.SelectHakkason
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_SelectHakkason(class AActor* Actor)
+void UBP_S3SaveLoadManager_C::SelectHakkason(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.SelectHakkason");
 
@@ -487,7 +471,7 @@ void UBP_S3SaveLoadManager_C::STATIC_SelectHakkason(class AActor* Actor)
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.StartClearData
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::StartClearData()
 {
@@ -496,7 +480,6 @@ void UBP_S3SaveLoadManager_C::StartClearData()
 	UBP_S3SaveLoadManager_C_StartClearData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -505,7 +488,7 @@ void UBP_S3SaveLoadManager_C::StartClearData()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.WidgetClosed
-// (Net, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::WidgetClosed()
 {
@@ -514,7 +497,6 @@ void UBP_S3SaveLoadManager_C::WidgetClosed()
 	UBP_S3SaveLoadManager_C_WidgetClosed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -523,7 +505,7 @@ void UBP_S3SaveLoadManager_C::WidgetClosed()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.OpenSaveLoadWidget
-// (Net, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::OpenSaveLoadWidget()
 {
@@ -532,7 +514,6 @@ void UBP_S3SaveLoadManager_C::OpenSaveLoadWidget()
 	UBP_S3SaveLoadManager_C_OpenSaveLoadWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -541,7 +522,7 @@ void UBP_S3SaveLoadManager_C::OpenSaveLoadWidget()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ShowNotInstallDLCDialog
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 
 void UBP_S3SaveLoadManager_C::ShowNotInstallDLCDialog()
 {
@@ -550,7 +531,6 @@ void UBP_S3SaveLoadManager_C::ShowNotInstallDLCDialog()
 	UBP_S3SaveLoadManager_C_ShowNotInstallDLCDialog_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -559,11 +539,11 @@ void UBP_S3SaveLoadManager_C::ShowNotInstallDLCDialog()
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.CloseNotInstallDLC
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_CloseNotInstallDLC(class AActor* Actor)
+void UBP_S3SaveLoadManager_C::CloseNotInstallDLC(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.CloseNotInstallDLC");
 
@@ -579,11 +559,11 @@ void UBP_S3SaveLoadManager_C::STATIC_CloseNotInstallDLC(class AActor* Actor)
 
 
 // Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ExecuteUbergraph_BP_S3SaveLoadManager
-// (Native, NetResponse, Static, Public, Private, Protected, DLLImport, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadManager_C::STATIC_ExecuteUbergraph_BP_S3SaveLoadManager(int EntryPoint)
+void UBP_S3SaveLoadManager_C::ExecuteUbergraph_BP_S3SaveLoadManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadManager.BP_S3SaveLoadManager_C.ExecuteUbergraph_BP_S3SaveLoadManager");
 
@@ -591,7 +571,6 @@ void UBP_S3SaveLoadManager_C::STATIC_ExecuteUbergraph_BP_S3SaveLoadManager(int E
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,11 +37,11 @@ public:
 
 	void GetDataString(const struct FName& Label, struct FString* String);
 	void CenterButton(bool RightButton);
-	void STATIC_SetupButton(const struct FST_GeneralWindow_Button& Data, bool Right);
+	void SetupButton(const struct FST_GeneralWindow_Button& Data, bool Right);
 	void SetData();
 	void PreConstruct(bool IsDesignTime);
-	void STATIC_Construct();
-	void STATIC_ExecuteUbergraph_BPW_UI_GeneralWindow(int EntryPoint);
+	void Construct();
+	void ExecuteUbergraph_BPW_UI_GeneralWindow(int EntryPoint);
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.DoesPlayerHaveFood
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_TalkProcess_ShowHP_C::STATIC_DoesPlayerHaveFood()
+bool UBP_TalkProcess_ShowHP_C::DoesPlayerHaveFood()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.DoesPlayerHaveFood");
 
 	UBP_TalkProcess_ShowHP_C_DoesPlayerHaveFood_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +35,7 @@ bool UBP_TalkProcess_ShowHP_C::STATIC_DoesPlayerHaveFood()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.StillRunning
-// (Net, NetRequest, Exec, NetMulticast, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,11 +56,11 @@ bool UBP_TalkProcess_ShowHP_C::StillRunning()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.TickTransitions
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_ShowHP_C::STATIC_TickTransitions(float DeltaTime)
+void UBP_TalkProcess_ShowHP_C::TickTransitions(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.TickTransitions");
 
@@ -69,7 +68,6 @@ void UBP_TalkProcess_ShowHP_C::STATIC_TickTransitions(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +76,7 @@ void UBP_TalkProcess_ShowHP_C::STATIC_TickTransitions(float DeltaTime)
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.IsLowHP
-// (Net, NetReliable, Exec, Event, NetResponse, Public, NetServer)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -99,7 +97,7 @@ bool UBP_TalkProcess_ShowHP_C::IsLowHP()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.SetGlobalHPResultFlag
-// (Exec, Native, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bIsFull                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -111,7 +109,6 @@ void UBP_TalkProcess_ShowHP_C::SetGlobalHPResultFlag(bool bIsFull)
 	params.bIsFull = bIsFull;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,7 +117,7 @@ void UBP_TalkProcess_ShowHP_C::SetGlobalHPResultFlag(bool bIsFull)
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.UpdateGlobalHPResultFlag
-// (Net, NetReliable, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_ShowHP_C::UpdateGlobalHPResultFlag()
 {
@@ -137,9 +134,9 @@ void UBP_TalkProcess_ShowHP_C::UpdateGlobalHPResultFlag()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.CollectDependencies
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UBP_TalkProcess_ShowHP_C::STATIC_CollectDependencies()
+void UBP_TalkProcess_ShowHP_C::CollectDependencies()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.CollectDependencies");
 
@@ -154,7 +151,7 @@ void UBP_TalkProcess_ShowHP_C::STATIC_CollectDependencies()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.DestroyUI
-// (NetRequest, Exec, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_ShowHP_C::DestroyUI()
 {
@@ -171,12 +168,12 @@ void UBP_TalkProcess_ShowHP_C::DestroyUI()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.SpawnUI
-// (Net, NetRequest, Exec, Event, NetResponse, Static, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  Class                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_TalkProcess_ShowHP_C::STATIC_SpawnUI(class UClass* Class)
+bool UBP_TalkProcess_ShowHP_C::SpawnUI(class UClass* Class)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.SpawnUI");
 
@@ -194,18 +191,17 @@ bool UBP_TalkProcess_ShowHP_C::STATIC_SpawnUI(class UClass* Class)
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.ShouldShowMeter
-// (Net, NetReliable, Exec, Native, Static, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_TalkProcess_ShowHP_C::STATIC_ShouldShowMeter()
+bool UBP_TalkProcess_ShowHP_C::ShouldShowMeter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.ShouldShowMeter");
 
 	UBP_TalkProcess_ShowHP_C_ShouldShowMeter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -216,7 +212,7 @@ bool UBP_TalkProcess_ShowHP_C::STATIC_ShouldShowMeter()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.OnLoaded_6A9A1405492543F002206D8B74ACA2FA
-// (Net, NetReliable, Exec, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -236,7 +232,7 @@ void UBP_TalkProcess_ShowHP_C::OnLoaded_6A9A1405492543F002206D8B74ACA2FA(class U
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.Activate
-// (Net, NetReliable, Exec, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
 void UBP_TalkProcess_ShowHP_C::Activate()
 {
@@ -253,7 +249,7 @@ void UBP_TalkProcess_ShowHP_C::Activate()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.Finalize
-// (Net, NetReliable, Exec, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_ShowHP_C::Finalize()
 {
@@ -270,7 +266,7 @@ void UBP_TalkProcess_ShowHP_C::Finalize()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.FinishHint
-// (NetReliable, Exec, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_ShowHP_C::FinishHint()
 {
@@ -287,7 +283,7 @@ void UBP_TalkProcess_ShowHP_C::FinishHint()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.CleanUp
-// (NetReliable, Exec, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_ShowHP_C::CleanUp()
 {
@@ -304,7 +300,7 @@ void UBP_TalkProcess_ShowHP_C::CleanUp()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.Update
-// (NetRequest, Exec, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -324,7 +320,7 @@ void UBP_TalkProcess_ShowHP_C::Update(float DeltaTime)
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.ForceFinish
-// (Net, Exec, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_ShowHP_C::ForceFinish()
 {
@@ -341,7 +337,7 @@ void UBP_TalkProcess_ShowHP_C::ForceFinish()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.UnbindInventoryClose
-// (Exec, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_ShowHP_C::UnbindInventoryClose()
 {
@@ -358,7 +354,7 @@ void UBP_TalkProcess_ShowHP_C::UnbindInventoryClose()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.CloseInventory
-// (Net, NetReliable, NetRequest, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_ShowHP_C::CloseInventory()
 {
@@ -375,7 +371,7 @@ void UBP_TalkProcess_ShowHP_C::CloseInventory()
 
 
 // Function BP_TalkProcess_ShowHP.BP_TalkProcess_ShowHP_C.ExecuteUbergraph_BP_TalkProcess_ShowHP
-// (Net, NetRequest, NetResponse, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

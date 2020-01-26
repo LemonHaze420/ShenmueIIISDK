@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,7 +69,7 @@ struct UBPF_MiniMapMath_C_Math_LineLineIntersection_Params
 };
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D < Vector2D (AND)
-struct UBPF_MiniMapMath_C_Vector2D___Vector2D__AND_LessThan_Params
+struct UBPF_MiniMapMath_C_Vector2D___Vector2D__AND__Params
 {
 	struct FVector2D                                   In_1;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FVector2D                                   In_2;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -88,7 +88,7 @@ struct UBPF_MiniMapMath_C_IsPointInRectangle_Params
 };
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D > Vector2D (AND)
-struct UBPF_MiniMapMath_C_Vector2D___Vector2D__AND_GreaterThan_Params
+struct UBPF_MiniMapMath_C_Vector2D___Vector2D__AND__Params
 {
 	struct FVector2D                                   In_1;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FVector2D                                   In_2;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -134,7 +134,7 @@ struct UBPF_MiniMapMath_C_Vector2D___Vector2D__OR__Params
 };
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D * Vector2D
-struct UBPF_MiniMapMath_C_Vector2D_Mult_Vector2D_Params
+struct UBPF_MiniMapMath_C_Vector2D_*_Vector2D_Params
 {
 	struct FVector2D                                   In_1;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FVector2D                                   In_2;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -161,8 +161,8 @@ struct UBPF_MiniMapMath_C_SwapVector2D_Params
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C. Vector 2D
 struct UBPF_MiniMapMath_C__Vector_2D_Params
 {
-	struct FVector2D                                   _1;                                                        // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	struct FVector2D                                   _2;                                                        // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FVector2D                                   _1;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FVector2D                                   _2;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector2D                                   Vector;                                                   // (Parm, OutParm, IsPlainOldData)
 };
@@ -182,8 +182,8 @@ struct UBPF_MiniMapMath_C_GetWorldSize_Params
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetMiddleVector
 struct UBPF_MiniMapMath_C_GetMiddleVector_Params
 {
-	struct FVector2D                                   _1;                                                        // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	struct FVector2D                                   _2;                                                        // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FVector2D                                   _1;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FVector2D                                   _2;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FVector2D                                   Mid;                                                      // (Parm, OutParm, IsPlainOldData)
 };
@@ -191,8 +191,8 @@ struct UBPF_MiniMapMath_C_GetMiddleVector_Params
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetMiddleFloat
 struct UBPF_MiniMapMath_C_GetMiddleFloat_Params
 {
-	float                                              _1;                                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              _2;                                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              _1;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              _2;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Mid;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

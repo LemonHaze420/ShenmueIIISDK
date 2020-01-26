@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,14 +43,14 @@ public:
 
 
 	class UBPW_UI_GeneralWindow_Button_C* GetNextButton();
-	bool STATIC_NextScreen();
-	void STATIC_HideNextButton();
+	bool NextScreen();
+	void HideNextButton();
 	void SetLocalizeText();
-	void STATIC_ShowNextButton();
-	void STATIC_SetSceneCaptureImage(class UMaterialInterface* Material);
+	void ShowNextButton();
+	void SetSceneCaptureImage(class UMaterialInterface* Material);
 	void SetLevelUpData(const struct FST_SparringResultLevelUpData& Attack, const struct FST_SparringResultLevelUpData& Vitality, const struct FST_SparringResultLevelUpData& Player);
 	void SetLevelUpTextVisible(bool Visibility);
-	void STATIC_PreConstruct(bool IsDesignTime);
+	void PreConstruct(bool IsDesignTime);
 	void Construct();
 	void BndEvt__wgt_SkillTotals_K2Node_ComponentBoundEvent_0_OnLevelUpAnimationDone__DelegateSignature();
 	void DelayCallOnAnimFinished();

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtLead_Action.BP_State_LookAtLead_Action_C.SetSpline
-// (NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USplineComponent*        spline                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBP_State_LookAtLead_Action_C::SetSpline(class USplineComponent* spline)
 
 
 // Function BP_State_LookAtLead_Action.BP_State_LookAtLead_Action_C.LookAtSpline
-// (Exec, Event, NetResponse, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bLookAt                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,12 +54,12 @@ void UBP_State_LookAtLead_Action_C::LookAtSpline(bool bLookAt)
 
 
 // Function BP_State_LookAtLead_Action.BP_State_LookAtLead_Action_C.StateExit
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtLead_Action_C::STATIC_StateExit(float Delta, bool* bProcessing)
+void UBP_State_LookAtLead_Action_C::StateExit(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtLead_Action.BP_State_LookAtLead_Action_C.StateExit");
 
@@ -67,7 +67,6 @@ void UBP_State_LookAtLead_Action_C::STATIC_StateExit(float Delta, bool* bProcess
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,7 +78,7 @@ void UBP_State_LookAtLead_Action_C::STATIC_StateExit(float Delta, bool* bProcess
 
 
 // Function BP_State_LookAtLead_Action.BP_State_LookAtLead_Action_C.StateEnter
-// (NetReliable, Event, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -103,12 +102,12 @@ void UBP_State_LookAtLead_Action_C::StateEnter(float Delta, bool* bProcessing)
 
 
 // Function BP_State_LookAtLead_Action.BP_State_LookAtLead_Action_C.StateUpdate
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtLead_Action_C::STATIC_StateUpdate(float Delta, bool* bDummy)
+void UBP_State_LookAtLead_Action_C::StateUpdate(float Delta, bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtLead_Action.BP_State_LookAtLead_Action_C.StateUpdate");
 

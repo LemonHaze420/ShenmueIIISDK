@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,12 +34,12 @@ public:
 	void ListUpRewards();
 	void BuildMenu();
 	void SetInitialFocus();
-	void STATIC_OnUserToggledAward(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue);
-	void STATIC_OnUserChangeAwardCount(int Value, class UBW_IntegerProperty_C* Context);
+	void OnUserToggledAward(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue);
+	void OnUserChangeAwardCount(int Value, class UBW_IntegerProperty_C* Context);
 	void BndEvt__S3Button_58_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_Save_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_OnScrollBoxItemFocused(class UWidget* Widget);
-	void STATIC_ExecuteUbergraph_BW_DebugBattleRally(int EntryPoint);
+	void OnScrollBoxItemFocused(class UWidget* Widget);
+	void ExecuteUbergraph_BW_DebugBattleRally(int EntryPoint);
 };
 
 

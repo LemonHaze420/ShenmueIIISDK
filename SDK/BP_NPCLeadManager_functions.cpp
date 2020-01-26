@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.ResetPartnerCollision
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::ResetPartnerCollision()
 {
@@ -31,7 +31,7 @@ void ABP_NPCLeadManager_C::ResetPartnerCollision()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.IgnorePartnerCollision
-// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::IgnorePartnerCollision()
 {
@@ -40,7 +40,6 @@ void ABP_NPCLeadManager_C::IgnorePartnerCollision()
 	ABP_NPCLeadManager_C_IgnorePartnerCollision_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,16 +48,15 @@ void ABP_NPCLeadManager_C::IgnorePartnerCollision()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.StartActionBlock
-// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_NPCLeadManager_C::STATIC_StartActionBlock()
+void ABP_NPCLeadManager_C::StartActionBlock()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.StartActionBlock");
 
 	ABP_NPCLeadManager_C_StartActionBlock_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -67,7 +65,7 @@ void ABP_NPCLeadManager_C::STATIC_StartActionBlock()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.ReleaseActionBlock
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::ReleaseActionBlock()
 {
@@ -76,7 +74,6 @@ void ABP_NPCLeadManager_C::ReleaseActionBlock()
 	ABP_NPCLeadManager_C_ReleaseActionBlock_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -85,7 +82,7 @@ void ABP_NPCLeadManager_C::ReleaseActionBlock()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.SetLookAtSpline
-// (NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bCanLookAt                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -105,7 +102,7 @@ void ABP_NPCLeadManager_C::SetLookAtSpline(bool bCanLookAt)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.BindTalkEvents
-// (NetReliable, Exec, Native, Private, Protected, Delegate, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bBind                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -117,7 +114,6 @@ void ABP_NPCLeadManager_C::BindTalkEvents(bool bBind)
 	params.bBind = bBind;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,7 +122,7 @@ void ABP_NPCLeadManager_C::BindTalkEvents(bool bBind)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.UpdateCharacterVisibility
-// (Net, NetReliable, NetRequest, NetResponse, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::UpdateCharacterVisibility()
 {
@@ -143,7 +139,7 @@ void ABP_NPCLeadManager_C::UpdateCharacterVisibility()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.SetFollowEndDistance
-// (NetReliable, NetRequest, Native, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          EndDistance                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Reset                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -157,7 +153,6 @@ void ABP_NPCLeadManager_C::SetFollowEndDistance(float EndDistance, bool Reset)
 	params.Reset = Reset;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +161,7 @@ void ABP_NPCLeadManager_C::SetFollowEndDistance(float EndDistance, bool Reset)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_IsCompleted
-// (NetReliable, Exec, Native, Event, NetResponse, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -177,7 +172,6 @@ bool ABP_NPCLeadManager_C::Lead_IsCompleted()
 	ABP_NPCLeadManager_C_Lead_IsCompleted_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -188,7 +182,7 @@ bool ABP_NPCLeadManager_C::Lead_IsCompleted()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_StartNextWaitEvent
-// (Exec, Native, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -199,7 +193,6 @@ bool ABP_NPCLeadManager_C::Lead_StartNextWaitEvent()
 	ABP_NPCLeadManager_C_Lead_StartNextWaitEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -210,7 +203,7 @@ bool ABP_NPCLeadManager_C::Lead_StartNextWaitEvent()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_MessageCompleted
-// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -221,7 +214,6 @@ bool ABP_NPCLeadManager_C::Lead_MessageCompleted()
 	ABP_NPCLeadManager_C_Lead_MessageCompleted_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -232,18 +224,17 @@ bool ABP_NPCLeadManager_C::Lead_MessageCompleted()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_GetNextPointDistance
-// (Net, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Next                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_Lead_GetNextPointDistance(float* Next)
+void ABP_NPCLeadManager_C::Lead_GetNextPointDistance(float* Next)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_GetNextPointDistance");
 
 	ABP_NPCLeadManager_C_Lead_GetNextPointDistance_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -255,12 +246,12 @@ void ABP_NPCLeadManager_C::STATIC_Lead_GetNextPointDistance(float* Next)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_CalculateFollowerSpeed
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Speed                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          TargetMatchAmt                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_Lead_CalculateFollowerSpeed(float* Speed, float* TargetMatchAmt)
+void ABP_NPCLeadManager_C::Lead_CalculateFollowerSpeed(float* Speed, float* TargetMatchAmt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_CalculateFollowerSpeed");
 
@@ -280,12 +271,12 @@ void ABP_NPCLeadManager_C::STATIC_Lead_CalculateFollowerSpeed(float* Speed, floa
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.CheckLocationOnStairs
-// (Net, NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           OnStairs                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_CheckLocationOnStairs(const struct FVector& Location, bool* OnStairs)
+void ABP_NPCLeadManager_C::CheckLocationOnStairs(const struct FVector& Location, bool* OnStairs)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.CheckLocationOnStairs");
 
@@ -293,7 +284,6 @@ void ABP_NPCLeadManager_C::STATIC_CheckLocationOnStairs(const struct FVector& Lo
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -305,7 +295,7 @@ void ABP_NPCLeadManager_C::STATIC_CheckLocationOnStairs(const struct FVector& Lo
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.GetTalkLocation
-// (Net, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -326,11 +316,11 @@ struct FVector ABP_NPCLeadManager_C::GetTalkLocation()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Pair
-// (NetReliable, NetRequest, Static, Public, Private, NetServer, NetClient, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3_Character_Adventure_C* NewPartner                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_Pair(class ABP_S3_Character_Adventure_C* NewPartner)
+void ABP_NPCLeadManager_C::Pair(class ABP_S3_Character_Adventure_C* NewPartner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.Pair");
 
@@ -346,7 +336,7 @@ void ABP_NPCLeadManager_C::STATIC_Pair(class ABP_S3_Character_Adventure_C* NewPa
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Unpair
-// (Net, Exec, Native, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::Unpair()
 {
@@ -355,7 +345,6 @@ void ABP_NPCLeadManager_C::Unpair()
 	ABP_NPCLeadManager_C_Unpair_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -364,7 +353,7 @@ void ABP_NPCLeadManager_C::Unpair()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.SetPartnerCharacter
-// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ACharacter*              InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bValid                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -377,7 +366,6 @@ void ABP_NPCLeadManager_C::SetPartnerCharacter(class ACharacter* InputPin, bool*
 	params.InputPin = InputPin;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -389,7 +377,7 @@ void ABP_NPCLeadManager_C::SetPartnerCharacter(class ACharacter* InputPin, bool*
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_EstimateSplineTravelDistance
-// (NetRequest, Event, NetResponse, MulticastDelegate, Protected, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ACharacter*              Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Estimation                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -419,7 +407,7 @@ void ABP_NPCLeadManager_C::Lead_EstimateSplineTravelDistance(class ACharacter* C
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.GetNPCCharater
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3Character*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -430,7 +418,6 @@ class AS3Character* ABP_NPCLeadManager_C::GetNPCCharater()
 	ABP_NPCLeadManager_C_GetNPCCharater_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -441,7 +428,7 @@ class AS3Character* ABP_NPCLeadManager_C::GetNPCCharater()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.ResumeMovement
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::ResumeMovement()
 {
@@ -450,7 +437,6 @@ void ABP_NPCLeadManager_C::ResumeMovement()
 	ABP_NPCLeadManager_C_ResumeMovement_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -459,7 +445,7 @@ void ABP_NPCLeadManager_C::ResumeMovement()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.StopMovement
-// (Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::StopMovement()
 {
@@ -468,7 +454,6 @@ void ABP_NPCLeadManager_C::StopMovement()
 	ABP_NPCLeadManager_C_StopMovement_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -477,7 +462,7 @@ void ABP_NPCLeadManager_C::StopMovement()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.GetInitialSkeletalMesh
-// (Native, Event, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USkeletalMesh*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -488,7 +473,6 @@ class USkeletalMesh* ABP_NPCLeadManager_C::GetInitialSkeletalMesh()
 	ABP_NPCLeadManager_C_GetInitialSkeletalMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -499,11 +483,11 @@ class USkeletalMesh* ABP_NPCLeadManager_C::GetInitialSkeletalMesh()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.TestCanSeeFollower
-// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           OutCanSee                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_TestCanSeeFollower(bool* OutCanSee)
+void ABP_NPCLeadManager_C::TestCanSeeFollower(bool* OutCanSee)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.TestCanSeeFollower");
 
@@ -521,11 +505,11 @@ void ABP_NPCLeadManager_C::STATIC_TestCanSeeFollower(bool* OutCanSee)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_WaitForFollower_TryTurnAndReact
-// (NetRequest, Exec, Native, Static, NetMulticast, Protected, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bForwardOnly                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_Lead_WaitForFollower_TryTurnAndReact(bool bForwardOnly)
+void ABP_NPCLeadManager_C::Lead_WaitForFollower_TryTurnAndReact(bool bForwardOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_WaitForFollower_TryTurnAndReact");
 
@@ -533,7 +517,6 @@ void ABP_NPCLeadManager_C::STATIC_Lead_WaitForFollower_TryTurnAndReact(bool bFor
 	params.bForwardOnly = bForwardOnly;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,12 +525,12 @@ void ABP_NPCLeadManager_C::STATIC_Lead_WaitForFollower_TryTurnAndReact(bool bFor
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_WaitForFollower_StartWave
-// (Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TurnAngle                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DistSqr                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_Lead_WaitForFollower_StartWave(float TurnAngle, float DistSqr)
+void ABP_NPCLeadManager_C::Lead_WaitForFollower_StartWave(float TurnAngle, float DistSqr)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_WaitForFollower_StartWave");
 
@@ -556,7 +539,6 @@ void ABP_NPCLeadManager_C::STATIC_Lead_WaitForFollower_StartWave(float TurnAngle
 	params.DistSqr = DistSqr;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -565,7 +547,7 @@ void ABP_NPCLeadManager_C::STATIC_Lead_WaitForFollower_StartWave(float TurnAngle
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_WaitForFollower_StartTurn
-// (NetRequest, Native, NetResponse, NetMulticast, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TurnAngle                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -577,7 +559,6 @@ void ABP_NPCLeadManager_C::Lead_WaitForFollower_StartTurn(float TurnAngle)
 	params.TurnAngle = TurnAngle;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -586,7 +567,7 @@ void ABP_NPCLeadManager_C::Lead_WaitForFollower_StartTurn(float TurnAngle)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_WaitForFollower_StartTurnCooldown
-// (Native, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           JustWaved                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -598,7 +579,6 @@ void ABP_NPCLeadManager_C::Lead_WaitForFollower_StartTurnCooldown(bool JustWaved
 	params.JustWaved = JustWaved;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -607,7 +587,7 @@ void ABP_NPCLeadManager_C::Lead_WaitForFollower_StartTurnCooldown(bool JustWaved
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.GetRelativeAngleToLocation
-// (NetRequest, Exec, Native, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 ToLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          OutAngle                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -620,7 +600,6 @@ void ABP_NPCLeadManager_C::GetRelativeAngleToLocation(const struct FVector& ToLo
 	params.ToLocation = ToLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -632,18 +611,17 @@ void ABP_NPCLeadManager_C::GetRelativeAngleToLocation(const struct FVector& ToLo
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.GetRelativeAngleToFollower
-// (Net, Native, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          OutAngle                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_GetRelativeAngleToFollower(float* OutAngle)
+void ABP_NPCLeadManager_C::GetRelativeAngleToFollower(float* OutAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.GetRelativeAngleToFollower");
 
 	ABP_NPCLeadManager_C_GetRelativeAngleToFollower_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -655,7 +633,7 @@ void ABP_NPCLeadManager_C::STATIC_GetRelativeAngleToFollower(float* OutAngle)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.GetDirectSqrDistanceToFollower
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -666,7 +644,6 @@ void ABP_NPCLeadManager_C::GetDirectSqrDistanceToFollower(float* Distance)
 	ABP_NPCLeadManager_C_GetDirectSqrDistanceToFollower_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -678,11 +655,11 @@ void ABP_NPCLeadManager_C::GetDirectSqrDistanceToFollower(float* Distance)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.SetPathMassagingEnabled
-// (Native, Static, Public, Private, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bNewValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_SetPathMassagingEnabled(bool bNewValue)
+void ABP_NPCLeadManager_C::SetPathMassagingEnabled(bool bNewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.SetPathMassagingEnabled");
 
@@ -690,7 +667,6 @@ void ABP_NPCLeadManager_C::STATIC_SetPathMassagingEnabled(bool bNewValue)
 	params.bNewValue = bNewValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -699,7 +675,7 @@ void ABP_NPCLeadManager_C::STATIC_SetPathMassagingEnabled(bool bNewValue)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_UpdateDistanceTravelled
-// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::Lead_UpdateDistanceTravelled()
 {
@@ -716,9 +692,9 @@ void ABP_NPCLeadManager_C::Lead_UpdateDistanceTravelled()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_CalculateSpeed
-// (NetReliable, NetResponse, Static, NetMulticast, Private, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_NPCLeadManager_C::STATIC_Lead_CalculateSpeed()
+void ABP_NPCLeadManager_C::Lead_CalculateSpeed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_CalculateSpeed");
 
@@ -733,18 +709,17 @@ void ABP_NPCLeadManager_C::STATIC_Lead_CalculateSpeed()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.CanFollow
-// (Exec, Native, Event, NetResponse, Static, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           isFollow                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_CanFollow(bool* isFollow)
+void ABP_NPCLeadManager_C::CanFollow(bool* isFollow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.CanFollow");
 
 	ABP_NPCLeadManager_C_CanFollow_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -756,7 +731,7 @@ void ABP_NPCLeadManager_C::STATIC_CanFollow(bool* isFollow)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.ChangeCollision
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -770,7 +745,6 @@ void ABP_NPCLeadManager_C::ChangeCollision(class AActor* Actor, bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -779,18 +753,17 @@ void ABP_NPCLeadManager_C::ChangeCollision(class AActor* Actor, bool Enable)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Follow_IsBeingObstacle
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bIsObstacle                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_Follow_IsBeingObstacle(bool* bIsObstacle)
+void ABP_NPCLeadManager_C::Follow_IsBeingObstacle(bool* bIsObstacle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.Follow_IsBeingObstacle");
 
 	ABP_NPCLeadManager_C_Follow_IsBeingObstacle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -802,7 +775,7 @@ void ABP_NPCLeadManager_C::STATIC_Follow_IsBeingObstacle(bool* bIsObstacle)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.CheckStrayOff
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 SplinePos                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -828,16 +801,15 @@ void ABP_NPCLeadManager_C::CheckStrayOff(const struct FVector& SplinePos, float 
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_WaitForFollower_Tick
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_NPCLeadManager_C::STATIC_Lead_WaitForFollower_Tick()
+void ABP_NPCLeadManager_C::Lead_WaitForFollower_Tick()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.Lead_WaitForFollower_Tick");
 
 	ABP_NPCLeadManager_C_Lead_WaitForFollower_Tick_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -846,9 +818,9 @@ void ABP_NPCLeadManager_C::STATIC_Lead_WaitForFollower_Tick()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.NextPoint
-// (NetReliable, NetRequest, Event, Static, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_NPCLeadManager_C::STATIC_NextPoint()
+void ABP_NPCLeadManager_C::NextPoint()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.NextPoint");
 
@@ -863,7 +835,7 @@ void ABP_NPCLeadManager_C::STATIC_NextPoint()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.setFollwFlags
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           follow                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           syncGameinstance               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -877,7 +849,6 @@ void ABP_NPCLeadManager_C::setFollwFlags(bool follow, bool syncGameinstance)
 	params.syncGameinstance = syncGameinstance;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -886,7 +857,7 @@ void ABP_NPCLeadManager_C::setFollwFlags(bool follow, bool syncGameinstance)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.NpcLeadActorExit
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::NpcLeadActorExit()
 {
@@ -903,7 +874,7 @@ void ABP_NPCLeadManager_C::NpcLeadActorExit()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.NpcLeadActorInit
-// (Net, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 SpawnPos                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          SpawnRot                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -929,16 +900,15 @@ void ABP_NPCLeadManager_C::NpcLeadActorInit(const struct FVector& SpawnPos, floa
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_NPCLeadManager_C::STATIC_UserConstructionScript()
+void ABP_NPCLeadManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.UserConstructionScript");
 
 	ABP_NPCLeadManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -947,11 +917,11 @@ void ABP_NPCLeadManager_C::STATIC_UserConstructionScript()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.OnFail_9B54DB094FA168F07F4D998937B7C143
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_OnFail_9B54DB094FA168F07F4D998937B7C143(TEnumAsByte<EPathFollowingResult> MovementResult)
+void ABP_NPCLeadManager_C::OnFail_9B54DB094FA168F07F4D998937B7C143(TEnumAsByte<EPathFollowingResult> MovementResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.OnFail_9B54DB094FA168F07F4D998937B7C143");
 
@@ -959,7 +929,6 @@ void ABP_NPCLeadManager_C::STATIC_OnFail_9B54DB094FA168F07F4D998937B7C143(TEnumA
 	params.MovementResult = MovementResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -968,11 +937,11 @@ void ABP_NPCLeadManager_C::STATIC_OnFail_9B54DB094FA168F07F4D998937B7C143(TEnumA
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.OnSuccess_9B54DB094FA168F07F4D998937B7C143
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_OnSuccess_9B54DB094FA168F07F4D998937B7C143(TEnumAsByte<EPathFollowingResult> MovementResult)
+void ABP_NPCLeadManager_C::OnSuccess_9B54DB094FA168F07F4D998937B7C143(TEnumAsByte<EPathFollowingResult> MovementResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.OnSuccess_9B54DB094FA168F07F4D998937B7C143");
 
@@ -980,7 +949,6 @@ void ABP_NPCLeadManager_C::STATIC_OnSuccess_9B54DB094FA168F07F4D998937B7C143(TEn
 	params.MovementResult = MovementResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -989,7 +957,7 @@ void ABP_NPCLeadManager_C::STATIC_OnSuccess_9B54DB094FA168F07F4D998937B7C143(TEn
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Tick_Lead
-// (NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::Tick_Lead()
 {
@@ -1006,7 +974,7 @@ void ABP_NPCLeadManager_C::Tick_Lead()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.Tick_Follow
-// (Net, NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::Tick_Follow()
 {
@@ -1015,7 +983,6 @@ void ABP_NPCLeadManager_C::Tick_Follow()
 	ABP_NPCLeadManager_C_Tick_Follow_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1024,7 +991,7 @@ void ABP_NPCLeadManager_C::Tick_Follow()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::ReceiveBeginPlay()
 {
@@ -1033,7 +1000,6 @@ void ABP_NPCLeadManager_C::ReceiveBeginPlay()
 	ABP_NPCLeadManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1042,11 +1008,11 @@ void ABP_NPCLeadManager_C::ReceiveBeginPlay()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.ReceiveTick
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_NPCLeadManager_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.ReceiveTick");
 
@@ -1054,7 +1020,6 @@ void ABP_NPCLeadManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1063,7 +1028,7 @@ void ABP_NPCLeadManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.OnBeginTalk
-// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::OnBeginTalk()
 {
@@ -1072,7 +1037,6 @@ void ABP_NPCLeadManager_C::OnBeginTalk()
 	ABP_NPCLeadManager_C_OnBeginTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1081,7 +1045,7 @@ void ABP_NPCLeadManager_C::OnBeginTalk()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.OnEndTalk
-// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::OnEndTalk()
 {
@@ -1090,7 +1054,6 @@ void ABP_NPCLeadManager_C::OnEndTalk()
 	ABP_NPCLeadManager_C_OnEndTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1099,7 +1062,7 @@ void ABP_NPCLeadManager_C::OnEndTalk()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.UpdatePlayerInBuilding
-// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::UpdatePlayerInBuilding()
 {
@@ -1108,7 +1071,6 @@ void ABP_NPCLeadManager_C::UpdatePlayerInBuilding()
 	ABP_NPCLeadManager_C_UpdatePlayerInBuilding_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1117,11 +1079,11 @@ void ABP_NPCLeadManager_C::UpdatePlayerInBuilding()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.ReceiveEndPlay
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_NPCLeadManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.ReceiveEndPlay");
 
@@ -1129,7 +1091,6 @@ void ABP_NPCLeadManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> End
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1138,7 +1099,7 @@ void ABP_NPCLeadManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> End
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.OnHideRequestCounterChange
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_NPCLeadManager_C::OnHideRequestCounterChange()
 {
@@ -1147,7 +1108,6 @@ void ABP_NPCLeadManager_C::OnHideRequestCounterChange()
 	ABP_NPCLeadManager_C_OnHideRequestCounterChange_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1156,11 +1116,11 @@ void ABP_NPCLeadManager_C::OnHideRequestCounterChange()
 
 
 // Function BP_NPCLeadManager.BP_NPCLeadManager_C.ExecuteUbergraph_BP_NPCLeadManager
-// (Net, NetReliable, NetResponse, Static, Private, Delegate, DLLImport, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadManager_C::STATIC_ExecuteUbergraph_BP_NPCLeadManager(int EntryPoint)
+void ABP_NPCLeadManager_C::ExecuteUbergraph_BP_NPCLeadManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadManager.BP_NPCLeadManager_C.ExecuteUbergraph_BP_NPCLeadManager");
 

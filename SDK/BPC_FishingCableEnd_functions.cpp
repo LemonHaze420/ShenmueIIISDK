@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_FishingCableEnd.BPC_FishingCableEnd_C.ReceiveTick
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_FishingCableEnd_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UBPC_FishingCableEnd_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_FishingCableEnd.BPC_FishingCableEnd_C.ReceiveTick");
 
@@ -34,7 +34,7 @@ void UBPC_FishingCableEnd_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_FishingCableEnd.BPC_FishingCableEnd_C.ExecuteUbergraph_BPC_FishingCableEnd
-// (Net, Native, NetResponse, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -46,7 +46,6 @@ void UBPC_FishingCableEnd_C::ExecuteUbergraph_BPC_FishingCableEnd(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

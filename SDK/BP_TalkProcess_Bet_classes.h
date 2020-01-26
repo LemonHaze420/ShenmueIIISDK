@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ public:
 	void CreateBetUI(int bet, int maxbet, int FluctuationValue, TEnumAsByte<EN_ValueType> Type);
 	void Finalize();
 	void Activate();
-	void STATIC_ExecuteUbergraph_BP_TalkProcess_Bet(int EntryPoint);
+	void ExecuteUbergraph_BP_TalkProcess_Bet(int EntryPoint);
 };
 
 

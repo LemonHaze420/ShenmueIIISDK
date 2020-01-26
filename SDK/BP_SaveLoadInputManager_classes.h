@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,24 +38,24 @@ public:
 	}
 
 
-	void STATIC_StartLoad();
-	void STATIC_UserConstructionScript();
+	void StartLoad();
+	void UserConstructionScript();
 	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_12(const struct FKey& Key);
 	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_11(const struct FKey& Key);
 	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_10(const struct FKey& Key);
 	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_9(const struct FKey& Key);
 	void InpActEvt_SearchRightButton_K2Node_InputActionEvent_8(const struct FKey& Key);
 	void InpActEvt_SearchBottomButton_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_33(float AxisValue);
 	void ExecuteUbergraph_BP_SaveLoadInputManager(int EntryPoint);
-	void STATIC_ED_LeftButton__DelegateSignature();
-	void STATIC_ED_WheleMouse__DelegateSignature(float Value);
-	void STATIC_ED_DownButton__DelegateSignature();
-	void STATIC_ED_RightButton__DelegateSignature();
-	void STATIC_ED_DownPush__DelegateSignature();
-	void STATIC_ED_UpPush__DelegateSignature();
+	void ED_LeftButton__DelegateSignature();
+	void ED_WheleMouse__DelegateSignature(float Value);
+	void ED_DownButton__DelegateSignature();
+	void ED_RightButton__DelegateSignature();
+	void ED_DownPush__DelegateSignature();
+	void ED_UpPush__DelegateSignature();
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -66,13 +66,13 @@ public:
 	void IsEnabledOff(bool* Enabled);
 	void SetOutSide(bool IsOutSide);
 	void CalcOpacity(float* Opacity);
-	void STATIC_UpdateOpacity();
+	void updateOpacity();
 	void SetInterpOpacity(float Target, class UImage* Image, bool* Reach);
 	void SetVisibleState(bool Visible);
 	void SetCornersPos();
 	void UpdateFocusRate(float FocusRate);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_PreConstruct(bool IsDesignTime);
+	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_FocusSign(int EntryPoint);
 };
 

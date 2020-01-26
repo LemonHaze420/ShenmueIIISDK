@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,12 +35,12 @@ public:
 
 
 	void SetSkillLibrary(class UBTL_CommandLibrary_C* SkillLibrary);
-	void STATIC_SetDefaultFrameVisible(bool Visible);
+	void SetDefaultFrameVisible(bool Visible);
 	void SetDescriptionText(const struct FText& Text);
-	void STATIC_SetItem_TableIndex(int Index);
+	void SetItem_TableIndex(int Index);
 	void Construct();
 	void PreConstruct(bool IsDesignTime);
-	void STATIC_ExecuteUbergraph_wgt_SkillEditorDetails(int EntryPoint);
+	void ExecuteUbergraph_wgt_SkillEditorDetails(int EntryPoint);
 };
 
 

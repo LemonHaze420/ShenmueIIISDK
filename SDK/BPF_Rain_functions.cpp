@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Rain.BPF_Rain_C.GetPlayerWetnessComponent
-// (NetRequest, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3WetnessComponent*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
@@ -37,11 +37,11 @@ class US3WetnessComponent* UBPF_Rain_C::STATIC_GetPlayerWetnessComponent(class U
 
 
 // Function BPF_Rain.BPF_Rain_C.ResetPlayerWetness
-// (Net, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Rain_C::ResetPlayerWetness(class UObject* __WorldContext)
+void UBPF_Rain_C::STATIC_ResetPlayerWetness(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Rain.BPF_Rain_C.ResetPlayerWetness");
 
@@ -49,7 +49,6 @@ void UBPF_Rain_C::ResetPlayerWetness(class UObject* __WorldContext)
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +57,7 @@ void UBPF_Rain_C::ResetPlayerWetness(class UObject* __WorldContext)
 
 
 // Function BPF_Rain.BPF_Rain_C.IsApplyWetness
-// (NetReliable, NetRequest, Static, Private, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -84,7 +83,7 @@ void UBPF_Rain_C::STATIC_IsApplyWetness(class AActor* Actor, class UObject* __Wo
 
 
 // Function BPF_Rain.BPF_Rain_C.ApplyMeshWetness
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*  Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          Wetness                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -100,7 +99,6 @@ void UBPF_Rain_C::STATIC_ApplyMeshWetness(class USkeletalMeshComponent* Componen
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,12 +107,12 @@ void UBPF_Rain_C::STATIC_ApplyMeshWetness(class USkeletalMeshComponent* Componen
 
 
 // Function BPF_Rain.BPF_Rain_C.GetPlayerWetness
-// (NetRequest, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Wetness                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Rain_C::GetPlayerWetness(class UObject* __WorldContext, float* Wetness)
+void UBPF_Rain_C::STATIC_GetPlayerWetness(class UObject* __WorldContext, float* Wetness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Rain.BPF_Rain_C.GetPlayerWetness");
 

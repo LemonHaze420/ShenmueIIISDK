@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,8 +52,8 @@ struct UWBP_Fishing_Result_C_GetFishNameText_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetResultVIsible
-struct UWBP_Fishing_Result_C_SetResultVIsible_Params
+// Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetResultVisible
+struct UWBP_Fishing_Result_C_SetResultVisible_Params
 {
 	ESlateVisibility                                   InVisibility;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsException;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

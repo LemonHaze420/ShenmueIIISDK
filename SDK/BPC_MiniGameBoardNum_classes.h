@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,9 +35,9 @@ public:
 
 
 	void Update();
-	void STATIC_SetNumber(int Number);
+	void SetNumber(int Number);
 	void SetList(TArray<class UStaticMeshComponent*>* MeshList, TArray<class UMaterialInstanceDynamic*>* MaterialList);
-	void STATIC_InitializeMesh();
+	void InitializeMesh();
 };
 
 

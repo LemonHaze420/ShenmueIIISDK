@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MiniGame_Maho.BP_MiniGame_Maho_C
-// 0x013B (0x087C - 0x0741)
+// 0x013F (0x0880 - 0x0741)
 class ABP_MiniGame_Maho_C : public ABP_MiniGame_KungFuBase_C
 {
 public:
@@ -76,6 +76,7 @@ public:
 	float                                              RyoCollisionHeight;                                       // 0x0870(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              PartnerCollisionHeight;                                   // 0x0874(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinCollisionRelativeLocation;                             // 0x0878(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                MAHO_LEVEL_MAX_FLAG_INDEX;                                // 0x087C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -87,13 +88,13 @@ public:
 	void InitAsyncLoad(bool* dummy);
 	void UpdateMahoAccumulation();
 	void SetDifficulty(int Level);
-	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
-	void STATIC_GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName);
-	bool STATIC_CanGameUpdate();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
+	void GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName);
+	bool CanGameUpdate();
 	void UpdateUILine();
-	void STATIC_SetNPCVisible(bool Visible);
-	void STATIC_UpdateAnim();
-	void STATIC_UserConstructionScript();
+	void SetNPCVisible(bool Visible);
+	void UpdateAnim();
+	void UserConstructionScript();
 	void Timeline_CollisionScaleInitialize__FinishedFunc();
 	void Timeline_CollisionScaleInitialize__UpdateFunc();
 	void Timiline_SafeBar__FinishedFunc();
@@ -116,7 +117,8 @@ public:
 	void TimeUpEvent();
 	void OnTimeUp();
 	void PlayScriptMaho();
-	void STATIC_ExecuteUbergraph_BP_MiniGame_Maho(int EntryPoint);
+	void ReachedMaxKungFuLevel();
+	void ExecuteUbergraph_BP_MiniGame_Maho(int EntryPoint);
 };
 
 

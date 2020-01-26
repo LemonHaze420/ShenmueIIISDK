@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.SetSkillLibrary
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   SkillLibrary                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_ItemGrid_C::STATIC_SetSkillLibrary(class UBTL_CommandLibrary_C* SkillLibrary)
+void Uwgt_SkillEditor_ItemGrid_C::SetSkillLibrary(class UBTL_CommandLibrary_C* SkillLibrary)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.SetSkillLibrary");
 
@@ -26,7 +26,6 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_SetSkillLibrary(class UBTL_CommandLibra
 	params.SkillLibrary = SkillLibrary;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_SetSkillLibrary(class UBTL_CommandLibra
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.GetSelectionItemLabel
-// (Net, NetRequest, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Label                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_ItemGrid_C::STATIC_GetSelectionItemLabel(struct FName* Label)
+void Uwgt_SkillEditor_ItemGrid_C::GetSelectionItemLabel(struct FName* Label)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.GetSelectionItemLabel");
 
@@ -57,11 +56,11 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_GetSelectionItemLabel(struct FName* Lab
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.UpdateWidgetFocusing
-// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_ItemGrid_C::STATIC_UpdateWidgetFocusing(int* ItemIndex)
+void Uwgt_SkillEditor_ItemGrid_C::UpdateWidgetFocusing(int* ItemIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.UpdateWidgetFocusing");
 
@@ -79,11 +78,11 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_UpdateWidgetFocusing(int* ItemIndex)
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.SetFocus
-// (NetReliable, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_ItemGrid_C::STATIC_SetFocus(bool Condition)
+void Uwgt_SkillEditor_ItemGrid_C::SetFocus(bool Condition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.SetFocus");
 
@@ -99,7 +98,7 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_SetFocus(bool Condition)
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.SelectItem(WidgetIndex)
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -112,7 +111,6 @@ void Uwgt_SkillEditor_ItemGrid_C::SelectItem_WidgetIndex_(int Index, int* ItemIn
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +122,7 @@ void Uwgt_SkillEditor_ItemGrid_C::SelectItem_WidgetIndex_(int Index, int* ItemIn
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.SelectItem(ItemIntID)
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -136,7 +134,6 @@ void Uwgt_SkillEditor_ItemGrid_C::SelectItem_ItemIntID_(int ID)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,16 +142,15 @@ void Uwgt_SkillEditor_ItemGrid_C::SelectItem_ItemIntID_(int ID)
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.ClearSelection
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_SkillEditor_ItemGrid_C::STATIC_ClearSelection()
+void Uwgt_SkillEditor_ItemGrid_C::ClearSelection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.ClearSelection");
 
 	Uwgt_SkillEditor_ItemGrid_C_ClearSelection_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -163,12 +159,12 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_ClearSelection()
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.SetItems
-// (NetReliable, NetRequest, NetResponse, Static, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            StartIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    AllItems                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void Uwgt_SkillEditor_ItemGrid_C::STATIC_SetItems(int StartIndex, TArray<int> AllItems)
+void Uwgt_SkillEditor_ItemGrid_C::SetItems(int StartIndex, TArray<int> AllItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.SetItems");
 
@@ -185,18 +181,17 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_SetItems(int StartIndex, TArray<int> Al
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.GetSelectionItemID
-// (Net, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ItemIntID                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_ItemGrid_C::STATIC_GetSelectionItemID(int* ItemIntID)
+void Uwgt_SkillEditor_ItemGrid_C::GetSelectionItemID(int* ItemIntID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.GetSelectionItemID");
 
 	Uwgt_SkillEditor_ItemGrid_C_GetSelectionItemID_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,7 +203,7 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_GetSelectionItemID(int* ItemIntID)
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.GridLocationToWidgetIndex
-// (NetMulticast, Public, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            X                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Y                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -234,12 +229,12 @@ void Uwgt_SkillEditor_ItemGrid_C::GridLocationToWidgetIndex(int X, int Y, int* I
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.MoveSelection
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<Een_skill_key_type> Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_ItemGrid_C::STATIC_MoveSelection(TEnumAsByte<Een_skill_key_type> Direction, int* ItemIndex)
+void Uwgt_SkillEditor_ItemGrid_C::MoveSelection(TEnumAsByte<Een_skill_key_type> Direction, int* ItemIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.MoveSelection");
 
@@ -258,7 +253,7 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_MoveSelection(TEnumAsByte<Een_skill_key
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.WidgetIndexToGridLocation
-// (NetReliable, Event, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Column                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -285,7 +280,7 @@ void Uwgt_SkillEditor_ItemGrid_C::WidgetIndexToGridLocation(int Index, int* Colu
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.GetGridItemCount
-// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Count                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -307,7 +302,7 @@ void Uwgt_SkillEditor_ItemGrid_C::GetGridItemCount(int* Count)
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.Construct
-// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_SkillEditor_ItemGrid_C::Construct()
 {
@@ -316,7 +311,6 @@ void Uwgt_SkillEditor_ItemGrid_C::Construct()
 	Uwgt_SkillEditor_ItemGrid_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -325,11 +319,11 @@ void Uwgt_SkillEditor_ItemGrid_C::Construct()
 
 
 // Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.ExecuteUbergraph_wgt_SkillEditor_ItemGrid
-// (Exec, Native, Event, Static, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_ItemGrid_C::STATIC_ExecuteUbergraph_wgt_SkillEditor_ItemGrid(int EntryPoint)
+void Uwgt_SkillEditor_ItemGrid_C::ExecuteUbergraph_wgt_SkillEditor_ItemGrid(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_ItemGrid.wgt_SkillEditor_ItemGrid_C.ExecuteUbergraph_wgt_SkillEditor_ItemGrid");
 
@@ -337,7 +331,6 @@ void Uwgt_SkillEditor_ItemGrid_C::STATIC_ExecuteUbergraph_wgt_SkillEditor_ItemGr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

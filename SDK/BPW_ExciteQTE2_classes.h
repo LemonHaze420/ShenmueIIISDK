@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,49 +90,49 @@ public:
 
 
 	void SetScore(int HighScoreValue, int LastScoreValue);
-	void STATIC_SetSuccessPointPos(float Percent);
+	void SetSuccessPointPos(float Percent);
 	void SetDifficultyText(int Difficulty);
-	void STATIC_SetSwitcher(int Index);
-	void STATIC_SetHighScoreVisible(ESlateVisibility Visible);
+	void SetSwitcher(int Index);
+	void SetHighScoreVisible(ESlateVisibility Visible);
 	void SetLiversIcon();
 	void RestartMusic();
-	void STATIC_PlayGameOver();
-	void STATIC_OneUp();
-	void STATIC_AddToScore(int Add, int* CurrentScore);
+	void PlayGameOver();
+	void OneUp();
+	void AddToScore(int Add, int* CurrentScore);
 	struct FText GetMultiplierText();
-	void STATIC_UpdateMultiplier(float* Multiplier);
-	ESlateVisibility STATIC_GetMultiplierVisibility();
-	void STATIC_CalcScore(int* Score);
-	void STATIC_CheckGameOver();
-	struct FSlateColor STATIC_GetSuccessPointsColorAndOpacity();
-	struct FText STATIC_GetLastSuccessPoints();
+	void UpdateMultiplier(float* Multiplier);
+	ESlateVisibility GetMultiplierVisibility();
+	void CalcScore(int* Score);
+	void CheckGameOver();
+	struct FSlateColor GetSuccessPointsColorAndOpacity();
+	struct FText GetLastSuccessPoints();
 	struct FText GetHighScore();
 	struct FText GetLastScore();
 	void Beep();
-	void STATIC_UnPause();
-	struct FLinearColor STATIC_GetButtonIconColorAndOpacity();
+	void UnPause();
+	struct FLinearColor GetButtonIconColorAndOpacity();
 	struct FText GetCurrentScore();
-	void STATIC_Input_test(TEnumAsByte<EN_padSwitch> Input);
-	struct FText STATIC_GetFailureText();
+	void Input_test(TEnumAsByte<EN_padSwitch> Input);
+	struct FText GetFailureText();
 	ESlateVisibility GetFailureVisibility();
 	struct FLinearColor GetProgressBarColor();
 	void Fail();
-	float STATIC_ElapsedBar();
+	float ElapsedBar();
 	ESlateVisibility GetVisibilityIsGameInProgress();
 	struct FSlateBrush GetButtonIcon();
 	void Play_QTE_Beep();
 	void Play_QTE_Success();
 	void Play_QTE_Failure();
 	void Construct();
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void StartGame();
 	void Next_Button();
 	void TimeOutFailEnd();
-	void STATIC_Input(TEnumAsByte<EN_padSwitch> Input);
+	void Input(TEnumAsByte<EN_padSwitch> Input);
 	void Input_Fail_Finished();
 	void CancelGame();
 	void ExecuteUbergraph_BPW_ExciteQTE2(int EntryPoint);
-	void STATIC_BeginGame__DelegateSignature();
+	void BeginGame__DelegateSignature();
 };
 
 

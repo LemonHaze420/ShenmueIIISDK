@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.SetExperienceAdjustRate
-// (Net, NetReliable, NetRequest, Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBPC_MiniGame_KungFuFlow_C::SetExperienceAdjustRate(float Rate)
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.IsShowingResultScreen
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -45,7 +45,6 @@ bool UBPC_MiniGame_KungFuFlow_C::IsShowingResultScreen()
 	UBPC_MiniGame_KungFuFlow_C_IsShowingResultScreen_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,16 +55,15 @@ bool UBPC_MiniGame_KungFuFlow_C::IsShowingResultScreen()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ShowResultScreen
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_ShowResultScreen()
+void UBPC_MiniGame_KungFuFlow_C::ShowResultScreen()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ShowResultScreen");
 
 	UBPC_MiniGame_KungFuFlow_C_ShowResultScreen_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +72,11 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_ShowResultScreen()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.SetEnabledMasterImage
-// (Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_SetEnabledMasterImage(bool Enabled)
+void UBPC_MiniGame_KungFuFlow_C::SetEnabledMasterImage(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.SetEnabledMasterImage");
 
@@ -86,7 +84,6 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_SetEnabledMasterImage(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,9 +92,9 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_SetEnabledMasterImage(bool Enabled)
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.PlayMaxLevelMasteredAnim
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_PlayMaxLevelMasteredAnim()
+void UBPC_MiniGame_KungFuFlow_C::PlayMaxLevelMasteredAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.PlayMaxLevelMasteredAnim");
 
@@ -112,16 +109,15 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_PlayMaxLevelMasteredAnim()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.UpdateUIKungFuLevelInfo
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_UpdateUIKungFuLevelInfo()
+void UBPC_MiniGame_KungFuFlow_C::UpdateUIKungFuLevelInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.UpdateUIKungFuLevelInfo");
 
 	UBPC_MiniGame_KungFuFlow_C_UpdateUIKungFuLevelInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -130,11 +126,11 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_UpdateUIKungFuLevelInfo()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.GetCurrentLimitLevel
-// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBPC_MiniGame_KungFuFlow_C::STATIC_GetCurrentLimitLevel()
+int UBPC_MiniGame_KungFuFlow_C::GetCurrentLimitLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.GetCurrentLimitLevel");
 
@@ -151,9 +147,9 @@ int UBPC_MiniGame_KungFuFlow_C::STATIC_GetCurrentLimitLevel()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ChangeKungFuNameToNext
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_ChangeKungFuNameToNext()
+void UBPC_MiniGame_KungFuFlow_C::ChangeKungFuNameToNext()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ChangeKungFuNameToNext");
 
@@ -168,7 +164,7 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_ChangeKungFuNameToNext()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.BindEventSkillCountMax
-// (Net, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FScriptDelegate         Event                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -180,7 +176,6 @@ void UBPC_MiniGame_KungFuFlow_C::BindEventSkillCountMax(const struct FScriptDele
 	params.Event = Event;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -189,11 +184,11 @@ void UBPC_MiniGame_KungFuFlow_C::BindEventSkillCountMax(const struct FScriptDele
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.SetTimerCurrentRate
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TimeRate                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_SetTimerCurrentRate(float TimeRate)
+void UBPC_MiniGame_KungFuFlow_C::SetTimerCurrentRate(float TimeRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.SetTimerCurrentRate");
 
@@ -201,7 +196,6 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_SetTimerCurrentRate(float TimeRate)
 	params.TimeRate = TimeRate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -210,11 +204,11 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_SetTimerCurrentRate(float TimeRate)
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.AddSkillCount
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            AddCount                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_AddSkillCount(int AddCount)
+void UBPC_MiniGame_KungFuFlow_C::AddSkillCount(int AddCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.AddSkillCount");
 
@@ -222,7 +216,6 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_AddSkillCount(int AddCount)
 	params.AddCount = AddCount;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -231,7 +224,7 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_AddSkillCount(int AddCount)
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.GetKungFuLocalizedName
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGame_KungFuType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -257,20 +250,20 @@ void UBPC_MiniGame_KungFuFlow_C::GetKungFuLocalizedName(TEnumAsByte<E_MiniGame_K
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.SetWidgetArrowSettings
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          moveSpeed                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          MoveTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          IntervalTIme                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          IntervalTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuFlow_C::SetWidgetArrowSettings(float moveSpeed, float MoveTime, float IntervalTIme)
+void UBPC_MiniGame_KungFuFlow_C::SetWidgetArrowSettings(float moveSpeed, float MoveTime, float IntervalTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.SetWidgetArrowSettings");
 
 	UBPC_MiniGame_KungFuFlow_C_SetWidgetArrowSettings_Params params;
 	params.moveSpeed = moveSpeed;
 	params.MoveTime = MoveTime;
-	params.IntervalTIme = IntervalTIme;
+	params.IntervalTime = IntervalTime;
 
 	auto flags = fn->FunctionFlags;
 
@@ -281,11 +274,11 @@ void UBPC_MiniGame_KungFuFlow_C::SetWidgetArrowSettings(float moveSpeed, float M
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.EnabledButtonIconUI
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_EnabledButtonIconUI(bool bEnabled)
+void UBPC_MiniGame_KungFuFlow_C::EnabledButtonIconUI(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.EnabledButtonIconUI");
 
@@ -293,7 +286,6 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_EnabledButtonIconUI(bool bEnabled)
 	params.bEnabled = bEnabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -302,9 +294,9 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_EnabledButtonIconUI(bool bEnabled)
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.Finalize
-// (NetRequest, Event, NetResponse, Static, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_Finalize()
+void UBPC_MiniGame_KungFuFlow_C::Finalize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.Finalize");
 
@@ -319,11 +311,11 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_Finalize()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.UpdateAccumulation
-// (Exec, Native, NetResponse, Static, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_UpdateAccumulation(float DeltaSeconds)
+void UBPC_MiniGame_KungFuFlow_C::UpdateAccumulation(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.UpdateAccumulation");
 
@@ -331,7 +323,6 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_UpdateAccumulation(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -340,7 +331,7 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_UpdateAccumulation(float DeltaSeconds)
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.BindEventTimeUp
-// (NetRequest, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FScriptDelegate         Event                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -352,7 +343,6 @@ void UBPC_MiniGame_KungFuFlow_C::BindEventTimeUp(const struct FScriptDelegate& E
 	params.Event = Event;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -361,7 +351,7 @@ void UBPC_MiniGame_KungFuFlow_C::BindEventTimeUp(const struct FScriptDelegate& E
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.Initialize
-// (NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bUseButtonIcon                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFlashButtonAnimIcon           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -391,11 +381,11 @@ void UBPC_MiniGame_KungFuFlow_C::Initialize(bool bUseButtonIcon, bool bFlashButt
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ReceiveTick
-// (Net, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UBPC_MiniGame_KungFuFlow_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ReceiveTick");
 
@@ -411,7 +401,7 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.CallSkillCountMax
-// (Net, NetReliable, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGame_KungFuFlow_C::CallSkillCountMax()
 {
@@ -420,7 +410,6 @@ void UBPC_MiniGame_KungFuFlow_C::CallSkillCountMax()
 	UBPC_MiniGame_KungFuFlow_C_CallSkillCountMax_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -429,7 +418,7 @@ void UBPC_MiniGame_KungFuFlow_C::CallSkillCountMax()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.OnResultScreenClose
-// (Net, NetReliable, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGame_KungFuFlow_C::OnResultScreenClose()
 {
@@ -438,7 +427,6 @@ void UBPC_MiniGame_KungFuFlow_C::OnResultScreenClose()
 	UBPC_MiniGame_KungFuFlow_C_OnResultScreenClose_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -447,11 +435,11 @@ void UBPC_MiniGame_KungFuFlow_C::OnResultScreenClose()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ReceiveEndPlay
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void UBPC_MiniGame_KungFuFlow_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ReceiveEndPlay");
 
@@ -459,7 +447,6 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReaso
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -468,7 +455,7 @@ void UBPC_MiniGame_KungFuFlow_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReaso
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ExecuteUbergraph_BPC_MiniGame_KungFuFlow
-// (NetReliable, NetResponse, NetMulticast, Private, Protected, NetServer, DLLImport, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -488,7 +475,7 @@ void UBPC_MiniGame_KungFuFlow_C::ExecuteUbergraph_BPC_MiniGame_KungFuFlow(int En
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.ResultEndDispacher__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, NetResponse, Public, Protected, NetServer, NetClient, DLLImport)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGame_KungFuFlow_C::ResultEndDispacher__DelegateSignature()
 {
@@ -497,7 +484,6 @@ void UBPC_MiniGame_KungFuFlow_C::ResultEndDispacher__DelegateSignature()
 	UBPC_MiniGame_KungFuFlow_C_ResultEndDispacher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -506,7 +492,7 @@ void UBPC_MiniGame_KungFuFlow_C::ResultEndDispacher__DelegateSignature()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.SkillCountMaxDispacher__DelegateSignature
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGame_KungFuFlow_C::SkillCountMaxDispacher__DelegateSignature()
 {
@@ -523,16 +509,15 @@ void UBPC_MiniGame_KungFuFlow_C::SkillCountMaxDispacher__DelegateSignature()
 
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.TimeUpDispacher__DelegateSignature
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGame_KungFuFlow_C::STATIC_TimeUpDispacher__DelegateSignature()
+void UBPC_MiniGame_KungFuFlow_C::TimeUpDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.TimeUpDispacher__DelegateSignature");
 
 	UBPC_MiniGame_KungFuFlow_C_TimeUpDispacher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

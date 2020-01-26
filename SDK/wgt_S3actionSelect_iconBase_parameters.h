@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,8 +20,8 @@ struct Uwgt_S3actionSelect_iconBase_C_doCmd_fade_Params
 	bool                                               FadeIn;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.UpdateOpacity
-struct Uwgt_S3actionSelect_iconBase_C_UpdateOpacity_Params
+// Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.updateOpacity
+struct Uwgt_S3actionSelect_iconBase_C_updateOpacity_Params
 {
 	float                                              Opacity;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

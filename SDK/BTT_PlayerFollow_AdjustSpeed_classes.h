@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,8 +27,8 @@ public:
 
 
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
-	void STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void STATIC_ExecuteUbergraph_BTT_PlayerFollow_AdjustSpeed(int EntryPoint);
+	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ExecuteUbergraph_BTT_PlayerFollow_AdjustSpeed(int EntryPoint);
 };
 
 

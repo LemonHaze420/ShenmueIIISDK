@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.SpawnCameraFromClass
-// (NetReliable, NetRequest, Event, Static, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  cameraClass                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_SpawnCameraFromClass(class UClass* cameraClass)
+void Uwgt_TalkCameraPrev_C::SpawnCameraFromClass(class UClass* cameraClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.SpawnCameraFromClass");
 
@@ -34,7 +34,7 @@ void Uwgt_TalkCameraPrev_C::STATIC_SpawnCameraFromClass(class UClass* cameraClas
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckCameraKind
-// (Exec, Native, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -47,7 +47,6 @@ void Uwgt_TalkCameraPrev_C::CheckCameraKind(int mask, bool* Result)
 	params.mask = mask;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,16 +58,15 @@ void Uwgt_TalkCameraPrev_C::CheckCameraKind(int mask, bool* Result)
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.ToggleWindowSize
-// (NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_TalkCameraPrev_C::STATIC_ToggleWindowSize()
+void Uwgt_TalkCameraPrev_C::ToggleWindowSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.ToggleWindowSize");
 
 	Uwgt_TalkCameraPrev_C_ToggleWindowSize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,12 +75,12 @@ void Uwgt_TalkCameraPrev_C::STATIC_ToggleWindowSize()
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckLookAtSocket
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_CheckLookAtSocket(int mask, bool* Result)
+void Uwgt_TalkCameraPrev_C::CheckLookAtSocket(int mask, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckLookAtSocket");
 
@@ -101,12 +99,12 @@ void Uwgt_TalkCameraPrev_C::STATIC_CheckLookAtSocket(int mask, bool* Result)
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckDistance
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_CheckDistance(int mask, bool* Result)
+void Uwgt_TalkCameraPrev_C::CheckDistance(int mask, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckDistance");
 
@@ -125,12 +123,12 @@ void Uwgt_TalkCameraPrev_C::STATIC_CheckDistance(int mask, bool* Result)
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckAngle
-// (Exec, Native, Event, Static, NetMulticast, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_CheckAngle(int mask, bool* Result)
+void Uwgt_TalkCameraPrev_C::CheckAngle(int mask, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckAngle");
 
@@ -138,7 +136,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_CheckAngle(int mask, bool* Result)
 	params.mask = mask;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,12 +147,12 @@ void Uwgt_TalkCameraPrev_C::STATIC_CheckAngle(int mask, bool* Result)
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckShoulderOrNot
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_CheckShoulderOrNot(int mask, bool* Result)
+void Uwgt_TalkCameraPrev_C::CheckShoulderOrNot(int mask, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckShoulderOrNot");
 
@@ -163,7 +160,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_CheckShoulderOrNot(int mask, bool* Result)
 	params.mask = mask;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,7 +171,7 @@ void Uwgt_TalkCameraPrev_C::STATIC_CheckShoulderOrNot(int mask, bool* Result)
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckPersonNum
-// (NetReliable, Event, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -199,16 +195,15 @@ void Uwgt_TalkCameraPrev_C::CheckPersonNum(int mask, bool* Result)
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.Refresh
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_TalkCameraPrev_C::STATIC_Refresh()
+void Uwgt_TalkCameraPrev_C::Refresh()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.Refresh");
 
 	Uwgt_TalkCameraPrev_C_Refresh_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,7 +212,7 @@ void Uwgt_TalkCameraPrev_C::STATIC_Refresh()
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.GetFilterdCameras
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UClass*>          Cameras                        (Parm, OutParm, ZeroConstructor)
 
@@ -228,7 +223,6 @@ void Uwgt_TalkCameraPrev_C::GetFilterdCameras(TArray<class UClass*>* Cameras)
 	Uwgt_TalkCameraPrev_C_GetFilterdCameras_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -240,13 +234,13 @@ void Uwgt_TalkCameraPrev_C::GetFilterdCameras(TArray<class UClass*>* Cameras)
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckCameraCollision
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  TalkCamera                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsAvailable                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHitResult>      HitResults                     (Parm, OutParm, ZeroConstructor)
 
-void Uwgt_TalkCameraPrev_C::STATIC_CheckCameraCollision(class UClass* TalkCamera, bool* IsAvailable, TArray<struct FHitResult>* HitResults)
+void Uwgt_TalkCameraPrev_C::CheckCameraCollision(class UClass* TalkCamera, bool* IsAvailable, TArray<struct FHitResult>* HitResults)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CheckCameraCollision");
 
@@ -254,7 +248,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_CheckCameraCollision(class UClass* TalkCamera
 	params.TalkCamera = TalkCamera;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,7 +261,7 @@ void Uwgt_TalkCameraPrev_C::STATIC_CheckCameraCollision(class UClass* TalkCamera
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.ResetCollisionErrorText
-// (Net, Native, Event, Private, Protected, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_TalkCameraPrev_C::ResetCollisionErrorText()
 {
@@ -277,7 +270,6 @@ void Uwgt_TalkCameraPrev_C::ResetCollisionErrorText()
 	Uwgt_TalkCameraPrev_C_ResetCollisionErrorText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -286,12 +278,12 @@ void Uwgt_TalkCameraPrev_C::ResetCollisionErrorText()
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.SetCollisionErrorText
-// (Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsHit                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHitResult>      HitResults                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void Uwgt_TalkCameraPrev_C::STATIC_SetCollisionErrorText(bool IsHit, TArray<struct FHitResult>* HitResults)
+void Uwgt_TalkCameraPrev_C::SetCollisionErrorText(bool IsHit, TArray<struct FHitResult>* HitResults)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.SetCollisionErrorText");
 
@@ -310,7 +302,7 @@ void Uwgt_TalkCameraPrev_C::STATIC_SetCollisionErrorText(bool IsHit, TArray<stru
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.CanUseCamera
-// (Native, Public, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  cameraClass                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -323,7 +315,6 @@ void Uwgt_TalkCameraPrev_C::CanUseCamera(class UClass* cameraClass, bool* Result
 	params.cameraClass = cameraClass;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -335,7 +326,7 @@ void Uwgt_TalkCameraPrev_C::CanUseCamera(class UClass* cameraClass, bool* Result
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.OnKeyDown
-// (NetReliable, NetRequest, Exec, Native, Event, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -350,7 +341,6 @@ struct FEventReply Uwgt_TalkCameraPrev_C::OnKeyDown(const struct FGeometry& MyGe
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -361,13 +351,13 @@ struct FEventReply Uwgt_TalkCameraPrev_C::OnKeyDown(const struct FGeometry& MyGe
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.OnPreviewKeyDown
-// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply Uwgt_TalkCameraPrev_C::STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply Uwgt_TalkCameraPrev_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.OnPreviewKeyDown");
 
@@ -376,7 +366,6 @@ struct FEventReply Uwgt_TalkCameraPrev_C::STATIC_OnPreviewKeyDown(const struct F
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -387,16 +376,15 @@ struct FEventReply Uwgt_TalkCameraPrev_C::STATIC_OnPreviewKeyDown(const struct F
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.ChangePrevCamera
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_TalkCameraPrev_C::STATIC_ChangePrevCamera()
+void Uwgt_TalkCameraPrev_C::ChangePrevCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.ChangePrevCamera");
 
 	Uwgt_TalkCameraPrev_C_ChangePrevCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -405,11 +393,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_ChangePrevCamera()
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.GetPrevDefautTalkCamera
-// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  cameraClass                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_GetPrevDefautTalkCamera(class UClass** cameraClass)
+void Uwgt_TalkCameraPrev_C::GetPrevDefautTalkCamera(class UClass** cameraClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.GetPrevDefautTalkCamera");
 
@@ -427,16 +415,15 @@ void Uwgt_TalkCameraPrev_C::STATIC_GetPrevDefautTalkCamera(class UClass** camera
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.ChangeNextCamera
-// (Exec, Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_TalkCameraPrev_C::STATIC_ChangeNextCamera()
+void Uwgt_TalkCameraPrev_C::ChangeNextCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.ChangeNextCamera");
 
 	Uwgt_TalkCameraPrev_C_ChangeNextCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -445,7 +432,7 @@ void Uwgt_TalkCameraPrev_C::STATIC_ChangeNextCamera()
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.GetNextDefautTalkCamera
-// (NetRequest, Exec, Event, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  cameraClass                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -467,11 +454,11 @@ void Uwgt_TalkCameraPrev_C::GetNextDefautTalkCamera(class UClass** cameraClass)
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.SetCameraName
-// (NetRequest, Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Object                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_SetCameraName(class UObject* Object)
+void Uwgt_TalkCameraPrev_C::SetCameraName(class UObject* Object)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.SetCameraName");
 
@@ -479,7 +466,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_SetCameraName(class UObject* Object)
 	params.Object = Object;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -488,9 +474,9 @@ void Uwgt_TalkCameraPrev_C::STATIC_SetCameraName(class UObject* Object)
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.Construct
-// (Net, Event, Static, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_TalkCameraPrev_C::STATIC_Construct()
+void Uwgt_TalkCameraPrev_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.Construct");
 
@@ -505,9 +491,9 @@ void Uwgt_TalkCameraPrev_C::STATIC_Construct()
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.Destruct
-// (Event, Static, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_TalkCameraPrev_C::STATIC_Destruct()
+void Uwgt_TalkCameraPrev_C::Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.Destruct");
 
@@ -522,9 +508,9 @@ void Uwgt_TalkCameraPrev_C::STATIC_Destruct()
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__NextButton_K2Node_ComponentBoundEvent_84_OnButtonClickedEvent__DelegateSignature
-// (Event, Static, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__NextButton_K2Node_ComponentBoundEvent_84_OnButtonClickedEvent__DelegateSignature()
+void Uwgt_TalkCameraPrev_C::BndEvt__NextButton_K2Node_ComponentBoundEvent_84_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__NextButton_K2Node_ComponentBoundEvent_84_OnButtonClickedEvent__DelegateSignature");
 
@@ -539,16 +525,15 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__NextButton_K2Node_ComponentBoundEvent
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__PrevButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Native, Static, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__PrevButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature()
+void Uwgt_TalkCameraPrev_C::BndEvt__PrevButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__PrevButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature");
 
 	Uwgt_TalkCameraPrev_C_BndEvt__PrevButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -557,11 +542,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__PrevButton_K2Node_ComponentBoundEvent
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__rejectCameraByCollision_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Net, NetRequest, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__rejectCameraByCollision_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__rejectCameraByCollision_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__rejectCameraByCollision_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -569,7 +554,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__rejectCameraByCollision_K2Node_Compon
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -578,11 +562,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__rejectCameraByCollision_K2Node_Compon
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__CheckCollision_K2Node_ComponentBoundEvent_87_OnCheckBoxComponentStateChanged__DelegateSignature
-// (NetRequest, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckCollision_K2Node_ComponentBoundEvent_87_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__CheckCollision_K2Node_ComponentBoundEvent_87_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__CheckCollision_K2Node_ComponentBoundEvent_87_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -590,7 +574,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckCollision_K2Node_ComponentBoundE
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -599,7 +582,7 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckCollision_K2Node_ComponentBoundE
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.Tick
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -613,7 +596,6 @@ void Uwgt_TalkCameraPrev_C::Tick(const struct FGeometry& MyGeometry, float InDel
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -622,11 +604,11 @@ void Uwgt_TalkCameraPrev_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__CheckBox_3_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Net, NetReliable, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckBox_3_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__CheckBox_3_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__CheckBox_3_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -634,7 +616,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckBox_3_K2Node_ComponentBoundEvent
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -643,11 +624,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckBox_3_K2Node_ComponentBoundEvent
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__CheckBox_4_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Net, NetReliable, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckBox_4_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__CheckBox_4_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__CheckBox_4_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -655,7 +636,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckBox_4_K2Node_ComponentBoundEvent
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -664,11 +644,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckBox_4_K2Node_ComponentBoundEvent
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__CheckBox_5_K2Node_ComponentBoundEvent_2_OnCheckBoxComponentStateChanged__DelegateSignature
-// (NetReliable, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckBox_5_K2Node_ComponentBoundEvent_2_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__CheckBox_5_K2Node_ComponentBoundEvent_2_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__CheckBox_5_K2Node_ComponentBoundEvent_2_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -676,7 +656,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckBox_5_K2Node_ComponentBoundEvent
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -685,11 +664,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__CheckBox_5_K2Node_ComponentBoundEvent
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Single_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Net, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Single_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__Single_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Single_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -697,7 +676,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Single_K2Node_ComponentBoundEvent_3_O
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -706,11 +684,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Single_K2Node_ComponentBoundEvent_3_O
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Pair_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Pair_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__Pair_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Pair_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -718,7 +696,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Pair_K2Node_ComponentBoundEvent_4_OnC
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -727,7 +704,7 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Pair_K2Node_ComponentBoundEvent_4_OnC
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Sholder_K2Node_ComponentBoundEvent_357_OnSelectionChangedEvent__DelegateSignature
-// (Net, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FString                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -741,7 +718,6 @@ void Uwgt_TalkCameraPrev_C::BndEvt__Sholder_K2Node_ComponentBoundEvent_357_OnSel
 	params.SelectionType = SelectionType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -750,11 +726,11 @@ void Uwgt_TalkCameraPrev_C::BndEvt__Sholder_K2Node_ComponentBoundEvent_357_OnSel
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Near_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Net, NetReliable, Exec, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Near_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__Near_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Near_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -762,7 +738,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Near_K2Node_ComponentBoundEvent_0_OnC
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -771,11 +746,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Near_K2Node_ComponentBoundEvent_0_OnC
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__NotNear_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature
-// (NetReliable, Exec, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__NotNear_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__NotNear_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__NotNear_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -783,7 +758,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__NotNear_K2Node_ComponentBoundEvent_1_
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -792,11 +766,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__NotNear_K2Node_ComponentBoundEvent_1_
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Far_K2Node_ComponentBoundEvent_2_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Net, Exec, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Far_K2Node_ComponentBoundEvent_2_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__Far_K2Node_ComponentBoundEvent_2_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Far_K2Node_ComponentBoundEvent_2_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -804,7 +778,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Far_K2Node_ComponentBoundEvent_2_OnCh
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -813,11 +786,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Far_K2Node_ComponentBoundEvent_2_OnCh
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__TooFar_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Net, Exec, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__TooFar_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__TooFar_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__TooFar_K2Node_ComponentBoundEvent_3_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -825,7 +798,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__TooFar_K2Node_ComponentBoundEvent_3_O
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -834,11 +806,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__TooFar_K2Node_ComponentBoundEvent_3_O
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Bust_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Exec, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Bust_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__Bust_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Bust_K2Node_ComponentBoundEvent_4_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -846,7 +818,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Bust_K2Node_ComponentBoundEvent_4_OnC
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -855,11 +826,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Bust_K2Node_ComponentBoundEvent_4_OnC
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Wast_K2Node_ComponentBoundEvent_5_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Wast_K2Node_ComponentBoundEvent_5_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__Wast_K2Node_ComponentBoundEvent_5_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Wast_K2Node_ComponentBoundEvent_5_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -867,7 +838,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Wast_K2Node_ComponentBoundEvent_5_OnC
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -876,11 +846,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Wast_K2Node_ComponentBoundEvent_5_OnC
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Full_K2Node_ComponentBoundEvent_6_OnCheckBoxComponentStateChanged__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Full_K2Node_ComponentBoundEvent_6_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__Full_K2Node_ComponentBoundEvent_6_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Full_K2Node_ComponentBoundEvent_6_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -888,7 +858,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Full_K2Node_ComponentBoundEvent_6_OnC
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -897,11 +866,11 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Full_K2Node_ComponentBoundEvent_6_OnC
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Closeup_K2Node_ComponentBoundEvent_7_OnCheckBoxComponentStateChanged__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Closeup_K2Node_ComponentBoundEvent_7_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+void Uwgt_TalkCameraPrev_C::BndEvt__Closeup_K2Node_ComponentBoundEvent_7_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__Closeup_K2Node_ComponentBoundEvent_7_OnCheckBoxComponentStateChanged__DelegateSignature");
 
@@ -909,7 +878,6 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Closeup_K2Node_ComponentBoundEvent_7_
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -918,9 +886,9 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__Closeup_K2Node_ComponentBoundEvent_7_
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__SizeToggleButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (NetReliable, Event, Static, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__SizeToggleButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void Uwgt_TalkCameraPrev_C::BndEvt__SizeToggleButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__SizeToggleButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
@@ -935,7 +903,7 @@ void Uwgt_TalkCameraPrev_C::STATIC_BndEvt__SizeToggleButton_K2Node_ComponentBoun
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.BndEvt__CameraKind_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FString                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -949,7 +917,6 @@ void Uwgt_TalkCameraPrev_C::BndEvt__CameraKind_K2Node_ComponentBoundEvent_0_OnSe
 	params.SelectionType = SelectionType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -958,7 +925,7 @@ void Uwgt_TalkCameraPrev_C::BndEvt__CameraKind_K2Node_ComponentBoundEvent_0_OnSe
 
 
 // Function wgt_TalkCameraPrev.wgt_TalkCameraPrev_C.ExecuteUbergraph_wgt_TalkCameraPrev
-// (NetReliable, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.IsOpen
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Open                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_dialog_window_yescancel_C::STATIC_IsOpen(bool* Open)
+void Uwgt_dialog_window_yescancel_C::IsOpen(bool* Open)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.IsOpen");
 
 	Uwgt_dialog_window_yescancel_C_IsOpen_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,16 +36,15 @@ void Uwgt_dialog_window_yescancel_C::STATIC_IsOpen(bool* Open)
 
 
 // Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.Reset
-// (NetReliable, NetRequest, Native, Event, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_dialog_window_yescancel_C::STATIC_Reset()
+void Uwgt_dialog_window_yescancel_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.Reset");
 
 	Uwgt_dialog_window_yescancel_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,9 +53,9 @@ void Uwgt_dialog_window_yescancel_C::STATIC_Reset()
 
 
 // Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.PushRight
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_dialog_window_yescancel_C::STATIC_PushRight()
+void Uwgt_dialog_window_yescancel_C::PushRight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.PushRight");
 
@@ -72,16 +70,15 @@ void Uwgt_dialog_window_yescancel_C::STATIC_PushRight()
 
 
 // Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.PushLeft
-// (Net, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_dialog_window_yescancel_C::STATIC_PushLeft()
+void Uwgt_dialog_window_yescancel_C::PushLeft()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.PushLeft");
 
 	Uwgt_dialog_window_yescancel_C_PushLeft_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,9 +87,9 @@ void Uwgt_dialog_window_yescancel_C::STATIC_PushLeft()
 
 
 // Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.Close
-// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_dialog_window_yescancel_C::STATIC_Close()
+void Uwgt_dialog_window_yescancel_C::Close()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.Close");
 
@@ -107,7 +104,7 @@ void Uwgt_dialog_window_yescancel_C::STATIC_Close()
 
 
 // Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.Open
-// (Net, NetReliable, Native, Public, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_dialog_window_yescancel_C::Open()
 {
@@ -116,7 +113,6 @@ void Uwgt_dialog_window_yescancel_C::Open()
 	Uwgt_dialog_window_yescancel_C_Open_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,16 +121,15 @@ void Uwgt_dialog_window_yescancel_C::Open()
 
 
 // Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.Construct
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_dialog_window_yescancel_C::STATIC_Construct()
+void Uwgt_dialog_window_yescancel_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.Construct");
 
 	Uwgt_dialog_window_yescancel_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,16 +138,15 @@ void Uwgt_dialog_window_yescancel_C::STATIC_Construct()
 
 
 // Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.Destruct
-// (Net, Exec, Native, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_dialog_window_yescancel_C::STATIC_Destruct()
+void Uwgt_dialog_window_yescancel_C::Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.Destruct");
 
 	Uwgt_dialog_window_yescancel_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,11 +155,11 @@ void Uwgt_dialog_window_yescancel_C::STATIC_Destruct()
 
 
 // Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.ExecuteUbergraph_wgt_dialog_window_yescancel
-// (NetRequest, Exec, Static, MulticastDelegate, Public, NetServer)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_dialog_window_yescancel_C::STATIC_ExecuteUbergraph_wgt_dialog_window_yescancel(int EntryPoint)
+void Uwgt_dialog_window_yescancel_C::ExecuteUbergraph_wgt_dialog_window_yescancel(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_dialog_window_yescancel.wgt_dialog_window_yescancel_C.ExecuteUbergraph_wgt_dialog_window_yescancel");
 

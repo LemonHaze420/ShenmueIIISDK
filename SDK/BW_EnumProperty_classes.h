@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,16 +39,16 @@ public:
 	}
 
 
-	void STATIC_SetPropertyValue(unsigned char Byte, bool CallDispatcher);
+	void SetPropertyValue(unsigned char Byte, bool CallDispatcher);
 	void GetPropertyValue(unsigned char* Byte);
 	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	struct FText STATIC_GetParameterName();
+	struct FText GetParameterName();
 	void Construct();
-	void STATIC_BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_294_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_294_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void SetStartingValue();
 	void PropertyChanged();
-	void STATIC_ExecuteUbergraph_BW_EnumProperty(int EntryPoint);
-	void STATIC_EnumPropertyChanged__DelegateSignature();
+	void ExecuteUbergraph_BW_EnumProperty(int EntryPoint);
+	void EnumPropertyChanged__DelegateSignature();
 };
 
 

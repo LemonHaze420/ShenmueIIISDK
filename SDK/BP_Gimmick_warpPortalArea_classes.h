@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,11 +30,11 @@ public:
 	}
 
 
-	void STATIC_GetPortalComponent(class UBP_Gimmick_warpPortalComp_C** PortalComponent);
+	void GetPortalComponent(class UBP_Gimmick_warpPortalComp_C** PortalComponent);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_onTeleport(class AActor* OtherActor);
-	void STATIC_ExecuteUbergraph_BP_Gimmick_warpPortalArea(int EntryPoint);
+	void ReceiveBeginPlay();
+	void onTeleport(class AActor* OtherActor);
+	void ExecuteUbergraph_BP_Gimmick_warpPortalArea(int EntryPoint);
 	void teleport__DelegateSignature(class AActor* OtherActor);
 };
 

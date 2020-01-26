@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ public:
 
 
 	void ScrollSetting(int Index);
-	void STATIC_SetButtonFocusAndSelect(int Index, bool IsFocus, bool IsSelect);
+	void SetButtonFocusAndSelect(int Index, bool IsFocus, bool IsSelect);
 	void InitButton(class UTexture2D* Texture);
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,6 +29,13 @@ enum class EHDRCaptureGamut : uint8_t
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct MovieSceneCapture.CompositionGraphCapturePasses
+// 0x0010
+struct FCompositionGraphCapturePasses
+{
+	TArray<struct FString>                             Value;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
 
 // ScriptStruct MovieSceneCapture.CaptureProtocolID
 // 0x0008
@@ -68,13 +75,6 @@ struct FMovieSceneCaptureSettings
 	bool                                               bShowPlayer;                                              // 0x0049(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bShowHUD;                                                 // 0x004A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x5];                                       // 0x004B(0x0005) MISSED OFFSET
-};
-
-// ScriptStruct MovieSceneCapture.CompositionGraphCapturePasses
-// 0x0010
-struct FCompositionGraphCapturePasses
-{
-	TArray<struct FString>                             Value;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

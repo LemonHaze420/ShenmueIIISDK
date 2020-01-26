@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class Slate.ButtonWidgetStyle
+// 0x0278 (0x02A8 - 0x0030)
+class UButtonWidgetStyle : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FButtonStyle                                ButtonStyle;                                              // 0x0030(0x0278) (Edit, BlueprintVisible)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Slate.ButtonWidgetStyle");
+		return ptr;
+	}
+
+};
+
 
 // Class Slate.CheckBoxWidgetStyle
 // 0x0580 (0x05B0 - 0x0030)
@@ -60,16 +76,32 @@ public:
 };
 
 
-// Class Slate.ButtonWidgetStyle
-// 0x0278 (0x02A8 - 0x0030)
-class UButtonWidgetStyle : public USlateWidgetStyleContainerBase
+// Class Slate.EditableTextBoxWidgetStyle
+// 0x07F0 (0x0820 - 0x0030)
+class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FButtonStyle                                ButtonStyle;                                              // 0x0030(0x0278) (Edit, BlueprintVisible)
+	struct FEditableTextBoxStyle                       EditableTextBoxStyle;                                     // 0x0030(0x07F0) (Edit)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Slate.ButtonWidgetStyle");
+		static auto ptr = UObject::FindClass("Class Slate.EditableTextBoxWidgetStyle");
+		return ptr;
+	}
+
+};
+
+
+// Class Slate.EditableTextWidgetStyle
+// 0x0218 (0x0248 - 0x0030)
+class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FEditableTextStyle                          EditableTextStyle;                                        // 0x0030(0x0218) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Slate.EditableTextWidgetStyle");
 		return ptr;
 	}
 
@@ -108,6 +140,22 @@ public:
 };
 
 
+// Class Slate.ScrollBoxWidgetStyle
+// 0x0228 (0x0258 - 0x0030)
+class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
+{
+public:
+	struct FScrollBoxStyle                             ScrollBoxStyle;                                           // 0x0030(0x0228) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
+		return ptr;
+	}
+
+};
+
+
 // Class Slate.SlateSettings
 // 0x0008 (0x0030 - 0x0028)
 class USlateSettings : public UObject
@@ -119,38 +167,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Slate.SlateSettings");
-		return ptr;
-	}
-
-};
-
-
-// Class Slate.EditableTextBoxWidgetStyle
-// 0x07F0 (0x0820 - 0x0030)
-class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FEditableTextBoxStyle                       EditableTextBoxStyle;                                     // 0x0030(0x07F0) (Edit)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Slate.EditableTextBoxWidgetStyle");
-		return ptr;
-	}
-
-};
-
-
-// Class Slate.ScrollBoxWidgetStyle
-// 0x0228 (0x0258 - 0x0030)
-class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FScrollBoxStyle                             ScrollBoxStyle;                                           // 0x0030(0x0228) (Edit)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
 		return ptr;
 	}
 
@@ -183,22 +199,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Slate.TextBlockWidgetStyle");
-		return ptr;
-	}
-
-};
-
-
-// Class Slate.EditableTextWidgetStyle
-// 0x0218 (0x0248 - 0x0030)
-class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
-{
-public:
-	struct FEditableTextStyle                          EditableTextStyle;                                        // 0x0030(0x0218) (Edit)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Slate.EditableTextWidgetStyle");
 		return ptr;
 	}
 

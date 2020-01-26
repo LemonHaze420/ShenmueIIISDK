@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,54 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.TryChangePage
+struct ABP_UI_ShopBaseManager_C_TryChangePage_Params
+{
+	int                                                Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.HasValidVisibleItemId
+struct ABP_UI_ShopBaseManager_C_HasValidVisibleItemId_Params
+{
+	int                                                FocusItemIdx;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsSetCompletionItem
+struct ABP_UI_ShopBaseManager_C_IsSetCompletionItem_Params
+{
+	int                                                FocusItemNum;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.UpdateDescription
+struct ABP_UI_ShopBaseManager_C_UpdateDescription_Params
+{
+	class UBPW_UI_BaseWindow_C*                        ShopWindow;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CalcSetItemIconRange
+struct ABP_UI_ShopBaseManager_C_CalcSetItemIconRange_Params
+{
+	int                                                FocusItemNo;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                FirstItem;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                LastItem;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsSetExchangeShop
+struct ABP_UI_ShopBaseManager_C_IsSetExchangeShop_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ApplyCheatPrice
+struct ABP_UI_ShopBaseManager_C_ApplyCheatPrice_Params
+{
+	int                                                ItemId;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                BaseValue;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetRotateIconVisiblity
 struct ABP_UI_ShopBaseManager_C_SetRotateIconVisiblity_Params
@@ -44,20 +92,20 @@ struct ABP_UI_ShopBaseManager_C_SetViewModeSkip_Params
 	bool                                               SkipFlag;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.Get NowCategory
-struct ABP_UI_ShopBaseManager_C_Get_NowCategory_Params
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.GetNowCategory
+struct ABP_UI_ShopBaseManager_C_GetNowCategory_Params
 {
 	ES3ItemDataGroup                                   Category;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsPawnShopMagicNumber
-struct ABP_UI_ShopBaseManager_C_IsPawnShopMagicNumber_Params
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsPawnShopSetExchangeCategory
+struct ABP_UI_ShopBaseManager_C_IsPawnShopSetExchangeCategory_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SelectItemCount
-struct ABP_UI_ShopBaseManager_C_SelectItemCount_Params
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.GetItemIncrementNum
+struct ABP_UI_ShopBaseManager_C_GetItemIncrementNum_Params
 {
 	int                                                Count;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -82,8 +130,8 @@ struct ABP_UI_ShopBaseManager_C_Calc_BuyPrice_Params
 	float                                              Margin;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.Check_ItemDescription_Ruby
-struct ABP_UI_ShopBaseManager_C_Check_ItemDescription_Ruby_Params
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.UpdateDescription_Ruby
+struct ABP_UI_ShopBaseManager_C_UpdateDescription_Ruby_Params
 {
 	int                                                ItemId;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Ruby;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -96,14 +144,14 @@ struct ABP_UI_ShopBaseManager_C_GetUITextData_Params
 	struct FString                                     OutString;                                                // (Parm, OutParm, ZeroConstructor)
 };
 
-// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.Check_CrueDragOnly
-struct ABP_UI_ShopBaseManager_C_Check_CrueDragOnly_Params
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsCrudeDrugOnly
+struct ABP_UI_ShopBaseManager_C_IsCrudeDrugOnly_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CheckComplete
-struct ABP_UI_ShopBaseManager_C_CheckComplete_Params
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsFocusedSetComplete
+struct ABP_UI_ShopBaseManager_C_IsFocusedSetComplete_Params
 {
 	int                                                FocusItemNo;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsComplete;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -206,8 +254,8 @@ struct ABP_UI_ShopBaseManager_C_CheckVisibleSubButton_Params
 {
 };
 
-// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.GetDescription
-struct ABP_UI_ShopBaseManager_C_GetDescription_Params
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.UpdateDescriptionSub
+struct ABP_UI_ShopBaseManager_C_UpdateDescriptionSub_Params
 {
 	struct FText                                       Description;                                              // (Parm, OutParm)
 };
@@ -292,12 +340,6 @@ struct ABP_UI_ShopBaseManager_C_ReceiveBeginPlay_Params
 {
 };
 
-// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.PushButton
-struct ABP_UI_ShopBaseManager_C_PushButton_Params
-{
-	TEnumAsByte<EN_UI_Button>                          newParam;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.DecideDetectAction
 struct ABP_UI_ShopBaseManager_C_DecideDetectAction_Params
 {
@@ -354,6 +396,12 @@ struct ABP_UI_ShopBaseManager_C_UpDownReset_Params
 struct ABP_UI_ShopBaseManager_C_ReceiveEndPlay_Params
 {
 	TEnumAsByte<EEndPlayReason>                        EndPlayReason;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.PushButton
+struct ABP_UI_ShopBaseManager_C_PushButton_Params
+{
+	TEnumAsByte<EN_UI_Button>                          newParam;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ExecuteUbergraph_BP_UI_ShopBaseManager

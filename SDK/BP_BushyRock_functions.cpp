@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BushyRock.BP_BushyRock_C.MakeBushScale
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FRandomStream           Stream                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class USceneComponent*         self2                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -41,19 +41,18 @@ struct FVector ABP_BushyRock_C::MakeBushScale(class USceneComponent* self2, stru
 
 
 // Function BP_BushyRock.BP_BushyRock_C.MakeBushRotation
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FRandomStream           Stream                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FRotator ABP_BushyRock_C::STATIC_MakeBushRotation(struct FRandomStream* Stream)
+struct FRotator ABP_BushyRock_C::MakeBushRotation(struct FRandomStream* Stream)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BushyRock.BP_BushyRock_C.MakeBushRotation");
 
 	ABP_BushyRock_C_MakeBushRotation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -67,16 +66,15 @@ struct FRotator ABP_BushyRock_C::STATIC_MakeBushRotation(struct FRandomStream* S
 
 
 // Function BP_BushyRock.BP_BushyRock_C.SetTextComponentValue
-// (NetRequest, Exec, Native, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_BushyRock_C::STATIC_SetTextComponentValue()
+void ABP_BushyRock_C::SetTextComponentValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BushyRock.BP_BushyRock_C.SetTextComponentValue");
 
 	ABP_BushyRock_C_SetTextComponentValue_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -85,7 +83,7 @@ void ABP_BushyRock_C::STATIC_SetTextComponentValue()
 
 
 // Function BP_BushyRock.BP_BushyRock_C.CalculateTraceStartAndEnd
-// (NetRequest, Exec, NetResponse, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Start                          (Parm, OutParm, IsPlainOldData)
 // struct FVector                 End                            (Parm, OutParm, IsPlainOldData)
@@ -113,7 +111,7 @@ void ABP_BushyRock_C::CalculateTraceStartAndEnd(struct FVector* Start, struct FV
 
 
 // Function BP_BushyRock.BP_BushyRock_C.SetBushlineStartTransform
-// (NetReliable, NetRequest, Native, NetResponse, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_BushyRock_C::SetBushlineStartTransform()
 {
@@ -122,7 +120,6 @@ void ABP_BushyRock_C::SetBushlineStartTransform()
 	ABP_BushyRock_C_SetBushlineStartTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,7 +128,7 @@ void ABP_BushyRock_C::SetBushlineStartTransform()
 
 
 // Function BP_BushyRock.BP_BushyRock_C.SetArrowComponentTransform
-// (Net, NetRequest, Event, NetResponse, NetMulticast, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_BushyRock_C::SetArrowComponentTransform()
 {
@@ -148,7 +145,7 @@ void ABP_BushyRock_C::SetArrowComponentTransform()
 
 
 // Function BP_BushyRock.BP_BushyRock_C.SetTextComponentTransform
-// (NetReliable, Exec, NetResponse, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_BushyRock_C::SetTextComponentTransform()
 {
@@ -165,7 +162,7 @@ void ABP_BushyRock_C::SetTextComponentTransform()
 
 
 // Function BP_BushyRock.BP_BushyRock_C.UserConstructionScript
-// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintPure, NetValidate)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_BushyRock_C::UserConstructionScript()
 {
@@ -174,7 +171,6 @@ void ABP_BushyRock_C::UserConstructionScript()
 	ABP_BushyRock_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

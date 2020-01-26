@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,7 +26,7 @@ public:
 
 
 	void STATIC_BPF_GetDojoRankIndex(TEnumAsByte<EDojoPlace> Dojo, class UObject* __WorldContext, int* Index);
-	void BPF_GetPlayerDojoRank(TEnumAsByte<EDojoPlace> Dojo, class UObject* __WorldContext, ES3DojoRank* Rank);
+	void STATIC_BPF_GetPlayerDojoRank(TEnumAsByte<EDojoPlace> Dojo, class UObject* __WorldContext, ES3DojoRank* Rank);
 	bool STATIC_BPF_PlayerDojoRankGreaterOrEqual(const struct FST_DojoRankRequirement& Requirement, class UObject* __WorldContext);
 	void STATIC_BPF_SetPlayerDojoRank(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank Rank, class UObject* __WorldContext);
 	bool STATIC_BPF_RankGreaterOrEqual(const struct FST_DojoRankRequirement& Requirement, class UObject* __WorldContext, TMap<TEnumAsByte<EDojoPlace>, ES3DojoRank>* RanksEarned);

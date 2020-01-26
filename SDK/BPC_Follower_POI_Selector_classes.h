@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,10 +36,10 @@ public:
 
 
 	void InRange(class ABP_Follower_POI_C* POI, bool* bInRange);
-	void STATIC_ScorePOI(class ABP_Follower_POI_C* POI, bool TestLeaderLoS, float* Score);
-	void STATIC_IsNavStraightLine(class AS3Character* Character, class ABP_Follower_POI_C* POI, bool* bIsStraight);
+	void ScorePOI(class ABP_Follower_POI_C* POI, bool TestLeaderLoS, float* Score);
+	void IsNavStraightLine(class AS3Character* Character, class ABP_Follower_POI_C* POI, bool* bIsStraight);
 	void UpdateHistory(class ABP_Follower_POI_C* Selected);
-	void STATIC_SearchForPOI(bool bIgnoreTimer, bool bTestLeaderLOS, class ABP_Follower_POI_C** POI, bool* bRanQuery);
+	void SearchForPOI(bool bIgnoreTimer, bool bTestLeaderLOS, class ABP_Follower_POI_C** POI, bool* bRanQuery);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_Follower_POI_Selector(int EntryPoint);
 };

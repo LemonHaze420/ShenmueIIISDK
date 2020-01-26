@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.SetValidMinimap
-// (NetRequest, Native, Event, NetResponse, Static, HasOutParms, HasDefaults, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnable                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniMap2DManager_C::STATIC_SetValidMinimap(bool bEnable)
+void ABP_MiniMap2DManager_C::SetValidMinimap(bool bEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.SetValidMinimap");
 
@@ -26,7 +26,6 @@ void ABP_MiniMap2DManager_C::STATIC_SetValidMinimap(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void ABP_MiniMap2DManager_C::STATIC_SetValidMinimap(bool bEnable)
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.Update
-// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bForce                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniMap2DManager_C::STATIC_Update(bool bForce)
+void ABP_MiniMap2DManager_C::Update(bool bForce)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.Update");
 
@@ -47,7 +46,6 @@ void ABP_MiniMap2DManager_C::STATIC_Update(bool bForce)
 	params.bForce = bForce;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +54,7 @@ void ABP_MiniMap2DManager_C::STATIC_Update(bool bForce)
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.SetBackAlpha
-// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -76,7 +74,7 @@ void ABP_MiniMap2DManager_C::SetBackAlpha(float Value)
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.SetBrushAlpha
-// (NetReliable, Native, Event, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Alpha                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -88,7 +86,6 @@ void ABP_MiniMap2DManager_C::SetBrushAlpha(float Alpha)
 	params.Alpha = Alpha;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,7 +94,7 @@ void ABP_MiniMap2DManager_C::SetBrushAlpha(float Alpha)
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.IsInValidMapRegion
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -118,7 +115,7 @@ bool ABP_MiniMap2DManager_C::IsInValidMapRegion()
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.UserConstructionScript
-// (Net, NetReliable, Native, Event, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniMap2DManager_C::UserConstructionScript()
 {
@@ -127,7 +124,6 @@ void ABP_MiniMap2DManager_C::UserConstructionScript()
 	ABP_MiniMap2DManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,7 +132,7 @@ void ABP_MiniMap2DManager_C::UserConstructionScript()
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.OnLoaded_596D289D4B92DE0545173793E979D552
-// (Net, Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -156,7 +152,7 @@ void ABP_MiniMap2DManager_C::OnLoaded_596D289D4B92DE0545173793E979D552(class UOb
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.OnLoaded_596D289D4B92DE0545173793A0671C6E
-// (Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -176,9 +172,9 @@ void ABP_MiniMap2DManager_C::OnLoaded_596D289D4B92DE0545173793A0671C6E(class UOb
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_MiniMap2DManager_C::STATIC_ReceiveBeginPlay()
+void ABP_MiniMap2DManager_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.ReceiveBeginPlay");
 
@@ -193,7 +189,7 @@ void ABP_MiniMap2DManager_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -213,9 +209,9 @@ void ABP_MiniMap2DManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.MessageInvalidMap
-// (NetReliable, NetRequest, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniMap2DManager_C::STATIC_MessageInvalidMap()
+void ABP_MiniMap2DManager_C::MessageInvalidMap()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.MessageInvalidMap");
 
@@ -230,11 +226,11 @@ void ABP_MiniMap2DManager_C::STATIC_MessageInvalidMap()
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.ExecuteUbergraph_BP_MiniMap2DManager
-// (Net, NetReliable, NetResponse, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniMap2DManager_C::STATIC_ExecuteUbergraph_BP_MiniMap2DManager(int EntryPoint)
+void ABP_MiniMap2DManager_C::ExecuteUbergraph_BP_MiniMap2DManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.ExecuteUbergraph_BP_MiniMap2DManager");
 
@@ -250,7 +246,7 @@ void ABP_MiniMap2DManager_C::STATIC_ExecuteUbergraph_BP_MiniMap2DManager(int Ent
 
 
 // Function BP_MiniMap2DManager.BP_MiniMap2DManager_C.OnDetermineValid__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bIsValid                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -262,7 +258,6 @@ void ABP_MiniMap2DManager_C::OnDetermineValid__DelegateSignature(bool bIsValid)
 	params.bIsValid = bIsValid;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

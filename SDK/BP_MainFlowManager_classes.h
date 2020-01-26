@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -80,8 +80,8 @@ public:
 	}
 
 
-	void STATIC_CheckInitTag(bool* Initialized);
-	void STATIC_SetInitTag();
+	void CheckInitTag(bool* Initialized);
+	void SetInitTag();
 	void CheckAutoSave(int CurFlag);
 	void MFsub_RedLineMemoFlag_Cb();
 	void MFsub_RedLineMemoFlag_Hk();
@@ -89,22 +89,22 @@ public:
 	void CheckDelegateSafe(int Exec_Step, bool* FindResult);
 	void MakeActorControl_AfterAdd(TEnumAsByte<EN_MainFlowActorID> Actor_ID, class UClass* Actor_Class, bool* MakeResult, class AActor** Actor);
 	void OneClearMessageControl(TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID);
-	void STATIC_OneClearActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID);
-	void STATIC_GameTimerControl(bool Run_GameTime);
-	void STATIC_FindEventMan(const struct FName& EventName, bool* Result);
-	void STATIC_CheckIntervalMessage(float DeltaSecond);
-	void ReservationInquiryMessage(float IntervalTIme);
+	void OneClearActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID);
+	void GameTimerControl(bool Run_GameTime);
+	void FindEventMan(const struct FName& EventName, bool* Result);
+	void CheckIntervalMessage(float DeltaSEcond);
+	void ReservationInquiryMessage(float IntervalTime);
 	void MessageControlWorkSub(int Destination_ID, bool CountUp, bool* FindResult, int* Count);
-	void STATIC_ReceiveMessageControl(TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID, bool* On_Massage, struct FString* Message, class AActor** Sender);
+	void ReceiveMessageControl(TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID, bool* On_Massage, struct FString* Message, class AActor** Sender);
 	void InquiryMessageControl(TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID, bool ExecDispatcher, bool* On_Message);
 	void SendMessageControl(TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID, const struct FString& Message, class AActor* Sender);
-	void STATIC_ResetMessageControl();
+	void ResetMessageControl();
 	void CheckCounterActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID, unsigned char Save_Counter, bool* Kill);
 	void CallRemote(const struct FName& EventName);
-	void STATIC_GetCounterActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID, unsigned char* renewal_counter, class AActor** entry_actor);
-	void STATIC_RenewalActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID);
+	void GetCounterActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID, unsigned char* renewal_counter, class AActor** entry_actor);
+	void RenewalActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID);
 	void MakeActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID, class UClass* Actor_Class, bool* MakeResult, class AActor** Actor);
-	void STATIC_ResetActorControl();
+	void ResetActorControl();
 	void PushIndependenceDestructor(int MapType, int Independence_Step, bool* Add_Stock);
 	void PushDestructor_Sub(int MapType, int Step_Value, bool* Add_Stock);
 	void SetStepControl_CurrentStep(int SetStep, bool* Change_Current);
@@ -112,39 +112,39 @@ public:
 	void CulcStepControl_PlayerableSP(int Step, unsigned char SP, bool* Result);
 	void GetDelegateSafe(int Exec_Step, bool* FindResult, struct FName* EventNameRC, int* GetKey);
 	void CheckLoadEnd(bool* LoadEnd);
-	void STATIC_ResetNewStepControl();
+	void ResetNewStepControl();
 	void SelectStepID(int Step, int MapType, unsigned char* StepID, bool* FindResult);
 	void CheckPlayableSP(int Exec_Step, unsigned char* SP);
-	void STATIC_ChangeStepControl_PlayerableSP(int CheckStep, int SP, bool* Result);
+	void ChangeStepControl_PlayerableSP(int CheckStep, int SP, bool* Result);
 	void GetStepControl_ExecStep(int* Now_Exec);
-	void STATIC_SetStepControl_ExecStep(int Exec_Step, int* Now_Exec);
-	void STATIC_PopDestructor(int Exec_Step, bool* Remove_);
-	void STATIC_GetCutScenStockTimes(int* StockTimes);
-	void STATIC_KillCutSceneEvent(const struct FName& CutsceneName, bool* KillResult);
-	void STATIC_GetCutSceneEvent(const struct FName& CutsceneName, bool Get_EndEvent, bool* FindResult, struct FName* EventName);
-	void STATIC_CreateCutSceneControl(const struct FName& CutsceneName, bool UseFade, const struct FName& StartEventName, const struct FName& EndEventName, bool* Entry_Result);
-	void STATIC_ResetCScontrol();
+	void SetStepControl_ExecStep(int Exec_Step, int* Now_Exec);
+	void PopDestructor(int Exec_Step, bool* Remove_);
+	void GetCutScenStockTimes(int* StockTimes);
+	void KillCutSceneEvent(const struct FName& CutsceneName, bool* KillResult);
+	void GetCutSceneEvent(const struct FName& CutsceneName, bool Get_EndEvent, bool* FindResult, struct FName* EventName);
+	void CreateCutSceneControl(const struct FName& CutsceneName, bool UseFade, const struct FName& StartEventName, const struct FName& EndEventName, bool* Entry_Result);
+	void ResetCScontrol();
 	void GetDestructor_List(TArray<struct FST_MainFlowStockDestructor>* DestructorList);
 	void ChangeStepControl_SubStep(int CheckStep, int New_SubStep, bool* Result);
 	void GetStepControl_CurrentStep(int* Current);
-	void STATIC_ChangeStepControl_Flag(int CheckStep, int New_Flag, int mask, bool* Result, int* FlagValue);
+	void ChangeStepControl_Flag(int CheckStep, int New_Flag, int mask, bool* Result, int* FlagValue);
 	void GetStepControl_Info(int CheckStep, bool* Result, int* control_flag, int* sub_step, unsigned char* step_id, unsigned char* Playable_SP);
-	void STATIC_PushDestructor(int MapType, bool* Add_Stock);
-	void STATIC_ChangeStepControl(int new_stepid, int map_type, bool* New_Step_Control);
-	void STATIC_StepControlBitToBranchID(int CurFlag, TEnumAsByte<EN_MainFlowStepBranchID>* BranchID, int* ChangeFlag, bool* Change);
+	void PushDestructor(int MapType, bool* Add_Stock);
+	void ChangeStepControl(int new_stepid, int map_type, bool* New_Step_Control);
+	void StepControlBitToBranchID(int CurFlag, TEnumAsByte<EN_MainFlowStepBranchID>* BranchID, int* ChangeFlag, bool* Change);
 	void AllCollisionChange(bool On, bool* newParam);
-	void STATIC_CheckEventOccurs(const struct FName& EventName, bool* Result);
+	void CheckEventOccurs(const struct FName& EventName, bool* Result);
 	void CheckFollowSHEStep(bool* Need_Follow_SHE);
-	void STATIC_CheckLevelSchedule(int Step);
+	void CheckLevelSchedule(int Step);
 	void LoadedStartLevel_Impl();
-	void STATIC_MakeAppointControl(const struct FVector& JumpPoint, const struct FRotator& Rotation, const struct FName& EyeCatchID, int Add_Day, int Hour, int Minute, int Enable_Time_Min, int Enable_Time_Max, int Change_Step, const struct FName& LAbelLeft, const struct FName& StartRemotoEvent, const struct FName& StartEndEvent, bool Can_not_kill, bool SkipEndFade);
-	void STATIC_KillAppointControl(bool forced_Kill, bool* kill_exec);
+	void MakeAppointControl(const struct FVector& JumpPoint, const struct FRotator& Rotation, const struct FName& EyeCatchID, int Add_Day, int Hour, int Minute, int Enable_Time_Min, int Enable_Time_Max, int Change_Step, const struct FName& LAbelLeft, const struct FName& StartRemotoEvent, const struct FName& StartEndEvent, bool Can_not_kill, bool SkipEndFade);
+	void KillAppointControl(bool forced_Kill, bool* kill_exec);
 	void ExecTickDelegate(bool* enable_exec, struct FName* Event_Name);
-	void STATIC_SetTickDelegate(int set_step, const struct FName& EventName, bool* Add_result);
-	void STATIC_ResetDelegate();
+	void SetTickDelegate(int set_step, const struct FName& EventName, bool* Add_result);
+	void ResetDelegate();
 	void GetDelegate(const struct FName& EventName, bool* FindResult, struct FName* EventNameRC, int* GetKey);
-	void STATIC_SetDelegate(const struct FName& EventName, int ControlBit, int ExecStep, bool* Add_result);
-	void STATIC_MFsub_SetGlobalFlag(const struct FName& FlagID, int SetValue, bool* SetResult);
+	void SetDelegate(const struct FName& EventName, int ControlBit, int ExecStep, bool* Add_result);
+	void MFsub_SetGlobalFlag(const struct FName& FlagID, int SetValue, bool* SetResult);
 	void MFsub_GetGlobalFlag(const struct FName& FlagID, int* FlagValue);
 	void StartChildFlow(const struct FName& ChildFlowName, bool* StartResult);
 	void GetCurrentChildFlow(struct FName* CurrentFlowName);
@@ -153,18 +153,18 @@ public:
 	void CheckChildFlowCurrentID(int CheckId, bool* Alive_to_survive);
 	void LiveCheckChildFlow(const struct FName& FlowName, bool* LiveResult);
 	void ResetChildFlow();
-	void STATIC_ResetEventMan();
+	void ResetEventMan();
 	void RemoveEventMan(const struct FName& EventName, bool* rc);
 	void UnBindEventMan(const struct FName& EventName, bool CarrigeUnbind, bool* Result);
-	void STATIC_ExecEventMan();
-	void STATIC_CreateEventMan(class UPrimitiveComponent* Trg_Compo_Name, const struct FName& EventName, int ControlStatus, TEnumAsByte<EN_MainFlowEventType> EventType, const struct FString& TypeUniqueParameta, bool Save, bool* createresult);
-	void STATIC_AddTag(const struct FString& TagName);
+	void ExecEventMan();
+	void CreateEventMan(class UPrimitiveComponent* Trg_Compo_Name, const struct FName& EventName, int ControlStatus, TEnumAsByte<EN_MainFlowEventType> EventType, const struct FString& TypeUniqueParameta, bool Save, bool* createresult);
+	void AddTag(const struct FString& TagName);
 	void UserConstructionScript();
 	void MfEvt_EndAppoint();
 	void LoadedStartLevel();
 	void MfEvt_StartAppoint();
-	void STATIC_ChangedStep(int SetSteps);
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ChangedStep(int SetSteps);
+	void ReceiveTick(float DeltaSeconds);
 	void Reset();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_MainFlowManager(int EntryPoint);

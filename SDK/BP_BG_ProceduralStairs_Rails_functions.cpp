@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BG_ProceduralStairs_Rails.BP_BG_ProceduralStairs_Rails_C.SpawnRailsAndPoles
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           SpawnRight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SpawnLeft                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -42,13 +42,13 @@ void ABP_BG_ProceduralStairs_Rails_C::SpawnRailsAndPoles(bool SpawnRight, bool S
 
 
 // Function BP_BG_ProceduralStairs_Rails.BP_BG_ProceduralStairs_Rails_C.SpawnRailAndPole
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           RightSide                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           PoleOnly                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FBox                    StepBounds                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_BG_ProceduralStairs_Rails_C::STATIC_SpawnRailAndPole(bool RightSide, bool PoleOnly, struct FBox* StepBounds)
+void ABP_BG_ProceduralStairs_Rails_C::SpawnRailAndPole(bool RightSide, bool PoleOnly, struct FBox* StepBounds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Rails.BP_BG_ProceduralStairs_Rails_C.SpawnRailAndPole");
 
@@ -68,7 +68,7 @@ void ABP_BG_ProceduralStairs_Rails_C::STATIC_SpawnRailAndPole(bool RightSide, bo
 
 
 // Function BP_BG_ProceduralStairs_Rails.BP_BG_ProceduralStairs_Rails_C.GetScaledMeshBoundingBox
-// (Native, Event, NetMulticast, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMesh*             Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FBox                    OutBounds                      (Parm, OutParm, IsPlainOldData)
@@ -81,7 +81,6 @@ void ABP_BG_ProceduralStairs_Rails_C::GetScaledMeshBoundingBox(class UStaticMesh
 	params.Mesh = Mesh;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,18 +92,17 @@ void ABP_BG_ProceduralStairs_Rails_C::GetScaledMeshBoundingBox(class UStaticMesh
 
 
 // Function BP_BG_ProceduralStairs_Rails.BP_BG_ProceduralStairs_Rails_C.GenerateRandomMeshRotation
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                Random                         (Parm, OutParm, IsPlainOldData)
 
-void ABP_BG_ProceduralStairs_Rails_C::STATIC_GenerateRandomMeshRotation(struct FRotator* Random)
+void ABP_BG_ProceduralStairs_Rails_C::GenerateRandomMeshRotation(struct FRotator* Random)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Rails.BP_BG_ProceduralStairs_Rails_C.GenerateRandomMeshRotation");
 
 	ABP_BG_ProceduralStairs_Rails_C_GenerateRandomMeshRotation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,9 +114,9 @@ void ABP_BG_ProceduralStairs_Rails_C::STATIC_GenerateRandomMeshRotation(struct F
 
 
 // Function BP_BG_ProceduralStairs_Rails.BP_BG_ProceduralStairs_Rails_C.UserConstructionScript
-// (Net, NetReliable, Event, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_BG_ProceduralStairs_Rails_C::STATIC_UserConstructionScript()
+void ABP_BG_ProceduralStairs_Rails_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Rails.BP_BG_ProceduralStairs_Rails_C.UserConstructionScript");
 

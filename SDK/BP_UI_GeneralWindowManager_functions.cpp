@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.MakeHiddenParam
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FST_GeneralWindow_Button InParam                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FST_GeneralWindow_Button ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FST_GeneralWindow_Button ABP_UI_GeneralWindowManager_C::STATIC_MakeHiddenParam(const struct FST_GeneralWindow_Button& InParam)
+struct FST_GeneralWindow_Button ABP_UI_GeneralWindowManager_C::MakeHiddenParam(const struct FST_GeneralWindow_Button& InParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.MakeHiddenParam");
 
@@ -27,7 +27,6 @@ struct FST_GeneralWindow_Button ABP_UI_GeneralWindowManager_C::STATIC_MakeHidden
 	params.InParam = InParam;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,11 +37,11 @@ struct FST_GeneralWindow_Button ABP_UI_GeneralWindowManager_C::STATIC_MakeHidden
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.HideInput
-// (Native, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bHide                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GeneralWindowManager_C::STATIC_HideInput(bool bHide)
+void ABP_UI_GeneralWindowManager_C::HideInput(bool bHide)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.HideInput");
 
@@ -50,7 +49,6 @@ void ABP_UI_GeneralWindowManager_C::STATIC_HideInput(bool bHide)
 	params.bHide = bHide;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,11 +57,11 @@ void ABP_UI_GeneralWindowManager_C::STATIC_HideInput(bool bHide)
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.JudgeButton
-// (Net, NetRequest, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_GeneralWindow_Button> Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GeneralWindowManager_C::STATIC_JudgeButton(TEnumAsByte<EN_GeneralWindow_Button> Button)
+void ABP_UI_GeneralWindowManager_C::JudgeButton(TEnumAsByte<EN_GeneralWindow_Button> Button)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.JudgeButton");
 
@@ -79,12 +77,12 @@ void ABP_UI_GeneralWindowManager_C::STATIC_JudgeButton(TEnumAsByte<EN_GeneralWin
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.CloseWindow
-// (Net, Event, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GeneralWindowManager_C::STATIC_CloseWindow(class AActor* Actor, bool* Success)
+void ABP_UI_GeneralWindowManager_C::CloseWindow(class AActor* Actor, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.CloseWindow");
 
@@ -103,11 +101,11 @@ void ABP_UI_GeneralWindowManager_C::STATIC_CloseWindow(class AActor* Actor, bool
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.SetButtonFlag
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GeneralWindowManager_C::STATIC_SetButtonFlag(bool* Result)
+void ABP_UI_GeneralWindowManager_C::SetButtonFlag(bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.SetButtonFlag");
 
@@ -125,7 +123,7 @@ void ABP_UI_GeneralWindowManager_C::STATIC_SetButtonFlag(bool* Result)
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.UserConstructionScript
-// (Net, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_UI_GeneralWindowManager_C::UserConstructionScript()
 {
@@ -134,7 +132,6 @@ void ABP_UI_GeneralWindowManager_C::UserConstructionScript()
 	ABP_UI_GeneralWindowManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,7 +140,7 @@ void ABP_UI_GeneralWindowManager_C::UserConstructionScript()
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.InpActEvt_SearchTopButton_K2Node_InputActionEvent_8
-// (NetRequest, Native, Event, Public, Private, Delegate, NetServer, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -155,7 +152,6 @@ void ABP_UI_GeneralWindowManager_C::InpActEvt_SearchTopButton_K2Node_InputAction
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,7 +160,7 @@ void ABP_UI_GeneralWindowManager_C::InpActEvt_SearchTopButton_K2Node_InputAction
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.InpActEvt_SearchLeftButton_K2Node_InputActionEvent_7
-// (NetRequest, Native, Event, Public, Private, Delegate, NetServer, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -176,7 +172,6 @@ void ABP_UI_GeneralWindowManager_C::InpActEvt_SearchLeftButton_K2Node_InputActio
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -185,7 +180,7 @@ void ABP_UI_GeneralWindowManager_C::InpActEvt_SearchLeftButton_K2Node_InputActio
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.InpActEvt_SearchRightButton_K2Node_InputActionEvent_6
-// (Net, NetReliable, Native, Event, Public, Private, Delegate, NetServer, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -197,7 +192,6 @@ void ABP_UI_GeneralWindowManager_C::InpActEvt_SearchRightButton_K2Node_InputActi
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -206,7 +200,7 @@ void ABP_UI_GeneralWindowManager_C::InpActEvt_SearchRightButton_K2Node_InputActi
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.InpActEvt_SearchBottomButton_K2Node_InputActionEvent_5
-// (NetReliable, Native, Event, Public, Private, Delegate, NetServer, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -218,7 +212,6 @@ void ABP_UI_GeneralWindowManager_C::InpActEvt_SearchBottomButton_K2Node_InputAct
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,16 +220,15 @@ void ABP_UI_GeneralWindowManager_C::InpActEvt_SearchBottomButton_K2Node_InputAct
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_UI_GeneralWindowManager_C::STATIC_ReceiveBeginPlay()
+void ABP_UI_GeneralWindowManager_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.ReceiveBeginPlay");
 
 	ABP_UI_GeneralWindowManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -245,16 +237,15 @@ void ABP_UI_GeneralWindowManager_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.ReceiveDestroyed
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 
-void ABP_UI_GeneralWindowManager_C::STATIC_ReceiveDestroyed()
+void ABP_UI_GeneralWindowManager_C::ReceiveDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.ReceiveDestroyed");
 
 	ABP_UI_GeneralWindowManager_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -263,11 +254,11 @@ void ABP_UI_GeneralWindowManager_C::STATIC_ReceiveDestroyed()
 
 
 // Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.ExecuteUbergraph_BP_UI_GeneralWindowManager
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, HasDefaults, NetClient, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GeneralWindowManager_C::STATIC_ExecuteUbergraph_BP_UI_GeneralWindowManager(int EntryPoint)
+void ABP_UI_GeneralWindowManager_C::ExecuteUbergraph_BP_UI_GeneralWindowManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GeneralWindowManager.BP_UI_GeneralWindowManager_C.ExecuteUbergraph_BP_UI_GeneralWindowManager");
 

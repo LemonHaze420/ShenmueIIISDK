@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.IsDisable
-// (Net, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport, BlueprintEvent, NetValidate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Disabled                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSoundAreaBox_C::STATIC_IsDisable(bool* Disabled)
+void ABP_S3AtomSoundAreaBox_C::IsDisable(bool* Disabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.IsDisable");
 
 	ABP_S3AtomSoundAreaBox_C_IsDisable_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ABP_S3AtomSoundAreaBox_C::STATIC_IsDisable(bool* Disabled)
 
 
 // Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.UserConstructionScript
-// (Exec, Native, Event, NetResponse, NetMulticast, Private, NetServer, NetClient, BlueprintEvent, NetValidate)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AtomSoundAreaBox_C::UserConstructionScript()
 {
@@ -46,7 +45,6 @@ void ABP_S3AtomSoundAreaBox_C::UserConstructionScript()
 	ABP_S3AtomSoundAreaBox_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,16 +53,15 @@ void ABP_S3AtomSoundAreaBox_C::UserConstructionScript()
 
 
 // Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.ReceiveBeginPlay
-// (Net, NetReliable, Exec, Native, Static, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintEvent, NetValidate)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_S3AtomSoundAreaBox_C::STATIC_ReceiveBeginPlay()
+void ABP_S3AtomSoundAreaBox_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.ReceiveBeginPlay");
 
 	ABP_S3AtomSoundAreaBox_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,16 +70,15 @@ void ABP_S3AtomSoundAreaBox_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_0_S3SoundAreaCallback__DelegateSignature
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintEvent, NetValidate)
+// (BlueprintEvent)
 
-void ABP_S3AtomSoundAreaBox_C::STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_0_S3SoundAreaCallback__DelegateSignature()
+void ABP_S3AtomSoundAreaBox_C::BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_0_S3SoundAreaCallback__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_0_S3SoundAreaCallback__DelegateSignature");
 
 	ABP_S3AtomSoundAreaBox_C_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_0_S3SoundAreaCallback__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,16 +87,15 @@ void ABP_S3AtomSoundAreaBox_C::STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundE
 
 
 // Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_1_S3SoundAreaCallback__DelegateSignature
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintEvent, NetValidate)
+// (BlueprintEvent)
 
-void ABP_S3AtomSoundAreaBox_C::STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_1_S3SoundAreaCallback__DelegateSignature()
+void ABP_S3AtomSoundAreaBox_C::BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_1_S3SoundAreaCallback__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_1_S3SoundAreaCallback__DelegateSignature");
 
 	ABP_S3AtomSoundAreaBox_C_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_1_S3SoundAreaCallback__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,11 +104,11 @@ void ABP_S3AtomSoundAreaBox_C::STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundE
 
 
 // Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.ExecuteUbergraph_BP_S3AtomSoundAreaBox
-// (Net, NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintEvent, NetValidate)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSoundAreaBox_C::STATIC_ExecuteUbergraph_BP_S3AtomSoundAreaBox(int EntryPoint)
+void ABP_S3AtomSoundAreaBox_C::ExecuteUbergraph_BP_S3AtomSoundAreaBox(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundAreaBox.BP_S3AtomSoundAreaBox_C.ExecuteUbergraph_BP_S3AtomSoundAreaBox");
 

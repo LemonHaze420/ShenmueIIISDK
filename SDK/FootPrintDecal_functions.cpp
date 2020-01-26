@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function FootPrintDecal.FootPrintDecal_C.UserConstructionScript
-// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AFootPrintDecal_C::UserConstructionScript()
 {
@@ -23,7 +23,6 @@ void AFootPrintDecal_C::UserConstructionScript()
 	AFootPrintDecal_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void AFootPrintDecal_C::UserConstructionScript()
 
 
 // Function FootPrintDecal.FootPrintDecal_C.Timeline_0__FinishedFunc
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void AFootPrintDecal_C::Timeline_0__FinishedFunc()
 {
@@ -49,7 +48,7 @@ void AFootPrintDecal_C::Timeline_0__FinishedFunc()
 
 
 // Function FootPrintDecal.FootPrintDecal_C.Timeline_0__UpdateFunc
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void AFootPrintDecal_C::Timeline_0__UpdateFunc()
 {
@@ -66,7 +65,7 @@ void AFootPrintDecal_C::Timeline_0__UpdateFunc()
 
 
 // Function FootPrintDecal.FootPrintDecal_C.ReceiveBeginPlay
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void AFootPrintDecal_C::ReceiveBeginPlay()
 {
@@ -83,11 +82,11 @@ void AFootPrintDecal_C::ReceiveBeginPlay()
 
 
 // Function FootPrintDecal.FootPrintDecal_C.ExecuteUbergraph_FootPrintDecal
-// (Exec, Native, Static, MulticastDelegate, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AFootPrintDecal_C::STATIC_ExecuteUbergraph_FootPrintDecal(int EntryPoint)
+void AFootPrintDecal_C::ExecuteUbergraph_FootPrintDecal(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootPrintDecal.FootPrintDecal_C.ExecuteUbergraph_FootPrintDecal");
 
@@ -95,7 +94,6 @@ void AFootPrintDecal_C::STATIC_ExecuteUbergraph_FootPrintDecal(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

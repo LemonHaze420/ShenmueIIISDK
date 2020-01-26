@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindFirstAttackWithMatchingCommands
+struct UBTL_CommandLibrary_C_FindFirstAttackWithMatchingCommands_Params
+{
+	struct FName                                       Attack;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.MakeDefaultByteToNameMap
 struct UBTL_CommandLibrary_C_MakeDefaultByteToNameMap_Params

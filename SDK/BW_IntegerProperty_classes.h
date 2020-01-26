@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,20 +53,20 @@ public:
 	}
 
 
-	void STATIC_SetValue(float InValue);
-	float STATIC_GetIntToFloatConvertValue();
-	void STATIC_Reset();
+	void SetValue(float InValue);
+	float GetIntToFloatConvertValue();
+	void Reset();
 	void ClampNewValue(int InValue, int* OutValue);
 	struct FEventReply OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent);
-	void STATIC_SetIntegerParameterValue(int NewValue, bool CallDispatcher);
+	void SetIntegerParameterValue(int NewValue, bool CallDispatcher);
 	int GetIntegerParameterValue();
-	struct FText STATIC_GetParameterName();
-	void STATIC_Construct();
+	struct FText GetParameterName();
+	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
-	void STATIC_GetMinMax();
-	void STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
-	void STATIC_PropertyChanged();
+	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
+	void GetMinMax();
+	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
+	void PropertyChanged();
 	void ExecuteUbergraph_BW_IntegerProperty(int EntryPoint);
 	void IntegerPropertyChangedWithData__DelegateSignature(int Value, class UBW_IntegerProperty_C* Context);
 	void IntegerPropertyChanged__DelegateSignature();

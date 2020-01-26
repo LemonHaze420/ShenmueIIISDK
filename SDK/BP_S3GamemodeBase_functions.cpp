@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.CheckSkip
-// (Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3GamemodeBase_C::STATIC_CheckSkip(bool* dummy)
+void ABP_S3GamemodeBase_C::CheckSkip(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.CheckSkip");
 
 	ABP_S3GamemodeBase_C_CheckSkip_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ABP_S3GamemodeBase_C::STATIC_CheckSkip(bool* dummy)
 
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.SpawnDefaultPawnFor
-// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AController*             NewPlayer                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  StartSpot                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,7 +51,6 @@ class APawn* ABP_S3GamemodeBase_C::SpawnDefaultPawnFor(class AController* NewPla
 	params.StartSpot = StartSpot;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,16 +61,15 @@ class APawn* ABP_S3GamemodeBase_C::SpawnDefaultPawnFor(class AController* NewPla
 
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.UserConstructionScript
-// (Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3GamemodeBase_C::STATIC_UserConstructionScript()
+void ABP_S3GamemodeBase_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.UserConstructionScript");
 
 	ABP_S3GamemodeBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,7 +78,7 @@ void ABP_S3GamemodeBase_C::STATIC_UserConstructionScript()
 
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.ReceiveBeginPlay
-// (Native, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_S3GamemodeBase_C::ReceiveBeginPlay()
 {
@@ -90,7 +87,6 @@ void ABP_S3GamemodeBase_C::ReceiveBeginPlay()
 	ABP_S3GamemodeBase_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,11 +95,11 @@ void ABP_S3GamemodeBase_C::ReceiveBeginPlay()
 
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.ExecuteUbergraph_BP_S3GamemodeBase
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3GamemodeBase_C::STATIC_ExecuteUbergraph_BP_S3GamemodeBase(int EntryPoint)
+void ABP_S3GamemodeBase_C::ExecuteUbergraph_BP_S3GamemodeBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.ExecuteUbergraph_BP_S3GamemodeBase");
 
@@ -111,7 +107,6 @@ void ABP_S3GamemodeBase_C::STATIC_ExecuteUbergraph_BP_S3GamemodeBase(int EntryPo
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

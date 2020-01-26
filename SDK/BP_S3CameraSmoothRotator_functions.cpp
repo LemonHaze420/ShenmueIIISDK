@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.GetYawVelocity
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          YawVelocity                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3CameraSmoothRotator_C::STATIC_GetYawVelocity(float* YawVelocity)
+void UBP_S3CameraSmoothRotator_C::GetYawVelocity(float* YawVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.GetYawVelocity");
 
@@ -36,7 +36,7 @@ void UBP_S3CameraSmoothRotator_C::STATIC_GetYawVelocity(float* YawVelocity)
 
 
 // Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.UpdateYaw
-// (Net, NetRequest, Native, Event, NetResponse, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          CurrentAngle                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          TargetAngle                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -44,7 +44,7 @@ void UBP_S3CameraSmoothRotator_C::STATIC_GetYawVelocity(float* YawVelocity)
 // bool                           ForceDeaccel                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ResultAngle                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3CameraSmoothRotator_C::STATIC_UpdateYaw(float CurrentAngle, float TargetAngle, bool AllowAcceleration, bool ForceDeaccel, float* ResultAngle)
+void UBP_S3CameraSmoothRotator_C::UpdateYaw(float CurrentAngle, float TargetAngle, bool AllowAcceleration, bool ForceDeaccel, float* ResultAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.UpdateYaw");
 
@@ -55,7 +55,6 @@ void UBP_S3CameraSmoothRotator_C::STATIC_UpdateYaw(float CurrentAngle, float Tar
 	params.ForceDeaccel = ForceDeaccel;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -67,7 +66,7 @@ void UBP_S3CameraSmoothRotator_C::STATIC_UpdateYaw(float CurrentAngle, float Tar
 
 
 // Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.UpdateAxis
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          CurrentAngle                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          TargetAngle                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -108,7 +107,7 @@ void UBP_S3CameraSmoothRotator_C::UpdateAxis(float CurrentAngle, float TargetAng
 
 
 // Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.UpdatePitch
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          CurrentAngle                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          TargetAngle                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -116,7 +115,7 @@ void UBP_S3CameraSmoothRotator_C::UpdateAxis(float CurrentAngle, float TargetAng
 // bool                           ForceDeaccel                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ResultAngle                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3CameraSmoothRotator_C::STATIC_UpdatePitch(float CurrentAngle, float TargetAngle, bool AllowAcceleration, bool ForceDeaccel, float* ResultAngle)
+void UBP_S3CameraSmoothRotator_C::UpdatePitch(float CurrentAngle, float TargetAngle, bool AllowAcceleration, bool ForceDeaccel, float* ResultAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.UpdatePitch");
 
@@ -138,16 +137,15 @@ void UBP_S3CameraSmoothRotator_C::STATIC_UpdatePitch(float CurrentAngle, float T
 
 
 // Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.Reset
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3CameraSmoothRotator_C::STATIC_Reset()
+void UBP_S3CameraSmoothRotator_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.Reset");
 
 	UBP_S3CameraSmoothRotator_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,14 +154,14 @@ void UBP_S3CameraSmoothRotator_C::STATIC_Reset()
 
 
 // Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.GetRealVelocity
-// (NetReliable, Static, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          SourceAngle                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DestinationAngle               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          IntendedVelocity               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RealVelocity                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3CameraSmoothRotator_C::STATIC_GetRealVelocity(float SourceAngle, float DestinationAngle, float IntendedVelocity, float* RealVelocity)
+void UBP_S3CameraSmoothRotator_C::GetRealVelocity(float SourceAngle, float DestinationAngle, float IntendedVelocity, float* RealVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.GetRealVelocity");
 
@@ -184,7 +182,7 @@ void UBP_S3CameraSmoothRotator_C::STATIC_GetRealVelocity(float SourceAngle, floa
 
 
 // Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.UpdateAngularVelocity
-// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          CurrentAngle                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          TargetAngle                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -196,7 +194,7 @@ void UBP_S3CameraSmoothRotator_C::STATIC_GetRealVelocity(float SourceAngle, floa
 // bool                           ForceDeaccel                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBP_S3CameraSmoothRotator_C::STATIC_UpdateAngularVelocity(float CurrentAngle, float TargetAngle, float CurrentVel, class UCurveFloat* VelCurve, class UCurveFloat* AccelCurve, float Deaccel, bool EnableAccel, bool ForceDeaccel)
+float UBP_S3CameraSmoothRotator_C::UpdateAngularVelocity(float CurrentAngle, float TargetAngle, float CurrentVel, class UCurveFloat* VelCurve, class UCurveFloat* AccelCurve, float Deaccel, bool EnableAccel, bool ForceDeaccel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.UpdateAngularVelocity");
 
@@ -221,7 +219,7 @@ float UBP_S3CameraSmoothRotator_C::STATIC_UpdateAngularVelocity(float CurrentAng
 
 
 // Function BP_S3CameraSmoothRotator.BP_S3CameraSmoothRotator_C.Update
-// (NetRequest, Native, Event, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TargetPitch                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          TargetYaw                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -240,7 +238,6 @@ void UBP_S3CameraSmoothRotator_C::Update(float TargetPitch, float TargetYaw, con
 	params.AllowAccel = AllowAccel;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

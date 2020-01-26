@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.UpdateAnimationState
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_QTETimingComponent_C::STATIC_UpdateAnimationState()
+void UBPC_QTETimingComponent_C::UpdateAnimationState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.UpdateAnimationState");
 
 	UBPC_QTETimingComponent_C_UpdateAnimationState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,16 +31,15 @@ void UBPC_QTETimingComponent_C::STATIC_UpdateAnimationState()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.FinishQTE
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_QTETimingComponent_C::STATIC_FinishQTE()
+void UBPC_QTETimingComponent_C::FinishQTE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.FinishQTE");
 
 	UBPC_QTETimingComponent_C_FinishQTE_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,7 +48,7 @@ void UBPC_QTETimingComponent_C::STATIC_FinishQTE()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.AdjustActionAnimationTime
-// (NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_QTETimingComponent_C::AdjustActionAnimationTime()
 {
@@ -67,7 +65,7 @@ void UBPC_QTETimingComponent_C::AdjustActionAnimationTime()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.PlayActionAnimation
-// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_QTETimingComponent_C::PlayActionAnimation()
 {
@@ -84,7 +82,7 @@ void UBPC_QTETimingComponent_C::PlayActionAnimation()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.StartCountInputLimitTime
-// (NetRequest, Exec, Native, NetMulticast, Public, Protected, NetServer)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_QTETimingComponent_C::StartCountInputLimitTime()
 {
@@ -93,7 +91,6 @@ void UBPC_QTETimingComponent_C::StartCountInputLimitTime()
 	UBPC_QTETimingComponent_C_StartCountInputLimitTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,9 +99,9 @@ void UBPC_QTETimingComponent_C::StartCountInputLimitTime()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.Update
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, Delegate, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_QTETimingComponent_C::STATIC_Update()
+void UBPC_QTETimingComponent_C::Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.Update");
 
@@ -119,7 +116,7 @@ void UBPC_QTETimingComponent_C::STATIC_Update()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.GetActionAnimationLength
-// (Exec, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -140,11 +137,11 @@ float UBPC_QTETimingComponent_C::GetActionAnimationLength()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.SetSuccessInputLimitTimeLength
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          InLength                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_QTETimingComponent_C::STATIC_SetSuccessInputLimitTimeLength(float InLength)
+void UBPC_QTETimingComponent_C::SetSuccessInputLimitTimeLength(float InLength)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.SetSuccessInputLimitTimeLength");
 
@@ -160,9 +157,9 @@ void UBPC_QTETimingComponent_C::STATIC_SetSuccessInputLimitTimeLength(float InLe
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.DebugQTEForceSuccessUpdateInternal
-// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UBPC_QTETimingComponent_C::STATIC_DebugQTEForceSuccessUpdateInternal()
+void UBPC_QTETimingComponent_C::DebugQTEForceSuccessUpdateInternal()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.DebugQTEForceSuccessUpdateInternal");
 
@@ -177,7 +174,7 @@ void UBPC_QTETimingComponent_C::STATIC_DebugQTEForceSuccessUpdateInternal()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.GetLengthBeforeCountInputLimitTime
-// (NetReliable, NetRequest, Native, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -188,7 +185,6 @@ float UBPC_QTETimingComponent_C::GetLengthBeforeCountInputLimitTime()
 	UBPC_QTETimingComponent_C_GetLengthBeforeCountInputLimitTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -199,7 +195,7 @@ float UBPC_QTETimingComponent_C::GetLengthBeforeCountInputLimitTime()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.IsEarlyFailed
-// (Net, NetRequest, Native, NetMulticast, Public, Protected, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -210,7 +206,6 @@ bool UBPC_QTETimingComponent_C::IsEarlyFailed()
 	UBPC_QTETimingComponent_C_IsEarlyFailed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,13 +216,13 @@ bool UBPC_QTETimingComponent_C::IsEarlyFailed()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.SetupQTE
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   InSuccessAction                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InJustTimingStartRate          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InJustTimingEndRate            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_QTETimingComponent_C::STATIC_SetupQTE(const struct FName& InSuccessAction, float InJustTimingStartRate, float InJustTimingEndRate)
+void UBPC_QTETimingComponent_C::SetupQTE(const struct FName& InSuccessAction, float InJustTimingStartRate, float InJustTimingEndRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.SetupQTE");
 
@@ -237,7 +232,6 @@ void UBPC_QTETimingComponent_C::STATIC_SetupQTE(const struct FName& InSuccessAct
 	params.InJustTimingEndRate = InJustTimingEndRate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -246,16 +240,15 @@ void UBPC_QTETimingComponent_C::STATIC_SetupQTE(const struct FName& InSuccessAct
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.PlayInputFailedAnimation
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void UBPC_QTETimingComponent_C::STATIC_PlayInputFailedAnimation()
+void UBPC_QTETimingComponent_C::PlayInputFailedAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.PlayInputFailedAnimation");
 
 	UBPC_QTETimingComponent_C_PlayInputFailedAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -264,7 +257,7 @@ void UBPC_QTETimingComponent_C::STATIC_PlayInputFailedAnimation()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.PlayInputSuccessAnimation
-// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_QTETimingComponent_C::PlayInputSuccessAnimation()
 {
@@ -273,7 +266,6 @@ void UBPC_QTETimingComponent_C::PlayInputSuccessAnimation()
 	UBPC_QTETimingComponent_C_PlayInputSuccessAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -282,7 +274,7 @@ void UBPC_QTETimingComponent_C::PlayInputSuccessAnimation()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.IsPlayingInAnimation
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -293,7 +285,6 @@ bool UBPC_QTETimingComponent_C::IsPlayingInAnimation()
 	UBPC_QTETimingComponent_C_IsPlayingInAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -304,7 +295,7 @@ bool UBPC_QTETimingComponent_C::IsPlayingInAnimation()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.PlayTimeUpFailedAnimation
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_QTETimingComponent_C::PlayTimeUpFailedAnimation()
 {
@@ -313,7 +304,6 @@ void UBPC_QTETimingComponent_C::PlayTimeUpFailedAnimation()
 	UBPC_QTETimingComponent_C_PlayTimeUpFailedAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -322,9 +312,9 @@ void UBPC_QTETimingComponent_C::PlayTimeUpFailedAnimation()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.PlayInAnimation
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void UBPC_QTETimingComponent_C::STATIC_PlayInAnimation()
+void UBPC_QTETimingComponent_C::PlayInAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.PlayInAnimation");
 
@@ -339,11 +329,11 @@ void UBPC_QTETimingComponent_C::STATIC_PlayInAnimation()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.SetTimeGaugeRate
-// (Net, Exec, Static, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          InGaugeRate                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_QTETimingComponent_C::STATIC_SetTimeGaugeRate(float InGaugeRate)
+void UBPC_QTETimingComponent_C::SetTimeGaugeRate(float InGaugeRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.SetTimeGaugeRate");
 
@@ -359,7 +349,7 @@ void UBPC_QTETimingComponent_C::STATIC_SetTimeGaugeRate(float InGaugeRate)
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.ExecuteInputAction
-// (NetReliable, NetRequest, Exec, Native, Event, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   InInputAction                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -371,7 +361,6 @@ void UBPC_QTETimingComponent_C::ExecuteInputAction(const struct FName& InInputAc
 	params.InInputAction = InInputAction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -380,16 +369,15 @@ void UBPC_QTETimingComponent_C::ExecuteInputAction(const struct FName& InInputAc
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.Reset
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_QTETimingComponent_C::STATIC_Reset()
+void UBPC_QTETimingComponent_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.Reset");
 
 	UBPC_QTETimingComponent_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -398,16 +386,15 @@ void UBPC_QTETimingComponent_C::STATIC_Reset()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.Finalize
-// (Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_QTETimingComponent_C::STATIC_Finalize()
+void UBPC_QTETimingComponent_C::Finalize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.Finalize");
 
 	UBPC_QTETimingComponent_C_Finalize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -416,16 +403,15 @@ void UBPC_QTETimingComponent_C::STATIC_Finalize()
 
 
 // Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.Initialize
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_QTETimingComponent_C::STATIC_Initialize()
+void UBPC_QTETimingComponent_C::Initialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTETimingComponent.BPC_QTETimingComponent_C.Initialize");
 
 	UBPC_QTETimingComponent_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

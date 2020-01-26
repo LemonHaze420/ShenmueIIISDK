@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,14 +35,14 @@ public:
 	void SetRequestOwner(class AActor* Actor);
 	class AActor* GetRequestOwner();
 	bool IsDataLevelSet();
-	void STATIC_StartListLevelLoad(TArray<struct FName>* NeedLevels);
+	void StartListLevelLoad(TArray<struct FName>* NeedLevels);
 	void FinishLevelStreaming(const struct FName& ID);
 	void StreamDataLevel(const struct FName& Level);
 	void UnloadLevels();
 	void FinishedUnloadLevel();
 	void UnloadDataLevelOnly();
 	void StartStreaming(TArray<struct FName>* NeedLevels);
-	void STATIC_ExecuteUbergraph_BPC_EventLevelStreaming(int EntryPoint);
+	void ExecuteUbergraph_BPC_EventLevelStreaming(int EntryPoint);
 	void OnFinishListLoad__DelegateSignature();
 	void OnFinishUnload__DelegateSignature();
 	void OnFinishDataLoad__DelegateSignature();

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,40 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
+// Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.TryGetItemData
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FName                   InName                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FST_SUBQCrudeDrugMemo   OutData                        (Parm, OutParm)
+
+bool ABP_SubQuestCrudeDrugMemo_C::TryGetItemData(const struct FName& InName, struct FST_SUBQCrudeDrugMemo* OutData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.TryGetItemData");
+
+	ABP_SubQuestCrudeDrugMemo_C_TryGetItemData_Params params;
+	params.InName = InName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutData != nullptr)
+		*OutData = params.OutData;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.CheckItemGetNum
-// (Net, NetResponse, Static, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           PlayAc                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_CheckItemGetNum(const struct FString& ItemId, bool* PlayAc)
+void ABP_SubQuestCrudeDrugMemo_C::CheckItemGetNum(const struct FString& ItemId, bool* PlayAc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.CheckItemGetNum");
 
@@ -38,18 +65,17 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_CheckItemGetNum(const struct FString& I
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.CheckPlayAc
-// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, NetValidate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           enable_play                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_CheckPlayAc(bool* enable_play)
+void ABP_SubQuestCrudeDrugMemo_C::CheckPlayAc(bool* enable_play)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.CheckPlayAc");
 
 	ABP_SubQuestCrudeDrugMemo_C_CheckPlayAc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +87,7 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_CheckPlayAc(bool* enable_play)
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.CheckAllGetItem
-// (Exec, Event, NetResponse, MulticastDelegate, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           AllGet                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -83,7 +109,7 @@ void ABP_SubQuestCrudeDrugMemo_C::CheckAllGetItem(bool* AllGet)
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.GetItemNum
-// (NetRequest, Native, Public, NetServer, BlueprintPure, NetValidate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Count                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -96,7 +122,6 @@ void ABP_SubQuestCrudeDrugMemo_C::GetItemNum(int ID, int* Count)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,13 +133,13 @@ void ABP_SubQuestCrudeDrugMemo_C::GetItemNum(int ID, int* Count)
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.SetCrudeDrugGlobalFlag
-// (NetReliable, NetRequest, Exec, Native, Static, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            FlagID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            FlagValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           set_is_done                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_SetCrudeDrugGlobalFlag(int FlagID, int FlagValue, bool* set_is_done)
+void ABP_SubQuestCrudeDrugMemo_C::SetCrudeDrugGlobalFlag(int FlagID, int FlagValue, bool* set_is_done)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.SetCrudeDrugGlobalFlag");
 
@@ -123,7 +148,6 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_SetCrudeDrugGlobalFlag(int FlagID, int 
 	params.FlagValue = FlagValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -135,18 +159,17 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_SetCrudeDrugGlobalFlag(int FlagID, int 
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.isEnableEvent
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Enable                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_isEnableEvent(bool* Enable)
+void ABP_SubQuestCrudeDrugMemo_C::isEnableEvent(bool* Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.isEnableEvent");
 
 	ABP_SubQuestCrudeDrugMemo_C_isEnableEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,9 +181,9 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_isEnableEvent(bool* Enable)
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.UserConstructionScript
-// (Net, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, NetValidate)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_UserConstructionScript()
+void ABP_SubQuestCrudeDrugMemo_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.UserConstructionScript");
 
@@ -175,9 +198,9 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_UserConstructionScript()
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_ReceiveBeginPlay()
+void ABP_SubQuestCrudeDrugMemo_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.ReceiveBeginPlay");
 
@@ -192,12 +215,12 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.StartEvent
-// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_StartEvent(int ArrayIndex, int SetFlags)
+void ABP_SubQuestCrudeDrugMemo_C::StartEvent(int ArrayIndex, int SetFlags)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.StartEvent");
 
@@ -206,7 +229,6 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_StartEvent(int ArrayIndex, int SetFlags
 	params.SetFlags = SetFlags;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,9 +237,9 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_StartEvent(int ArrayIndex, int SetFlags
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.LoadStartIn
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_LoadStartIn()
+void ABP_SubQuestCrudeDrugMemo_C::LoadStartIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.LoadStartIn");
 
@@ -232,13 +254,13 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_LoadStartIn()
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.ItemChange
-// (Net, NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NewNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OldItem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_ItemChange(const struct FName& ItemId, int NewNum, int OldItem)
+void ABP_SubQuestCrudeDrugMemo_C::ItemChange(const struct FName& ItemId, int NewNum, int OldItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.ItemChange");
 
@@ -248,7 +270,6 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_ItemChange(const struct FName& ItemId, 
 	params.OldItem = OldItem;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -257,11 +278,11 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_ItemChange(const struct FName& ItemId, 
 
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.ExecuteUbergraph_BP_SubQuestCrudeDrugMemo
-// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Delegate, HasDefaults, DLLImport, BlueprintCallable, NetValidate)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestCrudeDrugMemo_C::STATIC_ExecuteUbergraph_BP_SubQuestCrudeDrugMemo(int EntryPoint)
+void ABP_SubQuestCrudeDrugMemo_C::ExecuteUbergraph_BP_SubQuestCrudeDrugMemo(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.ExecuteUbergraph_BP_SubQuestCrudeDrugMemo");
 
@@ -269,7 +290,6 @@ void ABP_SubQuestCrudeDrugMemo_C::STATIC_ExecuteUbergraph_BP_SubQuestCrudeDrugMe
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

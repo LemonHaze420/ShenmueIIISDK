@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,10 +26,10 @@ public:
 	}
 
 
-	bool STATIC_isPlayer();
-	bool STATIC_IsEnabled();
+	bool isPlayer();
+	bool IsEnabled();
 	void GetSpawnInfo(class UObject* Outer, class UBTL_Launch_NPC_C** LaunchInfo);
-	void STATIC_GetID(struct FName* Identifier);
+	void GetID(struct FName* Identifier);
 	void UserConstructionScript();
 };
 

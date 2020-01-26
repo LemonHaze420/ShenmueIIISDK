@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,12 +29,12 @@ public:
 	}
 
 
-	void STATIC_SetFontSize(class UTextBlock* Text, class UTextBlock** PlaceNameText);
-	void STATIC_SetPageIndex(int PageIndex);
+	void SetFontSize(class UTextBlock* Text, class UTextBlock** PlaceNameText);
+	void SetPageIndex(int PageIndex);
 	void Construct();
-	void STATIC_SetSlotContent(int Index, class US3MemopadTextWidget* Widget);
+	void SetSlotContent(int Index, class US3MemopadTextWidget* Widget);
 	void SetSlotHiddenFlag(int Index, bool flag);
-	void STATIC_ExecuteUbergraph_wgt_MemoPageBase(int EntryPoint);
+	void ExecuteUbergraph_wgt_MemoPageBase(int EntryPoint);
 	void ED_LoadFinish__DelegateSignature();
 };
 

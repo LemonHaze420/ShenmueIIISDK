@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OD_Nail.BP_OD_Nail_C.UserConstructionScript
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_OD_Nail_C::STATIC_UserConstructionScript()
+void ABP_OD_Nail_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Nail.BP_OD_Nail_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_OD_Nail_C::STATIC_UserConstructionScript()
 
 
 // Function BP_OD_Nail.BP_OD_Nail_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_42_ComponentBeginOverlapSignature__DelegateSignature
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -53,7 +53,6 @@ void ABP_OD_Nail_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_42_ComponentBegin
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,11 +61,11 @@ void ABP_OD_Nail_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_42_ComponentBegin
 
 
 // Function BP_OD_Nail.BP_OD_Nail_C.ExecuteUbergraph_BP_OD_Nail
-// (Net, NetReliable, Event, NetResponse, Static, Public, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Nail_C::STATIC_ExecuteUbergraph_BP_OD_Nail(int EntryPoint)
+void ABP_OD_Nail_C::ExecuteUbergraph_BP_OD_Nail(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Nail.BP_OD_Nail_C.ExecuteUbergraph_BP_OD_Nail");
 

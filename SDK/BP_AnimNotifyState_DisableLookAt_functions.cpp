@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotifyState_DisableLookAt.BP_AnimNotifyState_DisableLookAt_C.GetNotifyName
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -35,7 +35,7 @@ struct FString UBP_AnimNotifyState_DisableLookAt_C::GetNotifyName()
 
 
 // Function BP_AnimNotifyState_DisableLookAt.BP_AnimNotifyState_DisableLookAt_C.Received_NotifyEnd
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -50,7 +50,6 @@ bool UBP_AnimNotifyState_DisableLookAt_C::Received_NotifyEnd(class USkeletalMesh
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +60,7 @@ bool UBP_AnimNotifyState_DisableLookAt_C::Received_NotifyEnd(class USkeletalMesh
 
 
 // Function BP_AnimNotifyState_DisableLookAt.BP_AnimNotifyState_DisableLookAt_C.Received_NotifyBegin
-// (Exec, Native, Event, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -78,7 +77,6 @@ bool UBP_AnimNotifyState_DisableLookAt_C::Received_NotifyBegin(class USkeletalMe
 	params.TotalDuration = TotalDuration;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,21 +32,21 @@ public:
 	}
 
 
-	void STATIC_SetSkillLibrary(class UBTL_CommandLibrary_C* SkillLibrary);
-	void STATIC_GetSelectionItemLabel(struct FName* Label);
-	void STATIC_UpdateWidgetFocusing(int* ItemIndex);
-	void STATIC_SetFocus(bool Condition);
+	void SetSkillLibrary(class UBTL_CommandLibrary_C* SkillLibrary);
+	void GetSelectionItemLabel(struct FName* Label);
+	void UpdateWidgetFocusing(int* ItemIndex);
+	void SetFocus(bool Condition);
 	void SelectItem_WidgetIndex_(int Index, int* ItemIndex);
 	void SelectItem_ItemIntID_(int ID);
-	void STATIC_ClearSelection();
-	void STATIC_SetItems(int StartIndex, TArray<int> AllItems);
-	void STATIC_GetSelectionItemID(int* ItemIntID);
+	void ClearSelection();
+	void SetItems(int StartIndex, TArray<int> AllItems);
+	void GetSelectionItemID(int* ItemIntID);
 	void GridLocationToWidgetIndex(int X, int Y, int* Index);
-	void STATIC_MoveSelection(TEnumAsByte<Een_skill_key_type> Direction, int* ItemIndex);
+	void MoveSelection(TEnumAsByte<Een_skill_key_type> Direction, int* ItemIndex);
 	void WidgetIndexToGridLocation(int Index, int* Column, int* Row);
 	void GetGridItemCount(int* Count);
 	void Construct();
-	void STATIC_ExecuteUbergraph_wgt_SkillEditor_ItemGrid(int EntryPoint);
+	void ExecuteUbergraph_wgt_SkillEditor_ItemGrid(int EntryPoint);
 };
 
 

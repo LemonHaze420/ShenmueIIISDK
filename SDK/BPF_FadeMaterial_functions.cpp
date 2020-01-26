@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_FadeMaterial.BPF_FadeMaterial_C.CreateFadeMaterial
-// (NetReliable, Exec, Event, NetResponse, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInterface*      Source                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstanceDynamic* FadeMaterial                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_FadeMaterial_C::CreateFadeMaterial(class UMaterialInterface* Source, class UObject* __WorldContext, class UMaterialInstanceDynamic** FadeMaterial)
+void UBPF_FadeMaterial_C::STATIC_CreateFadeMaterial(class UMaterialInterface* Source, class UObject* __WorldContext, class UMaterialInstanceDynamic** FadeMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_FadeMaterial.BPF_FadeMaterial_C.CreateFadeMaterial");
 
@@ -40,7 +40,7 @@ void UBPF_FadeMaterial_C::CreateFadeMaterial(class UMaterialInterface* Source, c
 
 
 // Function BPF_FadeMaterial.BPF_FadeMaterial_C.SimpleDuplicateMatParams
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInterface*      MaterialInstance               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInterface*      FadeMatTemplate                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -57,7 +57,6 @@ class UMaterialInstanceDynamic* UBPF_FadeMaterial_C::STATIC_SimpleDuplicateMatPa
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,13 +67,13 @@ class UMaterialInstanceDynamic* UBPF_FadeMaterial_C::STATIC_SimpleDuplicateMatPa
 
 
 // Function BPF_FadeMaterial.BPF_FadeMaterial_C.SwitchToFadeMaterial
-// (Net, NetReliable, Exec, Native, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*  Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // TArray<class UMaterialInterface*> Materials                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_FadeMaterial_C::SwitchToFadeMaterial(class USkeletalMeshComponent* Component, class UObject* __WorldContext, TArray<class UMaterialInterface*>* Materials)
+void UBPF_FadeMaterial_C::STATIC_SwitchToFadeMaterial(class USkeletalMeshComponent* Component, class UObject* __WorldContext, TArray<class UMaterialInterface*>* Materials)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_FadeMaterial.BPF_FadeMaterial_C.SwitchToFadeMaterial");
 
@@ -83,7 +82,6 @@ void UBPF_FadeMaterial_C::SwitchToFadeMaterial(class USkeletalMeshComponent* Com
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

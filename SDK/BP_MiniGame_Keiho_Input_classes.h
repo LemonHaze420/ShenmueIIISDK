@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,13 +27,13 @@ public:
 	}
 
 
-	void STATIC_UserConstructionScript();
-	void STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_4(const struct FKey& Key);
-	void STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_3(const struct FKey& Key);
-	void STATIC_InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_21(float AxisValue);
-	void STATIC_InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_24(float AxisValue);
-	void STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_13(float AxisValue);
-	void STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_14(float AxisValue);
+	void UserConstructionScript();
+	void InpActEvt_MG_Top_K2Node_InputActionEvent_4(const struct FKey& Key);
+	void InpActEvt_MG_Bottom_K2Node_InputActionEvent_3(const struct FKey& Key);
+	void InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_21(float AxisValue);
+	void InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_24(float AxisValue);
+	void InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_13(float AxisValue);
+	void InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_14(float AxisValue);
 	void ExecuteUbergraph_BP_MiniGame_Keiho_Input(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,13 +31,13 @@ public:
 	}
 
 
-	bool STATIC_IsVisibleIcon();
+	bool IsVisibleIcon();
 	void SetPosCenter();
 	void SetPosRight();
 	void SetPos(const struct FVector2D& InPosition);
-	void STATIC_SetVisible(bool Visible);
+	void SetVisible(bool Visible);
 	void Construct();
-	void STATIC_ExecuteUbergraph_BPW_UI_RStickIcon(int EntryPoint);
+	void ExecuteUbergraph_BPW_UI_RStickIcon(int EntryPoint);
 };
 
 

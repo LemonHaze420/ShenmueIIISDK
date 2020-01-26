@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.SetTextures
-// (Native, NetMulticast, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              Flower                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Bird                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -34,7 +34,6 @@ void UWBP_MiniGame_Kachofugetsu_C::SetTextures(class UTexture2D* Flower, class U
 	params.Back = Back;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -43,7 +42,7 @@ void UWBP_MiniGame_Kachofugetsu_C::SetTextures(class UTexture2D* Flower, class U
 
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.SetVisibleImage
-// (Net, Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -55,7 +54,6 @@ void UWBP_MiniGame_Kachofugetsu_C::SetVisibleImage(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,11 +62,11 @@ void UWBP_MiniGame_Kachofugetsu_C::SetVisibleImage(bool Visible)
 
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.SetVisibleViewText
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGame_Kachofugetsu_C::STATIC_SetVisibleViewText(ESlateVisibility InVisibility)
+void UWBP_MiniGame_Kachofugetsu_C::SetVisibleViewText(ESlateVisibility InVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.SetVisibleViewText");
 
@@ -84,7 +82,7 @@ void UWBP_MiniGame_Kachofugetsu_C::STATIC_SetVisibleViewText(ESlateVisibility In
 
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.SetViewText
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -104,11 +102,11 @@ void UWBP_MiniGame_Kachofugetsu_C::SetViewText(const struct FString& Text)
 
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.SetVisibleButton
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGame_Kachofugetsu_C::STATIC_SetVisibleButton(bool Visible)
+void UWBP_MiniGame_Kachofugetsu_C::SetVisibleButton(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.SetVisibleButton");
 
@@ -124,9 +122,9 @@ void UWBP_MiniGame_Kachofugetsu_C::STATIC_SetVisibleButton(bool Visible)
 
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.Construct
-// (Net, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_MiniGame_Kachofugetsu_C::STATIC_Construct()
+void UWBP_MiniGame_Kachofugetsu_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.Construct");
 
@@ -141,9 +139,9 @@ void UWBP_MiniGame_Kachofugetsu_C::STATIC_Construct()
 
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.PlayStartFadeAnim
-// (Net, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_MiniGame_Kachofugetsu_C::STATIC_PlayStartFadeAnim()
+void UWBP_MiniGame_Kachofugetsu_C::PlayStartFadeAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.PlayStartFadeAnim");
 
@@ -158,9 +156,9 @@ void UWBP_MiniGame_Kachofugetsu_C::STATIC_PlayStartFadeAnim()
 
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.PlayEndFadeAnim
-// (Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_MiniGame_Kachofugetsu_C::STATIC_PlayEndFadeAnim()
+void UWBP_MiniGame_Kachofugetsu_C::PlayEndFadeAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.PlayEndFadeAnim");
 
@@ -175,7 +173,7 @@ void UWBP_MiniGame_Kachofugetsu_C::STATIC_PlayEndFadeAnim()
 
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.PlayAppearAnim
-// (NetReliable, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          PlayRate                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EMiniGameKFTypeEnum> AppearType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -197,7 +195,7 @@ void UWBP_MiniGame_Kachofugetsu_C::PlayAppearAnim(float PlayRate, TEnumAsByte<EM
 
 
 // Function WBP_MiniGame_Kachofugetsu.WBP_MiniGame_Kachofugetsu_C.ExecuteUbergraph_WBP_MiniGame_Kachofugetsu
-// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

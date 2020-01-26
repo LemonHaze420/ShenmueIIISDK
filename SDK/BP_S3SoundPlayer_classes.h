@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,31 +37,31 @@ public:
 	}
 
 
-	float STATIC_GetPlaybackTime();
+	float GetPlaybackTime();
 	void StopForbid();
-	bool STATIC_Stop();
-	void STATIC_StopOnly();
+	bool Stop();
+	void StopOnly();
 	void JudgeVolume();
 	void SetSound();
 	void SetSoundPitch(float Pitch);
-	void STATIC_SetAISAC(const struct FString& ControlName, float ControlValue);
+	void SetAISAC(const struct FString& ControlName, float ControlValue);
 	void SetAttenuation(class USoundAttenuation* Attenuation);
 	void SetSelector(const struct FString& Selector, const struct FString& Label);
-	void STATIC_SetSoundVolume(float Volume);
+	void SetSoundVolume(float Volume);
 	void GetSource(class UObject** Cue);
 	void GetSourceType(TEnumAsByte<ESoundSourceType>* Type);
-	void STATIC_GetDuration(bool* Result, float* Duration_sec_);
+	void GetDuration(bool* Result, float* Duration_sec_);
 	void IsPlaying(bool* isPlay);
 	void SetSource(class UObject* Sound);
 	void EndCheck(bool* Destroy);
 	void Play();
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void PermitPlay();
 	void StartReuse();
-	void STATIC_SetVoiceFlag(bool bNewFlag);
-	void STATIC_SetSystemVolume(float Volume);
+	void SetVoiceFlag(bool bNewFlag);
+	void SetSystemVolume(float Volume);
 	void AudioFinished();
 	void CriAudioFInished();
 	void BindFinishEvent();
@@ -69,7 +69,7 @@ public:
 	void Pause();
 	void Restart();
 	void ExecuteUbergraph_BP_S3SoundPlayer(int EntryPoint);
-	void STATIC_OnAudioFinished__DelegateSignature(class ABP_S3SoundPlayer_C* SoundPlayer);
+	void OnAudioFinished__DelegateSignature(class ABP_S3SoundPlayer_C* SoundPlayer);
 };
 
 

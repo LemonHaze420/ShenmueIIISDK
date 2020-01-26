@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void BPF_SetButtonTextures(class UImage* Image, class UTexture* LightTex, class UTexture* DarkTex, class UTexture* GlowTex, class UObject* __WorldContext);
-	void BPF_SetButtonSelected(class UImage* Image, class UTextBlock* Text, bool bSelected, class UObject* __WorldContext);
+	void STATIC_BPF_SetButtonTextures(class UImage* Image, class UTexture* LightTex, class UTexture* DarkTex, class UTexture* GlowTex, class UObject* __WorldContext);
+	void STATIC_BPF_SetButtonSelected(class UImage* Image, class UTextBlock* Text, bool bSelected, class UObject* __WorldContext);
 	void STATIC_BPF_EnableButtonCursor(class UImage* Image, class UTextBlock* Text, bool bEnabled, class UObject* __WorldContext);
 };
 

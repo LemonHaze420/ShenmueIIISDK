@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,25 +44,25 @@ public:
 	}
 
 
-	void STATIC_StopTimeCountSE();
+	void StopTimeCountSE();
 	void PlayTimeCountSE();
 	void UpdateAnimationState();
-	bool STATIC_IsInQTE();
+	bool IsInQTE();
 	float GetInAnimationLength();
-	bool STATIC_IsPlayingIn();
-	void STATIC_SetTimeGaugeRate(float Rate);
+	bool IsPlayingIn();
+	void SetTimeGaugeRate(float Rate);
 	void UpdateTime(float TickDeltaSeconds, float* CurrentDeltaSeconds);
 	void SetUseRealTime(bool UseRealTime);
 	void ClearResult();
-	void STATIC_InputFunction(const struct FKey& InKey);
-	void STATIC_InputEndFunction();
+	void InputFunction(const struct FKey& InKey);
+	void InputEndFunction();
 	void InputStartFunction(const struct FName& LeftAction, const struct FName& RightAction, const struct FName& SuccessAction);
-	void STATIC_EndFunction();
-	void STATIC_Prepare();
-	void STATIC_GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D);
+	void EndFunction();
+	void Prepare();
+	void GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D);
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BPC_old_QTESelectComponent(int EntryPoint);
+	void ExecuteUbergraph_BPC_old_QTESelectComponent(int EntryPoint);
 	void ButtonDown__DelegateSignature(bool Succeed);
 	void End__DelegateSignature();
 	void Success__DelegateSignature();

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,10 +25,10 @@ public:
 	}
 
 
-	void STATIC_DecideCancel();
-	void STATIC_DecideBet();
-	void STATIC_SelectCancel();
-	void STATIC_SelectMaxBet();
+	void DecideCancel();
+	void DecideBet();
+	void SelectCancel();
+	void SelectMaxBet();
 	void SelectBetDown();
 	void SelectBetUp();
 };

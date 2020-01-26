@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,6 +82,15 @@ enum class EUpdateClockSource : uint8_t
 };
 
 
+// Enum MovieScene.EMovieSceneEvaluationType
+enum class EMovieSceneEvaluationType : uint8_t
+{
+	EMovieSceneEvaluationType__FrameLocked = 0,
+	EMovieSceneEvaluationType__WithSubFrames = 1,
+	EMovieSceneEvaluationType__EMovieSceneEvaluationType_MAX = 2
+};
+
+
 // Enum MovieScene.EMovieScenePlayerStatus
 enum class EMovieScenePlayerStatus : uint8_t
 {
@@ -96,16 +105,6 @@ enum class EMovieScenePlayerStatus : uint8_t
 };
 
 
-// Enum MovieScene.EMovieSceneCompletionMode
-enum class EMovieSceneCompletionMode : uint8_t
-{
-	EMovieSceneCompletionMode__KeepState = 0,
-	EMovieSceneCompletionMode__RestoreState = 1,
-	EMovieSceneCompletionMode__ProjectDefault = 2,
-	EMovieSceneCompletionMode__EMovieSceneCompletionMode_MAX = 3
-};
-
-
 // Enum MovieScene.EMovieSceneObjectBindingSpace
 enum class EMovieSceneObjectBindingSpace : uint8_t
 {
@@ -115,13 +114,13 @@ enum class EMovieSceneObjectBindingSpace : uint8_t
 };
 
 
-// Enum MovieScene.ESpawnOwnership
-enum class ESpawnOwnership : uint8_t
+// Enum MovieScene.EMovieSceneCompletionMode
+enum class EMovieSceneCompletionMode : uint8_t
 {
-	ESpawnOwnership__InnerSequence = 0,
-	ESpawnOwnership__MasterSequence = 1,
-	ESpawnOwnership__External      = 2,
-	ESpawnOwnership__ESpawnOwnership_MAX = 3
+	EMovieSceneCompletionMode__KeepState = 0,
+	EMovieSceneCompletionMode__RestoreState = 1,
+	EMovieSceneCompletionMode__ProjectDefault = 2,
+	EMovieSceneCompletionMode__EMovieSceneCompletionMode_MAX = 3
 };
 
 
@@ -135,12 +134,13 @@ enum class ESectionEvaluationFlags : uint8_t
 };
 
 
-// Enum MovieScene.EMovieSceneEvaluationType
-enum class EMovieSceneEvaluationType : uint8_t
+// Enum MovieScene.ESpawnOwnership
+enum class ESpawnOwnership : uint8_t
 {
-	EMovieSceneEvaluationType__FrameLocked = 0,
-	EMovieSceneEvaluationType__WithSubFrames = 1,
-	EMovieSceneEvaluationType__EMovieSceneEvaluationType_MAX = 2
+	ESpawnOwnership__InnerSequence = 0,
+	ESpawnOwnership__MasterSequence = 1,
+	ESpawnOwnership__External      = 2,
+	ESpawnOwnership__ESpawnOwnership_MAX = 3
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,18 +43,18 @@ public:
 	}
 
 
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ryo_Search_AnimGraphNode_SubInstance_4889FEEC4B464B175CE990AF7FC1FB1D();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ryo_Search_AnimGraphNode_BlendListByBool_4FF9AC21473D5CB718766A87FFEDCFE0();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ryo_Search_AnimGraphNode_Fabrik_D3B7183C44A2357A7A067ABB493551C8();
-	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
-	void STATIC_AnimNotify_GrabbedItem();
-	void STATIC_AnimNotify_ReleasedItem();
-	void STATIC_AnimNotify_Completed();
-	void STATIC_AnimNotify_LookingAtItem();
-	void STATIC_BlueprintInitializeAnimation();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ryo_Search_AnimGraphNode_SequencePlayer_7D41B50A4CB6689CE5A8358402C93F68();
-	void STATIC_AnimNotify_MoveStart();
-	void STATIC_ExecuteUbergraph_ABP_Ryo_Search(int EntryPoint);
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ryo_Search_AnimGraphNode_SubInstance_4889FEEC4B464B175CE990AF7FC1FB1D();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ryo_Search_AnimGraphNode_BlendListByBool_4FF9AC21473D5CB718766A87FFEDCFE0();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ryo_Search_AnimGraphNode_Fabrik_D3B7183C44A2357A7A067ABB493551C8();
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void AnimNotify_GrabbedItem();
+	void AnimNotify_ReleasedItem();
+	void AnimNotify_Completed();
+	void AnimNotify_LookingAtItem();
+	void BlueprintInitializeAnimation();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ryo_Search_AnimGraphNode_SequencePlayer_7D41B50A4CB6689CE5A8358402C93F68();
+	void AnimNotify_MoveStart();
+	void ExecuteUbergraph_ABP_Ryo_Search(int EntryPoint);
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.CheckWriteUnderLine
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            MemoId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           WriteUnderLine                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3Memopad_textContent_EN_C::STATIC_CheckWriteUnderLine(int MemoId, bool* WriteUnderLine)
+void Uwgt_S3Memopad_textContent_EN_C::CheckWriteUnderLine(int MemoId, bool* WriteUnderLine)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.CheckWriteUnderLine");
 
@@ -27,7 +27,6 @@ void Uwgt_S3Memopad_textContent_EN_C::STATIC_CheckWriteUnderLine(int MemoId, boo
 	params.MemoId = MemoId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,14 +38,14 @@ void Uwgt_S3Memopad_textContent_EN_C::STATIC_CheckWriteUnderLine(int MemoId, boo
 
 
 // Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.UpdateDisplay
-// (Native, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Body                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FST_RubyInfo            RubyInfo                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            MemoId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3Memopad_textContent_EN_C::STATIC_UpdateDisplay(const struct FString& Body, const struct FST_RubyInfo& RubyInfo, int MemoId, bool* newParam)
+void Uwgt_S3Memopad_textContent_EN_C::UpdateDisplay(const struct FString& Body, const struct FST_RubyInfo& RubyInfo, int MemoId, bool* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.UpdateDisplay");
 
@@ -56,7 +55,6 @@ void Uwgt_S3Memopad_textContent_EN_C::STATIC_UpdateDisplay(const struct FString&
 	params.MemoId = MemoId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,19 +66,18 @@ void Uwgt_S3Memopad_textContent_EN_C::STATIC_UpdateDisplay(const struct FString&
 
 
 // Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.GetRubySize
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          X                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Y                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3Memopad_textContent_EN_C::STATIC_GetRubySize(float* X, float* Y)
+void Uwgt_S3Memopad_textContent_EN_C::GetRubySize(float* X, float* Y)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.GetRubySize");
 
 	Uwgt_S3Memopad_textContent_EN_C_GetRubySize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +91,7 @@ void Uwgt_S3Memopad_textContent_EN_C::STATIC_GetRubySize(float* X, float* Y)
 
 
 // Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.Construct
-// (Exec, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_S3Memopad_textContent_EN_C::Construct()
 {
@@ -111,16 +108,15 @@ void Uwgt_S3Memopad_textContent_EN_C::Construct()
 
 
 // Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.Destruct
-// (Net, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_S3Memopad_textContent_EN_C::STATIC_Destruct()
+void Uwgt_S3Memopad_textContent_EN_C::Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.Destruct");
 
 	Uwgt_S3Memopad_textContent_EN_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,11 +125,11 @@ void Uwgt_S3Memopad_textContent_EN_C::STATIC_Destruct()
 
 
 // Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.ExecuteUbergraph_wgt_S3Memopad_textContent_EN
-// (Net, NetRequest, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3Memopad_textContent_EN_C::STATIC_ExecuteUbergraph_wgt_S3Memopad_textContent_EN(int EntryPoint)
+void Uwgt_S3Memopad_textContent_EN_C::ExecuteUbergraph_wgt_S3Memopad_textContent_EN(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_EN.wgt_S3Memopad_textContent_EN_C.ExecuteUbergraph_wgt_S3Memopad_textContent_EN");
 

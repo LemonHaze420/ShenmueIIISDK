@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,21 +38,21 @@ public:
 
 	void SetLanguageSelector();
 	void SetSystemVolume(float Volume);
-	void STATIC_Stop();
-	void STATIC_PlayOrActivate();
-	void STATIC_SetDisableSound(bool Disable, class AActor* Actor);
+	void Stop();
+	void PlayOrActivate();
+	void SetDisableSound(bool Disable, class AActor* Actor);
 	void IsDisable(bool* Disabled);
 	void PermitPlay();
-	void STATIC_SetGameTimeSelector(bool* Change);
+	void SetGameTimeSelector(bool* Change);
 	void Replay();
 	void SetWeatherSelector(bool Bind);
-	void STATIC_SetSelectorLabel();
-	void STATIC_UserConstructionScript();
+	void SetSelectorLabel();
+	void UserConstructionScript();
 	void ChangeWeather();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BP_S3AtomSound(int EntryPoint);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ExecuteUbergraph_BP_S3AtomSound(int EntryPoint);
 };
 
 

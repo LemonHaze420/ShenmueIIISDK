@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,30 +49,30 @@ public:
 
 
 	bool CheckAboveGround(const struct FVector& Location);
-	void STATIC_LazySetupIgnoreActors();
-	struct FRotator STATIC_MakeCenterLookRotation();
+	void LazySetupIgnoreActors();
+	struct FRotator MakeCenterLookRotation();
 	struct FVector GetTargetActorEyeLocationForTraceCheck(class AActor* InActor, const struct FVector& InOwnerLocation);
 	void CalcCurrentBaseDistanceAndCount(float* BaseDistance, int* Count);
 	struct FVector GetTargetActorLocationForCheck(class AActor* InActor);
-	float STATIC_GetDistanceToLeaveForCheck(class AActor* TargetActor);
-	void STATIC_CheckInBuildingOwnerActor();
+	float GetDistanceToLeaveForCheck(class AActor* TargetActor);
+	void CheckInBuildingOwnerActor();
 	void ConvertAvoidableLocation(const struct FVector& AvoidableLocation, struct FVector* ActorLocation);
 	bool TestCapsuleOverlap(const struct FVector& CapsulePos);
 	void IsIgnoreCollisionProfile(const struct FName& CollisionProfileName, bool* bIgnore);
 	void SetupIgnoreActors();
 	void CanAvoidance(bool* bCan);
-	void STATIC_DebugPrintString(const struct FString& Chara, const struct FString& Result, const struct FLinearColor& TextColor);
-	void STATIC_ProcessAvoidable(bool* bProcessed);
-	void STATIC_IsAvoiddableDecide(bool* bExecution);
-	void STATIC_SetActors(TArray<class AActor*>* Actors);
+	void DebugPrintString(const struct FString& Chara, const struct FString& Result, const struct FLinearColor& TextColor);
+	void ProcessAvoidable(bool* bProcessed);
+	void IsAvoiddableDecide(bool* bExecution);
+	void SetActors(TArray<class AActor*>* Actors);
 	void DistanceCheckTargetActors(const struct FVector& TestActorLocation, bool* bSuccess);
-	void STATIC_GetForwardVector(struct FVector* ForwardVector);
+	void GetForwardVector(struct FVector* ForwardVector);
 	void GetAvoidableLocation(bool* bSuccess, struct FVector* AvoidableLocation, struct FString* LogString);
 	void AvoidableTest(const struct FVector& ActorLocation, bool bDesperate, bool* bSuccessAvoidable);
 	void EyeLineTraceCheckTargetActors(const struct FVector& TestActorLocation, bool* bSuccess);
-	void STATIC_GetActorPositionAfterRotationByAngle(float Angle, float Distance, struct FVector* ActorLocation);
+	void GetActorPositionAfterRotationByAngle(float Angle, float Distance, struct FVector* ActorLocation);
 	void ActorCollisionTestHeight(const struct FVector& ActorLocation, bool* bHitGround, struct FVector* HitLocation);
-	void STATIC_OutputDebugCollision(const struct FVector& ActorLocation, const struct FLinearColor& LineColor);
+	void OutputDebugCollision(const struct FVector& ActorLocation, const struct FLinearColor& LineColor);
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_TalkAvoidance(int EntryPoint);
 };

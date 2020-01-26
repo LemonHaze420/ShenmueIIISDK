@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Cursor.BP_Cursor_C.PlaySelectAnim
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AnimTime                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Cursor_C::STATIC_PlaySelectAnim(float* AnimTime)
+void ABP_Cursor_C::PlaySelectAnim(float* AnimTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Cursor.BP_Cursor_C.PlaySelectAnim");
 
 	ABP_Cursor_C_PlaySelectAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ABP_Cursor_C::STATIC_PlaySelectAnim(float* AnimTime)
 
 
 // Function BP_Cursor.BP_Cursor_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Cursor_C::UserConstructionScript()
 {
@@ -46,7 +45,6 @@ void ABP_Cursor_C::UserConstructionScript()
 	ABP_Cursor_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

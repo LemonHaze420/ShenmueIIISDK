@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,12 +18,7 @@ class ABP_AnisotropicFlare_C : public AActor
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (Transient, DuplicateTransient)
-	class UParticleSystemComponent*                    PFX_Flare_Anisotropic;                                    // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0338(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               Active;                                                   // 0x0340(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0341(0x0007) MISSED OFFSET
-	class UMaterialInstanceDynamic*                    DMI;                                                      // 0x0348(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Flare_Power;                                              // 0x0350(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x24];                                      // 0x0330(0x0024) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -32,9 +27,8 @@ public:
 	}
 
 
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_AnisotropicFlare(int EntryPoint);
 };
 
 

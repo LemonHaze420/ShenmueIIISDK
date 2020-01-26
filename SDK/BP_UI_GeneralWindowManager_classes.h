@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,19 +38,19 @@ public:
 	}
 
 
-	struct FST_GeneralWindow_Button STATIC_MakeHiddenParam(const struct FST_GeneralWindow_Button& InParam);
-	void STATIC_HideInput(bool bHide);
-	void STATIC_JudgeButton(TEnumAsByte<EN_GeneralWindow_Button> Button);
-	void STATIC_CloseWindow(class AActor* Actor, bool* Success);
-	void STATIC_SetButtonFlag(bool* Result);
+	struct FST_GeneralWindow_Button MakeHiddenParam(const struct FST_GeneralWindow_Button& InParam);
+	void HideInput(bool bHide);
+	void JudgeButton(TEnumAsByte<EN_GeneralWindow_Button> Button);
+	void CloseWindow(class AActor* Actor, bool* Success);
+	void SetButtonFlag(bool* Result);
 	void UserConstructionScript();
 	void InpActEvt_SearchTopButton_K2Node_InputActionEvent_8(const struct FKey& Key);
 	void InpActEvt_SearchLeftButton_K2Node_InputActionEvent_7(const struct FKey& Key);
 	void InpActEvt_SearchRightButton_K2Node_InputActionEvent_6(const struct FKey& Key);
 	void InpActEvt_SearchBottomButton_K2Node_InputActionEvent_5(const struct FKey& Key);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveDestroyed();
-	void STATIC_ExecuteUbergraph_BP_UI_GeneralWindowManager(int EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
+	void ExecuteUbergraph_BP_UI_GeneralWindowManager(int EntryPoint);
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3GameMode.BP_S3GameMode_C.IsNPCFadeInProgress
-// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3GameMode_C::STATIC_IsNPCFadeInProgress()
+bool ABP_S3GameMode_C::IsNPCFadeInProgress()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameMode.BP_S3GameMode_C.IsNPCFadeInProgress");
 
 	ABP_S3GameMode_C_IsNPCFadeInProgress_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +35,7 @@ bool ABP_S3GameMode_C::STATIC_IsNPCFadeInProgress()
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.CheckSkip
-// (NetReliable, NetRequest, Event, NetResponse, Public, Delegate, HasOutParms, HasDefaults, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -58,16 +57,15 @@ void ABP_S3GameMode_C::CheckSkip(bool* dummy)
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.RestoreExtendAttention
-// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3GameMode_C::STATIC_RestoreExtendAttention()
+void ABP_S3GameMode_C::RestoreExtendAttention()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameMode.BP_S3GameMode_C.RestoreExtendAttention");
 
 	ABP_S3GameMode_C_RestoreExtendAttention_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,11 +74,11 @@ void ABP_S3GameMode_C::STATIC_RestoreExtendAttention()
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.ExtendAttention
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  AttentionControllerClass       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3GameMode_C::STATIC_ExtendAttention(class UClass* AttentionControllerClass)
+void ABP_S3GameMode_C::ExtendAttention(class UClass* AttentionControllerClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameMode.BP_S3GameMode_C.ExtendAttention");
 
@@ -96,16 +94,15 @@ void ABP_S3GameMode_C::STATIC_ExtendAttention(class UClass* AttentionControllerC
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.RetryGame
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3GameMode_C::STATIC_RetryGame()
+void ABP_S3GameMode_C::RetryGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameMode.BP_S3GameMode_C.RetryGame");
 
 	ABP_S3GameMode_C_RetryGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,9 +111,9 @@ void ABP_S3GameMode_C::STATIC_RetryGame()
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.InitWeather
-// (Exec, Event, NetResponse, Static, Public, Private, NetServer, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3GameMode_C::STATIC_InitWeather()
+void ABP_S3GameMode_C::InitWeather()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameMode.BP_S3GameMode_C.InitWeather");
 
@@ -131,16 +128,15 @@ void ABP_S3GameMode_C::STATIC_InitWeather()
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.UserConstructionScript
-// (NetRequest, Native, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3GameMode_C::STATIC_UserConstructionScript()
+void ABP_S3GameMode_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameMode.BP_S3GameMode_C.UserConstructionScript");
 
 	ABP_S3GameMode_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +145,7 @@ void ABP_S3GameMode_C::STATIC_UserConstructionScript()
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_S3GameMode_C::ReceiveBeginPlay()
 {
@@ -166,7 +162,7 @@ void ABP_S3GameMode_C::ReceiveBeginPlay()
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.CheckTimeManager
-// (Net, NetRequest, Exec, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3GameMode_C::CheckTimeManager()
 {
@@ -183,11 +179,11 @@ void ABP_S3GameMode_C::CheckTimeManager()
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.SetSkyManager
-// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3SkyManager*           InSkyManager                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3GameMode_C::STATIC_SetSkyManager(class AS3SkyManager* InSkyManager)
+void ABP_S3GameMode_C::SetSkyManager(class AS3SkyManager* InSkyManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameMode.BP_S3GameMode_C.SetSkyManager");
 
@@ -203,11 +199,11 @@ void ABP_S3GameMode_C::STATIC_SetSkyManager(class AS3SkyManager* InSkyManager)
 
 
 // Function BP_S3GameMode.BP_S3GameMode_C.ExecuteUbergraph_BP_S3GameMode
-// (Exec, Native, Static, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3GameMode_C::STATIC_ExecuteUbergraph_BP_S3GameMode(int EntryPoint)
+void ABP_S3GameMode_C::ExecuteUbergraph_BP_S3GameMode(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameMode.BP_S3GameMode_C.ExecuteUbergraph_BP_S3GameMode");
 
@@ -215,7 +211,6 @@ void ABP_S3GameMode_C::STATIC_ExecuteUbergraph_BP_S3GameMode(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

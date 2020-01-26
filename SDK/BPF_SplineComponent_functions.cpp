@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_SplineComponent.BPF_SplineComponent_C.BPF_Spline_FindPredictedWorldLocationWithProjection
-// (Exec, Event, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USplineComponent*        spline                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 WorldLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -22,7 +22,7 @@ namespace SDK
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector UBPF_SplineComponent_C::BPF_Spline_FindPredictedWorldLocationWithProjection(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext)
+struct FVector UBPF_SplineComponent_C::STATIC_BPF_Spline_FindPredictedWorldLocationWithProjection(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_SplineComponent.BPF_SplineComponent_C.BPF_Spline_FindPredictedWorldLocationWithProjection");
 
@@ -43,7 +43,7 @@ struct FVector UBPF_SplineComponent_C::BPF_Spline_FindPredictedWorldLocationWith
 
 
 // Function BPF_SplineComponent.BPF_SplineComponent_C.BPF_Spline_FindDistanceClosestToWorldLocation
-// (Native, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USplineComponent*        spline                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 WorldLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -60,7 +60,6 @@ float UBPF_SplineComponent_C::STATIC_BPF_Spline_FindDistanceClosestToWorldLocati
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +70,7 @@ float UBPF_SplineComponent_C::STATIC_BPF_Spline_FindDistanceClosestToWorldLocati
 
 
 // Function BPF_SplineComponent.BPF_SplineComponent_C.BPF_Spline_FindPredictedWorldLocation
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USplineComponent*        spline                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 WorldLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -79,7 +78,7 @@ float UBPF_SplineComponent_C::STATIC_BPF_Spline_FindDistanceClosestToWorldLocati
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector UBPF_SplineComponent_C::BPF_Spline_FindPredictedWorldLocation(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext)
+struct FVector UBPF_SplineComponent_C::STATIC_BPF_Spline_FindPredictedWorldLocation(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_SplineComponent.BPF_SplineComponent_C.BPF_Spline_FindPredictedWorldLocation");
 
@@ -90,7 +89,6 @@ struct FVector UBPF_SplineComponent_C::BPF_Spline_FindPredictedWorldLocation(cla
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -101,7 +99,7 @@ struct FVector UBPF_SplineComponent_C::BPF_Spline_FindPredictedWorldLocation(cla
 
 
 // Function BPF_SplineComponent.BPF_SplineComponent_C.BPF_Spline_FindTangentClosestToWorldLocation
-// (Exec, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USplineComponent*        spline                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 WorldLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)

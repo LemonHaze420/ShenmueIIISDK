@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,14 +32,14 @@ public:
 
 
 	bool CheckDoorOnPath();
-	void STATIC_CalculateFollowSpeed(float DistanceToLeader, float LeaderSpeed, float FollowDistanceEnd, float* OutSpeed);
-	void STATIC_TryLogPathFailure();
+	void CalculateFollowSpeed(float DistanceToLeader, float LeaderSpeed, float FollowDistanceEnd, float* OutSpeed);
+	void TryLogPathFailure();
 	void MoveStateEnter(bool* bDummy);
 	void StateEnter(float Delta, bool* bProcessing);
 	void GetPathfindTarget(struct FVector* OutLocation, class AActor** OutActor);
 	void OnFail_27825A3A4DCF934B8E42E09B783488FD(TEnumAsByte<EPathFollowingResult> MovementResult);
 	void OnSuccess_27825A3A4DCF934B8E42E09B783488FD(TEnumAsByte<EPathFollowingResult> MovementResult);
-	void STATIC_Pathfind();
+	void Pathfind();
 	void ExecuteUbergraph_BP_State_Follow_MoveBase(int EntryPoint);
 };
 

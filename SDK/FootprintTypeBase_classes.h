@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,7 +38,7 @@ public:
 	}
 
 
-	void STATIC_OnFootFall(const struct FVector& FootLocation, const struct FRotator& FootRotation, TEnumAsByte<ENEFootType> FootType, class UFootprintComponent_C* FootprintComponent);
+	void OnFootFall(const struct FVector& FootLocation, const struct FRotator& FootRotation, TEnumAsByte<ENEFootType> FootType, class UFootprintComponent_C* FootprintComponent);
 };
 
 

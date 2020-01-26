@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_money_status.BP_money_status_C.IsShouldVisible
-// (NetRequest, NetResponse, Private, Delegate, HasOutParms, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void ABP_money_status_C::IsShouldVisible(bool* Visible)
 
 
 // Function BP_money_status.BP_money_status_C.SetForbid
-// (NetRequest, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Fobid                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -58,7 +58,7 @@ void ABP_money_status_C::SetForbid(class AActor* Actor, bool Fobid)
 
 
 // Function BP_money_status.BP_money_status_C.CheckVisible
-// (Net, Exec, Native, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_money_status_C::CheckVisible()
 {
@@ -67,7 +67,6 @@ void ABP_money_status_C::CheckVisible()
 	ABP_money_status_C_CheckVisible_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,7 +75,7 @@ void ABP_money_status_C::CheckVisible()
 
 
 // Function BP_money_status.BP_money_status_C.Hide
-// (Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -88,7 +87,6 @@ void ABP_money_status_C::Hide(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,11 +95,11 @@ void ABP_money_status_C::Hide(class AActor* Actor)
 
 
 // Function BP_money_status.BP_money_status_C.Show
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_money_status_C::STATIC_Show(class AActor* Actor)
+void ABP_money_status_C::Show(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_money_status.BP_money_status_C.Show");
 
@@ -109,7 +107,6 @@ void ABP_money_status_C::STATIC_Show(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,7 +115,7 @@ void ABP_money_status_C::STATIC_Show(class AActor* Actor)
 
 
 // Function BP_money_status.BP_money_status_C.UserConstructionScript
-// (Exec, Native, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_money_status_C::UserConstructionScript()
 {
@@ -127,7 +124,6 @@ void ABP_money_status_C::UserConstructionScript()
 	ABP_money_status_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,9 +132,9 @@ void ABP_money_status_C::UserConstructionScript()
 
 
 // Function BP_money_status.BP_money_status_C.ReceiveBeginPlay
-// (Net, NetReliable, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_money_status_C::STATIC_ReceiveBeginPlay()
+void ABP_money_status_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_money_status.BP_money_status_C.ReceiveBeginPlay");
 
@@ -153,7 +149,7 @@ void ABP_money_status_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_money_status.BP_money_status_C.ReceiveEndPlay
-// (Net, NetRequest, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -173,9 +169,9 @@ void ABP_money_status_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReaso
 
 
 // Function BP_money_status.BP_money_status_C.CreateWidget
-// (NetReliable, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_money_status_C::STATIC_CreateWidget()
+void ABP_money_status_C::CreateWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_money_status.BP_money_status_C.CreateWidget");
 
@@ -190,9 +186,9 @@ void ABP_money_status_C::STATIC_CreateWidget()
 
 
 // Function BP_money_status.BP_money_status_C.DestroyWidget
-// (Net, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_money_status_C::STATIC_DestroyWidget()
+void ABP_money_status_C::DestroyWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_money_status.BP_money_status_C.DestroyWidget");
 
@@ -207,9 +203,9 @@ void ABP_money_status_C::STATIC_DestroyWidget()
 
 
 // Function BP_money_status.BP_money_status_C.FadeOutFinished
-// (Net, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_money_status_C::STATIC_FadeOutFinished()
+void ABP_money_status_C::FadeOutFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_money_status.BP_money_status_C.FadeOutFinished");
 
@@ -224,11 +220,11 @@ void ABP_money_status_C::STATIC_FadeOutFinished()
 
 
 // Function BP_money_status.BP_money_status_C.ExecuteUbergraph_BP_money_status
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_money_status_C::STATIC_ExecuteUbergraph_BP_money_status(int EntryPoint)
+void ABP_money_status_C::ExecuteUbergraph_BP_money_status(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_money_status.BP_money_status_C.ExecuteUbergraph_BP_money_status");
 

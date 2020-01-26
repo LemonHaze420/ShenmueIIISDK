@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.StateExit
-// (Net, NetRequest, NetResponse, Static, NetMulticast, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_GotoPOI_C::STATIC_StateExit(float Delta, bool* bProcessing)
+void UBP_State_Follow_GotoPOI_C::StateExit(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.StateExit");
 
@@ -38,11 +38,11 @@ void UBP_State_Follow_GotoPOI_C::STATIC_StateExit(float Delta, bool* bProcessing
 
 
 // Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.MoveStateEnter
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_GotoPOI_C::STATIC_MoveStateEnter(bool* bDummy)
+void UBP_State_Follow_GotoPOI_C::MoveStateEnter(bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.MoveStateEnter");
 
@@ -60,7 +60,7 @@ void UBP_State_Follow_GotoPOI_C::STATIC_MoveStateEnter(bool* bDummy)
 
 
 // Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.GetPathfindTarget
-// (Exec, Native, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
 // class AActor*                  OutActor                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -72,7 +72,6 @@ void UBP_State_Follow_GotoPOI_C::GetPathfindTarget(struct FVector* OutLocation, 
 	UBP_State_Follow_GotoPOI_C_GetPathfindTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,12 +85,12 @@ void UBP_State_Follow_GotoPOI_C::GetPathfindTarget(struct FVector* OutLocation, 
 
 
 // Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.StateEnter
-// (NetRequest, Exec, Native, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_GotoPOI_C::STATIC_StateEnter(float Delta, bool* bProcessing)
+void UBP_State_Follow_GotoPOI_C::StateEnter(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.StateEnter");
 
@@ -99,7 +98,6 @@ void UBP_State_Follow_GotoPOI_C::STATIC_StateEnter(float Delta, bool* bProcessin
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,12 +109,12 @@ void UBP_State_Follow_GotoPOI_C::STATIC_StateEnter(float Delta, bool* bProcessin
 
 
 // Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.StateUpdate
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_GotoPOI_C::STATIC_StateUpdate(float Delta, bool* bDummy)
+void UBP_State_Follow_GotoPOI_C::StateUpdate(float Delta, bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.StateUpdate");
 
@@ -124,7 +122,6 @@ void UBP_State_Follow_GotoPOI_C::STATIC_StateUpdate(float Delta, bool* bDummy)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,16 +133,15 @@ void UBP_State_Follow_GotoPOI_C::STATIC_StateUpdate(float Delta, bool* bDummy)
 
 
 // Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.CancelPath
-// (Net, NetReliable, Exec, Native, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_State_Follow_GotoPOI_C::STATIC_CancelPath()
+void UBP_State_Follow_GotoPOI_C::CancelPath()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.CancelPath");
 
 	UBP_State_Follow_GotoPOI_C_CancelPath_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,7 +150,7 @@ void UBP_State_Follow_GotoPOI_C::STATIC_CancelPath()
 
 
 // Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.UpdateTransitions
-// (Exec, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -166,7 +162,6 @@ void UBP_State_Follow_GotoPOI_C::UpdateTransitions(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,16 +170,15 @@ void UBP_State_Follow_GotoPOI_C::UpdateTransitions(float DeltaSeconds)
 
 
 // Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.FinishPath
-// (NetReliable, Exec, Native, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_State_Follow_GotoPOI_C::STATIC_FinishPath()
+void UBP_State_Follow_GotoPOI_C::FinishPath()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.FinishPath");
 
 	UBP_State_Follow_GotoPOI_C_FinishPath_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,11 +187,11 @@ void UBP_State_Follow_GotoPOI_C::STATIC_FinishPath()
 
 
 // Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.ExecuteUbergraph_BP_State_Follow_GotoPOI
-// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_GotoPOI_C::STATIC_ExecuteUbergraph_BP_State_Follow_GotoPOI(int EntryPoint)
+void UBP_State_Follow_GotoPOI_C::ExecuteUbergraph_BP_State_Follow_GotoPOI(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_GotoPOI.BP_State_Follow_GotoPOI_C.ExecuteUbergraph_BP_State_Follow_GotoPOI");
 

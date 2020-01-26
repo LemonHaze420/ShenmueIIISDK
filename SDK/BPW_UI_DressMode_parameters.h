@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,7 +32,7 @@ struct UBPW_UI_DressMode_C_ResetRotation_Params
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.RotationModel
 struct UBPW_UI_DressMode_C_RotationModel_Params
 {
-	float                                              axis_value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Axis_Value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.UpdateCharaCloth

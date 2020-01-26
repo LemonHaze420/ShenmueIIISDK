@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPI_S3CategoryButtonWidget.BPI_S3CategoryButtonWidget_C.SetButtonSelected
-// (Net, Exec, Native, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bSelected                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPI_S3CategoryButtonWidget_C::STATIC_SetButtonSelected(bool bSelected)
+void UBPI_S3CategoryButtonWidget_C::SetButtonSelected(bool bSelected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_S3CategoryButtonWidget.BPI_S3CategoryButtonWidget_C.SetButtonSelected");
 
@@ -26,7 +26,6 @@ void UBPI_S3CategoryButtonWidget_C::STATIC_SetButtonSelected(bool bSelected)
 	params.bSelected = bSelected;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void UBPI_S3CategoryButtonWidget_C::STATIC_SetButtonSelected(bool bSelected)
 
 
 // Function BPI_S3CategoryButtonWidget.BPI_S3CategoryButtonWidget_C.SetCursorEnabled
-// (Net, Exec, Native, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPI_S3CategoryButtonWidget_C::STATIC_SetCursorEnabled(bool bEnabled)
+void UBPI_S3CategoryButtonWidget_C::SetCursorEnabled(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_S3CategoryButtonWidget.BPI_S3CategoryButtonWidget_C.SetCursorEnabled");
 
@@ -47,7 +46,6 @@ void UBPI_S3CategoryButtonWidget_C::STATIC_SetCursorEnabled(bool bEnabled)
 	params.bEnabled = bEnabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,11 +54,11 @@ void UBPI_S3CategoryButtonWidget_C::STATIC_SetCursorEnabled(bool bEnabled)
 
 
 // Function BPI_S3CategoryButtonWidget.BPI_S3CategoryButtonWidget_C.SetText
-// (Net, Exec, Native, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPI_S3CategoryButtonWidget_C::STATIC_SetText(const struct FText& Text)
+void UBPI_S3CategoryButtonWidget_C::SetText(const struct FText& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_S3CategoryButtonWidget.BPI_S3CategoryButtonWidget_C.SetText");
 
@@ -68,7 +66,6 @@ void UBPI_S3CategoryButtonWidget_C::STATIC_SetText(const struct FText& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

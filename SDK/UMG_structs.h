@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,6 +54,17 @@ enum class EDragPivot : uint8_t
 };
 
 
+// Enum UMG.EDynamicBoxType
+enum class EDynamicBoxType : uint8_t
+{
+	EDynamicBoxType__Horizontal    = 0,
+	EDynamicBoxType__Vertical      = 1,
+	EDynamicBoxType__Wrap          = 2,
+	EDynamicBoxType__Overlay       = 3,
+	EDynamicBoxType__EDynamicBoxType_MAX = 4
+};
+
+
 // Enum UMG.ESlateSizeRule
 enum class ESlateSizeRule : uint8_t
 {
@@ -82,6 +93,17 @@ enum class EWidgetTickFrequency : uint8_t
 };
 
 
+// Enum UMG.EWidgetDesignFlags
+enum class EWidgetDesignFlags : uint8_t
+{
+	EWidgetDesignFlags__None       = 0,
+	EWidgetDesignFlags__Designing  = 1,
+	EWidgetDesignFlags__ShowOutline = 2,
+	EWidgetDesignFlags__ExecutePreConstruct = 3,
+	EWidgetDesignFlags__EWidgetDesignFlags_MAX = 4
+};
+
+
 // Enum UMG.EBindingKind
 enum class EBindingKind : uint8_t
 {
@@ -91,32 +113,12 @@ enum class EBindingKind : uint8_t
 };
 
 
-// Enum UMG.EDynamicBoxType
-enum class EDynamicBoxType : uint8_t
-{
-	EDynamicBoxType__Horizontal    = 0,
-	EDynamicBoxType__Vertical      = 1,
-	EDynamicBoxType__Wrap          = 2,
-	EDynamicBoxType__Overlay       = 3,
-	EDynamicBoxType__EDynamicBoxType_MAX = 4
-};
-
-
 // Enum UMG.EWidgetGeometryMode
 enum class EWidgetGeometryMode : uint8_t
 {
 	EWidgetGeometryMode__Plane     = 0,
 	EWidgetGeometryMode__Cylinder  = 1,
 	EWidgetGeometryMode__EWidgetGeometryMode_MAX = 2
-};
-
-
-// Enum UMG.EWidgetTimingPolicy
-enum class EWidgetTimingPolicy : uint8_t
-{
-	EWidgetTimingPolicy__RealTime  = 0,
-	EWidgetTimingPolicy__GameTime  = 1,
-	EWidgetTimingPolicy__EWidgetTimingPolicy_MAX = 2
 };
 
 
@@ -130,14 +132,12 @@ enum class EWidgetBlendMode : uint8_t
 };
 
 
-// Enum UMG.EWidgetInteractionSource
-enum class EWidgetInteractionSource : uint8_t
+// Enum UMG.EWidgetTimingPolicy
+enum class EWidgetTimingPolicy : uint8_t
 {
-	EWidgetInteractionSource__World = 0,
-	EWidgetInteractionSource__Mouse = 1,
-	EWidgetInteractionSource__CenterScreen = 2,
-	EWidgetInteractionSource__Custom = 3,
-	EWidgetInteractionSource__EWidgetInteractionSource_MAX = 4
+	EWidgetTimingPolicy__RealTime  = 0,
+	EWidgetTimingPolicy__GameTime  = 1,
+	EWidgetTimingPolicy__EWidgetTimingPolicy_MAX = 2
 };
 
 
@@ -150,14 +150,14 @@ enum class EWidgetSpace : uint8_t
 };
 
 
-// Enum UMG.EWidgetDesignFlags
-enum class EWidgetDesignFlags : uint8_t
+// Enum UMG.EWidgetInteractionSource
+enum class EWidgetInteractionSource : uint8_t
 {
-	EWidgetDesignFlags__None       = 0,
-	EWidgetDesignFlags__Designing  = 1,
-	EWidgetDesignFlags__ShowOutline = 2,
-	EWidgetDesignFlags__ExecutePreConstruct = 3,
-	EWidgetDesignFlags__EWidgetDesignFlags_MAX = 4
+	EWidgetInteractionSource__World = 0,
+	EWidgetInteractionSource__Mouse = 1,
+	EWidgetInteractionSource__CenterScreen = 2,
+	EWidgetInteractionSource__Custom = 3,
+	EWidgetInteractionSource__EWidgetInteractionSource_MAX = 4
 };
 
 
@@ -265,6 +265,17 @@ struct FWidgetAnimationBinding
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
 };
 
+// ScriptStruct UMG.WidgetNavigationData
+// 0x0028
+struct FWidgetNavigationData
+{
+	EUINavigationRule                                  Rule;                                                     // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	struct FName                                       WidgetToFocus;                                            // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UWidget>                      Widget;                                                   // 0x0010(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FScriptDelegate                             CustomDelegate;                                           // 0x0018(0x0014) (ZeroConstructor, InstancedReference)
+};
+
 // ScriptStruct UMG.DelegateRuntimeBinding
 // 0x0050
 struct FDelegateRuntimeBinding
@@ -275,17 +286,6 @@ struct FDelegateRuntimeBinding
 	struct FDynamicPropertyPath                        SourcePath;                                               // 0x0020(0x0028)
 	EBindingKind                                       Kind;                                                     // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct UMG.WidgetNavigationData
-// 0x0028
-struct FWidgetNavigationData
-{
-	EUINavigationRule                                  Rule;                                                     // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FName                                       WidgetToFocus;                                            // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class UWidget>                      Widget;                                                   // 0x0010(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FScriptDelegate                             CustomDelegate;                                           // 0x0018(0x0014) (ZeroConstructor, InstancedReference)
 };
 
 // ScriptStruct UMG.MovieScene2DTransformSectionTemplate

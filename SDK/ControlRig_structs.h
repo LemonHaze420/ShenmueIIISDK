@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,6 +12,15 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum ControlRig.ERigExecutionType
+enum class ERigExecutionType : uint8_t
+{
+	ERigExecutionType__Runtime     = 0,
+	ERigExecutionType__Editing     = 1,
+	ERigExecutionType__Max         = 2
+};
+
+
 // Enum ControlRig.EControlRigOpCode
 enum class EControlRigOpCode : uint8_t
 {
@@ -20,15 +29,6 @@ enum class EControlRigOpCode : uint8_t
 	EControlRigOpCode__Exec        = 2,
 	EControlRigOpCode__Invalid     = 3,
 	EControlRigOpCode__EControlRigOpCode_MAX = 4
-};
-
-
-// Enum ControlRig.ERigExecutionType
-enum class ERigExecutionType : uint8_t
-{
-	ERigExecutionType__Runtime     = 0,
-	ERigExecutionType__Editing     = 1,
-	ERigExecutionType__Max         = 2
 };
 
 
@@ -48,17 +48,6 @@ enum class EAimMode : uint8_t
 	EAimMode__AimAtTarget          = 0,
 	EAimMode__OrientToTarget       = 1,
 	EAimMode__MAX                  = 2
-};
-
-
-// Enum ControlRig.ETransformSpaceMode
-enum class ETransformSpaceMode : uint8_t
-{
-	ETransformSpaceMode__LocalSpace = 0,
-	ETransformSpaceMode__GlobalSpace = 1,
-	ETransformSpaceMode__BaseSpace = 2,
-	ETransformSpaceMode__BaseJoint = 3,
-	ETransformSpaceMode__Max       = 4
 };
 
 
@@ -89,6 +78,17 @@ enum class EControlRigState : uint8_t
 	EControlRigState__Update       = 1,
 	EControlRigState__Invalid      = 2,
 	EControlRigState__EControlRigState_MAX = 3
+};
+
+
+// Enum ControlRig.ETransformSpaceMode
+enum class ETransformSpaceMode : uint8_t
+{
+	ETransformSpaceMode__LocalSpace = 0,
+	ETransformSpaceMode__GlobalSpace = 1,
+	ETransformSpaceMode__BaseSpace = 2,
+	ETransformSpaceMode__BaseJoint = 3,
+	ETransformSpaceMode__Max       = 4
 };
 
 
@@ -177,13 +177,6 @@ struct FAnimNode_ControlRig : public FAnimNode_ControlRigBase
 struct FAnimNode_ControlRig_ExternalSource : public FAnimNode_ControlRigBase
 {
 	TWeakObjectPtr<class UControlRig>                  ControlRig;                                               // 0x0048(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-};
-
-// ScriptStruct ControlRig.ControlRigBindingTemplate
-// 0x0000 (0x00B0 - 0x00B0)
-struct FControlRigBindingTemplate : public FMovieSceneSpawnSectionTemplate
-{
-
 };
 
 // ScriptStruct ControlRig.ControlRigSequenceObjectReference
@@ -342,14 +335,6 @@ struct FRigUnit_ToSwingAndTwist : public FRigUnit
 	struct FQuat                                       Twist;                                                    // 0x0050(0x0010) (IsPlainOldData)
 };
 
-// ScriptStruct ControlRig.RigUnit_ConvertRotationToVector
-// 0x0018 (0x0038 - 0x0020)
-struct FRigUnit_ConvertRotationToVector : public FRigUnit
-{
-	struct FRotator                                    Input;                                                    // 0x0020(0x000C) (IsPlainOldData)
-	struct FVector                                     Result;                                                   // 0x002C(0x000C) (IsPlainOldData)
-};
-
 // ScriptStruct ControlRig.RigUnit_ConvertQuaternionToVector
 // 0x0020 (0x0040 - 0x0020)
 struct FRigUnit_ConvertQuaternionToVector : public FRigUnit
@@ -359,13 +344,12 @@ struct FRigUnit_ConvertQuaternionToVector : public FRigUnit
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct ControlRig.RigUnit_ConvertVectorToQuaternion
-// 0x0020 (0x0040 - 0x0020)
-struct FRigUnit_ConvertVectorToQuaternion : public FRigUnit
+// ScriptStruct ControlRig.RigUnit_ConvertRotationToVector
+// 0x0018 (0x0038 - 0x0020)
+struct FRigUnit_ConvertRotationToVector : public FRigUnit
 {
-	struct FVector                                     Input;                                                    // 0x0020(0x000C) (IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	struct FQuat                                       Result;                                                   // 0x0030(0x0010) (IsPlainOldData)
+	struct FRotator                                    Input;                                                    // 0x0020(0x000C) (IsPlainOldData)
+	struct FVector                                     Result;                                                   // 0x002C(0x000C) (IsPlainOldData)
 };
 
 // ScriptStruct ControlRig.RigUnit_ConvertVectorToRotation
@@ -403,13 +387,22 @@ struct FRigUnit_ConvertEulerTransform : public FRigUnit
 	struct FTransform                                  Result;                                                   // 0x0050(0x0030) (IsPlainOldData)
 };
 
-// ScriptStruct ControlRig.RigUnit_CreateHierarchy
-// 0x0038 (0x0058 - 0x0020)
-struct FRigUnit_CreateHierarchy : public FRigUnit
+// ScriptStruct ControlRig.RigUnit_ConvertTransform
+// 0x0060 (0x0080 - 0x0020)
+struct FRigUnit_ConvertTransform : public FRigUnit
 {
-	struct FRigHierarchyRef                            NewHierarchy;                                             // 0x0020(0x0018)
-	struct FRigHierarchyRef                            SourceHierarchy;                                          // 0x0038(0x0018)
-	struct FName                                       Root;                                                     // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FTransform                                  Input;                                                    // 0x0020(0x0030) (IsPlainOldData)
+	struct FEulerTransform                             Result;                                                   // 0x0050(0x0024)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0074(0x000C) MISSED OFFSET
+};
+
+// ScriptStruct ControlRig.RigUnit_ConvertVectorToQuaternion
+// 0x0020 (0x0040 - 0x0020)
+struct FRigUnit_ConvertVectorToQuaternion : public FRigUnit
+{
+	struct FVector                                     Input;                                                    // 0x0020(0x000C) (IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	struct FQuat                                       Result;                                                   // 0x0030(0x0010) (IsPlainOldData)
 };
 
 // ScriptStruct ControlRig.StructReference
@@ -447,13 +440,13 @@ struct FRigUnit_Example : public FRigUnit
 	struct FRigUnitReference_Example                   TestUnitReferenceOutput;                                  // 0x00C8(0x0008)
 };
 
-// ScriptStruct ControlRig.RigUnit_ConvertTransform
-// 0x0060 (0x0080 - 0x0020)
-struct FRigUnit_ConvertTransform : public FRigUnit
+// ScriptStruct ControlRig.RigUnit_CreateHierarchy
+// 0x0038 (0x0058 - 0x0020)
+struct FRigUnit_CreateHierarchy : public FRigUnit
 {
-	struct FTransform                                  Input;                                                    // 0x0020(0x0030) (IsPlainOldData)
-	struct FEulerTransform                             Result;                                                   // 0x0050(0x0024)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x0074(0x000C) MISSED OFFSET
+	struct FRigHierarchyRef                            NewHierarchy;                                             // 0x0020(0x0018)
+	struct FRigHierarchyRef                            SourceHierarchy;                                          // 0x0038(0x0018)
+	struct FName                                       Root;                                                     // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ControlRig.RigUnit_FABRIK
@@ -478,30 +471,16 @@ struct FRigUnit_BinaryFloatOp : public FRigUnit
 	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct ControlRig.RigUnit_Subtract_FloatFloat
-// 0x0000 (0x0030 - 0x0030)
-struct FRigUnit_Subtract_FloatFloat : public FRigUnit_BinaryFloatOp
-{
-
-};
-
-// ScriptStruct ControlRig.RigUnit_Multiply_FloatFloat
-// 0x0000 (0x0030 - 0x0030)
-struct FRigUnit_Multiply_FloatFloat : public FRigUnit_BinaryFloatOp
-{
-
-};
-
-// ScriptStruct ControlRig.RigUnit_Add_FloatFloat
-// 0x0000 (0x0030 - 0x0030)
-struct FRigUnit_Add_FloatFloat : public FRigUnit_BinaryFloatOp
-{
-
-};
-
 // ScriptStruct ControlRig.RigUnit_Divide_FloatFloat
 // 0x0000 (0x0030 - 0x0030)
 struct FRigUnit_Divide_FloatFloat : public FRigUnit_BinaryFloatOp
+{
+
+};
+
+// ScriptStruct ControlRig.RigUnit_Subtract_FloatFloat
+// 0x0000 (0x0030 - 0x0030)
+struct FRigUnit_Subtract_FloatFloat : public FRigUnit_BinaryFloatOp
 {
 
 };
@@ -517,12 +496,26 @@ struct FRigUnit_GetJointTransform : public FRigUnit
 	struct FTransform                                  Output;                                                   // 0x0050(0x0030) (IsPlainOldData)
 };
 
+// ScriptStruct ControlRig.RigUnit_Multiply_FloatFloat
+// 0x0000 (0x0030 - 0x0030)
+struct FRigUnit_Multiply_FloatFloat : public FRigUnit_BinaryFloatOp
+{
+
+};
+
 // ScriptStruct ControlRig.RigUnit_MergeHierarchy
 // 0x0030 (0x0050 - 0x0020)
 struct FRigUnit_MergeHierarchy : public FRigUnit
 {
 	struct FRigHierarchyRef                            TargetHierarchy;                                          // 0x0020(0x0018)
 	struct FRigHierarchyRef                            SourceHierarchy;                                          // 0x0038(0x0018)
+};
+
+// ScriptStruct ControlRig.RigUnit_Add_FloatFloat
+// 0x0000 (0x0030 - 0x0030)
+struct FRigUnit_Add_FloatFloat : public FRigUnit_BinaryFloatOp
+{
+
 };
 
 // ScriptStruct ControlRig.RigUnit_QuaternionToAngle
@@ -536,13 +529,11 @@ struct FRigUnit_QuaternionToAngle : public FRigUnit
 	unsigned char                                      UnknownData01[0xC];                                       // 0x0044(0x000C) MISSED OFFSET
 };
 
-// ScriptStruct ControlRig.RigUnit_QuaternionFromAxisAndAngle
-// 0x0020 (0x0040 - 0x0020)
-struct FRigUnit_QuaternionFromAxisAndAngle : public FRigUnit
+// ScriptStruct ControlRig.ControlRigBindingTemplate
+// 0x0000 (0x00B0 - 0x00B0)
+struct FControlRigBindingTemplate : public FMovieSceneSpawnSectionTemplate
 {
-	struct FVector                                     Axis;                                                     // 0x0020(0x000C) (IsPlainOldData)
-	float                                              Angle;                                                    // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FQuat                                       Result;                                                   // 0x0030(0x0010) (IsPlainOldData)
+
 };
 
 // ScriptStruct ControlRig.RigUnit_QuaternionToAxisAndAngle
@@ -578,6 +569,15 @@ struct FRigUnit_BinaryQuaternionOp : public FRigUnit
 	struct FQuat                                       Result;                                                   // 0x0040(0x0010) (IsPlainOldData)
 };
 
+// ScriptStruct ControlRig.RigUnit_QuaternionFromAxisAndAngle
+// 0x0020 (0x0040 - 0x0020)
+struct FRigUnit_QuaternionFromAxisAndAngle : public FRigUnit
+{
+	struct FVector                                     Axis;                                                     // 0x0020(0x000C) (IsPlainOldData)
+	float                                              Angle;                                                    // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FQuat                                       Result;                                                   // 0x0030(0x0010) (IsPlainOldData)
+};
+
 // ScriptStruct ControlRig.RigUnit_MultiplyQuaternion
 // 0x0000 (0x0050 - 0x0050)
 struct FRigUnit_MultiplyQuaternion : public FRigUnit_BinaryQuaternionOp
@@ -592,6 +592,20 @@ struct FRigUnit_BinaryTransformOp : public FRigUnit
 	struct FTransform                                  Argument0;                                                // 0x0020(0x0030) (IsPlainOldData)
 	struct FTransform                                  Argument1;                                                // 0x0050(0x0030) (IsPlainOldData)
 	struct FTransform                                  Result;                                                   // 0x0080(0x0030) (IsPlainOldData)
+};
+
+// ScriptStruct ControlRig.RigUnit_GetRelativeTransform
+// 0x0000 (0x00B0 - 0x00B0)
+struct FRigUnit_GetRelativeTransform : public FRigUnit_BinaryTransformOp
+{
+
+};
+
+// ScriptStruct ControlRig.RigUnit_MultiplyTransform
+// 0x0000 (0x00B0 - 0x00B0)
+struct FRigUnit_MultiplyTransform : public FRigUnit_BinaryTransformOp
+{
+
 };
 
 // ScriptStruct ControlRig.ConstraintTarget
@@ -617,13 +631,6 @@ struct FRigUnit_TransformConstraint : public FRigUnit
 	struct FName                                       BaseJoint;                                                // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<struct FConstraintTarget>                   Targets;                                                  // 0x0088(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      UnknownData01[0x68];                                      // 0x0098(0x0068) MISSED OFFSET
-};
-
-// ScriptStruct ControlRig.RigUnit_GetRelativeTransform
-// 0x0000 (0x00B0 - 0x00B0)
-struct FRigUnit_GetRelativeTransform : public FRigUnit_BinaryTransformOp
-{
-
 };
 
 // ScriptStruct ControlRig.RigUnit_TwoBoneIKFK
@@ -681,13 +688,6 @@ struct FRigUnit_Add_VectorVector : public FRigUnit_BinaryVectorOp
 // ScriptStruct ControlRig.RigUnit_Multiply_VectorVector
 // 0x0000 (0x0048 - 0x0048)
 struct FRigUnit_Multiply_VectorVector : public FRigUnit_BinaryVectorOp
-{
-
-};
-
-// ScriptStruct ControlRig.RigUnit_MultiplyTransform
-// 0x0000 (0x00B0 - 0x00B0)
-struct FRigUnit_MultiplyTransform : public FRigUnit_BinaryTransformOp
 {
 
 };

@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BP_CutsceneTimeScheduleManager.BP_CutsceneTimeScheduleManager_C.GetCurrentStockEvent
+struct ABP_CutsceneTimeScheduleManager_C_GetCurrentStockEvent_Params
+{
+	struct FName                                       newParam;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function BP_CutsceneTimeScheduleManager.BP_CutsceneTimeScheduleManager_C.GetTime_ForceEventStop
 struct ABP_CutsceneTimeScheduleManager_C_GetTime_ForceEventStop_Params

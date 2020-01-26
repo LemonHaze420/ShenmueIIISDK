@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,6 +40,16 @@ enum class ESpectatorScreenMode : uint8_t
 };
 
 
+// Enum HeadMountedDisplay.EHMDWornState
+enum class EHMDWornState : uint8_t
+{
+	EHMDWornState__Unknown         = 0,
+	EHMDWornState__Worn            = 1,
+	EHMDWornState__NotWorn         = 2,
+	EHMDWornState__EHMDWornState_MAX = 3
+};
+
+
 // Enum HeadMountedDisplay.EHMDTrackingOrigin
 enum class EHMDTrackingOrigin : uint8_t
 {
@@ -66,16 +76,6 @@ enum class ETrackingStatus : uint8_t
 	ETrackingStatus__InertialOnly  = 1,
 	ETrackingStatus__Tracked       = 2,
 	ETrackingStatus__ETrackingStatus_MAX = 3
-};
-
-
-// Enum HeadMountedDisplay.EHMDWornState
-enum class EHMDWornState : uint8_t
-{
-	EHMDWornState__Unknown         = 0,
-	EHMDWornState__Worn            = 1,
-	EHMDWornState__NotWorn         = 2,
-	EHMDWornState__EHMDWornState_MAX = 3
 };
 
 

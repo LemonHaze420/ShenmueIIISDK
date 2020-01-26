@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnClickedButtonQTEForceSuccess
-// (Net, NetRequest, Exec, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::OnClickedButtonQTEForceSuccess()
 {
@@ -31,11 +31,11 @@ void UBW_DebugCutsceneList_C::OnClickedButtonQTEForceSuccess()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnCheckStateChangedQTEForceSuccess
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsChecked                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugCutsceneList_C::STATIC_OnCheckStateChangedQTEForceSuccess(bool IsChecked)
+void UBW_DebugCutsceneList_C::OnCheckStateChangedQTEForceSuccess(bool IsChecked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnCheckStateChangedQTEForceSuccess");
 
@@ -43,7 +43,6 @@ void UBW_DebugCutsceneList_C::STATIC_OnCheckStateChangedQTEForceSuccess(bool IsC
 	params.IsChecked = IsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,7 +51,7 @@ void UBW_DebugCutsceneList_C::STATIC_OnCheckStateChangedQTEForceSuccess(bool IsC
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.InitializeForQTEForceSuccess
-// (Exec, NetResponse, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::InitializeForQTEForceSuccess()
 {
@@ -69,11 +68,11 @@ void UBW_DebugCutsceneList_C::InitializeForQTEForceSuccess()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.SearchLastSelectedDebugMenuCutsceneItem
-// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBW_DebugCutsceneListItem_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UBW_DebugCutsceneListItem_C* UBW_DebugCutsceneList_C::STATIC_SearchLastSelectedDebugMenuCutsceneItem()
+class UBW_DebugCutsceneListItem_C* UBW_DebugCutsceneList_C::SearchLastSelectedDebugMenuCutsceneItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.SearchLastSelectedDebugMenuCutsceneItem");
 
@@ -90,7 +89,7 @@ class UBW_DebugCutsceneListItem_C* UBW_DebugCutsceneList_C::STATIC_SearchLastSel
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnClickedButtonSwitchSort
-// (Net, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::OnClickedButtonSwitchSort()
 {
@@ -107,7 +106,7 @@ void UBW_DebugCutsceneList_C::OnClickedButtonSwitchSort()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnCheckStateChangedSwitchSort
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsChecked                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -119,7 +118,6 @@ void UBW_DebugCutsceneList_C::OnCheckStateChangedSwitchSort(bool IsChecked)
 	params.IsChecked = IsChecked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -128,7 +126,7 @@ void UBW_DebugCutsceneList_C::OnCheckStateChangedSwitchSort(bool IsChecked)
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.ConvertCutsceneIDForIDSort
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 InCutsceneID                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 ConvertedCutsceneID            (Parm, OutParm, ZeroConstructor)
@@ -152,7 +150,7 @@ void UBW_DebugCutsceneList_C::ConvertCutsceneIDForIDSort(const struct FString& I
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.InitializeForIDSort
-// (Net, NetRequest, Event, NetMulticast, Public, HasOutParms, DLLImport, BlueprintEvent)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::InitializeForIDSort()
 {
@@ -169,12 +167,12 @@ void UBW_DebugCutsceneList_C::InitializeForIDSort()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.CheckGotoCategory
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            NewIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBW_DebugCutsceneList_C::STATIC_CheckGotoCategory(int NewIndex)
+bool UBW_DebugCutsceneList_C::CheckGotoCategory(int NewIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.CheckGotoCategory");
 
@@ -192,7 +190,7 @@ bool UBW_DebugCutsceneList_C::STATIC_CheckGotoCategory(int NewIndex)
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.UpdateFocus
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::UpdateFocus()
 {
@@ -201,7 +199,6 @@ void UBW_DebugCutsceneList_C::UpdateFocus()
 	UBW_DebugCutsceneList_C_UpdateFocus_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -210,13 +207,13 @@ void UBW_DebugCutsceneList_C::UpdateFocus()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnKeyDown
-// (Net, NetReliable, Native, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UBW_DebugCutsceneList_C::STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply UBW_DebugCutsceneList_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnKeyDown");
 
@@ -225,7 +222,6 @@ struct FEventReply UBW_DebugCutsceneList_C::STATIC_OnKeyDown(const struct FGeome
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,16 +232,15 @@ struct FEventReply UBW_DebugCutsceneList_C::STATIC_OnKeyDown(const struct FGeome
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.SetFocusToCategory
-// (Net, Exec, Native, Event, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugCutsceneList_C::STATIC_SetFocusToCategory()
+void UBW_DebugCutsceneList_C::SetFocusToCategory()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.SetFocusToCategory");
 
 	UBW_DebugCutsceneList_C_SetFocusToCategory_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,7 +249,7 @@ void UBW_DebugCutsceneList_C::STATIC_SetFocusToCategory()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.SetFocusToItem
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -274,13 +269,13 @@ void UBW_DebugCutsceneList_C::SetFocusToItem(int Index)
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnPreviewKeyDown
-// (Exec, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UBW_DebugCutsceneList_C::STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply UBW_DebugCutsceneList_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnPreviewKeyDown");
 
@@ -289,7 +284,6 @@ struct FEventReply UBW_DebugCutsceneList_C::STATIC_OnPreviewKeyDown(const struct
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -300,9 +294,9 @@ struct FEventReply UBW_DebugCutsceneList_C::STATIC_OnPreviewKeyDown(const struct
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.UpdateCutsceneList
-// (Net, NetRequest, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugCutsceneList_C::STATIC_UpdateCutsceneList()
+void UBW_DebugCutsceneList_C::UpdateCutsceneList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.UpdateCutsceneList");
 
@@ -317,7 +311,7 @@ void UBW_DebugCutsceneList_C::STATIC_UpdateCutsceneList()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.BuildCutsceneList
-// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::BuildCutsceneList()
 {
@@ -334,7 +328,7 @@ void UBW_DebugCutsceneList_C::BuildCutsceneList()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.Construct
-// (NetReliable, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::Construct()
 {
@@ -351,12 +345,12 @@ void UBW_DebugCutsceneList_C::Construct()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.EventOnCategoryChanged
-// (Net, Exec, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugCutsceneList_C::STATIC_EventOnCategoryChanged(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+void UBW_DebugCutsceneList_C::EventOnCategoryChanged(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.EventOnCategoryChanged");
 
@@ -373,7 +367,7 @@ void UBW_DebugCutsceneList_C::STATIC_EventOnCategoryChanged(const struct FString
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnClickedButtonUseAnother
-// (Net, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::OnClickedButtonUseAnother()
 {
@@ -390,7 +384,7 @@ void UBW_DebugCutsceneList_C::OnClickedButtonUseAnother()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnCheckStateChangedUseAnother
-// (Net, Exec, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -410,7 +404,7 @@ void UBW_DebugCutsceneList_C::OnCheckStateChangedUseAnother(bool bIsChecked)
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.SetupAnotherSkeletalMesh
-// (NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::SetupAnotherSkeletalMesh()
 {
@@ -427,7 +421,7 @@ void UBW_DebugCutsceneList_C::SetupAnotherSkeletalMesh()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.OnClickedButtonPlayLastSelected
-// (NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugCutsceneList_C::OnClickedButtonPlayLastSelected()
 {
@@ -444,7 +438,7 @@ void UBW_DebugCutsceneList_C::OnClickedButtonPlayLastSelected()
 
 
 // Function BW_DebugCutsceneList.BW_DebugCutsceneList_C.ExecuteUbergraph_BW_DebugCutsceneList
-// (Net, NetReliable, Event, MulticastDelegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

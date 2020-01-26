@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SelectNextCameraMask.TalkCam_SelectNextCameraMask_C.ReceiveTickAI
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ void UTalkCam_SelectNextCameraMask_C::ReceiveTickAI(class AAIController* OwnerCo
 
 
 // Function TalkCam_SelectNextCameraMask.TalkCam_SelectNextCameraMask_C.ExecuteUbergraph_TalkCam_SelectNextCameraMask
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Delegate)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

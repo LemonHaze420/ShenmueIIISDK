@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,8 +57,8 @@ struct UWBP_Test_STGame_C_GetThrowResultVisibility_Params
 	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function WBP_Test_STGame.WBP_Test_STGame_C.SetResultVIsible
-struct UWBP_Test_STGame_C_SetResultVIsible_Params
+// Function WBP_Test_STGame.WBP_Test_STGame_C.SetResultVisible
+struct UWBP_Test_STGame_C_SetResultVisible_Params
 {
 	bool                                               IsVisible;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

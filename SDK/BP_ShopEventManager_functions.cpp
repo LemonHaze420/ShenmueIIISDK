@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.CheckBGM
-// (Net, Exec, Native, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_ShopEventManager_C::CheckBGM()
 {
@@ -23,7 +23,6 @@ void ABP_ShopEventManager_C::CheckBGM()
 	ABP_ShopEventManager_C_CheckBGM_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_ShopEventManager_C::CheckBGM()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.UserConstructionScript
-// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_ShopEventManager_C::UserConstructionScript()
 {
@@ -49,11 +48,11 @@ void ABP_ShopEventManager_C::UserConstructionScript()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.ReceiveTick
-// (Net, NetReliable, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ShopEventManager_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_ShopEventManager_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.ReceiveTick");
 
@@ -61,7 +60,6 @@ void ABP_ShopEventManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,9 +68,9 @@ void ABP_ShopEventManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.FinishShopping
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ShopEventManager_C::STATIC_FinishShopping()
+void ABP_ShopEventManager_C::FinishShopping()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.FinishShopping");
 
@@ -87,9 +85,9 @@ void ABP_ShopEventManager_C::STATIC_FinishShopping()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.DispKS
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ShopEventManager_C::STATIC_DispKS()
+void ABP_ShopEventManager_C::DispKS()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.DispKS");
 
@@ -104,9 +102,9 @@ void ABP_ShopEventManager_C::STATIC_DispKS()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_ShopEventManager_C::STATIC_ReceiveBeginPlay()
+void ABP_ShopEventManager_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.ReceiveBeginPlay");
 
@@ -121,16 +119,15 @@ void ABP_ShopEventManager_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.FinishShopNoBuy
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ShopEventManager_C::STATIC_FinishShopNoBuy()
+void ABP_ShopEventManager_C::FinishShopNoBuy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.FinishShopNoBuy");
 
 	ABP_ShopEventManager_C_FinishShopNoBuy_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -139,11 +136,11 @@ void ABP_ShopEventManager_C::STATIC_FinishShopNoBuy()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.SwitchDoBuy_Shop
-// (NetReliable, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           DoBuy                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_Shop(bool DoBuy)
+void ABP_ShopEventManager_C::SwitchDoBuy_Shop(bool DoBuy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.SwitchDoBuy_Shop");
 
@@ -151,7 +148,6 @@ void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_Shop(bool DoBuy)
 	params.DoBuy = DoBuy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,11 +156,11 @@ void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_Shop(bool DoBuy)
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.SwitchDoBuy_Pawnsh
-// (NetReliable, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           DoBuy                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_Pawnsh(bool DoBuy)
+void ABP_ShopEventManager_C::SwitchDoBuy_Pawnsh(bool DoBuy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.SwitchDoBuy_Pawnsh");
 
@@ -172,7 +168,6 @@ void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_Pawnsh(bool DoBuy)
 	params.DoBuy = DoBuy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -181,11 +176,11 @@ void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_Pawnsh(bool DoBuy)
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.SwitchDoBuy_Exchange
-// (Net, NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           DoBuy                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_Exchange(bool DoBuy)
+void ABP_ShopEventManager_C::SwitchDoBuy_Exchange(bool DoBuy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.SwitchDoBuy_Exchange");
 
@@ -193,7 +188,6 @@ void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_Exchange(bool DoBuy)
 	params.DoBuy = DoBuy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,9 +196,9 @@ void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_Exchange(bool DoBuy)
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.buyEnd
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ShopEventManager_C::STATIC_buyEnd()
+void ABP_ShopEventManager_C::buyEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.buyEnd");
 
@@ -219,9 +213,9 @@ void ABP_ShopEventManager_C::STATIC_buyEnd()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.noBuyEnd
-// (Net, Exec, NetResponse, Static, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ShopEventManager_C::STATIC_noBuyEnd()
+void ABP_ShopEventManager_C::noBuyEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.noBuyEnd");
 
@@ -236,11 +230,11 @@ void ABP_ShopEventManager_C::STATIC_noBuyEnd()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.SwitchDoBuy_SetEchange
-// (Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           DoBuy                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_SetEchange(bool DoBuy)
+void ABP_ShopEventManager_C::SwitchDoBuy_SetEchange(bool DoBuy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShopEventManager.BP_ShopEventManager_C.SwitchDoBuy_SetEchange");
 
@@ -248,7 +242,6 @@ void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_SetEchange(bool DoBuy)
 	params.DoBuy = DoBuy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -257,7 +250,7 @@ void ABP_ShopEventManager_C::STATIC_SwitchDoBuy_SetEchange(bool DoBuy)
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.ExecuteUbergraph_BP_ShopEventManager
-// (Public, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -277,7 +270,7 @@ void ABP_ShopEventManager_C::ExecuteUbergraph_BP_ShopEventManager(int EntryPoint
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.endBuy__DelegateSignature
-// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_ShopEventManager_C::endBuy__DelegateSignature()
 {
@@ -294,7 +287,7 @@ void ABP_ShopEventManager_C::endBuy__DelegateSignature()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.endNoBuy__DelegateSignature
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_ShopEventManager_C::endNoBuy__DelegateSignature()
 {
@@ -311,7 +304,7 @@ void ABP_ShopEventManager_C::endNoBuy__DelegateSignature()
 
 
 // Function BP_ShopEventManager.BP_ShopEventManager_C.EndShopping__DelegateSignature
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_ShopEventManager_C::EndShopping__DelegateSignature()
 {

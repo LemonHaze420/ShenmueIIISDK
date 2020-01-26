@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckInitTag
-// (NetReliable, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Initialized                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_CheckInitTag(bool* Initialized)
+void ABP_MainFlowManager_C::CheckInitTag(bool* Initialized)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.CheckInitTag");
 
 	ABP_MainFlowManager_C_CheckInitTag_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,9 +36,9 @@ void ABP_MainFlowManager_C::STATIC_CheckInitTag(bool* Initialized)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.SetInitTag
-// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MainFlowManager_C::STATIC_SetInitTag()
+void ABP_MainFlowManager_C::SetInitTag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.SetInitTag");
 
@@ -54,7 +53,7 @@ void ABP_MainFlowManager_C::STATIC_SetInitTag()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckAutoSave
-// (NetReliable, Exec, Native, Event, NetResponse, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            CurFlag                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -66,7 +65,6 @@ void ABP_MainFlowManager_C::CheckAutoSave(int CurFlag)
 	params.CurFlag = CurFlag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,7 +73,7 @@ void ABP_MainFlowManager_C::CheckAutoSave(int CurFlag)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MFsub_RedLineMemoFlag_Cb
-// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::MFsub_RedLineMemoFlag_Cb()
 {
@@ -92,7 +90,7 @@ void ABP_MainFlowManager_C::MFsub_RedLineMemoFlag_Cb()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MFsub_RedLineMemoFlag_Hk
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::MFsub_RedLineMemoFlag_Hk()
 {
@@ -109,7 +107,7 @@ void ABP_MainFlowManager_C::MFsub_RedLineMemoFlag_Hk()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.SetupMainFlow
-// (NetRequest, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::SetupMainFlow()
 {
@@ -126,7 +124,7 @@ void ABP_MainFlowManager_C::SetupMainFlow()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckDelegateSafe
-// (Exec, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Exec_Step                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           FindResult                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -150,7 +148,7 @@ void ABP_MainFlowManager_C::CheckDelegateSafe(int Exec_Step, bool* FindResult)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MakeActorControl_AfterAdd
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowActorID> Actor_ID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  Actor_Class                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -166,7 +164,6 @@ void ABP_MainFlowManager_C::MakeActorControl_AfterAdd(TEnumAsByte<EN_MainFlowAct
 	params.Actor_Class = Actor_Class;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,7 +177,7 @@ void ABP_MainFlowManager_C::MakeActorControl_AfterAdd(TEnumAsByte<EN_MainFlowAct
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.OneClearMessageControl
-// (Net, Exec, Native, NetResponse, Delegate, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -192,7 +189,6 @@ void ABP_MainFlowManager_C::OneClearMessageControl(TEnumAsByte<EN_MainFlowMsgDes
 	params.Destination_ID = Destination_ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -201,11 +197,11 @@ void ABP_MainFlowManager_C::OneClearMessageControl(TEnumAsByte<EN_MainFlowMsgDes
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.OneClearActorControl
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowActorID> Actor_ID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_OneClearActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID)
+void ABP_MainFlowManager_C::OneClearActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.OneClearActorControl");
 
@@ -221,11 +217,11 @@ void ABP_MainFlowManager_C::STATIC_OneClearActorControl(TEnumAsByte<EN_MainFlowA
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GameTimerControl
-// (Net, Exec, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Run_GameTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_GameTimerControl(bool Run_GameTime)
+void ABP_MainFlowManager_C::GameTimerControl(bool Run_GameTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.GameTimerControl");
 
@@ -241,12 +237,12 @@ void ABP_MainFlowManager_C::STATIC_GameTimerControl(bool Run_GameTime)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.FindEventMan
-// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_FindEventMan(const struct FName& EventName, bool* Result)
+void ABP_MainFlowManager_C::FindEventMan(const struct FName& EventName, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.FindEventMan");
 
@@ -254,7 +250,6 @@ void ABP_MainFlowManager_C::STATIC_FindEventMan(const struct FName& EventName, b
 	params.EventName = EventName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -266,16 +261,16 @@ void ABP_MainFlowManager_C::STATIC_FindEventMan(const struct FName& EventName, b
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckIntervalMessage
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          DeltaSecond                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          DeltaSEcond                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_CheckIntervalMessage(float DeltaSecond)
+void ABP_MainFlowManager_C::CheckIntervalMessage(float DeltaSEcond)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.CheckIntervalMessage");
 
 	ABP_MainFlowManager_C_CheckIntervalMessage_Params params;
-	params.DeltaSecond = DeltaSecond;
+	params.DeltaSEcond = DeltaSEcond;
 
 	auto flags = fn->FunctionFlags;
 
@@ -286,19 +281,18 @@ void ABP_MainFlowManager_C::STATIC_CheckIntervalMessage(float DeltaSecond)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ReservationInquiryMessage
-// (Net, Exec, Native, Event, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          IntervalTIme                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          IntervalTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::ReservationInquiryMessage(float IntervalTIme)
+void ABP_MainFlowManager_C::ReservationInquiryMessage(float IntervalTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ReservationInquiryMessage");
 
 	ABP_MainFlowManager_C_ReservationInquiryMessage_Params params;
-	params.IntervalTIme = IntervalTIme;
+	params.IntervalTime = IntervalTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -307,7 +301,7 @@ void ABP_MainFlowManager_C::ReservationInquiryMessage(float IntervalTIme)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MessageControlWorkSub
-// (NetRequest, NetMulticast, MulticastDelegate, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Destination_ID                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CountUp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -336,14 +330,14 @@ void ABP_MainFlowManager_C::MessageControlWorkSub(int Destination_ID, bool Count
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ReceiveMessageControl
-// (NetRequest, Event, Static, NetMulticast, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           On_Massage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Message                        (Parm, OutParm, ZeroConstructor)
 // class AActor*                  Sender                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_ReceiveMessageControl(TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID, bool* On_Massage, struct FString* Message, class AActor** Sender)
+void ABP_MainFlowManager_C::ReceiveMessageControl(TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID, bool* On_Massage, struct FString* Message, class AActor** Sender)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ReceiveMessageControl");
 
@@ -366,7 +360,7 @@ void ABP_MainFlowManager_C::STATIC_ReceiveMessageControl(TEnumAsByte<EN_MainFlow
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.InquiryMessageControl
-// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Private, Protected, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ExecDispatcher                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -381,7 +375,6 @@ void ABP_MainFlowManager_C::InquiryMessageControl(TEnumAsByte<EN_MainFlowMsgDest
 	params.ExecDispatcher = ExecDispatcher;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -393,7 +386,7 @@ void ABP_MainFlowManager_C::InquiryMessageControl(TEnumAsByte<EN_MainFlowMsgDest
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.SendMessageControl
-// (NetReliable, Exec, Native, Event, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowMsgDestinationID> Destination_ID                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Message                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -409,7 +402,6 @@ void ABP_MainFlowManager_C::SendMessageControl(TEnumAsByte<EN_MainFlowMsgDestina
 	params.Sender = Sender;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -418,16 +410,15 @@ void ABP_MainFlowManager_C::SendMessageControl(TEnumAsByte<EN_MainFlowMsgDestina
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ResetMessageControl
-// (Exec, Native, Event, Static, NetMulticast, Public, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MainFlowManager_C::STATIC_ResetMessageControl()
+void ABP_MainFlowManager_C::ResetMessageControl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ResetMessageControl");
 
 	ABP_MainFlowManager_C_ResetMessageControl_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -436,7 +427,7 @@ void ABP_MainFlowManager_C::STATIC_ResetMessageControl()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckCounterActorControl
-// (Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_MainFlowActorID> Actor_ID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  Save_Counter                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -462,7 +453,7 @@ void ABP_MainFlowManager_C::CheckCounterActorControl(TEnumAsByte<EN_MainFlowActo
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CallRemote
-// (Net, NetRequest, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -482,13 +473,13 @@ void ABP_MainFlowManager_C::CallRemote(const struct FName& EventName)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetCounterActorControl
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_MainFlowActorID> Actor_ID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  renewal_counter                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  entry_actor                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_GetCounterActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID, unsigned char* renewal_counter, class AActor** entry_actor)
+void ABP_MainFlowManager_C::GetCounterActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID, unsigned char* renewal_counter, class AActor** entry_actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.GetCounterActorControl");
 
@@ -496,7 +487,6 @@ void ABP_MainFlowManager_C::STATIC_GetCounterActorControl(TEnumAsByte<EN_MainFlo
 	params.Actor_ID = Actor_ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -510,11 +500,11 @@ void ABP_MainFlowManager_C::STATIC_GetCounterActorControl(TEnumAsByte<EN_MainFlo
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.RenewalActorControl
-// (NetReliable, NetRequest, Static, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowActorID> Actor_ID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_RenewalActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID)
+void ABP_MainFlowManager_C::RenewalActorControl(TEnumAsByte<EN_MainFlowActorID> Actor_ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.RenewalActorControl");
 
@@ -530,7 +520,7 @@ void ABP_MainFlowManager_C::STATIC_RenewalActorControl(TEnumAsByte<EN_MainFlowAc
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MakeActorControl
-// (Exec, Event, NetResponse, Public, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowActorID> Actor_ID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  Actor_Class                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -559,9 +549,9 @@ void ABP_MainFlowManager_C::MakeActorControl(TEnumAsByte<EN_MainFlowActorID> Act
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ResetActorControl
-// (NetReliable, NetRequest, Exec, NetResponse, Static, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MainFlowManager_C::STATIC_ResetActorControl()
+void ABP_MainFlowManager_C::ResetActorControl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ResetActorControl");
 
@@ -576,7 +566,7 @@ void ABP_MainFlowManager_C::STATIC_ResetActorControl()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.PushIndependenceDestructor
-// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            MapType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Independence_Step              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -591,7 +581,6 @@ void ABP_MainFlowManager_C::PushIndependenceDestructor(int MapType, int Independ
 	params.Independence_Step = Independence_Step;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -603,7 +592,7 @@ void ABP_MainFlowManager_C::PushIndependenceDestructor(int MapType, int Independ
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.PushDestructor_Sub
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            MapType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Step_Value                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -618,7 +607,6 @@ void ABP_MainFlowManager_C::PushDestructor_Sub(int MapType, int Step_Value, bool
 	params.Step_Value = Step_Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -630,7 +618,7 @@ void ABP_MainFlowManager_C::PushDestructor_Sub(int MapType, int Step_Value, bool
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.SetStepControl_CurrentStep
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SetStep                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Change_Current                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -654,7 +642,7 @@ void ABP_MainFlowManager_C::SetStepControl_CurrentStep(int SetStep, bool* Change
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.PlayerbleControl
-// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Playable                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -666,7 +654,6 @@ void ABP_MainFlowManager_C::PlayerbleControl(bool Playable)
 	params.Playable = Playable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -675,7 +662,7 @@ void ABP_MainFlowManager_C::PlayerbleControl(bool Playable)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CulcStepControl_PlayerableSP
-// (NetRequest, Event, NetResponse, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Step                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  SP                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -701,7 +688,7 @@ void ABP_MainFlowManager_C::CulcStepControl_PlayerableSP(int Step, unsigned char
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetDelegateSafe
-// (Native, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Exec_Step                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           FindResult                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -716,7 +703,6 @@ void ABP_MainFlowManager_C::GetDelegateSafe(int Exec_Step, bool* FindResult, str
 	params.Exec_Step = Exec_Step;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -732,7 +718,7 @@ void ABP_MainFlowManager_C::GetDelegateSafe(int Exec_Step, bool* FindResult, str
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckLoadEnd
-// (NetReliable, NetRequest, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           LoadEnd                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -754,16 +740,15 @@ void ABP_MainFlowManager_C::CheckLoadEnd(bool* LoadEnd)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ResetNewStepControl
-// (Net, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MainFlowManager_C::STATIC_ResetNewStepControl()
+void ABP_MainFlowManager_C::ResetNewStepControl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ResetNewStepControl");
 
 	ABP_MainFlowManager_C_ResetNewStepControl_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -772,7 +757,7 @@ void ABP_MainFlowManager_C::STATIC_ResetNewStepControl()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.SelectStepID
-// (Exec, Event, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Step                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            MapType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -801,7 +786,7 @@ void ABP_MainFlowManager_C::SelectStepID(int Step, int MapType, unsigned char* S
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckPlayableSP
-// (Net, NetReliable, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Exec_Step                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  SP                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -825,13 +810,13 @@ void ABP_MainFlowManager_C::CheckPlayableSP(int Exec_Step, unsigned char* SP)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ChangeStepControl_PlayerableSP
-// (Net, NetRequest, Exec, Native, Event, Static, Public, Delegate, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            CheckStep                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SP                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_ChangeStepControl_PlayerableSP(int CheckStep, int SP, bool* Result)
+void ABP_MainFlowManager_C::ChangeStepControl_PlayerableSP(int CheckStep, int SP, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ChangeStepControl_PlayerableSP");
 
@@ -840,7 +825,6 @@ void ABP_MainFlowManager_C::STATIC_ChangeStepControl_PlayerableSP(int CheckStep,
 	params.SP = SP;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -852,7 +836,7 @@ void ABP_MainFlowManager_C::STATIC_ChangeStepControl_PlayerableSP(int CheckStep,
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetStepControl_ExecStep
-// (Exec, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Now_Exec                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -874,12 +858,12 @@ void ABP_MainFlowManager_C::GetStepControl_ExecStep(int* Now_Exec)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.SetStepControl_ExecStep
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Exec_Step                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Now_Exec                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_SetStepControl_ExecStep(int Exec_Step, int* Now_Exec)
+void ABP_MainFlowManager_C::SetStepControl_ExecStep(int Exec_Step, int* Now_Exec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.SetStepControl_ExecStep");
 
@@ -887,7 +871,6 @@ void ABP_MainFlowManager_C::STATIC_SetStepControl_ExecStep(int Exec_Step, int* N
 	params.Exec_Step = Exec_Step;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -899,12 +882,12 @@ void ABP_MainFlowManager_C::STATIC_SetStepControl_ExecStep(int Exec_Step, int* N
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.PopDestructor
-// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Exec_Step                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Remove_                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_PopDestructor(int Exec_Step, bool* Remove_)
+void ABP_MainFlowManager_C::PopDestructor(int Exec_Step, bool* Remove_)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.PopDestructor");
 
@@ -912,7 +895,6 @@ void ABP_MainFlowManager_C::STATIC_PopDestructor(int Exec_Step, bool* Remove_)
 	params.Exec_Step = Exec_Step;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -924,18 +906,17 @@ void ABP_MainFlowManager_C::STATIC_PopDestructor(int Exec_Step, bool* Remove_)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetCutScenStockTimes
-// (Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            StockTimes                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_GetCutScenStockTimes(int* StockTimes)
+void ABP_MainFlowManager_C::GetCutScenStockTimes(int* StockTimes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.GetCutScenStockTimes");
 
 	ABP_MainFlowManager_C_GetCutScenStockTimes_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -947,12 +928,12 @@ void ABP_MainFlowManager_C::STATIC_GetCutScenStockTimes(int* StockTimes)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.KillCutSceneEvent
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   CutsceneName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           KillResult                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_KillCutSceneEvent(const struct FName& CutsceneName, bool* KillResult)
+void ABP_MainFlowManager_C::KillCutSceneEvent(const struct FName& CutsceneName, bool* KillResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.KillCutSceneEvent");
 
@@ -971,14 +952,14 @@ void ABP_MainFlowManager_C::STATIC_KillCutSceneEvent(const struct FName& Cutscen
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetCutSceneEvent
-// (Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   CutsceneName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Get_EndEvent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           FindResult                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FName                   EventName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_GetCutSceneEvent(const struct FName& CutsceneName, bool Get_EndEvent, bool* FindResult, struct FName* EventName)
+void ABP_MainFlowManager_C::GetCutSceneEvent(const struct FName& CutsceneName, bool Get_EndEvent, bool* FindResult, struct FName* EventName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.GetCutSceneEvent");
 
@@ -1000,7 +981,7 @@ void ABP_MainFlowManager_C::STATIC_GetCutSceneEvent(const struct FName& Cutscene
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CreateCutSceneControl
-// (Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   CutsceneName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           UseFade                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1008,7 +989,7 @@ void ABP_MainFlowManager_C::STATIC_GetCutSceneEvent(const struct FName& Cutscene
 // struct FName                   EndEventName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Entry_Result                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_CreateCutSceneControl(const struct FName& CutsceneName, bool UseFade, const struct FName& StartEventName, const struct FName& EndEventName, bool* Entry_Result)
+void ABP_MainFlowManager_C::CreateCutSceneControl(const struct FName& CutsceneName, bool UseFade, const struct FName& StartEventName, const struct FName& EndEventName, bool* Entry_Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.CreateCutSceneControl");
 
@@ -1030,16 +1011,15 @@ void ABP_MainFlowManager_C::STATIC_CreateCutSceneControl(const struct FName& Cut
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ResetCScontrol
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MainFlowManager_C::STATIC_ResetCScontrol()
+void ABP_MainFlowManager_C::ResetCScontrol()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ResetCScontrol");
 
 	ABP_MainFlowManager_C_ResetCScontrol_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1048,7 +1028,7 @@ void ABP_MainFlowManager_C::STATIC_ResetCScontrol()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetDestructor_List
-// (NetReliable, Exec, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<struct FST_MainFlowStockDestructor> DestructorList                 (Parm, OutParm, ZeroConstructor)
 
@@ -1070,7 +1050,7 @@ void ABP_MainFlowManager_C::GetDestructor_List(TArray<struct FST_MainFlowStockDe
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ChangeStepControl_SubStep
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            CheckStep                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            New_SubStep                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1096,7 +1076,7 @@ void ABP_MainFlowManager_C::ChangeStepControl_SubStep(int CheckStep, int New_Sub
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetStepControl_CurrentStep
-// (Net, Exec, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Current                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1118,7 +1098,7 @@ void ABP_MainFlowManager_C::GetStepControl_CurrentStep(int* Current)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ChangeStepControl_Flag
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            CheckStep                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            New_Flag                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1126,7 +1106,7 @@ void ABP_MainFlowManager_C::GetStepControl_CurrentStep(int* Current)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            FlagValue                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_ChangeStepControl_Flag(int CheckStep, int New_Flag, int mask, bool* Result, int* FlagValue)
+void ABP_MainFlowManager_C::ChangeStepControl_Flag(int CheckStep, int New_Flag, int mask, bool* Result, int* FlagValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ChangeStepControl_Flag");
 
@@ -1136,7 +1116,6 @@ void ABP_MainFlowManager_C::STATIC_ChangeStepControl_Flag(int CheckStep, int New
 	params.mask = mask;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1150,7 +1129,7 @@ void ABP_MainFlowManager_C::STATIC_ChangeStepControl_Flag(int CheckStep, int New
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetStepControl_Info
-// (Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            CheckStep                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1167,7 +1146,6 @@ void ABP_MainFlowManager_C::GetStepControl_Info(int CheckStep, bool* Result, int
 	params.CheckStep = CheckStep;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1187,12 +1165,12 @@ void ABP_MainFlowManager_C::GetStepControl_Info(int CheckStep, bool* Result, int
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.PushDestructor
-// (Net, NetRequest, Exec, Native, Static, Public, Private, HasOutParms, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            MapType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Add_Stock                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_PushDestructor(int MapType, bool* Add_Stock)
+void ABP_MainFlowManager_C::PushDestructor(int MapType, bool* Add_Stock)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.PushDestructor");
 
@@ -1200,7 +1178,6 @@ void ABP_MainFlowManager_C::STATIC_PushDestructor(int MapType, bool* Add_Stock)
 	params.MapType = MapType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1212,13 +1189,13 @@ void ABP_MainFlowManager_C::STATIC_PushDestructor(int MapType, bool* Add_Stock)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ChangeStepControl
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            new_stepid                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            map_type                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           New_Step_Control               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_ChangeStepControl(int new_stepid, int map_type, bool* New_Step_Control)
+void ABP_MainFlowManager_C::ChangeStepControl(int new_stepid, int map_type, bool* New_Step_Control)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ChangeStepControl");
 
@@ -1227,7 +1204,6 @@ void ABP_MainFlowManager_C::STATIC_ChangeStepControl(int new_stepid, int map_typ
 	params.map_type = map_type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1239,14 +1215,14 @@ void ABP_MainFlowManager_C::STATIC_ChangeStepControl(int new_stepid, int map_typ
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.StepControlBitToBranchID
-// (Net, NetReliable, Native, Static, MulticastDelegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            CurFlag                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_MainFlowStepBranchID> BranchID                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            ChangeFlag                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Change                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_StepControlBitToBranchID(int CurFlag, TEnumAsByte<EN_MainFlowStepBranchID>* BranchID, int* ChangeFlag, bool* Change)
+void ABP_MainFlowManager_C::StepControlBitToBranchID(int CurFlag, TEnumAsByte<EN_MainFlowStepBranchID>* BranchID, int* ChangeFlag, bool* Change)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.StepControlBitToBranchID");
 
@@ -1254,7 +1230,6 @@ void ABP_MainFlowManager_C::STATIC_StepControlBitToBranchID(int CurFlag, TEnumAs
 	params.CurFlag = CurFlag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1270,7 +1245,7 @@ void ABP_MainFlowManager_C::STATIC_StepControlBitToBranchID(int CurFlag, TEnumAs
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.AllCollisionChange
-// (NetReliable, Native, Event, NetResponse, Public, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           On                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1283,7 +1258,6 @@ void ABP_MainFlowManager_C::AllCollisionChange(bool On, bool* newParam)
 	params.On = On;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1295,12 +1269,12 @@ void ABP_MainFlowManager_C::AllCollisionChange(bool On, bool* newParam)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckEventOccurs
-// (Exec, Native, Static, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_CheckEventOccurs(const struct FName& EventName, bool* Result)
+void ABP_MainFlowManager_C::CheckEventOccurs(const struct FName& EventName, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.CheckEventOccurs");
 
@@ -1308,7 +1282,6 @@ void ABP_MainFlowManager_C::STATIC_CheckEventOccurs(const struct FName& EventNam
 	params.EventName = EventName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1320,7 +1293,7 @@ void ABP_MainFlowManager_C::STATIC_CheckEventOccurs(const struct FName& EventNam
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckFollowSHEStep
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Need_Follow_SHE                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1331,7 +1304,6 @@ void ABP_MainFlowManager_C::CheckFollowSHEStep(bool* Need_Follow_SHE)
 	ABP_MainFlowManager_C_CheckFollowSHEStep_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1343,11 +1315,11 @@ void ABP_MainFlowManager_C::CheckFollowSHEStep(bool* Need_Follow_SHE)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckLevelSchedule
-// (NetRequest, Native, Event, Static, NetMulticast, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Step                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_CheckLevelSchedule(int Step)
+void ABP_MainFlowManager_C::CheckLevelSchedule(int Step)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.CheckLevelSchedule");
 
@@ -1355,7 +1327,6 @@ void ABP_MainFlowManager_C::STATIC_CheckLevelSchedule(int Step)
 	params.Step = Step;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1364,7 +1335,7 @@ void ABP_MainFlowManager_C::STATIC_CheckLevelSchedule(int Step)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.LoadedStartLevel_Impl
-// (Exec, Native, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::LoadedStartLevel_Impl()
 {
@@ -1373,7 +1344,6 @@ void ABP_MainFlowManager_C::LoadedStartLevel_Impl()
 	ABP_MainFlowManager_C_LoadedStartLevel_Impl_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1382,7 +1352,7 @@ void ABP_MainFlowManager_C::LoadedStartLevel_Impl()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MakeAppointControl
-// (NetReliable, Exec, Native, Static, Public, Private, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 JumpPoint                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Rotation                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -1399,7 +1369,7 @@ void ABP_MainFlowManager_C::LoadedStartLevel_Impl()
 // bool                           Can_not_kill                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SkipEndFade                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_MakeAppointControl(const struct FVector& JumpPoint, const struct FRotator& Rotation, const struct FName& EyeCatchID, int Add_Day, int Hour, int Minute, int Enable_Time_Min, int Enable_Time_Max, int Change_Step, const struct FName& LAbelLeft, const struct FName& StartRemotoEvent, const struct FName& StartEndEvent, bool Can_not_kill, bool SkipEndFade)
+void ABP_MainFlowManager_C::MakeAppointControl(const struct FVector& JumpPoint, const struct FRotator& Rotation, const struct FName& EyeCatchID, int Add_Day, int Hour, int Minute, int Enable_Time_Min, int Enable_Time_Max, int Change_Step, const struct FName& LAbelLeft, const struct FName& StartRemotoEvent, const struct FName& StartEndEvent, bool Can_not_kill, bool SkipEndFade)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.MakeAppointControl");
 
@@ -1420,7 +1390,6 @@ void ABP_MainFlowManager_C::STATIC_MakeAppointControl(const struct FVector& Jump
 	params.SkipEndFade = SkipEndFade;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1429,12 +1398,12 @@ void ABP_MainFlowManager_C::STATIC_MakeAppointControl(const struct FVector& Jump
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.KillAppointControl
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           forced_Kill                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           kill_exec                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_KillAppointControl(bool forced_Kill, bool* kill_exec)
+void ABP_MainFlowManager_C::KillAppointControl(bool forced_Kill, bool* kill_exec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.KillAppointControl");
 
@@ -1442,7 +1411,6 @@ void ABP_MainFlowManager_C::STATIC_KillAppointControl(bool forced_Kill, bool* ki
 	params.forced_Kill = forced_Kill;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1454,7 +1422,7 @@ void ABP_MainFlowManager_C::STATIC_KillAppointControl(bool forced_Kill, bool* ki
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ExecTickDelegate
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           enable_exec                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Event_Name                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1466,7 +1434,6 @@ void ABP_MainFlowManager_C::ExecTickDelegate(bool* enable_exec, struct FName* Ev
 	ABP_MainFlowManager_C_ExecTickDelegate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1480,13 +1447,13 @@ void ABP_MainFlowManager_C::ExecTickDelegate(bool* enable_exec, struct FName* Ev
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.SetTickDelegate
-// (Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            set_step                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Add_result                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_SetTickDelegate(int set_step, const struct FName& EventName, bool* Add_result)
+void ABP_MainFlowManager_C::SetTickDelegate(int set_step, const struct FName& EventName, bool* Add_result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.SetTickDelegate");
 
@@ -1506,16 +1473,15 @@ void ABP_MainFlowManager_C::STATIC_SetTickDelegate(int set_step, const struct FN
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ResetDelegate
-// (Net, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MainFlowManager_C::STATIC_ResetDelegate()
+void ABP_MainFlowManager_C::ResetDelegate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ResetDelegate");
 
 	ABP_MainFlowManager_C_ResetDelegate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1524,7 +1490,7 @@ void ABP_MainFlowManager_C::STATIC_ResetDelegate()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetDelegate
-// (NetReliable, NetRequest, Native, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           FindResult                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1539,7 +1505,6 @@ void ABP_MainFlowManager_C::GetDelegate(const struct FName& EventName, bool* Fin
 	params.EventName = EventName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1555,14 +1520,14 @@ void ABP_MainFlowManager_C::GetDelegate(const struct FName& EventName, bool* Fin
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.SetDelegate
-// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ControlBit                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ExecStep                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Add_result                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_SetDelegate(const struct FName& EventName, int ControlBit, int ExecStep, bool* Add_result)
+void ABP_MainFlowManager_C::SetDelegate(const struct FName& EventName, int ControlBit, int ExecStep, bool* Add_result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.SetDelegate");
 
@@ -1572,7 +1537,6 @@ void ABP_MainFlowManager_C::STATIC_SetDelegate(const struct FName& EventName, in
 	params.ExecStep = ExecStep;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1584,13 +1548,13 @@ void ABP_MainFlowManager_C::STATIC_SetDelegate(const struct FName& EventName, in
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MFsub_SetGlobalFlag
-// (Net, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   FlagID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SetResult                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_MFsub_SetGlobalFlag(const struct FName& FlagID, int SetValue, bool* SetResult)
+void ABP_MainFlowManager_C::MFsub_SetGlobalFlag(const struct FName& FlagID, int SetValue, bool* SetResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.MFsub_SetGlobalFlag");
 
@@ -1599,7 +1563,6 @@ void ABP_MainFlowManager_C::STATIC_MFsub_SetGlobalFlag(const struct FName& FlagI
 	params.SetValue = SetValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1611,7 +1574,7 @@ void ABP_MainFlowManager_C::STATIC_MFsub_SetGlobalFlag(const struct FName& FlagI
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MFsub_GetGlobalFlag
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   FlagID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            FlagValue                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1635,7 +1598,7 @@ void ABP_MainFlowManager_C::MFsub_GetGlobalFlag(const struct FName& FlagID, int*
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.StartChildFlow
-// (Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ChildFlowName                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           StartResult                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1659,7 +1622,7 @@ void ABP_MainFlowManager_C::StartChildFlow(const struct FName& ChildFlowName, bo
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetCurrentChildFlow
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   CurrentFlowName                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1681,7 +1644,7 @@ void ABP_MainFlowManager_C::GetCurrentChildFlow(struct FName* CurrentFlowName)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.GetChildFlowCurrentID
-// (NetRequest, Exec, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ChildFlowID                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1703,7 +1666,7 @@ void ABP_MainFlowManager_C::GetChildFlowCurrentID(int* ChildFlowID)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ChangeChildFlowCurrentID
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ChangeAfterID                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1725,7 +1688,7 @@ void ABP_MainFlowManager_C::ChangeChildFlowCurrentID(int* ChangeAfterID)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckChildFlowCurrentID
-// (NetRequest, NetResponse, Private, Protected, Delegate, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            CheckId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Alive_to_survive               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1749,7 +1712,7 @@ void ABP_MainFlowManager_C::CheckChildFlowCurrentID(int CheckId, bool* Alive_to_
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.LiveCheckChildFlow
-// (Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   FlowName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           LiveResult                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1773,7 +1736,7 @@ void ABP_MainFlowManager_C::LiveCheckChildFlow(const struct FName& FlowName, boo
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ResetChildFlow
-// (NetReliable, Exec, Native, Event, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::ResetChildFlow()
 {
@@ -1782,7 +1745,6 @@ void ABP_MainFlowManager_C::ResetChildFlow()
 	ABP_MainFlowManager_C_ResetChildFlow_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1791,16 +1753,15 @@ void ABP_MainFlowManager_C::ResetChildFlow()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ResetEventMan
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MainFlowManager_C::STATIC_ResetEventMan()
+void ABP_MainFlowManager_C::ResetEventMan()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ResetEventMan");
 
 	ABP_MainFlowManager_C_ResetEventMan_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1809,7 +1770,7 @@ void ABP_MainFlowManager_C::STATIC_ResetEventMan()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.RemoveEventMan
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           rc                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1833,7 +1794,7 @@ void ABP_MainFlowManager_C::RemoveEventMan(const struct FName& EventName, bool* 
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.UnBindEventMan
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CarrigeUnbind                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1848,7 +1809,6 @@ void ABP_MainFlowManager_C::UnBindEventMan(const struct FName& EventName, bool C
 	params.CarrigeUnbind = CarrigeUnbind;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1860,9 +1820,9 @@ void ABP_MainFlowManager_C::UnBindEventMan(const struct FName& EventName, bool C
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ExecEventMan
-// (NetRequest, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MainFlowManager_C::STATIC_ExecEventMan()
+void ABP_MainFlowManager_C::ExecEventMan()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ExecEventMan");
 
@@ -1877,7 +1837,7 @@ void ABP_MainFlowManager_C::STATIC_ExecEventMan()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CreateEventMan
-// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     Trg_Compo_Name                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1887,7 +1847,7 @@ void ABP_MainFlowManager_C::STATIC_ExecEventMan()
 // bool                           Save                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           createresult                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_CreateEventMan(class UPrimitiveComponent* Trg_Compo_Name, const struct FName& EventName, int ControlStatus, TEnumAsByte<EN_MainFlowEventType> EventType, const struct FString& TypeUniqueParameta, bool Save, bool* createresult)
+void ABP_MainFlowManager_C::CreateEventMan(class UPrimitiveComponent* Trg_Compo_Name, const struct FName& EventName, int ControlStatus, TEnumAsByte<EN_MainFlowEventType> EventType, const struct FString& TypeUniqueParameta, bool Save, bool* createresult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.CreateEventMan");
 
@@ -1911,11 +1871,11 @@ void ABP_MainFlowManager_C::STATIC_CreateEventMan(class UPrimitiveComponent* Trg
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.AddTag
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 TagName                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_MainFlowManager_C::STATIC_AddTag(const struct FString& TagName)
+void ABP_MainFlowManager_C::AddTag(const struct FString& TagName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.AddTag");
 
@@ -1931,7 +1891,7 @@ void ABP_MainFlowManager_C::STATIC_AddTag(const struct FString& TagName)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.UserConstructionScript
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::UserConstructionScript()
 {
@@ -1940,7 +1900,6 @@ void ABP_MainFlowManager_C::UserConstructionScript()
 	ABP_MainFlowManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1949,7 +1908,7 @@ void ABP_MainFlowManager_C::UserConstructionScript()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MfEvt_EndAppoint
-// (Native, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::MfEvt_EndAppoint()
 {
@@ -1958,7 +1917,6 @@ void ABP_MainFlowManager_C::MfEvt_EndAppoint()
 	ABP_MainFlowManager_C_MfEvt_EndAppoint_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1967,7 +1925,7 @@ void ABP_MainFlowManager_C::MfEvt_EndAppoint()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.LoadedStartLevel
-// (Native, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::LoadedStartLevel()
 {
@@ -1976,7 +1934,6 @@ void ABP_MainFlowManager_C::LoadedStartLevel()
 	ABP_MainFlowManager_C_LoadedStartLevel_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1985,7 +1942,7 @@ void ABP_MainFlowManager_C::LoadedStartLevel()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MfEvt_StartAppoint
-// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::MfEvt_StartAppoint()
 {
@@ -2002,11 +1959,11 @@ void ABP_MainFlowManager_C::MfEvt_StartAppoint()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ChangedStep
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_ChangedStep(int SetSteps)
+void ABP_MainFlowManager_C::ChangedStep(int SetSteps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ChangedStep");
 
@@ -2014,7 +1971,6 @@ void ABP_MainFlowManager_C::STATIC_ChangedStep(int SetSteps)
 	params.SetSteps = SetSteps;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2023,11 +1979,11 @@ void ABP_MainFlowManager_C::STATIC_ChangedStep(int SetSteps)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ReceiveTick
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MainFlowManager_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MainFlowManager_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowManager.BP_MainFlowManager_C.ReceiveTick");
 
@@ -2035,7 +1991,6 @@ void ABP_MainFlowManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2044,7 +1999,7 @@ void ABP_MainFlowManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.Reset
-// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::Reset()
 {
@@ -2061,7 +2016,7 @@ void ABP_MainFlowManager_C::Reset()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ReceiveBeginPlay
-// (Net, NetRequest, Exec, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MainFlowManager_C::ReceiveBeginPlay()
 {
@@ -2078,7 +2033,7 @@ void ABP_MainFlowManager_C::ReceiveBeginPlay()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ExecuteUbergraph_BP_MainFlowManager
-// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2090,7 +2045,6 @@ void ABP_MainFlowManager_C::ExecuteUbergraph_BP_MainFlowManager(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2099,7 +2053,7 @@ void ABP_MainFlowManager_C::ExecuteUbergraph_BP_MainFlowManager(int EntryPoint)
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.RemoveEvent__DelegateSignature
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2111,7 +2065,6 @@ void ABP_MainFlowManager_C::RemoveEvent__DelegateSignature(const struct FName& E
 	params.EventName = EventName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2120,7 +2073,7 @@ void ABP_MainFlowManager_C::RemoveEvent__DelegateSignature(const struct FName& E
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.NewSendMessage__DelegateSignature
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowMsgDestinationID> Current_Destination_ID         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2132,7 +2085,6 @@ void ABP_MainFlowManager_C::NewSendMessage__DelegateSignature(TEnumAsByte<EN_Mai
 	params.Current_Destination_ID = Current_Destination_ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2141,7 +2093,7 @@ void ABP_MainFlowManager_C::NewSendMessage__DelegateSignature(TEnumAsByte<EN_Mai
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.RenewalActorID__DelegateSignature
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowActorID> ActorId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  RenewalCounter                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -2155,7 +2107,6 @@ void ABP_MainFlowManager_C::RenewalActorID__DelegateSignature(TEnumAsByte<EN_Mai
 	params.RenewalCounter = RenewalCounter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2164,7 +2115,7 @@ void ABP_MainFlowManager_C::RenewalActorID__DelegateSignature(TEnumAsByte<EN_Mai
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MainFlowDelegate__DelegateSignature
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_MainFlowManager_C::MainFlowDelegate__DelegateSignature()
 {
@@ -2173,7 +2124,6 @@ void ABP_MainFlowManager_C::MainFlowDelegate__DelegateSignature()
 	ABP_MainFlowManager_C_MainFlowDelegate__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2182,7 +2132,7 @@ void ABP_MainFlowManager_C::MainFlowDelegate__DelegateSignature()
 
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.RemoteEventCall__DelegateSignature
-// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2194,7 +2144,6 @@ void ABP_MainFlowManager_C::RemoteEventCall__DelegateSignature(const struct FNam
 	params.EventName = EventName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

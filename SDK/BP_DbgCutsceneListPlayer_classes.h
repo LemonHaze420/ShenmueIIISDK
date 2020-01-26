@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,18 +37,18 @@ public:
 	void SetPlayInfoListFromDataTable(class UDataTable* InfoDataTable);
 	void ExecuteCutsceneEndCommon();
 	void StartCutscene(int Index);
-	void STATIC_GetPlayInfoNum(int* Num);
+	void GetPlayInfoNum(int* Num);
 	void GetPlayInfo(int Index, bool* bFound, struct FST_DbgCutscenePlayInfo* ResultInfo);
 	bool HasPlayInfo(const struct FString& CutsceneId, int* FoundIndex);
 	void SetPlayInfoList(TArray<struct FST_DbgCutscenePlayInfo>* InfoList);
-	void STATIC_SetPlayInfo(const struct FST_DbgCutscenePlayInfo& Info);
+	void SetPlayInfo(const struct FST_DbgCutscenePlayInfo& Info);
 	void UserConstructionScript();
-	void STATIC_TmpManualUnloadCutsceneLevel();
-	void STATIC_DebugOnStartCutscenePlayer();
-	void STATIC_DebugOnCutsceneEnd();
-	void STATIC__BindDebugOnStartCutscenePlayer();
-	void STATIC__BindDebugOnCutsceneEnd();
-	void STATIC_ExecuteUbergraph_BP_DbgCutsceneListPlayer(int EntryPoint);
+	void TmpManualUnloadCutsceneLevel();
+	void DebugOnStartCutscenePlayer();
+	void DebugOnCutsceneEnd();
+	void _BindDebugOnStartCutscenePlayer();
+	void _BindDebugOnCutsceneEnd();
+	void ExecuteUbergraph_BP_DbgCutsceneListPlayer(int EntryPoint);
 	void OnCutsceneEnd__DelegateSignature(const struct FName& CutsceneId);
 	void OnStartCutscenePlayer__DelegateSignature(const struct FName& CutsceneId);
 };

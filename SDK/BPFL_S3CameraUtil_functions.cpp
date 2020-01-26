@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.TryGetSpecifiedCalcRotationSpeaker
-// (NetReliable, NetRequest, Native, NetResponse, Static, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USceneComponent*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
@@ -27,7 +27,6 @@ class USceneComponent* UBPFL_S3CameraUtil_C::STATIC_TryGetSpecifiedCalcRotationS
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,13 +37,13 @@ class USceneComponent* UBPFL_S3CameraUtil_C::STATIC_TryGetSpecifiedCalcRotationS
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraAngleMaskFromClass
-// (NetReliable, Public, Delegate, NetServer, NetClient, BlueprintPure)
+// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            mask                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::ToCameraAngleMaskFromClass(class UClass* In, class UObject* __WorldContext, int* mask)
+void UBPFL_S3CameraUtil_C::STATIC_ToCameraAngleMaskFromClass(class UClass* In, class UObject* __WorldContext, int* mask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraAngleMaskFromClass");
 
@@ -64,13 +63,13 @@ void UBPFL_S3CameraUtil_C::ToCameraAngleMaskFromClass(class UClass* In, class UO
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraFramingMaskFromClass
-// (Net, NetReliable, Exec, Event, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            mask                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::ToCameraFramingMaskFromClass(class UClass* In, class UObject* __WorldContext, int* mask)
+void UBPFL_S3CameraUtil_C::STATIC_ToCameraFramingMaskFromClass(class UClass* In, class UObject* __WorldContext, int* mask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraFramingMaskFromClass");
 
@@ -90,13 +89,13 @@ void UBPFL_S3CameraUtil_C::ToCameraFramingMaskFromClass(class UClass* In, class 
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraPairOrSingleMaskFromClass
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            mask                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::ToCameraPairOrSingleMaskFromClass(class UClass* In, class UObject* __WorldContext, int* mask)
+void UBPFL_S3CameraUtil_C::STATIC_ToCameraPairOrSingleMaskFromClass(class UClass* In, class UObject* __WorldContext, int* mask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraPairOrSingleMaskFromClass");
 
@@ -116,11 +115,11 @@ void UBPFL_S3CameraUtil_C::ToCameraPairOrSingleMaskFromClass(class UClass* In, c
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.SphereTraceForObjectsByTwoSide
-// (NetRequest, Exec, Native, Event, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::SphereTraceForObjectsByTwoSide(class UObject* __WorldContext)
+void UBPFL_S3CameraUtil_C::STATIC_SphereTraceForObjectsByTwoSide(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.SphereTraceForObjectsByTwoSide");
 
@@ -128,7 +127,6 @@ void UBPFL_S3CameraUtil_C::SphereTraceForObjectsByTwoSide(class UObject* __World
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +135,7 @@ void UBPFL_S3CameraUtil_C::SphereTraceForObjectsByTwoSide(class UObject* __World
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.IsSeeableFromCamera
-// (Net, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FVector>         CameraLocus                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -149,7 +147,7 @@ void UBPFL_S3CameraUtil_C::SphereTraceForObjectsByTwoSide(class UObject* __World
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::IsSeeableFromCamera(class AActor* TargetActor, const struct FName& TargetSocketName, bool isDebug, float SphereTraceRadius, class UObject* __WorldContext, TArray<struct FVector>* CameraLocus, TArray<class AActor*>* _IgnoreActor, TArray<TEnumAsByte<EObjectTypeQuery>>* InObjectType, bool* Result)
+void UBPFL_S3CameraUtil_C::STATIC_IsSeeableFromCamera(class AActor* TargetActor, const struct FName& TargetSocketName, bool isDebug, float SphereTraceRadius, class UObject* __WorldContext, TArray<struct FVector>* CameraLocus, TArray<class AActor*>* _IgnoreActor, TArray<TEnumAsByte<EObjectTypeQuery>>* InObjectType, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.IsSeeableFromCamera");
 
@@ -178,7 +176,7 @@ void UBPFL_S3CameraUtil_C::IsSeeableFromCamera(class AActor* TargetActor, const 
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CheckSeeableForManyTargets
-// (NetReliable, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FVector>         InLocus                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          InBottomSeeableRate            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -192,7 +190,7 @@ void UBPFL_S3CameraUtil_C::IsSeeableFromCamera(class AActor* TargetActor, const 
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CheckSeeableForManyTargets(float InBottomSeeableRate, bool isDebug, TEnumAsByte<EM_LeftOrRight> CameraPosition, const struct FST_CameraInitialProperty& InitalCameraProperty, const struct FName& SocketName, class UObject* __WorldContext, TArray<struct FVector>* InLocus, TArray<class ABP_S3CharacterBase_C*>* TargetActors, TArray<TEnumAsByte<EObjectTypeQuery>>* InObjectType, TArray<class AActor*>* IgnoreActor, bool* Result)
+void UBPFL_S3CameraUtil_C::STATIC_CheckSeeableForManyTargets(float InBottomSeeableRate, bool isDebug, TEnumAsByte<EM_LeftOrRight> CameraPosition, const struct FST_CameraInitialProperty& InitalCameraProperty, const struct FName& SocketName, class UObject* __WorldContext, TArray<struct FVector>* InLocus, TArray<class ABP_S3CharacterBase_C*>* TargetActors, TArray<TEnumAsByte<EObjectTypeQuery>>* InObjectType, TArray<class AActor*>* IgnoreActor, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CheckSeeableForManyTargets");
 
@@ -224,7 +222,7 @@ void UBPFL_S3CameraUtil_C::CheckSeeableForManyTargets(float InBottomSeeableRate,
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.isSameDirection
-// (Net, NetRequest, Native, Static, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 From                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Target1                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -245,7 +243,6 @@ void UBPFL_S3CameraUtil_C::STATIC_isSameDirection(const struct FVector& From, co
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -257,7 +254,7 @@ void UBPFL_S3CameraUtil_C::STATIC_isSameDirection(const struct FVector& From, co
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.IsStraight
-// (Net, NetReliable, NetRequest, Native, Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor1                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor2                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -265,7 +262,7 @@ void UBPFL_S3CameraUtil_C::STATIC_isSameDirection(const struct FVector& From, co
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsStraight                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::IsStraight(class AActor* Actor1, class AActor* Actor2, class AActor* Actor3, class UObject* __WorldContext, bool* IsStraight)
+void UBPFL_S3CameraUtil_C::STATIC_IsStraight(class AActor* Actor1, class AActor* Actor2, class AActor* Actor3, class UObject* __WorldContext, bool* IsStraight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.IsStraight");
 
@@ -276,7 +273,6 @@ void UBPFL_S3CameraUtil_C::IsStraight(class AActor* Actor1, class AActor* Actor2
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -288,13 +284,13 @@ void UBPFL_S3CameraUtil_C::IsStraight(class AActor* Actor1, class AActor* Actor2
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraPairOrSingleMaskFromName
-// (Event, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            mask                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::ToCameraPairOrSingleMaskFromName(const struct FString& In, class UObject* __WorldContext, int* mask)
+void UBPFL_S3CameraUtil_C::STATIC_ToCameraPairOrSingleMaskFromName(const struct FString& In, class UObject* __WorldContext, int* mask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraPairOrSingleMaskFromName");
 
@@ -314,13 +310,13 @@ void UBPFL_S3CameraUtil_C::ToCameraPairOrSingleMaskFromName(const struct FString
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraAngleMaskFromName
-// (Native, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            mask                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::ToCameraAngleMaskFromName(const struct FString& In, class UObject* __WorldContext, int* mask)
+void UBPFL_S3CameraUtil_C::STATIC_ToCameraAngleMaskFromName(const struct FString& In, class UObject* __WorldContext, int* mask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraAngleMaskFromName");
 
@@ -329,7 +325,6 @@ void UBPFL_S3CameraUtil_C::ToCameraAngleMaskFromName(const struct FString& In, c
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -341,7 +336,7 @@ void UBPFL_S3CameraUtil_C::ToCameraAngleMaskFromName(const struct FString& In, c
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ToCameraFramingMaskFromName
-// (NetReliable, NetRequest, Exec, Static, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -367,7 +362,7 @@ void UBPFL_S3CameraUtil_C::STATIC_ToCameraFramingMaskFromName(const struct FStri
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ParseCameraClassToIntensionMask
-// (Net, NetRequest, Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  cameraClass                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -375,7 +370,7 @@ void UBPFL_S3CameraUtil_C::STATIC_ToCameraFramingMaskFromName(const struct FStri
 // struct FRotator                retRotate                      (Parm, OutParm, IsPlainOldData)
 // bool                           bError                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::ParseCameraClassToIntensionMask(class UClass* cameraClass, class UObject* __WorldContext, int* retMask, struct FRotator* retRotate, bool* bError)
+void UBPFL_S3CameraUtil_C::STATIC_ParseCameraClassToIntensionMask(class UClass* cameraClass, class UObject* __WorldContext, int* retMask, struct FRotator* retRotate, bool* bError)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.ParseCameraClassToIntensionMask");
 
@@ -399,12 +394,12 @@ void UBPFL_S3CameraUtil_C::ParseCameraClassToIntensionMask(class UClass* cameraC
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CameraClassNameToBitMask
-// (NetRequest, Exec, Native, Event, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  Camera                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CameraClassNameToBitMask(class UClass* Camera, class UObject* __WorldContext)
+void UBPFL_S3CameraUtil_C::STATIC_CameraClassNameToBitMask(class UClass* Camera, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CameraClassNameToBitMask");
 
@@ -413,7 +408,6 @@ void UBPFL_S3CameraUtil_C::CameraClassNameToBitMask(class UClass* Camera, class 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -422,7 +416,7 @@ void UBPFL_S3CameraUtil_C::CameraClassNameToBitMask(class UClass* Camera, class 
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.DistanceToBitmask
-// (NetRequest, Exec, Native, Static, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -437,7 +431,6 @@ void UBPFL_S3CameraUtil_C::STATIC_DistanceToBitmask(float Distance, class UObjec
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -449,13 +442,13 @@ void UBPFL_S3CameraUtil_C::STATIC_DistanceToBitmask(float Distance, class UObjec
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcInfoFromMultiplePersonCamera
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Public, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  MultiplePersonCameraClass      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcInfoFromMultiplePersonCamera(class UClass* MultiplePersonCameraClass, class UObject* __WorldContext, int* Result)
+void UBPFL_S3CameraUtil_C::STATIC_CalcInfoFromMultiplePersonCamera(class UClass* MultiplePersonCameraClass, class UObject* __WorldContext, int* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcInfoFromMultiplePersonCamera");
 
@@ -475,7 +468,7 @@ void UBPFL_S3CameraUtil_C::CalcInfoFromMultiplePersonCamera(class UClass* Multip
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcInfoFromLookAtCameraClass
-// (Native, Static, Public, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  LookAtCamera                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -490,7 +483,6 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcInfoFromLookAtCameraClass(class UClass* Lo
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -502,14 +494,14 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcInfoFromLookAtCameraClass(class UClass* Lo
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcInfoFromDefaltTalkCameraClass
-// (Net, NetReliable, Native, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  DefaultTalkCamera              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotator                        (Parm, OutParm, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcInfoFromDefaltTalkCameraClass(class UClass* DefaultTalkCamera, class UObject* __WorldContext, int* Result, struct FRotator* Rotator)
+void UBPFL_S3CameraUtil_C::STATIC_CalcInfoFromDefaltTalkCameraClass(class UClass* DefaultTalkCamera, class UObject* __WorldContext, int* Result, struct FRotator* Rotator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcInfoFromDefaltTalkCameraClass");
 
@@ -518,7 +510,6 @@ void UBPFL_S3CameraUtil_C::CalcInfoFromDefaltTalkCameraClass(class UClass* Defau
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -532,7 +523,7 @@ void UBPFL_S3CameraUtil_C::CalcInfoFromDefaltTalkCameraClass(class UClass* Defau
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraInfo
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  BaseTalkCameraClass            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -547,7 +538,6 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcCameraInfo(class UClass* BaseTalkCameraCla
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -559,13 +549,13 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcCameraInfo(class UClass* BaseTalkCameraCla
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.TryGetRightVector
-// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USkeletalMeshComponent*  Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Right                          (Parm, OutParm, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::TryGetRightVector(class USkeletalMeshComponent* Target, class UObject* __WorldContext, struct FVector* Right)
+void UBPFL_S3CameraUtil_C::STATIC_TryGetRightVector(class USkeletalMeshComponent* Target, class UObject* __WorldContext, struct FVector* Right)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.TryGetRightVector");
 
@@ -574,7 +564,6 @@ void UBPFL_S3CameraUtil_C::TryGetRightVector(class USkeletalMeshComponent* Targe
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -586,7 +575,7 @@ void UBPFL_S3CameraUtil_C::TryGetRightVector(class USkeletalMeshComponent* Targe
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.TryGetForwardVector
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USkeletalMeshComponent*  Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -601,7 +590,6 @@ void UBPFL_S3CameraUtil_C::STATIC_TryGetForwardVector(class USkeletalMeshCompone
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -613,7 +601,7 @@ void UBPFL_S3CameraUtil_C::STATIC_TryGetForwardVector(class USkeletalMeshCompone
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcLookAtCameraLocus
-// (Net, NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  LookAtCameraClass              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EM_LeftOrRight>    _CameraPosition1               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -647,14 +635,14 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcLookAtCameraLocus(class UClass* LookAtCame
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcMultiplePersonCameraLocus
-// (Net, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  MultiplePersonCamera           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class AS3Character*>    Targets                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FVector>         Locus                          (Parm, OutParm, ZeroConstructor)
 
-void UBPFL_S3CameraUtil_C::CalcMultiplePersonCameraLocus(class UClass* MultiplePersonCamera, class UObject* __WorldContext, TArray<class AS3Character*>* Targets, TArray<struct FVector>* Locus)
+void UBPFL_S3CameraUtil_C::STATIC_CalcMultiplePersonCameraLocus(class UClass* MultiplePersonCamera, class UObject* __WorldContext, TArray<class AS3Character*>* Targets, TArray<struct FVector>* Locus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcMultiplePersonCameraLocus");
 
@@ -676,7 +664,7 @@ void UBPFL_S3CameraUtil_C::CalcMultiplePersonCameraLocus(class UClass* MultipleP
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.isAvailavleFromParam
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_CameraInitialProperty InitialCameraProperty          (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           EnableSpin                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -731,7 +719,7 @@ void UBPFL_S3CameraUtil_C::STATIC_isAvailavleFromParam(const struct FST_CameraIn
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.GetRandomCameraInRange
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  CameraClass1                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  CameraClass2                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -740,7 +728,7 @@ void UBPFL_S3CameraUtil_C::STATIC_isAvailavleFromParam(const struct FST_CameraIn
 // struct FST_CameraSpinProperty  CameraSpin                     (Parm, OutParm)
 // struct FST_CameraDollyZoomProperty CameraDolly                    (Parm, OutParm)
 
-void UBPFL_S3CameraUtil_C::GetRandomCameraInRange(class UClass* CameraClass1, class UClass* CameraClass2, class UObject* __WorldContext, struct FST_CameraInitialProperty* CameraInitialProperty, struct FST_CameraSpinProperty* CameraSpin, struct FST_CameraDollyZoomProperty* CameraDolly)
+void UBPFL_S3CameraUtil_C::STATIC_GetRandomCameraInRange(class UClass* CameraClass1, class UClass* CameraClass2, class UObject* __WorldContext, struct FST_CameraInitialProperty* CameraInitialProperty, struct FST_CameraSpinProperty* CameraSpin, struct FST_CameraDollyZoomProperty* CameraDolly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.GetRandomCameraInRange");
 
@@ -765,14 +753,14 @@ void UBPFL_S3CameraUtil_C::GetRandomCameraInRange(class UClass* CameraClass1, cl
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.RandomDollyInRange
-// (Exec, Native, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_CameraDollyZoomProperty Min                            (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FST_CameraDollyZoomProperty Max                            (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_CameraDollyZoomProperty Result                         (Parm, OutParm)
 
-void UBPFL_S3CameraUtil_C::RandomDollyInRange(const struct FST_CameraDollyZoomProperty& Min, const struct FST_CameraDollyZoomProperty& Max, class UObject* __WorldContext, struct FST_CameraDollyZoomProperty* Result)
+void UBPFL_S3CameraUtil_C::STATIC_RandomDollyInRange(const struct FST_CameraDollyZoomProperty& Min, const struct FST_CameraDollyZoomProperty& Max, class UObject* __WorldContext, struct FST_CameraDollyZoomProperty* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.RandomDollyInRange");
 
@@ -782,7 +770,6 @@ void UBPFL_S3CameraUtil_C::RandomDollyInRange(const struct FST_CameraDollyZoomPr
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -794,7 +781,7 @@ void UBPFL_S3CameraUtil_C::RandomDollyInRange(const struct FST_CameraDollyZoomPr
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CheckBreadthOfRightAndLeftSpaceInDome
-// (Net, NetMulticast, MulticastDelegate, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Center                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 XVector                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -807,7 +794,7 @@ void UBPFL_S3CameraUtil_C::RandomDollyInRange(const struct FST_CameraDollyZoomPr
 // float                          LeftHitRate                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          RightHitRate                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CheckBreadthOfRightAndLeftSpaceInDome(const struct FVector& Center, const struct FVector& XVector, float Length, float DeltaAngle, bool isDrawDebug, class UObject* __WorldContext, TArray<TEnumAsByte<EObjectTypeQuery>>* HitCheckObjectType, TEnumAsByte<EM_LeftOrRight>* SpaciousArea, float* LeftHitRate, float* RightHitRate)
+void UBPFL_S3CameraUtil_C::STATIC_CheckBreadthOfRightAndLeftSpaceInDome(const struct FVector& Center, const struct FVector& XVector, float Length, float DeltaAngle, bool isDrawDebug, class UObject* __WorldContext, TArray<TEnumAsByte<EObjectTypeQuery>>* HitCheckObjectType, TEnumAsByte<EM_LeftOrRight>* SpaciousArea, float* LeftHitRate, float* RightHitRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CheckBreadthOfRightAndLeftSpaceInDome");
 
@@ -837,7 +824,7 @@ void UBPFL_S3CameraUtil_C::CheckBreadthOfRightAndLeftSpaceInDome(const struct FV
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.RandomSpinInRange
-// (Static, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_CameraSpinProperty  Min                            (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FST_CameraSpinProperty  Max                            (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -865,7 +852,7 @@ void UBPFL_S3CameraUtil_C::STATIC_RandomSpinInRange(const struct FST_CameraSpinP
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.RandomInitialcameraPropertyInRange
-// (Net, NetReliable, NetRequest, Static, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_CameraInitialProperty Min                            (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FST_CameraInitialProperty Max                            (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -897,7 +884,7 @@ void UBPFL_S3CameraUtil_C::STATIC_RandomInitialcameraPropertyInRange(const struc
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CreatePairTalkCamera
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_CameraInitialProperty MinInitialProperty             (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FST_CameraInitialProperty MaxInitialProperty             (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -907,7 +894,7 @@ void UBPFL_S3CameraUtil_C::STATIC_RandomInitialcameraPropertyInRange(const struc
 // struct FST_CameraDollyZoomProperty MaxDolly                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CreatePairTalkCamera(const struct FST_CameraInitialProperty& MinInitialProperty, const struct FST_CameraInitialProperty& MaxInitialProperty, const struct FST_CameraSpinProperty& MinSpin, const struct FST_CameraSpinProperty& MaxSpin, const struct FST_CameraDollyZoomProperty& MinDolly, const struct FST_CameraDollyZoomProperty& MaxDolly, class UObject* __WorldContext)
+void UBPFL_S3CameraUtil_C::STATIC_CreatePairTalkCamera(const struct FST_CameraInitialProperty& MinInitialProperty, const struct FST_CameraInitialProperty& MaxInitialProperty, const struct FST_CameraSpinProperty& MinSpin, const struct FST_CameraSpinProperty& MaxSpin, const struct FST_CameraDollyZoomProperty& MinDolly, const struct FST_CameraDollyZoomProperty& MaxDolly, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CreatePairTalkCamera");
 
@@ -929,7 +916,7 @@ void UBPFL_S3CameraUtil_C::CreatePairTalkCamera(const struct FST_CameraInitialPr
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.GetCameraPropertiesFromClass
-// (MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  DefaultTalkCameraClass         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -939,7 +926,7 @@ void UBPFL_S3CameraUtil_C::CreatePairTalkCamera(const struct FST_CameraInitialPr
 // bool                           Enable_Dolly_Zoom              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FST_CameraDollyZoomProperty Dolly_Zoom_Property            (Parm, OutParm)
 
-void UBPFL_S3CameraUtil_C::GetCameraPropertiesFromClass(class UClass* DefaultTalkCameraClass, class UObject* __WorldContext, struct FST_CameraInitialProperty* InitialCameraProperty, bool* Enable_Spin, struct FST_CameraSpinProperty* Spin_Property, bool* Enable_Dolly_Zoom, struct FST_CameraDollyZoomProperty* Dolly_Zoom_Property)
+void UBPFL_S3CameraUtil_C::STATIC_GetCameraPropertiesFromClass(class UClass* DefaultTalkCameraClass, class UObject* __WorldContext, struct FST_CameraInitialProperty* InitialCameraProperty, bool* Enable_Spin, struct FST_CameraSpinProperty* Spin_Property, bool* Enable_Dolly_Zoom, struct FST_CameraDollyZoomProperty* Dolly_Zoom_Property)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.GetCameraPropertiesFromClass");
 
@@ -967,7 +954,7 @@ void UBPFL_S3CameraUtil_C::GetCameraPropertiesFromClass(class UClass* DefaultTal
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.DrawDebugLocus
-// (Net, NetReliable, Exec, Native, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FVector>         Locus                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FLinearColor            LineColor                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -986,7 +973,6 @@ void UBPFL_S3CameraUtil_C::STATIC_DrawDebugLocus(const struct FLinearColor& Line
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -998,7 +984,7 @@ void UBPFL_S3CameraUtil_C::STATIC_DrawDebugLocus(const struct FLinearColor& Line
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CheckSeeableFromLocusWithRate
-// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FVector>         Locus                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          BottomSeeableRate              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1017,7 +1003,7 @@ void UBPFL_S3CameraUtil_C::STATIC_DrawDebugLocus(const struct FLinearColor& Line
 // float                          resultSeeableRate              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FHitResult>      HitResults                     (Parm, OutParm, ZeroConstructor)
 
-void UBPFL_S3CameraUtil_C::CheckSeeableFromLocusWithRate(float BottomSeeableRate, class USceneComponent* SpeakerMesh, class USceneComponent* ListenerMesh, bool isDebugDraw, bool isPair, const struct FName& SocketName, TEnumAsByte<EM_LeftOrRight> CameraPosition, const struct FST_CameraInitialProperty& InitialCameraProperty, bool bTargetReverse, class UObject* __WorldContext, TArray<struct FVector>* Locus, TArray<TEnumAsByte<EObjectTypeQuery>>* ObjectTypes, TArray<class AActor*>* ActorsToIgnore, bool* isSeeable, float* resultSeeableRate, TArray<struct FHitResult>* HitResults)
+void UBPFL_S3CameraUtil_C::STATIC_CheckSeeableFromLocusWithRate(float BottomSeeableRate, class USceneComponent* SpeakerMesh, class USceneComponent* ListenerMesh, bool isDebugDraw, bool isPair, const struct FName& SocketName, TEnumAsByte<EM_LeftOrRight> CameraPosition, const struct FST_CameraInitialProperty& InitialCameraProperty, bool bTargetReverse, class UObject* __WorldContext, TArray<struct FVector>* Locus, TArray<TEnumAsByte<EObjectTypeQuery>>* ObjectTypes, TArray<class AActor*>* ActorsToIgnore, bool* isSeeable, float* resultSeeableRate, TArray<struct FHitResult>* HitResults)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CheckSeeableFromLocusWithRate");
 
@@ -1034,7 +1020,6 @@ void UBPFL_S3CameraUtil_C::CheckSeeableFromLocusWithRate(float BottomSeeableRate
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1056,7 +1041,7 @@ void UBPFL_S3CameraUtil_C::CheckSeeableFromLocusWithRate(float BottomSeeableRate
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CheckHitFromLocus
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, Protected, BlueprintCallable)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FVector>         Locus                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          Radius                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1102,7 +1087,7 @@ void UBPFL_S3CameraUtil_C::STATIC_CheckHitFromLocus(float Radius, bool isDebugDr
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.isAvailableFromClass
-// (Net, NetReliable, Exec, Event, Static, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  TalkCamera                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            DivNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1152,7 +1137,7 @@ void UBPFL_S3CameraUtil_C::STATIC_isAvailableFromClass(class UClass* TalkCamera,
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcDefaultTalkCameraLocus
-// (Net, NetRequest, Event, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // int                            DivNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USceneComponent*         SpeakingSkeletalMesh           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -1167,7 +1152,7 @@ void UBPFL_S3CameraUtil_C::STATIC_isAvailableFromClass(class UClass* TalkCamera,
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FVector>         newParam                       (Parm, OutParm, ZeroConstructor)
 
-void UBPFL_S3CameraUtil_C::CalcDefaultTalkCameraLocus(int DivNum, class USceneComponent* SpeakingSkeletalMesh, class USceneComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, const struct FST_CameraInitialProperty& InitialCameraProperty, bool EnableSpin, const struct FST_CameraSpinProperty& SpinProperty, bool EnableDollyZoom, const struct FST_CameraDollyZoomProperty& DollyZoomProperty, bool isDrawDebug, class UObject* __WorldContext, TArray<struct FVector>* newParam)
+void UBPFL_S3CameraUtil_C::STATIC_CalcDefaultTalkCameraLocus(int DivNum, class USceneComponent* SpeakingSkeletalMesh, class USceneComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, const struct FST_CameraInitialProperty& InitialCameraProperty, bool EnableSpin, const struct FST_CameraSpinProperty& SpinProperty, bool EnableDollyZoom, const struct FST_CameraDollyZoomProperty& DollyZoomProperty, bool isDrawDebug, class UObject* __WorldContext, TArray<struct FVector>* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcDefaultTalkCameraLocus");
 
@@ -1196,13 +1181,13 @@ void UBPFL_S3CameraUtil_C::CalcDefaultTalkCameraLocus(int DivNum, class USceneCo
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcImaginaryPositionValue
-// (Net, NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EM_LeftOrRight>    CameraPosition                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ImaginaryPositionValue         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcImaginaryPositionValue(TEnumAsByte<EM_LeftOrRight> CameraPosition, class UObject* __WorldContext, float* ImaginaryPositionValue)
+void UBPFL_S3CameraUtil_C::STATIC_CalcImaginaryPositionValue(TEnumAsByte<EM_LeftOrRight> CameraPosition, class UObject* __WorldContext, float* ImaginaryPositionValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcImaginaryPositionValue");
 
@@ -1211,7 +1196,6 @@ void UBPFL_S3CameraUtil_C::CalcImaginaryPositionValue(TEnumAsByte<EM_LeftOrRight
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1223,7 +1207,7 @@ void UBPFL_S3CameraUtil_C::CalcImaginaryPositionValue(TEnumAsByte<EM_LeftOrRight
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcFinishDollyCameraDistance
-// (Native, Static, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          StartCameraDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StandardCameraDistance         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1244,7 +1228,6 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcFinishDollyCameraDistance(float StartCamer
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1260,7 +1243,7 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcFinishDollyCameraDistance(float StartCamer
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraSpin
-// (NetReliable, NetRequest, Native, NetResponse, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FST_CameraSpinProperty  ST_CameraSpinProperty          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1269,7 +1252,7 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcFinishDollyCameraDistance(float StartCamer
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ResultRotation                 (Parm, OutParm, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcCameraSpin(float Time, const struct FRotator& StartRotation, const struct FRotator& FinishRotation, class UObject* __WorldContext, struct FST_CameraSpinProperty* ST_CameraSpinProperty, struct FRotator* ResultRotation)
+void UBPFL_S3CameraUtil_C::STATIC_CalcCameraSpin(float Time, const struct FRotator& StartRotation, const struct FRotator& FinishRotation, class UObject* __WorldContext, struct FST_CameraSpinProperty* ST_CameraSpinProperty, struct FRotator* ResultRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraSpin");
 
@@ -1280,7 +1263,6 @@ void UBPFL_S3CameraUtil_C::CalcCameraSpin(float Time, const struct FRotator& Sta
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1294,7 +1276,7 @@ void UBPFL_S3CameraUtil_C::CalcCameraSpin(float Time, const struct FRotator& Sta
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcFinishSpin
-// (NetReliable, Exec, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // float                          ImaginaryPositionValue         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StandardhalfDistance           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1306,7 +1288,7 @@ void UBPFL_S3CameraUtil_C::CalcCameraSpin(float Time, const struct FRotator& Sta
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                FinishRotation                 (Parm, OutParm, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcFinishSpin(float ImaginaryPositionValue, float StandardhalfDistance, float CurrentCameraDistance, const struct FRotator& StartRotation, const struct FRotator& StandardRotation, class UObject* __WorldContext, struct FST_CameraInitialProperty* ST_CameraInitialProperty, struct FST_CameraSpinProperty* ST_CameraSpinProperty, struct FRotator* FinishRotation)
+void UBPFL_S3CameraUtil_C::STATIC_CalcFinishSpin(float ImaginaryPositionValue, float StandardhalfDistance, float CurrentCameraDistance, const struct FRotator& StartRotation, const struct FRotator& StandardRotation, class UObject* __WorldContext, struct FST_CameraInitialProperty* ST_CameraInitialProperty, struct FST_CameraSpinProperty* ST_CameraSpinProperty, struct FRotator* FinishRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcFinishSpin");
 
@@ -1334,7 +1316,7 @@ void UBPFL_S3CameraUtil_C::CalcFinishSpin(float ImaginaryPositionValue, float St
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcSpinElapsedTime
-// (NetResponse, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          CurrentElapsedTime             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1342,7 +1324,7 @@ void UBPFL_S3CameraUtil_C::CalcFinishSpin(float ImaginaryPositionValue, float St
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          resultElapsedTime              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcSpinElapsedTime(float DeltaTime, float CurrentElapsedTime, class UObject* __WorldContext, struct FST_CameraSpinProperty* ST_CameraSpinProperty, float* resultElapsedTime)
+void UBPFL_S3CameraUtil_C::STATIC_CalcSpinElapsedTime(float DeltaTime, float CurrentElapsedTime, class UObject* __WorldContext, struct FST_CameraSpinProperty* ST_CameraSpinProperty, float* resultElapsedTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcSpinElapsedTime");
 
@@ -1365,7 +1347,7 @@ void UBPFL_S3CameraUtil_C::CalcSpinElapsedTime(float DeltaTime, float CurrentEla
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraDistance
-// (NetReliable, NetMulticast, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USceneComponent*         SpeakingSkeletalMesh           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class USceneComponent*         ListeningSkeletalMesh          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -1375,7 +1357,7 @@ void UBPFL_S3CameraUtil_C::CalcSpinElapsedTime(float DeltaTime, float CurrentEla
 // float                          CharacterHalfDistance          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          StandardCameraDistance         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcCameraDistance(class USceneComponent* SpeakingSkeletalMesh, class USceneComponent* ListeningSkeletalMesh, const struct FST_CameraInitialProperty& InitialCameraProperty, class UObject* __WorldContext, float* CameraDistance, float* CharacterHalfDistance, float* StandardCameraDistance)
+void UBPFL_S3CameraUtil_C::STATIC_CalcCameraDistance(class USceneComponent* SpeakingSkeletalMesh, class USceneComponent* ListeningSkeletalMesh, const struct FST_CameraInitialProperty& InitialCameraProperty, class UObject* __WorldContext, float* CameraDistance, float* CharacterHalfDistance, float* StandardCameraDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraDistance");
 
@@ -1401,7 +1383,7 @@ void UBPFL_S3CameraUtil_C::CalcCameraDistance(class USceneComponent* SpeakingSke
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraRotation
-// (NetReliable, NetRequest, Native, NetResponse, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USceneComponent*         SpeakingSkeletalMesh           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class USceneComponent*         ListeningSkeletalMesh          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -1413,7 +1395,7 @@ void UBPFL_S3CameraUtil_C::CalcCameraDistance(class USceneComponent* SpeakingSke
 // struct FRotator                ResultRotation                 (Parm, OutParm, IsPlainOldData)
 // struct FRotator                StandardRotation               (Parm, OutParm, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcCameraRotation(class USceneComponent* SpeakingSkeletalMesh, class USceneComponent* ListeningSkeletalMesh, float ImaginaryPositionValue, const struct FST_CameraInitialProperty& InitialCameraProperty, TEnumAsByte<EM_LeftOrRight> CameraPosition, float StandardhalfDistance, class UObject* __WorldContext, struct FRotator* ResultRotation, struct FRotator* StandardRotation)
+void UBPFL_S3CameraUtil_C::STATIC_CalcCameraRotation(class USceneComponent* SpeakingSkeletalMesh, class USceneComponent* ListeningSkeletalMesh, float ImaginaryPositionValue, const struct FST_CameraInitialProperty& InitialCameraProperty, TEnumAsByte<EM_LeftOrRight> CameraPosition, float StandardhalfDistance, class UObject* __WorldContext, struct FRotator* ResultRotation, struct FRotator* StandardRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraRotation");
 
@@ -1427,7 +1409,6 @@ void UBPFL_S3CameraUtil_C::CalcCameraRotation(class USceneComponent* SpeakingSke
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1441,7 +1422,7 @@ void UBPFL_S3CameraUtil_C::CalcCameraRotation(class USceneComponent* SpeakingSke
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcLockPointDepthOffset
-// (NetRequest, Event, NetResponse, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USceneComponent*         ListeningSkeletalMesh          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class USceneComponent*         SpeakingSkeletalMesh           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -1450,7 +1431,7 @@ void UBPFL_S3CameraUtil_C::CalcCameraRotation(class USceneComponent* SpeakingSke
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 DepthOffset                    (Parm, OutParm, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcLockPointDepthOffset(class USceneComponent* ListeningSkeletalMesh, class USceneComponent* SpeakingSkeletalMesh, float StandardhalfDistance, const struct FST_CameraInitialProperty& InitialCameraProperty, class UObject* __WorldContext, struct FVector* DepthOffset)
+void UBPFL_S3CameraUtil_C::STATIC_CalcLockPointDepthOffset(class USceneComponent* ListeningSkeletalMesh, class USceneComponent* SpeakingSkeletalMesh, float StandardhalfDistance, const struct FST_CameraInitialProperty& InitialCameraProperty, class UObject* __WorldContext, struct FVector* DepthOffset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcLockPointDepthOffset");
 
@@ -1473,7 +1454,7 @@ void UBPFL_S3CameraUtil_C::CalcLockPointDepthOffset(class USceneComponent* Liste
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraDollyZoom
-// (Exec, Event, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartCameraDistance            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1482,7 +1463,7 @@ void UBPFL_S3CameraUtil_C::CalcLockPointDepthOffset(class USceneComponent* Liste
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcCameraDollyZoom(float Time, float StartCameraDistance, float FinishCameraDistance, class UObject* __WorldContext, struct FST_CameraDollyZoomProperty* ST_CameraDollyZoomProperty, struct FVector* Location)
+void UBPFL_S3CameraUtil_C::STATIC_CalcCameraDollyZoom(float Time, float StartCameraDistance, float FinishCameraDistance, class UObject* __WorldContext, struct FST_CameraDollyZoomProperty* ST_CameraDollyZoomProperty, struct FVector* Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraDollyZoom");
 
@@ -1506,7 +1487,7 @@ void UBPFL_S3CameraUtil_C::CalcCameraDollyZoom(float Time, float StartCameraDist
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraFovZoom
-// (NetRequest, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartFOV                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1514,7 +1495,7 @@ void UBPFL_S3CameraUtil_C::CalcCameraDollyZoom(float Time, float StartCameraDist
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FOV                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::CalcCameraFovZoom(float Time, float StartFOV, class UObject* __WorldContext, struct FST_CameraFovZoomProperty* ST_CameraFovZoomProperty, float* FOV)
+void UBPFL_S3CameraUtil_C::STATIC_CalcCameraFovZoom(float Time, float StartFOV, class UObject* __WorldContext, struct FST_CameraFovZoomProperty* ST_CameraFovZoomProperty, float* FOV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcCameraFovZoom");
 
@@ -1537,7 +1518,7 @@ void UBPFL_S3CameraUtil_C::CalcCameraFovZoom(float Time, float StartFOV, class U
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcLookPos
-// (Exec, Native, Static, Public, Delegate, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USceneComponent*         SpeakingSkeletalMesh           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class USceneComponent*         ListeningSkeletalMesh          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -1558,7 +1539,6 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcLookPos(class USceneComponent* SpeakingSke
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1570,14 +1550,14 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcLookPos(class USceneComponent* SpeakingSke
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.AdjustRotationFromDistance
-// (NetReliable, Native, Event, NetResponse, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FRotator                Rotation                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          DistanceRatio                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                AdjustmentRotation             (Parm, OutParm, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::AdjustRotationFromDistance(const struct FRotator& Rotation, float DistanceRatio, class UObject* __WorldContext, struct FRotator* AdjustmentRotation)
+void UBPFL_S3CameraUtil_C::STATIC_AdjustRotationFromDistance(const struct FRotator& Rotation, float DistanceRatio, class UObject* __WorldContext, struct FRotator* AdjustmentRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.AdjustRotationFromDistance");
 
@@ -1587,7 +1567,6 @@ void UBPFL_S3CameraUtil_C::AdjustRotationFromDistance(const struct FRotator& Rot
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1599,7 +1578,7 @@ void UBPFL_S3CameraUtil_C::AdjustRotationFromDistance(const struct FRotator& Rot
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.AdjustCameraDistance
-// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          CharacterHalfDistance          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          CameraDistance                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1607,7 +1586,7 @@ void UBPFL_S3CameraUtil_C::AdjustRotationFromDistance(const struct FRotator& Rot
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          AdjustmentCameraDistance       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3CameraUtil_C::AdjustCameraDistance(float CharacterHalfDistance, float CameraDistance, const struct FST_CameraInitialProperty& InitialCameraProperty, class UObject* __WorldContext, float* AdjustmentCameraDistance)
+void UBPFL_S3CameraUtil_C::STATIC_AdjustCameraDistance(float CharacterHalfDistance, float CameraDistance, const struct FST_CameraInitialProperty& InitialCameraProperty, class UObject* __WorldContext, float* AdjustmentCameraDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.AdjustCameraDistance");
 
@@ -1629,7 +1608,7 @@ void UBPFL_S3CameraUtil_C::AdjustCameraDistance(float CharacterHalfDistance, flo
 
 
 // Function BPFL_S3CameraUtil.BPFL_S3CameraUtil_C.CalcLookPointOffset
-// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USceneComponent*         ListeningSkeletalMesh          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class USceneComponent*         SpeakingSkeletalMesh           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -1652,7 +1631,6 @@ void UBPFL_S3CameraUtil_C::STATIC_CalcLookPointOffset(class USceneComponent* Lis
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

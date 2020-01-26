@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.CheckFlag
-// (NetRequest, Exec, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            FlagID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            EnavleMin                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -42,7 +42,7 @@ void ABP_ForcedAttentionTrg_C::CheckFlag(int FlagID, int EnavleMin, int EnableMa
 
 
 // Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.CheckStep
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetClient, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            MinStep                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            MaxStep                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -68,12 +68,12 @@ void ABP_ForcedAttentionTrg_C::CheckStep(int MinStep, int MaxStep, bool* Result)
 
 
 // Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.GetDirection
-// (Net, Exec, NetResponse, Static, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Positive_direction             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Impact_dot_Arrow               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ForcedAttentionTrg_C::STATIC_GetDirection(bool* Positive_direction, float* Impact_dot_Arrow)
+void ABP_ForcedAttentionTrg_C::GetDirection(bool* Positive_direction, float* Impact_dot_Arrow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.GetDirection");
 
@@ -93,16 +93,15 @@ void ABP_ForcedAttentionTrg_C::STATIC_GetDirection(bool* Positive_direction, flo
 
 
 // Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.UserConstructionScript
-// (Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ForcedAttentionTrg_C::STATIC_UserConstructionScript()
+void ABP_ForcedAttentionTrg_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.UserConstructionScript");
 
 	ABP_ForcedAttentionTrg_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,16 +110,15 @@ void ABP_ForcedAttentionTrg_C::STATIC_UserConstructionScript()
 
 
 // Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.ReceiveBeginPlay
-// (Net, NetReliable, Exec, Native, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_ForcedAttentionTrg_C::STATIC_ReceiveBeginPlay()
+void ABP_ForcedAttentionTrg_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.ReceiveBeginPlay");
 
 	ABP_ForcedAttentionTrg_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,7 +127,7 @@ void ABP_ForcedAttentionTrg_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, NetResponse, Static, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -138,7 +136,7 @@ void ABP_ForcedAttentionTrg_C::STATIC_ReceiveBeginPlay()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_ForcedAttentionTrg_C::STATIC_BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_ForcedAttentionTrg_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -159,11 +157,11 @@ void ABP_ForcedAttentionTrg_C::STATIC_BndEvt__CollisionComponent_K2Node_Componen
 
 
 // Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.ExecuteUbergraph_BP_ForcedAttentionTrg
-// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ForcedAttentionTrg_C::STATIC_ExecuteUbergraph_BP_ForcedAttentionTrg(int EntryPoint)
+void ABP_ForcedAttentionTrg_C::ExecuteUbergraph_BP_ForcedAttentionTrg(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForcedAttentionTrg.BP_ForcedAttentionTrg_C.ExecuteUbergraph_BP_ForcedAttentionTrg");
 
@@ -171,7 +169,6 @@ void ABP_ForcedAttentionTrg_C::STATIC_ExecuteUbergraph_BP_ForcedAttentionTrg(int
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

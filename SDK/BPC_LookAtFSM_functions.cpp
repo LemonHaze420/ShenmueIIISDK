@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_LookAtFSM.BPC_LookAtFSM_C.ClearOverrideState
-// (Net, NetReliable, NetRequest, Event, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_LookAtFSM_C::ClearOverrideState()
 {
@@ -31,7 +31,7 @@ void UBPC_LookAtFSM_C::ClearOverrideState()
 
 
 // Function BPC_LookAtFSM.BPC_LookAtFSM_C.SetOverrideState
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -51,19 +51,18 @@ void UBPC_LookAtFSM_C::SetOverrideState(const struct FName& State)
 
 
 // Function BPC_LookAtFSM.BPC_LookAtFSM_C.GetIdealLookAtTargetLocation
-// (Native, NetResponse, Static, Protected, NetServer, NetClient, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 OutTargetLocation              (Parm, OutParm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_LookAtFSM_C::STATIC_GetIdealLookAtTargetLocation(struct FVector* OutTargetLocation)
+bool UBPC_LookAtFSM_C::GetIdealLookAtTargetLocation(struct FVector* OutTargetLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAtFSM.BPC_LookAtFSM_C.GetIdealLookAtTargetLocation");
 
 	UBPC_LookAtFSM_C_GetIdealLookAtTargetLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,12 +76,12 @@ bool UBPC_LookAtFSM_C::STATIC_GetIdealLookAtTargetLocation(struct FVector* OutTa
 
 
 // Function BPC_LookAtFSM.BPC_LookAtFSM_C.TryCacheTargetLocation
-// (Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Target                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Output                         (Parm, OutParm, IsPlainOldData)
 
-void UBPC_LookAtFSM_C::STATIC_TryCacheTargetLocation(const struct FVector& Target, struct FVector* Output)
+void UBPC_LookAtFSM_C::TryCacheTargetLocation(const struct FVector& Target, struct FVector* Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAtFSM.BPC_LookAtFSM_C.TryCacheTargetLocation");
 
@@ -101,12 +100,12 @@ void UBPC_LookAtFSM_C::STATIC_TryCacheTargetLocation(const struct FVector& Targe
 
 
 // Function BPC_LookAtFSM.BPC_LookAtFSM_C.GetLookAtTargetLocation
-// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 OutTargetLocation              (Parm, OutParm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_LookAtFSM_C::STATIC_GetLookAtTargetLocation(struct FVector* OutTargetLocation)
+bool UBPC_LookAtFSM_C::GetLookAtTargetLocation(struct FVector* OutTargetLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAtFSM.BPC_LookAtFSM_C.GetLookAtTargetLocation");
 
@@ -126,11 +125,11 @@ bool UBPC_LookAtFSM_C::STATIC_GetLookAtTargetLocation(struct FVector* OutTargetL
 
 
 // Function BPC_LookAtFSM.BPC_LookAtFSM_C.ReceiveTick
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_LookAtFSM_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UBPC_LookAtFSM_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAtFSM.BPC_LookAtFSM_C.ReceiveTick");
 
@@ -146,11 +145,11 @@ void UBPC_LookAtFSM_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_LookAtFSM.BPC_LookAtFSM_C.Init
-// (Net, NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3FaceAnimDataAsset*    FaceAnimData                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_LookAtFSM_C::STATIC_Init(class US3FaceAnimDataAsset* FaceAnimData)
+void UBPC_LookAtFSM_C::Init(class US3FaceAnimDataAsset* FaceAnimData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAtFSM.BPC_LookAtFSM_C.Init");
 
@@ -166,11 +165,11 @@ void UBPC_LookAtFSM_C::STATIC_Init(class US3FaceAnimDataAsset* FaceAnimData)
 
 
 // Function BPC_LookAtFSM.BPC_LookAtFSM_C.ExecuteUbergraph_BPC_LookAtFSM
-// (Net, NetRequest, Exec, NetResponse, Static, Protected, Delegate, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_LookAtFSM_C::STATIC_ExecuteUbergraph_BPC_LookAtFSM(int EntryPoint)
+void UBPC_LookAtFSM_C::ExecuteUbergraph_BPC_LookAtFSM(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAtFSM.BPC_LookAtFSM_C.ExecuteUbergraph_BPC_LookAtFSM");
 

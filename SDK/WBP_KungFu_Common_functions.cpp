@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.SetEnabledMasterImage
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UWBP_KungFu_Common_C::SetEnabledMasterImage(bool Enabled)
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.UpdateKungFuLevelInfo
-// (NetReliable, Event, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_KungFu_Common_C::UpdateKungFuLevelInfo()
 {
@@ -51,16 +51,15 @@ void UWBP_KungFu_Common_C::UpdateKungFuLevelInfo()
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.ChangeKungFuNameToNext
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_KungFu_Common_C::STATIC_ChangeKungFuNameToNext()
+void UWBP_KungFu_Common_C::ChangeKungFuNameToNext()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.ChangeKungFuNameToNext");
 
 	UWBP_KungFu_Common_C_ChangeKungFuNameToNext_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,11 +68,11 @@ void UWBP_KungFu_Common_C::STATIC_ChangeKungFuNameToNext()
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.SetCurrentTimeRate
-// (Net, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TimeRate                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_KungFu_Common_C::STATIC_SetCurrentTimeRate(float TimeRate)
+void UWBP_KungFu_Common_C::SetCurrentTimeRate(float TimeRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.SetCurrentTimeRate");
 
@@ -89,7 +88,7 @@ void UWBP_KungFu_Common_C::STATIC_SetCurrentTimeRate(float TimeRate)
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.Get_KungFuName_Text_1
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -110,7 +109,7 @@ struct FText UWBP_KungFu_Common_C::Get_KungFuName_Text_1()
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.SetKungFuImage
-// (Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<E_MiniGame_KungFuType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -130,20 +129,20 @@ void UWBP_KungFu_Common_C::SetKungFuImage(TEnumAsByte<E_MiniGame_KungFuType> Typ
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.SetArrowSettings
-// (Net, NetRequest, Exec, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          moveSpeed                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          MoveTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          IntervalTIme                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          IntervalTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_KungFu_Common_C::STATIC_SetArrowSettings(float moveSpeed, float MoveTime, float IntervalTIme)
+void UWBP_KungFu_Common_C::SetArrowSettings(float moveSpeed, float MoveTime, float IntervalTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.SetArrowSettings");
 
 	UWBP_KungFu_Common_C_SetArrowSettings_Params params;
 	params.moveSpeed = moveSpeed;
 	params.MoveTime = MoveTime;
-	params.IntervalTIme = IntervalTIme;
+	params.IntervalTime = IntervalTime;
 
 	auto flags = fn->FunctionFlags;
 
@@ -154,7 +153,7 @@ void UWBP_KungFu_Common_C::STATIC_SetArrowSettings(float moveSpeed, float MoveTi
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.DisabledAllArrow
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_KungFu_Common_C::DisabledAllArrow()
 {
@@ -171,7 +170,7 @@ void UWBP_KungFu_Common_C::DisabledAllArrow()
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.SetEnabledArrow
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Up                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -187,7 +186,6 @@ void UWBP_KungFu_Common_C::SetEnabledArrow(bool Enabled, bool Up, bool Left)
 	params.Left = Left;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,14 +194,14 @@ void UWBP_KungFu_Common_C::SetEnabledArrow(bool Enabled, bool Up, bool Left)
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.UpdateImageAlpha
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UImage*                  Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          TargetAlpha                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Reach                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_KungFu_Common_C::STATIC_UpdateImageAlpha(class UImage* Image, float TargetAlpha, float DeltaTime, bool* Reach)
+void UWBP_KungFu_Common_C::UpdateImageAlpha(class UImage* Image, float TargetAlpha, float DeltaTime, bool* Reach)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.UpdateImageAlpha");
 
@@ -224,11 +222,11 @@ void UWBP_KungFu_Common_C::STATIC_UpdateImageAlpha(class UImage* Image, float Ta
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.UpdateButtonUI
-// (Net, NetReliable, NetRequest, Static, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_KungFu_Common_C::STATIC_UpdateButtonUI(float DeltaTime)
+void UWBP_KungFu_Common_C::UpdateButtonUI(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.UpdateButtonUI");
 
@@ -244,11 +242,11 @@ void UWBP_KungFu_Common_C::STATIC_UpdateButtonUI(float DeltaTime)
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.EnabledButtonIconAnim
-// (NetReliable, Native, Static, NetMulticast, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_KungFu_Common_C::STATIC_EnabledButtonIconAnim(bool bEnabled)
+void UWBP_KungFu_Common_C::EnabledButtonIconAnim(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.EnabledButtonIconAnim");
 
@@ -256,7 +254,6 @@ void UWBP_KungFu_Common_C::STATIC_EnabledButtonIconAnim(bool bEnabled)
 	params.bEnabled = bEnabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -265,16 +262,15 @@ void UWBP_KungFu_Common_C::STATIC_EnabledButtonIconAnim(bool bEnabled)
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.Count Check
-// (Native, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_KungFu_Common_C::STATIC_Count_Check()
+void UWBP_KungFu_Common_C::Count_Check()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.Count Check");
 
 	UWBP_KungFu_Common_C_Count_Check_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -283,7 +279,7 @@ void UWBP_KungFu_Common_C::STATIC_Count_Check()
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.AddPushCount
-// (NetReliable, Native, Event, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            AddCount                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -295,7 +291,6 @@ void UWBP_KungFu_Common_C::AddPushCount(int AddCount)
 	params.AddCount = AddCount;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -304,9 +299,9 @@ void UWBP_KungFu_Common_C::AddPushCount(int AddCount)
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.Construct
-// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_KungFu_Common_C::STATIC_Construct()
+void UWBP_KungFu_Common_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.Construct");
 
@@ -321,7 +316,7 @@ void UWBP_KungFu_Common_C::STATIC_Construct()
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.Reset
-// (Net, Exec, Native, Event, NetResponse, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UWBP_KungFu_Common_C::Reset()
 {
@@ -330,7 +325,6 @@ void UWBP_KungFu_Common_C::Reset()
 	UWBP_KungFu_Common_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -339,7 +333,7 @@ void UWBP_KungFu_Common_C::Reset()
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.Event_ChangeNextNameWithAnim
-// (Event, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UWBP_KungFu_Common_C::Event_ChangeNextNameWithAnim()
 {
@@ -356,9 +350,9 @@ void UWBP_KungFu_Common_C::Event_ChangeNextNameWithAnim()
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.Event_MaxLevelMasterdAnim
-// (Event, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_KungFu_Common_C::STATIC_Event_MaxLevelMasterdAnim()
+void UWBP_KungFu_Common_C::Event_MaxLevelMasterdAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.Event_MaxLevelMasterdAnim");
 
@@ -373,12 +367,12 @@ void UWBP_KungFu_Common_C::STATIC_Event_MaxLevelMasterdAnim()
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.Tick
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_KungFu_Common_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_KungFu_Common_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.Tick");
 
@@ -387,7 +381,6 @@ void UWBP_KungFu_Common_C::STATIC_Tick(const struct FGeometry& MyGeometry, float
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -396,11 +389,11 @@ void UWBP_KungFu_Common_C::STATIC_Tick(const struct FGeometry& MyGeometry, float
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.ExecuteUbergraph_WBP_KungFu_Common
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_KungFu_Common_C::STATIC_ExecuteUbergraph_WBP_KungFu_Common(int EntryPoint)
+void UWBP_KungFu_Common_C::ExecuteUbergraph_WBP_KungFu_Common(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Common.WBP_KungFu_Common_C.ExecuteUbergraph_WBP_KungFu_Common");
 
@@ -416,7 +409,7 @@ void UWBP_KungFu_Common_C::STATIC_ExecuteUbergraph_WBP_KungFu_Common(int EntryPo
 
 
 // Function WBP_KungFu_Common.WBP_KungFu_Common_C.CountMAX__DelegateSignature
-// (Net, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWBP_KungFu_Common_C::CountMAX__DelegateSignature()
 {
@@ -425,7 +418,6 @@ void UWBP_KungFu_Common_C::CountMAX__DelegateSignature()
 	UWBP_KungFu_Common_C_CountMAX__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

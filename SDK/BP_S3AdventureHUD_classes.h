@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,18 +47,18 @@ public:
 	bool ShowsClockOnPlayerBehavior(ES3PlayerBehavior Behavior);
 	void DestroyDevelopmentText();
 	void HideEyecatch();
-	void STATIC_GetMenuManagerActor(class AActor** Actor);
+	void GetMenuManagerActor(class AActor** Actor);
 	void PermitDetectAction_Impl(class AActor* Actor, bool* dummy);
-	void STATIC_ForbidDetectAction_Impl(class AActor* Actor, bool* dummy);
+	void ForbidDetectAction_Impl(class AActor* Actor, bool* dummy);
 	void PermitWindowUI_Impl(class AActor* Actor, bool* dummy);
-	void STATIC_ForbidWindowUI_Impl(class AActor* Actor, bool* dummy);
-	void STATIC_UpdateClockVisibility();
-	void STATIC_SpawnManager();
+	void ForbidWindowUI_Impl(class AActor* Actor, bool* dummy);
+	void UpdateClockVisibility();
+	void SpawnManager();
 	void HideMoneyStatus(class AActor* Actor);
 	void ShowMoneyStatus(class AActor* Actor);
 	void GetMoneyStatus(class ABP_money_status_C** BP_MoneyStatus);
 	void ShowEyecatch(const struct FVector& Location, const struct FName& ForceId);
-	void STATIC_GetMinimap2DManager(class ABP_MiniMap2DManager_C** BP_MinimapManager);
+	void GetMinimap2DManager(class ABP_MiniMap2DManager_C** BP_MinimapManager);
 	void ShowCharaName(class AActor* Actor, bool Visible);
 	void ChangeDetectIcon(class AActor* Actor, ES3ActionIconType Type, int Index, bool Visible);
 	void GetMemoTextureDataManager(class ABP_MemoTextureDataManager_C** BP_MemoTextureDataManager);
@@ -66,12 +66,12 @@ public:
 	void GetMenuManager(class ABP_MenuWindowManager_C** menuManager);
 	void GetMemopadManager(class ABP_S3MemopadManager_C** AsBP_S3Memopad_Manager);
 	void GetDetectAction(class ABP_S3DetectAction_C** AsBP_S3Detect_Action);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ReceiveDestroyed();
 	void CastChildActor();
-	void STATIC_ShowRewardNotice(ES3RewardCategory Category);
+	void ShowRewardNotice(ES3RewardCategory Category);
 	void ExecuteUbergraph_BP_S3AdventureHUD(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -136,24 +136,6 @@ enum class EMovementMode : uint8_t
 };
 
 
-// Enum Engine.ENetworkFailure
-enum class ENetworkFailure : uint8_t
-{
-	ENetworkFailure__NetDriverAlreadyExists = 0,
-	ENetworkFailure__NetDriverCreateFailure = 1,
-	ENetworkFailure__NetDriverListenFailure = 2,
-	ENetworkFailure__ConnectionLost = 3,
-	ENetworkFailure__ConnectionTimeout = 4,
-	ENetworkFailure__FailureReceived = 5,
-	ENetworkFailure__OutdatedClient = 6,
-	ENetworkFailure__OutdatedServer = 7,
-	ENetworkFailure__PendingConnectionFailure = 8,
-	ENetworkFailure__NetGuidMismatch = 9,
-	ENetworkFailure__NetChecksumMismatch = 10,
-	ENetworkFailure__ENetworkFailure_MAX = 11
-};
-
-
 // Enum Engine.ETravelFailure
 enum class ETravelFailure : uint8_t
 {
@@ -195,6 +177,24 @@ enum class EApplicationState : uint8_t
 	EApplicationState__Background  = 2,
 	EApplicationState__Active      = 3,
 	EApplicationState__EApplicationState_MAX = 4
+};
+
+
+// Enum Engine.ENetworkFailure
+enum class ENetworkFailure : uint8_t
+{
+	ENetworkFailure__NetDriverAlreadyExists = 0,
+	ENetworkFailure__NetDriverCreateFailure = 1,
+	ENetworkFailure__NetDriverListenFailure = 2,
+	ENetworkFailure__ConnectionLost = 3,
+	ENetworkFailure__ConnectionTimeout = 4,
+	ENetworkFailure__FailureReceived = 5,
+	ENetworkFailure__OutdatedClient = 6,
+	ENetworkFailure__OutdatedServer = 7,
+	ENetworkFailure__PendingConnectionFailure = 8,
+	ENetworkFailure__NetGuidMismatch = 9,
+	ENetworkFailure__NetChecksumMismatch = 10,
+	ENetworkFailure__ENetworkFailure_MAX = 11
 };
 
 
@@ -391,6 +391,17 @@ enum class ERichCurveTangentMode : uint8_t
 };
 
 
+// Enum Engine.ERichCurveInterpMode
+enum class ERichCurveInterpMode : uint8_t
+{
+	RCIM_Linear                    = 0,
+	RCIM_Constant                  = 1,
+	RCIM_Cubic                     = 2,
+	RCIM_None                      = 3,
+	RCIM_MAX                       = 4
+};
+
+
 // Enum Engine.ERichCurveExtrapolation
 enum class ERichCurveExtrapolation : uint8_t
 {
@@ -401,17 +412,6 @@ enum class ERichCurveExtrapolation : uint8_t
 	RCCE_Constant                  = 4,
 	RCCE_None                      = 5,
 	RCCE_MAX                       = 6
-};
-
-
-// Enum Engine.ERichCurveInterpMode
-enum class ERichCurveInterpMode : uint8_t
-{
-	RCIM_Linear                    = 0,
-	RCIM_Constant                  = 1,
-	RCIM_Cubic                     = 2,
-	RCIM_None                      = 3,
-	RCIM_MAX                       = 4
 };
 
 
@@ -426,13 +426,16 @@ enum class EAttenuationShape : uint8_t
 };
 
 
-// Enum Engine.EReverbSendMethod
-enum class EReverbSendMethod : uint8_t
+// Enum Engine.EAttenuationDistanceModel
+enum class EAttenuationDistanceModel : uint8_t
 {
-	EReverbSendMethod__Linear      = 0,
-	EReverbSendMethod__CustomCurve = 1,
-	EReverbSendMethod__Manual      = 2,
-	EReverbSendMethod__EReverbSendMethod_MAX = 3
+	EAttenuationDistanceModel__Linear = 0,
+	EAttenuationDistanceModel__Logarithmic = 1,
+	EAttenuationDistanceModel__Inverse = 2,
+	EAttenuationDistanceModel__LogReverse = 3,
+	EAttenuationDistanceModel__NaturalSound = 4,
+	EAttenuationDistanceModel__Custom = 5,
+	EAttenuationDistanceModel__EAttenuationDistanceModel_MAX = 6
 };
 
 
@@ -476,6 +479,16 @@ enum class ECollisionChannel : uint8_t
 };
 
 
+// Enum Engine.EReverbSendMethod
+enum class EReverbSendMethod : uint8_t
+{
+	EReverbSendMethod__Linear      = 0,
+	EReverbSendMethod__CustomCurve = 1,
+	EReverbSendMethod__Manual      = 2,
+	EReverbSendMethod__EReverbSendMethod_MAX = 3
+};
+
+
 // Enum Engine.EAirAbsorptionMethod
 enum class EAirAbsorptionMethod : uint8_t
 {
@@ -491,19 +504,6 @@ enum class ESoundSpatializationAlgorithm : uint8_t
 	SPATIALIZATION_Default         = 0,
 	SPATIALIZATION_HRTF            = 1,
 	SPATIALIZATION_MAX             = 2
-};
-
-
-// Enum Engine.EAttenuationDistanceModel
-enum class EAttenuationDistanceModel : uint8_t
-{
-	EAttenuationDistanceModel__Linear = 0,
-	EAttenuationDistanceModel__Logarithmic = 1,
-	EAttenuationDistanceModel__Inverse = 2,
-	EAttenuationDistanceModel__LogReverse = 3,
-	EAttenuationDistanceModel__NaturalSound = 4,
-	EAttenuationDistanceModel__Custom = 5,
-	EAttenuationDistanceModel__EAttenuationDistanceModel_MAX = 6
 };
 
 
@@ -548,18 +548,6 @@ enum class EAlphaBlendOption : uint8_t
 };
 
 
-// Enum Engine.EAnimGroupRole
-enum class EAnimGroupRole : uint8_t
-{
-	EAnimGroupRole__CanBeLeader    = 0,
-	EAnimGroupRole__AlwaysFollower = 1,
-	EAnimGroupRole__AlwaysLeader   = 2,
-	EAnimGroupRole__TransitionLeader = 3,
-	EAnimGroupRole__TransitionFollower = 4,
-	EAnimGroupRole__EAnimGroupRole_MAX = 5
-};
-
-
 // Enum Engine.ERawCurveTrackTypes
 enum class ERawCurveTrackTypes : uint8_t
 {
@@ -567,20 +555,6 @@ enum class ERawCurveTrackTypes : uint8_t
 	ERawCurveTrackTypes__RCT_Vector = 1,
 	ERawCurveTrackTypes__RCT_Transform = 2,
 	ERawCurveTrackTypes__RCT_MAX   = 3
-};
-
-
-// Enum Engine.EAnimAssetCurveFlags
-enum class EAnimAssetCurveFlags : uint8_t
-{
-	AACF_DriveMorphTarget_DEPRECATED = 0,
-	AACF_DriveAttribute_DEPRECATED = 1,
-	AACF_Editable                  = 2,
-	AACF_DriveMaterial_DEPRECATED  = 3,
-	AACF_Metadata                  = 4,
-	AACF_DriveTrack                = 5,
-	AACF_Disabled                  = 6,
-	AACF_MAX                       = 7
 };
 
 
@@ -606,6 +580,20 @@ enum class EAdditiveBasePoseType : uint8_t
 	ABPT_AnimScaled                = 2,
 	ABPT_AnimFrame                 = 3,
 	ABPT_MAX                       = 4
+};
+
+
+// Enum Engine.EAnimAssetCurveFlags
+enum class EAnimAssetCurveFlags : uint8_t
+{
+	AACF_DriveMorphTarget_DEPRECATED = 0,
+	AACF_DriveAttribute_DEPRECATED = 1,
+	AACF_Editable                  = 2,
+	AACF_DriveMaterial_DEPRECATED  = 3,
+	AACF_Metadata                  = 4,
+	AACF_DriveTrack                = 5,
+	AACF_Disabled                  = 6,
+	AACF_MAX                       = 7
 };
 
 
@@ -683,13 +671,15 @@ enum class EAnimNotifyEventType : uint8_t
 };
 
 
-// Enum Engine.EEvaluatorMode
-enum class EEvaluatorMode : uint8_t
+// Enum Engine.EAnimGroupRole
+enum class EAnimGroupRole : uint8_t
 {
-	EEvaluatorMode__EM_Standard    = 0,
-	EEvaluatorMode__EM_Freeze      = 1,
-	EEvaluatorMode__EM_DelayedFreeze = 2,
-	EEvaluatorMode__EM_MAX         = 3
+	EAnimGroupRole__CanBeLeader    = 0,
+	EAnimGroupRole__AlwaysFollower = 1,
+	EAnimGroupRole__AlwaysLeader   = 2,
+	EAnimGroupRole__TransitionLeader = 3,
+	EAnimGroupRole__TransitionFollower = 4,
+	EAnimGroupRole__EAnimGroupRole_MAX = 5
 };
 
 
@@ -699,6 +689,16 @@ enum class EEvaluatorDataSource : uint8_t
 	EEvaluatorDataSource__EDS_SourcePose = 0,
 	EEvaluatorDataSource__EDS_DestinationPose = 1,
 	EEvaluatorDataSource__EDS_MAX  = 2
+};
+
+
+// Enum Engine.EEvaluatorMode
+enum class EEvaluatorMode : uint8_t
+{
+	EEvaluatorMode__EM_Standard    = 0,
+	EEvaluatorMode__EM_Freeze      = 1,
+	EEvaluatorMode__EM_DelayedFreeze = 2,
+	EEvaluatorMode__EM_MAX         = 3
 };
 
 
@@ -713,15 +713,6 @@ enum class ECopyType : uint8_t
 };
 
 
-// Enum Engine.EPostCopyOperation
-enum class EPostCopyOperation : uint8_t
-{
-	EPostCopyOperation__None       = 0,
-	EPostCopyOperation__LogicalNegateBool = 1,
-	EPostCopyOperation__EPostCopyOperation_MAX = 2
-};
-
-
 // Enum Engine.EPinHidingMode
 enum class EPinHidingMode : uint8_t
 {
@@ -733,24 +724,12 @@ enum class EPinHidingMode : uint8_t
 };
 
 
-// Enum Engine.AnimPhysCollisionType
-enum class EAnimPhysCollisionType : uint8_t
+// Enum Engine.EPostCopyOperation
+enum class EPostCopyOperation : uint8_t
 {
-	AnimPhysCollisionType__CoM     = 0,
-	AnimPhysCollisionType__CustomSphere = 1,
-	AnimPhysCollisionType__InnerSphere = 2,
-	AnimPhysCollisionType__OuterSphere = 3,
-	AnimPhysCollisionType__AnimPhysCollisionType_MAX = 4
-};
-
-
-// Enum Engine.AnimPhysTwistAxis
-enum class EAnimPhysTwistAxis : uint8_t
-{
-	AnimPhysTwistAxis__AxisX       = 0,
-	AnimPhysTwistAxis__AxisY       = 1,
-	AnimPhysTwistAxis__AxisZ       = 2,
-	AnimPhysTwistAxis__AnimPhysTwistAxis_MAX = 3
+	EPostCopyOperation__None       = 0,
+	EPostCopyOperation__LogicalNegateBool = 1,
+	EPostCopyOperation__EPostCopyOperation_MAX = 2
 };
 
 
@@ -774,12 +753,13 @@ enum class ETypeAdvanceAnim : uint8_t
 };
 
 
-// Enum Engine.ETransitionLogicType
-enum class ETransitionLogicType : uint8_t
+// Enum Engine.AnimPhysTwistAxis
+enum class EAnimPhysTwistAxis : uint8_t
 {
-	ETransitionLogicType__TLT_StandardBlend = 0,
-	ETransitionLogicType__TLT_Custom = 1,
-	ETransitionLogicType__TLT_MAX  = 2
+	AnimPhysTwistAxis__AxisX       = 0,
+	AnimPhysTwistAxis__AxisY       = 1,
+	AnimPhysTwistAxis__AxisZ       = 2,
+	AnimPhysTwistAxis__AnimPhysTwistAxis_MAX = 3
 };
 
 
@@ -789,6 +769,17 @@ enum class ETransitionBlendMode : uint8_t
 	ETransitionBlendMode__TBM_Linear = 0,
 	ETransitionBlendMode__TBM_Cubic = 1,
 	ETransitionBlendMode__TBM_MAX  = 2
+};
+
+
+// Enum Engine.AnimPhysCollisionType
+enum class EAnimPhysCollisionType : uint8_t
+{
+	AnimPhysCollisionType__CoM     = 0,
+	AnimPhysCollisionType__CustomSphere = 1,
+	AnimPhysCollisionType__InnerSphere = 2,
+	AnimPhysCollisionType__OuterSphere = 3,
+	AnimPhysCollisionType__AnimPhysCollisionType_MAX = 4
 };
 
 
@@ -843,15 +834,6 @@ enum class ECurveBlendOption : uint8_t
 };
 
 
-// Enum Engine.EMontagePlayReturnType
-enum class EMontagePlayReturnType : uint8_t
-{
-	EMontagePlayReturnType__MontageLength = 0,
-	EMontagePlayReturnType__Duration = 1,
-	EMontagePlayReturnType__EMontagePlayReturnType_MAX = 2
-};
-
-
 // Enum Engine.EAdditiveAnimationType
 enum class EAdditiveAnimationType : uint8_t
 {
@@ -900,6 +882,16 @@ enum class EBoneAxis : uint8_t
 };
 
 
+// Enum Engine.EMonoChannelUpmixMethod
+enum class EMonoChannelUpmixMethod : uint8_t
+{
+	EMonoChannelUpmixMethod__Linear = 0,
+	EMonoChannelUpmixMethod__EqualPower = 1,
+	EMonoChannelUpmixMethod__FullVolume = 2,
+	EMonoChannelUpmixMethod__EMonoChannelUpmixMethod_MAX = 3
+};
+
+
 // Enum Engine.EBoneControlSpace
 enum class EBoneControlSpace : uint8_t
 {
@@ -911,34 +903,12 @@ enum class EBoneControlSpace : uint8_t
 };
 
 
-// Enum Engine.EMonoChannelUpmixMethod
-enum class EMonoChannelUpmixMethod : uint8_t
+// Enum Engine.EVoiceSampleRate
+enum class EVoiceSampleRate : uint8_t
 {
-	EMonoChannelUpmixMethod__Linear = 0,
-	EMonoChannelUpmixMethod__EqualPower = 1,
-	EMonoChannelUpmixMethod__FullVolume = 2,
-	EMonoChannelUpmixMethod__EMonoChannelUpmixMethod_MAX = 3
-};
-
-
-// Enum Engine.EPanningMethod
-enum class EPanningMethod : uint8_t
-{
-	EPanningMethod__Linear         = 0,
-	EPanningMethod__EqualPower     = 1,
-	EPanningMethod__EPanningMethod_MAX = 2
-};
-
-
-// Enum Engine.EPrimaryAssetCookRule
-enum class EPrimaryAssetCookRule : uint8_t
-{
-	EPrimaryAssetCookRule__Unknown = 0,
-	EPrimaryAssetCookRule__NeverCook = 1,
-	EPrimaryAssetCookRule__DevelopmentCook = 2,
-	EPrimaryAssetCookRule__DevelopmentAlwaysCook = 3,
-	EPrimaryAssetCookRule__AlwaysCook = 4,
-	EPrimaryAssetCookRule__EPrimaryAssetCookRule_MAX = 5
+	EVoiceSampleRate__Low16000Hz   = 0,
+	EVoiceSampleRate__Normal24000Hz = 1,
+	EVoiceSampleRate__EVoiceSampleRate_MAX = 2
 };
 
 
@@ -984,13 +954,12 @@ enum class EBlendableLocation : uint8_t
 };
 
 
-// Enum Engine.EBlendSpaceAxis
-enum class EBlendSpaceAxis : uint8_t
+// Enum Engine.EPanningMethod
+enum class EPanningMethod : uint8_t
 {
-	BSA_None                       = 0,
-	BSA_X                          = 1,
-	BSA_Y                          = 2,
-	BSA_Max                        = 3
+	EPanningMethod__Linear         = 0,
+	EPanningMethod__EqualPower     = 1,
+	EPanningMethod__EPanningMethod_MAX = 2
 };
 
 
@@ -1004,6 +973,28 @@ enum class ENotifyTriggerMode : uint8_t
 };
 
 
+// Enum Engine.EBlendSpaceAxis
+enum class EBlendSpaceAxis : uint8_t
+{
+	BSA_None                       = 0,
+	BSA_X                          = 1,
+	BSA_Y                          = 2,
+	BSA_Max                        = 3
+};
+
+
+// Enum Engine.EPrimaryAssetCookRule
+enum class EPrimaryAssetCookRule : uint8_t
+{
+	EPrimaryAssetCookRule__Unknown = 0,
+	EPrimaryAssetCookRule__NeverCook = 1,
+	EPrimaryAssetCookRule__DevelopmentCook = 2,
+	EPrimaryAssetCookRule__DevelopmentAlwaysCook = 3,
+	EPrimaryAssetCookRule__AlwaysCook = 4,
+	EPrimaryAssetCookRule__EPrimaryAssetCookRule_MAX = 5
+};
+
+
 // Enum Engine.EBlueprintCompileMode
 enum class EBlueprintCompileMode : uint8_t
 {
@@ -1011,15 +1002,6 @@ enum class EBlueprintCompileMode : uint8_t
 	EBlueprintCompileMode__Development = 1,
 	EBlueprintCompileMode__FinalRelease = 2,
 	EBlueprintCompileMode__EBlueprintCompileMode_MAX = 3
-};
-
-
-// Enum Engine.EVoiceSampleRate
-enum class EVoiceSampleRate : uint8_t
-{
-	EVoiceSampleRate__Low16000Hz   = 0,
-	EVoiceSampleRate__Normal24000Hz = 1,
-	EVoiceSampleRate__EVoiceSampleRate_MAX = 2
 };
 
 
@@ -1033,19 +1015,6 @@ enum class EBlueprintType : uint8_t
 	BPTYPE_LevelScript             = 4,
 	BPTYPE_FunctionLibrary         = 5,
 	BPTYPE_MAX                     = 6
-};
-
-
-// Enum Engine.EBlueprintStatus
-enum class EBlueprintStatus : uint8_t
-{
-	BS_Unknown                     = 0,
-	BS_Dirty                       = 1,
-	BS_Error                       = 2,
-	BS_UpToDate                    = 3,
-	BS_BeingCreated                = 4,
-	BS_UpToDateWithWarnings        = 5,
-	BS_MAX                         = 6
 };
 
 
@@ -1088,14 +1057,49 @@ enum class EPhysicsType : uint8_t
 };
 
 
-// Enum Engine.ECollisionTraceFlag
-enum class ECollisionTraceFlag : uint8_t
+// Enum Engine.EDOFMode
+enum class EDOFMode : uint8_t
 {
-	CTF_UseDefault                 = 0,
-	CTF_UseSimpleAndComplex        = 1,
-	CTF_UseSimpleAsComplex         = 2,
-	CTF_UseComplexAsSimple         = 3,
-	CTF_MAX                        = 4
+	EDOFMode__Default              = 0,
+	EDOFMode__SixDOF               = 1,
+	EDOFMode__YZPlane              = 2,
+	EDOFMode__XZPlane              = 3,
+	EDOFMode__XYPlane              = 4,
+	EDOFMode__CustomPlane          = 5,
+	EDOFMode__None                 = 6,
+	EDOFMode__EDOFMode_MAX         = 7
+};
+
+
+// Enum Engine.EMontagePlayReturnType
+enum class EMontagePlayReturnType : uint8_t
+{
+	EMontagePlayReturnType__MontageLength = 0,
+	EMontagePlayReturnType__Duration = 1,
+	EMontagePlayReturnType__EMontagePlayReturnType_MAX = 2
+};
+
+
+// Enum Engine.EBlueprintStatus
+enum class EBlueprintStatus : uint8_t
+{
+	BS_Unknown                     = 0,
+	BS_Dirty                       = 1,
+	BS_Error                       = 2,
+	BS_UpToDate                    = 3,
+	BS_BeingCreated                = 4,
+	BS_UpToDateWithWarnings        = 5,
+	BS_MAX                         = 6
+};
+
+
+// Enum Engine.EBrushType
+enum class EBrushType : uint8_t
+{
+	Brush_Default                  = 0,
+	Brush_Add                      = 1,
+	Brush_Subtract                 = 2,
+	Brush_MAX                      = 3
 };
 
 
@@ -1118,16 +1122,6 @@ enum class EInitialOscillatorOffset : uint8_t
 	EOO_OffsetRandom               = 0,
 	EOO_OffsetZero                 = 1,
 	EOO_MAX                        = 2
-};
-
-
-// Enum Engine.EBrushType
-enum class EBrushType : uint8_t
-{
-	Brush_Default                  = 0,
-	Brush_Add                      = 1,
-	Brush_Subtract                 = 2,
-	Brush_MAX                      = 3
 };
 
 
@@ -1159,6 +1153,20 @@ enum class ECameraProjectionMode : uint8_t
 };
 
 
+// Enum Engine.ECloudStorageDelegate
+enum class ECloudStorageDelegate : uint8_t
+{
+	CSD_KeyValueReadComplete       = 0,
+	CSD_KeyValueWriteComplete      = 1,
+	CSD_ValueChanged               = 2,
+	CSD_DocumentQueryComplete      = 3,
+	CSD_DocumentReadComplete       = 4,
+	CSD_DocumentWriteComplete      = 5,
+	CSD_DocumentConflictDetected   = 6,
+	CSD_MAX                        = 7
+};
+
+
 // Enum Engine.EAngularDriveMode
 enum class EAngularDriveMode : uint8_t
 {
@@ -1187,20 +1195,6 @@ enum class EEvaluateCurveTableResult : uint8_t
 };
 
 
-// Enum Engine.ECloudStorageDelegate
-enum class ECloudStorageDelegate : uint8_t
-{
-	CSD_KeyValueReadComplete       = 0,
-	CSD_KeyValueWriteComplete      = 1,
-	CSD_ValueChanged               = 2,
-	CSD_DocumentQueryComplete      = 3,
-	CSD_DocumentReadComplete       = 4,
-	CSD_DocumentWriteComplete      = 5,
-	CSD_DocumentConflictDetected   = 6,
-	CSD_MAX                        = 7
-};
-
-
 // Enum Engine.EGrammaticalNumber
 enum class EGrammaticalNumber : uint8_t
 {
@@ -1221,6 +1215,16 @@ enum class EGrammaticalGender : uint8_t
 };
 
 
+// Enum Engine.DistributionParamMode
+enum class EDistributionParamMode : uint8_t
+{
+	DPM_Normal                     = 0,
+	DPM_Abs                        = 1,
+	DPM_Direct                     = 2,
+	DPM_MAX                        = 3
+};
+
+
 // Enum Engine.EDistributionVectorMirrorFlags
 enum class EDistributionVectorMirrorFlags : uint8_t
 {
@@ -1231,13 +1235,36 @@ enum class EDistributionVectorMirrorFlags : uint8_t
 };
 
 
-// Enum Engine.DistributionParamMode
-enum class EDistributionParamMode : uint8_t
+// Enum Engine.ENodeEnabledState
+enum class ENodeEnabledState : uint8_t
 {
-	DPM_Normal                     = 0,
-	DPM_Abs                        = 1,
-	DPM_Direct                     = 2,
-	DPM_MAX                        = 3
+	ENodeEnabledState__Enabled     = 0,
+	ENodeEnabledState__Disabled    = 1,
+	ENodeEnabledState__DevelopmentOnly = 2,
+	ENodeEnabledState__ENodeEnabledState_MAX = 3
+};
+
+
+// Enum Engine.ENodeTitleType
+enum class ENodeTitleType : uint8_t
+{
+	ENodeTitleType__FullTitle      = 0,
+	ENodeTitleType__ListView       = 1,
+	ENodeTitleType__EditableTitle  = 2,
+	ENodeTitleType__MenuTitle      = 3,
+	ENodeTitleType__MAX_TitleTypes = 4,
+	ENodeTitleType__ENodeTitleType_MAX = 5
+};
+
+
+// Enum Engine.EPinContainerType
+enum class EPinContainerType : uint8_t
+{
+	EPinContainerType__None        = 0,
+	EPinContainerType__Array       = 1,
+	EPinContainerType__Set         = 2,
+	EPinContainerType__Map         = 3,
+	EPinContainerType__EPinContainerType_MAX = 4
 };
 
 
@@ -1253,61 +1280,12 @@ enum class EDistributionVectorLockFlags : uint8_t
 };
 
 
-// Enum Engine.ENodeEnabledState
-enum class ENodeEnabledState : uint8_t
-{
-	ENodeEnabledState__Enabled     = 0,
-	ENodeEnabledState__Disabled    = 1,
-	ENodeEnabledState__DevelopmentOnly = 2,
-	ENodeEnabledState__ENodeEnabledState_MAX = 3
-};
-
-
-// Enum Engine.ENodeAdvancedPins
-enum class ENodeAdvancedPins : uint8_t
-{
-	ENodeAdvancedPins__NoPins      = 0,
-	ENodeAdvancedPins__Shown       = 1,
-	ENodeAdvancedPins__Hidden      = 2,
-	ENodeAdvancedPins__ENodeAdvancedPins_MAX = 3
-};
-
-
-// Enum Engine.EPinContainerType
-enum class EPinContainerType : uint8_t
-{
-	EPinContainerType__None        = 0,
-	EPinContainerType__Array       = 1,
-	EPinContainerType__Set         = 2,
-	EPinContainerType__Map         = 3,
-	EPinContainerType__EPinContainerType_MAX = 4
-};
-
-
 // Enum Engine.EBlueprintPinStyleType
 enum class EBlueprintPinStyleType : uint8_t
 {
 	BPST_Original                  = 0,
 	BPST_VariantA                  = 1,
 	BPST_MAX                       = 2
-};
-
-
-// Enum Engine.EEdGraphPinDirection
-enum class EEdGraphPinDirection : uint8_t
-{
-	EGPD_Input                     = 0,
-	EGPD_Output                    = 1,
-	EGPD_MAX                       = 2
-};
-
-
-// Enum Engine.EConsoleType
-enum class EConsoleType : uint8_t
-{
-	CONSOLE_Any                    = 0,
-	CONSOLE_Mobile                 = 1,
-	CONSOLE_MAX                    = 2
 };
 
 
@@ -1324,15 +1302,38 @@ enum class ECanCreateConnectionResponse : uint8_t
 };
 
 
-// Enum Engine.ENodeTitleType
-enum class ENodeTitleType : uint8_t
+// Enum Engine.ENodeAdvancedPins
+enum class ENodeAdvancedPins : uint8_t
 {
-	ENodeTitleType__FullTitle      = 0,
-	ENodeTitleType__ListView       = 1,
-	ENodeTitleType__EditableTitle  = 2,
-	ENodeTitleType__MenuTitle      = 3,
-	ENodeTitleType__MAX_TitleTypes = 4,
-	ENodeTitleType__ENodeTitleType_MAX = 5
+	ENodeAdvancedPins__NoPins      = 0,
+	ENodeAdvancedPins__Shown       = 1,
+	ENodeAdvancedPins__Hidden      = 2,
+	ENodeAdvancedPins__ENodeAdvancedPins_MAX = 3
+};
+
+
+// Enum Engine.ECollisionTraceFlag
+enum class ECollisionTraceFlag : uint8_t
+{
+	CTF_UseDefault                 = 0,
+	CTF_UseSimpleAndComplex        = 1,
+	CTF_UseSimpleAsComplex         = 2,
+	CTF_UseComplexAsSimple         = 3,
+	CTF_MAX                        = 4
+};
+
+
+// Enum Engine.ETransitionType
+enum class ETransitionType : uint8_t
+{
+	TT_None                        = 0,
+	TT_Paused                      = 1,
+	TT_Loading                     = 2,
+	TT_Saving                      = 3,
+	TT_Connecting                  = 4,
+	TT_Precaching                  = 5,
+	TT_WaitingToConnect            = 6,
+	TT_MAX                         = 7
 };
 
 
@@ -1348,35 +1349,15 @@ enum class EFullyLoadPackageType : uint8_t
 };
 
 
-// Enum Engine.EViewModeIndex
-enum class EViewModeIndex : uint8_t
+// Enum Engine.EGraphType
+enum class EGraphType : uint8_t
 {
-	VMI_BrushWireframe             = 0,
-	VMI_Wireframe                  = 1,
-	VMI_Unlit                      = 2,
-	VMI_Lit                        = 3,
-	VMI_Lit_DetailLighting         = 4,
-	VMI_LightingOnly               = 5,
-	VMI_LightComplexity            = 6,
-	VMI_ShaderComplexity           = 7,
-	VMI_LightmapDensity            = 8,
-	VMI_LitLightmapDensity         = 9,
-	VMI_ReflectionOverride         = 10,
-	VMI_VisualizeBuffer            = 11,
-	VMI_StationaryLightOverlap     = 12,
-	VMI_CollisionPawn              = 13,
-	VMI_CollisionVisibility        = 14,
-	VMI_LODColoration              = 15,
-	VMI_QuadOverdraw               = 16,
-	VMI_PrimitiveDistanceAccuracy  = 17,
-	VMI_MeshUVDensityAccuracy      = 18,
-	VMI_ShaderComplexityWithQuadOverdraw = 19,
-	VMI_HLODColoration             = 20,
-	VMI_GroupLODColoration         = 21,
-	VMI_MaterialTextureScaleAccuracy = 22,
-	VMI_RequiredTextureResolution  = 23,
-	VMI_Max                        = 24,
-	VMI_Unknown                    = 25
+	GT_Function                    = 0,
+	GT_Ubergraph                   = 1,
+	GT_Macro                       = 2,
+	GT_Animation                   = 3,
+	GT_StateMachine                = 4,
+	GT_MAX                         = 5
 };
 
 
@@ -1401,20 +1382,6 @@ enum class ETravelType : uint8_t
 };
 
 
-// Enum Engine.ETransitionType
-enum class ETransitionType : uint8_t
-{
-	TT_None                        = 0,
-	TT_Paused                      = 1,
-	TT_Loading                     = 2,
-	TT_Saving                      = 3,
-	TT_Connecting                  = 4,
-	TT_Precaching                  = 5,
-	TT_WaitingToConnect            = 6,
-	TT_MAX                         = 7
-};
-
-
 // Enum Engine.ENetworkLagState
 enum class ENetworkLagState : uint8_t
 {
@@ -1424,15 +1391,12 @@ enum class ENetworkLagState : uint8_t
 };
 
 
-// Enum Engine.EInputEvent
-enum class EInputEvent : uint8_t
+// Enum Engine.EConsoleType
+enum class EConsoleType : uint8_t
 {
-	IE_Pressed                     = 0,
-	IE_Released                    = 1,
-	IE_Repeat                      = 2,
-	IE_DoubleClick                 = 3,
-	IE_Axis                        = 4,
-	IE_MAX                         = 5
+	CONSOLE_Any                    = 0,
+	CONSOLE_Mobile                 = 1,
+	CONSOLE_MAX                    = 2
 };
 
 
@@ -1445,6 +1409,26 @@ enum class EMouseCaptureMode : uint8_t
 	EMouseCaptureMode__CaptureDuringMouseDown = 3,
 	EMouseCaptureMode__CaptureDuringRightMouseDown = 4,
 	EMouseCaptureMode__EMouseCaptureMode_MAX = 5
+};
+
+
+// Enum Engine.ETransitionLogicType
+enum class ETransitionLogicType : uint8_t
+{
+	ETransitionLogicType__TLT_StandardBlend = 0,
+	ETransitionLogicType__TLT_Custom = 1,
+	ETransitionLogicType__TLT_MAX  = 2
+};
+
+
+// Enum Engine.ECustomTimeStepSynchronizationState
+enum class ECustomTimeStepSynchronizationState : uint8_t
+{
+	ECustomTimeStepSynchronizationState__Closed = 0,
+	ECustomTimeStepSynchronizationState__Error = 1,
+	ECustomTimeStepSynchronizationState__Synchronized = 2,
+	ECustomTimeStepSynchronizationState__Synchronizing = 3,
+	ECustomTimeStepSynchronizationState__ECustomTimeStepSynchronizationState_MAX = 4
 };
 
 
@@ -1488,14 +1472,13 @@ enum class EAngularConstraintMotion : uint8_t
 };
 
 
-// Enum Engine.ECustomTimeStepSynchronizationState
-enum class ECustomTimeStepSynchronizationState : uint8_t
+// Enum Engine.EComponentSocketType
+enum class EComponentSocketType : uint8_t
 {
-	ECustomTimeStepSynchronizationState__Closed = 0,
-	ECustomTimeStepSynchronizationState__Error = 1,
-	ECustomTimeStepSynchronizationState__Synchronized = 2,
-	ECustomTimeStepSynchronizationState__Synchronizing = 3,
-	ECustomTimeStepSynchronizationState__ECustomTimeStepSynchronizationState_MAX = 4
+	EComponentSocketType__Invalid  = 0,
+	EComponentSocketType__Bone     = 1,
+	EComponentSocketType__Socket   = 2,
+	EComponentSocketType__EComponentSocketType_MAX = 3
 };
 
 
@@ -1590,6 +1573,38 @@ enum class ERotatorQuantization : uint8_t
 };
 
 
+// Enum Engine.EInputEvent
+enum class EInputEvent : uint8_t
+{
+	IE_Pressed                     = 0,
+	IE_Released                    = 1,
+	IE_Repeat                      = 2,
+	IE_DoubleClick                 = 3,
+	IE_Axis                        = 4,
+	IE_MAX                         = 5
+};
+
+
+// Enum Engine.EEdGraphPinDirection
+enum class EEdGraphPinDirection : uint8_t
+{
+	EGPD_Input                     = 0,
+	EGPD_Output                    = 1,
+	EGPD_MAX                       = 2
+};
+
+
+// Enum Engine.EAutoPossessAI
+enum class EAutoPossessAI : uint8_t
+{
+	EAutoPossessAI__Disabled       = 0,
+	EAutoPossessAI__PlacedInWorld  = 1,
+	EAutoPossessAI__Spawned        = 2,
+	EAutoPossessAI__PlacedInWorldOrSpawned = 3,
+	EAutoPossessAI__EAutoPossessAI_MAX = 4
+};
+
+
 // Enum Engine.EVectorQuantization
 enum class EVectorQuantization : uint8_t
 {
@@ -1616,42 +1631,6 @@ enum class EAutoReceiveInput : uint8_t
 };
 
 
-// Enum Engine.EAutoPossessAI
-enum class EAutoPossessAI : uint8_t
-{
-	EAutoPossessAI__Disabled       = 0,
-	EAutoPossessAI__PlacedInWorld  = 1,
-	EAutoPossessAI__Spawned        = 2,
-	EAutoPossessAI__PlacedInWorldOrSpawned = 3,
-	EAutoPossessAI__EAutoPossessAI_MAX = 4
-};
-
-
-// Enum Engine.ENetRole
-enum class ENetRole : uint8_t
-{
-	ROLE_None                      = 0,
-	ROLE_SimulatedProxy            = 1,
-	ROLE_AutonomousProxy           = 2,
-	ROLE_Authority                 = 3,
-	ROLE_MAX                       = 4
-};
-
-
-// Enum Engine.EUpdateRateShiftBucket
-enum class EUpdateRateShiftBucket : uint8_t
-{
-	EUpdateRateShiftBucket__ShiftBucket0 = 0,
-	EUpdateRateShiftBucket__ShiftBucket1 = 1,
-	EUpdateRateShiftBucket__ShiftBucket2 = 2,
-	EUpdateRateShiftBucket__ShiftBucket3 = 3,
-	EUpdateRateShiftBucket__ShiftBucket4 = 4,
-	EUpdateRateShiftBucket__ShiftBucket5 = 5,
-	EUpdateRateShiftBucket__ShiftBucketMax = 6,
-	EUpdateRateShiftBucket__EUpdateRateShiftBucket_MAX = 7
-};
-
-
 // Enum Engine.ENetDormancy
 enum class ENetDormancy : uint8_t
 {
@@ -1664,12 +1643,14 @@ enum class ENetDormancy : uint8_t
 };
 
 
-// Enum Engine.EShadowMapFlags
-enum class EShadowMapFlags : uint8_t
+// Enum Engine.ENetRole
+enum class ENetRole : uint8_t
 {
-	SMF_None                       = 0,
-	SMF_Streamed                   = 1,
-	SMF_MAX                        = 2
+	ROLE_None                      = 0,
+	ROLE_SimulatedProxy            = 1,
+	ROLE_AutonomousProxy           = 2,
+	ROLE_Authority                 = 3,
+	ROLE_MAX                       = 4
 };
 
 
@@ -1725,6 +1706,16 @@ enum class ERadialImpulseFalloff : uint8_t
 };
 
 
+// Enum Engine.EInputConsumeOptions
+enum class EInputConsumeOptions : uint8_t
+{
+	ICO_ConsumeAll                 = 0,
+	ICO_ConsumeBoundKeys           = 1,
+	ICO_ConsumeNone                = 2,
+	ICO_MAX                        = 3
+};
+
+
 // Enum Engine.ESleepFamily
 enum class ESleepFamily : uint8_t
 {
@@ -1755,6 +1746,20 @@ enum class ECollisionResponse : uint8_t
 };
 
 
+// Enum Engine.EUpdateRateShiftBucket
+enum class EUpdateRateShiftBucket : uint8_t
+{
+	EUpdateRateShiftBucket__ShiftBucket0 = 0,
+	EUpdateRateShiftBucket__ShiftBucket1 = 1,
+	EUpdateRateShiftBucket__ShiftBucket2 = 2,
+	EUpdateRateShiftBucket__ShiftBucket3 = 3,
+	EUpdateRateShiftBucket__ShiftBucket4 = 4,
+	EUpdateRateShiftBucket__ShiftBucket5 = 5,
+	EUpdateRateShiftBucket__ShiftBucketMax = 6,
+	EUpdateRateShiftBucket__EUpdateRateShiftBucket_MAX = 7
+};
+
+
 // Enum Engine.EPhysicsSceneType
 enum class EPhysicsSceneType : uint8_t
 {
@@ -1762,6 +1767,15 @@ enum class EPhysicsSceneType : uint8_t
 	PST_Cloth                      = 1,
 	PST_Async                      = 2,
 	PST_MAX                        = 3
+};
+
+
+// Enum Engine.EShadowMapFlags
+enum class EShadowMapFlags : uint8_t
+{
+	SMF_None                       = 0,
+	SMF_Streamed                   = 1,
+	SMF_MAX                        = 2
 };
 
 
@@ -1783,16 +1797,6 @@ enum class ENetworkSmoothingMode : uint8_t
 	ENetworkSmoothingMode__Exponential = 2,
 	ENetworkSmoothingMode__Replay  = 3,
 	ENetworkSmoothingMode__ENetworkSmoothingMode_MAX = 4
-};
-
-
-// Enum Engine.EComponentSocketType
-enum class EComponentSocketType : uint8_t
-{
-	EComponentSocketType__Invalid  = 0,
-	EComponentSocketType__Bone     = 1,
-	EComponentSocketType__Socket   = 2,
-	EComponentSocketType__EComponentSocketType_MAX = 3
 };
 
 
@@ -1890,31 +1894,6 @@ enum class ESceneCaptureCompositeMode : uint8_t
 };
 
 
-// Enum Engine.ESceneCaptureSource
-enum class ESceneCaptureSource : uint8_t
-{
-	SCS_SceneColorHDR              = 0,
-	SCS_SceneColorHDRNoAlpha       = 1,
-	SCS_FinalColorLDR              = 2,
-	SCS_SceneColorSceneDepth       = 3,
-	SCS_SceneDepth                 = 4,
-	SCS_DeviceDepth                = 5,
-	SCS_Normal                     = 6,
-	SCS_BaseColor                  = 7,
-	SCS_MAX                        = 8
-};
-
-
-// Enum Engine.ETranslucentSortPolicy
-enum class ETranslucentSortPolicy : uint8_t
-{
-	ETranslucentSortPolicy__SortByDistance = 0,
-	ETranslucentSortPolicy__SortByProjectedZ = 1,
-	ETranslucentSortPolicy__SortAlongAxis = 2,
-	ETranslucentSortPolicy__ETranslucentSortPolicy_MAX = 3
-};
-
-
 // Enum Engine.ERefractionMode
 enum class ERefractionMode : uint8_t
 {
@@ -1947,16 +1926,28 @@ enum class ESamplerSourceMode : uint8_t
 };
 
 
-// Enum Engine.EBlendMode
-enum class EBlendMode : uint8_t
+// Enum Engine.ETranslucentSortPolicy
+enum class ETranslucentSortPolicy : uint8_t
 {
-	BLEND_Opaque                   = 0,
-	BLEND_Masked                   = 1,
-	BLEND_Translucent              = 2,
-	BLEND_Additive                 = 3,
-	BLEND_Modulate                 = 4,
-	BLEND_AlphaComposite           = 5,
-	BLEND_MAX                      = 6
+	ETranslucentSortPolicy__SortByDistance = 0,
+	ETranslucentSortPolicy__SortByProjectedZ = 1,
+	ETranslucentSortPolicy__SortAlongAxis = 2,
+	ETranslucentSortPolicy__ETranslucentSortPolicy_MAX = 3
+};
+
+
+// Enum Engine.ESceneCaptureSource
+enum class ESceneCaptureSource : uint8_t
+{
+	SCS_SceneColorHDR              = 0,
+	SCS_SceneColorHDRNoAlpha       = 1,
+	SCS_FinalColorLDR              = 2,
+	SCS_SceneColorSceneDepth       = 3,
+	SCS_SceneDepth                 = 4,
+	SCS_DeviceDepth                = 5,
+	SCS_Normal                     = 6,
+	SCS_BaseColor                  = 7,
+	SCS_MAX                        = 8
 };
 
 
@@ -1989,22 +1980,25 @@ enum class EIndirectLightingCacheQuality : uint8_t
 };
 
 
+// Enum Engine.EBlendMode
+enum class EBlendMode : uint8_t
+{
+	BLEND_Opaque                   = 0,
+	BLEND_Masked                   = 1,
+	BLEND_Translucent              = 2,
+	BLEND_Additive                 = 3,
+	BLEND_Modulate                 = 4,
+	BLEND_AlphaComposite           = 5,
+	BLEND_MAX                      = 6
+};
+
+
 // Enum Engine.ESceneDepthPriorityGroup
 enum class ESceneDepthPriorityGroup : uint8_t
 {
 	SDPG_World                     = 0,
 	SDPG_Foreground                = 1,
 	SDPG_MAX                       = 2
-};
-
-
-// Enum Engine.EActorMetricsType
-enum class EActorMetricsType : uint8_t
-{
-	METRICS_VERTS                  = 0,
-	METRICS_TRIS                   = 1,
-	METRICS_SECTIONS               = 2,
-	METRICS_MAX                    = 3
 };
 
 
@@ -2037,26 +2031,6 @@ enum class EFontImportCharacterSet : uint8_t
 };
 
 
-// Enum Engine.EStandbyType
-enum class EStandbyType : uint8_t
-{
-	STDBY_Rx                       = 0,
-	STDBY_Tx                       = 1,
-	STDBY_BadPing                  = 2,
-	STDBY_MAX                      = 3
-};
-
-
-// Enum Engine.EInputConsumeOptions
-enum class EInputConsumeOptions : uint8_t
-{
-	ICO_ConsumeAll                 = 0,
-	ICO_ConsumeBoundKeys           = 1,
-	ICO_ConsumeNone                = 2,
-	ICO_MAX                        = 3
-};
-
-
 // Enum Engine.ESuggestProjVelocityTraceOption
 enum class ESuggestProjVelocityTraceOption : uint8_t
 {
@@ -2064,6 +2038,16 @@ enum class ESuggestProjVelocityTraceOption : uint8_t
 	ESuggestProjVelocityTraceOption__TraceFullPath = 1,
 	ESuggestProjVelocityTraceOption__OnlyTraceWhileAscending = 2,
 	ESuggestProjVelocityTraceOption__ESuggestProjVelocityTraceOption_MAX = 3
+};
+
+
+// Enum Engine.EWindowMode
+enum class EWindowMode : uint8_t
+{
+	EWindowMode__Fullscreen        = 0,
+	EWindowMode__WindowedFullscreen = 1,
+	EWindowMode__Windowed          = 2,
+	EWindowMode__EWindowMode_MAX   = 3
 };
 
 
@@ -2088,25 +2072,44 @@ enum class EAdManagerDelegate : uint8_t
 };
 
 
-// Enum Engine.EGraphType
-enum class EGraphType : uint8_t
+// Enum Engine.EControllerAnalogStick
+enum class EControllerAnalogStick : uint8_t
 {
-	GT_Function                    = 0,
-	GT_Ubergraph                   = 1,
-	GT_Macro                       = 2,
-	GT_Animation                   = 3,
-	GT_StateMachine                = 4,
-	GT_MAX                         = 5
+	EControllerAnalogStick__CAS_LeftStick = 0,
+	EControllerAnalogStick__CAS_RightStick = 1,
+	EControllerAnalogStick__CAS_MAX = 2
 };
 
 
-// Enum Engine.EAnimAlphaInputType
-enum class EAnimAlphaInputType : uint8_t
+// Enum Engine.EViewModeIndex
+enum class EViewModeIndex : uint8_t
 {
-	EAnimAlphaInputType__Float     = 0,
-	EAnimAlphaInputType__Bool      = 1,
-	EAnimAlphaInputType__Curve     = 2,
-	EAnimAlphaInputType__EAnimAlphaInputType_MAX = 3
+	VMI_BrushWireframe             = 0,
+	VMI_Wireframe                  = 1,
+	VMI_Unlit                      = 2,
+	VMI_Lit                        = 3,
+	VMI_Lit_DetailLighting         = 4,
+	VMI_LightingOnly               = 5,
+	VMI_LightComplexity            = 6,
+	VMI_ShaderComplexity           = 7,
+	VMI_LightmapDensity            = 8,
+	VMI_LitLightmapDensity         = 9,
+	VMI_ReflectionOverride         = 10,
+	VMI_VisualizeBuffer            = 11,
+	VMI_StationaryLightOverlap     = 12,
+	VMI_CollisionPawn              = 13,
+	VMI_CollisionVisibility        = 14,
+	VMI_LODColoration              = 15,
+	VMI_QuadOverdraw               = 16,
+	VMI_PrimitiveDistanceAccuracy  = 17,
+	VMI_MeshUVDensityAccuracy      = 18,
+	VMI_ShaderComplexityWithQuadOverdraw = 19,
+	VMI_HLODColoration             = 20,
+	VMI_GroupLODColoration         = 21,
+	VMI_MaterialTextureScaleAccuracy = 22,
+	VMI_RequiredTextureResolution  = 23,
+	VMI_Max                        = 24,
+	VMI_Unknown                    = 25
 };
 
 
@@ -2120,23 +2123,43 @@ enum class ETrackActiveCondition : uint8_t
 };
 
 
-// Enum Engine.EControllerAnalogStick
-enum class EControllerAnalogStick : uint8_t
+// Enum Engine.EAnimAlphaInputType
+enum class EAnimAlphaInputType : uint8_t
 {
-	EControllerAnalogStick__CAS_LeftStick = 0,
-	EControllerAnalogStick__CAS_RightStick = 1,
-	EControllerAnalogStick__CAS_MAX = 2
+	EAnimAlphaInputType__Float     = 0,
+	EAnimAlphaInputType__Bool      = 1,
+	EAnimAlphaInputType__Curve     = 2,
+	EAnimAlphaInputType__EAnimAlphaInputType_MAX = 3
 };
 
 
-// Enum Engine.ETrackToggleAction
-enum class ETrackToggleAction : uint8_t
+// Enum Engine.EActorMetricsType
+enum class EActorMetricsType : uint8_t
 {
-	ETTA_Off                       = 0,
-	ETTA_On                        = 1,
-	ETTA_Toggle                    = 2,
-	ETTA_Trigger                   = 3,
-	ETTA_MAX                       = 4
+	METRICS_VERTS                  = 0,
+	METRICS_TRIS                   = 1,
+	METRICS_SECTIONS               = 2,
+	METRICS_MAX                    = 3
+};
+
+
+// Enum Engine.EInterpTrackMoveRotMode
+enum class EInterpTrackMoveRotMode : uint8_t
+{
+	IMR_Keyframed                  = 0,
+	IMR_LookAtGroup                = 1,
+	IMR_Ignore                     = 2,
+	IMR_MAX                        = 3
+};
+
+
+// Enum Engine.EStandbyType
+enum class EStandbyType : uint8_t
+{
+	STDBY_Rx                       = 0,
+	STDBY_Tx                       = 1,
+	STDBY_BadPing                  = 2,
+	STDBY_MAX                      = 3
 };
 
 
@@ -2153,17 +2176,13 @@ enum class EInterpMoveAxis : uint8_t
 };
 
 
-// Enum Engine.EDOFMode
-enum class EDOFMode : uint8_t
+// Enum Engine.EVisibilityTrackAction
+enum class EVisibilityTrackAction : uint8_t
 {
-	EDOFMode__Default              = 0,
-	EDOFMode__SixDOF               = 1,
-	EDOFMode__YZPlane              = 2,
-	EDOFMode__XZPlane              = 3,
-	EDOFMode__XYPlane              = 4,
-	EDOFMode__CustomPlane          = 5,
-	EDOFMode__None                 = 6,
-	EDOFMode__EDOFMode_MAX         = 7
+	EVTA_Hide                      = 0,
+	EVTA_Show                      = 1,
+	EVTA_Toggle                    = 2,
+	EVTA_MAX                       = 3
 };
 
 
@@ -2177,13 +2196,27 @@ enum class EVisibilityTrackCondition : uint8_t
 };
 
 
-// Enum Engine.EVisibilityTrackAction
-enum class EVisibilityTrackAction : uint8_t
+// Enum Engine.ESlateGesture
+enum class ESlateGesture : uint8_t
 {
-	EVTA_Hide                      = 0,
-	EVTA_Show                      = 1,
-	EVTA_Toggle                    = 2,
-	EVTA_MAX                       = 3
+	ESlateGesture__None            = 0,
+	ESlateGesture__Scroll          = 1,
+	ESlateGesture__Magnify         = 2,
+	ESlateGesture__Swipe           = 3,
+	ESlateGesture__Rotate          = 4,
+	ESlateGesture__LongPress       = 5,
+	ESlateGesture__ESlateGesture_MAX = 6
+};
+
+
+// Enum Engine.ETrackToggleAction
+enum class ETrackToggleAction : uint8_t
+{
+	ETTA_Off                       = 0,
+	ETTA_On                        = 1,
+	ETTA_Toggle                    = 2,
+	ETTA_Trigger                   = 3,
+	ETTA_MAX                       = 4
 };
 
 
@@ -2197,16 +2230,29 @@ enum class ELerpInterpolationMode : uint8_t
 };
 
 
-// Enum Engine.ESlateGesture
-enum class ESlateGesture : uint8_t
+// Enum Engine.ERoundingMode
+enum class ERoundingMode : uint8_t
 {
-	ESlateGesture__None            = 0,
-	ESlateGesture__Scroll          = 1,
-	ESlateGesture__Magnify         = 2,
-	ESlateGesture__Swipe           = 3,
-	ESlateGesture__Rotate          = 4,
-	ESlateGesture__LongPress       = 5,
-	ESlateGesture__ESlateGesture_MAX = 6
+	HalfToEven                     = 0,
+	HalfFromZero                   = 1,
+	HalfToZero                     = 2,
+	FromZero                       = 3,
+	ToZero                         = 4,
+	ToNegativeInfinity             = 5,
+	ToPositiveInfinity             = 6,
+	ERoundingMode_MAX              = 7
+};
+
+
+// Enum Engine.EStreamingVolumeUsage
+enum class EStreamingVolumeUsage : uint8_t
+{
+	SVB_Loading                    = 0,
+	SVB_LoadingAndVisibility       = 1,
+	SVB_VisibilityBlockingOnLoad   = 2,
+	SVB_BlockingOnLoad             = 3,
+	SVB_LoadingNotVisible          = 4,
+	SVB_MAX                        = 5
 };
 
 
@@ -2231,18 +2277,6 @@ enum class EEasingFunc : uint8_t
 };
 
 
-// Enum Engine.EStreamingVolumeUsage
-enum class EStreamingVolumeUsage : uint8_t
-{
-	SVB_Loading                    = 0,
-	SVB_LoadingAndVisibility       = 1,
-	SVB_VisibilityBlockingOnLoad   = 2,
-	SVB_BlockingOnLoad             = 3,
-	SVB_LoadingNotVisible          = 4,
-	SVB_MAX                        = 5
-};
-
-
 // Enum Engine.EMaterialDecalResponse
 enum class EMaterialDecalResponse : uint8_t
 {
@@ -2255,20 +2289,6 @@ enum class EMaterialDecalResponse : uint8_t
 	MDR_NormalRoughness            = 6,
 	MDR_Roughness                  = 7,
 	MDR_MAX                        = 8
-};
-
-
-// Enum Engine.ERoundingMode
-enum class ERoundingMode : uint8_t
-{
-	HalfToEven                     = 0,
-	HalfFromZero                   = 1,
-	HalfToZero                     = 2,
-	FromZero                       = 3,
-	ToZero                         = 4,
-	ToNegativeInfinity             = 5,
-	ToPositiveInfinity             = 6,
-	ERoundingMode_MAX              = 7
 };
 
 
@@ -2335,6 +2355,28 @@ enum class EClampMode : uint8_t
 };
 
 
+// Enum Engine.ECustomMaterialOutputType
+enum class ECustomMaterialOutputType : uint8_t
+{
+	CMOT_Float1                    = 0,
+	CMOT_Float2                    = 1,
+	CMOT_Float3                    = 2,
+	CMOT_Float4                    = 3,
+	CMOT_MAX                       = 4
+};
+
+
+// Enum Engine.EDepthOfFieldFunctionValue
+enum class EDepthOfFieldFunctionValue : uint8_t
+{
+	TDOF_NearAndFarMask            = 0,
+	TDOF_NearMask                  = 1,
+	TDOF_FarMask                   = 2,
+	TDOF_CircleOfConfusionRadius   = 3,
+	TDOF_MAX                       = 4
+};
+
+
 // Enum Engine.EFunctionInputType
 enum class EFunctionInputType : uint8_t
 {
@@ -2352,57 +2394,12 @@ enum class EFunctionInputType : uint8_t
 };
 
 
-// Enum Engine.EDepthOfFieldFunctionValue
-enum class EDepthOfFieldFunctionValue : uint8_t
-{
-	TDOF_NearAndFarMask            = 0,
-	TDOF_NearMask                  = 1,
-	TDOF_FarMask                   = 2,
-	TDOF_CircleOfConfusionRadius   = 3,
-	TDOF_MAX                       = 4
-};
-
-
-// Enum Engine.ECustomMaterialOutputType
-enum class ECustomMaterialOutputType : uint8_t
-{
-	CMOT_Float1                    = 0,
-	CMOT_Float2                    = 1,
-	CMOT_Float3                    = 2,
-	CMOT_Float4                    = 3,
-	CMOT_MAX                       = 4
-};
-
-
 // Enum Engine.EMaterialSceneAttributeInputMode
 enum class EMaterialSceneAttributeInputMode : uint8_t
 {
 	EMaterialSceneAttributeInputMode__Coordinates = 0,
 	EMaterialSceneAttributeInputMode__OffsetFraction = 1,
 	EMaterialSceneAttributeInputMode__EMaterialSceneAttributeInputMode_MAX = 2
-};
-
-
-// Enum Engine.EInterpTrackMoveRotMode
-enum class EInterpTrackMoveRotMode : uint8_t
-{
-	IMR_Keyframed                  = 0,
-	IMR_LookAtGroup                = 1,
-	IMR_Ignore                     = 2,
-	IMR_MAX                        = 3
-};
-
-
-// Enum Engine.ENoiseFunction
-enum class ENoiseFunction : uint8_t
-{
-	NOISEFUNCTION_SimplexTex       = 0,
-	NOISEFUNCTION_GradientTex      = 1,
-	NOISEFUNCTION_GradientTex3D    = 2,
-	NOISEFUNCTION_GradientALU      = 3,
-	NOISEFUNCTION_ValueALU         = 4,
-	NOISEFUNCTION_VoronoiALU       = 5,
-	NOISEFUNCTION_MAX              = 6
 };
 
 
@@ -2440,6 +2437,19 @@ enum class ESceneTextureId : uint8_t
 };
 
 
+// Enum Engine.ENoiseFunction
+enum class ENoiseFunction : uint8_t
+{
+	NOISEFUNCTION_SimplexTex       = 0,
+	NOISEFUNCTION_GradientTex      = 1,
+	NOISEFUNCTION_GradientTex3D    = 2,
+	NOISEFUNCTION_GradientALU      = 3,
+	NOISEFUNCTION_ValueALU         = 4,
+	NOISEFUNCTION_VoronoiALU       = 5,
+	NOISEFUNCTION_MAX              = 6
+};
+
+
 // Enum Engine.ESpeedTreeLODType
 enum class ESpeedTreeLODType : uint8_t
 {
@@ -2449,27 +2459,15 @@ enum class ESpeedTreeLODType : uint8_t
 };
 
 
-// Enum Engine.ESpeedTreeWindType
-enum class ESpeedTreeWindType : uint8_t
+// Enum Engine.ESpeedTreeGeometryType
+enum class ESpeedTreeGeometryType : uint8_t
 {
-	STW_None                       = 0,
-	STW_Fastest                    = 1,
-	STW_Fast                       = 2,
-	STW_Better                     = 3,
-	STW_Best                       = 4,
-	STW_Palm                       = 5,
-	STW_BestPlus                   = 6,
-	STW_MAX                        = 7
-};
-
-
-// Enum Engine.EWindowMode
-enum class EWindowMode : uint8_t
-{
-	EWindowMode__Fullscreen        = 0,
-	EWindowMode__WindowedFullscreen = 1,
-	EWindowMode__Windowed          = 2,
-	EWindowMode__EWindowMode_MAX   = 3
+	STG_Branch                     = 0,
+	STG_Frond                      = 1,
+	STG_Leaf                       = 2,
+	STG_FacingLeaf                 = 3,
+	STG_Billboard                  = 4,
+	STG_MAX                        = 5
 };
 
 
@@ -2479,6 +2477,17 @@ enum class EMaterialExposedTextureProperty : uint8_t
 	TMTM_TextureSize               = 0,
 	TMTM_TexelSize                 = 1,
 	TMTM_MAX                       = 2
+};
+
+
+// Enum Engine.ETextureMipValueMode
+enum class ETextureMipValueMode : uint8_t
+{
+	TMVM_None                      = 0,
+	TMVM_MipLevel                  = 1,
+	TMVM_MipBias                   = 2,
+	TMVM_Derivative                = 3,
+	TMVM_MAX                       = 4
 };
 
 
@@ -2492,18 +2501,6 @@ enum class EMaterialVectorCoordTransform : uint8_t
 	TRANSFORM_Camera               = 4,
 	TRANSFORM_ParticleWorld        = 5,
 	TRANSFORM_MAX                  = 6
-};
-
-
-// Enum Engine.ESpeedTreeGeometryType
-enum class ESpeedTreeGeometryType : uint8_t
-{
-	STG_Branch                     = 0,
-	STG_Frond                      = 1,
-	STG_Leaf                       = 2,
-	STG_FacingLeaf                 = 3,
-	STG_Billboard                  = 4,
-	STG_MAX                        = 5
 };
 
 
@@ -2533,6 +2530,32 @@ enum class EMaterialPositionTransformSource : uint8_t
 };
 
 
+// Enum Engine.ESpeedTreeWindType
+enum class ESpeedTreeWindType : uint8_t
+{
+	STW_None                       = 0,
+	STW_Fastest                    = 1,
+	STW_Fast                       = 2,
+	STW_Better                     = 3,
+	STW_Best                       = 4,
+	STW_Palm                       = 5,
+	STW_BestPlus                   = 6,
+	STW_MAX                        = 7
+};
+
+
+// Enum Engine.EVectorNoiseFunction
+enum class EVectorNoiseFunction : uint8_t
+{
+	VNF_CellnoiseALU               = 0,
+	VNF_VectorALU                  = 1,
+	VNF_GradientALU                = 2,
+	VNF_CurlALU                    = 3,
+	VNF_VoronoiALU                 = 4,
+	VNF_MAX                        = 5
+};
+
+
 // Enum Engine.EMaterialExposedViewProperty
 enum class EMaterialExposedViewProperty : uint8_t
 {
@@ -2558,26 +2581,13 @@ enum class EWorldPositionIncludedOffsets : uint8_t
 };
 
 
-// Enum Engine.ETextureMipValueMode
-enum class ETextureMipValueMode : uint8_t
+// Enum Engine.EMaterialFunctionUsage
+enum class EMaterialFunctionUsage : uint8_t
 {
-	TMVM_None                      = 0,
-	TMVM_MipLevel                  = 1,
-	TMVM_MipBias                   = 2,
-	TMVM_Derivative                = 3,
-	TMVM_MAX                       = 4
-};
-
-
-// Enum Engine.EVectorNoiseFunction
-enum class EVectorNoiseFunction : uint8_t
-{
-	VNF_CellnoiseALU               = 0,
-	VNF_VectorALU                  = 1,
-	VNF_GradientALU                = 2,
-	VNF_CurlALU                    = 3,
-	VNF_VoronoiALU                 = 4,
-	VNF_MAX                        = 5
+	Default                        = 0,
+	MaterialLayer                  = 1,
+	MaterialLayerBlend             = 2,
+	EMaterialFunctionUsage_MAX     = 3
 };
 
 
@@ -2598,16 +2608,6 @@ enum class EMaterialUsage : uint8_t
 	MATUSAGE_NiagaraMeshParticles  = 11,
 	MATUSAGE_GeometryCache         = 12,
 	MATUSAGE_MAX                   = 13
-};
-
-
-// Enum Engine.EMaterialFunctionUsage
-enum class EMaterialFunctionUsage : uint8_t
-{
-	Default                        = 0,
-	MaterialLayer                  = 1,
-	MaterialLayerBlend             = 2,
-	EMaterialFunctionUsage_MAX     = 3
 };
 
 
@@ -2641,15 +2641,6 @@ enum class ETextureSizingType : uint8_t
 };
 
 
-// Enum Engine.EMeshInstancingReplacementMethod
-enum class EMeshInstancingReplacementMethod : uint8_t
-{
-	EMeshInstancingReplacementMethod__RemoveOriginalActors = 0,
-	EMeshInstancingReplacementMethod__KeepOriginalActorsAsEditorOnly = 1,
-	EMeshInstancingReplacementMethod__EMeshInstancingReplacementMethod_MAX = 2
-};
-
-
 // Enum Engine.EMaterialDomain
 enum class EMaterialDomain : uint8_t
 {
@@ -2663,6 +2654,15 @@ enum class EMaterialDomain : uint8_t
 };
 
 
+// Enum Engine.EMeshInstancingReplacementMethod
+enum class EMeshInstancingReplacementMethod : uint8_t
+{
+	EMeshInstancingReplacementMethod__RemoveOriginalActors = 0,
+	EMeshInstancingReplacementMethod__KeepOriginalActorsAsEditorOnly = 1,
+	EMeshInstancingReplacementMethod__EMeshInstancingReplacementMethod_MAX = 2
+};
+
+
 // Enum Engine.EMeshMergeType
 enum class EMeshMergeType : uint8_t
 {
@@ -2672,22 +2672,14 @@ enum class EMeshMergeType : uint8_t
 };
 
 
-// Enum Engine.EUVOutput
-enum class EUVOutput : uint8_t
+// Enum Engine.EMeshLODSelectionType
+enum class EMeshLODSelectionType : uint8_t
 {
-	EUVOutput__DoNotOutputChannel  = 0,
-	EUVOutput__OutputChannel       = 1,
-	EUVOutput__EUVOutput_MAX       = 2
-};
-
-
-// Enum Engine.EProxyNormalComputationMethod
-enum class EProxyNormalComputationMethod : uint8_t
-{
-	EProxyNormalComputationMethod__AngleWeighted = 0,
-	EProxyNormalComputationMethod__AreaWeighted = 1,
-	EProxyNormalComputationMethod__EqualWeighted = 2,
-	EProxyNormalComputationMethod__EProxyNormalComputationMethod_MAX = 3
+	EMeshLODSelectionType__AllLODs = 0,
+	EMeshLODSelectionType__SpecificLOD = 1,
+	EMeshLODSelectionType__CalculateLOD = 2,
+	EMeshLODSelectionType__LowestDetailLOD = 3,
+	EMeshLODSelectionType__EMeshLODSelectionType_MAX = 4
 };
 
 
@@ -2721,6 +2713,16 @@ enum class EVertexPaintAxis : uint8_t
 	EVertexPaintAxis__Y            = 1,
 	EVertexPaintAxis__Z            = 2,
 	EVertexPaintAxis__EVertexPaintAxis_MAX = 3
+};
+
+
+// Enum Engine.EProxyNormalComputationMethod
+enum class EProxyNormalComputationMethod : uint8_t
+{
+	EProxyNormalComputationMethod__AngleWeighted = 0,
+	EProxyNormalComputationMethod__AreaWeighted = 1,
+	EProxyNormalComputationMethod__EqualWeighted = 2,
+	EProxyNormalComputationMethod__EProxyNormalComputationMethod_MAX = 3
 };
 
 
@@ -2767,21 +2769,6 @@ enum class ENavigationQueryResult : uint8_t
 };
 
 
-// Enum Engine.ENavPathEvent
-enum class ENavPathEvent : uint8_t
-{
-	ENavPathEvent__Cleared         = 0,
-	ENavPathEvent__NewPath         = 1,
-	ENavPathEvent__UpdatedDueToGoalMoved = 2,
-	ENavPathEvent__UpdatedDueToNavigationChanged = 3,
-	ENavPathEvent__Invalidated     = 4,
-	ENavPathEvent__RePathFailed    = 5,
-	ENavPathEvent__MetaPathUpdate  = 6,
-	ENavPathEvent__Custom          = 7,
-	ENavPathEvent__ENavPathEvent_MAX = 8
-};
-
-
 // Enum Engine.ENavDataGatheringModeConfig
 enum class ENavDataGatheringModeConfig : uint8_t
 {
@@ -2802,6 +2789,21 @@ enum class ENavDataGatheringMode : uint8_t
 };
 
 
+// Enum Engine.ENavPathEvent
+enum class ENavPathEvent : uint8_t
+{
+	ENavPathEvent__Cleared         = 0,
+	ENavPathEvent__NewPath         = 1,
+	ENavPathEvent__UpdatedDueToGoalMoved = 2,
+	ENavPathEvent__UpdatedDueToNavigationChanged = 3,
+	ENavPathEvent__Invalidated     = 4,
+	ENavPathEvent__RePathFailed    = 5,
+	ENavPathEvent__MetaPathUpdate  = 6,
+	ENavPathEvent__Custom          = 7,
+	ENavPathEvent__ENavPathEvent_MAX = 8
+};
+
+
 // Enum Engine.ENavigationOptionFlag
 enum class ENavigationOptionFlag : uint8_t
 {
@@ -2812,6 +2814,15 @@ enum class ENavigationOptionFlag : uint8_t
 };
 
 
+// Enum Engine.EUVOutput
+enum class EUVOutput : uint8_t
+{
+	EUVOutput__DoNotOutputChannel  = 0,
+	EUVOutput__OutputChannel       = 1,
+	EUVOutput__EUVOutput_MAX       = 2
+};
+
+
 // Enum Engine.ENavLinkDirection
 enum class ENavLinkDirection : uint8_t
 {
@@ -2819,18 +2830,6 @@ enum class ENavLinkDirection : uint8_t
 	ENavLinkDirection__LeftToRight = 1,
 	ENavLinkDirection__RightToLeft = 2,
 	ENavLinkDirection__ENavLinkDirection_MAX = 3
-};
-
-
-// Enum Engine.EEmitterRenderMode
-enum class EEmitterRenderMode : uint8_t
-{
-	ERM_Normal                     = 0,
-	ERM_Point                      = 1,
-	ERM_Cross                      = 2,
-	ERM_LightsOnly                 = 3,
-	ERM_None                       = 4,
-	ERM_MAX                        = 5
 };
 
 
@@ -2846,12 +2845,15 @@ enum class EParticleSubUVInterpMethod : uint8_t
 };
 
 
-// Enum Engine.EParticleBurstMethod
-enum class EParticleBurstMethod : uint8_t
+// Enum Engine.EParticleSystemInsignificanceReaction
+enum class EParticleSystemInsignificanceReaction : uint8_t
 {
-	EPBM_Instant                   = 0,
-	EPBM_Interpolated              = 1,
-	EPBM_MAX                       = 2
+	EParticleSystemInsignificanceReaction__Auto = 0,
+	EParticleSystemInsignificanceReaction__Complete = 1,
+	EParticleSystemInsignificanceReaction__DisableTick = 2,
+	EParticleSystemInsignificanceReaction__DisableTickAndKill = 3,
+	EParticleSystemInsignificanceReaction__Num = 4,
+	EParticleSystemInsignificanceReaction__EParticleSystemInsignificanceReaction_MAX = 5
 };
 
 
@@ -2867,25 +2869,24 @@ enum class EParticleSignificanceLevel : uint8_t
 };
 
 
-// Enum Engine.EParticleDetailMode
-enum class EParticleDetailMode : uint8_t
+// Enum Engine.EParticleBurstMethod
+enum class EParticleBurstMethod : uint8_t
 {
-	PDM_Low                        = 0,
-	PDM_Medium                     = 1,
-	PDM_High                       = 2,
-	PDM_MAX                        = 3
+	EPBM_Instant                   = 0,
+	EPBM_Interpolated              = 1,
+	EPBM_MAX                       = 2
 };
 
 
-// Enum Engine.EParticleSystemInsignificanceReaction
-enum class EParticleSystemInsignificanceReaction : uint8_t
+// Enum Engine.EEmitterRenderMode
+enum class EEmitterRenderMode : uint8_t
 {
-	EParticleSystemInsignificanceReaction__Auto = 0,
-	EParticleSystemInsignificanceReaction__Complete = 1,
-	EParticleSystemInsignificanceReaction__DisableTick = 2,
-	EParticleSystemInsignificanceReaction__DisableTickAndKill = 3,
-	EParticleSystemInsignificanceReaction__Num = 4,
-	EParticleSystemInsignificanceReaction__EParticleSystemInsignificanceReaction_MAX = 5
+	ERM_Normal                     = 0,
+	ERM_Point                      = 1,
+	ERM_Cross                      = 2,
+	ERM_LightsOnly                 = 3,
+	ERM_None                       = 4,
+	ERM_MAX                        = 5
 };
 
 
@@ -2914,15 +2915,6 @@ enum class EModuleType : uint8_t
 };
 
 
-// Enum Engine.EAttractorParticleSelectionMethod
-enum class EAttractorParticleSelectionMethod : uint8_t
-{
-	EAPSM_Random                   = 0,
-	EAPSM_Sequential               = 1,
-	EAPSM_MAX                      = 2
-};
-
-
 // Enum Engine.Beam2SourceTargetTangentMethod
 enum class EBeam2SourceTargetTangentMethod : uint8_t
 {
@@ -2946,12 +2938,22 @@ enum class EBeam2SourceTargetMethod : uint8_t
 };
 
 
-// Enum Engine.BeamModifierType
-enum class EBeamModifierType : uint8_t
+// Enum Engine.EAttractorParticleSelectionMethod
+enum class EAttractorParticleSelectionMethod : uint8_t
 {
-	PEB2MT_Source                  = 0,
-	PEB2MT_Target                  = 1,
-	PEB2MT_MAX                     = 2
+	EAPSM_Random                   = 0,
+	EAPSM_Sequential               = 1,
+	EAPSM_MAX                      = 2
+};
+
+
+// Enum Engine.EParticleDetailMode
+enum class EParticleDetailMode : uint8_t
+{
+	PDM_Low                        = 0,
+	PDM_Medium                     = 1,
+	PDM_High                       = 2,
+	PDM_MAX                        = 3
 };
 
 
@@ -2962,6 +2964,15 @@ enum class EParticleCameraOffsetUpdateMethod : uint8_t
 	EPCOUM_Additive                = 1,
 	EPCOUM_Scalar                  = 2,
 	EPCOUM_MAX                     = 3
+};
+
+
+// Enum Engine.BeamModifierType
+enum class EBeamModifierType : uint8_t
+{
+	PEB2MT_Source                  = 0,
+	PEB2MT_Target                  = 1,
+	PEB2MT_MAX                     = 2
 };
 
 
@@ -3015,13 +3026,12 @@ enum class ELocationEmitterSelectionMethod : uint8_t
 };
 
 
-// Enum Engine.CylinderHeightAxis
-enum class ECylinderHeightAxis : uint8_t
+// Enum Engine.ELocationSkelVertSurfaceSource
+enum class ELocationSkelVertSurfaceSource : uint8_t
 {
-	PMLPC_HEIGHTAXIS_X             = 0,
-	PMLPC_HEIGHTAXIS_Y             = 1,
-	PMLPC_HEIGHTAXIS_Z             = 2,
-	PMLPC_HEIGHTAXIS_MAX           = 3
+	VERTSURFACESOURCE_Vert         = 0,
+	VERTSURFACESOURCE_Surface      = 1,
+	VERTSURFACESOURCE_MAX          = 2
 };
 
 
@@ -3035,29 +3045,23 @@ enum class EOrbitChainMode : uint8_t
 };
 
 
-// Enum Engine.ELocationSkelVertSurfaceSource
-enum class ELocationSkelVertSurfaceSource : uint8_t
+// Enum Engine.CylinderHeightAxis
+enum class ECylinderHeightAxis : uint8_t
 {
-	VERTSURFACESOURCE_Vert         = 0,
-	VERTSURFACESOURCE_Surface      = 1,
-	VERTSURFACESOURCE_MAX          = 2
+	PMLPC_HEIGHTAXIS_X             = 0,
+	PMLPC_HEIGHTAXIS_Y             = 1,
+	PMLPC_HEIGHTAXIS_Z             = 2,
+	PMLPC_HEIGHTAXIS_MAX           = 3
 };
 
 
-// Enum Engine.EParticleAxisLock
-enum class EParticleAxisLock : uint8_t
+// Enum Engine.EEmitterNormalsMode
+enum class EEmitterNormalsMode : uint8_t
 {
-	EPAL_NONE                      = 0,
-	EPAL_X                         = 1,
-	EPAL_Y                         = 2,
-	EPAL_Z                         = 3,
-	EPAL_NEGATIVE_X                = 4,
-	EPAL_NEGATIVE_Y                = 5,
-	EPAL_NEGATIVE_Z                = 6,
-	EPAL_ROTATE_X                  = 7,
-	EPAL_ROTATE_Y                  = 8,
-	EPAL_ROTATE_Z                  = 9,
-	EPAL_MAX                       = 10
+	ENM_CameraFacing               = 0,
+	ENM_Spherical                  = 1,
+	ENM_Cylindrical                = 2,
+	ENM_MAX                        = 3
 };
 
 
@@ -3101,16 +3105,6 @@ enum class EParticleUVFlipMode : uint8_t
 };
 
 
-// Enum Engine.ETrail2SourceMethod
-enum class ETrail2SourceMethod : uint8_t
-{
-	PET2SRCM_Default               = 0,
-	PET2SRCM_Particle              = 1,
-	PET2SRCM_Actor                 = 2,
-	PET2SRCM_MAX                   = 3
-};
-
-
 // Enum Engine.EBeamTaperMethod
 enum class EBeamTaperMethod : uint8_t
 {
@@ -3121,25 +3115,13 @@ enum class EBeamTaperMethod : uint8_t
 };
 
 
-// Enum Engine.EEmitterNormalsMode
-enum class EEmitterNormalsMode : uint8_t
+// Enum Engine.EBeam2Method
+enum class EBeam2Method : uint8_t
 {
-	ENM_CameraFacing               = 0,
-	ENM_Spherical                  = 1,
-	ENM_Cylindrical                = 2,
-	ENM_MAX                        = 3
-};
-
-
-// Enum Engine.EMeshCameraFacingUpAxis
-enum class EMeshCameraFacingUpAxis : uint8_t
-{
-	CameraFacing_NoneUP            = 0,
-	CameraFacing_ZUp               = 1,
-	CameraFacing_NegativeZUp       = 2,
-	CameraFacing_YUp               = 3,
-	CameraFacing_NegativeYUp       = 4,
-	CameraFacing_MAX               = 5
+	PEB2M_Distance                 = 0,
+	PEB2M_Target                   = 1,
+	PEB2M_Branch                   = 2,
+	PEB2M_MAX                      = 3
 };
 
 
@@ -3163,6 +3145,28 @@ enum class EMeshCameraFacingOptions : uint8_t
 };
 
 
+// Enum Engine.ETrail2SourceMethod
+enum class ETrail2SourceMethod : uint8_t
+{
+	PET2SRCM_Default               = 0,
+	PET2SRCM_Particle              = 1,
+	PET2SRCM_Actor                 = 2,
+	PET2SRCM_MAX                   = 3
+};
+
+
+// Enum Engine.EMeshCameraFacingUpAxis
+enum class EMeshCameraFacingUpAxis : uint8_t
+{
+	CameraFacing_NoneUP            = 0,
+	CameraFacing_ZUp               = 1,
+	CameraFacing_NegativeZUp       = 2,
+	CameraFacing_YUp               = 3,
+	CameraFacing_NegativeYUp       = 4,
+	CameraFacing_MAX               = 5
+};
+
+
 // Enum Engine.EMeshScreenAlignment
 enum class EMeshScreenAlignment : uint8_t
 {
@@ -3183,17 +3187,20 @@ enum class ETrailsRenderAxisOption : uint8_t
 };
 
 
-// Enum Engine.EParticleScreenAlignment
-enum class EParticleScreenAlignment : uint8_t
+// Enum Engine.EParticleAxisLock
+enum class EParticleAxisLock : uint8_t
 {
-	PSA_FacingCameraPosition       = 0,
-	PSA_Square                     = 1,
-	PSA_Rectangle                  = 2,
-	PSA_Velocity                   = 3,
-	PSA_AwayFromCenter             = 4,
-	PSA_TypeSpecific               = 5,
-	PSA_FacingCameraDistanceBlend  = 6,
-	PSA_MAX                        = 7
+	EPAL_NONE                      = 0,
+	EPAL_X                         = 1,
+	EPAL_Y                         = 2,
+	EPAL_Z                         = 3,
+	EPAL_NEGATIVE_X                = 4,
+	EPAL_NEGATIVE_Y                = 5,
+	EPAL_NEGATIVE_Z                = 6,
+	EPAL_ROTATE_X                  = 7,
+	EPAL_ROTATE_Y                  = 8,
+	EPAL_ROTATE_Z                  = 9,
+	EPAL_MAX                       = 10
 };
 
 
@@ -3217,32 +3224,17 @@ enum class EParticleSystemLODMethod : uint8_t
 };
 
 
-// Enum Engine.EParticleSystemUpdateMode
-enum class EParticleSystemUpdateMode : uint8_t
+// Enum Engine.EParticleScreenAlignment
+enum class EParticleScreenAlignment : uint8_t
 {
-	EPSUM_RealTime                 = 0,
-	EPSUM_FixedTime                = 1,
-	EPSUM_MAX                      = 2
-};
-
-
-// Enum Engine.EBeam2Method
-enum class EBeam2Method : uint8_t
-{
-	PEB2M_Distance                 = 0,
-	PEB2M_Target                   = 1,
-	PEB2M_Branch                   = 2,
-	PEB2M_MAX                      = 3
-};
-
-
-// Enum Engine.ParticleReplayState
-enum class EParticleReplayState : uint8_t
-{
-	PRS_Disabled                   = 0,
-	PRS_Capturing                  = 1,
-	PRS_Replaying                  = 2,
-	PRS_MAX                        = 3
+	PSA_FacingCameraPosition       = 0,
+	PSA_Square                     = 1,
+	PSA_Rectangle                  = 2,
+	PSA_Velocity                   = 3,
+	PSA_AwayFromCenter             = 4,
+	PSA_TypeSpecific               = 5,
+	PSA_FacingCameraDistanceBlend  = 6,
+	PSA_MAX                        = 7
 };
 
 
@@ -3256,6 +3248,25 @@ enum class EParticleEventType : uint8_t
 	EPET_Burst                     = 4,
 	EPET_Blueprint                 = 5,
 	EPET_MAX                       = 6
+};
+
+
+// Enum Engine.EParticleSystemUpdateMode
+enum class EParticleSystemUpdateMode : uint8_t
+{
+	EPSUM_RealTime                 = 0,
+	EPSUM_FixedTime                = 1,
+	EPSUM_MAX                      = 2
+};
+
+
+// Enum Engine.ParticleReplayState
+enum class EParticleReplayState : uint8_t
+{
+	PRS_Disabled                   = 0,
+	PRS_Capturing                  = 1,
+	PRS_Replaying                  = 2,
+	PRS_MAX                        = 3
 };
 
 
@@ -3283,6 +3294,16 @@ enum class ESettingsLockedAxis : uint8_t
 	ESettingsLockedAxis__Z         = 3,
 	ESettingsLockedAxis__Invalid   = 4,
 	ESettingsLockedAxis__ESettingsLockedAxis_MAX = 5
+};
+
+
+// Enum Engine.EFrictionCombineMode
+enum class EFrictionCombineMode : uint8_t
+{
+	EFrictionCombineMode__Average  = 0,
+	EFrictionCombineMode__Min      = 1,
+	EFrictionCombineMode__Multiply = 2,
+	EFrictionCombineMode__Max      = 3
 };
 
 
@@ -3319,16 +3340,6 @@ enum class EDynamicForceFeedbackAction : uint8_t
 };
 
 
-// Enum Engine.EFrictionCombineMode
-enum class EFrictionCombineMode : uint8_t
-{
-	EFrictionCombineMode__Average  = 0,
-	EFrictionCombineMode__Min      = 1,
-	EFrictionCombineMode__Multiply = 2,
-	EFrictionCombineMode__Max      = 3
-};
-
-
 // Enum Engine.ERendererStencilMask
 enum class ERendererStencilMask : uint8_t
 {
@@ -3357,12 +3368,25 @@ enum class EHasCustomNavigableGeometry : uint8_t
 };
 
 
-// Enum Engine.EReflectionSourceType
-enum class EReflectionSourceType : uint8_t
+// Enum Engine.ECanBeCharacterBase
+enum class ECanBeCharacterBase : uint8_t
 {
-	EReflectionSourceType__CapturedScene = 0,
-	EReflectionSourceType__SpecifiedCubemap = 1,
-	EReflectionSourceType__EReflectionSourceType_MAX = 2
+	ECB_No                         = 0,
+	ECB_Yes                        = 1,
+	ECB_Owner                      = 2,
+	ECB_MAX                        = 3
+};
+
+
+// Enum Engine.EDefaultBackBufferPixelFormat
+enum class EDefaultBackBufferPixelFormat : uint8_t
+{
+	EDefaultBackBufferPixelFormat__DBBPF_B8G8R8A8 = 0,
+	EDefaultBackBufferPixelFormat__DBBPF_A16B16G16R16 = 1,
+	EDefaultBackBufferPixelFormat__DBBPF_FloatRGB = 2,
+	EDefaultBackBufferPixelFormat__DBBPF_FloatRGBA = 3,
+	EDefaultBackBufferPixelFormat__DBBPF_A2B10G10R10 = 4,
+	EDefaultBackBufferPixelFormat__DBBPF_MAX = 5
 };
 
 
@@ -3373,6 +3397,15 @@ enum class EAutoExposureMethodUI : uint8_t
 	EAutoExposureMethodUI__AEM_Basic = 1,
 	EAutoExposureMethodUI__AEM_Manual = 2,
 	EAutoExposureMethodUI__AEM_MAX = 3
+};
+
+
+// Enum Engine.EReflectionSourceType
+enum class EReflectionSourceType : uint8_t
+{
+	EReflectionSourceType__CapturedScene = 0,
+	EReflectionSourceType__SpecifiedCubemap = 1,
+	EReflectionSourceType__EReflectionSourceType_MAX = 2
 };
 
 
@@ -3394,18 +3427,6 @@ enum class EEarlyZPass : uint8_t
 	EEarlyZPass__OpaqueAndMasked   = 2,
 	EEarlyZPass__Auto              = 3,
 	EEarlyZPass__EEarlyZPass_MAX   = 4
-};
-
-
-// Enum Engine.EDefaultBackBufferPixelFormat
-enum class EDefaultBackBufferPixelFormat : uint8_t
-{
-	EDefaultBackBufferPixelFormat__DBBPF_B8G8R8A8 = 0,
-	EDefaultBackBufferPixelFormat__DBBPF_A16B16G16R16 = 1,
-	EDefaultBackBufferPixelFormat__DBBPF_FloatRGB = 2,
-	EDefaultBackBufferPixelFormat__DBBPF_FloatRGBA = 3,
-	EDefaultBackBufferPixelFormat__DBBPF_A2B10G10R10 = 4,
-	EDefaultBackBufferPixelFormat__DBBPF_MAX = 5
 };
 
 
@@ -3439,16 +3460,6 @@ enum class ECompositingSampleCount : uint8_t
 	ECompositingSampleCount__Four  = 2,
 	ECompositingSampleCount__Eight = 3,
 	ECompositingSampleCount__ECompositingSampleCount_MAX = 4
-};
-
-
-// Enum Engine.EClearSceneOptions
-enum class EClearSceneOptions : uint8_t
-{
-	EClearSceneOptions__NoClear    = 0,
-	EClearSceneOptions__HardwareClear = 1,
-	EClearSceneOptions__QuadAtMaxZ = 2,
-	EClearSceneOptions__EClearSceneOptions_MAX = 3
 };
 
 
@@ -3514,6 +3525,16 @@ enum class ERootMotionFinishVelocityMode : uint8_t
 	ERootMotionFinishVelocityMode__SetVelocity = 1,
 	ERootMotionFinishVelocityMode__ClampVelocity = 2,
 	ERootMotionFinishVelocityMode__ERootMotionFinishVelocityMode_MAX = 3
+};
+
+
+// Enum Engine.EClearSceneOptions
+enum class EClearSceneOptions : uint8_t
+{
+	EClearSceneOptions__NoClear    = 0,
+	EClearSceneOptions__HardwareClear = 1,
+	EClearSceneOptions__QuadAtMaxZ = 2,
+	EClearSceneOptions__EClearSceneOptions_MAX = 3
 };
 
 
@@ -3692,6 +3713,16 @@ enum class ESkeletalMeshOptimizationImportance : uint8_t
 };
 
 
+// Enum Engine.SkeletalMeshOptimizationType
+enum class ESkeletalMeshOptimizationType : uint8_t
+{
+	SMOT_NumOfTriangles            = 0,
+	SMOT_MaxDeviation              = 1,
+	SMOT_TriangleOrDeviation       = 2,
+	SMOT_MAX                       = 3
+};
+
+
 // Enum Engine.EBoneTranslationRetargetingMode
 enum class EBoneTranslationRetargetingMode : uint8_t
 {
@@ -3701,16 +3732,6 @@ enum class EBoneTranslationRetargetingMode : uint8_t
 	EBoneTranslationRetargetingMode__AnimationRelative = 3,
 	EBoneTranslationRetargetingMode__OrientAndScale = 4,
 	EBoneTranslationRetargetingMode__EBoneTranslationRetargetingMode_MAX = 5
-};
-
-
-// Enum Engine.SkeletalMeshOptimizationType
-enum class ESkeletalMeshOptimizationType : uint8_t
-{
-	SMOT_NumOfTriangles            = 0,
-	SMOT_MaxDeviation              = 1,
-	SMOT_TriangleOrDeviation       = 2,
-	SMOT_MAX                       = 3
 };
 
 
@@ -3829,17 +3850,6 @@ enum class ESoundGroup : uint8_t
 };
 
 
-// Enum Engine.EMeshLODSelectionType
-enum class EMeshLODSelectionType : uint8_t
-{
-	EMeshLODSelectionType__AllLODs = 0,
-	EMeshLODSelectionType__SpecificLOD = 1,
-	EMeshLODSelectionType__CalculateLOD = 2,
-	EMeshLODSelectionType__LowestDetailLOD = 3,
-	EMeshLODSelectionType__EMeshLODSelectionType_MAX = 4
-};
-
-
 // Enum Engine.ModulationParamMode
 enum class EModulationParamMode : uint8_t
 {
@@ -3883,26 +3893,15 @@ enum class EDecompressionType : uint8_t
 };
 
 
-// Enum Engine.ESplineCoordinateSpace
-enum class ESplineCoordinateSpace : uint8_t
+// Enum Engine.ESplinePointType
+enum class ESplinePointType : uint8_t
 {
-	ESplineCoordinateSpace__Local  = 0,
-	ESplineCoordinateSpace__World  = 1,
-	ESplineCoordinateSpace__ESplineCoordinateSpace_MAX = 2
-};
-
-
-// Enum Engine.ESubmixChannelFormat
-enum class ESubmixChannelFormat : uint8_t
-{
-	ESubmixChannelFormat__Device   = 0,
-	ESubmixChannelFormat__Stereo   = 1,
-	ESubmixChannelFormat__Quad     = 2,
-	ESubmixChannelFormat__FiveDotOne = 3,
-	ESubmixChannelFormat__SevenDotOne = 4,
-	ESubmixChannelFormat__Ambisonics = 5,
-	ESubmixChannelFormat__Count    = 6,
-	ESubmixChannelFormat__ESubmixChannelFormat_MAX = 7
+	ESplinePointType__Linear       = 0,
+	ESplinePointType__Curve        = 1,
+	ESplinePointType__Constant     = 2,
+	ESplinePointType__CurveClamped = 3,
+	ESplinePointType__CurveCustomTangent = 4,
+	ESplinePointType__ESplinePointType_MAX = 5
 };
 
 
@@ -3916,36 +3915,12 @@ enum class ESplineMeshAxis : uint8_t
 };
 
 
-// Enum Engine.ESplinePointType
-enum class ESplinePointType : uint8_t
+// Enum Engine.ESplineCoordinateSpace
+enum class ESplineCoordinateSpace : uint8_t
 {
-	ESplinePointType__Linear       = 0,
-	ESplinePointType__Curve        = 1,
-	ESplinePointType__Constant     = 2,
-	ESplinePointType__CurveClamped = 3,
-	ESplinePointType__CurveCustomTangent = 4,
-	ESplinePointType__ESplinePointType_MAX = 5
-};
-
-
-// Enum Engine.EOptimizationType
-enum class EOptimizationType : uint8_t
-{
-	OT_NumOfTriangles              = 0,
-	OT_MaxDeviation                = 1,
-	OT_MAX                         = 2
-};
-
-
-// Enum Engine.ENormalMode
-enum class ENormalMode : uint8_t
-{
-	NM_PreserveSmoothingGroups     = 0,
-	NM_RecalculateNormals          = 1,
-	NM_RecalculateNormalsSmooth    = 2,
-	NM_RecalculateNormalsHard      = 3,
-	TEMP_BROKEN                    = 4,
-	ENormalMode_MAX                = 5
+	ESplineCoordinateSpace__Local  = 0,
+	ESplineCoordinateSpace__World  = 1,
+	ESplineCoordinateSpace__ESplineCoordinateSpace_MAX = 2
 };
 
 
@@ -3963,13 +3938,39 @@ enum class EImportanceLevel : uint8_t
 };
 
 
-// Enum Engine.EStereoLayerType
-enum class EStereoLayerType : uint8_t
+// Enum Engine.ENormalMode
+enum class ENormalMode : uint8_t
 {
-	SLT_WorldLocked                = 0,
-	SLT_TrackerLocked              = 1,
-	SLT_FaceLocked                 = 2,
-	SLT_MAX                        = 3
+	NM_PreserveSmoothingGroups     = 0,
+	NM_RecalculateNormals          = 1,
+	NM_RecalculateNormalsSmooth    = 2,
+	NM_RecalculateNormalsHard      = 3,
+	TEMP_BROKEN                    = 4,
+	ENormalMode_MAX                = 5
+};
+
+
+// Enum Engine.EStereoLayerShape
+enum class EStereoLayerShape : uint8_t
+{
+	SLSH_QuadLayer                 = 0,
+	SLSH_CylinderLayer             = 1,
+	SLSH_CubemapLayer              = 2,
+	SLSH_MAX                       = 3
+};
+
+
+// Enum Engine.ESubmixChannelFormat
+enum class ESubmixChannelFormat : uint8_t
+{
+	ESubmixChannelFormat__Device   = 0,
+	ESubmixChannelFormat__Stereo   = 1,
+	ESubmixChannelFormat__Quad     = 2,
+	ESubmixChannelFormat__FiveDotOne = 3,
+	ESubmixChannelFormat__SevenDotOne = 4,
+	ESubmixChannelFormat__Ambisonics = 5,
+	ESubmixChannelFormat__Count    = 6,
+	ESubmixChannelFormat__ESubmixChannelFormat_MAX = 7
 };
 
 
@@ -3994,16 +3995,6 @@ enum class ESubUVBoundingVertexCount : uint8_t
 };
 
 
-// Enum Engine.EStereoLayerShape
-enum class EStereoLayerShape : uint8_t
-{
-	SLSH_QuadLayer                 = 0,
-	SLSH_CylinderLayer             = 1,
-	SLSH_CubemapLayer              = 2,
-	SLSH_MAX                       = 3
-};
-
-
 // Enum Engine.EVerticalTextAligment
 enum class EVerticalTextAligment : uint8_t
 {
@@ -4015,16 +4006,13 @@ enum class EVerticalTextAligment : uint8_t
 };
 
 
-// Enum Engine.ETextureCompressionQuality
-enum class ETextureCompressionQuality : uint8_t
+// Enum Engine.EHorizTextAligment
+enum class EHorizTextAligment : uint8_t
 {
-	TCQ_Default                    = 0,
-	TCQ_Lowest                     = 1,
-	TCQ_Low                        = 2,
-	TCQ_Medium                     = 3,
-	TCQ_High                       = 4,
-	TCQ_Highest                    = 5,
-	TCQ_MAX                        = 6
+	EHTA_Left                      = 0,
+	EHTA_Center                    = 1,
+	EHTA_Right                     = 2,
+	EHTA_MAX                       = 3
 };
 
 
@@ -4053,23 +4041,12 @@ enum class ETextureSourceArtType : uint8_t
 };
 
 
-// Enum Engine.EHorizTextAligment
-enum class EHorizTextAligment : uint8_t
+// Enum Engine.EOptimizationType
+enum class EOptimizationType : uint8_t
 {
-	EHTA_Left                      = 0,
-	EHTA_Center                    = 1,
-	EHTA_Right                     = 2,
-	EHTA_MAX                       = 3
-};
-
-
-// Enum Engine.ETextureMipCount
-enum class ETextureMipCount : uint8_t
-{
-	TMC_ResidentMips               = 0,
-	TMC_AllMips                    = 1,
-	TMC_AllMipsBiased              = 2,
-	TMC_MAX                        = 3
+	OT_NumOfTriangles              = 0,
+	OT_MaxDeviation                = 1,
+	OT_MAX                         = 2
 };
 
 
@@ -4082,6 +4059,16 @@ enum class ECompositeTextureMode : uint8_t
 	CTM_NormalRoughnessToBlue      = 3,
 	CTM_NormalRoughnessToAlpha     = 4,
 	CTM_MAX                        = 5
+};
+
+
+// Enum Engine.ETextureMipCount
+enum class ETextureMipCount : uint8_t
+{
+	TMC_ResidentMips               = 0,
+	TMC_AllMips                    = 1,
+	TMC_AllMipsBiased              = 2,
+	TMC_MAX                        = 3
 };
 
 
@@ -4125,16 +4112,6 @@ enum class ETextureCompressionSettings : uint8_t
 };
 
 
-// Enum Engine.ETexturePowerOfTwoSetting
-enum class ETexturePowerOfTwoSetting : uint8_t
-{
-	ETexturePowerOfTwoSetting__None = 0,
-	ETexturePowerOfTwoSetting__PadToPowerOfTwo = 1,
-	ETexturePowerOfTwoSetting__PadToSquarePowerOfTwo = 2,
-	ETexturePowerOfTwoSetting__ETexturePowerOfTwoSetting_MAX = 3
-};
-
-
 // Enum Engine.ETextureSamplerFilter
 enum class ETextureSamplerFilter : uint8_t
 {
@@ -4144,6 +4121,16 @@ enum class ETextureSamplerFilter : uint8_t
 	ETextureSamplerFilter__AnisotropicPoint = 3,
 	ETextureSamplerFilter__AnisotropicLinear = 4,
 	ETextureSamplerFilter__ETextureSamplerFilter_MAX = 5
+};
+
+
+// Enum Engine.ETexturePowerOfTwoSetting
+enum class ETexturePowerOfTwoSetting : uint8_t
+{
+	ETexturePowerOfTwoSetting__None = 0,
+	ETexturePowerOfTwoSetting__PadToPowerOfTwo = 1,
+	ETexturePowerOfTwoSetting__PadToSquarePowerOfTwo = 2,
+	ETexturePowerOfTwoSetting__ETexturePowerOfTwoSetting_MAX = 3
 };
 
 
@@ -4223,13 +4210,31 @@ enum class ETextureGroup : uint8_t
 };
 
 
-// Enum Engine.ECanBeCharacterBase
-enum class ECanBeCharacterBase : uint8_t
+// Enum Engine.ETextureRenderTargetFormat
+enum class ETextureRenderTargetFormat : uint8_t
 {
-	ECB_No                         = 0,
-	ECB_Yes                        = 1,
-	ECB_Owner                      = 2,
-	ECB_MAX                        = 3
+	RTF_R8                         = 0,
+	RTF_RG8                        = 1,
+	RTF_RGBA8                      = 2,
+	RTF_R16f                       = 3,
+	RTF_RG16f                      = 4,
+	RTF_RGBA16f                    = 5,
+	RTF_R32f                       = 6,
+	RTF_RG32f                      = 7,
+	RTF_RGBA32f                    = 8,
+	RTF_RGB10A2                    = 9,
+	RTF_MAX                        = 10
+};
+
+
+// Enum Engine.ETimecodeProviderSynchronizationState
+enum class ETimecodeProviderSynchronizationState : uint8_t
+{
+	ETimecodeProviderSynchronizationState__Closed = 0,
+	ETimecodeProviderSynchronizationState__Error = 1,
+	ETimecodeProviderSynchronizationState__Synchronized = 2,
+	ETimecodeProviderSynchronizationState__Synchronizing = 3,
+	ETimecodeProviderSynchronizationState__ETimecodeProviderSynchronizationState_MAX = 4
 };
 
 
@@ -4261,23 +4266,6 @@ enum class ETimeStretchCurveMapping : uint8_t
 };
 
 
-// Enum Engine.ETextureRenderTargetFormat
-enum class ETextureRenderTargetFormat : uint8_t
-{
-	RTF_R8                         = 0,
-	RTF_RG8                        = 1,
-	RTF_RGBA8                      = 2,
-	RTF_R16f                       = 3,
-	RTF_RG16f                      = 4,
-	RTF_RGBA16f                    = 5,
-	RTF_R32f                       = 6,
-	RTF_RG32f                      = 7,
-	RTF_RGBA32f                    = 8,
-	RTF_RGB10A2                    = 9,
-	RTF_MAX                        = 10
-};
-
-
 // Enum Engine.ETwitterIntegrationDelegate
 enum class ETwitterIntegrationDelegate : uint8_t
 {
@@ -4288,13 +4276,16 @@ enum class ETwitterIntegrationDelegate : uint8_t
 };
 
 
-// Enum Engine.ETwitterRequestMethod
-enum class ETwitterRequestMethod : uint8_t
+// Enum Engine.ETextureCompressionQuality
+enum class ETextureCompressionQuality : uint8_t
 {
-	TRM_Get                        = 0,
-	TRM_Post                       = 1,
-	TRM_Delete                     = 2,
-	TRM_MAX                        = 3
+	TCQ_Default                    = 0,
+	TCQ_Lowest                     = 1,
+	TCQ_Low                        = 2,
+	TCQ_Medium                     = 3,
+	TCQ_High                       = 4,
+	TCQ_Highest                    = 5,
+	TCQ_MAX                        = 6
 };
 
 
@@ -4306,6 +4297,16 @@ enum class EUserDefinedStructureStatus : uint8_t
 	UDSS_Error                     = 2,
 	UDSS_Duplicate                 = 3,
 	UDSS_MAX                       = 4
+};
+
+
+// Enum Engine.ETwitterRequestMethod
+enum class ETwitterRequestMethod : uint8_t
+{
+	TRM_Get                        = 0,
+	TRM_Post                       = 1,
+	TRM_Delete                     = 2,
+	TRM_MAX                        = 3
 };
 
 
@@ -4349,15 +4350,12 @@ enum class EPSCPoolMethod : uint8_t
 };
 
 
-// Enum Engine.EUIScalingRule
-enum class EUIScalingRule : uint8_t
+// Enum Engine.EVolumeLightingMethod
+enum class EVolumeLightingMethod : uint8_t
 {
-	EUIScalingRule__ShortestSide   = 0,
-	EUIScalingRule__LongestSide    = 1,
-	EUIScalingRule__Horizontal     = 2,
-	EUIScalingRule__Vertical       = 3,
-	EUIScalingRule__Custom         = 4,
-	EUIScalingRule__EUIScalingRule_MAX = 5
+	VLM_VolumetricLightmap         = 0,
+	VLM_SparseVolumeLightingSamples = 1,
+	VLM_MAX                        = 2
 };
 
 
@@ -4371,23 +4369,25 @@ enum class EVisibilityAggressiveness : uint8_t
 };
 
 
-// Enum Engine.EVolumeLightingMethod
-enum class EVolumeLightingMethod : uint8_t
+// Enum Engine.EUIScalingRule
+enum class EUIScalingRule : uint8_t
 {
-	VLM_VolumetricLightmap         = 0,
-	VLM_SparseVolumeLightingSamples = 1,
-	VLM_MAX                        = 2
+	EUIScalingRule__ShortestSide   = 0,
+	EUIScalingRule__LongestSide    = 1,
+	EUIScalingRule__Horizontal     = 2,
+	EUIScalingRule__Vertical       = 3,
+	EUIScalingRule__Custom         = 4,
+	EUIScalingRule__EUIScalingRule_MAX = 5
 };
 
 
-// Enum Engine.ETimecodeProviderSynchronizationState
-enum class ETimecodeProviderSynchronizationState : uint8_t
+// Enum Engine.EStereoLayerType
+enum class EStereoLayerType : uint8_t
 {
-	ETimecodeProviderSynchronizationState__Closed = 0,
-	ETimecodeProviderSynchronizationState__Error = 1,
-	ETimecodeProviderSynchronizationState__Synchronized = 2,
-	ETimecodeProviderSynchronizationState__Synchronizing = 3,
-	ETimecodeProviderSynchronizationState__ETimecodeProviderSynchronizationState_MAX = 4
+	SLT_WorldLocked                = 0,
+	SLT_TrackerLocked              = 1,
+	SLT_FaceLocked                 = 2,
+	SLT_MAX                        = 3
 };
 
 
@@ -4431,6 +4431,22 @@ struct FTickFunction
 	unsigned char                                      UnknownData02[0x33];                                      // 0x000D(0x0033) MISSED OFFSET
 	float                                              TickInterval;                                             // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0xC];                                       // 0x0044(0x000C) MISSED OFFSET
+};
+
+// ScriptStruct Engine.ActorComponentTickFunction
+// 0x0008 (0x0058 - 0x0050)
+struct FActorComponentTickFunction : public FTickFunction
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct Engine.SimpleMemberReference
+// 0x0020
+struct FSimpleMemberReference
+{
+	class UObject*                                     MemberParent;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       MemberName;                                               // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       MemberGuid;                                               // 0x0010(0x0010) (IsPlainOldData)
 };
 
 // ScriptStruct Engine.ActorTickFunction
@@ -4512,22 +4528,6 @@ struct FHitResult
 	TWeakObjectPtr<class UPrimitiveComponent>          Component;                                                // 0x0070(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	struct FName                                       BoneName;                                                 // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       MyBoneName;                                               // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.ActorComponentTickFunction
-// 0x0008 (0x0058 - 0x0050)
-struct FActorComponentTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
-};
-
-// ScriptStruct Engine.SimpleMemberReference
-// 0x0020
-struct FSimpleMemberReference
-{
-	class UObject*                                     MemberParent;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       MemberName;                                               // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       MemberGuid;                                               // 0x0010(0x0010) (IsPlainOldData)
 };
 
 // ScriptStruct Engine.LightingChannels
@@ -6206,6 +6206,14 @@ struct FBlendParameter
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Engine.AnimGroupInfo
+// 0x0018
+struct FAnimGroupInfo
+{
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // 0x0008(0x0010) (IsPlainOldData)
+};
+
 // ScriptStruct Engine.BakedStateExitTransition
 // 0x0020
 struct FBakedStateExitTransition
@@ -6271,14 +6279,6 @@ struct FBakedAnimationStateMachine
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	TArray<struct FBakedAnimationState>                States;                                                   // 0x0010(0x0010) (ZeroConstructor)
 	TArray<struct FAnimationTransitionBetweenStates>   Transitions;                                              // 0x0020(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct Engine.AnimGroupInfo
-// 0x0018
-struct FAnimGroupInfo
-{
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                Color;                                                    // 0x0008(0x0010) (IsPlainOldData)
 };
 
 // ScriptStruct Engine.SmartName
@@ -6467,13 +6467,6 @@ struct FTrackToSkeletonMap
 	int                                                BoneTreeIndex;                                            // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.AnimSetMeshLinkup
-// 0x0010
-struct FAnimSetMeshLinkup
-{
-	TArray<int>                                        BoneToTrackTable;                                         // 0x0000(0x0010) (ZeroConstructor)
-};
-
 // ScriptStruct Engine.PrimaryAssetRules
 // 0x0010
 struct FPrimaryAssetRules
@@ -6521,6 +6514,14 @@ struct FAssetManagerRedirect
 	struct FString                                     New;                                                      // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
+// ScriptStruct Engine.AssetMapping
+// 0x0010
+struct FAssetMapping
+{
+	class UAnimationAsset*                             SourceAsset;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimationAsset*                             TargetAsset;                                              // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Engine.AtmospherePrecomputeParameters
 // 0x002C
 struct FAtmospherePrecomputeParameters
@@ -6538,34 +6539,101 @@ struct FAtmospherePrecomputeParameters
 	int                                                InscatterNuNum;                                           // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.ReverbSettings
+// ScriptStruct Engine.AudioComponentParam
 // 0x0020
-struct FReverbSettings
+struct FAudioComponentParam
 {
-	unsigned char                                      bApplyReverb : 1;                                         // 0x0000(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	TEnumAsByte<EReverbPreset>                         ReverbType;                                               // 0x0004(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
-	class UReverbEffect*                               ReverbEffect;                                             // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USoundEffectSubmixPreset*                    ReverbPluginEffect;                                       // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Volume;                                                   // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FadeTime;                                                 // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FloatParam;                                               // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               BoolParam;                                                // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
+	int                                                IntParam;                                                 // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	class USoundWave*                                  SoundWaveParam;                                           // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.InteriorSettings
-// 0x0024
-struct FInteriorSettings
+// ScriptStruct Engine.RuntimeFloatCurve
+// 0x0078
+struct FRuntimeFloatCurve
 {
-	unsigned char                                      bIsWorldSettings : 1;                                     // 0x0000(0x0001)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	float                                              ExteriorVolume;                                           // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ExteriorTime;                                             // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ExteriorLPF;                                              // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ExteriorLPFTime;                                          // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InteriorVolume;                                           // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InteriorTime;                                             // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InteriorLPF;                                              // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              InteriorLPFTime;                                          // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FRichCurve                                  EditorCurveData;                                          // 0x0000(0x0070)
+	class UCurveFloat*                                 ExternalCurve;                                            // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.BaseAttenuationSettings
+// 0x00A0
+struct FBaseAttenuationSettings
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	EAttenuationDistanceModel                          DistanceAlgorithm;                                        // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAttenuationShape>                     AttenuationShape;                                         // 0x0009(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x000A(0x0002) MISSED OFFSET
+	float                                              dBAttenuationAtMax;                                       // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     AttenuationShapeExtents;                                  // 0x0010(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	float                                              ConeOffset;                                               // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FalloffDistance;                                          // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+	struct FRuntimeFloatCurve                          CustomAttenuationCurve;                                   // 0x0028(0x0078) (Edit, BlueprintVisible)
+};
+
+// ScriptStruct Engine.SoundAttenuationPluginSettings
+// 0x0030
+struct FSoundAttenuationPluginSettings
+{
+	TArray<class USpatializationPluginSourceSettingsBase*> SpatializationPluginSettingsArray;                        // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UOcclusionPluginSourceSettingsBase*>  OcclusionPluginSettingsArray;                             // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UReverbPluginSourceSettingsBase*>     ReverbPluginSettingsArray;                                // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct Engine.SoundAttenuationSettings
+// 0x0208 (0x02A8 - 0x00A0)
+struct FSoundAttenuationSettings : public FBaseAttenuationSettings
+{
+	unsigned char                                      bAttenuate : 1;                                           // 0x00A0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bSpatialize : 1;                                          // 0x00A0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bAttenuateWithLPF : 1;                                    // 0x00A0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bEnableListenerFocus : 1;                                 // 0x00A0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bEnableFocusInterpolation : 1;                            // 0x00A0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bEnableOcclusion : 1;                                     // 0x00A0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bUseComplexCollisionForOcclusion : 1;                     // 0x00A0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bEnableReverbSend : 1;                                    // 0x00A0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bApplyNormalizationToStereoSounds : 1;                    // 0x00A1(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      bEnableLogFrequencyScaling : 1;                           // 0x00A1(0x0001) (Edit, BlueprintVisible)
+	TEnumAsByte<ESoundSpatializationAlgorithm>         SpatializationAlgorithm;                                  // 0x00A2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EAirAbsorptionMethod                               AbsorptionMethod;                                         // 0x00A3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     OcclusionTraceChannel;                                    // 0x00A4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EReverbSendMethod                                  ReverbSendMethod;                                         // 0x00A5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x00A6(0x0002) MISSED OFFSET
+	float                                              OmniRadius;                                               // 0x00A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              StereoSpread;                                             // 0x00AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              LPFRadiusMin;                                             // 0x00B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              LPFRadiusMax;                                             // 0x00B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FRuntimeFloatCurve                          CustomLowpassAirAbsorptionCurve;                          // 0x00B8(0x0078) (Edit, BlueprintVisible)
+	struct FRuntimeFloatCurve                          CustomHighpassAirAbsorptionCurve;                         // 0x0130(0x0078) (Edit, BlueprintVisible)
+	float                                              LPFFrequencyAtMin;                                        // 0x01A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              LPFFrequencyAtMax;                                        // 0x01AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              HPFFrequencyAtMin;                                        // 0x01B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              HPFFrequencyAtMax;                                        // 0x01B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FocusAzimuth;                                             // 0x01B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              NonFocusAzimuth;                                          // 0x01BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FocusDistanceScale;                                       // 0x01C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              NonFocusDistanceScale;                                    // 0x01C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FocusPriorityScale;                                       // 0x01C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              NonFocusPriorityScale;                                    // 0x01CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FocusVolumeAttenuation;                                   // 0x01D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              NonFocusVolumeAttenuation;                                // 0x01D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FocusAttackInterpSpeed;                                   // 0x01D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FocusReleaseInterpSpeed;                                  // 0x01DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              OcclusionLowPassFilterFrequency;                          // 0x01E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              OcclusionVolumeAttenuation;                               // 0x01E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              OcclusionInterpolationTime;                               // 0x01E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ReverbWetLevelMin;                                        // 0x01EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ReverbWetLevelMax;                                        // 0x01F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ReverbDistanceMin;                                        // 0x01F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ReverbDistanceMax;                                        // 0x01F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ManualReverbSendLevel;                                    // 0x01FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FRuntimeFloatCurve                          CustomReverbSendCurve;                                    // 0x0200(0x0078) (Edit, BlueprintVisible)
+	struct FSoundAttenuationPluginSettings             PluginSettings;                                           // 0x0278(0x0030) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct Engine.AudioQualitySettings
@@ -6747,109 +6815,43 @@ struct FAnimSlotGroup
 	TArray<struct FName>                               SlotNames;                                                // 0x0008(0x0010) (ZeroConstructor)
 };
 
-// ScriptStruct Engine.AssetMapping
-// 0x0010
-struct FAssetMapping
-{
-	class UAnimationAsset*                             SourceAsset;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAnimationAsset*                             TargetAsset;                                              // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.AudioComponentParam
+// ScriptStruct Engine.BlendProfileBoneEntry
 // 0x0020
-struct FAudioComponentParam
+struct FBlendProfileBoneEntry
 {
-	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FloatParam;                                               // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               BoolParam;                                                // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
-	int                                                IntParam;                                                 // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-	class USoundWave*                                  SoundWaveParam;                                           // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FBoneReference                              BoneReference;                                            // 0x0000(0x0018) (Edit)
+	float                                              BlendScale;                                               // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct Engine.RuntimeFloatCurve
-// 0x0078
-struct FRuntimeFloatCurve
+// ScriptStruct Engine.ReverbSettings
+// 0x0020
+struct FReverbSettings
 {
-	struct FRichCurve                                  EditorCurveData;                                          // 0x0000(0x0070)
-	class UCurveFloat*                                 ExternalCurve;                                            // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bApplyReverb : 1;                                         // 0x0000(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	TEnumAsByte<EReverbPreset>                         ReverbType;                                               // 0x0004(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+	class UReverbEffect*                               ReverbEffect;                                             // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USoundEffectSubmixPreset*                    ReverbPluginEffect;                                       // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Volume;                                                   // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FadeTime;                                                 // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.BaseAttenuationSettings
-// 0x00A0
-struct FBaseAttenuationSettings
+// ScriptStruct Engine.InteriorSettings
+// 0x0024
+struct FInteriorSettings
 {
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	EAttenuationDistanceModel                          DistanceAlgorithm;                                        // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EAttenuationShape>                     AttenuationShape;                                         // 0x0009(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x000A(0x0002) MISSED OFFSET
-	float                                              dBAttenuationAtMax;                                       // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     AttenuationShapeExtents;                                  // 0x0010(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              ConeOffset;                                               // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FalloffDistance;                                          // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-	struct FRuntimeFloatCurve                          CustomAttenuationCurve;                                   // 0x0028(0x0078) (Edit, BlueprintVisible)
-};
-
-// ScriptStruct Engine.SoundAttenuationPluginSettings
-// 0x0030
-struct FSoundAttenuationPluginSettings
-{
-	TArray<class USpatializationPluginSourceSettingsBase*> SpatializationPluginSettingsArray;                        // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UOcclusionPluginSourceSettingsBase*>  OcclusionPluginSettingsArray;                             // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UReverbPluginSourceSettingsBase*>     ReverbPluginSettingsArray;                                // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct Engine.SoundAttenuationSettings
-// 0x0208 (0x02A8 - 0x00A0)
-struct FSoundAttenuationSettings : public FBaseAttenuationSettings
-{
-	unsigned char                                      bAttenuate : 1;                                           // 0x00A0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bSpatialize : 1;                                          // 0x00A0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bAttenuateWithLPF : 1;                                    // 0x00A0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bEnableListenerFocus : 1;                                 // 0x00A0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bEnableFocusInterpolation : 1;                            // 0x00A0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bEnableOcclusion : 1;                                     // 0x00A0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bUseComplexCollisionForOcclusion : 1;                     // 0x00A0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bEnableReverbSend : 1;                                    // 0x00A0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bApplyNormalizationToStereoSounds : 1;                    // 0x00A1(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bEnableLogFrequencyScaling : 1;                           // 0x00A1(0x0001) (Edit, BlueprintVisible)
-	TEnumAsByte<ESoundSpatializationAlgorithm>         SpatializationAlgorithm;                                  // 0x00A2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EAirAbsorptionMethod                               AbsorptionMethod;                                         // 0x00A3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     OcclusionTraceChannel;                                    // 0x00A4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EReverbSendMethod                                  ReverbSendMethod;                                         // 0x00A5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x00A6(0x0002) MISSED OFFSET
-	float                                              OmniRadius;                                               // 0x00A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              StereoSpread;                                             // 0x00AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              LPFRadiusMin;                                             // 0x00B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              LPFRadiusMax;                                             // 0x00B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FRuntimeFloatCurve                          CustomLowpassAirAbsorptionCurve;                          // 0x00B8(0x0078) (Edit, BlueprintVisible)
-	struct FRuntimeFloatCurve                          CustomHighpassAirAbsorptionCurve;                         // 0x0130(0x0078) (Edit, BlueprintVisible)
-	float                                              LPFFrequencyAtMin;                                        // 0x01A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              LPFFrequencyAtMax;                                        // 0x01AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              HPFFrequencyAtMin;                                        // 0x01B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              HPFFrequencyAtMax;                                        // 0x01B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FocusAzimuth;                                             // 0x01B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              NonFocusAzimuth;                                          // 0x01BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FocusDistanceScale;                                       // 0x01C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              NonFocusDistanceScale;                                    // 0x01C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FocusPriorityScale;                                       // 0x01C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              NonFocusPriorityScale;                                    // 0x01CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FocusVolumeAttenuation;                                   // 0x01D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              NonFocusVolumeAttenuation;                                // 0x01D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FocusAttackInterpSpeed;                                   // 0x01D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FocusReleaseInterpSpeed;                                  // 0x01DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              OcclusionLowPassFilterFrequency;                          // 0x01E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              OcclusionVolumeAttenuation;                               // 0x01E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              OcclusionInterpolationTime;                               // 0x01E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ReverbWetLevelMin;                                        // 0x01EC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ReverbWetLevelMax;                                        // 0x01F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ReverbDistanceMin;                                        // 0x01F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ReverbDistanceMax;                                        // 0x01F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ManualReverbSendLevel;                                    // 0x01FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FRuntimeFloatCurve                          CustomReverbSendCurve;                                    // 0x0200(0x0078) (Edit, BlueprintVisible)
-	struct FSoundAttenuationPluginSettings             PluginSettings;                                           // 0x0278(0x0030) (Edit, BlueprintVisible)
+	unsigned char                                      bIsWorldSettings : 1;                                     // 0x0000(0x0001)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	float                                              ExteriorVolume;                                           // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ExteriorTime;                                             // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ExteriorLPF;                                              // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ExteriorLPFTime;                                          // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InteriorVolume;                                           // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InteriorTime;                                             // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InteriorLPF;                                              // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              InteriorLPFTime;                                          // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.KShapeElem
@@ -6963,21 +6965,6 @@ struct FBuilderPoly
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct Engine.CanvasUVTri
-// 0x0060
-struct FCanvasUVTri
-{
-	struct FVector2D                                   V0_Pos;                                                   // 0x0000(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   V0_UV;                                                    // 0x0008(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FLinearColor                                V0_Color;                                                 // 0x0010(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   V1_Pos;                                                   // 0x0020(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   V1_UV;                                                    // 0x0028(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FLinearColor                                V1_Color;                                                 // 0x0030(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   V2_Pos;                                                   // 0x0040(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   V2_UV;                                                    // 0x0048(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FLinearColor                                V2_Color;                                                 // 0x0050(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-};
-
 // ScriptStruct Engine.FOscillator
 // 0x000C
 struct FFOscillator
@@ -7004,6 +6991,21 @@ struct FVOscillator
 	struct FFOscillator                                X;                                                        // 0x0000(0x000C) (Edit, BlueprintVisible)
 	struct FFOscillator                                Y;                                                        // 0x000C(0x000C) (Edit, BlueprintVisible)
 	struct FFOscillator                                Z;                                                        // 0x0018(0x000C) (Edit, BlueprintVisible)
+};
+
+// ScriptStruct Engine.CanvasUVTri
+// 0x0060
+struct FCanvasUVTri
+{
+	struct FVector2D                                   V0_Pos;                                                   // 0x0000(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D                                   V0_UV;                                                    // 0x0008(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FLinearColor                                V0_Color;                                                 // 0x0010(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D                                   V1_Pos;                                                   // 0x0020(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D                                   V1_UV;                                                    // 0x0028(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FLinearColor                                V1_Color;                                                 // 0x0030(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D                                   V2_Pos;                                                   // 0x0040(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D                                   V2_UV;                                                    // 0x0048(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FLinearColor                                V2_Color;                                                 // 0x0050(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
 };
 
 // ScriptStruct Engine.DelegateArray
@@ -7054,15 +7056,6 @@ struct FRedirector
 {
 	struct FName                                       OldName;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       NewName;                                                  // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.BlendProfileBoneEntry
-// 0x0020
-struct FBlendProfileBoneEntry
-{
-	struct FBoneReference                              BoneReference;                                            // 0x0000(0x0018) (Edit)
-	float                                              BlendScale;                                               // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Engine.BlueprintComponentDelegateBinding
@@ -7327,14 +7320,6 @@ struct FPredictProjectilePathResult
 	struct FHitResult                                  HitResult;                                                // 0x0030(0x0088) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst, IsPlainOldData)
 };
 
-// ScriptStruct Engine.HapticFeedbackDetails_Curve
-// 0x00F0
-struct FHapticFeedbackDetails_Curve
-{
-	struct FRuntimeFloatCurve                          Frequency;                                                // 0x0000(0x0078) (Edit)
-	struct FRuntimeFloatCurve                          Amplitude;                                                // 0x0078(0x0078) (Edit)
-};
-
 // ScriptStruct Engine.HLODProxyMesh
 // 0x0030
 struct FHLODProxyMesh
@@ -7343,6 +7328,14 @@ struct FHLODProxyMesh
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 	class UStaticMesh*                                 StaticMesh;                                               // 0x0020(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
 	struct FName                                       Key;                                                      // 0x0028(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+};
+
+// ScriptStruct Engine.HapticFeedbackDetails_Curve
+// 0x00F0
+struct FHapticFeedbackDetails_Curve
+{
+	struct FRuntimeFloatCurve                          Frequency;                                                // 0x0000(0x0078) (Edit)
+	struct FRuntimeFloatCurve                          Amplitude;                                                // 0x0078(0x0078) (Edit)
 };
 
 // ScriptStruct Engine.ImportanceTexture
@@ -7360,25 +7353,6 @@ struct FImportanceTexture
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 };
 
-// ScriptStruct Engine.ComponentKey
-// 0x0020
-struct FComponentKey
-{
-	class UClass*                                      OwnerClass;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       SCSVariableName;                                          // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       AssociatedGuid;                                           // 0x0010(0x0010) (IsPlainOldData)
-};
-
-// ScriptStruct Engine.ComponentOverrideRecord
-// 0x0080
-struct FComponentOverrideRecord
-{
-	class UClass*                                      ComponentClass;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UActorComponent*                             ComponentTemplate;                                        // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FComponentKey                               ComponentKey;                                             // 0x0010(0x0020)
-	struct FBlueprintCookedComponentInstancingData     CookedComponentInstancingData;                            // 0x0030(0x0050)
-};
-
 // ScriptStruct Engine.BlueprintInputDelegateBinding
 // 0x0004
 struct FBlueprintInputDelegateBinding
@@ -7387,6 +7361,15 @@ struct FBlueprintInputDelegateBinding
 	unsigned char                                      bExecuteWhenPaused : 1;                                   // 0x0000(0x0001)
 	unsigned char                                      bOverrideParentBinding : 1;                               // 0x0000(0x0001)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Engine.BlueprintInputAxisDelegateBinding
+// 0x0014 (0x0018 - 0x0004)
+struct FBlueprintInputAxisDelegateBinding : public FBlueprintInputDelegateBinding
+{
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	struct FName                                       InputAxisName;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       FunctionNameToBind;                                       // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.BlueprintInputActionDelegateBinding
@@ -7398,15 +7381,6 @@ struct FBlueprintInputActionDelegateBinding : public FBlueprintInputDelegateBind
 	TEnumAsByte<EInputEvent>                           InputKeyEvent;                                            // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 	struct FName                                       FunctionNameToBind;                                       // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.BlueprintInputAxisDelegateBinding
-// 0x0014 (0x0018 - 0x0004)
-struct FBlueprintInputAxisDelegateBinding : public FBlueprintInputDelegateBinding
-{
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FName                                       InputAxisName;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       FunctionNameToBind;                                       // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.BlueprintInputAxisKeyDelegateBinding
@@ -7435,6 +7409,34 @@ struct FBlueprintInputKeyDelegateBinding : public FBlueprintInputDelegateBinding
 	TEnumAsByte<EInputEvent>                           InputKeyEvent;                                            // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 	struct FName                                       FunctionNameToBind;                                       // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.ComponentKey
+// 0x0020
+struct FComponentKey
+{
+	class UClass*                                      OwnerClass;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       SCSVariableName;                                          // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       AssociatedGuid;                                           // 0x0010(0x0010) (IsPlainOldData)
+};
+
+// ScriptStruct Engine.ComponentOverrideRecord
+// 0x0080
+struct FComponentOverrideRecord
+{
+	class UClass*                                      ComponentClass;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UActorComponent*                             ComponentTemplate;                                        // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FComponentKey                               ComponentKey;                                             // 0x0010(0x0020)
+	struct FBlueprintCookedComponentInstancingData     CookedComponentInstancingData;                            // 0x0030(0x0050)
+};
+
+// ScriptStruct Engine.BlueprintInputTouchDelegateBinding
+// 0x000C (0x0010 - 0x0004)
+struct FBlueprintInputTouchDelegateBinding : public FBlueprintInputDelegateBinding
+{
+	TEnumAsByte<EInputEvent>                           InputKeyEvent;                                            // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+	struct FName                                       FunctionNameToBind;                                       // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.InputAxisProperties
@@ -7479,15 +7481,6 @@ struct FInputAxisKeyMapping
 	struct FKey                                        Key;                                                      // 0x0010(0x0018) (Edit, BlueprintVisible)
 };
 
-// ScriptStruct Engine.BlueprintInputTouchDelegateBinding
-// 0x000C (0x0010 - 0x0004)
-struct FBlueprintInputTouchDelegateBinding : public FBlueprintInputDelegateBinding
-{
-	TEnumAsByte<EInputEvent>                           InputKeyEvent;                                            // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
-	struct FName                                       FunctionNameToBind;                                       // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Engine.CurveEdEntry
 // 0x0038
 struct FCurveEdEntry
@@ -7516,15 +7509,6 @@ struct FCurveEdTab
 	float                                              ViewEndOutput;                                            // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.InterpControlPoint
-// 0x001C
-struct FInterpControlPoint
-{
-	struct FVector                                     PositionControlPoint;                                     // 0x0000(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	bool                                               bPositionIsRelative;                                      // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xF];                                       // 0x000D(0x000F) MISSED OFFSET
-};
-
 // ScriptStruct Engine.AnimControlTrackKey
 // 0x0020
 struct FAnimControlTrackKey
@@ -7540,6 +7524,15 @@ struct FAnimControlTrackKey
 	unsigned char                                      UnknownData01[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
 };
 
+// ScriptStruct Engine.BoolTrackKey
+// 0x0008
+struct FBoolTrackKey
+{
+	float                                              Time;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      Value : 1;                                                // 0x0004(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+};
+
 // ScriptStruct Engine.DirectorTrackCut
 // 0x0018
 struct FDirectorTrackCut
@@ -7551,6 +7544,15 @@ struct FDirectorTrackCut
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Engine.InterpControlPoint
+// 0x001C
+struct FInterpControlPoint
+{
+	struct FVector                                     PositionControlPoint;                                     // 0x0000(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	bool                                               bPositionIsRelative;                                      // 0x000C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xF];                                       // 0x000D(0x000F) MISSED OFFSET
+};
+
 // ScriptStruct Engine.EventTrackKey
 // 0x0010
 struct FEventTrackKey
@@ -7558,15 +7560,6 @@ struct FEventTrackKey
 	float                                              Time;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FName                                       EventName;                                                // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.BoolTrackKey
-// 0x0008
-struct FBoolTrackKey
-{
-	float                                              Time;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      Value : 1;                                                // 0x0004(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct Engine.PrimitiveMaterialRef
@@ -7648,14 +7641,6 @@ struct FFloatSpringState
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct Engine.DrawToRenderTargetContext
-// 0x0010
-struct FDrawToRenderTargetContext
-{
-	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
-};
-
 // ScriptStruct Engine.UserActivity
 // 0x0018
 struct FUserActivity
@@ -7697,15 +7682,6 @@ struct FDebugFloatHistory
 	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
 };
 
-// ScriptStruct Engine.LayerActorStats
-// 0x0010
-struct FLayerActorStats
-{
-	class UClass*                                      Type;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                Total;                                                    // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-};
-
 // ScriptStruct Engine.FormatArgumentData
 // 0x0040
 struct FFormatArgumentData
@@ -7720,12 +7696,29 @@ struct FFormatArgumentData
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 };
 
+// ScriptStruct Engine.LayerActorStats
+// 0x0010
+struct FLayerActorStats
+{
+	class UClass*                                      Type;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                Total;                                                    // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct Engine.ReplicatedStaticActorDestructionInfo
 // 0x0028
 struct FReplicatedStaticActorDestructionInfo
 {
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
 	class UClass*                                      ObjClass;                                                 // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.DrawToRenderTargetContext
+// 0x0010
+struct FDrawToRenderTargetContext
+{
+	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Engine.LevelCollection
@@ -7881,6 +7874,13 @@ struct FCustomInput
 {
 	struct FName                                       InputName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FExpressionInput                            Input;                                                    // 0x0008(0x0030)
+};
+
+// ScriptStruct Engine.AnimSetMeshLinkup
+// 0x0010
+struct FAnimSetMeshLinkup
+{
+	TArray<int>                                        BoneToTrackTable;                                         // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Engine.CollectionParameterBase
@@ -8117,6 +8117,16 @@ struct FLocationBoneSocketInfo
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Engine.OrbitOptions
+// 0x0004
+struct FOrbitOptions
+{
+	unsigned char                                      bProcessDuringSpawn : 1;                                  // 0x0000(0x0001) (Edit)
+	unsigned char                                      bProcessDuringUpdate : 1;                                 // 0x0000(0x0001) (Edit)
+	unsigned char                                      bUseEmitterTime : 1;                                      // 0x0000(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+};
+
 // ScriptStruct Engine.EmitterDynamicParameter
 // 0x0050
 struct FEmitterDynamicParameter
@@ -8130,16 +8140,6 @@ struct FEmitterDynamicParameter
 	unsigned char                                      bScaleVelocityByParamValue : 1;                           // 0x0010(0x0001) (Edit)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 	struct FRawDistributionFloat                       ParamValue;                                               // 0x0018(0x0038) (Edit)
-};
-
-// ScriptStruct Engine.OrbitOptions
-// 0x0004
-struct FOrbitOptions
-{
-	unsigned char                                      bProcessDuringSpawn : 1;                                  // 0x0000(0x0001) (Edit)
-	unsigned char                                      bProcessDuringUpdate : 1;                                 // 0x0000(0x0001) (Edit)
-	unsigned char                                      bUseEmitterTime : 1;                                      // 0x0000(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct Engine.ParticleBurst
@@ -8290,23 +8290,6 @@ struct FNamedEmitterMaterial
 	class UMaterialInterface*                          Material;                                                 // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.ParticleSysParam
-// 0x0080
-struct FParticleSysParam
-{
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EParticleSysParamType>                 ParamType;                                                // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
-	float                                              Scalar;                                                   // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Scalar_Low;                                               // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Vector;                                                   // 0x0014(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector                                     Vector_Low;                                               // 0x0020(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FColor                                      Color;                                                    // 0x002C(0x0004) (Edit, BlueprintVisible, IsPlainOldData)
-	class AActor*                                      Actor;                                                    // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          Material;                                                 // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x40];                                      // 0x0040(0x0040) MISSED OFFSET
-};
-
 // ScriptStruct Engine.PhysicalAnimationData
 // 0x0028
 struct FPhysicalAnimationData
@@ -8330,6 +8313,23 @@ struct FTireFrictionScalePair
 	class UTireType*                                   TireType;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	float                                              FrictionScale;                                            // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Engine.ParticleSysParam
+// 0x0080
+struct FParticleSysParam
+{
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EParticleSysParamType>                 ParamType;                                                // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	float                                              Scalar;                                                   // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Scalar_Low;                                               // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Vector;                                                   // 0x0014(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector                                     Vector_Low;                                               // 0x0020(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FColor                                      Color;                                                    // 0x002C(0x0004) (Edit, BlueprintVisible, IsPlainOldData)
+	class AActor*                                      Actor;                                                    // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          Material;                                                 // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x40];                                      // 0x0040(0x0040) MISSED OFFSET
 };
 
 // ScriptStruct Engine.PhysicalAnimationProfile
@@ -8543,6 +8543,13 @@ struct FCollectionReference
 	struct FName                                       CollectionName;                                           // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Engine.PreviewMeshCollectionEntry
+// 0x0028
+struct FPreviewMeshCollectionEntry
+{
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0000(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Engine.PreviewMeshCollectionEntry.SkeletalMesh
+};
+
 // ScriptStruct Engine.RigTransformConstraint
 // 0x0018
 struct FRigTransformConstraint
@@ -8610,13 +8617,6 @@ struct FSkeletalMeshLODGroupSettings
 	struct FSkeletalMeshOptimizationSettings           ReductionSettings;                                        // 0x0020(0x0048) (Edit)
 };
 
-// ScriptStruct Engine.PreviewMeshCollectionEntry
-// 0x0028
-struct FPreviewMeshCollectionEntry
-{
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0000(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Engine.PreviewMeshCollectionEntry.SkeletalMesh
-};
-
 // ScriptStruct Engine.SoundClassProperties
 // 0x002C
 struct FSoundClassProperties
@@ -8649,6 +8649,15 @@ struct FPassiveSoundMixModifier
 	class USoundMix*                                   SoundMix;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              MinVolumeThreshold;                                       // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              MaxVolumeThreshold;                                       // 0x000C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.SourceEffectChainEntry
+// 0x0010
+struct FSourceEffectChainEntry
+{
+	class USoundEffectSourcePreset*                    Preset;                                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bBypass : 1;                                              // 0x0008(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Engine.SoundGroup
@@ -8788,15 +8797,6 @@ struct FSplineMeshParams
 	struct FVector2D                                   EndOffset;                                                // 0x0050(0x0008) (Edit, IsPlainOldData)
 };
 
-// ScriptStruct Engine.SourceEffectChainEntry
-// 0x0010
-struct FSourceEffectChainEntry
-{
-	class USoundEffectSourcePreset*                    Preset;                                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bBypass : 1;                                              // 0x0008(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-};
-
 // ScriptStruct Engine.StaticMaterial
 // 0x0030
 struct FStaticMaterial
@@ -8823,6 +8823,58 @@ struct FSubsurfaceProfileStruct
 	float                                              Roughness0;                                               // 0x0044(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              Roughness1;                                               // 0x0048(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              LobeMix;                                                  // 0x004C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.TTTrackBase
+// 0x0010
+struct FTTTrackBase
+{
+	struct FName                                       TrackName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               bIsExternalCurve;                                         // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Engine.TTEventTrack
+// 0x0008 (0x0018 - 0x0010)
+struct FTTEventTrack : public FTTTrackBase
+{
+	class UCurveFloat*                                 CurveKeys;                                                // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.TTFloatTrack
+// 0x0008 (0x0018 - 0x0010)
+struct FTTFloatTrack : public FTTTrackBase
+{
+	class UCurveFloat*                                 CurveFloat;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.TTVectorTrack
+// 0x0008 (0x0018 - 0x0010)
+struct FTTVectorTrack : public FTTTrackBase
+{
+	class UCurveVector*                                CurveVector;                                              // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.TTLinearColorTrack
+// 0x0008 (0x0018 - 0x0010)
+struct FTTLinearColorTrack : public FTTTrackBase
+{
+	class UCurveLinearColor*                           CurveLinearColor;                                         // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.TouchInputControl
+// 0x0068
+struct FTouchInputControl
+{
+	class UTexture2D*                                  Image1;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  Image2;                                                   // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   Center;                                                   // 0x0010(0x0008) (Edit, IsPlainOldData)
+	struct FVector2D                                   VisualSize;                                               // 0x0018(0x0008) (Edit, IsPlainOldData)
+	struct FVector2D                                   ThumbSize;                                                // 0x0020(0x0008) (Edit, IsPlainOldData)
+	struct FVector2D                                   InteractionSize;                                          // 0x0028(0x0008) (Edit, IsPlainOldData)
+	struct FVector2D                                   InputScale;                                               // 0x0030(0x0008) (Edit, IsPlainOldData)
+	struct FKey                                        MainInputKey;                                             // 0x0038(0x0018) (Edit)
+	struct FKey                                        AltInputKey;                                              // 0x0050(0x0018) (Edit)
 };
 
 // ScriptStruct Engine.TimelineEventEntry
@@ -8895,43 +8947,6 @@ struct FTimeline
 	unsigned char                                      UnknownData02[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct Engine.TTTrackBase
-// 0x0010
-struct FTTTrackBase
-{
-	struct FName                                       TrackName;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIsExternalCurve;                                         // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Engine.TTEventTrack
-// 0x0008 (0x0018 - 0x0010)
-struct FTTEventTrack : public FTTTrackBase
-{
-	class UCurveFloat*                                 CurveKeys;                                                // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.TTFloatTrack
-// 0x0008 (0x0018 - 0x0010)
-struct FTTFloatTrack : public FTTTrackBase
-{
-	class UCurveFloat*                                 CurveFloat;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.TTVectorTrack
-// 0x0008 (0x0018 - 0x0010)
-struct FTTVectorTrack : public FTTTrackBase
-{
-	class UCurveVector*                                CurveVector;                                              // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.TTLinearColorTrack
-// 0x0008 (0x0018 - 0x0010)
-struct FTTLinearColorTrack : public FTTTrackBase
-{
-	class UCurveLinearColor*                           CurveLinearColor;                                         // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Engine.HardwareCursorReference
 // 0x0010
 struct FHardwareCursorReference
@@ -8947,21 +8962,6 @@ struct FVoiceSettings
 	class USceneComponent*                             ComponentToAttachTo;                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USoundAttenuation*                           AttenuationSettings;                                      // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class USoundEffectSourcePresetChain*               SourceEffectChain;                                        // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.TouchInputControl
-// 0x0068
-struct FTouchInputControl
-{
-	class UTexture2D*                                  Image1;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  Image2;                                                   // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   Center;                                                   // 0x0010(0x0008) (Edit, IsPlainOldData)
-	struct FVector2D                                   VisualSize;                                               // 0x0018(0x0008) (Edit, IsPlainOldData)
-	struct FVector2D                                   ThumbSize;                                                // 0x0020(0x0008) (Edit, IsPlainOldData)
-	struct FVector2D                                   InteractionSize;                                          // 0x0028(0x0008) (Edit, IsPlainOldData)
-	struct FVector2D                                   InputScale;                                               // 0x0030(0x0008) (Edit, IsPlainOldData)
-	struct FKey                                        MainInputKey;                                             // 0x0038(0x0018) (Edit)
-	struct FKey                                        AltInputKey;                                              // 0x0050(0x0018) (Edit)
 };
 
 // ScriptStruct Engine.LightmassWorldInfoSettings
@@ -9015,19 +9015,19 @@ struct FVectorDistribution
 	struct FDistributionLookupTable                    Table;                                                    // 0x0000(0x0028)
 };
 
+// ScriptStruct Engine.Vector4Distribution
+// 0x0028
+struct FVector4Distribution
+{
+	struct FDistributionLookupTable                    Table;                                                    // 0x0000(0x0028)
+};
+
 // ScriptStruct Engine.FloatRK4SpringInterpolator
 // 0x0008
 struct FFloatRK4SpringInterpolator
 {
 	float                                              StiffnessConstant;                                        // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DampeningRatio;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.Vector4Distribution
-// 0x0028
-struct FVector4Distribution
-{
-	struct FDistributionLookupTable                    Table;                                                    // 0x0000(0x0028)
 };
 
 // ScriptStruct Engine.VectorRK4SpringInterpolator
@@ -9282,28 +9282,11 @@ struct FAnimCurveParam
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct Engine.AnimationGroupReference
-// 0x0010
-struct FAnimationGroupReference
-{
-	struct FName                                       GroupName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EAnimGroupRole>                        GroupRole;                                                // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-};
-
 // ScriptStruct Engine.AnimGroupInstance
 // 0x0078
 struct FAnimGroupInstance
 {
 	unsigned char                                      UnknownData00[0x78];                                      // 0x0000(0x0078) MISSED OFFSET
-};
-
-// ScriptStruct Engine.AnimTickRecord
-// 0x0048
-struct FAnimTickRecord
-{
-	class UAnimationAsset*                             SourceAsset;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0008(0x0040) MISSED OFFSET
 };
 
 // ScriptStruct Engine.AnimationRecordingSettings
@@ -9329,12 +9312,29 @@ struct FComponentSpacePose
 	TArray<struct FName>                               Names;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
+// ScriptStruct Engine.AnimationGroupReference
+// 0x0010
+struct FAnimationGroupReference
+{
+	struct FName                                       GroupName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAnimGroupRole>                        GroupRole;                                                // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+};
+
 // ScriptStruct Engine.LocalSpacePose
 // 0x0020
 struct FLocalSpacePose
 {
 	TArray<struct FTransform>                          Transforms;                                               // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<struct FName>                               Names;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct Engine.AnimTickRecord
+// 0x0048
+struct FAnimTickRecord
+{
+	class UAnimationAsset*                             SourceAsset;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0008(0x0040) MISSED OFFSET
 };
 
 // ScriptStruct Engine.NamedTransform
@@ -9355,15 +9355,6 @@ struct FNamedColor
 	struct FName                                       Name;                                                     // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.NamedVector
-// 0x0018
-struct FNamedVector
-{
-	struct FVector                                     Value;                                                    // 0x0000(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	struct FName                                       Name;                                                     // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Engine.NamedFloat
 // 0x0010
 struct FNamedFloat
@@ -9371,6 +9362,15 @@ struct FNamedFloat
 	float                                              Value;                                                    // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FName                                       Name;                                                     // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.NamedVector
+// 0x0018
+struct FNamedVector
+{
+	struct FVector                                     Value;                                                    // 0x0000(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	struct FName                                       Name;                                                     // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.AnimParentNodeAssetOverride
@@ -9549,6 +9549,13 @@ struct FAnimationActiveTransitionEntry
 	unsigned char                                      UnknownData01[0x38];                                      // 0x0098(0x0038) MISSED OFFSET
 };
 
+// ScriptStruct Engine.AnimNode_SubInput
+// 0x0038 (0x0068 - 0x0030)
+struct FAnimNode_SubInput : public FAnimNode_Base
+{
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0030(0x0038) MISSED OFFSET
+};
+
 // ScriptStruct Engine.AnimNode_SubInstance
 // 0x0098 (0x00C8 - 0x0030)
 struct FAnimNode_SubInstance : public FAnimNode_Base
@@ -9561,13 +9568,6 @@ struct FAnimNode_SubInstance : public FAnimNode_Base
 	TArray<struct FName>                               SourcePropertyNames;                                      // 0x0078(0x0010) (ZeroConstructor)
 	TArray<struct FName>                               DestPropertyNames;                                        // 0x0088(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData00[0x30];                                      // 0x0098(0x0030) MISSED OFFSET
-};
-
-// ScriptStruct Engine.AnimNode_SubInput
-// 0x0038 (0x0068 - 0x0030)
-struct FAnimNode_SubInput : public FAnimNode_Base
-{
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0030(0x0038) MISSED OFFSET
 };
 
 // ScriptStruct Engine.AnimNode_TransitionPoseEvaluator
@@ -9835,18 +9835,18 @@ struct FPointerToUberGraphFrame
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct Engine.DebuggingInfoForSingleFunction
-// 0x0190
-struct FDebuggingInfoForSingleFunction
-{
-	unsigned char                                      UnknownData00[0x190];                                     // 0x0000(0x0190) MISSED OFFSET
-};
-
 // ScriptStruct Engine.NodeToCodeAssociation
 // 0x0014
 struct FNodeToCodeAssociation
 {
 	unsigned char                                      UnknownData00[0x14];                                      // 0x0000(0x0014) MISSED OFFSET
+};
+
+// ScriptStruct Engine.DebuggingInfoForSingleFunction
+// 0x0190
+struct FDebuggingInfoForSingleFunction
+{
+	unsigned char                                      UnknownData00[0x190];                                     // 0x0000(0x0190) MISSED OFFSET
 };
 
 // ScriptStruct Engine.CachedAnimTransitionData
@@ -10102,13 +10102,6 @@ struct FWorldContext
 	unsigned char                                      UnknownData03[0x38];                                      // 0x0258(0x0038) MISSED OFFSET
 };
 
-// ScriptStruct Engine.TickPrerequisite
-// 0x0010
-struct FTickPrerequisite
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-};
-
 // ScriptStruct Engine.ExposureSettings
 // 0x0008
 struct FExposureSettings
@@ -10116,6 +10109,13 @@ struct FExposureSettings
 	float                                              FixedEV100;                                               // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	bool                                               bFixed;                                                   // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Engine.TickPrerequisite
+// 0x0010
+struct FTickPrerequisite
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Engine.DepthFieldGlowInfo
@@ -10219,13 +10219,29 @@ struct FPOV
 	float                                              FOV;                                                      // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.AnimSlotDesc
-// 0x0010
-struct FAnimSlotDesc
+// ScriptStruct Engine.AnimUpdateRateParameters
+// 0x0088
+struct FAnimUpdateRateParameters
 {
-	struct FName                                       SlotName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                NumChannels;                                              // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	EUpdateRateShiftBucket                             ShiftBucket;                                              // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bInterpolateSkippedFrames : 1;                            // 0x0002(0x0001)
+	unsigned char                                      bShouldUseLodMap : 1;                                     // 0x0002(0x0001)
+	unsigned char                                      bShouldUseMinLod : 1;                                     // 0x0002(0x0001)
+	unsigned char                                      bSkipUpdate : 1;                                          // 0x0002(0x0001)
+	unsigned char                                      bSkipEvaluation : 1;                                      // 0x0002(0x0001)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x0003(0x0001) MISSED OFFSET
+	int                                                UpdateRate;                                               // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                EvaluationRate;                                           // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              TickedPoseOffestTime;                                     // 0x000C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              AdditionalTime;                                           // 0x0010(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	int                                                BaseNonRenderedUpdateRate;                                // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                MaxEvalRateForInterpolation;                              // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
+	TArray<float>                                      BaseVisibleDistanceFactorThesholds;                       // 0x0020(0x0010) (ZeroConstructor)
+	TMap<int, int>                                     LODToFrameSkipMap;                                        // 0x0030(0x0050) (ZeroConstructor)
+	int                                                SkippedUpdateFrames;                                      // 0x0080(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SkippedEvalFrames;                                        // 0x0084(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.AnimSlotInfo
@@ -10242,6 +10258,15 @@ struct FMTDResult
 {
 	struct FVector                                     Direction;                                                // 0x0000(0x000C) (IsPlainOldData)
 	float                                              Distance;                                                 // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.AnimSlotDesc
+// 0x0010
+struct FAnimSlotDesc
+{
+	struct FName                                       SlotName;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                NumChannels;                                              // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Engine.OverlapResult
@@ -10300,14 +10325,6 @@ struct FBasedPosition
 	struct FVector                                     CachedTransPosition;                                      // 0x002C(0x000C) (IsPlainOldData)
 };
 
-// ScriptStruct Engine.FractureEffect
-// 0x0010
-struct FFractureEffect
-{
-	class UParticleSystem*                             ParticleSystem;                                           // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USoundBase*                                  Sound;                                                    // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Engine.RigidBodyContactInfo
 // 0x0030
 struct FRigidBodyContactInfo
@@ -10326,6 +10343,14 @@ struct FCollisionImpactData
 	TArray<struct FRigidBodyContactInfo>               ContactInfos;                                             // 0x0000(0x0010) (ZeroConstructor)
 	struct FVector                                     TotalNormalImpulse;                                       // 0x0010(0x000C) (IsPlainOldData)
 	struct FVector                                     TotalFrictionImpulse;                                     // 0x001C(0x000C) (IsPlainOldData)
+};
+
+// ScriptStruct Engine.FractureEffect
+// 0x0010
+struct FFractureEffect
+{
+	class UParticleSystem*                             ParticleSystem;                                           // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USoundBase*                                  Sound;                                                    // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.RigidBodyState
@@ -10373,31 +10398,6 @@ struct FClusterNode_DEPRECATED
 	int                                                LastChild;                                                // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                FirstInstance;                                            // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                LastInstance;                                             // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.AnimUpdateRateParameters
-// 0x0088
-struct FAnimUpdateRateParameters
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-	EUpdateRateShiftBucket                             ShiftBucket;                                              // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bInterpolateSkippedFrames : 1;                            // 0x0002(0x0001)
-	unsigned char                                      bShouldUseLodMap : 1;                                     // 0x0002(0x0001)
-	unsigned char                                      bShouldUseMinLod : 1;                                     // 0x0002(0x0001)
-	unsigned char                                      bSkipUpdate : 1;                                          // 0x0002(0x0001)
-	unsigned char                                      bSkipEvaluation : 1;                                      // 0x0002(0x0001)
-	unsigned char                                      UnknownData01[0x1];                                       // 0x0003(0x0001) MISSED OFFSET
-	int                                                UpdateRate;                                               // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                EvaluationRate;                                           // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              TickedPoseOffestTime;                                     // 0x000C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              AdditionalTime;                                           // 0x0010(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-	int                                                BaseNonRenderedUpdateRate;                                // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                MaxEvalRateForInterpolation;                              // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
-	TArray<float>                                      BaseVisibleDistanceFactorThesholds;                       // 0x0020(0x0010) (ZeroConstructor)
-	TMap<int, int>                                     LODToFrameSkipMap;                                        // 0x0030(0x0050) (ZeroConstructor)
-	int                                                SkippedUpdateFrames;                                      // 0x0080(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SkippedEvalFrames;                                        // 0x0084(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.IntegralKey
@@ -10566,6 +10566,15 @@ struct FFunctionExpressionInput
 	struct FExpressionInput                            Input;                                                    // 0x0018(0x0030)
 };
 
+// ScriptStruct Engine.FunctionExpressionOutput
+// 0x0038
+struct FFunctionExpressionOutput
+{
+	class UMaterialExpressionFunctionOutput*           ExpressionOutput;                                         // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	struct FGuid                                       ExpressionOutputId;                                       // 0x0008(0x0010) (IsPlainOldData)
+	struct FExpressionOutput                           Output;                                                   // 0x0018(0x0020)
+};
+
 // ScriptStruct Engine.ScalarParameterAtlasInstanceData
 // 0x0058
 struct FScalarParameterAtlasInstanceData
@@ -10574,15 +10583,6 @@ struct FScalarParameterAtlasInstanceData
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	unsigned char                                      UnknownData01[0x28];                                      // 0x0001(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Engine.ScalarParameterAtlasInstanceData.Curve
 	unsigned char                                      UnknownData02[0x28];                                      // 0x0030(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Engine.ScalarParameterAtlasInstanceData.Atlas
-};
-
-// ScriptStruct Engine.FunctionExpressionOutput
-// 0x0038
-struct FFunctionExpressionOutput
-{
-	class UMaterialExpressionFunctionOutput*           ExpressionOutput;                                         // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FGuid                                       ExpressionOutputId;                                       // 0x0008(0x0010) (IsPlainOldData)
-	struct FExpressionOutput                           Output;                                                   // 0x0018(0x0020)
 };
 
 // ScriptStruct Engine.MemberReference
@@ -10705,16 +10705,16 @@ struct FBeamTargetData
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct Engine.ParticleSystemReplayFrame
+// ScriptStruct Engine.ParticleEmitterReplayFrame
 // 0x0010
-struct FParticleSystemReplayFrame
+struct FParticleEmitterReplayFrame
 {
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
-// ScriptStruct Engine.ParticleEmitterReplayFrame
+// ScriptStruct Engine.ParticleSystemReplayFrame
 // 0x0010
-struct FParticleEmitterReplayFrame
+struct FParticleSystemReplayFrame
 {
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
@@ -10832,25 +10832,6 @@ struct FRootMotionSource_MoveToForce : public FRootMotionSource
 	class UCurveVector*                                PathOffsetCurve;                                          // 0x00B8(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Engine.RootMotionSource_RadialForce
-// 0x0040 (0x00E0 - 0x00A0)
-struct FRootMotionSource_RadialForce : public FRootMotionSource
-{
-	struct FVector                                     Location;                                                 // 0x0098(0x000C) (IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
-	class AActor*                                      LocationActor;                                            // 0x00A8(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              Radius;                                                   // 0x00B0(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              Strength;                                                 // 0x00B4(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIsPush;                                                  // 0x00B8(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bNoZForce;                                                // 0x00B9(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x00BA(0x0006) MISSED OFFSET
-	class UCurveFloat*                                 StrengthDistanceFalloff;                                  // 0x00C0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 StrengthOverTime;                                         // 0x00C8(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               bUseFixedWorldDirection;                                  // 0x00D0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x00D1(0x0003) MISSED OFFSET
-	struct FRotator                                    FixedWorldDirection;                                      // 0x00D4(0x000C) (IsPlainOldData)
-};
-
 // ScriptStruct Engine.RootMotionSource_ConstantForce
 // 0x0010 (0x00B0 - 0x00A0)
 struct FRootMotionSource_ConstantForce : public FRootMotionSource
@@ -10876,6 +10857,25 @@ struct FCameraExposureSettings
 	float                                              HistogramLogMin;                                          // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              HistogramLogMax;                                          // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              CalibrationConstant;                                      // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.RootMotionSource_RadialForce
+// 0x0040 (0x00E0 - 0x00A0)
+struct FRootMotionSource_RadialForce : public FRootMotionSource
+{
+	struct FVector                                     Location;                                                 // 0x0098(0x000C) (IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
+	class AActor*                                      LocationActor;                                            // 0x00A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              Radius;                                                   // 0x00B0(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              Strength;                                                 // 0x00B4(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool                                               bIsPush;                                                  // 0x00B8(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bNoZForce;                                                // 0x00B9(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x00BA(0x0006) MISSED OFFSET
+	class UCurveFloat*                                 StrengthDistanceFalloff;                                  // 0x00C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 StrengthOverTime;                                         // 0x00C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               bUseFixedWorldDirection;                                  // 0x00D0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x00D1(0x0003) MISSED OFFSET
+	struct FRotator                                    FixedWorldDirection;                                      // 0x00D4(0x000C) (IsPlainOldData)
 };
 
 // ScriptStruct Engine.GaussianSumBloomSettings
@@ -11027,6 +11027,14 @@ struct FNameMapping
 	struct FName                                       BoneName;                                                 // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Engine.RigConfiguration
+// 0x0018
+struct FRigConfiguration
+{
+	class URig*                                        Rig;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FNameMapping>                        BoneMappingTable;                                         // 0x0008(0x0010) (ZeroConstructor)
+};
+
 // ScriptStruct Engine.BoneReductionSetting
 // 0x0010
 struct FBoneReductionSetting
@@ -11050,21 +11058,6 @@ struct FSkeletonToMeshLinkup
 	TArray<int>                                        MeshToSkeletonTable;                                      // 0x0010(0x0010) (ZeroConstructor)
 };
 
-// ScriptStruct Engine.RigConfiguration
-// 0x0018
-struct FRigConfiguration
-{
-	class URig*                                        Rig;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FNameMapping>                        BoneMappingTable;                                         // 0x0008(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct Engine.SmartNameMapping
-// 0x0060
-struct FSmartNameMapping
-{
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0000(0x0060) MISSED OFFSET
-};
-
 // ScriptStruct Engine.CurveMetaData
 // 0x0020
 struct FCurveMetaData
@@ -11086,6 +11079,13 @@ struct FSoundClassEditorData
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
+// ScriptStruct Engine.SmartNameMapping
+// 0x0060
+struct FSmartNameMapping
+{
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0000(0x0060) MISSED OFFSET
+};
+
 // ScriptStruct Engine.SoundNodeEditorData
 // 0x0008
 struct FSoundNodeEditorData
@@ -11100,15 +11100,6 @@ struct FStreamedAudioPlatformData
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
 };
 
-// ScriptStruct Engine.StaticMeshMergeSource
-// 0x0060
-struct FStaticMeshMergeSource
-{
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0000(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Engine.StaticMeshMergeSource.StaticMesh
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	struct FTransform                                  Transform;                                                // 0x0030(0x0030) (IsPlainOldData)
-};
-
 // ScriptStruct Engine.MaterialRemapIndex
 // 0x0018
 struct FMaterialRemapIndex
@@ -11116,6 +11107,15 @@ struct FMaterialRemapIndex
 	uint32_t                                           ImportVersionKey;                                         // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	TArray<int>                                        MaterialRemap;                                            // 0x0008(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Engine.StaticMeshMergeSource
+// 0x0060
+struct FStaticMeshMergeSource
+{
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0000(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Engine.StaticMeshMergeSource.StaticMesh
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	struct FTransform                                  Transform;                                                // 0x0030(0x0030) (IsPlainOldData)
 };
 
 // ScriptStruct Engine.AssetEditorOrbitCameraPosition
@@ -11240,6 +11240,13 @@ struct FEndPhysicsTickFunction : public FTickFunction
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
 };
 
+// ScriptStruct Engine.StartPhysicsTickFunction
+// 0x0008 (0x0058 - 0x0050)
+struct FStartPhysicsTickFunction : public FTickFunction
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
+};
+
 // ScriptStruct Engine.LevelViewportInfo
 // 0x0020
 struct FLevelViewportInfo
@@ -11249,13 +11256,6 @@ struct FLevelViewportInfo
 	float                                              CamOrthoZoom;                                             // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
 	bool                                               CamUpdated;                                               // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct Engine.StartPhysicsTickFunction
-// 0x0008 (0x0058 - 0x0050)
-struct FStartPhysicsTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
 };
 
 }

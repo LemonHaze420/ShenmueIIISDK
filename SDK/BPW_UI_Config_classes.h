@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,13 +70,13 @@ public:
 
 	void SetDiscription(int Index);
 	void ChangeSelectButtonIcon();
-	void STATIC_PushLeftRightIndex(int Index, int Add);
-	void STATIC_InitChoiceList(int Index, TArray<struct FString>* ChoiceList);
-	void STATIC_SetPage(int page);
+	void PushLeftRightIndex(int Index, int Add);
+	void InitChoiceList(int Index, TArray<struct FString>* ChoiceList);
+	void SetPage(int page);
 	void InitDescription(TArray<struct FString>* DescriptionList);
-	void STATIC_SetConfigName(TArray<struct FString>* NameList);
-	void STATIC_FocusButtonIndex(int Index);
-	void STATIC_PreConstruct(bool IsDesignTime);
+	void SetConfigName(TArray<struct FString>* NameList);
+	void FocusButtonIndex(int Index);
+	void PreConstruct(bool IsDesignTime);
 	void Construct();
 	void ExecuteUbergraph_BPW_UI_Config(int EntryPoint);
 };

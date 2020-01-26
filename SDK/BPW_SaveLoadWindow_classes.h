@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,32 +75,32 @@ public:
 	}
 
 
-	void STATIC_GetAreaId(class US3SaveGame* SaveGame, struct FString* AreaId);
+	void GetAreaId(class US3SaveGame* SaveGame, struct FString* AreaId);
 	void LoadAllData();
 	void OverrideData();
 	void Get_New_Date_Time(int* Index, struct FDateTime* New_Date_Time);
 	void Select();
-	void STATIC_Scroll(float Scroll);
-	void STATIC_Finish();
+	void Scroll(float Scroll);
+	void Finish();
 	void Decide();
-	void STATIC_PushCursor(const struct FKey& B);
+	void PushCursor(const struct FKey& B);
 	void FocusData();
-	void STATIC_MakeDataWidget();
-	void STATIC_AddLoadData(bool Success, class US3SaveGame* Data);
-	struct FEventReply STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void STATIC_DownPush();
-	void STATIC_UpPush();
-	void STATIC_RightButton();
-	void STATIC_DownButton();
-	void STATIC_ScrollDealy();
-	void STATIC_Construct();
-	void STATIC_WheleMouse(float Value);
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_CloseDialog(class AActor* Actor);
-	void STATIC_SelectSaveLoad(class AActor* Actor);
-	void STATIC_CancelSaveLoad(class AActor* Actor);
-	void STATIC_FinishSave(class AActor* Actor);
-	void STATIC_ExecuteUbergraph_BPW_SaveLoadWindow(int EntryPoint);
+	void MakeDataWidget();
+	void AddLoadData(bool Success, class US3SaveGame* Data);
+	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void DownPush();
+	void UpPush();
+	void RightButton();
+	void DownButton();
+	void ScrollDealy();
+	void Construct();
+	void WheleMouse(float Value);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void CloseDialog(class AActor* Actor);
+	void SelectSaveLoad(class AActor* Actor);
+	void CancelSaveLoad(class AActor* Actor);
+	void FinishSave(class AActor* Actor);
+	void ExecuteUbergraph_BPW_SaveLoadWindow(int EntryPoint);
 	void ED_Finish__DelegateSignature();
 	void ED_SelectMouse__DelegateSignature(int Index);
 	void ED_ForcusMous__DelegateSignature(int Index);

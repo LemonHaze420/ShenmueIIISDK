@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,18 +49,18 @@ public:
 	}
 
 
-	void STATIC_TryClearPathFailure(float DeltaSeconds);
-	void STATIC_FailedPath();
-	class US3PathFollowingComponent* STATIC_GetPathFollowingComponent();
+	void TryClearPathFailure(float DeltaSeconds);
+	void FailedPath();
+	class US3PathFollowingComponent* GetPathFollowingComponent();
 	void EnablePathMassaging(bool Enable);
 	void IsFollowEnabled(bool* EnableFollow);
-	class ABP_NPC_Lead_C* STATIC_GetPawn();
+	class ABP_NPC_Lead_C* GetPawn();
 	void Reset();
 	void UpdateLeaderData();
 	void UpdatePOIData();
 	void Update(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BPC_FollowFSM(int EntryPoint);
+	void ExecuteUbergraph_BPC_FollowFSM(int EntryPoint);
 };
 
 

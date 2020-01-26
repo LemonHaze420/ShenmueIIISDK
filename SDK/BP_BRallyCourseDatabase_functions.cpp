@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BRallyCourseDatabase.BP_BRallyCourseDatabase_C.FindAwardCourseData
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Delegate, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FName                   Award                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBTL_CourseDataAsset*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // int                            Array_Index                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-class UBTL_CourseDataAsset* UBP_BRallyCourseDatabase_C::STATIC_FindAwardCourseData(const struct FName& Award, int* Array_Index)
+class UBTL_CourseDataAsset* UBP_BRallyCourseDatabase_C::FindAwardCourseData(const struct FName& Award, int* Array_Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BRallyCourseDatabase.BP_BRallyCourseDatabase_C.FindAwardCourseData");
 

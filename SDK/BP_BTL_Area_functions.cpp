@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BTL_Area.BP_BTL_Area_C.InsideEntireArea
-// (Net, NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Point                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           bIsInside                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,7 +27,6 @@ void ABP_BTL_Area_C::InsideEntireArea(const struct FVector& Point, bool* bIsInsi
 	params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,11 +38,11 @@ void ABP_BTL_Area_C::InsideEntireArea(const struct FVector& Point, bool* bIsInsi
 
 
 // Function BP_BTL_Area.BP_BTL_Area_C.GetPathfindingRefLocation
-// (NetRequest, Exec, NetResponse, Static, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_BTL_Area_C::STATIC_GetPathfindingRefLocation()
+struct FVector ABP_BTL_Area_C::GetPathfindingRefLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Area.BP_BTL_Area_C.GetPathfindingRefLocation");
 
@@ -60,7 +59,7 @@ struct FVector ABP_BTL_Area_C::STATIC_GetPathfindingRefLocation()
 
 
 // Function BP_BTL_Area.BP_BTL_Area_C.TestStraightPathInside
-// (Native, Event, NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -73,7 +72,6 @@ bool ABP_BTL_Area_C::TestStraightPathInside(const struct FVector& Location)
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,12 +82,12 @@ bool ABP_BTL_Area_C::TestStraightPathInside(const struct FVector& Location)
 
 
 // Function BP_BTL_Area.BP_BTL_Area_C.ClampLocation
-// (Net, NetReliable, Exec, Event, Static, Public, Delegate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
 
-void ABP_BTL_Area_C::STATIC_ClampLocation(const struct FVector& InLocation, struct FVector* OutLocation)
+void ABP_BTL_Area_C::ClampLocation(const struct FVector& InLocation, struct FVector* OutLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Area.BP_BTL_Area_C.ClampLocation");
 
@@ -108,7 +106,7 @@ void ABP_BTL_Area_C::STATIC_ClampLocation(const struct FVector& InLocation, stru
 
 
 // Function BP_BTL_Area.BP_BTL_Area_C.NudgeDirTowardsCenter
-// (Net, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 ToCenter                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -133,7 +131,7 @@ struct FVector ABP_BTL_Area_C::NudgeDirTowardsCenter(const struct FVector& Direc
 
 
 // Function BP_BTL_Area.BP_BTL_Area_C.EnableCollision
-// (Net, NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -146,7 +144,6 @@ void ABP_BTL_Area_C::EnableCollision(bool Enabled, bool* dummy)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,7 +155,7 @@ void ABP_BTL_Area_C::EnableCollision(bool Enabled, bool* dummy)
 
 
 // Function BP_BTL_Area.BP_BTL_Area_C.IsReturnedInside
-// (Net, NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           Returned                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -171,7 +168,6 @@ void ABP_BTL_Area_C::IsReturnedInside(const struct FVector& InLocation, bool* Re
 	params.InLocation = InLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,13 +179,13 @@ void ABP_BTL_Area_C::IsReturnedInside(const struct FVector& InLocation, bool* Re
 
 
 // Function BP_BTL_Area.BP_BTL_Area_C.ScaleMovement
-// (Net, NetReliable, NetRequest, Exec, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Redirected                     (Parm, OutParm, IsPlainOldData)
 
-void ABP_BTL_Area_C::STATIC_ScaleMovement(const struct FVector& Location, const struct FVector& Direction, struct FVector* Redirected)
+void ABP_BTL_Area_C::ScaleMovement(const struct FVector& Location, const struct FVector& Direction, struct FVector* Redirected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Area.BP_BTL_Area_C.ScaleMovement");
 
@@ -209,7 +205,7 @@ void ABP_BTL_Area_C::STATIC_ScaleMovement(const struct FVector& Location, const 
 
 
 // Function BP_BTL_Area.BP_BTL_Area_C.InsideFreeArea
-// (Net, NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Point                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           bIsInside                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -222,7 +218,6 @@ void ABP_BTL_Area_C::InsideFreeArea(const struct FVector& Point, bool* bIsInside
 	params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,7 +229,7 @@ void ABP_BTL_Area_C::InsideFreeArea(const struct FVector& Point, bool* bIsInside
 
 
 // Function BP_BTL_Area.BP_BTL_Area_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BTL_Area_C::UserConstructionScript()
 {
@@ -243,7 +238,6 @@ void ABP_BTL_Area_C::UserConstructionScript()
 	ABP_BTL_Area_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

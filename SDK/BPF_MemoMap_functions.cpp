@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_MemoMap.BPF_MemoMap_C.IsVisible
-// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            FlagIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SubFlagIndex                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -31,7 +31,6 @@ void UBPF_MemoMap_C::STATIC_IsVisible(int FlagIndex, int SubFlagIndex, class UOb
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -43,7 +42,7 @@ void UBPF_MemoMap_C::STATIC_IsVisible(int FlagIndex, int SubFlagIndex, class UOb
 
 
 // Function BPF_MemoMap.BPF_MemoMap_C.SetVisibility
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget*                 TextBlock                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -61,7 +60,6 @@ void UBPF_MemoMap_C::STATIC_SetVisibility(class UWidget* TextBlock, int Index, i
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,13 +68,13 @@ void UBPF_MemoMap_C::STATIC_SetVisibility(class UWidget* TextBlock, int Index, i
 
 
 // Function BPF_MemoMap.BPF_MemoMap_C.GetText
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBPF_MemoMap_C::GetText(const struct FName& Label, class UObject* __WorldContext)
+struct FText UBPF_MemoMap_C::STATIC_GetText(const struct FName& Label, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MemoMap.BPF_MemoMap_C.GetText");
 
@@ -85,7 +83,6 @@ struct FText UBPF_MemoMap_C::GetText(const struct FName& Label, class UObject* _
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

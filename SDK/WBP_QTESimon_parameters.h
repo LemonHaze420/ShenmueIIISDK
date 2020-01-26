@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -285,8 +285,8 @@ struct UWBP_QTESimon_C_OnWaitTimeFinishedBeforeOutBack_Params
 {
 };
 
-// Function WBP_QTESimon.WBP_QTESimon_C.OnOutBackAnimationFinished
-struct UWBP_QTESimon_C_OnOutBackAnimationFinished_Params
+// Function WBP_QTESimon.WBP_QTESimon_C.OnOutbackAnimationFinished
+struct UWBP_QTESimon_C_OnOutbackAnimationFinished_Params
 {
 };
 

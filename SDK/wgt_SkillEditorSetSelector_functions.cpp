@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.AlertSet
-// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_SkillEditorSetSelector_C::STATIC_AlertSet()
+void Uwgt_SkillEditorSetSelector_C::AlertSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.AlertSet");
 
 	Uwgt_SkillEditorSetSelector_C_AlertSet_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,11 +31,11 @@ void Uwgt_SkillEditorSetSelector_C::STATIC_AlertSet()
 
 
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.SetTitleText
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void Uwgt_SkillEditorSetSelector_C::STATIC_SetTitleText(const struct FText& InText)
+void Uwgt_SkillEditorSetSelector_C::SetTitleText(const struct FText& InText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.SetTitleText");
 
@@ -44,7 +43,6 @@ void Uwgt_SkillEditorSetSelector_C::STATIC_SetTitleText(const struct FText& InTe
 	params.InText = InText;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +51,7 @@ void Uwgt_SkillEditorSetSelector_C::STATIC_SetTitleText(const struct FText& InTe
 
 
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.PlayArrowAnim
-// (Exec, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Play                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -73,19 +71,18 @@ void Uwgt_SkillEditorSetSelector_C::PlayArrowAnim(bool Play)
 
 
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.SetButtonImage
-// (Net, NetReliable, Native, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           auto                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditorSetSelector_C::SetButtonImage(bool Auto)
+void Uwgt_SkillEditorSetSelector_C::SetButtonImage(bool auto)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.SetButtonImage");
 
 	Uwgt_SkillEditorSetSelector_C_SetButtonImage_Params params;
-	params.Auto = Auto;
+	params.auto = auto;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +91,7 @@ void Uwgt_SkillEditorSetSelector_C::SetButtonImage(bool Auto)
 
 
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.SetSkillSetIndex
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   SkillSetText                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -116,7 +113,7 @@ void Uwgt_SkillEditorSetSelector_C::SetSkillSetIndex(const struct FText& SkillSe
 
 
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.Construct
-// (Net, Exec, Native, NetResponse, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_SkillEditorSetSelector_C::Construct()
 {
@@ -125,7 +122,6 @@ void Uwgt_SkillEditorSetSelector_C::Construct()
 	Uwgt_SkillEditorSetSelector_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,7 +130,7 @@ void Uwgt_SkillEditorSetSelector_C::Construct()
 
 
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.ExecuteUbergraph_wgt_SkillEditorSetSelector
-// (Exec, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

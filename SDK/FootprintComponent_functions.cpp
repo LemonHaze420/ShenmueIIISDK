@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function FootprintComponent.FootprintComponent_C.GetLastFootprintType
-// (Net, NetReliable, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UFootprintTypeBase_C*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UFootprintTypeBase_C* UFootprintComponent_C::STATIC_GetLastFootprintType()
+class UFootprintTypeBase_C* UFootprintComponent_C::GetLastFootprintType()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.GetLastFootprintType");
 
 	UFootprintComponent_C_GetLastFootprintType_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,11 +35,11 @@ class UFootprintTypeBase_C* UFootprintComponent_C::STATIC_GetLastFootprintType()
 
 
 // Function FootprintComponent.FootprintComponent_C.CanCheck
-// (Net, NetRequest, Exec, Event, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UFootprintComponent_C::STATIC_CanCheck(bool* CAN)
+void UFootprintComponent_C::CanCheck(bool* CAN)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.CanCheck");
 
@@ -58,7 +57,7 @@ void UFootprintComponent_C::STATIC_CanCheck(bool* CAN)
 
 
 // Function FootprintComponent.FootprintComponent_C.BoxTraceGround
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 Start                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 End                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -76,7 +75,6 @@ bool UFootprintComponent_C::BoxTraceGround(const struct FVector& Start, const st
 	params.Orientation = Orientation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,7 +88,7 @@ bool UFootprintComponent_C::BoxTraceGround(const struct FVector& Start, const st
 
 
 // Function FootprintComponent.FootprintComponent_C.ChooseCue
-// (Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USoundAtomCue*           Cue                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -112,13 +110,13 @@ void UFootprintComponent_C::ChooseCue(class USoundAtomCue** Cue)
 
 
 // Function FootprintComponent.FootprintComponent_C.TraceGround
-// (NetReliable, NetRequest, Native, Static, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FHitResult              OutHit                         (Parm, OutParm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UFootprintComponent_C::STATIC_TraceGround(const struct FVector& Location, struct FHitResult* OutHit)
+bool UFootprintComponent_C::TraceGround(const struct FVector& Location, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.TraceGround");
 
@@ -126,7 +124,6 @@ bool UFootprintComponent_C::STATIC_TraceGround(const struct FVector& Location, s
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,12 +137,12 @@ bool UFootprintComponent_C::STATIC_TraceGround(const struct FVector& Location, s
 
 
 // Function FootprintComponent.FootprintComponent_C.IsRainy
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Rainy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Rate                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UFootprintComponent_C::STATIC_IsRainy(bool* Rainy, float* Rate)
+void UFootprintComponent_C::IsRainy(bool* Rainy, float* Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.IsRainy");
 
@@ -165,7 +162,7 @@ void UFootprintComponent_C::STATIC_IsRainy(bool* Rainy, float* Rate)
 
 
 // Function FootprintComponent.FootprintComponent_C.PlayFootprintAtomCue
-// (NetReliable, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FString                 SelectorLabel                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -191,13 +188,13 @@ void UFootprintComponent_C::PlayFootprintAtomCue(const struct FVector& Location,
 
 
 // Function FootprintComponent.FootprintComponent_C.SpawnParticles
-// (Static, MulticastDelegate, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Rotation                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UParticleSystem*         ParticleSystem                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UFootprintComponent_C::STATIC_SpawnParticles(const struct FVector& Location, const struct FRotator& Rotation, class UParticleSystem* ParticleSystem)
+void UFootprintComponent_C::SpawnParticles(const struct FVector& Location, const struct FRotator& Rotation, class UParticleSystem* ParticleSystem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.SpawnParticles");
 
@@ -215,7 +212,7 @@ void UFootprintComponent_C::STATIC_SpawnParticles(const struct FVector& Location
 
 
 // Function FootprintComponent.FootprintComponent_C.SpawnDecal
-// (Net, NetReliable, Exec, Event, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Rotation                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -224,7 +221,7 @@ void UFootprintComponent_C::STATIC_SpawnParticles(const struct FVector& Location
 // float                          LifeSpan                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OriginalOpacity                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UFootprintComponent_C::STATIC_SpawnDecal(const struct FVector& Location, float Rotation, const struct FVector& Size, class UMaterialInterface* Material, float LifeSpan, float OriginalOpacity)
+void UFootprintComponent_C::SpawnDecal(const struct FVector& Location, float Rotation, const struct FVector& Size, class UMaterialInterface* Material, float LifeSpan, float OriginalOpacity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.SpawnDecal");
 
@@ -245,12 +242,12 @@ void UFootprintComponent_C::STATIC_SpawnDecal(const struct FVector& Location, fl
 
 
 // Function FootprintComponent.FootprintComponent_C.OnFootprintTypeChange
-// (NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFootprintTypeBase_C*    OldType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UFootprintTypeBase_C*    NewType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UFootprintComponent_C::STATIC_OnFootprintTypeChange(class UFootprintTypeBase_C* OldType, class UFootprintTypeBase_C* NewType)
+void UFootprintComponent_C::OnFootprintTypeChange(class UFootprintTypeBase_C* OldType, class UFootprintTypeBase_C* NewType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.OnFootprintTypeChange");
 
@@ -267,12 +264,12 @@ void UFootprintComponent_C::STATIC_OnFootprintTypeChange(class UFootprintTypeBas
 
 
 // Function FootprintComponent.FootprintComponent_C.GetFootprintTypeFromPhysicalMaterial
-// (Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPhysicalMaterial*       PhysicalMaterial               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UFootprintTypeBase_C*    FootprintType                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UFootprintComponent_C::STATIC_GetFootprintTypeFromPhysicalMaterial(class UPhysicalMaterial* PhysicalMaterial, class UFootprintTypeBase_C** FootprintType)
+void UFootprintComponent_C::GetFootprintTypeFromPhysicalMaterial(class UPhysicalMaterial* PhysicalMaterial, class UFootprintTypeBase_C** FootprintType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.GetFootprintTypeFromPhysicalMaterial");
 
@@ -291,13 +288,13 @@ void UFootprintComponent_C::STATIC_GetFootprintTypeFromPhysicalMaterial(class UP
 
 
 // Function FootprintComponent.FootprintComponent_C.OnFootFall
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Rotation                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // TEnumAsByte<ENEFootType>       FootType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UFootprintComponent_C::STATIC_OnFootFall(const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<ENEFootType> FootType)
+void UFootprintComponent_C::OnFootFall(const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<ENEFootType> FootType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.OnFootFall");
 
@@ -315,16 +312,15 @@ void UFootprintComponent_C::STATIC_OnFootFall(const struct FVector& Location, co
 
 
 // Function FootprintComponent.FootprintComponent_C.ReceiveBeginPlay
-// (NetRequest, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 
-void UFootprintComponent_C::STATIC_ReceiveBeginPlay()
+void UFootprintComponent_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.ReceiveBeginPlay");
 
 	UFootprintComponent_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -333,11 +329,11 @@ void UFootprintComponent_C::STATIC_ReceiveBeginPlay()
 
 
 // Function FootprintComponent.FootprintComponent_C.ReceiveTick
-// (Exec, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UFootprintComponent_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UFootprintComponent_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintComponent.FootprintComponent_C.ReceiveTick");
 
@@ -353,7 +349,7 @@ void UFootprintComponent_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function FootprintComponent.FootprintComponent_C.ExecuteUbergraph_FootprintComponent
-// (Net, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

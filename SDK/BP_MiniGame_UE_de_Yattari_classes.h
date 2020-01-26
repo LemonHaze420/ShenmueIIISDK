@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -81,49 +81,49 @@ public:
 
 
 	void SetCNWidgetTexture();
-	void STATIC_InitAsyncLoad(bool* dummy);
+	void InitAsyncLoad(bool* dummy);
 	void GetDiceTwoNum(int SumNum, int* Num1, int* Num2);
 	TArray<struct FS3DetectActionParam> GetDetectAction();
-	class UMeshComponent* STATIC_GetClothMeshComponent();
+	class UMeshComponent* GetClothMeshComponent();
 	void DecideDiceNum(bool RyoWin);
-	void STATIC_SetBoardInfo();
-	void STATIC_SetEnableAroundCollision(bool Enable);
+	void SetBoardInfo();
+	void SetEnableAroundCollision(bool Enable);
 	void GetDiceNumRandom(int Min, int Max, int* DiceNum);
 	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
 	void ThrowDiceFromTotalNum(int TotalNum);
 	void ResetCamera();
 	void CameraUpdate(float DeltaSeconds);
-	void STATIC_GetDiceNum(int* DiceNum);
+	void GetDiceNum(int* DiceNum);
 	void DestroyDice();
-	void STATIC_IsStopDice(bool* Stop);
-	void STATIC_UserConstructionScript();
+	void IsStopDice(bool* Stop);
+	void UserConstructionScript();
 	void WinMiniGame();
 	void LoseMiniGame();
 	void DrawMiniGame();
 	void StartMiniGame();
 	void EndMiniGame();
 	void FinalizeTalk();
-	void STATIC_OnFinishedFade();
+	void OnFinishedFade();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
-	void STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
-	void STATIC_ResetFlowDoOnce();
-	void STATIC_NPCDiceThrow();
-	void STATIC_PlayerDiceThrow();
-	void STATIC_InputButtonRight();
-	void STATIC_InitThrowIdle();
+	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
+	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
+	void ResetFlowDoOnce();
+	void NPCDiceThrow();
+	void PlayerDiceThrow();
+	void InputButtonRight();
+	void InitThrowIdle();
 	void BndEvt__Bowl_K2Node_ComponentBoundEvent_4_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void STATIC_EnableForwardAndBackCollision();
-	void STATIC_StartForceMoveDice();
+	void EnableForwardAndBackCollision();
+	void StartForceMoveDice();
 	void Event_EndMiniGame();
-	void STATIC_OnTalkScriptEvent(int EventNumber);
-	void STATIC_ResumeMiniGame(const struct FString& ResumeKeyword);
+	void OnTalkScriptEvent(int EventNumber);
+	void ResumeMiniGame(const struct FString& ResumeKeyword);
 	void CancelMiniGame();
-	void STATIC_ResetCancelDoOnce();
-	void STATIC_DelayedInitialize();
-	void STATIC_OpponentResult();
-	void STATIC_RyoResult();
+	void ResetCancelDoOnce();
+	void DelayedInitialize();
+	void OpponentResult();
+	void RyoResult();
 	void ExecuteUbergraph_BP_MiniGame_UE_de_Yattari(int EntryPoint);
 };
 

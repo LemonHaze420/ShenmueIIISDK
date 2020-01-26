@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,40 +47,40 @@ public:
 	void SetEndRollPassword(const struct FName& ID, bool* Success);
 	void RandomCapsulToy(struct FName* ItemId);
 	void IsBonusPack(ES3RewardType Type, bool* Bonus);
-	void STATIC_GetEmaMateiral();
+	void GetEmaMateiral();
 	void ConvertCategory(ES3RewardType Type, ES3RewardCategory* Category);
 	void DebugResetPassword();
-	void STATIC_AddRewardItem(ES3RewardType Type, const struct FName& InItemId, int Num, struct FName* O);
-	void STATIC_CheckRewardItem(const struct FName& PresetId, bool* exec);
+	void AddRewardItem(ES3RewardType Type, const struct FName& InItemId, int Num, struct FName* O);
+	void CheckRewardItem(const struct FName& PresetId, bool* exec);
 	void SetRodAndLureFlag();
-	void STATIC_CheckShowFlag(struct FST_RewardInfo* Info, bool* Show);
-	void STATIC_ShowNotice(ES3RewardType Type);
-	void STATIC_GetActivateRewards(TArray<ES3RewardType>* Rewards);
+	void CheckShowFlag(struct FST_RewardInfo* Info, bool* Show);
+	void ShowNotice(ES3RewardType Type);
+	void GetActivateRewards(TArray<ES3RewardType>* Rewards);
 	void IsActivate(ES3RewardType Type, bool* Activate);
 	void ConvertTypeArray(struct FST_RewardPresetInfo* Info, TArray<ES3RewardType>* Types);
-	void STATIC_MakePresetArray(const struct FName& ID, TArray<ES3RewardType>* Array, TArray<ES3RewardType>* NewArray);
-	void STATIC_CheckDownloadFile();
+	void MakePresetArray(const struct FName& ID, TArray<ES3RewardType>* Array, TArray<ES3RewardType>* NewArray);
+	void CheckDownloadFile();
 	void SetPresetId(const struct FName& PresetId);
-	void STATIC_SetDebugUpdateParam(const struct FString& ParamName, bool flag);
-	void STATIC_GetUserName(struct FString* UserName);
-	void STATIC_GetFudaMateiral();
+	void SetDebugUpdateParam(const struct FString& ParamName, bool flag);
+	void GetUserName(struct FString* UserName);
+	void GetFudaMateiral();
 	void GetHanamojiMaterial();
 	void GetDebugRewardPresetId(struct FName* ID);
 	void GetEndCreditType(TEnumAsByte<EN_EndCreditType>* Type);
-	void STATIC_GetDreamsComeTrueType(TEnumAsByte<EN_DreamsComeTrue>* Type);
+	void GetDreamsComeTrueType(TEnumAsByte<EN_DreamsComeTrue>* Type);
 	void SetPassword(const struct FName& ID, TEnumAsByte<EN_PasswordResult>* Result);
-	void STATIC_UserConstructionScript();
-	void STATIC_FlagChange(int ArrayIndex, int SetFlags);
+	void UserConstructionScript();
+	void FlagChange(int ArrayIndex, int SetFlags);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ShowItemDialog();
-	void STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
+	void ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
 	void PushDecide(class AActor* Actor);
 	void ReceiveBeginPlay();
 	void CheckFreerun();
 	void FinishedDLC();
-	void STATIC_ChangedItemNum(const struct FName& ItemId, int NewNum, int OldNum);
-	void STATIC_ExecuteUbergraph_BP_RewardManager(int EntryPoint);
-	void STATIC_OnChangeReward__DelegateSignature();
+	void ChangedItemNum(const struct FName& ItemId, int NewNum, int OldNum);
+	void ExecuteUbergraph_BP_RewardManager(int EntryPoint);
+	void OnChangeReward__DelegateSignature();
 };
 
 

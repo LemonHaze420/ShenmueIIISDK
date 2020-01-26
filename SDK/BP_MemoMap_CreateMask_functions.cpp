@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MemoMap_CreateMask.BP_MemoMap_CreateMask_C.DebugOpenCheck
-// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsOpen                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MemoMap_CreateMask_C::STATIC_DebugOpenCheck(bool* IsOpen)
+void ABP_MemoMap_CreateMask_C::DebugOpenCheck(bool* IsOpen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMap_CreateMask.BP_MemoMap_CreateMask_C.DebugOpenCheck");
 
@@ -36,7 +36,7 @@ void ABP_MemoMap_CreateMask_C::STATIC_DebugOpenCheck(bool* IsOpen)
 
 
 // Function BP_MemoMap_CreateMask.BP_MemoMap_CreateMask_C.MakeMask
-// (Net, NetRequest, Exec, Event, NetMulticast, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPanelWidget*            InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // ES3Where                       Place                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -58,16 +58,15 @@ void ABP_MemoMap_CreateMask_C::MakeMask(class UPanelWidget* InputPin, ES3Where P
 
 
 // Function BP_MemoMap_CreateMask.BP_MemoMap_CreateMask_C.UserConstructionScript
-// (Net, Native, Event, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MemoMap_CreateMask_C::STATIC_UserConstructionScript()
+void ABP_MemoMap_CreateMask_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMap_CreateMask.BP_MemoMap_CreateMask_C.UserConstructionScript");
 
 	ABP_MemoMap_CreateMask_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,7 +75,7 @@ void ABP_MemoMap_CreateMask_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MemoMap_CreateMask.BP_MemoMap_CreateMask_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MemoMap_CreateMask_C::ReceiveBeginPlay()
 {
@@ -85,7 +84,6 @@ void ABP_MemoMap_CreateMask_C::ReceiveBeginPlay()
 	ABP_MemoMap_CreateMask_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +92,7 @@ void ABP_MemoMap_CreateMask_C::ReceiveBeginPlay()
 
 
 // Function BP_MemoMap_CreateMask.BP_MemoMap_CreateMask_C.ExecuteUbergraph_BP_MemoMap_CreateMask
-// (Net, Delegate, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

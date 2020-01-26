@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,13 +28,13 @@ public:
 	}
 
 
-	void STATIC_IsTargetComponentInBuilding(class UPrimitiveComponent* Primitive, bool UsePoint, class ABP_S3BuildingStaticMeshActor_C** Building, bool* isIn);
-	void STATIC_GetBuildingByCharaName(const struct FName& CharaName, class ABP_S3BuildingStaticMeshActor_C** Building);
+	void IsTargetComponentInBuilding(class UPrimitiveComponent* Primitive, bool UsePoint, class ABP_S3BuildingStaticMeshActor_C** Building, bool* isIn);
+	void GetBuildingByCharaName(const struct FName& CharaName, class ABP_S3BuildingStaticMeshActor_C** Building);
 	void GetLeavePoint(class AActor* Actor, bool* InBuilding, struct FVector* Location, struct FRotator* Rotation);
-	void STATIC_GetBuildingByName(const struct FString& BuildingName, class ABP_S3BuildingStaticMeshActor_C** Building);
+	void GetBuildingByName(const struct FString& BuildingName, class ABP_S3BuildingStaticMeshActor_C** Building);
 	void IsPlayerInBuilding(class ABP_S3BuildingStaticMeshActor_C** Building, bool* isIn);
-	void STATIC_SetBuilding(class ABP_S3BuildingStaticMeshActor_C* Building, bool Remove);
-	void STATIC_UserConstructionScript();
+	void SetBuilding(class ABP_S3BuildingStaticMeshActor_C* Building, bool Remove);
+	void UserConstructionScript();
 };
 
 

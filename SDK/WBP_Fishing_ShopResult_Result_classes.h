@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,13 +42,13 @@ public:
 	}
 
 
-	void STATIC_UpdateLocalizeText();
+	void UpdateLocalizeText();
 	struct FText Get_EarningsText();
 	struct FText Get_ExploitsText();
 	struct FText GetLocalizeFishNameText();
-	struct FText STATIC_GetFishGramText();
-	void STATIC_SetImagePositionY(class UImage* ArgImage, float ArgPosY);
-	struct FText STATIC_GetGenText();
+	struct FText GetFishGramText();
+	void SetImagePositionY(class UImage* ArgImage, float ArgPosY);
+	struct FText GetGenText();
 	struct FText GetFishNameText();
 	void Construct();
 	void ExecuteUbergraph_WBP_Fishing_ShopResult_Result(int EntryPoint);

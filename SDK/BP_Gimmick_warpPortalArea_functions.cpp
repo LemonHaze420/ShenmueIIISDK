@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.GetPortalComponent
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UBP_Gimmick_warpPortalComp_C* PortalComponent                (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_Gimmick_warpPortalArea_C::STATIC_GetPortalComponent(class UBP_Gimmick_warpPortalComp_C** PortalComponent)
+void ABP_Gimmick_warpPortalArea_C::GetPortalComponent(class UBP_Gimmick_warpPortalComp_C** PortalComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.GetPortalComponent");
 
 	ABP_Gimmick_warpPortalArea_C_GetPortalComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ABP_Gimmick_warpPortalArea_C::STATIC_GetPortalComponent(class UBP_Gimmick_w
 
 
 // Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Gimmick_warpPortalArea_C::UserConstructionScript()
 {
@@ -46,7 +45,6 @@ void ABP_Gimmick_warpPortalArea_C::UserConstructionScript()
 	ABP_Gimmick_warpPortalArea_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,16 +53,15 @@ void ABP_Gimmick_warpPortalArea_C::UserConstructionScript()
 
 
 // Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Gimmick_warpPortalArea_C::STATIC_ReceiveBeginPlay()
+void ABP_Gimmick_warpPortalArea_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.ReceiveBeginPlay");
 
 	ABP_Gimmick_warpPortalArea_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,11 +70,11 @@ void ABP_Gimmick_warpPortalArea_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.onTeleport
-// (Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Gimmick_warpPortalArea_C::STATIC_onTeleport(class AActor* OtherActor)
+void ABP_Gimmick_warpPortalArea_C::onTeleport(class AActor* OtherActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.onTeleport");
 
@@ -93,11 +90,11 @@ void ABP_Gimmick_warpPortalArea_C::STATIC_onTeleport(class AActor* OtherActor)
 
 
 // Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.ExecuteUbergraph_BP_Gimmick_warpPortalArea
-// (NetRequest, Native, Static, MulticastDelegate, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Gimmick_warpPortalArea_C::STATIC_ExecuteUbergraph_BP_Gimmick_warpPortalArea(int EntryPoint)
+void ABP_Gimmick_warpPortalArea_C::ExecuteUbergraph_BP_Gimmick_warpPortalArea(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.ExecuteUbergraph_BP_Gimmick_warpPortalArea");
 
@@ -105,7 +102,6 @@ void ABP_Gimmick_warpPortalArea_C::STATIC_ExecuteUbergraph_BP_Gimmick_warpPortal
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,7 +110,7 @@ void ABP_Gimmick_warpPortalArea_C::STATIC_ExecuteUbergraph_BP_Gimmick_warpPortal
 
 
 // Function BP_Gimmick_warpPortalArea.BP_Gimmick_warpPortalArea_C.teleport__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -126,7 +122,6 @@ void ABP_Gimmick_warpPortalArea_C::teleport__DelegateSignature(class AActor* Oth
 	params.OtherActor = OtherActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

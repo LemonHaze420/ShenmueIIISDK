@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.StartLoad
-// (NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SaveLoadInputManager_C::STATIC_StartLoad()
+void ABP_SaveLoadInputManager_C::StartLoad()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.StartLoad");
 
 	ABP_SaveLoadInputManager_C_StartLoad_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,16 +31,15 @@ void ABP_SaveLoadInputManager_C::STATIC_StartLoad()
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.UserConstructionScript
-// (NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SaveLoadInputManager_C::STATIC_UserConstructionScript()
+void ABP_SaveLoadInputManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.UserConstructionScript");
 
 	ABP_SaveLoadInputManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,7 +48,7 @@ void ABP_SaveLoadInputManager_C::STATIC_UserConstructionScript()
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_12
-// (Net, Exec, Native, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -62,7 +60,6 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +68,7 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEven
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_11
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -83,7 +80,6 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +88,7 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEven
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_10
-// (Net, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -104,7 +100,6 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -113,7 +108,7 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEv
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_9
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -125,7 +120,6 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,7 +128,7 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEv
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.InpActEvt_SearchRightButton_K2Node_InputActionEvent_8
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -146,7 +140,6 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchRightButton_K2Node_InputActionE
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,7 +148,7 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchRightButton_K2Node_InputActionE
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.InpActEvt_SearchBottomButton_K2Node_InputActionEvent_7
-// (Net, NetReliable, Exec, Native, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -167,7 +160,6 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchBottomButton_K2Node_InputAction
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,16 +168,15 @@ void ABP_SaveLoadInputManager_C::InpActEvt_SearchBottomButton_K2Node_InputAction
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ReceiveBeginPlay
-// (Net, NetReliable, Native, Event, NetResponse, Static, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_SaveLoadInputManager_C::STATIC_ReceiveBeginPlay()
+void ABP_SaveLoadInputManager_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ReceiveBeginPlay");
 
 	ABP_SaveLoadInputManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,7 +185,7 @@ void ABP_SaveLoadInputManager_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ReceiveTick
-// (Net, NetReliable, Exec, Native, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -206,7 +197,6 @@ void ABP_SaveLoadInputManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,7 +205,7 @@ void ABP_SaveLoadInputManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_33
-// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -227,7 +217,6 @@ void ABP_SaveLoadInputManager_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxi
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,7 +225,7 @@ void ABP_SaveLoadInputManager_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxi
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ExecuteUbergraph_BP_SaveLoadInputManager
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Protected, HasDefaults, NetClient, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -256,16 +245,15 @@ void ABP_SaveLoadInputManager_C::ExecuteUbergraph_BP_SaveLoadInputManager(int En
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_LeftButton__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_SaveLoadInputManager_C::STATIC_ED_LeftButton__DelegateSignature()
+void ABP_SaveLoadInputManager_C::ED_LeftButton__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_LeftButton__DelegateSignature");
 
 	ABP_SaveLoadInputManager_C_ED_LeftButton__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -274,11 +262,11 @@ void ABP_SaveLoadInputManager_C::STATIC_ED_LeftButton__DelegateSignature()
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_WheleMouse__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SaveLoadInputManager_C::STATIC_ED_WheleMouse__DelegateSignature(float Value)
+void ABP_SaveLoadInputManager_C::ED_WheleMouse__DelegateSignature(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_WheleMouse__DelegateSignature");
 
@@ -286,7 +274,6 @@ void ABP_SaveLoadInputManager_C::STATIC_ED_WheleMouse__DelegateSignature(float V
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -295,16 +282,15 @@ void ABP_SaveLoadInputManager_C::STATIC_ED_WheleMouse__DelegateSignature(float V
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_DownButton__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_SaveLoadInputManager_C::STATIC_ED_DownButton__DelegateSignature()
+void ABP_SaveLoadInputManager_C::ED_DownButton__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_DownButton__DelegateSignature");
 
 	ABP_SaveLoadInputManager_C_ED_DownButton__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -313,16 +299,15 @@ void ABP_SaveLoadInputManager_C::STATIC_ED_DownButton__DelegateSignature()
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_RightButton__DelegateSignature
-// (Net, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_SaveLoadInputManager_C::STATIC_ED_RightButton__DelegateSignature()
+void ABP_SaveLoadInputManager_C::ED_RightButton__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_RightButton__DelegateSignature");
 
 	ABP_SaveLoadInputManager_C_ED_RightButton__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -331,16 +316,15 @@ void ABP_SaveLoadInputManager_C::STATIC_ED_RightButton__DelegateSignature()
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_DownPush__DelegateSignature
-// (Net, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_SaveLoadInputManager_C::STATIC_ED_DownPush__DelegateSignature()
+void ABP_SaveLoadInputManager_C::ED_DownPush__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_DownPush__DelegateSignature");
 
 	ABP_SaveLoadInputManager_C_ED_DownPush__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -349,16 +333,15 @@ void ABP_SaveLoadInputManager_C::STATIC_ED_DownPush__DelegateSignature()
 
 
 // Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_UpPush__DelegateSignature
-// (Net, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_SaveLoadInputManager_C::STATIC_ED_UpPush__DelegateSignature()
+void ABP_SaveLoadInputManager_C::ED_UpPush__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SaveLoadInputManager.BP_SaveLoadInputManager_C.ED_UpPush__DelegateSignature");
 
 	ABP_SaveLoadInputManager_C_ED_UpPush__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

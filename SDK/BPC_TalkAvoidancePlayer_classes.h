@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,16 +29,16 @@ public:
 	}
 
 
-	void STATIC_ForceAnimationUpdate(float DeltaTime);
+	void ForceAnimationUpdate(float DeltaTime);
 	void CanAvoidance(bool* bCan);
-	struct FVector STATIC_GetTargetActorEyeLocationForTraceCheck(class AActor* InActor, const struct FVector& InOwnerLocation);
-	struct FVector STATIC_GetTargetActorLocationForCheck(class AActor* InActor);
+	struct FVector GetTargetActorEyeLocationForTraceCheck(class AActor* InActor, const struct FVector& InOwnerLocation);
+	struct FVector GetTargetActorLocationForCheck(class AActor* InActor);
 	float GetDistanceToLeaveForCheck(class AActor* TargetActor);
 	void IsAvoiddableDecide(bool* bExecution);
 	void IsShowItemCollisionCheck(const struct FVector& ActorLocation, bool* bHitCollision);
 	void AvoidableTest(const struct FVector& ActorLocation, bool bDesperate, bool* bSuccessAvoidable);
 	void IsSitMotionPlayer(TArray<class AActor*>* TargetActors, bool* bSit);
-	void STATIC_IsExistShowItemTask(bool* bReturnValue);
+	void IsExistShowItemTask(bool* bReturnValue);
 	void ProcessAvoidable(bool* bProcessed);
 	void ReceiveBeginPlay();
 	void BeginTalk();

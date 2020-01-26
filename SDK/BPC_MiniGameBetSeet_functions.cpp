@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.GetRenderTarget
-// (Native, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTextureRenderTarget2D*  RefRenderTarget                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameBetSeet_C::STATIC_GetRenderTarget(class UTextureRenderTarget2D** RefRenderTarget)
+void UBPC_MiniGameBetSeet_C::GetRenderTarget(class UTextureRenderTarget2D** RefRenderTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.GetRenderTarget");
 
 	UBPC_MiniGameBetSeet_C_GetRenderTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void UBPC_MiniGameBetSeet_C::STATIC_GetRenderTarget(class UTextureRenderTarget2D
 
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.InitializeRenderTarget
-// (Net, NetReliable, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Width                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Height                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -59,11 +58,11 @@ void UBPC_MiniGameBetSeet_C::InitializeRenderTarget(int Width, int Height)
 
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ReceiveEndPlay
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameBetSeet_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void UBPC_MiniGameBetSeet_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ReceiveEndPlay");
 
@@ -71,7 +70,6 @@ void UBPC_MiniGameBetSeet_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> E
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,9 +78,9 @@ void UBPC_MiniGameBetSeet_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> E
 
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_MiniGameBetSeet_C::STATIC_ReceiveBeginPlay()
+void UBPC_MiniGameBetSeet_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ReceiveBeginPlay");
 
@@ -97,11 +95,11 @@ void UBPC_MiniGameBetSeet_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ExecuteUbergraph_BPC_MiniGameBetSeet
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameBetSeet_C::STATIC_ExecuteUbergraph_BPC_MiniGameBetSeet(int EntryPoint)
+void UBPC_MiniGameBetSeet_C::ExecuteUbergraph_BPC_MiniGameBetSeet(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ExecuteUbergraph_BPC_MiniGameBetSeet");
 

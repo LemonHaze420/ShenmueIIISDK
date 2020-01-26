@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.UserConstructionScript
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MemoMapTriggerArea_C::STATIC_UserConstructionScript()
+void ABP_MemoMapTriggerArea_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_MemoMapTriggerArea_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -40,7 +40,7 @@ void ABP_MemoMapTriggerArea_C::STATIC_UserConstructionScript()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_MemoMapTriggerArea_C::STATIC_BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_MemoMapTriggerArea_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -53,7 +53,6 @@ void ABP_MemoMapTriggerArea_C::STATIC_BndEvt__Sphere_K2Node_ComponentBoundEvent_
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,7 +61,7 @@ void ABP_MemoMapTriggerArea_C::STATIC_BndEvt__Sphere_K2Node_ComponentBoundEvent_
 
 
 // Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -71,7 +70,7 @@ void ABP_MemoMapTriggerArea_C::STATIC_BndEvt__Sphere_K2Node_ComponentBoundEvent_
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_MemoMapTriggerArea_C::STATIC_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_MemoMapTriggerArea_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -84,7 +83,6 @@ void ABP_MemoMapTriggerArea_C::STATIC_BndEvt__Box_K2Node_ComponentBoundEvent_0_C
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,11 +91,11 @@ void ABP_MemoMapTriggerArea_C::STATIC_BndEvt__Box_K2Node_ComponentBoundEvent_0_C
 
 
 // Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.ExecuteUbergraph_BP_MemoMapTriggerArea
-// (Net, Exec, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MemoMapTriggerArea_C::STATIC_ExecuteUbergraph_BP_MemoMapTriggerArea(int EntryPoint)
+void ABP_MemoMapTriggerArea_C::ExecuteUbergraph_BP_MemoMapTriggerArea(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.ExecuteUbergraph_BP_MemoMapTriggerArea");
 

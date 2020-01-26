@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.CheckWaterHeightUseVal
-// (Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 HitPos                         (Parm, OutParm, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_CheckWaterHeightUseVal(struct FVector* HitPos)
+void ABP_Fishing_Arrow_C::CheckWaterHeightUseVal(struct FVector* HitPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.CheckWaterHeightUseVal");
 
@@ -36,18 +36,17 @@ void ABP_Fishing_Arrow_C::STATIC_CheckWaterHeightUseVal(struct FVector* HitPos)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.CheckWaterHeight
-// (NetRequest, Native, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 HitPos                         (Parm, OutParm, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_CheckWaterHeight(struct FVector* HitPos)
+void ABP_Fishing_Arrow_C::CheckWaterHeight(struct FVector* HitPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.CheckWaterHeight");
 
 	ABP_Fishing_Arrow_C_CheckWaterHeight_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,7 +58,7 @@ void ABP_Fishing_Arrow_C::STATIC_CheckWaterHeight(struct FVector* HitPos)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.End8Move
-// (Event, Public, Delegate)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_Arrow_C::End8Move()
 {
@@ -76,7 +75,7 @@ void ABP_Fishing_Arrow_C::End8Move()
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.Start8Move
-// (Net, NetReliable, NetRequest, Exec, Native, Public, Delegate)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_Arrow_C::Start8Move()
 {
@@ -85,7 +84,6 @@ void ABP_Fishing_Arrow_C::Start8Move()
 	ABP_Fishing_Arrow_C_Start8Move_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,16 +92,15 @@ void ABP_Fishing_Arrow_C::Start8Move()
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.Update8Move
-// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Fishing_Arrow_C::STATIC_Update8Move()
+void ABP_Fishing_Arrow_C::Update8Move()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.Update8Move");
 
 	ABP_Fishing_Arrow_C_Update8Move_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,11 +109,11 @@ void ABP_Fishing_Arrow_C::STATIC_Update8Move()
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.GetWaterAndArrowIntersectPos
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 HitPos                         (Parm, OutParm, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_GetWaterAndArrowIntersectPos(struct FVector* HitPos)
+void ABP_Fishing_Arrow_C::GetWaterAndArrowIntersectPos(struct FVector* HitPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.GetWaterAndArrowIntersectPos");
 
@@ -134,23 +131,22 @@ void ABP_Fishing_Arrow_C::STATIC_GetWaterAndArrowIntersectPos(struct FVector* Hi
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.Reset
-// (Net, NetReliable, NetRequest, Native, Static, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Velocity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Gravity                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_Reset(float Velocity, float Degree, float Gravity)
+void ABP_Fishing_Arrow_C::Reset(float Velocity, float degree, float Gravity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.Reset");
 
 	ABP_Fishing_Arrow_C_Reset_Params params;
 	params.Velocity = Velocity;
-	params.Degree = Degree;
+	params.degree = degree;
 	params.Gravity = Gravity;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -159,7 +155,7 @@ void ABP_Fishing_Arrow_C::STATIC_Reset(float Velocity, float Degree, float Gravi
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.SetReverseRate
-// (NetReliable, NetRequest, Native, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -171,7 +167,6 @@ void ABP_Fishing_Arrow_C::SetReverseRate(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,11 +175,11 @@ void ABP_Fishing_Arrow_C::SetReverseRate(float Rate)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.SetArrowLength
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_SetArrowLength(float Length)
+void ABP_Fishing_Arrow_C::SetArrowLength(float Length)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.SetArrowLength");
 
@@ -200,7 +195,7 @@ void ABP_Fishing_Arrow_C::STATIC_SetArrowLength(float Length)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.Initialize
-// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_Arrow_C::Initialize()
 {
@@ -217,7 +212,7 @@ void ABP_Fishing_Arrow_C::Initialize()
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.UpdateVisibleArrow
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -237,7 +232,7 @@ void ABP_Fishing_Arrow_C::UpdateVisibleArrow(float DeltaSeconds)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.SetVisibleArrow
-// (Net, NetReliable, NetRequest, Exec, NetMulticast, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -257,7 +252,7 @@ void ABP_Fishing_Arrow_C::SetVisibleArrow(bool Visible)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.SetGradationPower
-// (NetReliable, Exec, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Power                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -277,11 +272,11 @@ void ABP_Fishing_Arrow_C::SetGradationPower(float Power)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.SetGradationSpeed
-// (Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Speed                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_SetGradationSpeed(float Speed)
+void ABP_Fishing_Arrow_C::SetGradationSpeed(float Speed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.SetGradationSpeed");
 
@@ -289,7 +284,6 @@ void ABP_Fishing_Arrow_C::STATIC_SetGradationSpeed(float Speed)
 	params.Speed = Speed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,19 +292,19 @@ void ABP_Fishing_Arrow_C::STATIC_SetGradationSpeed(float Speed)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.SetSplinePos
-// (Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Velocity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Gravity                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::SetSplinePos(float Velocity, float Degree, float Gravity)
+void ABP_Fishing_Arrow_C::SetSplinePos(float Velocity, float degree, float Gravity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.SetSplinePos");
 
 	ABP_Fishing_Arrow_C_SetSplinePos_Params params;
 	params.Velocity = Velocity;
-	params.Degree = Degree;
+	params.degree = degree;
 	params.Gravity = Gravity;
 
 	auto flags = fn->FunctionFlags;
@@ -322,12 +316,12 @@ void ABP_Fishing_Arrow_C::SetSplinePos(float Velocity, float Degree, float Gravi
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.GetXYZ
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_GetXYZ(float Time, struct FVector* Location)
+void ABP_Fishing_Arrow_C::GetXYZ(float Time, struct FVector* Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.GetXYZ");
 
@@ -335,7 +329,6 @@ void ABP_Fishing_Arrow_C::STATIC_GetXYZ(float Time, struct FVector* Location)
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -347,7 +340,7 @@ void ABP_Fishing_Arrow_C::STATIC_GetXYZ(float Time, struct FVector* Location)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.GetHeight
-// (Native, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Height                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -360,7 +353,6 @@ void ABP_Fishing_Arrow_C::GetHeight(float Time, float* Height)
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -372,12 +364,12 @@ void ABP_Fishing_Arrow_C::GetHeight(float Time, float* Height)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.getDistance
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_getDistance(float Time, float* Distance)
+void ABP_Fishing_Arrow_C::getDistance(float Time, float* Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.getDistance");
 
@@ -385,7 +377,6 @@ void ABP_Fishing_Arrow_C::STATIC_getDistance(float Time, float* Distance)
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -397,7 +388,7 @@ void ABP_Fishing_Arrow_C::STATIC_getDistance(float Time, float* Distance)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_Arrow_C::UserConstructionScript()
 {
@@ -406,7 +397,6 @@ void ABP_Fishing_Arrow_C::UserConstructionScript()
 	ABP_Fishing_Arrow_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -415,7 +405,7 @@ void ABP_Fishing_Arrow_C::UserConstructionScript()
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.ReceiveBeginPlay
-// (NetReliable, Event, Public, Delegate)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Fishing_Arrow_C::ReceiveBeginPlay()
 {
@@ -432,11 +422,11 @@ void ABP_Fishing_Arrow_C::ReceiveBeginPlay()
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.ReceiveTick
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_Fishing_Arrow_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.ReceiveTick");
 
@@ -444,7 +434,6 @@ void ABP_Fishing_Arrow_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -453,11 +442,11 @@ void ABP_Fishing_Arrow_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.ExecuteUbergraph_BP_Fishing_Arrow
-// (Net, Native, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Arrow_C::STATIC_ExecuteUbergraph_BP_Fishing_Arrow(int EntryPoint)
+void ABP_Fishing_Arrow_C::ExecuteUbergraph_BP_Fishing_Arrow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Arrow.BP_Fishing_Arrow_C.ExecuteUbergraph_BP_Fishing_Arrow");
 
@@ -465,7 +454,6 @@ void ABP_Fishing_Arrow_C::STATIC_ExecuteUbergraph_BP_Fishing_Arrow(int EntryPoin
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

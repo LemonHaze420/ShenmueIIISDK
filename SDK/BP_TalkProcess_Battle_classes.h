@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,13 +35,13 @@ public:
 	}
 
 
-	void STATIC_EnableGameTime(bool bEnabled);
+	void EnableGameTime(bool bEnabled);
 	void ResettingLookAtTargetActors();
 	void CachedLookAtTargetActors();
 	void OnLoaded_F2C0EA96403370D7C0981B823EF8717B(class UObject* Loaded);
 	void Activate();
-	void STATIC_OnEndBattle(TEnumAsByte<EBattleWinLoseResult> Result);
-	void STATIC_ExecuteUbergraph_BP_TalkProcess_Battle(int EntryPoint);
+	void OnEndBattle(TEnumAsByte<EBattleWinLoseResult> Result);
+	void ExecuteUbergraph_BP_TalkProcess_Battle(int EntryPoint);
 };
 
 

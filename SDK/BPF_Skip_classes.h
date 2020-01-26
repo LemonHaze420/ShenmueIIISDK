@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void GetS3SkipController(class UObject* __WorldContext, class ABP_SkipController_C** AsBP_Skip_Controller);
+	void STATIC_GetS3SkipController(class UObject* __WorldContext, class ABP_SkipController_C** AsBP_Skip_Controller);
 };
 
 

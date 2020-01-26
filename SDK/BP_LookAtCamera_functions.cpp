@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_LookAtCamera.BP_LookAtCamera_C.GetCamera
-// (Exec, Native, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UCameraComponent*        Camera                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void ABP_LookAtCamera_C::GetCamera(class UCameraComponent** Camera)
 	ABP_LookAtCamera_C_GetCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ABP_LookAtCamera_C::GetCamera(class UCameraComponent** Camera)
 
 
 // Function BP_LookAtCamera.BP_LookAtCamera_C.HitCheck
-// (NetReliable, Exec, Event, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_LookAtCamera_C::HitCheck()
 {
@@ -54,11 +53,11 @@ void ABP_LookAtCamera_C::HitCheck()
 
 
 // Function BP_LookAtCamera.BP_LookAtCamera_C.GetLocus
-// (NetResponse, Static, NetMulticast, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FVector>         Locus                          (Parm, OutParm, ZeroConstructor)
 
-void ABP_LookAtCamera_C::STATIC_GetLocus(TArray<struct FVector>* Locus)
+void ABP_LookAtCamera_C::GetLocus(TArray<struct FVector>* Locus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LookAtCamera.BP_LookAtCamera_C.GetLocus");
 
@@ -76,7 +75,7 @@ void ABP_LookAtCamera_C::STATIC_GetLocus(TArray<struct FVector>* Locus)
 
 
 // Function BP_LookAtCamera.BP_LookAtCamera_C.TargetIsBehaindPlayer
-// (NetRequest, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -98,7 +97,7 @@ void ABP_LookAtCamera_C::TargetIsBehaindPlayer(bool* Result)
 
 
 // Function BP_LookAtCamera.BP_LookAtCamera_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_LookAtCamera_C::UserConstructionScript()
 {
@@ -115,7 +114,7 @@ void ABP_LookAtCamera_C::UserConstructionScript()
 
 
 // Function BP_LookAtCamera.BP_LookAtCamera_C.ReceiveBeginPlay
-// (NetReliable, Exec, Native, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_LookAtCamera_C::ReceiveBeginPlay()
 {
@@ -124,7 +123,6 @@ void ABP_LookAtCamera_C::ReceiveBeginPlay()
 	ABP_LookAtCamera_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,7 +131,7 @@ void ABP_LookAtCamera_C::ReceiveBeginPlay()
 
 
 // Function BP_LookAtCamera.BP_LookAtCamera_C.ReceiveTick
-// (NetRequest, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -145,7 +143,6 @@ void ABP_LookAtCamera_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,7 +151,7 @@ void ABP_LookAtCamera_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_LookAtCamera.BP_LookAtCamera_C.ExecuteUbergraph_BP_LookAtCamera
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -166,7 +163,6 @@ void ABP_LookAtCamera_C::ExecuteUbergraph_BP_LookAtCamera(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

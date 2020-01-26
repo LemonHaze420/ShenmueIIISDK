@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,7 +26,7 @@ public:
 
 
 	void STATIC_GetACCharacters(class UObject* __WorldContext, TArray<class ABP_S3_ACCharacter_C*>* Character);
-	void TeleportForceAnim(class ACharacter* Character, const struct FVector& DestLocation, const struct FRotator& DestRotation, float ForceAnimTime, class UObject* __WorldContext);
+	void STATIC_TeleportForceAnim(class ACharacter* Character, const struct FVector& DestLocation, const struct FRotator& DestRotation, float ForceAnimTime, class UObject* __WorldContext);
 	void STATIC_CalcFootprint(class UFootprintComponent_C* FootprintComponent, class USkeletalMeshComponent* MeshComponent, TEnumAsByte<ENEFootType> Type, class UObject* __WorldContext);
 };
 

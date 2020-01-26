@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,12 +39,12 @@ public:
 
 
 	void AddGameTime(float Time);
-	void STATIC_CheckNPCSpawn(bool* Success);
-	void STATIC_UserConstructionScript();
+	void CheckNPCSpawn(bool* Success);
+	void UserConstructionScript();
 	void BindNPCSpawn();
-	void STATIC_SpawnNPC(const struct FGameplayTag& NPCID);
-	void STATIC_UnspawnNPC(const struct FGameplayTag& NPCID);
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void SpawnNPC(const struct FGameplayTag& NPCID);
+	void UnspawnNPC(const struct FGameplayTag& NPCID);
+	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_JumpProcessActor(int EntryPoint);
 };

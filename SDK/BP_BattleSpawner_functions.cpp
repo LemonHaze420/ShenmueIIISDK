@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.EndBattle
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleSpawner_C::STATIC_EndBattle(TEnumAsByte<EBattleWinLoseResult> Result)
+void ABP_BattleSpawner_C::EndBattle(TEnumAsByte<EBattleWinLoseResult> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleSpawner.BP_BattleSpawner_C.EndBattle");
 
@@ -26,7 +26,6 @@ void ABP_BattleSpawner_C::STATIC_EndBattle(TEnumAsByte<EBattleWinLoseResult> Res
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void ABP_BattleSpawner_C::STATIC_EndBattle(TEnumAsByte<EBattleWinLoseResult> Res
 
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.StartBattleTask_FromData
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FDataTableRowHandle     BattleId                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FName                   WinEventID                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -67,12 +66,12 @@ void ABP_BattleSpawner_C::StartBattleTask_FromData(const struct FDataTableRowHan
 
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.RegisterMediator
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_BattleMediatorBase_C* Mediator                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleSpawner_C::STATIC_RegisterMediator(class ABP_BattleMediatorBase_C* Mediator, bool Add)
+void ABP_BattleSpawner_C::RegisterMediator(class ABP_BattleMediatorBase_C* Mediator, bool Add)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleSpawner.BP_BattleSpawner_C.RegisterMediator");
 
@@ -89,11 +88,11 @@ void ABP_BattleSpawner_C::STATIC_RegisterMediator(class ABP_BattleMediatorBase_C
 
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.OnBattleEndEvent
-// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleSpawner_C::STATIC_OnBattleEndEvent(TEnumAsByte<EBattleWinLoseResult> Result)
+void ABP_BattleSpawner_C::OnBattleEndEvent(TEnumAsByte<EBattleWinLoseResult> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleSpawner.BP_BattleSpawner_C.OnBattleEndEvent");
 
@@ -109,7 +108,7 @@ void ABP_BattleSpawner_C::STATIC_OnBattleEndEvent(TEnumAsByte<EBattleWinLoseResu
 
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.StartBattleTask
-// (Native, Event, Static, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   BattleId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   LevelID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -120,7 +119,7 @@ void ABP_BattleSpawner_C::STATIC_OnBattleEndEvent(TEnumAsByte<EBattleWinLoseResu
 // struct FLinearColor            FadeColor                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class ABP_BattleTaskBase_C*    Task                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleSpawner_C::STATIC_StartBattleTask(const struct FName& BattleId, const struct FName& LevelID, const struct FName& WinEventID, const struct FName& LoseEventID, bool FadeBetweenModes, class ABP_BattleMediatorBase_C* MediatorBase, const struct FLinearColor& FadeColor, class ABP_BattleTaskBase_C** Task)
+void ABP_BattleSpawner_C::StartBattleTask(const struct FName& BattleId, const struct FName& LevelID, const struct FName& WinEventID, const struct FName& LoseEventID, bool FadeBetweenModes, class ABP_BattleMediatorBase_C* MediatorBase, const struct FLinearColor& FadeColor, class ABP_BattleTaskBase_C** Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleSpawner.BP_BattleSpawner_C.StartBattleTask");
 
@@ -134,7 +133,6 @@ void ABP_BattleSpawner_C::STATIC_StartBattleTask(const struct FName& BattleId, c
 	params.FadeColor = FadeColor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,9 +144,9 @@ void ABP_BattleSpawner_C::STATIC_StartBattleTask(const struct FName& BattleId, c
 
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.LaunchDebugBattleImpl
-// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_BattleSpawner_C::STATIC_LaunchDebugBattleImpl()
+void ABP_BattleSpawner_C::LaunchDebugBattleImpl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleSpawner.BP_BattleSpawner_C.LaunchDebugBattleImpl");
 
@@ -163,11 +161,11 @@ void ABP_BattleSpawner_C::STATIC_LaunchDebugBattleImpl()
 
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.CheckBattleExist
-// (Net, NetRequest, Exec, NetResponse, Static, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Exist                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleSpawner_C::STATIC_CheckBattleExist(bool* Exist)
+void ABP_BattleSpawner_C::CheckBattleExist(bool* Exist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleSpawner.BP_BattleSpawner_C.CheckBattleExist");
 
@@ -185,16 +183,15 @@ void ABP_BattleSpawner_C::STATIC_CheckBattleExist(bool* Exist)
 
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.UserConstructionScript
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_BattleSpawner_C::STATIC_UserConstructionScript()
+void ABP_BattleSpawner_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleSpawner.BP_BattleSpawner_C.UserConstructionScript");
 
 	ABP_BattleSpawner_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,9 +200,9 @@ void ABP_BattleSpawner_C::STATIC_UserConstructionScript()
 
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.LaunchDebugBattle
-// (Exec, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_BattleSpawner_C::STATIC_LaunchDebugBattle()
+void ABP_BattleSpawner_C::LaunchDebugBattle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleSpawner.BP_BattleSpawner_C.LaunchDebugBattle");
 
@@ -220,11 +217,11 @@ void ABP_BattleSpawner_C::STATIC_LaunchDebugBattle()
 
 
 // Function BP_BattleSpawner.BP_BattleSpawner_C.ExecuteUbergraph_BP_BattleSpawner
-// (Net, NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleSpawner_C::STATIC_ExecuteUbergraph_BP_BattleSpawner(int EntryPoint)
+void ABP_BattleSpawner_C::ExecuteUbergraph_BP_BattleSpawner(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleSpawner.BP_BattleSpawner_C.ExecuteUbergraph_BP_BattleSpawner");
 

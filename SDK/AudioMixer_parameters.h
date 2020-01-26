@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,12 +41,6 @@ struct USynthComponent_SetSubmixSend_Params
 struct USynthComponent_IsPlaying_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
-struct USubmixEffectDynamicsProcessorPreset_SetSettings_Params
-{
-	struct FSubmixEffectDynamicsProcessorSettings      InSettings;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput
@@ -120,6 +114,12 @@ struct UAudioMixerBlueprintLibrary_AddMasterSubmixEffect_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	class USoundEffectSubmixPreset*                    SubmixEffectPreset;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
+struct USubmixEffectDynamicsProcessorPreset_SetSettings_Params
+{
+	struct FSubmixEffectDynamicsProcessorSettings      InSettings;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings

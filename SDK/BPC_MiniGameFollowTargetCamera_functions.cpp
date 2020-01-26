@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.FollowEnd
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameFollowTargetCamera_C::STATIC_FollowEnd()
+void UBPC_MiniGameFollowTargetCamera_C::FollowEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.FollowEnd");
 
 	UBPC_MiniGameFollowTargetCamera_C_FollowEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,16 +31,15 @@ void UBPC_MiniGameFollowTargetCamera_C::STATIC_FollowEnd()
 
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.FollowStart
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameFollowTargetCamera_C::STATIC_FollowStart()
+void UBPC_MiniGameFollowTargetCamera_C::FollowStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.FollowStart");
 
 	UBPC_MiniGameFollowTargetCamera_C_FollowStart_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,11 +48,11 @@ void UBPC_MiniGameFollowTargetCamera_C::STATIC_FollowStart()
 
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.SetCameraDefaultRelativeTransform
-// (NetReliable, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform              trans                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void UBPC_MiniGameFollowTargetCamera_C::STATIC_SetCameraDefaultRelativeTransform(struct FTransform* trans)
+void UBPC_MiniGameFollowTargetCamera_C::SetCameraDefaultRelativeTransform(struct FTransform* trans)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.SetCameraDefaultRelativeTransform");
 
@@ -72,11 +70,11 @@ void UBPC_MiniGameFollowTargetCamera_C::STATIC_SetCameraDefaultRelativeTransform
 
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.Update
-// (NetRequest, Exec, Native, NetResponse, Static, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameFollowTargetCamera_C::STATIC_Update(float DeltaSeconds)
+void UBPC_MiniGameFollowTargetCamera_C::Update(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.Update");
 
@@ -84,7 +82,6 @@ void UBPC_MiniGameFollowTargetCamera_C::STATIC_Update(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,16 +90,15 @@ void UBPC_MiniGameFollowTargetCamera_C::STATIC_Update(float DeltaSeconds)
 
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.ReceiveBeginPlay
-// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_MiniGameFollowTargetCamera_C::STATIC_ReceiveBeginPlay()
+void UBPC_MiniGameFollowTargetCamera_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.ReceiveBeginPlay");
 
 	UBPC_MiniGameFollowTargetCamera_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,11 +107,11 @@ void UBPC_MiniGameFollowTargetCamera_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.ReceiveTick
-// (Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameFollowTargetCamera_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UBPC_MiniGameFollowTargetCamera_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.ReceiveTick");
 
@@ -131,11 +127,11 @@ void UBPC_MiniGameFollowTargetCamera_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.SetCameraFollowTargetActor
-// (Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameFollowTargetCamera_C::STATIC_SetCameraFollowTargetActor(class AActor* Actor)
+void UBPC_MiniGameFollowTargetCamera_C::SetCameraFollowTargetActor(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.SetCameraFollowTargetActor");
 
@@ -151,11 +147,11 @@ void UBPC_MiniGameFollowTargetCamera_C::STATIC_SetCameraFollowTargetActor(class 
 
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.OnDestroyTargetActor
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  DestroyedActor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameFollowTargetCamera_C::STATIC_OnDestroyTargetActor(class AActor* DestroyedActor)
+void UBPC_MiniGameFollowTargetCamera_C::OnDestroyTargetActor(class AActor* DestroyedActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.OnDestroyTargetActor");
 
@@ -171,7 +167,7 @@ void UBPC_MiniGameFollowTargetCamera_C::STATIC_OnDestroyTargetActor(class AActor
 
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.ExecuteUbergraph_BPC_MiniGameFollowTargetCamera
-// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -183,7 +179,6 @@ void UBPC_MiniGameFollowTargetCamera_C::ExecuteUbergraph_BPC_MiniGameFollowTarge
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -192,16 +187,15 @@ void UBPC_MiniGameFollowTargetCamera_C::ExecuteUbergraph_BPC_MiniGameFollowTarge
 
 
 // Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.OnReturnDefaultCameraRotation__DelegateSignature
-// (Net, NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameFollowTargetCamera_C::STATIC_OnReturnDefaultCameraRotation__DelegateSignature()
+void UBPC_MiniGameFollowTargetCamera_C::OnReturnDefaultCameraRotation__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameFollowTargetCamera.BPC_MiniGameFollowTargetCamera_C.OnReturnDefaultCameraRotation__DelegateSignature");
 
 	UBPC_MiniGameFollowTargetCamera_C_OnReturnDefaultCameraRotation__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,16 +32,16 @@ public:
 
 	bool IsTalking();
 	void GetEnableIK(bool* bIKEnabled);
-	void STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy);
-	TEnumAsByte<ES3HandednessType> STATIC_GetProfileHandedness();
+	void SetEnableIK(bool bInIKEnabled, bool* dummy);
+	TEnumAsByte<ES3HandednessType> GetProfileHandedness();
 	bool ReturnOutOfWorld();
 	void IsInShelter(bool* Sheltered);
-	struct FString STATIC_GetProfileCharaName();
+	struct FString GetProfileCharaName();
 	void GetProfileDisplayName(struct FString* Display_Name, struct FString* Display_Rubi, struct FString* Display_Name_Alphabet);
-	TEnumAsByte<ES3CharacterGender> STATIC_GetProfileGender();
-	int STATIC_GetProfileWeight();
-	float STATIC_GetProfileHeight();
-	int STATIC_GetProfileAge();
+	TEnumAsByte<ES3CharacterGender> GetProfileGender();
+	int GetProfileWeight();
+	float GetProfileHeight();
+	int GetProfileAge();
 	void GetProfile(struct FS3CharacterProfile* Profile);
 	void DestroyComponentByTag(class UClass* ComponentClass, const struct FName& Tag);
 	void UserConstructionScript();

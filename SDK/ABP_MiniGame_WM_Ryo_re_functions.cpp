@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_MiniGame_WM_Ryo_re.ABP_MiniGame_WM_Ryo_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_BlendSpacePlayer_CFFE93D24228543E52D83C8FF436CC11
-// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_MiniGame_WM_Ryo_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_BlendSpacePlayer_CFFE93D24228543E52D83C8FF436CC11()
 {
@@ -31,9 +31,9 @@ void UABP_MiniGame_WM_Ryo_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_
 
 
 // Function ABP_MiniGame_WM_Ryo_re.ABP_MiniGame_WM_Ryo_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198
-// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable)
+// (BlueprintEvent)
 
-void UABP_MiniGame_WM_Ryo_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198()
+void UABP_MiniGame_WM_Ryo_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_WM_Ryo_re.ABP_MiniGame_WM_Ryo_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198");
 
@@ -48,7 +48,7 @@ void UABP_MiniGame_WM_Ryo_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergra
 
 
 // Function ABP_MiniGame_WM_Ryo_re.ABP_MiniGame_WM_Ryo_re_C.ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Protected, NetClient)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

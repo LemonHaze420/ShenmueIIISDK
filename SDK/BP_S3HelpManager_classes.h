@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ public:
 	class Uwgt_S3HelpWindow_C*                         helpWindow;                                               // 0x0340(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBW_MenuTimer_C*                             MenuTimer;                                                // 0x0348(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	TArray<struct FName>                               helpNameList;                                             // 0x0350(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               IsBusy;                                                   // 0x0360(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               isBusy;                                                   // 0x0360(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0361(0x0003) MISSED OFFSET
 	int                                                CurrentIndex;                                             // 0x0364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector2D                                   startCurPos;                                              // 0x0368(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
@@ -75,55 +75,55 @@ public:
 	}
 
 
-	int STATIC_GetPriority();
-	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
+	int GetPriority();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void SelectHelpInventoryTexture();
 	void SelectTexture();
-	bool STATIC_CheckValidRegistHelp();
+	bool CheckValidRegistHelp();
 	void GetHelpPriority(class AActor* Actor, ES3HelpPriority* Priority);
 	void SetPageButtonVisibility();
-	void STATIC_ChangePage(bool IsNext);
+	void ChangePage(bool IsNext);
 	void SetForceDisable(class AActor* Executor, bool Disable);
-	void STATIC_StartHelp(const struct FName& HelpId);
+	void StartHelp(const struct FName& HelpId);
 	void GetHelpName(struct FST_HelpRegisterInfo* Info, struct FName* Name);
-	void STATIC_PressDownOrUp(float DeltaSeconds);
-	void STATIC_CheckBlinkIcon();
+	void PressDownOrUp(float DeltaSeconds);
+	void CheckBlinkIcon();
 	void IsActivateHelp(class AActor* Actor, bool* Activate);
-	void STATIC_CanOpen(bool* CAN);
+	void CanOpen(bool* CAN);
 	void EndButtonVisibility(ESlateVisibility InVisibility);
-	void STATIC_RemoveHelpItemByActor(class AActor* Actor);
+	void RemoveHelpItemByActor(class AActor* Actor);
 	void RemoveHelpItem(const struct FString& HelpName);
-	void STATIC_AddHelpItem(class AActor* Actor, const struct FString& HelpName);
+	void AddHelpItem(class AActor* Actor, const struct FString& HelpName);
 	void EndMiniGame();
 	void makeWidget();
-	void STATIC_AddCategory();
-	void STATIC_makeCategoryList();
+	void AddCategory();
+	void makeCategoryList();
 	void AutoChangeCurrentOpenIndex();
-	void STATIC_UpdNowPosCursor();
+	void UpdNowPosCursor();
 	bool IsNoScrollRange();
-	void STATIC_ChangeCursorPos(int Index);
-	void STATIC_ChangeHelpImage(int Index);
-	void STATIC_ChangeStatus();
+	void ChangeCursorPos(int Index);
+	void ChangeHelpImage(int Index);
+	void ChangeStatus();
 	void ReturnStatus();
-	void STATIC_UserConstructionScript();
-	void STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_18(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_17(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_14(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_13(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchBottomButton_K2Node_InputActionEvent_12(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchRightButton_K2Node_InputActionEvent_11(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchLeftButton_K2Node_InputActionEvent_10(const struct FKey& Key);
+	void UserConstructionScript();
+	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_18(const struct FKey& Key);
+	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_17(const struct FKey& Key);
+	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(const struct FKey& Key);
+	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(const struct FKey& Key);
+	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_14(const struct FKey& Key);
+	void InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_13(const struct FKey& Key);
+	void InpActEvt_SearchBottomButton_K2Node_InputActionEvent_12(const struct FKey& Key);
+	void InpActEvt_SearchRightButton_K2Node_InputActionEvent_11(const struct FKey& Key);
+	void InpActEvt_SearchLeftButton_K2Node_InputActionEvent_10(const struct FKey& Key);
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void OnHelpWindowOpen();
 	void EndHelpActor(class AActor* Actor, unsigned char Value);
-	void STATIC_DecideDetectAction(ES3ActionIconType Type);
+	void DecideDetectAction(ES3ActionIconType Type);
 	void DownSelect();
 	void UpSelect();
 	void QuickHelp();
-	void STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_3(float AxisValue);
+	void InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_3(float AxisValue);
 	void ExecuteUbergraph_BP_S3HelpManager(int EntryPoint);
 	void ED_HelpEnd__DelegateSignature();
 };

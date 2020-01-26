@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_MemopadNavigationUI.BPF_MemopadNavigationUI_C.BPF_UpdateMemopadShoulderUIGlow2
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInstanceDynamic* Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Alpha                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -40,14 +40,14 @@ void UBPF_MemopadNavigationUI_C::STATIC_BPF_UpdateMemopadShoulderUIGlow2(class U
 
 
 // Function BPF_MemopadNavigationUI.BPF_MemopadNavigationUI_C.BPF_UpdateMemopadShoulderUIGlow
-// (Native, Event, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInstanceDynamic* Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UImage*                  AlphaSource                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           bInteractable                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MemopadNavigationUI_C::BPF_UpdateMemopadShoulderUIGlow(class UMaterialInstanceDynamic* Material, class UImage* AlphaSource, bool bInteractable, class UObject* __WorldContext)
+void UBPF_MemopadNavigationUI_C::STATIC_BPF_UpdateMemopadShoulderUIGlow(class UMaterialInstanceDynamic* Material, class UImage* AlphaSource, bool bInteractable, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MemopadNavigationUI.BPF_MemopadNavigationUI_C.BPF_UpdateMemopadShoulderUIGlow");
 
@@ -58,7 +58,6 @@ void UBPF_MemopadNavigationUI_C::BPF_UpdateMemopadShoulderUIGlow(class UMaterial
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -67,7 +66,7 @@ void UBPF_MemopadNavigationUI_C::BPF_UpdateMemopadShoulderUIGlow(class UMaterial
 
 
 // Function BPF_MemopadNavigationUI.BPF_MemopadNavigationUI_C.BPF_InitMemopadShoulderUI
-// (NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UImage*                  Right                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UImage*                  Left                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -75,7 +74,7 @@ void UBPF_MemopadNavigationUI_C::BPF_UpdateMemopadShoulderUIGlow(class UMaterial
 // class UMaterialInstanceDynamic* RightMaterial                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstanceDynamic* LeftMaterial                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MemopadNavigationUI_C::BPF_InitMemopadShoulderUI(class UImage* Right, class UImage* Left, class UObject* __WorldContext, class UMaterialInstanceDynamic** RightMaterial, class UMaterialInstanceDynamic** LeftMaterial)
+void UBPF_MemopadNavigationUI_C::STATIC_BPF_InitMemopadShoulderUI(class UImage* Right, class UImage* Left, class UObject* __WorldContext, class UMaterialInstanceDynamic** RightMaterial, class UMaterialInstanceDynamic** LeftMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MemopadNavigationUI.BPF_MemopadNavigationUI_C.BPF_InitMemopadShoulderUI");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,15 +27,15 @@ public:
 
 
 	void PrelaunchBattle(bool* dummy);
-	void STATIC_SelectLoadingHint(bool* Found, struct FST_LoadingHintWindowParam* Hint);
+	void SelectLoadingHint(bool* Found, struct FST_LoadingHintWindowParam* Hint);
 	int CountHeldRecoveryItems();
 	bool AllowsRecoveryItems();
 	void IsSparring(bool* Enabled);
 	void GetRequiredLevels(TArray<struct FName>* Levels, bool* OneOrMore);
-	void STATIC_StartLoadingLaunchData(class UBTL_LaunchParameters_C** LaunchDataObject);
-	void STATIC_CreateLaunchDataObject(class UBTL_LaunchParameters_C** Object);
-	void STATIC_GetBattleID(struct FName* ID);
-	void STATIC_StartBattle(class ABP_BattleManagerBase_C* BattleManager, class UBTL_LaunchParameters_C* LaunchData, bool* dummy);
+	void StartLoadingLaunchData(class UBTL_LaunchParameters_C** LaunchDataObject);
+	void CreateLaunchDataObject(class UBTL_LaunchParameters_C** Object);
+	void GetBattleID(struct FName* ID);
+	void StartBattle(class ABP_BattleManagerBase_C* BattleManager, class UBTL_LaunchParameters_C* LaunchData, bool* dummy);
 	void ShutdownBattle(class ABP_BattleManagerBase_C* Manager, bool* dummy);
 	void UserConstructionScript();
 };

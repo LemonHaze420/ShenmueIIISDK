@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QTEFreeCommandButton.WBP_QTEFreeCommandButton_C.PlayBlink
-// (Exec, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_QTEFreeCommandButton_C::PlayBlink()
 {
@@ -23,7 +23,6 @@ void UWBP_QTEFreeCommandButton_C::PlayBlink()
 	UWBP_QTEFreeCommandButton_C_PlayBlink_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void UWBP_QTEFreeCommandButton_C::PlayBlink()
 
 
 // Function WBP_QTEFreeCommandButton.WBP_QTEFreeCommandButton_C.SetButtonImage
-// (NetRequest, Exec, Event, NetResponse, Private, NetServer, NetClient)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -52,7 +51,7 @@ void UWBP_QTEFreeCommandButton_C::SetButtonImage(class UTexture2D* Image)
 
 
 // Function WBP_QTEFreeCommandButton.WBP_QTEFreeCommandButton_C.PlayInput
-// (Net, Exec, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_QTEFreeCommandButton_C::PlayInput()
 {
@@ -61,7 +60,6 @@ void UWBP_QTEFreeCommandButton_C::PlayInput()
 	UWBP_QTEFreeCommandButton_C_PlayInput_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,9 +68,9 @@ void UWBP_QTEFreeCommandButton_C::PlayInput()
 
 
 // Function WBP_QTEFreeCommandButton.WBP_QTEFreeCommandButton_C.Reset
-// (Net, Exec, Event, Static, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWBP_QTEFreeCommandButton_C::STATIC_Reset()
+void UWBP_QTEFreeCommandButton_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommandButton.WBP_QTEFreeCommandButton_C.Reset");
 
@@ -87,7 +85,7 @@ void UWBP_QTEFreeCommandButton_C::STATIC_Reset()
 
 
 // Function WBP_QTEFreeCommandButton.WBP_QTEFreeCommandButton_C.Tick
-// (Net, Exec, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -109,7 +107,7 @@ void UWBP_QTEFreeCommandButton_C::Tick(const struct FGeometry& MyGeometry, float
 
 
 // Function WBP_QTEFreeCommandButton.WBP_QTEFreeCommandButton_C.ExecuteUbergraph_WBP_QTEFreeCommandButton
-// (Net, NetRequest, Exec, Native, NetMulticast, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -121,7 +119,6 @@ void UWBP_QTEFreeCommandButton_C::ExecuteUbergraph_WBP_QTEFreeCommandButton(int 
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

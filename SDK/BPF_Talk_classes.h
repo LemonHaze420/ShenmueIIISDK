@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void IsCharacterReadyAC(class AActor* TargetCharacter, class UObject* __WorldContext, bool* bReady);
+	void STATIC_IsCharacterReadyAC(class AActor* TargetCharacter, class UObject* __WorldContext, bool* bReady);
 	void STATIC_IsCharacterReadyTalk(class AActor* TargetCharacter, class AActor* TalkTo, class UObject* __WorldContext, bool* bReady);
-	void getS3TalkEventManager(class UObject* __WorldContext, class ABP_TalkEventManager_C** TalkEventManager);
+	void STATIC_getS3TalkEventManager(class UObject* __WorldContext, class ABP_TalkEventManager_C** TalkEventManager);
 };
 
 

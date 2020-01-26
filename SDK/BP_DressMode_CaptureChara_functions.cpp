@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.UserConstructionScript
-// (NetRequest, NetResponse, Public, Private, Protected, NetClient, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_DressMode_CaptureChara_C::UserConstructionScript()
 {
@@ -31,11 +31,11 @@ void ABP_DressMode_CaptureChara_C::UserConstructionScript()
 
 
 // Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ReceiveTick
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DressMode_CaptureChara_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_DressMode_CaptureChara_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ReceiveTick");
 
@@ -43,7 +43,6 @@ void ABP_DressMode_CaptureChara_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,16 +51,15 @@ void ABP_DressMode_CaptureChara_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_DressMode_CaptureChara_C::STATIC_ReceiveBeginPlay()
+void ABP_DressMode_CaptureChara_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ReceiveBeginPlay");
 
 	ABP_DressMode_CaptureChara_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,7 +68,7 @@ void ABP_DressMode_CaptureChara_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ExecuteUbergraph_BP_DressMode_CaptureChara
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -67,39 +67,39 @@ public:
 
 
 	void DisableCheckSuspendTime();
-	void STATIC_SetEnabledPlayFishing(bool bEnabledPlayFishing);
-	void STATIC_GetEnabledPlayFishing(bool* bEnabled);
-	void STATIC_UpdateLimitTIme();
-	void STATIC_ResetRentalData();
-	void STATIC_InitializeRentalData();
+	void SetEnabledPlayFishing(bool bEnabledPlayFishing);
+	void GetEnabledPlayFishing(bool* bEnabled);
+	void UpdateLimitTIme();
+	void ResetRentalData();
+	void InitializeRentalData();
 	void SetEnabledPlayerControl(bool Condition);
-	void STATIC_CreateReatalEndPop();
-	void STATIC_ResetTimeLimit();
+	void CreateReatalEndPop();
+	void ResetTimeLimit();
 	void StartUpdateResult(TArray<struct FST_Fishing_ResultFishData>* result_fish_array);
-	void STATIC_SetResultFishArray(TArray<struct FST_Fishing_ResultFishData>* result_fish_array);
-	void STATIC_SetNowShopData();
+	void SetResultFishArray(TArray<struct FST_Fishing_ResultFishData>* result_fish_array);
+	void SetNowShopData();
 	void SpawnSequenceActor(class ULevelSequence* Sequence, class AActor* AttachParent, class ABP_SpawnableSequenceActor_C** SpawnObj);
 	void GetSellPosition(struct FVector* pos);
-	void STATIC_GetResultRank(int* Rank);
-	void STATIC_CreateShopResult();
-	void STATIC_UpdateShopResult();
+	void GetResultRank(int* Rank);
+	void CreateShopResult();
+	void UpdateShopResult();
 	void IsPlayingFishing(bool* IsFishing);
-	void STATIC_LoadFishingACScript(int ShopIndex, int ResultRank, bool* Success);
+	void LoadFishingACScript(int ShopIndex, int ResultRank, bool* Success);
 	void GetCurrentShopID(int* shop_id);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ResetToolsData();
 	void Event_JumpToShopResult();
-	void STATIC_OnEndJumpToShop(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_OnEndJumpToSavePos(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void OnEndJumpToShop(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void OnEndJumpToSavePos(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ReturnFishingTools(bool UseDialog);
 	void DialogInputTimeOut();
 	void EndFishing();
 	void PlayShopAC(int ResultRank);
 	void OnInputButton(class AActor* Actor);
 	void OnLoadACScript(const struct FString& LoadId, class UObject* LoadedObject);
-	void STATIC_FlagChanged(int ArrayIndex, int SetFlags);
+	void FlagChanged(int ArrayIndex, int SetFlags);
 	void OnFinishedSequence(class ULevelSequencePlayer* LevelSequencePlayer);
 	void ExecuteUbergraph_BP_MiniGame_FishingManager(int EntryPoint);
 };

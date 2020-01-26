@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,10 +47,10 @@ public:
 	}
 
 
-	bool STATIC_ShouldDelayHPCheckFor(TEnumAsByte<EBattleWinLoseResult> Result);
+	bool ShouldDelayHPCheckFor(TEnumAsByte<EBattleWinLoseResult> Result);
 	void ConvertActorsToIDs();
 	void ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BPC_BattleConditions(int EntryPoint);
+	void ExecuteUbergraph_BPC_BattleConditions(int EntryPoint);
 };
 
 

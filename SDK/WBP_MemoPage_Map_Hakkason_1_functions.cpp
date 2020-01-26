@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.SetNewPosition
-// (NetRequest, Exec, Native, Event, Static, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextBlock*              Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector2D               NewPosition                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UWBP_MemoPage_Map_Hakkason_0_C::STATIC_SetNewPosition(class UTextBlock* Text, const struct FVector2D& NewPosition)
+void UWBP_MemoPage_Map_Hakkason_0_C::SetNewPosition(class UTextBlock* Text, const struct FVector2D& NewPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.SetNewPosition");
 
@@ -28,7 +28,6 @@ void UWBP_MemoPage_Map_Hakkason_0_C::STATIC_SetNewPosition(class UTextBlock* Tex
 	params.NewPosition = NewPosition;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,16 +36,15 @@ void UWBP_MemoPage_Map_Hakkason_0_C::STATIC_SetNewPosition(class UTextBlock* Tex
 
 
 // Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.Construct
-// (Net, Exec, Native, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_MemoPage_Map_Hakkason_0_C::STATIC_Construct()
+void UWBP_MemoPage_Map_Hakkason_0_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.Construct");
 
 	UWBP_MemoPage_Map_Hakkason_0_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +53,7 @@ void UWBP_MemoPage_Map_Hakkason_0_C::STATIC_Construct()
 
 
 // Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.ExecuteUbergraph_WBP_MemoPage_Map_Hakkason_1
-// (NetReliable, Exec, Event, NetResponse, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

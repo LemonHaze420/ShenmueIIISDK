@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,34 +45,34 @@ public:
 
 
 	void IsNextStock(const struct FName& CheckId, bool* bAvailable);
-	void STATIC_GetPopupInfoByID(int PopupId, bool* bSuccess, struct FST_PopupItemInfo* Info, int* ArrayIndex);
+	void GetPopupInfoByID(int PopupId, bool* bSuccess, struct FST_PopupItemInfo* Info, int* ArrayIndex);
 	void CanPopupUI(bool* bCan);
 	void IsCheckBet(const struct FName& CheckId, bool* bAvailable);
-	void STATIC_IsCheckMoney(const struct FName& CheckId, bool* bAvailable);
+	void IsCheckMoney(const struct FName& CheckId, bool* bAvailable);
 	void ForceHidePopup();
-	void STATIC_ShowPopupItem(const struct FName& ItemId, float WaitTime, bool bDisableAutoHide, bool bApplyData, int* PopupId);
-	void STATIC_HidePopup(int PopupId);
+	void ShowPopupItem(const struct FName& ItemId, float WaitTime, bool bDisableAutoHide, bool bApplyData, int* PopupId);
+	void HidePopup(int PopupId);
 	void FinishUI();
-	void STATIC_StartPopup();
-	void STATIC_StepWaitForEndEvent();
-	void STATIC_StepShowUI();
-	void STATIC_StepWaitTimeCheck();
+	void StartPopup();
+	void StepWaitForEndEvent();
+	void StepShowUI();
+	void StepWaitTimeCheck();
 	void StepStackCheck();
-	void STATIC_IsCheckItemId(const struct FName& CheckId, bool* bAvailable);
+	void IsCheckItemId(const struct FName& CheckId, bool* bAvailable);
 	void IncrementPopupId(int* PopupId);
 	void ShowPopupMoney(int IncreaseOrDecreaseMoney, float WaitTime, bool bDisableAutoHide, TEnumAsByte<EN_ValueType> ValueType, int* PopupId);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void SetupItemUI(const struct FName& ItemId, bool bAutoClose, int Quantity, bool bApplyData);
 	void SetupMoneyUI(int HaveMoney, int IncreaseOrDecreaseMoney, bool bAutoClose, TEnumAsByte<EN_ValueType> ValueType);
-	void STATIC_OnClosedItemNameDisp();
-	void STATIC_OnFinishedUI();
-	void STATIC_ClearHandle_OnFinishedUI();
-	void STATIC_Evt_StartAnmEnd();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_BP_PopupItem(int EntryPoint);
-	void STATIC_OnFinishedPopupDispatcher__DelegateSignature(int PopupId);
-	void STATIC_OnAllFinishedPopupDispatcher__DelegateSignature();
+	void OnClosedItemNameDisp();
+	void OnFinishedUI();
+	void ClearHandle_OnFinishedUI();
+	void Evt_StartAnmEnd();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BP_PopupItem(int EntryPoint);
+	void OnFinishedPopupDispatcher__DelegateSignature(int PopupId);
+	void OnAllFinishedPopupDispatcher__DelegateSignature();
 };
 
 

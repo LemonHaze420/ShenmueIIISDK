@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ public:
 	}
 
 
-	ES3Platform GetVirtualUIPlatform(class UObject* __WorldContext);
+	ES3Platform STATIC_GetVirtualUIPlatform(class UObject* __WorldContext);
 };
 
 

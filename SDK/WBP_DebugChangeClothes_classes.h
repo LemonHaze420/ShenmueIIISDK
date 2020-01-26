@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,17 +41,17 @@ public:
 	}
 
 
-	void STATIC_CreateFittingInfo(const struct FST_ClothesFittingInfo& OverrideInfo, bool RYO, TArray<struct FST_ClothesFittingInfo>* Array);
-	void STATIC_SetFocus();
+	void CreateFittingInfo(const struct FST_ClothesFittingInfo& OverrideInfo, bool RYO, TArray<struct FST_ClothesFittingInfo>* Array);
+	void SetFocus();
 	struct FText GetCurrentStatus();
 	void IncrementLoop(int Max, int* Index, int* Value);
 	void ChangePlayerModel();
 	void ChangeCloth(const struct FString& InTarget);
-	void STATIC_ChangeTarget();
-	struct FEventReply STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	struct FEventReply STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void STATIC_Construct();
-	void STATIC_Destruct();
+	void ChangeTarget();
+	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void Construct();
+	void Destruct();
 	void ExecuteUbergraph_WBP_DebugChangeClothes(int EntryPoint);
 };
 

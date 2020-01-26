@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,45 +62,45 @@ public:
 	}
 
 
-	void STATIC_AdvanceActionTo(float InTargetTime);
+	void AdvanceActionTo(float InTargetTime);
 	float GetActionJustTimingTime();
 	float GetActionAnimationLength();
-	void STATIC_PlayAction();
-	void STATIC_SetupActionPlaySpeed();
-	void STATIC_SetActionPlayTime(float InTime);
+	void PlayAction();
+	void SetupActionPlaySpeed();
+	void SetActionPlayTime(float InTime);
 	void SetTimeGaugeBgMaterialParameter(class UImage* InImage, float InAngle, float InRate);
-	void STATIC_SetJustTimingRate(float InStartRate, float InEndRate);
-	void STATIC_UpdateAnimationState();
-	float STATIC_GetInAnimationLength();
+	void SetJustTimingRate(float InStartRate, float InEndRate);
+	void UpdateAnimationState();
+	float GetInAnimationLength();
 	void SetButtonImageFromInputName(const struct FName& InputName);
-	void STATIC_SetAutoOutOkAfterInputSuccess(bool IsAutoOut);
+	void SetAutoOutOkAfterInputSuccess(bool IsAutoOut);
 	void SetTimeGaugeRate(float Rate);
-	bool STATIC_IsPlayingOut();
-	bool STATIC_IsPlayingIn();
-	void STATIC_PlayOutNg(bool WhetherStopAction);
-	void STATIC_PlayOutOk();
-	void STATIC_StartAnimationPlayList();
-	void STATIC_PlayAnimationPlayList(bool* isPlay);
-	void STATIC_InitializeAnimationSet();
-	void STATIC_PlayIn();
-	bool STATIC_IsPlayingInputSuccess();
-	void STATIC_ResetAllButtonZOrder();
+	bool IsPlayingOut();
+	bool IsPlayingIn();
+	void PlayOutNg(bool WhetherStopAction);
+	void PlayOutOk();
+	void StartAnimationPlayList();
+	void PlayAnimationPlayList(bool* isPlay);
+	void InitializeAnimationSet();
+	void PlayIn();
+	bool IsPlayingInputSuccess();
+	void ResetAllButtonZOrder();
 	void ResetButtonZOrder(class UWBP_QTEFreeCommandButton_C* TargetButton);
 	void SetButtonZOrderToFront(class UWBP_QTEFreeCommandButton_C* TargetButton);
-	void STATIC_GetButtonImage(const struct FName& InputName, class UTexture2D** Image);
+	void GetButtonImage(const struct FName& InputName, class UTexture2D** Image);
 	void PlayInputSuccess(bool IsAutoHide);
 	void Reset();
-	void STATIC_Construct();
-	void STATIC_OnButtonInputAnimationFinished();
-	void STATIC_OnFinishedCurrentAnimation();
-	void STATIC_BindOnFinishedCurrentAnimation();
-	void STATIC_UnbindOnFinishedCurrentAnimation();
-	void STATIC_BindOnInAnimationFinished();
-	void STATIC_OnInAnimationFinished();
-	void STATIC_UnbindOnInAnimationFinished();
-	void STATIC_BindOnOutAnimationFinished();
-	void STATIC_OnOutAnimationFinished();
-	void STATIC_UnbindOnOutAnimationFinished();
+	void Construct();
+	void OnButtonInputAnimationFinished();
+	void OnFinishedCurrentAnimation();
+	void BindOnFinishedCurrentAnimation();
+	void UnbindOnFinishedCurrentAnimation();
+	void BindOnInAnimationFinished();
+	void OnInAnimationFinished();
+	void UnbindOnInAnimationFinished();
+	void BindOnOutAnimationFinished();
+	void OnOutAnimationFinished();
+	void UnbindOnOutAnimationFinished();
 	void ExecuteUbergraph_WBP_QTETiming(int EntryPoint);
 	void OnOutAnimationFinishedDispatcher__DelegateSignature();
 	void OnInAnimationFinishedDispatcher__DelegateSignature();

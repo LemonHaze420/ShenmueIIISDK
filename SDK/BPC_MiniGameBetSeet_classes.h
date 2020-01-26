@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,11 +27,11 @@ public:
 	}
 
 
-	void STATIC_GetRenderTarget(class UTextureRenderTarget2D** RefRenderTarget);
+	void GetRenderTarget(class UTextureRenderTarget2D** RefRenderTarget);
 	void InitializeRenderTarget(int Width, int Height);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BPC_MiniGameBetSeet(int EntryPoint);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BPC_MiniGameBetSeet(int EntryPoint);
 };
 
 

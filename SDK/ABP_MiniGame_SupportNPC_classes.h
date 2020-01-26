@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,25 +56,25 @@ public:
 	}
 
 
-	void STATIC_SetBlockAction(bool bBlockAction);
-	void STATIC_IsBlockAction(bool* IsAction);
-	void STATIC_ChangeAnim(class UAnimSequenceBase* Anim);
+	void SetBlockAction(bool bBlockAction);
+	void IsBlockAction(bool* IsAction);
+	void ChangeAnim(class UAnimSequenceBase* Anim);
 	void SetLookAtLocation(const struct FVector& LookAtLocation);
-	void STATIC_Finalize();
+	void Finalize();
 	void Initialize(class UAnimSequenceBase* AnimIdle);
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_494534884C266C388A80F3B7BFCE5829();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_BlendListByInt_BA32322944E76EDA95F923A3E0FEA094();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_99AEF4FC4870A13BA2259F9BE265EC01();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_6396293C4212A647DB5E98BE4BDF7D90();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_FE78588F42E05D1601917A85D5EF0E00();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_0C943C0E467DD3B6B51E038DBCFD50DC();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_F9516E7D4BA35AECDBAA789D688B23AF();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_35C3E4AB45E86A307EDA428B25391388();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_3FC9E51644D08B3E760BD281AB3E13F5();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_494534884C266C388A80F3B7BFCE5829();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_BlendListByInt_BA32322944E76EDA95F923A3E0FEA094();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_99AEF4FC4870A13BA2259F9BE265EC01();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_6396293C4212A647DB5E98BE4BDF7D90();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_FE78588F42E05D1601917A85D5EF0E00();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_0C943C0E467DD3B6B51E038DBCFD50DC();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_F9516E7D4BA35AECDBAA789D688B23AF();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_35C3E4AB45E86A307EDA428B25391388();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_3FC9E51644D08B3E760BD281AB3E13F5();
 	void BlueprintUpdateAnimation(float DeltaTimeX);
-	void STATIC_AnimNotify_StartTransitionIdlle();
-	void STATIC_AnimNotify_EndTransitionIdle();
-	void STATIC_AnimNotify_StartTransitionActionToIdle();
+	void AnimNotify_StartTransitionIdlle();
+	void AnimNotify_EndTransitionIdle();
+	void AnimNotify_StartTransitionActionToIdle();
 	void ExecuteUbergraph_ABP_MiniGame_SupportNPC(int EntryPoint);
 };
 

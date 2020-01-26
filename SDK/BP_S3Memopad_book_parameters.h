@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -407,7 +407,7 @@ struct ABP_S3Memopad_book_C_fade__UpdateFunc_Params
 };
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.򠪦􆖐񍳔_
-struct ABP_S3Memopad_book_C__UnknownFunc01__Params
+struct ABP_S3Memopad_book_C_򠪦􆖐񍳔__Params
 {
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,14 +38,14 @@ public:
 	}
 
 
-	void STATIC_IsBusy(bool* Result);
-	TEnumAsByte<ECarouselRotate> STATIC_GetDirectionFromString(const struct FText& Text, bool Reverse);
+	void isBusy(bool* Result);
+	TEnumAsByte<ECarouselRotate> GetDirectionFromString(const struct FText& Text, bool Reverse);
 	void RotateExec();
 	void RequestRotate(TEnumAsByte<ECarouselRotate> Direction);
-	void STATIC_CreateActorList();
-	void STATIC_ReceiveBeginPlay();
+	void CreateActorList();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_BP_Carousel(int EntryPoint);
+	void ExecuteUbergraph_BP_Carousel(int EntryPoint);
 };
 
 

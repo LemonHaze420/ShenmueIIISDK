@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SelectCameraClass.TalkCam_SelectCameraClass_C.GetRandCameraClass
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_TalkCameraClassKind> newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UTalkCam_SelectCameraClass_C::STATIC_GetRandCameraClass(TEnumAsByte<EN_TalkCameraClassKind>* newParam)
+void UTalkCam_SelectCameraClass_C::GetRandCameraClass(TEnumAsByte<EN_TalkCameraClassKind>* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TalkCam_SelectCameraClass.TalkCam_SelectCameraClass_C.GetRandCameraClass");
 
@@ -36,7 +36,7 @@ void UTalkCam_SelectCameraClass_C::STATIC_GetRandCameraClass(TEnumAsByte<EN_Talk
 
 
 // Function TalkCam_SelectCameraClass.TalkCam_SelectCameraClass_C.ReceiveTickAI
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,7 +52,6 @@ void UTalkCam_SelectCameraClass_C::ReceiveTickAI(class AAIController* OwnerContr
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +60,7 @@ void UTalkCam_SelectCameraClass_C::ReceiveTickAI(class AAIController* OwnerContr
 
 
 // Function TalkCam_SelectCameraClass.TalkCam_SelectCameraClass_C.ExecuteUbergraph_TalkCam_SelectCameraClass
-// (Net, NetRequest, Exec, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

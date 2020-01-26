@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,12 +40,12 @@ public:
 	}
 
 
-	void STATIC_SetLookRotation(const struct FRotator& StartRotation);
+	void SetLookRotation(const struct FRotator& StartRotation);
 	void SetTargetSocket(const struct FName& Socket, float PanSpeed);
-	void STATIC_SetTargetActor(class AActor* Actor, float PanTime);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_Update();
-	void STATIC_ExecuteUbergraph_BPC_AutoFraming(int EntryPoint);
+	void SetTargetActor(class AActor* Actor, float PanTime);
+	void ReceiveBeginPlay();
+	void Update();
+	void ExecuteUbergraph_BPC_AutoFraming(int EntryPoint);
 };
 
 

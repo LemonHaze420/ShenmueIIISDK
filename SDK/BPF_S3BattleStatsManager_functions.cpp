@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_S3BattleStatsManager.BPF_S3BattleStatsManager_C.BPF_GetPlayerLevelStat
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3DerivedPlayerLevel*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -27,7 +27,6 @@ class US3DerivedPlayerLevel* UBPF_S3BattleStatsManager_C::STATIC_BPF_GetPlayerLe
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +37,7 @@ class US3DerivedPlayerLevel* UBPF_S3BattleStatsManager_C::STATIC_BPF_GetPlayerLe
 
 
 // Function BPF_S3BattleStatsManager.BPF_S3BattleStatsManager_C.BPF_GetPlayerAttackStat
-// (Net, NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3DerivedPlayerLevel*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -51,7 +50,6 @@ class US3DerivedPlayerLevel* UBPF_S3BattleStatsManager_C::STATIC_BPF_GetPlayerAt
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,7 +60,7 @@ class US3DerivedPlayerLevel* UBPF_S3BattleStatsManager_C::STATIC_BPF_GetPlayerAt
 
 
 // Function BPF_S3BattleStatsManager.BPF_S3BattleStatsManager_C.BPF_IsBattleStatsManagerValid
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -85,7 +83,7 @@ bool UBPF_S3BattleStatsManager_C::STATIC_BPF_IsBattleStatsManagerValid(class UOb
 
 
 // Function BPF_S3BattleStatsManager.BPF_S3BattleStatsManager_C.BPF_GetBattleStatsManager
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3BattleStatsManager*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -98,7 +96,6 @@ class US3BattleStatsManager* UBPF_S3BattleStatsManager_C::STATIC_BPF_GetBattleSt
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

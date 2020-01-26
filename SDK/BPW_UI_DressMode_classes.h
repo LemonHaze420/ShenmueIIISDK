@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -114,24 +114,24 @@ public:
 
 
 	void CheckVisibleArrow();
-	void STATIC_ResetCloth();
+	void ResetCloth();
 	void ResetRotation();
-	void STATIC_RotationModel(float axis_value);
-	void STATIC_UpdateCharaCloth(bool Apply);
-	void STATIC_Fitting();
-	void STATIC_MakeFittingInfo(TArray<struct FST_ClothesFittingInfo>* FittingInfo);
-	void STATIC_InitCloth();
+	void RotationModel(float Axis_Value);
+	void UpdateCharaCloth(bool Apply);
+	void Fitting();
+	void MakeFittingInfo(TArray<struct FST_ClothesFittingInfo>* FittingInfo);
+	void InitCloth();
 	void MakeList();
 	void SetCaptureCharaClothing();
-	void STATIC_PushDownButton();
+	void PushDownButton();
 	void ChangeClothing();
 	void PushRightLeftCursor(int Value);
-	void STATIC_PushRightButton();
-	void STATIC_PushUpDownCursor(int Value);
+	void PushRightButton();
+	void PushUpDownCursor(int Value);
 	void Construct();
-	void STATIC_ClothChanged(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
+	void ClothChanged(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
 	void BndEvt__FadeAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void STATIC_ExecuteUbergraph_BPW_UI_DressMode(int EntryPoint);
+	void ExecuteUbergraph_BPW_UI_DressMode(int EntryPoint);
 };
 
 

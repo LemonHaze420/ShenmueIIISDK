@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,6 +28,18 @@ enum class ETouchIndex : uint8_t
 	ETouchIndex__CursorPointerIndex = 10,
 	ETouchIndex__MAX_TOUCHES       = 11,
 	ETouchIndex__ETouchIndex_MAX   = 12
+};
+
+
+// Enum InputCore.ETouchType
+enum class ETouchType : uint8_t
+{
+	ETouchType__Began              = 0,
+	ETouchType__Moved              = 1,
+	ETouchType__Stationary         = 2,
+	ETouchType__Ended              = 3,
+	ETouchType__NumTypes           = 4,
+	ETouchType__ETouchType_MAX     = 5
 };
 
 
@@ -63,18 +75,6 @@ enum class EControllerHand : uint8_t
 	EControllerHand__Special10     = 16,
 	EControllerHand__ControllerHand_Count = 17,
 	EControllerHand__EControllerHand_MAX = 18
-};
-
-
-// Enum InputCore.ETouchType
-enum class ETouchType : uint8_t
-{
-	ETouchType__Began              = 0,
-	ETouchType__Moved              = 1,
-	ETouchType__Stationary         = 2,
-	ETouchType__Ended              = 3,
-	ETouchType__NumTypes           = 4,
-	ETouchType__ETouchType_MAX     = 5
 };
 
 

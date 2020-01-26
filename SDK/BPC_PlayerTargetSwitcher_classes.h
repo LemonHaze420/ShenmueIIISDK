@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,16 +43,16 @@ public:
 
 
 	void CachePawnData(class AActor* Pawn);
-	void STATIC_DoPlayerRequestedSwitch(class AActor* Pawn);
+	void DoPlayerRequestedSwitch(class AActor* Pawn);
 	void UpdateDetectAction();
-	void STATIC_Reset();
+	void Reset();
 	void FaceDirection(const struct FVector& Direction);
-	bool STATIC_IsNPCTalkative(class AActor* Target);
+	bool IsNPCTalkative(class AActor* Target);
 	void RequestManualDirection(const struct FVector& Direction);
 	void GetTargetCandidates(TArray<class AS3Character*>* OutNPCs, TArray<float>* OutScores);
 	void RequestSwitchTarget();
-	void STATIC_Update(class APawn* Pawn);
-	void STATIC_OnFaceDirection__DelegateSignature(const struct FVector& Direction);
+	void Update(class APawn* Pawn);
+	void OnFaceDirection__DelegateSignature(const struct FVector& Direction);
 };
 
 

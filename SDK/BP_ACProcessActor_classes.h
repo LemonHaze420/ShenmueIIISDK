@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,8 +40,8 @@ public:
 
 
 	void CheckPrepare(bool* Complete);
-	void STATIC_Finalize();
-	void STATIC_CheckLeadCharacter();
+	void Finalize();
+	void CheckLeadCharacter();
 	bool LoadLevels();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
@@ -49,7 +49,7 @@ public:
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void HideLoading();
 	void LevelLoaded(const struct FName& ID);
-	void STATIC_ExecuteUbergraph_BP_ACProcessActor(int EntryPoint);
+	void ExecuteUbergraph_BP_ACProcessActor(int EntryPoint);
 	void OnStartPlay__DelegateSignature();
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,10 +25,10 @@ public:
 	}
 
 
-	float STATIC_MakeExperienceMultiplier(TEnumAsByte<E_MiniGame_KungFuType> Type, float Ramp);
-	void STATIC_SetKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, int flag);
-	void STATIC_GetKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, int* ProgressNum);
-	void STATIC_AddKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, float ScoreRatio);
+	float MakeExperienceMultiplier(TEnumAsByte<E_MiniGame_KungFuType> Type, float Ramp);
+	void SetKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, int flag);
+	void GetKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, int* ProgressNum);
+	void AddKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, float ScoreRatio);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,10 +30,10 @@ public:
 	}
 
 
-	void STATIC_Update();
-	void STATIC_BndEvt__Difficulty_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature();
-	void STATIC_BndEvt__Difficulty_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature();
-	void STATIC_ExecuteUbergraph_BW_DebugBattleDifficulty(int EntryPoint);
+	void Update();
+	void BndEvt__Difficulty_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature();
+	void BndEvt__Difficulty_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature();
+	void ExecuteUbergraph_BW_DebugBattleDifficulty(int EntryPoint);
 };
 
 

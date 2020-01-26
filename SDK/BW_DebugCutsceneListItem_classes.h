@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,16 +35,16 @@ public:
 	}
 
 
-	void STATIC_StartCutscene();
-	void STATIC_SetupLastSelectedDebugMenuCutsceneID();
-	struct FString STATIC_GetCutsceneID();
-	void STATIC_SetFocusToButton();
-	struct FString STATIC_GetCutsceneListLabel();
+	void StartCutscene();
+	void SetupLastSelectedDebugMenuCutsceneID();
+	struct FString GetCutsceneID();
+	void SetFocusToButton();
+	struct FString GetCutsceneListLabel();
 	struct FText Get_Description_Text();
 	struct FText Get_MainButtonLabel_Text();
 	void Construct();
 	void BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_ExecuteUbergraph_BW_DebugCutsceneListItem(int EntryPoint);
+	void ExecuteUbergraph_BW_DebugCutsceneListItem(int EntryPoint);
 };
 
 

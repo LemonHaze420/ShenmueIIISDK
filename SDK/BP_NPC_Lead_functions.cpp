@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.GetPriority
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_NPC_Lead_C::STATIC_GetPriority()
+int ABP_NPC_Lead_C::GetPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.GetPriority");
 
@@ -35,7 +35,7 @@ int ABP_NPC_Lead_C::STATIC_GetPriority()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.GetDetectAction
-// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -56,11 +56,11 @@ TArray<struct FS3DetectActionParam> ABP_NPC_Lead_C::GetDetectAction()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.GetCurrentTargetSpeed
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_NPC_Lead_C::STATIC_GetCurrentTargetSpeed()
+float ABP_NPC_Lead_C::GetCurrentTargetSpeed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.GetCurrentTargetSpeed");
 
@@ -77,7 +77,7 @@ float ABP_NPC_Lead_C::STATIC_GetCurrentTargetSpeed()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.IsSitting
-// (Net, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -98,11 +98,11 @@ bool ABP_NPC_Lead_C::IsSitting()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.SetLookAheadSpline
-// (Net, NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USplineComponent*        spline                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_NPC_Lead_C::STATIC_SetLookAheadSpline(class USplineComponent* spline)
+void ABP_NPC_Lead_C::SetLookAheadSpline(class USplineComponent* spline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.SetLookAheadSpline");
 
@@ -110,7 +110,6 @@ void ABP_NPC_Lead_C::STATIC_SetLookAheadSpline(class USplineComponent* spline)
 	params.spline = spline;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,7 +118,7 @@ void ABP_NPC_Lead_C::STATIC_SetLookAheadSpline(class USplineComponent* spline)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.CanEnterBuilding
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_S3BuildingStaticMeshActor_C* Building                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -132,7 +131,6 @@ bool ABP_NPC_Lead_C::CanEnterBuilding(class ABP_S3BuildingStaticMeshActor_C* Bui
 	params.Building = Building;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,7 +141,7 @@ bool ABP_NPC_Lead_C::CanEnterBuilding(class ABP_S3BuildingStaticMeshActor_C* Bui
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.TeleportToLeavePoint
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPC_Lead_C::TeleportToLeavePoint()
 {
@@ -152,7 +150,6 @@ void ABP_NPC_Lead_C::TeleportToLeavePoint()
 	ABP_NPC_Lead_C_TeleportToLeavePoint_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,7 +158,7 @@ void ABP_NPC_Lead_C::TeleportToLeavePoint()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.StopMovement
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bInstant                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -181,11 +178,11 @@ void ABP_NPC_Lead_C::StopMovement(bool bInstant)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.IsIdle
-// (Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_NPC_Lead_C::STATIC_IsIdle()
+bool ABP_NPC_Lead_C::IsIdle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.IsIdle");
 
@@ -202,7 +199,7 @@ bool ABP_NPC_Lead_C::STATIC_IsIdle()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.GetEnableIK
-// (NetReliable, NetRequest, Exec, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bIKEnabled                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -224,12 +221,12 @@ void ABP_NPC_Lead_C::GetEnableIK(bool* bIKEnabled)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.SetEnableIK
-// (Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bInIKEnabled                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPC_Lead_C::STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy)
+void ABP_NPC_Lead_C::SetEnableIK(bool bInIKEnabled, bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.SetEnableIK");
 
@@ -248,18 +245,17 @@ void ABP_NPC_Lead_C::STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.GetAnimVelocity
-// (Net, NetRequest, Native, Event, Static, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Velocity                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPC_Lead_C::STATIC_GetAnimVelocity(float* Velocity)
+void ABP_NPC_Lead_C::GetAnimVelocity(float* Velocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.GetAnimVelocity");
 
 	ABP_NPC_Lead_C_GetAnimVelocity_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -271,7 +267,7 @@ void ABP_NPC_Lead_C::STATIC_GetAnimVelocity(float* Velocity)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.GetStairClimber
-// (NetRequest, Exec, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBPC_S3PlayerStairClimber_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -292,7 +288,7 @@ class UBPC_S3PlayerStairClimber_C* ABP_NPC_Lead_C::GetStairClimber()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.GetSpeed
-// (Net, NetReliable, Exec, Native, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Speed                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -303,7 +299,6 @@ void ABP_NPC_Lead_C::GetSpeed(float* Speed)
 	ABP_NPC_Lead_C_GetSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -315,11 +310,11 @@ void ABP_NPC_Lead_C::GetSpeed(float* Speed)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.SetTargetSpeed
-// (Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TargetSpeed                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPC_Lead_C::STATIC_SetTargetSpeed(float TargetSpeed)
+void ABP_NPC_Lead_C::SetTargetSpeed(float TargetSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.SetTargetSpeed");
 
@@ -335,7 +330,7 @@ void ABP_NPC_Lead_C::STATIC_SetTargetSpeed(float TargetSpeed)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.IsTalking
-// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -356,18 +351,17 @@ bool ABP_NPC_Lead_C::IsTalking()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.GetTalkRotation
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FRotator ABP_NPC_Lead_C::STATIC_GetTalkRotation()
+struct FRotator ABP_NPC_Lead_C::GetTalkRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.GetTalkRotation");
 
 	ABP_NPC_Lead_C_GetTalkRotation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -378,7 +372,7 @@ struct FRotator ABP_NPC_Lead_C::STATIC_GetTalkRotation()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.AddTurnAroundComponent
-// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBPC_TurnAround_C*       Component                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -400,9 +394,9 @@ void ABP_NPC_Lead_C::AddTurnAroundComponent(class UBPC_TurnAround_C** Component)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.UserConstructionScript
-// (Net, Exec, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_NPC_Lead_C::STATIC_UserConstructionScript()
+void ABP_NPC_Lead_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.UserConstructionScript");
 
@@ -417,7 +411,7 @@ void ABP_NPC_Lead_C::STATIC_UserConstructionScript()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.OnTalkFinished
-// (Net, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           interrupted                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -439,7 +433,7 @@ void ABP_NPC_Lead_C::OnTalkFinished(class US3TalkComponent* TalkComponent, bool 
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.OnTalkStart
-// (Net, NetReliable, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -459,7 +453,7 @@ void ABP_NPC_Lead_C::OnTalkStart(class US3TalkComponent* TalkComponent)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.Screen_Player
-// (NetReliable, Exec, Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPC_Lead_C::Screen_Player()
 {
@@ -468,7 +462,6 @@ void ABP_NPC_Lead_C::Screen_Player()
 	ABP_NPC_Lead_C_Screen_Player_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -477,7 +470,7 @@ void ABP_NPC_Lead_C::Screen_Player()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.Screen_NPC
-// (Net, NetRequest, Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_NPC_Lead_C::Screen_NPC()
 {
@@ -486,7 +479,6 @@ void ABP_NPC_Lead_C::Screen_NPC()
 	ABP_NPC_Lead_C_Screen_NPC_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -495,11 +487,11 @@ void ABP_NPC_Lead_C::Screen_NPC()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.OnFinishedTurnRotate
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBPC_TurnAround_C*       SelfTurnAroundComponent        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_NPC_Lead_C::STATIC_OnFinishedTurnRotate(class UBPC_TurnAround_C* SelfTurnAroundComponent)
+void ABP_NPC_Lead_C::OnFinishedTurnRotate(class UBPC_TurnAround_C* SelfTurnAroundComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.OnFinishedTurnRotate");
 
@@ -515,7 +507,7 @@ void ABP_NPC_Lead_C::STATIC_OnFinishedTurnRotate(class UBPC_TurnAround_C* SelfTu
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_NPC_Lead_C::ReceiveBeginPlay()
 {
@@ -524,7 +516,6 @@ void ABP_NPC_Lead_C::ReceiveBeginPlay()
 	ABP_NPC_Lead_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -533,11 +524,11 @@ void ABP_NPC_Lead_C::ReceiveBeginPlay()
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.ReceiveEndPlay
-// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPC_Lead_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_NPC_Lead_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.ReceiveEndPlay");
 
@@ -553,11 +544,11 @@ void ABP_NPC_Lead_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRe
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.DecideDetectAction
-// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPC_Lead_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
+void ABP_NPC_Lead_C::DecideDetectAction(ES3ActionIconType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.DecideDetectAction");
 
@@ -573,11 +564,11 @@ void ABP_NPC_Lead_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.ReceiveTick
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPC_Lead_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_NPC_Lead_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.ReceiveTick");
 
@@ -593,7 +584,7 @@ void ABP_NPC_Lead_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_0_OnStartStairUse__DelegateSignature
-// (Net, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_NPC_Lead_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_0_OnStartStairUse__DelegateSignature()
 {
@@ -602,7 +593,6 @@ void ABP_NPC_Lead_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent
 	ABP_NPC_Lead_C_BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_0_OnStartStairUse__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -611,7 +601,7 @@ void ABP_NPC_Lead_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_1_OnEndStairUse__DelegateSignature
-// (Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_NPC_Lead_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_1_OnEndStairUse__DelegateSignature()
 {
@@ -620,7 +610,6 @@ void ABP_NPC_Lead_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent
 	ABP_NPC_Lead_C_BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_1_OnEndStairUse__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -629,11 +618,11 @@ void ABP_NPC_Lead_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.HandleTeleportSucceeded
-// (Net, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           bIsATest                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPC_Lead_C::STATIC_HandleTeleportSucceeded(bool bIsATest)
+void ABP_NPC_Lead_C::HandleTeleportSucceeded(bool bIsATest)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead.BP_NPC_Lead_C.HandleTeleportSucceeded");
 
@@ -649,7 +638,7 @@ void ABP_NPC_Lead_C::STATIC_HandleTeleportSucceeded(bool bIsATest)
 
 
 // Function BP_NPC_Lead.BP_NPC_Lead_C.ExecuteUbergraph_BP_NPC_Lead
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

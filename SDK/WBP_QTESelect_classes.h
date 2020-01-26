@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,44 +61,44 @@ public:
 	}
 
 
-	void STATIC_StopLoopAnimation();
-	bool STATIC_IsPlayingLoopAnimation();
+	void StopLoopAnimation();
+	bool IsPlayingLoopAnimation();
 	void PlayLoopAnimation();
 	void UpdateAnimationState();
 	float GetInAnimationLength();
 	void SetButtonImageFromInputName(const struct FName& InputName, bool bRight);
-	void STATIC_SetAutoOutOkAfterInputSuccess(bool IsAutoOut);
-	void STATIC_SetTimeGaugeRate(float Rate);
-	void STATIC_InitializeAnimationSet();
-	bool STATIC_IsPlayingOut();
+	void SetAutoOutOkAfterInputSuccess(bool IsAutoOut);
+	void SetTimeGaugeRate(float Rate);
+	void InitializeAnimationSet();
+	bool IsPlayingOut();
 	void PlayOutNg();
-	void STATIC_PlayOutOk();
-	bool STATIC_IsPlayingIn();
-	void STATIC_PlayIn();
-	bool STATIC_IsPlayingInputSuccess();
+	void PlayOutOk();
+	bool IsPlayingIn();
+	void PlayIn();
+	bool IsPlayingInputSuccess();
 	void PlayInputSuccess(bool IsAutoHide, bool bRight);
-	void STATIC_Reset();
+	void Reset();
 	void StartAnimationPlayList();
 	void PlayAnimationPlayList(bool* isPlay);
 	void ResetAllButtonZOrder();
 	void ResetButtonZOrder(class UWBP_QTEFreeCommandButton_C* TargetButton);
 	void SetButtonZOrderToFront(class UWBP_QTEFreeCommandButton_C* TargetButton);
-	void STATIC_GetButtonImage(const struct FName& InputName, class UTexture2D** Image);
-	void STATIC_Construct();
-	void STATIC_OnButtonInputAnimationFinished();
-	void STATIC_BindOnFinishedCurrentAnimation();
-	void STATIC_OnFinishedCurrentAnimation();
-	void STATIC_UnbindOnFinishedCurrentAnimation();
-	void STATIC_BindOnInAnimationFinished();
-	void STATIC_OnInAnimationFinished();
-	void STATIC_UnbindOnInAnimationFinished();
-	void STATIC_BindOnOutAnimationFinished();
-	void STATIC_OnOutAnimationFinished();
-	void STATIC_UnbindOnOutAnimationFinished();
+	void GetButtonImage(const struct FName& InputName, class UTexture2D** Image);
+	void Construct();
+	void OnButtonInputAnimationFinished();
+	void BindOnFinishedCurrentAnimation();
+	void OnFinishedCurrentAnimation();
+	void UnbindOnFinishedCurrentAnimation();
+	void BindOnInAnimationFinished();
+	void OnInAnimationFinished();
+	void UnbindOnInAnimationFinished();
+	void BindOnOutAnimationFinished();
+	void OnOutAnimationFinished();
+	void UnbindOnOutAnimationFinished();
 	void ExecuteUbergraph_WBP_QTESelect(int EntryPoint);
-	void STATIC_OnOutAnimationFinishedDispatcher__DelegateSignature();
-	void STATIC_OnInAnimationFinishedDispatcher__DelegateSignature();
-	void STATIC_OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature();
+	void OnOutAnimationFinishedDispatcher__DelegateSignature();
+	void OnInAnimationFinishedDispatcher__DelegateSignature();
+	void OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature();
 };
 
 

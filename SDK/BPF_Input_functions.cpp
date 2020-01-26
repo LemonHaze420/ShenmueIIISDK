@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Input.BPF_Input_C.BPF_PadIndexToGeneralWindowButton
-// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3PadButtonIndex              Pad                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -29,7 +29,6 @@ TEnumAsByte<EN_GeneralWindow_Button> UBPF_Input_C::STATIC_BPF_PadIndexToGeneralW
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,7 +39,7 @@ TEnumAsByte<EN_GeneralWindow_Button> UBPF_Input_C::STATIC_BPF_PadIndexToGeneralW
 
 
 // Function BPF_Input.BPF_Input_C.BPF_GetCancelPadIndex
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, BlueprintCallable)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PadButtonIndex              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -63,7 +62,7 @@ ES3PadButtonIndex UBPF_Input_C::STATIC_BPF_GetCancelPadIndex(class UObject* __Wo
 
 
 // Function BPF_Input.BPF_Input_C.BPF_GetConfirmPadIndex
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, BlueprintCallable)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PadButtonIndex              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

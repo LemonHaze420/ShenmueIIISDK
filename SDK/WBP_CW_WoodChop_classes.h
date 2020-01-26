@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,13 +84,13 @@ public:
 	void SetLocalizeText(const struct FText& ExcellentText, const struct FText& UnbelievableText, const struct FText& FirewoodText, const struct FText& EarningsText);
 	void SetProgressCircleVisible(ESlateVisibility InVisibility);
 	void SetCircleProgress(float Value);
-	void STATIC_SetDebugVisible(bool Visible);
+	void SetDebugVisible(bool Visible);
 	void SetVolumeDebugText(int Type, float Volume);
-	void STATIC_SetSuccessedWoodNum(int WoodNum);
-	void STATIC_SetTimeProgress(float Time, float MaxTime);
-	void STATIC_DrawResult(int SuccessNum, int ResultNum);
+	void SetSuccessedWoodNum(int WoodNum);
+	void SetTimeProgress(float Time, float MaxTime);
+	void DrawResult(int SuccessNum, int ResultNum);
 	void Construct();
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void AppearExcellent();
 	void AppearUnbelievable();
 	void ExecuteUbergraph_WBP_CW_WoodChop(int EntryPoint);

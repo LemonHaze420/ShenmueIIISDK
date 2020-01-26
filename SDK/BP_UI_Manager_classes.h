@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ public:
 	bool                                               SubButton;                                                // 0x033B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               PayButton;                                                // 0x033C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x033D(0x0003) MISSED OFFSET
-	TArray<struct FST_ItemList>                        itemList;                                                 // 0x0340(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FST_ItemList>                        ItemList;                                                 // 0x0340(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	int                                                FocusItemNo;                                              // 0x0350(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                ItemListPage;                                             // 0x0354(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsL2;                                                     // 0x0358(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -43,31 +43,33 @@ public:
 
 	int GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
+	bool TestSpecialExchangeShop(TEnumAsByte<EN_IconType> ShopType, int Category);
+	bool EnableRightPanelSelection(class UBPW_UI_BaseWindow_C* InputPin);
 	void SetRotateIconVisiblity(bool Visible, bool* dummy);
-	void STATIC_PlaySE(TEnumAsByte<EN_ShopSE_List> SE);
+	void PlaySE(TEnumAsByte<EN_ShopSE_List> SE);
 	void GetText(const struct FName& Label, ES3TextPathType Type, struct FText* OutString);
 	void PushUp_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget);
-	void STATIC_PushDown_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget);
+	void PushDown_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget);
 	void PushLeft_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget);
 	void PushRight_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget);
-	void STATIC_MakeItemList(TArray<int>* ItemIDList, TArray<struct FST_ItemList>* itemList);
+	void MakeItemList(TArray<int>* ItemIDList, TArray<struct FST_ItemList>* ItemList);
 	void IsRegistDetectAction(bool Regist);
 	void UserConstructionScript();
 	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
 	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5(const struct FKey& Key);
-	void STATIC_PushButton(TEnumAsByte<EN_UI_Button> newParam);
-	void STATIC_InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_1(float AxisValue);
-	void STATIC_InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_2(float AxisValue);
-	void STATIC_InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1(float AxisValue);
-	void STATIC_InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_2(float AxisValue);
-	void STATIC_InpAxisKeyEvt_Gamepad_LeftX_K2Node_InputAxisKeyEvent_4(float AxisValue);
-	void STATIC_InpAxisKeyEvt_Gamepad_LeftY_K2Node_InputAxisKeyEvent_7(float AxisValue);
+	void InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
+	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5(const struct FKey& Key);
+	void PushButton(TEnumAsByte<EN_UI_Button> newParam);
+	void InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_1(float AxisValue);
+	void InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_2(float AxisValue);
+	void InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1(float AxisValue);
+	void InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_2(float AxisValue);
+	void InpAxisKeyEvt_Gamepad_LeftX_K2Node_InputAxisKeyEvent_4(float AxisValue);
+	void InpAxisKeyEvt_Gamepad_LeftY_K2Node_InputAxisKeyEvent_7(float AxisValue);
 	void ReceiveBeginPlay();
 	void ReceiveDestroyed();
 	void DecideDetectAction(ES3ActionIconType Type);
-	void STATIC_ExecuteUbergraph_BP_UI_Manager(int EntryPoint);
+	void ExecuteUbergraph_BP_UI_Manager(int EntryPoint);
 };
 
 

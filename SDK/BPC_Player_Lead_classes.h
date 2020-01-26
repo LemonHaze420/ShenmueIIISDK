@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,23 +41,23 @@ public:
 	}
 
 
-	class AS3Character* STATIC_GetFollower();
+	class AS3Character* GetFollower();
 	void UnpairFollower();
-	void STATIC_PairFollower(class AS3Character* Follower);
+	void PairFollower(class AS3Character* Follower);
 	void AutoFollowSpline(class AS3SplineMoveActor* SplineActor);
-	void STATIC_GetSpline(class AS3SplineMoveActor** SplineActor);
-	void STATIC_AllowBackwardsFollow(bool Enable);
+	void GetSpline(class AS3SplineMoveActor** SplineActor);
+	void AllowBackwardsFollow(bool Enable);
 	void GetMaxFollowSpeed(float OriginalMax, bool WantsToMatch, float* Matched);
-	void STATIC_SetAutoMove(bool Value);
+	void SetAutoMove(bool Value);
 	void PairLeader(class AS3SplineMoveActor* FollowSpline);
-	void STATIC_UnpairLeader();
+	void UnpairLeader();
 	void DeleteInvalidRefs();
-	void STATIC_GetMatchedSpeed(float OriginalSpeed, float* Matched);
+	void GetMatchedSpeed(float OriginalSpeed, float* Matched);
 	void CanBeFollowed(bool* bFollowable);
-	void STATIC_ValidateData();
-	void STATIC_ReceiveBeginPlay();
+	void ValidateData();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_Input_Move();
+	void Input_Move();
 	void ExecuteUbergraph_BPC_Player_Lead(int EntryPoint);
 };
 

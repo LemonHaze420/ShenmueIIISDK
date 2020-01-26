@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,16 +32,16 @@ public:
 	}
 
 
-	void STATIC_ToggleDebugDisplay();
+	void ToggleDebugDisplay();
 	void GetMaterialParams(struct FS3RainParam* RainParam);
-	void STATIC_ResetMaterialParams();
-	void STATIC_SetMaterialParams(float Strength1, float Strength2, float Strength3, float Speed, float OpacityMultiplier);
-	void STATIC_UserConstructionScript();
-	void STATIC_InpActEvt_Ctrl_R_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void ResetMaterialParams();
+	void SetMaterialParams(float Strength1, float Strength2, float Strength3, float Speed, float OpacityMultiplier);
+	void UserConstructionScript();
+	void InpActEvt_Ctrl_R_K2Node_InputKeyEvent_2(const struct FKey& Key);
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ToggleDisplay();
-	void STATIC_ExecuteUbergraph_BP_RainController(int EntryPoint);
+	void ExecuteUbergraph_BP_RainController(int EntryPoint);
 };
 
 

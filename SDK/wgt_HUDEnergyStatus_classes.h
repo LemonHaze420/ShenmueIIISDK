@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,12 +34,12 @@ public:
 	}
 
 
-	void STATIC_SetMinimapMode(bool Minimap);
+	void SetMinimapMode(bool MiniMap);
 	void SetVisible(bool Visible);
 	void FadeOut();
-	void STATIC_FadeIn();
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_PreConstruct(bool IsDesignTime);
+	void FadeIn();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_wgt_HUDEnergyStatus(int EntryPoint);
 };
 

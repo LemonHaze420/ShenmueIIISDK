@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Area.BPF_Area_C.getS3AreaLightManager
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3AreaLightManagerComponent* AreaLightManager               (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -27,7 +27,6 @@ void UBPF_Area_C::STATIC_getS3AreaLightManager(class UObject* __WorldContext, cl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,12 +38,12 @@ void UBPF_Area_C::STATIC_getS3AreaLightManager(class UObject* __WorldContext, cl
 
 
 // Function BPF_Area.BPF_Area_C.getS3AreaManager
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3AreaManager_C*     BP_S3AreaManager               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Area_C::getS3AreaManager(class UObject* __WorldContext, class ABP_S3AreaManager_C** BP_S3AreaManager)
+void UBPF_Area_C::STATIC_getS3AreaManager(class UObject* __WorldContext, class ABP_S3AreaManager_C** BP_S3AreaManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Area.BPF_Area_C.getS3AreaManager");
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.SetInPasswordEdit
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bValue                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PasswordConsoleBase_C::STATIC_SetInPasswordEdit(bool bValue)
+void UBPW_PasswordConsoleBase_C::SetInPasswordEdit(bool bValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.SetInPasswordEdit");
 
@@ -34,11 +34,11 @@ void UBPW_PasswordConsoleBase_C::STATIC_SetInPasswordEdit(bool bValue)
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.GetPasswordAsLabel
-// (Net, NetReliable, Event, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName UBPW_PasswordConsoleBase_C::STATIC_GetPasswordAsLabel()
+struct FName UBPW_PasswordConsoleBase_C::GetPasswordAsLabel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.GetPasswordAsLabel");
 
@@ -55,7 +55,7 @@ struct FName UBPW_PasswordConsoleBase_C::STATIC_GetPasswordAsLabel()
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.SetWidgetText
-// (NetReliable, NetRequest, Exec, NetResponse, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextBlock*              Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -77,16 +77,15 @@ void UBPW_PasswordConsoleBase_C::SetWidgetText(class UTextBlock* Widget, const s
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.SetInitialText
-// (Net, NetReliable, NetRequest, Exec, Native, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void UBPW_PasswordConsoleBase_C::STATIC_SetInitialText()
+void UBPW_PasswordConsoleBase_C::SetInitialText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.SetInitialText");
 
 	UBPW_PasswordConsoleBase_C_SetInitialText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +94,7 @@ void UBPW_PasswordConsoleBase_C::STATIC_SetInitialText()
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.MakeCommonDialogParam
-// (Net, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           Labels                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -104,7 +103,7 @@ void UBPW_PasswordConsoleBase_C::STATIC_SetInitialText()
 // int                            FontSize                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_GeneralWindowParam  Param                          (Parm, OutParm)
 
-void UBPW_PasswordConsoleBase_C::STATIC_MakeCommonDialogParam(class AActor* Executor, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, int FontSize, TArray<struct FName>* Labels, struct FST_GeneralWindowParam* Param)
+void UBPW_PasswordConsoleBase_C::MakeCommonDialogParam(class AActor* Executor, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, int FontSize, TArray<struct FName>* Labels, struct FST_GeneralWindowParam* Param)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.MakeCommonDialogParam");
 
@@ -128,7 +127,7 @@ void UBPW_PasswordConsoleBase_C::STATIC_MakeCommonDialogParam(class AActor* Exec
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.MakeTextArray
-// (Net, Event, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<struct FName>           LabelList                      (Parm, OutParm, ZeroConstructor)
 
@@ -150,13 +149,13 @@ void UBPW_PasswordConsoleBase_C::MakeTextArray(TArray<struct FName>* LabelList)
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.GetText
-// (Exec, Event, NetResponse, Static, NetMulticast, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBPW_PasswordConsoleBase_C::STATIC_GetText(const struct FName& Label, ES3TextPathType Type)
+struct FText UBPW_PasswordConsoleBase_C::GetText(const struct FName& Label, ES3TextPathType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.GetText");
 
@@ -175,9 +174,9 @@ struct FText UBPW_PasswordConsoleBase_C::STATIC_GetText(const struct FName& Labe
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.DispSecondDialog
-// (Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPW_PasswordConsoleBase_C::STATIC_DispSecondDialog()
+void UBPW_PasswordConsoleBase_C::DispSecondDialog()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.DispSecondDialog");
 
@@ -192,11 +191,11 @@ void UBPW_PasswordConsoleBase_C::STATIC_DispSecondDialog()
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.DispFirstDialog
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PasswordConsoleBase_C::STATIC_DispFirstDialog(bool Success)
+void UBPW_PasswordConsoleBase_C::DispFirstDialog(bool Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.DispFirstDialog");
 
@@ -204,7 +203,6 @@ void UBPW_PasswordConsoleBase_C::STATIC_DispFirstDialog(bool Success)
 	params.Success = Success;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -213,7 +211,7 @@ void UBPW_PasswordConsoleBase_C::STATIC_DispFirstDialog(bool Success)
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.PushRightButton
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPW_PasswordConsoleBase_C::PushRightButton()
 {
@@ -230,12 +228,12 @@ void UBPW_PasswordConsoleBase_C::PushRightButton()
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.Tick
-// (Net, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PasswordConsoleBase_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_PasswordConsoleBase_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.Tick");
 
@@ -252,12 +250,12 @@ void UBPW_PasswordConsoleBase_C::STATIC_Tick(const struct FGeometry& MyGeometry,
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.BndEvt__EditableTextBox_174_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature
-// (Net, NetReliable, Exec, Static, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PasswordConsoleBase_C::STATIC_BndEvt__EditableTextBox_174_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UBPW_PasswordConsoleBase_C::BndEvt__EditableTextBox_174_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.BndEvt__EditableTextBox_174_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
@@ -274,11 +272,11 @@ void UBPW_PasswordConsoleBase_C::STATIC_BndEvt__EditableTextBox_174_K2Node_Compo
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.FirstDialogEnd
-// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PasswordConsoleBase_C::STATIC_FirstDialogEnd(class AActor* Actor)
+void UBPW_PasswordConsoleBase_C::FirstDialogEnd(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.FirstDialogEnd");
 
@@ -294,11 +292,11 @@ void UBPW_PasswordConsoleBase_C::STATIC_FirstDialogEnd(class AActor* Actor)
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.SecondDialogEnd
-// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PasswordConsoleBase_C::STATIC_SecondDialogEnd(class AActor* Actor)
+void UBPW_PasswordConsoleBase_C::SecondDialogEnd(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.SecondDialogEnd");
 
@@ -314,16 +312,15 @@ void UBPW_PasswordConsoleBase_C::STATIC_SecondDialogEnd(class AActor* Actor)
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.Construct
-// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UBPW_PasswordConsoleBase_C::STATIC_Construct()
+void UBPW_PasswordConsoleBase_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.Construct");
 
 	UBPW_PasswordConsoleBase_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -332,11 +329,11 @@ void UBPW_PasswordConsoleBase_C::STATIC_Construct()
 
 
 // Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.ExecuteUbergraph_BPW_PasswordConsoleBase
-// (NetRequest, Native, NetResponse, Static, Protected, Delegate, HasDefaults, NetClient)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PasswordConsoleBase_C::STATIC_ExecuteUbergraph_BPW_PasswordConsoleBase(int EntryPoint)
+void UBPW_PasswordConsoleBase_C::ExecuteUbergraph_BPW_PasswordConsoleBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsoleBase.BPW_PasswordConsoleBase_C.ExecuteUbergraph_BPW_PasswordConsoleBase");
 
@@ -344,7 +341,6 @@ void UBPW_PasswordConsoleBase_C::STATIC_ExecuteUbergraph_BPW_PasswordConsoleBase
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

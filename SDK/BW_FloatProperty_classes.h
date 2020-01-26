@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,17 +49,17 @@ public:
 
 	void ClampNewValue(float InValue, float* OutValue);
 	struct FEventReply OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent);
-	void STATIC_SetFloatParameterValue(float NewValue, bool CallDispatcher);
-	float STATIC_GetFloatParameterValue();
+	void SetFloatParameterValue(float NewValue, bool CallDispatcher);
+	float GetFloatParameterValue();
 	struct FText GetParameterName();
-	void STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
+	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void GetMinMax();
 	void Construct();
 	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
 	void PropertyChanged();
 	void ExecuteUbergraph_BW_FloatProperty(int EntryPoint);
-	void STATIC_FloatPropertyChanged__DelegateSignature();
+	void FloatPropertyChanged__DelegateSignature();
 };
 
 

@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,6 +22,12 @@ struct ULevelSequencePlayer_CreateLevelSequencePlayer_Params
 	struct FMovieSceneSequencePlaybackSettings         Settings;                                                 // (Parm)
 	class ALevelSequenceActor*                         OutActor;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class ULevelSequencePlayer*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
+struct ULevelSequenceBurnInOptions_SetBurnIn_Params
+{
+	struct FSoftClassPath                              InBurnInClass;                                            // (Parm)
 };
 
 // Function LevelSequence.LevelSequenceActor.SetSequence
@@ -76,12 +82,6 @@ struct ALevelSequenceActor_AddBinding_Params
 	struct FMovieSceneObjectBindingID                  Binding;                                                  // (Parm)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bAllowBindingsFromAsset;                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
-struct ULevelSequenceBurnInOptions_SetBurnIn_Params
-{
-	struct FSoftClassPath                              InBurnInClass;                                            // (Parm)
 };
 
 // Function LevelSequence.LevelSequenceBurnIn.SetSettings

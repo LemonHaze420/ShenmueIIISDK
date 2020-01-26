@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SelectQuestDebugCameras.TalkCam_SelectQuestDebugCameras_C.ReceiveTickAI
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -38,11 +38,11 @@ void UTalkCam_SelectQuestDebugCameras_C::ReceiveTickAI(class AAIController* Owne
 
 
 // Function TalkCam_SelectQuestDebugCameras.TalkCam_SelectQuestDebugCameras_C.ExecuteUbergraph_TalkCam_SelectQuestDebugCameras
-// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UTalkCam_SelectQuestDebugCameras_C::STATIC_ExecuteUbergraph_TalkCam_SelectQuestDebugCameras(int EntryPoint)
+void UTalkCam_SelectQuestDebugCameras_C::ExecuteUbergraph_TalkCam_SelectQuestDebugCameras(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TalkCam_SelectQuestDebugCameras.TalkCam_SelectQuestDebugCameras_C.ExecuteUbergraph_TalkCam_SelectQuestDebugCameras");
 

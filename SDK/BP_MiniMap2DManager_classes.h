@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,18 +41,18 @@ public:
 	}
 
 
-	void STATIC_SetValidMinimap(bool bEnable);
-	void STATIC_Update(bool bForce);
+	void SetValidMinimap(bool bEnable);
+	void Update(bool bForce);
 	void SetBackAlpha(float Value);
 	void SetBrushAlpha(float Alpha);
 	bool IsInValidMapRegion();
 	void UserConstructionScript();
 	void OnLoaded_596D289D4B92DE0545173793E979D552(class UObject* Loaded);
 	void OnLoaded_596D289D4B92DE0545173793A0671C6E(class UObject* Loaded);
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_MessageInvalidMap();
-	void STATIC_ExecuteUbergraph_BP_MiniMap2DManager(int EntryPoint);
+	void MessageInvalidMap();
+	void ExecuteUbergraph_BP_MiniMap2DManager(int EntryPoint);
 	void OnDetermineValid__DelegateSignature(bool bIsValid);
 };
 

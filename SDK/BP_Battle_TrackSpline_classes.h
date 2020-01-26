@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,11 +32,11 @@ public:
 	}
 
 
-	void STATIC_Editor_Fixup();
+	void Editor_Fixup();
 	void SetBlockDistance(float Distance);
-	void STATIC_CalculateClosestDirection(const struct FVector& SourceLocation, const struct FVector& SourceDirection, float LookAheadAmount, struct FVector* OutDirection);
-	void STATIC_LookAhead(const struct FVector& CurrentLocation, float DistanceAhead, struct FVector* OutLocation);
-	void STATIC_FindTangent(const struct FVector& WorldLocation, struct FVector* Tangent);
+	void CalculateClosestDirection(const struct FVector& SourceLocation, const struct FVector& SourceDirection, float LookAheadAmount, struct FVector* OutDirection);
+	void LookAhead(const struct FVector& CurrentLocation, float DistanceAhead, struct FVector* OutLocation);
+	void FindTangent(const struct FVector& WorldLocation, struct FVector* Tangent);
 	void UserConstructionScript();
 };
 

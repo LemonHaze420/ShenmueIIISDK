@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -139,13 +139,13 @@ public:
 	}
 
 
-	void STATIC_UpdateMeshWetness();
-	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
+	void UpdateMeshWetness();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void SetVisibleUIButtonIcon(bool Visible);
 	class UMeshComponent* GetClothMeshComponent();
-	void STATIC_InitAsyncLoad(bool* dummy);
+	void InitAsyncLoad(bool* dummy);
 	void StopAllChopBGM();
-	void STATIC_StopChopBGM(TEnumAsByte<E_MiniGame_CW_BGMType> Index);
+	void StopChopBGM(TEnumAsByte<E_MiniGame_CW_BGMType> Index);
 	void PlayChopBGMFromCue(TEnumAsByte<E_MiniGame_CW_BGMType> Type);
 	void DecideWoodId();
 	void UpdateChopCount();
@@ -182,9 +182,9 @@ public:
 	void ReceiveBeginPlay();
 	void GameStart();
 	void AxAction();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ResetResultMenuEvent();
-	void STATIC_PlayGetWoodMotion(float Angle);
+	void PlayGetWoodMotion(float Angle);
 	void ReadyWood();
 	void SetXmoveTimeLine();
 	void GameStartEvent();

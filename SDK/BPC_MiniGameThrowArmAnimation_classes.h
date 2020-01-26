@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,20 +40,20 @@ public:
 
 
 	void IsInitializeVariables(bool* bSuccess);
-	void STATIC_AllStopAnimation();
-	void STATIC_UpdateArmRotation(const struct FRotator& Add);
+	void AllStopAnimation();
+	void UpdateArmRotation(const struct FRotator& Add);
 	void IsAligned(bool* bAligned);
 	void PlayTakeOutAnimation();
 	void StopTakeOutAnimation();
 	void PlayThrowAnimation();
-	void STATIC_StopThrowAnimation();
-	void STATIC_PlayThrowEndAnimation();
-	void STATIC_StopThrowEndAnimation();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void StopThrowAnimation();
+	void PlayThrowEndAnimation();
+	void StopThrowEndAnimation();
+	void ReceiveTick(float DeltaSeconds);
 	void InitializeVariables();
-	void STATIC_ResetVariables();
+	void ResetVariables();
 	void ExecuteUbergraph_BPC_MiniGameThrowArmAnimation(int EntryPoint);
-	void STATIC_OnFinishedTakeOutDispatcher__DelegateSignature();
+	void OnFinishedTakeOutDispatcher__DelegateSignature();
 };
 
 

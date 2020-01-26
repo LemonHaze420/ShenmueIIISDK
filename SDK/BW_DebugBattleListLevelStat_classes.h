@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,15 +37,15 @@ public:
 	}
 
 
-	void STATIC_SetValueInts(int Enum, int Denom);
+	void SetValueInts(int Enum, int Denom);
 	void PreConstruct(bool IsDesignTime);
 	void BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__S3Button_1_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_BndEvt__SpinBox_101_K2Node_ComponentBoundEvent_0_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
+	void BndEvt__SpinBox_101_K2Node_ComponentBoundEvent_0_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
 	void BndEvt__Button_Min_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature();
 	void ResetFocus(class APlayerController* PlayerController);
-	void STATIC_ExecuteUbergraph_BW_DebugBattleListLevelStat(int EntryPoint);
+	void ExecuteUbergraph_BW_DebugBattleListLevelStat(int EntryPoint);
 	void OnChanged__DelegateSignature(int Value);
 };
 

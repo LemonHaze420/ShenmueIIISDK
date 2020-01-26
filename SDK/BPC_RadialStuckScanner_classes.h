@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,7 +41,7 @@ public:
 
 	void TryDisableTick();
 	void IgnoreCollision(class AS3Character* Char, bool Ignore);
-	void STATIC_TestBlockedByNPC(float Yaw, float Distance, TArray<class AS3Character*>* AddNPCS);
+	void TestBlockedByNPC(float Yaw, float Distance, TArray<class AS3Character*>* AddNPCS);
 	void TestAngleBlocked(float Yaw, float Distance, TArray<class AS3Character*>* AddNPCS);
 	void TestNavmeshDistance(float Yaw, float Max, bool* Hit, float* DistanceSqr);
 	void ReceiveBeginPlay();
@@ -50,7 +50,7 @@ public:
 	void StartScanning();
 	void StopScanning();
 	void OnCompletedPositionCollectionWindow();
-	void STATIC_ExecuteUbergraph_BPC_RadialStuckScanner(int EntryPoint);
+	void ExecuteUbergraph_BPC_RadialStuckScanner(int EntryPoint);
 };
 
 

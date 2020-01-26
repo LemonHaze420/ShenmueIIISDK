@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,21 +72,21 @@ public:
 
 	void IsBiteMove(bool* ArgBite);
 	void Start_Bite();
-	void STATIC_DebugDispArea();
+	void DebugDispArea();
 	void Move_Bite();
-	void STATIC_CheckBiteStart();
+	void CheckBiteStart();
 	void CheckCenterPos(const struct FVector& ArgPos, struct FVector* RetPos);
 	void SetNextMoveVector();
 	void GetRandomCirclePos(const struct FVector& ArgCenterPos, float ArgRadius, struct FVector* RetPos);
 	void Start_ReflectionMove();
-	void STATIC_Move_ReflectionMove();
+	void Move_ReflectionMove();
 	void Init();
 	void StartInfinitySymbolMove(const struct FVector& ArgBasePos);
-	void STATIC_Move_InfinitySymbol();
+	void Move_InfinitySymbol();
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BP_Fishing_FreeFish(int EntryPoint);
+	void ExecuteUbergraph_BP_Fishing_FreeFish(int EntryPoint);
 };
 
 

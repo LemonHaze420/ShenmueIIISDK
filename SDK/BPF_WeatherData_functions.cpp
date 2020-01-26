@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_WeatherData.BPF_WeatherData_C.GetRainNavData
-// (Net, NetRequest, Exec, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AS3RainNavData*          NavData                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_WeatherData_C::GetRainNavData(class UObject* __WorldContext, class AS3RainNavData** NavData)
+void UBPF_WeatherData_C::STATIC_GetRainNavData(class UObject* __WorldContext, class AS3RainNavData** NavData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_WeatherData.BPF_WeatherData_C.GetRainNavData");
 
@@ -38,12 +38,12 @@ void UBPF_WeatherData_C::GetRainNavData(class UObject* __WorldContext, class AS3
 
 
 // Function BPF_WeatherData.BPF_WeatherData_C.GetWeatherData
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3WeatherDataAsset*     WeatherData                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_WeatherData_C::GetWeatherData(class UObject* __WorldContext, class US3WeatherDataAsset** WeatherData)
+void UBPF_WeatherData_C::STATIC_GetWeatherData(class UObject* __WorldContext, class US3WeatherDataAsset** WeatherData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_WeatherData.BPF_WeatherData_C.GetWeatherData");
 

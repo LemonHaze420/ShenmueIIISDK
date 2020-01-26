@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,11 +42,11 @@ public:
 
 
 	void CheckWriteUnderLine(int MemoId, bool* WriteUnderLine);
-	void STATIC_UpdateDisplay(const struct FString& Body, const struct FST_RubyInfo& RubyInfo, int MemoId, bool* newParam);
-	void STATIC_GetRubySize(float* X, float* Y);
+	void UpdateDisplay(const struct FString& Body, const struct FST_RubyInfo& RubyInfo, int MemoId, bool* newParam);
+	void GetRubySize(float* X, float* Y);
 	void Construct();
 	void Destruct();
-	void STATIC_ExecuteUbergraph_wgt_S3Memopad_textContent_Row8(int EntryPoint);
+	void ExecuteUbergraph_wgt_S3Memopad_textContent_Row8(int EntryPoint);
 };
 
 

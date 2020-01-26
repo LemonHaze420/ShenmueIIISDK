@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QT2_Score2.WBP_QT2_Score2_C.SetEnabled
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Public, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWBP_QT2_Score2_C::STATIC_SetEnabled(bool bEnabled)
+void AWBP_QT2_Score2_C::SetEnabled(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QT2_Score2.WBP_QT2_Score2_C.SetEnabled");
 
@@ -34,7 +34,7 @@ void AWBP_QT2_Score2_C::STATIC_SetEnabled(bool bEnabled)
 
 
 // Function WBP_QT2_Score2.WBP_QT2_Score2_C.GetTextArray
-// (NetReliable, NetRequest, Exec, Native, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<class UTextBlock*>      Array                          (Parm, OutParm, ZeroConstructor)
 
@@ -45,7 +45,6 @@ void AWBP_QT2_Score2_C::GetTextArray(TArray<class UTextBlock*>* Array)
 	AWBP_QT2_Score2_C_GetTextArray_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,7 +56,7 @@ void AWBP_QT2_Score2_C::GetTextArray(TArray<class UTextBlock*>* Array)
 
 
 // Function WBP_QT2_Score2.WBP_QT2_Score2_C.Set Text New
-// (Net, NetRequest, Exec, Native, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -69,7 +68,6 @@ void AWBP_QT2_Score2_C::Set_Text_New(const struct FText& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,11 +76,11 @@ void AWBP_QT2_Score2_C::Set_Text_New(const struct FText& Text)
 
 
 // Function WBP_QT2_Score2.WBP_QT2_Score2_C.SetVisibleScore
-// (Exec, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWBP_QT2_Score2_C::STATIC_SetVisibleScore(bool Visible)
+void AWBP_QT2_Score2_C::SetVisibleScore(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QT2_Score2.WBP_QT2_Score2_C.SetVisibleScore");
 
@@ -98,11 +96,11 @@ void AWBP_QT2_Score2_C::STATIC_SetVisibleScore(bool Visible)
 
 
 // Function WBP_QT2_Score2.WBP_QT2_Score2_C.SetVisibleText
-// (Exec, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AWBP_QT2_Score2_C::STATIC_SetVisibleText(bool Visible)
+void AWBP_QT2_Score2_C::SetVisibleText(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QT2_Score2.WBP_QT2_Score2_C.SetVisibleText");
 
@@ -118,7 +116,7 @@ void AWBP_QT2_Score2_C::STATIC_SetVisibleText(bool Visible)
 
 
 // Function WBP_QT2_Score2.WBP_QT2_Score2_C.SetText
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           NotNumber                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -140,7 +138,7 @@ void AWBP_QT2_Score2_C::SetText(const struct FText& Text, bool NotNumber)
 
 
 // Function WBP_QT2_Score2.WBP_QT2_Score2_C.UserConstructionScript
-// (Net, NetRequest, Exec, Event, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void AWBP_QT2_Score2_C::UserConstructionScript()
 {
@@ -157,16 +155,15 @@ void AWBP_QT2_Score2_C::UserConstructionScript()
 
 
 // Function WBP_QT2_Score2.WBP_QT2_Score2_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void AWBP_QT2_Score2_C::STATIC_ReceiveBeginPlay()
+void AWBP_QT2_Score2_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QT2_Score2.WBP_QT2_Score2_C.ReceiveBeginPlay");
 
 	AWBP_QT2_Score2_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,7 +172,7 @@ void AWBP_QT2_Score2_C::STATIC_ReceiveBeginPlay()
 
 
 // Function WBP_QT2_Score2.WBP_QT2_Score2_C.ExecuteUbergraph_WBP_QT2_Score2
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -187,7 +184,6 @@ void AWBP_QT2_Score2_C::ExecuteUbergraph_WBP_QT2_Score2(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

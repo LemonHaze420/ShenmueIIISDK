@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,18 +30,18 @@ public:
 	}
 
 
-	void STATIC_ClearCacheMiniGameContainer();
+	void ClearCacheMiniGameContainer();
 	void ShowPopup(bool* bSuccess);
-	void STATIC_IsItemGift(struct FS3GameGift* CheckGIft, bool* bItem);
-	void STATIC_IsBetGift(struct FS3GameGift* CheckGIft, bool* bBet);
+	void IsItemGift(struct FS3GameGift* CheckGIft, bool* bItem);
+	void IsBetGift(struct FS3GameGift* CheckGIft, bool* bBet);
 	void GetValueType(TEnumAsByte<EN_ValueType>* ValueType);
 	void IsMoneyGift(struct FS3GameGift* CheckGIft, bool* bMoney);
-	void STATIC_PushGiftCustomizeMoney(int Money);
-	void STATIC_GetGiftData(bool* bSuccess, struct FName* GiftId, struct FS3GiftDataTable* GiftData);
+	void PushGiftCustomizeMoney(int Money);
+	void GetGiftData(bool* bSuccess, struct FName* GiftId, struct FS3GiftDataTable* GiftData);
 	void ClearGift();
 	void ClearGiftStack();
-	void STATIC_PopGift(struct FName* GiftId, struct FS3GiftDataTable* OutGiftData);
-	void STATIC_PushGift(const struct FName& GiftId);
+	void PopGift(struct FName* GiftId, struct FS3GiftDataTable* OutGiftData);
+	void PushGift(const struct FName& GiftId);
 };
 
 

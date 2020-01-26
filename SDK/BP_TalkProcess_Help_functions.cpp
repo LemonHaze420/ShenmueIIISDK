@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Help.BP_TalkProcess_Help_C.Activate
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
 void UBP_TalkProcess_Help_C::Activate()
 {
@@ -23,7 +23,6 @@ void UBP_TalkProcess_Help_C::Activate()
 	UBP_TalkProcess_Help_C_Activate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void UBP_TalkProcess_Help_C::Activate()
 
 
 // Function BP_TalkProcess_Help.BP_TalkProcess_Help_C.CloseHelp
-// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Help_C::CloseHelp()
 {
@@ -41,7 +40,6 @@ void UBP_TalkProcess_Help_C::CloseHelp()
 	UBP_TalkProcess_Help_C_CloseHelp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,11 +48,11 @@ void UBP_TalkProcess_Help_C::CloseHelp()
 
 
 // Function BP_TalkProcess_Help.BP_TalkProcess_Help_C.ExecuteUbergraph_BP_TalkProcess_Help
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Help_C::STATIC_ExecuteUbergraph_BP_TalkProcess_Help(int EntryPoint)
+void UBP_TalkProcess_Help_C::ExecuteUbergraph_BP_TalkProcess_Help(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Help.BP_TalkProcess_Help_C.ExecuteUbergraph_BP_TalkProcess_Help");
 
@@ -62,7 +60,6 @@ void UBP_TalkProcess_Help_C::STATIC_ExecuteUbergraph_BP_TalkProcess_Help(int Ent
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

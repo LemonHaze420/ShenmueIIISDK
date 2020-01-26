@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugMenuCategoryButton.BW_DebugMenuCategoryButton_C.ShowCursor
-// (Exec, Native, Public, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Show                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UBW_DebugMenuCategoryButton_C::ShowCursor(bool Show)
 	params.Show = Show;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UBW_DebugMenuCategoryButton_C::ShowCursor(bool Show)
 
 
 // Function BW_DebugMenuCategoryButton.BW_DebugMenuCategoryButton_C.GetText_1
-// (Net, NetReliable, NetRequest, Exec, Native, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -46,7 +45,6 @@ struct FText UBW_DebugMenuCategoryButton_C::GetText_1()
 	UBW_DebugMenuCategoryButton_C_GetText_1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,7 +55,7 @@ struct FText UBW_DebugMenuCategoryButton_C::GetText_1()
 
 
 // Function BW_DebugMenuCategoryButton.BW_DebugMenuCategoryButton_C.OnMouseButtonDown_1
-// (Net, NetRequest, Native, Event, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent           MouseEvent                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -72,7 +70,6 @@ struct FEventReply UBW_DebugMenuCategoryButton_C::OnMouseButtonDown_1(const stru
 	params.MouseEvent = MouseEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,7 +80,7 @@ struct FEventReply UBW_DebugMenuCategoryButton_C::OnMouseButtonDown_1(const stru
 
 
 // Function BW_DebugMenuCategoryButton.BW_DebugMenuCategoryButton_C.PreConstruct
-// (Net, NetReliable, NetRequest, Exec, Native, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -95,7 +92,6 @@ void UBW_DebugMenuCategoryButton_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,11 +100,11 @@ void UBW_DebugMenuCategoryButton_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BW_DebugMenuCategoryButton.BW_DebugMenuCategoryButton_C.ExecuteUbergraph_BW_DebugMenuCategoryButton
-// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugMenuCategoryButton_C::STATIC_ExecuteUbergraph_BW_DebugMenuCategoryButton(int EntryPoint)
+void UBW_DebugMenuCategoryButton_C::ExecuteUbergraph_BW_DebugMenuCategoryButton(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenuCategoryButton.BW_DebugMenuCategoryButton_C.ExecuteUbergraph_BW_DebugMenuCategoryButton");
 
@@ -124,11 +120,11 @@ void UBW_DebugMenuCategoryButton_C::STATIC_ExecuteUbergraph_BW_DebugMenuCategory
 
 
 // Function BW_DebugMenuCategoryButton.BW_DebugMenuCategoryButton_C.OnClick__DelegateSignature
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBW_DebugMenuCategoryButton_C* Clicked                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_DebugMenuCategoryButton_C::STATIC_OnClick__DelegateSignature(class UBW_DebugMenuCategoryButton_C* Clicked)
+void UBW_DebugMenuCategoryButton_C::OnClick__DelegateSignature(class UBW_DebugMenuCategoryButton_C* Clicked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenuCategoryButton.BW_DebugMenuCategoryButton_C.OnClick__DelegateSignature");
 
@@ -136,7 +132,6 @@ void UBW_DebugMenuCategoryButton_C::STATIC_OnClick__DelegateSignature(class UBW_
 	params.Clicked = Clicked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

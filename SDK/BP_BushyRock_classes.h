@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ public:
 	float                                              RadiusAdjustment;                                         // 0x03A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UStaticMesh*                                 BaseMesh;                                                 // 0x03A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UStaticMesh*                                 FoliageMesh;                                              // 0x03B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               DEBUG;                                                    // 0x03B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               Debug;                                                    // 0x03B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x03B9(0x0003) MISSED OFFSET
 	struct FRandomStream                               Seed;                                                     // 0x03BC(0x0008) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData02[0x4];                                       // 0x03C4(0x0004) MISSED OFFSET
@@ -55,8 +55,8 @@ public:
 
 
 	struct FVector MakeBushScale(class USceneComponent* self2, struct FRandomStream* Stream);
-	struct FRotator STATIC_MakeBushRotation(struct FRandomStream* Stream);
-	void STATIC_SetTextComponentValue();
+	struct FRotator MakeBushRotation(struct FRandomStream* Stream);
+	void SetTextComponentValue();
 	void CalculateTraceStartAndEnd(struct FVector* Start, struct FVector* End, float* AdjustedRadius);
 	void SetBushlineStartTransform();
 	void SetArrowComponentTransform();

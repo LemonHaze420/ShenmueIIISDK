@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,49 +70,49 @@ public:
 	}
 
 
-	int STATIC_GetPriority();
+	int GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void PauseAps(bool Pause);
-	void STATIC_ClucSpawnLocationSHE(float BackOffset, float Side_Offset, float Hight_Offset, struct FVector* SHE_vector, struct FRotator* SHE_rot);
+	void ClucSpawnLocationSHE(float BackOffset, float Side_Offset, float Hight_Offset, struct FVector* SHE_vector, struct FRotator* SHE_rot);
 	void WarpShe();
-	struct FDateTime STATIC_AddDays(int Days);
+	struct FDateTime AddDays(int Days);
 	void CheckEnableTime(int in_index, int* out_index);
-	void STATIC_DetectEnable_Help(bool Enable);
-	void STATIC_SetExspFlag(TEnumAsByte<EN_AppointKStype> ks_type);
-	void STATIC_CancelAPS();
+	void DetectEnable_Help(bool Enable);
+	void SetExspFlag(TEnumAsByte<EN_AppointKStype> ks_type);
+	void CancelAPS();
 	void GetJumpRot(TEnumAsByte<EN_AppointKStype> ks_type, float* jumprot, bool* jump_enable);
 	void KillKSchild();
-	void STATIC_GetJumpTime(TEnumAsByte<EN_AppointKStype> ks_type, struct FST_AppointDate* time_data);
-	void STATIC_GetEyecatch(TEnumAsByte<EN_AppointKStype> ks_type, struct FName* Eyecatch, bool* eyecatch_enable);
-	void STATIC_GetJumpPoint(TEnumAsByte<EN_AppointKStype> ks_type, struct FVector* jumppos, bool* jump_enable);
-	void STATIC_ExecAddKs();
+	void GetJumpTime(TEnumAsByte<EN_AppointKStype> ks_type, struct FST_AppointDate* time_data);
+	void GetEyecatch(TEnumAsByte<EN_AppointKStype> ks_type, struct FName* Eyecatch, bool* eyecatch_enable);
+	void GetJumpPoint(TEnumAsByte<EN_AppointKStype> ks_type, struct FVector* jumppos, bool* jump_enable);
+	void ExecAddKs();
 	void GetSelectTexts(const struct FName& INameID, struct FText* GetName);
-	void STATIC_ChangeKSFilter();
+	void ChangeKSFilter();
 	void AddKSitem(int KS_pos, int EnableTimeMin, int EnableTimeMax, int JumpHour, int JumpMin, const struct FVector& JumpLocation, const struct FRotator& jumprot, const struct FName& KSlavel, const struct FName& Eyecatch, int ExspFlag, const struct FName& ExspCheck, bool* Add_Complited);
 	void SetPlayEyecatchFlag(bool Play);
 	void ChangeSkipEndFade(bool EndFadeFlag);
 	void IsEnableButtonTime(bool* IsEnable);
 	void ReleaseAppointData();
-	void STATIC_IsPassAppoint(bool* IsFuture);
+	void IsPassAppoint(bool* IsFuture);
 	void GetData(int AddDay, int* Year, int* Month, int* Day);
 	void IsAppointFuture(bool* Pass);
-	void STATIC_GetAppointData(struct FVector* JumpPoint, struct FRotator* Rotation, struct FST_AppointDate* Date, struct FText* MainText, struct FText* SubText);
-	void STATIC_SetAppointButtonFlag(bool Deny);
+	void GetAppointData(struct FVector* JumpPoint, struct FRotator* Rotation, struct FST_AppointDate* Date, struct FText* MainText, struct FText* SubText);
+	void SetAppointButtonFlag(bool Deny);
 	void Finalize();
-	void STATIC_DetectActionUnregist(bool Unregist);
+	void DetectActionUnregist(bool Unregist);
 	void SetAppointData(const struct FVector& JumpPoint, const struct FRotator& Rotation, const struct FName& Eyecatch, int AddDay, int Hour, int Minute, int EnableTimeMin, int EnableTimeMax, int ChangeStep, const struct FName& Label_Left, bool SkipEndFade);
 	void UserConstructionScript();
 	void EyecatchFinish();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void STATIC_DecideDetectAction(ES3ActionIconType Type);
-	void STATIC_EndJump(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void DecideDetectAction(ES3ActionIconType Type);
+	void EndJump(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ApsChild_TimeOver_Actor1();
 	void ApsChild_TimeOver_Actor2();
-	void STATIC_ChangePlayerController(class APlayerController* PlayerController);
+	void ChangePlayerController(class APlayerController* PlayerController);
 	void HelpEnd();
 	void InHelpEnd();
-	void STATIC_catch_onSelected(int Index);
+	void catch_onSelected(int Index);
 	void ExecuteUbergraph_BP_AppointSystemManager(int EntryPoint);
 	void EndAppointJump__DelegateSignature();
 	void StartAppointJump__DelegateSignature();

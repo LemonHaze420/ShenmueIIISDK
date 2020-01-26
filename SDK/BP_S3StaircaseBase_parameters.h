@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -125,7 +125,7 @@ struct ABP_S3StaircaseBase_C_GetNextStepStopLocation_Params
 struct ABP_S3StaircaseBase_C_GetAngleInClimbDirection_Params
 {
 	struct FVector                                     InDirection;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	bool                                               isUp;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsUp;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              OutAngle;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

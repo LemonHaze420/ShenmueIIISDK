@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -160,7 +160,7 @@ struct ABP_HighwayStar_C_UserConstructionScript_Params
 };
 
 // Function BP_HighwayStar.BP_HighwayStar_C.򠪦􆖐񍳔_
-struct ABP_HighwayStar_C__UnknownFunc01__Params
+struct ABP_HighwayStar_C_򠪦􆖐񍳔__Params
 {
 };
 

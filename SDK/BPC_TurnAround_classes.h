@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,31 +44,31 @@ public:
 
 	bool CheckMinigameRotation(struct FRotator* Rotation);
 	class US3TalkComponent* GetTalkingMinigame();
-	bool STATIC_TryPreTalkJump();
-	bool STATIC_ShouldLookAtTalkCenter();
+	bool TryPreTalkJump();
+	bool ShouldLookAtTalkCenter();
 	struct FRotator CalcLookAtRotation(const struct FVector& Target);
 	void TryPostTeleportTurnaround(bool bTeleported);
 	bool CalcTurnAroundWithin();
 	void SetTurnAroundTarget(const struct FRotator& Rotator);
-	void STATIC_TurnAroundTickFinish();
+	void TurnAroundTickFinish();
 	struct FRotator GetLookAtCenterRotation();
 	void ForceFinishTurnAroundAuto();
-	void STATIC_RemoveTurnAroundComponent();
-	void STATIC_SetAdjustTurnAroundAngle();
-	void STATIC_ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
+	void RemoveTurnAroundComponent();
+	void SetAdjustTurnAroundAngle();
+	void ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
 	void IsMultipleTalking(bool* IsTalking);
-	void STATIC_ReturnPreTalkRotationActor();
+	void ReturnPreTalkRotationActor();
 	void CachedPreTalkRotationActor();
-	void STATIC_UpdateTurnAround(float Delta, bool* bFinish);
-	void STATIC_IsTurnedAroundState(bool* bTurned);
-	void STATIC_CanTurnAround(bool* bCan);
+	void UpdateTurnAround(float Delta, bool* bFinish);
+	void IsTurnedAroundState(bool* bTurned);
+	void CanTurnAround(bool* bCan);
 	void ResetTurnAroundParamater();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void StartTurnAroundByRotation(float MotionDelayTime, const struct FRotator& TargetRotation, bool bAdjustTurnAroundAngle);
 	void StartTurnAroundByActor(float MotionDelayTime, class AActor* TargetActor, bool bAdjustTurnAroundAngle);
 	void InternalStartRotation(float Delay, const struct FRotator& TargetRotation, bool bAdjust);
 	void ExecuteUbergraph_BPC_TurnAround(int EntryPoint);
-	void STATIC_OnFinishTurnAroundDispatcher__DelegateSignature(class UBPC_TurnAround_C* SelfTurnAroundComponent);
+	void OnFinishTurnAroundDispatcher__DelegateSignature(class UBPC_TurnAround_C* SelfTurnAroundComponent);
 };
 
 

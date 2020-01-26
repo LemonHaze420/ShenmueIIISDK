@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,36 +38,36 @@ public:
 	}
 
 
-	int STATIC_GetPriority();
-	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
-	void STATIC_GetOwnSearchArea(class ABP_SearchArea_C** SearchArea);
+	int GetPriority();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
+	void GetOwnSearchArea(class ABP_SearchArea_C** SearchArea);
 	struct FVector GetActionSpawnerPos();
-	void STATIC_GetInputDirection(float V, float H, TEnumAsByte<ESearchAreaDirection>* Direction);
-	void STATIC_ForceFindSpawner(class ABP_S3ItemSpawner_C* Spawner);
-	void STATIC_GetActionSpawner(class ABP_S3ItemSpawner_C** ActionSpawner);
+	void GetInputDirection(float V, float H, TEnumAsByte<ESearchAreaDirection>* Direction);
+	void ForceFindSpawner(class ABP_S3ItemSpawner_C* Spawner);
+	void GetActionSpawner(class ABP_S3ItemSpawner_C** ActionSpawner);
 	void LockOnChange(float V, float H);
-	void STATIC_StartAction(bool ContinuationFlag);
+	void StartAction(bool ContinuationFlag);
 	void CalcCameraTransform(class ABP_S3ItemSpawner_C* Target);
-	void STATIC_SetSearchStep(class US3SearchComponent* SearchComponent, bool bUseFadeEvent);
+	void SetSearchStep(class US3SearchComponent* SearchComponent, bool bUseFadeEvent);
 	void SetSearchComponent(class ABP_S3ItemSpawner_C* Target);
 	void InitSearchArea();
 	void NextTargetCheck(bool* Result, class ABP_S3ItemSpawner_C** NextTarget);
 	void SwitchTarget(class ABP_S3ItemSpawner_C** NewTarget);
 	void GetListSize(int* Size);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void InpActEvt_SearchRightButton_K2Node_InputActionEvent_2(const struct FKey& Key);
 	void GetItem(class US3SearchComponent* SearchComponent);
-	void STATIC_SearchEnd();
-	void STATIC_ReceiveBeginPlay();
+	void SearchEnd();
+	void ReceiveBeginPlay();
 	void DecideDetectAction(ES3ActionIconType Type);
-	void STATIC_Event_InputEnabled();
-	void STATIC_Event_DisableInputTransCamera();
+	void Event_InputEnabled();
+	void Event_DisableInputTransCamera();
 	void InpAxisEvt_ZoomPanVertical_K2Node_InputAxisEvent_1(float AxisValue);
 	void InpAxisEvt_ZoomPanHorizontal_K2Node_InputAxisEvent_27(float AxisValue);
-	void STATIC_Event_FadeOnAction();
+	void Event_FadeOnAction();
 	void AddItemSpawner(class AS3ItemSpawner* ItemSpawner);
 	void RemoveItemSpawner(class AS3ItemSpawner* ItemSpawner);
-	void STATIC_OnFinishFadeInOnUseFade();
+	void OnFinishFadeInOnUseFade();
 	void ExecuteUbergraph_BP_S3ItemSpawnerController(int EntryPoint);
 };
 

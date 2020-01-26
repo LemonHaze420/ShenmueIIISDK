@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -601,7 +601,7 @@ struct ABP_Minigame_Fishing_Test_C_qte_timeline_type2__qte_start__EventFunc_Para
 };
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.򠪦􆖐񍳔_
-struct ABP_Minigame_Fishing_Test_C__UnknownFunc01__Params
+struct ABP_Minigame_Fishing_Test_C_򠪦􆖐񍳔__Params
 {
 };
 

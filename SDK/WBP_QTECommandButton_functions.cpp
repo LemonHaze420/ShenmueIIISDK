@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QTECommandButton.WBP_QTECommandButton_C.SetButtonImage
-// (Net, NetReliable, NetRequest, Native, Event, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UWBP_QTECommandButton_C::SetButtonImage(class UTexture2D* Image)
 	params.Image = Image;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,9 +34,9 @@ void UWBP_QTECommandButton_C::SetButtonImage(class UTexture2D* Image)
 
 
 // Function WBP_QTECommandButton.WBP_QTECommandButton_C.PlayInput
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_QTECommandButton_C::STATIC_PlayInput()
+void UWBP_QTECommandButton_C::PlayInput()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTECommandButton.WBP_QTECommandButton_C.PlayInput");
 
@@ -52,16 +51,15 @@ void UWBP_QTECommandButton_C::STATIC_PlayInput()
 
 
 // Function WBP_QTECommandButton.WBP_QTECommandButton_C.PlayInstruction
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_QTECommandButton_C::STATIC_PlayInstruction()
+void UWBP_QTECommandButton_C::PlayInstruction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTECommandButton.WBP_QTECommandButton_C.PlayInstruction");
 
 	UWBP_QTECommandButton_C_PlayInstruction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,16 +68,15 @@ void UWBP_QTECommandButton_C::STATIC_PlayInstruction()
 
 
 // Function WBP_QTECommandButton.WBP_QTECommandButton_C.Reset
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWBP_QTECommandButton_C::STATIC_Reset()
+void UWBP_QTECommandButton_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTECommandButton.WBP_QTECommandButton_C.Reset");
 
 	UWBP_QTECommandButton_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

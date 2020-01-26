@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.TryPreTalkJump
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,11 +35,11 @@ bool UBPC_TurnAround_Player_C::TryPreTalkJump()
 
 
 // Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.GetTalkedMinigame
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Delegate, NetClient, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AActor* UBPC_TurnAround_Player_C::STATIC_GetTalkedMinigame()
+class AActor* UBPC_TurnAround_Player_C::GetTalkedMinigame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.GetTalkedMinigame");
 
@@ -56,7 +56,7 @@ class AActor* UBPC_TurnAround_Player_C::STATIC_GetTalkedMinigame()
 
 
 // Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.CanTurnAround
-// (NetRequest, Event, NetResponse, MulticastDelegate, Private, NetServer, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bCan                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -78,16 +78,15 @@ void UBPC_TurnAround_Player_C::CanTurnAround(bool* bCan)
 
 
 // Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.ReturnPreTalkRotationActor
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_TurnAround_Player_C::STATIC_ReturnPreTalkRotationActor()
+void UBPC_TurnAround_Player_C::ReturnPreTalkRotationActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.ReturnPreTalkRotationActor");
 
 	UBPC_TurnAround_Player_C_ReturnPreTalkRotationActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,9 +95,9 @@ void UBPC_TurnAround_Player_C::STATIC_ReturnPreTalkRotationActor()
 
 
 // Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.ReceiveBeginPlay
-// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_TurnAround_Player_C::STATIC_ReceiveBeginPlay()
+void UBPC_TurnAround_Player_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.ReceiveBeginPlay");
 
@@ -113,7 +112,7 @@ void UBPC_TurnAround_Player_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.ForceFinishTurnAround
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bUpdateRotation                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                NewRotation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -127,7 +126,6 @@ void UBPC_TurnAround_Player_C::ForceFinishTurnAround(bool bUpdateRotation, const
 	params.NewRotation = NewRotation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,16 +134,15 @@ void UBPC_TurnAround_Player_C::ForceFinishTurnAround(bool bUpdateRotation, const
 
 
 // Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.TurnAroundTickFinish
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void UBPC_TurnAround_Player_C::STATIC_TurnAroundTickFinish()
+void UBPC_TurnAround_Player_C::TurnAroundTickFinish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.TurnAroundTickFinish");
 
 	UBPC_TurnAround_Player_C_TurnAroundTickFinish_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,11 +151,11 @@ void UBPC_TurnAround_Player_C::STATIC_TurnAroundTickFinish()
 
 
 // Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.ExecuteUbergraph_BPC_TurnAround_Player
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_Player_C::STATIC_ExecuteUbergraph_BPC_TurnAround_Player(int EntryPoint)
+void UBPC_TurnAround_Player_C::ExecuteUbergraph_BPC_TurnAround_Player(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_Player.BPC_TurnAround_Player_C.ExecuteUbergraph_BPC_TurnAround_Player");
 

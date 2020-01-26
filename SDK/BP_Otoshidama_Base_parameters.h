@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -245,13 +245,13 @@ struct ABP_Otoshidama_Base_C_D_Up_Pushed_Params
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.LeftStick X-Axis
 struct ABP_Otoshidama_Base_C_LeftStick_X_Axis_Params
 {
-	float                                              axis_value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Axis_Value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Left Stick Y-Axis
 struct ABP_Otoshidama_Base_C_Left_Stick_Y_Axis_Params
 {
-	float                                              axis_value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Axis_Value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Initialize

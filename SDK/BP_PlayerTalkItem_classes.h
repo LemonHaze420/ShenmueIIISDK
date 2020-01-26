@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,12 +34,12 @@ public:
 	}
 
 
-	void STATIC_UpdateFadeTimer(float DeltaSeconds, bool* Done);
-	void STATIC_UpdateFade();
-	void STATIC_HideItem();
+	void UpdateFadeTimer(float DeltaSeconds, bool* Done);
+	void UpdateFade();
+	void HideItem();
 	void ShowItem();
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_PlayerTalkItem(int EntryPoint);
 	void OnFinishHide__DelegateSignature();
 };

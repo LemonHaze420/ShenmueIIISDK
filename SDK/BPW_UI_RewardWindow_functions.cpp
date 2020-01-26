@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_RewardWindow.BPW_UI_RewardWindow_C.GetLabel
-// (NetReliable, NetResponse, Static, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   TextLabel                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_RewardWindow_C::STATIC_GetLabel(struct FName* TextLabel)
+void UBPW_UI_RewardWindow_C::GetLabel(struct FName* TextLabel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_RewardWindow.BPW_UI_RewardWindow_C.GetLabel");
 
@@ -36,9 +36,9 @@ void UBPW_UI_RewardWindow_C::STATIC_GetLabel(struct FName* TextLabel)
 
 
 // Function BPW_UI_RewardWindow.BPW_UI_RewardWindow_C.Construct
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UBPW_UI_RewardWindow_C::STATIC_Construct()
+void UBPW_UI_RewardWindow_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_RewardWindow.BPW_UI_RewardWindow_C.Construct");
 
@@ -53,9 +53,9 @@ void UBPW_UI_RewardWindow_C::STATIC_Construct()
 
 
 // Function BPW_UI_RewardWindow.BPW_UI_RewardWindow_C.BndEvt__NewAnimation_1_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UBPW_UI_RewardWindow_C::STATIC_BndEvt__NewAnimation_1_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void UBPW_UI_RewardWindow_C::BndEvt__NewAnimation_1_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_RewardWindow.BPW_UI_RewardWindow_C.BndEvt__NewAnimation_1_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -70,7 +70,7 @@ void UBPW_UI_RewardWindow_C::STATIC_BndEvt__NewAnimation_1_K2Node_ComponentBound
 
 
 // Function BPW_UI_RewardWindow.BPW_UI_RewardWindow_C.ExecuteUbergraph_BPW_UI_RewardWindow
-// (NetRequest, Native, Event, NetMulticast, Public, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -82,7 +82,6 @@ void UBPW_UI_RewardWindow_C::ExecuteUbergraph_BPW_UI_RewardWindow(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +90,7 @@ void UBPW_UI_RewardWindow_C::ExecuteUbergraph_BPW_UI_RewardWindow(int EntryPoint
 
 
 // Function BPW_UI_RewardWindow.BPW_UI_RewardWindow_C.ED_FinishAnim__DelegateSignature
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_RewardWindow_C::ED_FinishAnim__DelegateSignature()
 {
@@ -100,7 +99,6 @@ void UBPW_UI_RewardWindow_C::ED_FinishAnim__DelegateSignature()
 	UBPW_UI_RewardWindow_C_ED_FinishAnim__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.IsDisable
-// (Net, NetReliable, Event, MulticastDelegate, Private, Protected, NetServer, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Disable                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void ABP_S3AtomSoundTimer_C::IsDisable(bool* Disable)
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.SetSelectorLabel
-// (NetResponse, NetMulticast, Protected, NetServer, BlueprintCallable)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AtomSoundTimer_C::SetSelectorLabel()
 {
@@ -53,7 +53,7 @@ void ABP_S3AtomSoundTimer_C::SetSelectorLabel()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.StopForbid
-// (NetReliable, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AtomSoundTimer_C::StopForbid()
 {
@@ -62,7 +62,6 @@ void ABP_S3AtomSoundTimer_C::StopForbid()
 	ABP_S3AtomSoundTimer_C_StopForbid_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,11 +70,11 @@ void ABP_S3AtomSoundTimer_C::StopForbid()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.SetSystemVolume
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSoundTimer_C::STATIC_SetSystemVolume(float Volume)
+void ABP_S3AtomSoundTimer_C::SetSystemVolume(float Volume)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.SetSystemVolume");
 
@@ -83,7 +82,6 @@ void ABP_S3AtomSoundTimer_C::STATIC_SetSystemVolume(float Volume)
 	params.Volume = Volume;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +90,7 @@ void ABP_S3AtomSoundTimer_C::STATIC_SetSystemVolume(float Volume)
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.PermitPlay
-// (NetRequest, Exec, Native, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AtomSoundTimer_C::PermitPlay()
 {
@@ -101,7 +99,6 @@ void ABP_S3AtomSoundTimer_C::PermitPlay()
 	ABP_S3AtomSoundTimer_C_PermitPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,9 +107,9 @@ void ABP_S3AtomSoundTimer_C::PermitPlay()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.StartPlay
-// (NetRequest, Exec, Event, Static, Public, Protected, NetServer, DLLImport, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AtomSoundTimer_C::STATIC_StartPlay()
+void ABP_S3AtomSoundTimer_C::StartPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.StartPlay");
 
@@ -127,7 +124,7 @@ void ABP_S3AtomSoundTimer_C::STATIC_StartPlay()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.SetParam
-// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FS3SoundTimerParam      newParam                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -147,7 +144,7 @@ void ABP_S3AtomSoundTimer_C::SetParam(const struct FS3SoundTimerParam& newParam)
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.UpdateInterval
-// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AtomSoundTimer_C::UpdateInterval()
 {
@@ -156,7 +153,6 @@ void ABP_S3AtomSoundTimer_C::UpdateInterval()
 	ABP_S3AtomSoundTimer_C_UpdateInterval_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -165,16 +161,15 @@ void ABP_S3AtomSoundTimer_C::UpdateInterval()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.Initialize
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AtomSoundTimer_C::STATIC_Initialize()
+void ABP_S3AtomSoundTimer_C::Initialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.Initialize");
 
 	ABP_S3AtomSoundTimer_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,9 +178,9 @@ void ABP_S3AtomSoundTimer_C::STATIC_Initialize()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.StopSound
-// (Net, NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AtomSoundTimer_C::STATIC_StopSound()
+void ABP_S3AtomSoundTimer_C::StopSound()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.StopSound");
 
@@ -200,16 +195,15 @@ void ABP_S3AtomSoundTimer_C::STATIC_StopSound()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.PlaySound
-// (Net, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AtomSoundTimer_C::STATIC_PlaySound()
+void ABP_S3AtomSoundTimer_C::PlaySound()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.PlaySound");
 
 	ABP_S3AtomSoundTimer_C_PlaySound_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -218,7 +212,7 @@ void ABP_S3AtomSoundTimer_C::STATIC_PlaySound()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.CheckInterval
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AtomSoundTimer_C::CheckInterval()
 {
@@ -235,16 +229,15 @@ void ABP_S3AtomSoundTimer_C::CheckInterval()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.CheckStartTime
-// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AtomSoundTimer_C::STATIC_CheckStartTime()
+void ABP_S3AtomSoundTimer_C::CheckStartTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.CheckStartTime");
 
 	ABP_S3AtomSoundTimer_C_CheckStartTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -253,7 +246,7 @@ void ABP_S3AtomSoundTimer_C::STATIC_CheckStartTime()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, MulticastDelegate, Protected, HasOutParms, DLLImport, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AtomSoundTimer_C::UserConstructionScript()
 {
@@ -270,7 +263,7 @@ void ABP_S3AtomSoundTimer_C::UserConstructionScript()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_S3AtomSoundTimer_C::ReceiveBeginPlay()
 {
@@ -279,7 +272,6 @@ void ABP_S3AtomSoundTimer_C::ReceiveBeginPlay()
 	ABP_S3AtomSoundTimer_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -288,11 +280,11 @@ void ABP_S3AtomSoundTimer_C::ReceiveBeginPlay()
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.ReceiveTick
-// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSoundTimer_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_S3AtomSoundTimer_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.ReceiveTick");
 
@@ -308,11 +300,11 @@ void ABP_S3AtomSoundTimer_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.ReceiveEndPlay
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSoundTimer_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3AtomSoundTimer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.ReceiveEndPlay");
 
@@ -328,7 +320,7 @@ void ABP_S3AtomSoundTimer_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> E
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_2_S3SoundAreaCallback__DelegateSignature
-// (NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_S3AtomSoundTimer_C::BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_2_S3SoundAreaCallback__DelegateSignature()
 {
@@ -337,7 +329,6 @@ void ABP_S3AtomSoundTimer_C::BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_2_S3
 	ABP_S3AtomSoundTimer_C_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_2_S3SoundAreaCallback__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -346,7 +337,7 @@ void ABP_S3AtomSoundTimer_C::BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_2_S3
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_3_S3SoundAreaCallback__DelegateSignature
-// (NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_S3AtomSoundTimer_C::BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_3_S3SoundAreaCallback__DelegateSignature()
 {
@@ -355,7 +346,6 @@ void ABP_S3AtomSoundTimer_C::BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_3_S3
 	ABP_S3AtomSoundTimer_C_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_3_S3SoundAreaCallback__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -364,7 +354,7 @@ void ABP_S3AtomSoundTimer_C::BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_3_S3
 
 
 // Function BP_S3AtomSoundTimer.BP_S3AtomSoundTimer_C.ExecuteUbergraph_BP_S3AtomSoundTimer
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -376,7 +366,6 @@ void ABP_S3AtomSoundTimer_C::ExecuteUbergraph_BP_S3AtomSoundTimer(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

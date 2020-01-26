@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -230,7 +230,7 @@ struct UBP_MainFlowSubFunction_C_MfSubFunc_BitCheck_Params
 	int                                                CurFlag;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                MaskFlag;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bit;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Bit;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MainFlowSubFunction.BP_MainFlowSubFunction_C.MfSubFunc_MakeElapsedTime

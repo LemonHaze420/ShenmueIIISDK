@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,10 +25,10 @@ public:
 	}
 
 
-	void BPF_GetPlayerBattleDifficultyParams(class UObject* __WorldContext, struct FST_BattleDifficultyParams* Out_Row);
+	void STATIC_BPF_GetPlayerBattleDifficultyParams(class UObject* __WorldContext, struct FST_BattleDifficultyParams* Out_Row);
 	void STATIC_BPF_StepPlayerBattleDifficulty(TEnumAsByte<EUpOrDown> Direction, class UObject* __WorldContext);
 	void STATIC_BPF_SetPlayerBattleDifficulty(TEnumAsByte<EBattleDifficulty> Difficulty, class UObject* __WorldContext);
-	void BPF_GetPlayerBattleDifficulty(class UObject* __WorldContext, TEnumAsByte<EBattleDifficulty>* Difficulty);
+	void STATIC_BPF_GetPlayerBattleDifficulty(class UObject* __WorldContext, TEnumAsByte<EBattleDifficulty>* Difficulty);
 };
 
 

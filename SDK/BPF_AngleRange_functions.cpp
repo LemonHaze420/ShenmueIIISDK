@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_AngleRange.BPF_AngleRange_C.BPF_GetNormalizedOutsideRange
-// (Net, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          InAngle                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RangeCenter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -22,7 +22,7 @@ namespace SDK
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Normalized                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_AngleRange_C::BPF_GetNormalizedOutsideRange(float InAngle, float RangeCenter, float RangePlusMinus, class UObject* __WorldContext, float* Normalized)
+void UBPF_AngleRange_C::STATIC_BPF_GetNormalizedOutsideRange(float InAngle, float RangeCenter, float RangePlusMinus, class UObject* __WorldContext, float* Normalized)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_AngleRange.BPF_AngleRange_C.BPF_GetNormalizedOutsideRange");
 
@@ -44,7 +44,7 @@ void UBPF_AngleRange_C::BPF_GetNormalizedOutsideRange(float InAngle, float Range
 
 
 // Function BPF_AngleRange.BPF_AngleRange_C.BPF_ExpandAngleRange
-// (Net, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          IncludeAngle                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RangeCenterDeg                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -77,7 +77,7 @@ void UBPF_AngleRange_C::STATIC_BPF_ExpandAngleRange(float IncludeAngle, float Ra
 
 
 // Function BPF_AngleRange.BPF_AngleRange_C.BPF_GetInAngleRange
-// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          AngleDeg                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RangeCenterDeg                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -85,7 +85,7 @@ void UBPF_AngleRange_C::STATIC_BPF_ExpandAngleRange(float IncludeAngle, float Ra
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bInRange                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_AngleRange_C::BPF_GetInAngleRange(float AngleDeg, float RangeCenterDeg, float RangePlusMinusDeg, class UObject* __WorldContext, bool* bInRange)
+void UBPF_AngleRange_C::STATIC_BPF_GetInAngleRange(float AngleDeg, float RangeCenterDeg, float RangePlusMinusDeg, class UObject* __WorldContext, bool* bInRange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_AngleRange.BPF_AngleRange_C.BPF_GetInAngleRange");
 
@@ -107,7 +107,7 @@ void UBPF_AngleRange_C::BPF_GetInAngleRange(float AngleDeg, float RangeCenterDeg
 
 
 // Function BPF_AngleRange.BPF_AngleRange_C.BPF_GetNormalizedInRange
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          InAngle                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RangeCenter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -126,7 +126,6 @@ void UBPF_AngleRange_C::STATIC_BPF_GetNormalizedInRange(float InAngle, float Ran
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +137,7 @@ void UBPF_AngleRange_C::STATIC_BPF_GetNormalizedInRange(float InAngle, float Ran
 
 
 // Function BPF_AngleRange.BPF_AngleRange_C.BPF_GetAngleOutsideRange
-// (NetReliable, Event, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          InAngle                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RangeCenterDeg                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -146,7 +145,7 @@ void UBPF_AngleRange_C::STATIC_BPF_GetNormalizedInRange(float InAngle, float Ran
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          AngleFromRange                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_AngleRange_C::BPF_GetAngleOutsideRange(float InAngle, float RangeCenterDeg, float RangePlusMinusDeg, class UObject* __WorldContext, float* AngleFromRange)
+void UBPF_AngleRange_C::STATIC_BPF_GetAngleOutsideRange(float InAngle, float RangeCenterDeg, float RangePlusMinusDeg, class UObject* __WorldContext, float* AngleFromRange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_AngleRange.BPF_AngleRange_C.BPF_GetAngleOutsideRange");
 
@@ -168,14 +167,14 @@ void UBPF_AngleRange_C::BPF_GetAngleOutsideRange(float InAngle, float RangeCente
 
 
 // Function BPF_AngleRange.BPF_AngleRange_C.ConvertAngleRange_LimitsToCenter
-// (Net, NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               Range                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Center                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          PlusMinus                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_AngleRange_C::ConvertAngleRange_LimitsToCenter(const struct FVector2D& Range, class UObject* __WorldContext, float* Center, float* PlusMinus)
+void UBPF_AngleRange_C::STATIC_ConvertAngleRange_LimitsToCenter(const struct FVector2D& Range, class UObject* __WorldContext, float* Center, float* PlusMinus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_AngleRange.BPF_AngleRange_C.ConvertAngleRange_LimitsToCenter");
 

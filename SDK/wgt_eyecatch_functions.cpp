@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_eyecatch.wgt_eyecatch_C.updateDate
-// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_eyecatch_C::updateDate()
 {
@@ -31,7 +31,7 @@ void Uwgt_eyecatch_C::updateDate()
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.checkHour
-// (Net, Native, NetResponse, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Time_hour_                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ChangeHour                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -44,7 +44,6 @@ void Uwgt_eyecatch_C::checkHour(int Time_hour_, int* ChangeHour)
 	params.Time_hour_ = Time_hour_;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +55,7 @@ void Uwgt_eyecatch_C::checkHour(int Time_hour_, int* ChangeHour)
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.updateDatas(logo)
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Protected, DLLImport, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture*                LogoImage                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -76,14 +75,14 @@ void Uwgt_eyecatch_C::updateDatas_logo_(class UTexture* LogoImage)
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.updateDatas(text2)
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, DLLImport, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   main1                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   sub1                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   main2                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   sub2                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void Uwgt_eyecatch_C::STATIC_updateDatas_text2_(const struct FText& main1, const struct FText& sub1, const struct FText& main2, const struct FText& sub2)
+void Uwgt_eyecatch_C::updateDatas_text2_(const struct FText& main1, const struct FText& sub1, const struct FText& main2, const struct FText& sub2)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_eyecatch.wgt_eyecatch_C.updateDatas(text2)");
 
@@ -94,7 +93,6 @@ void Uwgt_eyecatch_C::STATIC_updateDatas_text2_(const struct FText& main1, const
 	params.sub2 = sub2;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,12 +101,12 @@ void Uwgt_eyecatch_C::STATIC_updateDatas_text2_(const struct FText& main1, const
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.updateDatas(text1)
-// (NetReliable, Native, Static, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Main                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   sub                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void Uwgt_eyecatch_C::STATIC_updateDatas_text1_(const struct FText& Main, const struct FText& sub)
+void Uwgt_eyecatch_C::updateDatas_text1_(const struct FText& Main, const struct FText& sub)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_eyecatch.wgt_eyecatch_C.updateDatas(text1)");
 
@@ -117,7 +115,6 @@ void Uwgt_eyecatch_C::STATIC_updateDatas_text1_(const struct FText& Main, const 
 	params.sub = sub;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,7 +123,7 @@ void Uwgt_eyecatch_C::STATIC_updateDatas_text1_(const struct FText& Main, const 
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.OnAnimationFinished
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // class UWidgetAnimation*        Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -146,7 +143,7 @@ void Uwgt_eyecatch_C::OnAnimationFinished(class UWidgetAnimation* Animation)
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.fadeOut_Event(text1)
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           fadeFlag                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -166,7 +163,7 @@ void Uwgt_eyecatch_C::fadeOut_Event_text1_(bool fadeFlag)
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.fadeOut_Event(text2)
-// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           fadeFlag                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -186,7 +183,7 @@ void Uwgt_eyecatch_C::fadeOut_Event_text2_(bool fadeFlag)
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.fadeOut_Event(logo)
-// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           fadeFlag                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -206,12 +203,12 @@ void Uwgt_eyecatch_C::fadeOut_Event_logo_(bool fadeFlag)
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.fade_Event
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           fadeFlag                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_eyecatch_C::STATIC_fade_Event(bool Visible, bool fadeFlag)
+void Uwgt_eyecatch_C::fade_Event(bool Visible, bool fadeFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_eyecatch.wgt_eyecatch_C.fade_Event");
 
@@ -220,7 +217,6 @@ void Uwgt_eyecatch_C::STATIC_fade_Event(bool Visible, bool fadeFlag)
 	params.fadeFlag = fadeFlag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -229,13 +225,13 @@ void Uwgt_eyecatch_C::STATIC_fade_Event(bool Visible, bool fadeFlag)
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.ShowEyecatch
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   MainTitle                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   Subtitle                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                           bUseFade                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_eyecatch_C::STATIC_ShowEyecatch(const struct FText& MainTitle, const struct FText& Subtitle, bool bUseFade)
+void Uwgt_eyecatch_C::ShowEyecatch(const struct FText& MainTitle, const struct FText& Subtitle, bool bUseFade)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_eyecatch.wgt_eyecatch_C.ShowEyecatch");
 
@@ -253,7 +249,7 @@ void Uwgt_eyecatch_C::STATIC_ShowEyecatch(const struct FText& MainTitle, const s
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.ShowEyecatchText2
-// (NetRequest, Event, NetResponse, NetMulticast, Protected, DLLImport, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   MainTitle1                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FText                   SubTitle1                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -281,12 +277,12 @@ void Uwgt_eyecatch_C::ShowEyecatchText2(const struct FText& MainTitle1, const st
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.ShowEyecatchTexture
-// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture*                LogoImage                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bUseFade                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_eyecatch_C::STATIC_ShowEyecatchTexture(class UTexture* LogoImage, bool bUseFade)
+void Uwgt_eyecatch_C::ShowEyecatchTexture(class UTexture* LogoImage, bool bUseFade)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_eyecatch.wgt_eyecatch_C.ShowEyecatchTexture");
 
@@ -303,7 +299,7 @@ void Uwgt_eyecatch_C::STATIC_ShowEyecatchTexture(class UTexture* LogoImage, bool
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.HideEyecatch
-// (Native, Event, NetResponse, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bUseFade                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -315,7 +311,6 @@ void Uwgt_eyecatch_C::HideEyecatch(bool bUseFade)
 	params.bUseFade = bUseFade;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -324,11 +319,11 @@ void Uwgt_eyecatch_C::HideEyecatch(bool bUseFade)
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.ExecuteUbergraph_wgt_eyecatch
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_eyecatch_C::STATIC_ExecuteUbergraph_wgt_eyecatch(int EntryPoint)
+void Uwgt_eyecatch_C::ExecuteUbergraph_wgt_eyecatch(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_eyecatch.wgt_eyecatch_C.ExecuteUbergraph_wgt_eyecatch");
 
@@ -344,16 +339,15 @@ void Uwgt_eyecatch_C::STATIC_ExecuteUbergraph_wgt_eyecatch(int EntryPoint)
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.onFadeFinish(out)__DelegateSignature
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_eyecatch_C::STATIC_onFadeFinish_out___DelegateSignature()
+void Uwgt_eyecatch_C::onFadeFinish_out___DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_eyecatch.wgt_eyecatch_C.onFadeFinish(out)__DelegateSignature");
 
 	Uwgt_eyecatch_C_onFadeFinish_out___DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -362,16 +356,15 @@ void Uwgt_eyecatch_C::STATIC_onFadeFinish_out___DelegateSignature()
 
 
 // Function wgt_eyecatch.wgt_eyecatch_C.onFadeFinish(in)__DelegateSignature
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_eyecatch_C::STATIC_onFadeFinish_in___DelegateSignature()
+void Uwgt_eyecatch_C::onFadeFinish_in___DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_eyecatch.wgt_eyecatch_C.onFadeFinish(in)__DelegateSignature");
 
 	Uwgt_eyecatch_C_onFadeFinish_in___DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

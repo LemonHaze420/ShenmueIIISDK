@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,8 +21,8 @@ struct UBPC_MiniGameTalk_C_GetStartTalkActionType_Params
 	struct FS3DetectActionParam                        Params;                                                   // (Parm, OutParm)
 };
 
-// Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.GetActionType
-struct UBPC_MiniGameTalk_C_GetActionType_Params
+// Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.getActionType
+struct UBPC_MiniGameTalk_C_getActionType_Params
 {
 	bool                                               Sight;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FS3DetectActionParam>                Params;                                                   // (Parm, OutParm, ZeroConstructor)

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,24 +46,24 @@ public:
 	}
 
 
-	void STATIC_GetGachaID(struct FName* GachaId);
+	void GetGachaID(struct FName* GachaId);
 	void DestroyLoadObject(bool* dummy);
-	void STATIC_InitAsyncLoad(bool* dummy);
+	void InitAsyncLoad(bool* dummy);
 	struct FVector GetSightCheckLocation();
 	bool IsTalking();
-	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void IsDispArrow(bool* IsDisp);
-	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
-	void STATIC_InputCancel();
-	void STATIC_InputAction();
+	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
+	void InputCancel();
+	void InputAction();
 	void InputLeft();
 	void InputRight();
-	void STATIC_DeleteArrow();
-	void STATIC_MakeArrow();
+	void DeleteArrow();
+	void MakeArrow();
 	void Tick_Select(float ArgDeltaSec);
 	void GetOldTargetGacha(class ABP_MiniGame_Gacha_C** newParam);
 	void StartLinkGacha();
-	void STATIC_Init();
+	void Init();
 	void GetTargetGacha(class ABP_MiniGame_Gacha_C** newParam);
 	void UserConstructionScript();
 	void GachaRewardWathing();
@@ -73,7 +73,7 @@ public:
 	void EndMiniGame();
 	void OnTalkScriptEvent(int EventNumber);
 	void StartMiniGame();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void CancelMiniGame();
 	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);

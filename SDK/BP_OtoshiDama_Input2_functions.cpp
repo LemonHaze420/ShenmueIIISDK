@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.UserConstructionScript
-// (NetReliable, NetRequest, Native, Static, MulticastDelegate, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_OtoshiDama_Input2_C::STATIC_UserConstructionScript()
+void ABP_OtoshiDama_Input2_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.UserConstructionScript");
 
 	ABP_OtoshiDama_Input2_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_OtoshiDama_Input2_C::STATIC_UserConstructionScript()
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_22
-// (Net, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -52,7 +51,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_Right_K2Node_InputActionEvent_21
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -72,7 +71,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_Right_K2Node_InputActionEvent_21(cons
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_Right_K2Node_InputActionEvent_20
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -92,7 +91,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_Right_K2Node_InputActionEvent_20(cons
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_Left_K2Node_InputActionEvent_19
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -112,7 +111,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_Left_K2Node_InputActionEvent_19(const
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_Left_K2Node_InputActionEvent_18
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -132,7 +131,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_Left_K2Node_InputActionEvent_18(const
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_Top_K2Node_InputActionEvent_17
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -152,7 +151,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_Top_K2Node_InputActionEvent_17(const 
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_Top_K2Node_InputActionEvent_16
-// (Net, NetRequest, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -172,7 +171,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_Top_K2Node_InputActionEvent_16(const 
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_15
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -192,7 +191,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_15(con
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_14
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -212,7 +211,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_14(con
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_13
-// (Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -232,7 +231,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12
-// (Net, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -252,7 +251,7 @@ void ABP_OtoshiDama_Input2_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_1
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -272,7 +271,7 @@ void ABP_OtoshiDama_Input2_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxis
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_3
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -292,7 +291,7 @@ void ABP_OtoshiDama_Input2_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEv
 
 
 // Function BP_OtoshiDama_Input2.BP_OtoshiDama_Input2_C.ExecuteUbergraph_BP_OtoshiDama_Input2
-// (NetReliable, NetMulticast, Private, Delegate, NetServer, NetClient, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

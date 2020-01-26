@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,6 +24,21 @@ struct ABP_UI_Manager_C_GetPriority_Params
 struct ABP_UI_Manager_C_GetDetectAction_Params
 {
 	TArray<struct FS3DetectActionParam>                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function BP_UI_Manager.BP_UI_Manager_C.TestSpecialExchangeShop
+struct ABP_UI_Manager_C_TestSpecialExchangeShop_Params
+{
+	TEnumAsByte<EN_IconType>                           ShopType;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Category;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_UI_Manager.BP_UI_Manager_C.EnableRightPanelSelection
+struct ABP_UI_Manager_C_EnableRightPanelSelection_Params
+{
+	class UBPW_UI_BaseWindow_C*                        InputPin;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function BP_UI_Manager.BP_UI_Manager_C.SetRotateIconVisiblity
@@ -75,7 +90,7 @@ struct ABP_UI_Manager_C_PushRight_ItemList_Params
 struct ABP_UI_Manager_C_MakeItemList_Params
 {
 	TArray<int>                                        ItemIDList;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FST_ItemList>                        itemList;                                                 // (Parm, OutParm, ZeroConstructor)
+	TArray<struct FST_ItemList>                        ItemList;                                                 // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function BP_UI_Manager.BP_UI_Manager_C.IsRegistDetectAction

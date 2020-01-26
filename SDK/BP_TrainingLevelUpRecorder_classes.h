@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,12 @@ public:
 	}
 
 
-	bool STATIC_HasStatProgressChange(const struct FST_SparringResultLevelUpData& Data);
+	bool HasStatProgressChange(const struct FST_SparringResultLevelUpData& Data);
 	bool HasRecordedProgressChange();
-	void STATIC_GetLevelUpData(struct FST_SparringResultLevelUpData* Player, struct FST_SparringResultLevelUpData* ATK, struct FST_SparringResultLevelUpData* VIT);
-	bool STATIC_HasRecordedStatLevelUp(const struct FST_SparringResultLevelUpData& Data);
-	bool STATIC_HasRecordedLevelUp();
-	void STATIC_UpdateStatData(class US3DerivedPlayerLevel* Stat, struct FST_SparringResultLevelUpData* Data);
+	void GetLevelUpData(struct FST_SparringResultLevelUpData* Player, struct FST_SparringResultLevelUpData* ATK, struct FST_SparringResultLevelUpData* VIT);
+	bool HasRecordedStatLevelUp(const struct FST_SparringResultLevelUpData& Data);
+	bool HasRecordedLevelUp();
+	void UpdateStatData(class US3DerivedPlayerLevel* Stat, struct FST_SparringResultLevelUpData* Data);
 	void RecordCurrentState();
 	void GetInitialStatState(class US3DerivedPlayerLevel* Stat, struct FST_SparringResultLevelUpData* Data);
 	void RecordInitialState();

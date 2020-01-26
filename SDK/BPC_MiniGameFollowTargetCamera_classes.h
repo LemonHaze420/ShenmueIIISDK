@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,16 +40,16 @@ public:
 	}
 
 
-	void STATIC_FollowEnd();
-	void STATIC_FollowStart();
-	void STATIC_SetCameraDefaultRelativeTransform(struct FTransform* trans);
-	void STATIC_Update(float DeltaSeconds);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_SetCameraFollowTargetActor(class AActor* Actor);
-	void STATIC_OnDestroyTargetActor(class AActor* DestroyedActor);
+	void FollowEnd();
+	void FollowStart();
+	void SetCameraDefaultRelativeTransform(struct FTransform* trans);
+	void Update(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void SetCameraFollowTargetActor(class AActor* Actor);
+	void OnDestroyTargetActor(class AActor* DestroyedActor);
 	void ExecuteUbergraph_BPC_MiniGameFollowTargetCamera(int EntryPoint);
-	void STATIC_OnReturnDefaultCameraRotation__DelegateSignature();
+	void OnReturnDefaultCameraRotation__DelegateSignature();
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,15 +25,15 @@ public:
 	}
 
 
-	void STATIC_GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
-	void STATIC_FinalizeTalk();
-	void STATIC_RestartMiniGame();
-	void STATIC_EnterMiniGame(float EnterTime);
-	void STATIC_DrawMiniGame();
-	void STATIC_LoseMiniGame();
-	void STATIC_WinMiniGame();
-	void STATIC_EndMiniGame();
-	void STATIC_StartMiniGame();
+	void GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
+	void FinalizeTalk();
+	void RestartMiniGame();
+	void EnterMiniGame(float EnterTime);
+	void DrawMiniGame();
+	void LoseMiniGame();
+	void WinMiniGame();
+	void EndMiniGame();
+	void StartMiniGame();
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,37 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
-
-// Enum BattleLabo.ECurveAdaptType
-enum class ECurveAdaptType : uint8_t
-{
-	ECurveAdaptType__Both          = 0,
-	ECurveAdaptType__Source        = 1,
-	ECurveAdaptType__Destination   = 2,
-	ECurveAdaptType__ECurveAdaptType_MAX = 3
-};
-
-
-// Enum BattleLabo.EStepType
-enum class EStepType : uint8_t
-{
-	EStepType__None                = 0,
-	EStepType__StepIn              = 1,
-	EStepType__StepOut             = 2,
-	EStepType__StepJump            = 3,
-	EStepType__EStepType_MAX       = 4
-};
-
-
-// Enum BattleLabo.EFixSide
-enum class EFixSide : uint8_t
-{
-	EFixSide__None                 = 0,
-	EFixSide__Left                 = 1,
-	EFixSide__Right                = 2,
-	EFixSide__EFixSide_MAX         = 3
-};
-
 
 // Enum BattleLabo.EBTL_NPCLODState
 enum class EBTL_NPCLODState : uint8_t
@@ -56,12 +25,43 @@ enum class EBTL_NPCLODState : uint8_t
 };
 
 
+// Enum BattleLabo.ECurveAdaptType
+enum class ECurveAdaptType : uint8_t
+{
+	ECurveAdaptType__Both          = 0,
+	ECurveAdaptType__Source        = 1,
+	ECurveAdaptType__Destination   = 2,
+	ECurveAdaptType__ECurveAdaptType_MAX = 3
+};
+
+
+// Enum BattleLabo.EFixSide
+enum class EFixSide : uint8_t
+{
+	EFixSide__None                 = 0,
+	EFixSide__Left                 = 1,
+	EFixSide__Right                = 2,
+	EFixSide__EFixSide_MAX         = 3
+};
+
+
 // Enum BattleLabo.ESequencePlayMode
 enum class ESequencePlayMode : uint8_t
 {
 	ESequencePlayMode__Idle        = 0,
 	ESequencePlayMode__Walk        = 1,
 	ESequencePlayMode__ESequencePlayMode_MAX = 2
+};
+
+
+// Enum BattleLabo.EStepType
+enum class EStepType : uint8_t
+{
+	EStepType__None                = 0,
+	EStepType__StepIn              = 1,
+	EStepType__StepOut             = 2,
+	EStepType__StepJump            = 3,
+	EStepType__EStepType_MAX       = 4
 };
 
 
@@ -86,6 +86,16 @@ enum class EBTL_HoldInputType : uint8_t
 };
 
 
+// Enum BattleLabo.EBTL_AutoOnOff
+enum class EBTL_AutoOnOff : uint8_t
+{
+	EBTL_AutoOnOff__Auto           = 0,
+	EBTL_AutoOnOff__Yes            = 1,
+	EBTL_AutoOnOff__No             = 2,
+	EBTL_AutoOnOff__EBTL_MAX       = 3
+};
+
+
 // Enum BattleLabo.EBattleAnimStrength
 enum class EBattleAnimStrength : uint8_t
 {
@@ -97,24 +107,15 @@ enum class EBattleAnimStrength : uint8_t
 };
 
 
-// Enum BattleLabo.EBattleAnimHeight
-enum class EBattleAnimHeight : uint8_t
+// Enum BattleLabo.EBattleAnimDirection
+enum class EBattleAnimDirection : uint8_t
 {
-	EBattleAnimHeight__None        = 0,
-	EBattleAnimHeight__Lower       = 1,
-	EBattleAnimHeight__Mid         = 2,
-	EBattleAnimHeight__Upper       = 3,
-	EBattleAnimHeight__EBattleAnimHeight_MAX = 4
-};
-
-
-// Enum BattleLabo.EBattleAttackType
-enum class EBattleAttackType : uint8_t
-{
-	EBattleAttackType__None        = 0,
-	EBattleAttackType__Punch       = 1,
-	EBattleAttackType__Kick        = 2,
-	EBattleAttackType__EBattleAttackType_MAX = 3
+	EBattleAnimDirection__None     = 0,
+	EBattleAnimDirection__Left     = 1,
+	EBattleAnimDirection__Forward  = 2,
+	EBattleAnimDirection__Right    = 3,
+	EBattleAnimDirection__Back     = 4,
+	EBattleAnimDirection__EBattleAnimDirection_MAX = 5
 };
 
 
@@ -129,43 +130,24 @@ enum class EBattleAnimRange : uint8_t
 };
 
 
-// Enum BattleLabo.EAttackType
-enum class EAttackType : uint8_t
+// Enum BattleLabo.EBattleAttackType
+enum class EBattleAttackType : uint8_t
 {
-	EAttackType__Normal            = 0,
-	EAttackType__Strong            = 1,
-	EAttackType__Special           = 2,
-	EAttackType__EAttackType_MAX   = 3
+	EBattleAttackType__None        = 0,
+	EBattleAttackType__Punch       = 1,
+	EBattleAttackType__Kick        = 2,
+	EBattleAttackType__EBattleAttackType_MAX = 3
 };
 
 
-// Enum BattleLabo.EBTL_AutoOnOff
-enum class EBTL_AutoOnOff : uint8_t
+// Enum BattleLabo.EBattleAnimHeight
+enum class EBattleAnimHeight : uint8_t
 {
-	EBTL_AutoOnOff__Auto           = 0,
-	EBTL_AutoOnOff__Yes            = 1,
-	EBTL_AutoOnOff__No             = 2,
-	EBTL_AutoOnOff__EBTL_MAX       = 3
-};
-
-
-// Enum BattleLabo.EBTL_LeaderboardRankType
-enum class EBTL_LeaderboardRankType : uint8_t
-{
-	EBTL_LeaderboardRankType__Score = 0,
-	EBTL_LeaderboardRankType__Time = 1,
-	EBTL_LeaderboardRankType__EBTL_MAX = 2
-};
-
-
-// Enum BattleLabo.EBTL_MeshFadeState
-enum class EBTL_MeshFadeState : uint8_t
-{
-	EBTL_MeshFadeState__CompleteFadeIn = 0,
-	EBTL_MeshFadeState__ActiveFadeIn = 1,
-	EBTL_MeshFadeState__CompleteFadeOut = 2,
-	EBTL_MeshFadeState__ActiveFadeOut = 3,
-	EBTL_MeshFadeState__EBTL_MAX   = 4
+	EBattleAnimHeight__None        = 0,
+	EBattleAnimHeight__Lower       = 1,
+	EBattleAnimHeight__Mid         = 2,
+	EBattleAnimHeight__Upper       = 3,
+	EBattleAnimHeight__EBattleAnimHeight_MAX = 4
 };
 
 
@@ -198,6 +180,27 @@ enum class EActionCategoryNative : uint8_t
 };
 
 
+// Enum BattleLabo.EAttackType
+enum class EAttackType : uint8_t
+{
+	EAttackType__Normal            = 0,
+	EAttackType__Strong            = 1,
+	EAttackType__Special           = 2,
+	EAttackType__EAttackType_MAX   = 3
+};
+
+
+// Enum BattleLabo.EBTL_MeshFadeState
+enum class EBTL_MeshFadeState : uint8_t
+{
+	EBTL_MeshFadeState__CompleteFadeIn = 0,
+	EBTL_MeshFadeState__ActiveFadeIn = 1,
+	EBTL_MeshFadeState__CompleteFadeOut = 2,
+	EBTL_MeshFadeState__ActiveFadeOut = 3,
+	EBTL_MeshFadeState__EBTL_MAX   = 4
+};
+
+
 // Enum BattleLabo.ERaycastHitpointInfoType
 enum class ERaycastHitpointInfoType : uint8_t
 {
@@ -207,15 +210,12 @@ enum class ERaycastHitpointInfoType : uint8_t
 };
 
 
-// Enum BattleLabo.EBattleAnimDirection
-enum class EBattleAnimDirection : uint8_t
+// Enum BattleLabo.EBTL_LeaderboardRankType
+enum class EBTL_LeaderboardRankType : uint8_t
 {
-	EBattleAnimDirection__None     = 0,
-	EBattleAnimDirection__Left     = 1,
-	EBattleAnimDirection__Forward  = 2,
-	EBattleAnimDirection__Right    = 3,
-	EBattleAnimDirection__Back     = 4,
-	EBattleAnimDirection__EBattleAnimDirection_MAX = 5
+	EBTL_LeaderboardRankType__Score = 0,
+	EBTL_LeaderboardRankType__Time = 1,
+	EBTL_LeaderboardRankType__EBTL_MAX = 2
 };
 
 
@@ -241,6 +241,15 @@ struct FAttackOverlapResult
 {
 	class UPrimitiveComponent*                         SourcePrimitive;                                          // 0x0000(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UPrimitiveComponent*                         DestinationPrimitive;                                     // 0x0008(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct BattleLabo.BTL_TimeMSC
+// 0x000C
+struct FBTL_TimeMSC
+{
+	int                                                MM;                                                       // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                SS;                                                       // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                CC;                                                       // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct BattleLabo.BTL_BRallyCourseCutsceneData
@@ -271,15 +280,6 @@ struct FBTL_ScoreGroupData
 	TMap<int, int>                                     MaxCounts;                                                // 0x0000(0x0050) (ZeroConstructor, Transient)
 };
 
-// ScriptStruct BattleLabo.BTL_TimeMSC
-// 0x000C
-struct FBTL_TimeMSC
-{
-	int                                                MM;                                                       // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                SS;                                                       // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                CC;                                                       // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct BattleLabo.BTL_DateYMD
 // 0x000C
 struct FBTL_DateYMD
@@ -308,16 +308,13 @@ struct FBTL_CourseSaveData
 	TArray<struct FBTL_LeaderboardRecord>              Records;                                                  // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
-// ScriptStruct BattleLabo.BTL_EnemySearchPathNode
-// 0x0030
-struct FBTL_EnemySearchPathNode
+// ScriptStruct BattleLabo.BTL_MeshFadeSettings
+// 0x0028
+struct FBTL_MeshFadeSettings
 {
-	TArray<int>                                        EdgesTo;                                                  // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<float>                                      EdgesCost;                                                // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0020(0x0004) MISSED OFFSET
-	float                                              Cost;                                                     // 0x0024(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                Index;                                                    // 0x0028(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                From;                                                     // 0x002C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UMeshComponent*                              Component;                                                // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<class UMaterialInterface*>                  OverrideBaseMats;                                         // 0x0008(0x0010) (ZeroConstructor)
+	TArray<class UMaterialInterface*>                  FadeMats;                                                 // 0x0018(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct BattleLabo.SyncActionInfoNative
@@ -405,13 +402,16 @@ struct FMotionDatabaseElementNative : public FTableRowBase
 	int                                                Cost;                                                     // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct BattleLabo.BTL_MeshFadeSettings
-// 0x0028
-struct FBTL_MeshFadeSettings
+// ScriptStruct BattleLabo.BTL_EnemySearchPathNode
+// 0x0030
+struct FBTL_EnemySearchPathNode
 {
-	class UMeshComponent*                              Component;                                                // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class UMaterialInterface*>                  OverrideBaseMats;                                         // 0x0008(0x0010) (ZeroConstructor)
-	TArray<class UMaterialInterface*>                  FadeMats;                                                 // 0x0018(0x0010) (ZeroConstructor)
+	TArray<int>                                        EdgesTo;                                                  // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<float>                                      EdgesCost;                                                // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0020(0x0004) MISSED OFFSET
+	float                                              Cost;                                                     // 0x0024(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                Index;                                                    // 0x0028(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                From;                                                     // 0x002C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct BattleLabo.BTL_RacerStatLimits
@@ -618,6 +618,15 @@ struct FAnimNode_AdjustOnTransform : public FAnimNode_Base
 	unsigned char                                      UnknownData01[0xFF];                                      // 0x0081(0x00FF) MISSED OFFSET
 };
 
+// ScriptStruct BattleLabo.AnimNode_AdjustRootMotion
+// 0x0060 (0x0090 - 0x0030)
+struct FAnimNode_AdjustRootMotion : public FAnimNode_Base
+{
+	struct FPoseLink                                   Base;                                                     // 0x0030(0x0018) (Edit, BlueprintVisible)
+	bool                                               CancelFirstFrameOnly;                                     // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x47];                                      // 0x0049(0x0047) MISSED OFFSET
+};
+
 // ScriptStruct BattleLabo.AnimNode_AdjustStep
 // 0x0380 (0x03B0 - 0x0030)
 struct FAnimNode_AdjustStep : public FAnimNode_Base
@@ -631,15 +640,6 @@ struct FAnimNode_AdjustStep : public FAnimNode_Base
 	bool                                               EnableTwist;                                              // 0x00E4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               EnableSlant;                                              // 0x00E5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x2CA];                                     // 0x00E6(0x02CA) MISSED OFFSET
-};
-
-// ScriptStruct BattleLabo.AnimNode_AdjustRootMotion
-// 0x0060 (0x0090 - 0x0030)
-struct FAnimNode_AdjustRootMotion : public FAnimNode_Base
-{
-	struct FPoseLink                                   Base;                                                     // 0x0030(0x0018) (Edit, BlueprintVisible)
-	bool                                               CancelFirstFrameOnly;                                     // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x47];                                      // 0x0049(0x0047) MISSED OFFSET
 };
 
 // ScriptStruct BattleLabo.MyAnimNode_AttackIK
@@ -664,13 +664,6 @@ struct FAnimNode_BendPose : public FAnimNode_Base
 	float                                              TargetHeight;                                             // 0x008C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              TargetAngle;                                              // 0x0090(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0xBC];                                      // 0x0094(0x00BC) MISSED OFFSET
-};
-
-// ScriptStruct BattleLabo.AnimNode_EditPoseTest
-// 0x0018 (0x0048 - 0x0030)
-struct FAnimNode_EditPoseTest : public FAnimNode_Base
-{
-	struct FPoseLink                                   Base;                                                     // 0x0030(0x0018) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct BattleLabo.AnimNode_SequencePlayerEx
@@ -711,18 +704,6 @@ struct FAnimNode_TwistPose : public FAnimNode_Base
 	unsigned char                                      UnknownData01[0xC0];                                      // 0x0090(0x00C0) MISSED OFFSET
 };
 
-// ScriptStruct BattleLabo.AnimNode_TwistPoseAngle
-// 0x0110 (0x0140 - 0x0030)
-struct FAnimNode_TwistPoseAngle : public FAnimNode_Base
-{
-	struct FComponentSpacePoseLink                     Base;                                                     // 0x0030(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
-	struct FTransform                                  TwistBase;                                                // 0x0050(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              TwistAngle;                                               // 0x0080(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TargetHeight;                                             // 0x0084(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xB8];                                      // 0x0088(0x00B8) MISSED OFFSET
-};
-
 // ScriptStruct BattleLabo.AnimNode_TwistPoseToTarget
 // 0x0180 (0x01B0 - 0x0030)
 struct FAnimNode_TwistPoseToTarget : public FAnimNode_Base
@@ -736,6 +717,18 @@ struct FAnimNode_TwistPoseToTarget : public FAnimNode_Base
 	unsigned char                                      UnknownData01[0xCC];                                      // 0x00E4(0x00CC) MISSED OFFSET
 };
 
+// ScriptStruct BattleLabo.AnimNode_TwistPoseAngle
+// 0x0110 (0x0140 - 0x0030)
+struct FAnimNode_TwistPoseAngle : public FAnimNode_Base
+{
+	struct FComponentSpacePoseLink                     Base;                                                     // 0x0030(0x0018) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
+	struct FTransform                                  TwistBase;                                                // 0x0050(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
+	float                                              TwistAngle;                                               // 0x0080(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TargetHeight;                                             // 0x0084(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB8];                                      // 0x0088(0x00B8) MISSED OFFSET
+};
+
 // ScriptStruct BattleLabo.AnimNode_TwoWayBlendCustom
 // 0x00A8 (0x00D8 - 0x0030)
 struct FAnimNode_TwoWayBlendCustom : public FAnimNode_Base
@@ -746,6 +739,13 @@ struct FAnimNode_TwoWayBlendCustom : public FAnimNode_Base
 	ECurveAdaptType                                    CurveAdaptType;                                           // 0x0064(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               LeftFirst;                                                // 0x0065(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x72];                                      // 0x0066(0x0072) MISSED OFFSET
+};
+
+// ScriptStruct BattleLabo.AnimNode_EditPoseTest
+// 0x0018 (0x0048 - 0x0030)
+struct FAnimNode_EditPoseTest : public FAnimNode_Base
+{
+	struct FPoseLink                                   Base;                                                     // 0x0030(0x0018) (Edit, BlueprintVisible)
 };
 
 }

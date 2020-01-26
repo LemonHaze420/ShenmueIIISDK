@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,17 +28,17 @@ public:
 	}
 
 
-	bool STATIC_IsNPCFadeInProgress();
+	bool IsNPCFadeInProgress();
 	void CheckSkip(bool* dummy);
-	void STATIC_RestoreExtendAttention();
-	void STATIC_ExtendAttention(class UClass* AttentionControllerClass);
-	void STATIC_RetryGame();
-	void STATIC_InitWeather();
-	void STATIC_UserConstructionScript();
+	void RestoreExtendAttention();
+	void ExtendAttention(class UClass* AttentionControllerClass);
+	void RetryGame();
+	void InitWeather();
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void CheckTimeManager();
-	void STATIC_SetSkyManager(class AS3SkyManager* InSkyManager);
-	void STATIC_ExecuteUbergraph_BP_S3GameMode(int EntryPoint);
+	void SetSkyManager(class AS3SkyManager* InSkyManager);
+	void ExecuteUbergraph_BP_S3GameMode(int EntryPoint);
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Exit.BPF_Exit_C.CanExit
-// (Net, NetReliable, Native, Event, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Exit_C::CanExit(class UObject* __WorldContext, bool* CAN)
+void UBPF_Exit_C::STATIC_CanExit(class UObject* __WorldContext, bool* CAN)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Exit.BPF_Exit_C.CanExit");
 
@@ -27,7 +27,6 @@ void UBPF_Exit_C::CanExit(class UObject* __WorldContext, bool* CAN)
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_OD_Hand_re.ABP_OD_Hand_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_6C92D6E4462AB823E6EF71BF011C41F4
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void UABP_OD_Hand_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_6C92D6E4462AB823E6EF71BF011C41F4()
+void UABP_OD_Hand_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_6C92D6E4462AB823E6EF71BF011C41F4()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_OD_Hand_re.ABP_OD_Hand_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_6C92D6E4462AB823E6EF71BF011C41F4");
 
 	UABP_OD_Hand_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_6C92D6E4462AB823E6EF71BF011C41F4_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,16 +31,15 @@ void UABP_OD_Hand_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_O
 
 
 // Function ABP_OD_Hand_re.ABP_OD_Hand_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_1A6F82BA41ADAE2EF442A28A404BC856
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void UABP_OD_Hand_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_1A6F82BA41ADAE2EF442A28A404BC856()
+void UABP_OD_Hand_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_1A6F82BA41ADAE2EF442A28A404BC856()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_OD_Hand_re.ABP_OD_Hand_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_1A6F82BA41ADAE2EF442A28A404BC856");
 
 	UABP_OD_Hand_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_OD_Hand_re_AnimGraphNode_TransitionResult_1A6F82BA41ADAE2EF442A28A404BC856_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,7 +48,7 @@ void UABP_OD_Hand_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_O
 
 
 // Function ABP_OD_Hand_re.ABP_OD_Hand_re_C.ExecuteUbergraph_ABP_OD_Hand_re
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -62,7 +60,6 @@ void UABP_OD_Hand_re_C::ExecuteUbergraph_ABP_OD_Hand_re(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

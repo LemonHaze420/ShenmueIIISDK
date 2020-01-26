@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_PlayerShove.BPC_PlayerShove_C.Update
-// (Net, NetReliable, Static, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_PlayerShove_C::STATIC_Update(float DeltaSeconds)
+void UBPC_PlayerShove_C::Update(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PlayerShove.BPC_PlayerShove_C.Update");
 
@@ -34,9 +34,9 @@ void UBPC_PlayerShove_C::STATIC_Update(float DeltaSeconds)
 
 
 // Function BPC_PlayerShove.BPC_PlayerShove_C.ReceiveBeginPlay
-// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_PlayerShove_C::STATIC_ReceiveBeginPlay()
+void UBPC_PlayerShove_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PlayerShove.BPC_PlayerShove_C.ReceiveBeginPlay");
 
@@ -51,11 +51,11 @@ void UBPC_PlayerShove_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_PlayerShove.BPC_PlayerShove_C.ExecuteUbergraph_BPC_PlayerShove
-// (NetRequest, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_PlayerShove_C::STATIC_ExecuteUbergraph_BPC_PlayerShove(int EntryPoint)
+void UBPC_PlayerShove_C::ExecuteUbergraph_BPC_PlayerShove(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PlayerShove.BPC_PlayerShove_C.ExecuteUbergraph_BPC_PlayerShove");
 

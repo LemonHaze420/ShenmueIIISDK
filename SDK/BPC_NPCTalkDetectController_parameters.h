@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -65,8 +65,8 @@ struct UBPC_NPCTalkDetectController_C_IsTalking_Params
 	bool                                               bTalking;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.GetActionType
-struct UBPC_NPCTalkDetectController_C_GetActionType_Params
+// Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.getActionType
+struct UBPC_NPCTalkDetectController_C_getActionType_Params
 {
 	TArray<struct FS3DetectActionParam>                Params;                                                   // (Parm, OutParm, ZeroConstructor)
 };

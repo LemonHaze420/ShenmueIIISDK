@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_ViewItem.BP_UI_ViewItem_C.ResetRotation
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_UI_ViewItem_C::STATIC_ResetRotation()
+void ABP_UI_ViewItem_C::ResetRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ViewItem.BP_UI_ViewItem_C.ResetRotation");
 
@@ -31,11 +31,11 @@ void ABP_UI_ViewItem_C::STATIC_ResetRotation()
 
 
 // Function BP_UI_ViewItem.BP_UI_ViewItem_C.SetLocation
-// (Exec, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 NewLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_UI_ViewItem_C::STATIC_SetLocation(const struct FVector& NewLocation)
+void ABP_UI_ViewItem_C::SetLocation(const struct FVector& NewLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ViewItem.BP_UI_ViewItem_C.SetLocation");
 
@@ -51,7 +51,7 @@ void ABP_UI_ViewItem_C::STATIC_SetLocation(const struct FVector& NewLocation)
 
 
 // Function BP_UI_ViewItem.BP_UI_ViewItem_C.SetItemData
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMesh*             NewMesh                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                Rotation                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -65,7 +65,6 @@ void ABP_UI_ViewItem_C::SetItemData(class UStaticMesh* NewMesh, const struct FRo
 	params.Rotation = Rotation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +73,7 @@ void ABP_UI_ViewItem_C::SetItemData(class UStaticMesh* NewMesh, const struct FRo
 
 
 // Function BP_UI_ViewItem.BP_UI_ViewItem_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_UI_ViewItem_C::UserConstructionScript()
 {
@@ -83,7 +82,6 @@ void ABP_UI_ViewItem_C::UserConstructionScript()
 	ABP_UI_ViewItem_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,11 +90,11 @@ void ABP_UI_ViewItem_C::UserConstructionScript()
 
 
 // Function BP_UI_ViewItem.BP_UI_ViewItem_C.OnLoaded_218B594649E9FBD554432E8844E18A3C
-// (Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ViewItem_C::STATIC_OnLoaded_218B594649E9FBD554432E8844E18A3C(class UObject* Loaded)
+void ABP_UI_ViewItem_C::OnLoaded_218B594649E9FBD554432E8844E18A3C(class UObject* Loaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ViewItem.BP_UI_ViewItem_C.OnLoaded_218B594649E9FBD554432E8844E18A3C");
 
@@ -112,7 +110,7 @@ void ABP_UI_ViewItem_C::STATIC_OnLoaded_218B594649E9FBD554432E8844E18A3C(class U
 
 
 // Function BP_UI_ViewItem.BP_UI_ViewItem_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -124,7 +122,6 @@ void ABP_UI_ViewItem_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,11 +130,11 @@ void ABP_UI_ViewItem_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_UI_ViewItem.BP_UI_ViewItem_C.ExecuteUbergraph_BP_UI_ViewItem
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ViewItem_C::STATIC_ExecuteUbergraph_BP_UI_ViewItem(int EntryPoint)
+void ABP_UI_ViewItem_C::ExecuteUbergraph_BP_UI_ViewItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ViewItem.BP_UI_ViewItem_C.ExecuteUbergraph_BP_UI_ViewItem");
 
@@ -153,7 +150,7 @@ void ABP_UI_ViewItem_C::STATIC_ExecuteUbergraph_BP_UI_ViewItem(int EntryPoint)
 
 
 // Function BP_UI_ViewItem.BP_UI_ViewItem_C.ED_FinishMeshLoad__DelegateSignature
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_UI_ViewItem_C::ED_FinishMeshLoad__DelegateSignature()
 {
@@ -162,7 +159,6 @@ void ABP_UI_ViewItem_C::ED_FinishMeshLoad__DelegateSignature()
 	ABP_UI_ViewItem_C_ED_FinishMeshLoad__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

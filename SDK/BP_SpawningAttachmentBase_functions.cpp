@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SpawningAttachmentBase.BP_SpawningAttachmentBase_C.UserConstructionScript
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SpawningAttachmentBase_C::STATIC_UserConstructionScript()
+void ABP_SpawningAttachmentBase_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpawningAttachmentBase.BP_SpawningAttachmentBase_C.UserConstructionScript");
 
 	ABP_SpawningAttachmentBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_SpawningAttachmentBase_C::STATIC_UserConstructionScript()
 
 
 // Function BP_SpawningAttachmentBase.BP_SpawningAttachmentBase_C.RequestActionName
-// (Net, NetReliable, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ActionName                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -44,7 +43,6 @@ void ABP_SpawningAttachmentBase_C::RequestActionName(const struct FName& ActionN
 	params.ActionName = ActionName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +51,7 @@ void ABP_SpawningAttachmentBase_C::RequestActionName(const struct FName& ActionN
 
 
 // Function BP_SpawningAttachmentBase.BP_SpawningAttachmentBase_C.ReceiveTick
-// (Net, NetReliable, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -65,7 +63,6 @@ void ABP_SpawningAttachmentBase_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +71,7 @@ void ABP_SpawningAttachmentBase_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_SpawningAttachmentBase.BP_SpawningAttachmentBase_C.ExecuteUbergraph_BP_SpawningAttachmentBase
-// (Net, NetReliable, NetRequest, Exec, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,7 +51,7 @@ public:
 	float                                              _______0___Track_0_2095B74949F288C1966B6DBB4380FF0B;      // 0x06C0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_2095B74949F288C1966B6DBB4380FF0B;     // 0x06C4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x3];                                       // 0x06C5(0x0003) MISSED OFFSET
-	class UTimelineComponent*						   UnknownVar01;                                          // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          򠪦􆖐񍳔_1;                                           // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              qte_timeline_type2_move_rate_C741B8E845C9E4594DB8EFAF77E262A6;// 0x06D0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    qte_timeline_type2__Direction_C741B8E845C9E4594DB8EFAF77E262A6;// 0x06D4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x3];                                       // 0x06D5(0x0003) MISSED OFFSET
@@ -296,38 +296,38 @@ public:
 
 
 	void SetAnimOffsetPos();
-	void STATIC_AddAdjustPlayCount();
+	void AddAdjustPlayCount();
 	void CheckIsAdjustPlay(bool* IsAdjust);
-	void STATIC_GetRefractionRate(float* Rate);
+	void GetRefractionRate(float* Rate);
 	void SetBuoyPosOnSwing();
-	void STATIC_UpdateCableEndPos();
+	void UpdateCableEndPos();
 	void UpdateBiteFishTargetLocation();
 	void UpdateRyoDirection();
 	void UpdateLoadMeshData();
-	void STATIC_InitAsyncLoad(bool* dummy);
-	void STATIC_UpdateBuoyLocation();
-	void STATIC_SettingFishWeight();
-	class UMeshComponent* STATIC_GetClothMeshComponent();
+	void InitAsyncLoad(bool* dummy);
+	void UpdateBuoyLocation();
+	void SettingFishWeight();
+	class UMeshComponent* GetClothMeshComponent();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
-	void STATIC_ClockVisibleChange(bool Visible);
+	void ClockVisibleChange(bool Visible);
 	void UpdateAroundFish();
-	void STATIC_CheckSubQuestEnabled(bool* Enabled);
-	void STATIC_SetEnabledFishArea(bool Enabled);
+	void CheckSubQuestEnabled(bool* Enabled);
+	void SetEnabledFishArea(bool Enabled);
 	void CreateSubQuestWidget(int RyoValue);
 	void IsSubQuestCompetition(bool* IsCompetition, int* EventFlagValue);
 	void ResetWaterPlane();
 	void SettingWaterPlane();
-	void STATIC_GetResultRank(int* Rank);
+	void GetResultRank(int* Rank);
 	void IsFailedFishing(bool* Failed);
 	void CheckTimeup(bool* Timeup);
 	void SettingTimeup();
 	void SettingEscape();
 	void SettingDetector(bool Enable);
 	void IsEnableFishing(bool* Enable);
-	void STATIC_GetSellPosition(struct FVector* pos);
+	void GetSellPosition(struct FVector* pos);
 	void InitializeShopResult();
-	void STATIC_SpawnSequenceActor(class ULevelSequence* InSequence0, class AActor* AttachParentActor0, class ABP_SpawnableSequenceActor_C** SpawnObj);
-	void STATIC_SettingSEPlayer(bool IsDestroy);
+	void SpawnSequenceActor(class ULevelSequence* InSequence0, class AActor* AttachParentActor0, class ABP_SpawnableSequenceActor_C** SpawnObj);
+	void SettingSEPlayer(bool IsDestroy);
 	void StopFishingBGM();
 	void PlayBGM();
 	void PlayReelSE();
@@ -336,59 +336,59 @@ public:
 	void PlayResultSound();
 	void GetResultFishMesh(class USkeletalMeshComponent** RetMesh);
 	void FishHit();
-	void STATIC_HitSetting();
+	void HitSetting();
 	void GetFishingBuoyMesh(class UStaticMeshComponent** BuoyMesh);
-	void STATIC_UpdateCapture();
-	void STATIC_RestartSwing();
-	void STATIC_SetQteTriangleRotation();
+	void UpdateCapture();
+	void RestartSwing();
+	void SetQteTriangleRotation();
 	void UpdateQte();
-	void STATIC_MakeQteTriangle();
-	void STATIC_RemoveQte();
+	void MakeQteTriangle();
+	void RemoveQte();
 	void CreateResultWindow();
 	void SettingRod();
-	void STATIC_SetCableLength();
+	void SetCableLength();
 	void SettingWidgetText();
 	void GetFishShadow(class ABP_Fishing_FishShadow_C** RetFishShadow);
 	void SetPullPower(float ArgAxis, bool ArgIsX);
-	void STATIC_GetFishGram(int* ArgGram);
-	void STATIC_HitTimeRestart();
-	void STATIC_CalcReelSpeedRate();
-	void STATIC_CalcDistance(float ArgRate, struct FVector* RetLocation);
-	void STATIC_QTE_Finish();
+	void GetFishGram(int* ArgGram);
+	void HitTimeRestart();
+	void CalcReelSpeedRate();
+	void CalcDistance(float ArgRate, struct FVector* RetLocation);
+	void QTE_Finish();
 	void CalcArrowPow(float ArgInputPow, float* RetPow);
 	void CalcCastingRate(float* Rate);
-	void STATIC_StartCast();
+	void StartCast();
 	void GetFishingBuoyRoot(class UStaticMeshComponent** BuoyMesh);
 	void DebugDrawRangeLine(float ArgSplitNum);
-	void STATIC_UpdateDebug();
-	void STATIC_CalcRodBone();
+	void UpdateDebug();
+	void CalcRodBone();
 	void UpdateABPCastingRate();
-	void STATIC_GetCable(class UCableComponent** RetCable);
+	void GetCable(class UCableComponent** RetCable);
 	void GetBuoyScene(class USceneComponent** newParam);
-	void STATIC_UpdateFishPos();
+	void UpdateFishPos();
 	void InputSwingRY(float ArgAxis);
-	void STATIC_SettingResultCamera();
+	void SettingResultCamera();
 	void CameraChange(bool ArgUseSceneCamera);
-	void STATIC_SettingFromBuoy();
-	void STATIC_CheckFishAreaCollision(bool* RetHit);
-	void STATIC_MakeLandingFishList(bool* RetHit);
-	void STATIC_SettingHitFish();
+	void SettingFromBuoy();
+	void CheckFishAreaCollision(bool* RetHit);
+	void MakeLandingFishList(bool* RetHit);
+	void SettingHitFish();
 	void UpdateFish();
-	void STATIC_SettingFishScale();
+	void SettingFishScale();
 	void UpdateDelayState();
 	void UpdateDistance();
 	void GetNowDistance(float* RetDist);
 	void SetupResult(float ArgWait);
-	void STATIC_CalcLimitDistPer(float* RetLimitPow);
+	void CalcLimitDistPer(float* RetLimitPow);
 	void GetFishingArrow(class ABP_Fishing_Arrow_C** AsBP_Fishing_Ryo);
 	void GetHitFishData(struct FST_MG_FishData* newParam);
 	void GetFishingABP(class UABP_Fishing_re_C** AsABP_Fishing_Re);
 	void GetFishingRyo(class ABP_Fishing_Ryo_C** AsBP_Fishing_Ryo);
 	void getQTEDirection(int* qte_dir);
-	void STATIC_CheckLeftStickTurn(bool* is_turn);
+	void CheckLeftStickTurn(bool* is_turn);
 	void GetFishingBuoy(class ABP_FishingBuoy_test_C** Buoy);
 	void CreateWindow();
-	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
+	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
 	void UserConstructionScript();
 	void QTEEndTimeline__FinishedFunc();
 	void QTEEndTimeline__UpdateFunc();
@@ -402,7 +402,7 @@ public:
 	void qte_timeline_type2__qte_show__EventFunc();
 	void qte_timeline_type2__qte_wait_start__EventFunc();
 	void qte_timeline_type2__qte_start__EventFunc();
-	void UnknownFunc01();
+	void 򠪦􆖐񍳔_();
 	void Particle_Start_Timeline__FinishedFunc();
 	void Particle_Start_Timeline__UpdateFunc();
 	void P();
@@ -425,7 +425,7 @@ public:
 	void Wait_RStick_Y(float Axis);
 	void Input_Update();
 	void Wait_Input_Update();
-	void STATIC_Buoy_Attract(float Rate, bool Condition);
+	void Buoy_Attract(float Rate, bool Condition);
 	void Hit_RStick_X(float Axis);
 	void Hit_RStick_Y(float Axis);
 	void Hit_InputUpdate();
@@ -462,7 +462,7 @@ public:
 	void FinalizeTalk();
 	void Event_StartMiniGame();
 	void Event_StartGameAfterFadeOut();
-	void STATIC_OnEndBiteFish(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void OnEndBiteFish(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void OnEndFadeOutFinished();
 	void OnEndFadeInFinished();
 	void ReceiveBeginPlay();
@@ -496,7 +496,7 @@ public:
 	void Particle_EndHitWater();
 	void CancelMiniGame();
 	void Event_AddFreeFish();
-	void STATIC_RemoveFishList(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void RemoveFishList(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void Event_OnQuitDecide(class AActor* Actor);
 	void Event_OnQuitCancel(class AActor* Actor);
 	void Event_CreateQuitDialog();

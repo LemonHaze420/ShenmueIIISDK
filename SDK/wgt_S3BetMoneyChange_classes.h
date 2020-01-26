@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,7 +45,7 @@ public:
 	int                                                nowMoney;                                                 // 0x02DC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                nextMoney;                                                // 0x02E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                AddMoney;                                                 // 0x02E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsBusy;                                                   // 0x02E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               isBusy;                                                   // 0x02E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x02E9(0x0007) MISSED OFFSET
 	struct FScriptMulticastDelegate                    ED_AnimFinish;                                            // 0x02F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 
@@ -56,15 +56,15 @@ public:
 	}
 
 
-	void STATIC_InitData();
+	void InitData();
 	void SetNextData(int addFuda);
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_BndEvt__PushAnim_Left_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void STATIC_BndEvt__PushAnim_Top_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void STATIC_BndEvt__PushAnim_Right_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void STATIC_BndEvt__PushAnim_Down_K2Node_ComponentBoundEvent_3_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void STATIC_ExecuteUbergraph_wgt_S3BetMoneyChange(int EntryPoint);
+	void BndEvt__PushAnim_Left_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void BndEvt__PushAnim_Top_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void BndEvt__PushAnim_Right_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void BndEvt__PushAnim_Down_K2Node_ComponentBoundEvent_3_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void ExecuteUbergraph_wgt_S3BetMoneyChange(int EntryPoint);
 	void ED_AnimFinish__DelegateSignature();
 };
 

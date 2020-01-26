@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.EnableGameTime
-// (Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Battle_C::STATIC_EnableGameTime(bool bEnabled)
+void UBP_TalkProcess_Battle_C::EnableGameTime(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.EnableGameTime");
 
@@ -34,7 +34,7 @@ void UBP_TalkProcess_Battle_C::STATIC_EnableGameTime(bool bEnabled)
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.ResettingLookAtTargetActors
-// (NetReliable, Exec, Event, NetMulticast, Delegate, NetServer, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Battle_C::ResettingLookAtTargetActors()
 {
@@ -51,7 +51,7 @@ void UBP_TalkProcess_Battle_C::ResettingLookAtTargetActors()
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.CachedLookAtTargetActors
-// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Battle_C::CachedLookAtTargetActors()
 {
@@ -60,7 +60,6 @@ void UBP_TalkProcess_Battle_C::CachedLookAtTargetActors()
 	UBP_TalkProcess_Battle_C_CachedLookAtTargetActors_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,7 +68,7 @@ void UBP_TalkProcess_Battle_C::CachedLookAtTargetActors()
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.OnLoaded_F2C0EA96403370D7C0981B823EF8717B
-// (Net, NetRequest, Exec, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -89,7 +88,7 @@ void UBP_TalkProcess_Battle_C::OnLoaded_F2C0EA96403370D7C0981B823EF8717B(class U
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.Activate
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 
 void UBP_TalkProcess_Battle_C::Activate()
 {
@@ -106,11 +105,11 @@ void UBP_TalkProcess_Battle_C::Activate()
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.OnEndBattle
-// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Battle_C::STATIC_OnEndBattle(TEnumAsByte<EBattleWinLoseResult> Result)
+void UBP_TalkProcess_Battle_C::OnEndBattle(TEnumAsByte<EBattleWinLoseResult> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.OnEndBattle");
 
@@ -126,11 +125,11 @@ void UBP_TalkProcess_Battle_C::STATIC_OnEndBattle(TEnumAsByte<EBattleWinLoseResu
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.ExecuteUbergraph_BP_TalkProcess_Battle
-// (Net, NetReliable, Event, Static, NetMulticast, Delegate, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Battle_C::STATIC_ExecuteUbergraph_BP_TalkProcess_Battle(int EntryPoint)
+void UBP_TalkProcess_Battle_C::ExecuteUbergraph_BP_TalkProcess_Battle(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.ExecuteUbergraph_BP_TalkProcess_Battle");
 

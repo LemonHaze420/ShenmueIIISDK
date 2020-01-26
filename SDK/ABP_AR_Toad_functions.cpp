@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.SetIsInRaceFlag
-// (Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsInRace                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,11 +34,11 @@ void UABP_AR_Toad_C::SetIsInRaceFlag(bool IsInRace)
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.setDelayAnimStartPos
-// (Net, NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          StartPos                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_AR_Toad_C::STATIC_setDelayAnimStartPos(float StartPos)
+void UABP_AR_Toad_C::setDelayAnimStartPos(float StartPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.setDelayAnimStartPos");
 
@@ -46,7 +46,6 @@ void UABP_AR_Toad_C::STATIC_setDelayAnimStartPos(float StartPos)
 	params.StartPos = StartPos;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +54,7 @@ void UABP_AR_Toad_C::STATIC_setDelayAnimStartPos(float StartPos)
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_8BF005F643A26396E28026BBAF826D81
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_8BF005F643A26396E28026BBAF826D81()
 {
@@ -64,7 +63,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_8BF005F643A26396E28026BBAF826D81_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +71,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_D47E434F4CA145B4A2EE76B04D90CF46
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_D47E434F4CA145B4A2EE76B04D90CF46()
 {
@@ -82,7 +80,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_D47E434F4CA145B4A2EE76B04D90CF46_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +88,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_DC6BA0154CDFED4E808DF59F433FC686
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_DC6BA0154CDFED4E808DF59F433FC686()
 {
@@ -100,7 +97,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_DC6BA0154CDFED4E808DF59F433FC686_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,7 +105,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_6ED2B271497CC2A12D597C8BFB1965C6
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_6ED2B271497CC2A12D597C8BFB1965C6()
 {
@@ -118,7 +114,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_6ED2B271497CC2A12D597C8BFB1965C6_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,7 +122,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_7C8A0973475BF65C6339E8B2DB422394
-// (Net, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_7C8A0973475BF65C6339E8B2DB422394()
 {
@@ -136,7 +131,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_7C8A0973475BF65C6339E8B2DB422394_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,7 +139,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_D8241AF043033B8084642C8CC882319D
-// (Net, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_D8241AF043033B8084642C8CC882319D()
 {
@@ -154,7 +148,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_D8241AF043033B8084642C8CC882319D_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -163,7 +156,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B107511F4289EC89F79643952C815010
-// (Net, NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B107511F4289EC89F79643952C815010()
 {
@@ -172,7 +165,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B107511F4289EC89F79643952C815010_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -181,7 +173,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3A0B4F864C9D73BD8BA1C3959FB52086
-// (Net, NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3A0B4F864C9D73BD8BA1C3959FB52086()
 {
@@ -190,7 +182,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3A0B4F864C9D73BD8BA1C3959FB52086_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -199,7 +190,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_23C34F4740062CADCF645CBC36341608
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_23C34F4740062CADCF645CBC36341608()
 {
@@ -208,7 +199,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_23C34F4740062CADCF645CBC36341608_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,7 +207,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_0DAADE244C59A6B01766E2B380B46944
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_0DAADE244C59A6B01766E2B380B46944()
 {
@@ -226,7 +216,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_0DAADE244C59A6B01766E2B380B46944_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -235,7 +224,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_58C88E254ADC7C357AC6E59423E25450
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_58C88E254ADC7C357AC6E59423E25450()
 {
@@ -244,7 +233,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_58C88E254ADC7C357AC6E59423E25450_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -253,7 +241,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_FF79132749180BE2F6859B91C8664787
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_FF79132749180BE2F6859B91C8664787()
 {
@@ -262,7 +250,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_FF79132749180BE2F6859B91C8664787_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -271,7 +258,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_6A84D07D430B50FCB9C6D5B61308344B
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_6A84D07D430B50FCB9C6D5B61308344B()
 {
@@ -280,7 +267,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_6A84D07D430B50FCB9C6D5B61308344B_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -289,7 +275,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_A67FC9CF4BA0BDC138B9029181EC40CA
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_A67FC9CF4BA0BDC138B9029181EC40CA()
 {
@@ -298,7 +284,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_A67FC9CF4BA0BDC138B9029181EC40CA_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -307,7 +292,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_2C57EED64B70BA93CF9681A53B5A7138
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_2C57EED64B70BA93CF9681A53B5A7138()
 {
@@ -316,7 +301,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_2C57EED64B70BA93CF9681A53B5A7138_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -325,7 +309,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3C9E286749CB380CC551DDB1C0E9C8D3
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3C9E286749CB380CC551DDB1C0E9C8D3()
 {
@@ -334,7 +318,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3C9E286749CB380CC551DDB1C0E9C8D3_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -343,7 +326,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_13F8459147F0BF03D4B92C91185DFA71
-// (Net, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_13F8459147F0BF03D4B92C91185DFA71()
 {
@@ -352,7 +335,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_13F8459147F0BF03D4B92C91185DFA71_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -361,16 +343,15 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_304EE9B546BF61ABB23D8C80D57B93D8
-// (Net, NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_304EE9B546BF61ABB23D8C80D57B93D8()
+void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_304EE9B546BF61ABB23D8C80D57B93D8()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_304EE9B546BF61ABB23D8C80D57B93D8");
 
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_304EE9B546BF61ABB23D8C80D57B93D8_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -379,16 +360,15 @@ void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_T
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B93D175141CA0C0179741EBDB3CF6B04
-// (Net, NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B93D175141CA0C0179741EBDB3CF6B04()
+void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B93D175141CA0C0179741EBDB3CF6B04()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B93D175141CA0C0179741EBDB3CF6B04");
 
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B93D175141CA0C0179741EBDB3CF6B04_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -397,7 +377,7 @@ void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_T
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_26E9A9F7426829DFC37EECB323AEF5B2
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_26E9A9F7426829DFC37EECB323AEF5B2()
 {
@@ -406,7 +386,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_26E9A9F7426829DFC37EECB323AEF5B2_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -415,7 +394,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3C83A30D4DF3980518A1AE9E115ED53E
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3C83A30D4DF3980518A1AE9E115ED53E()
 {
@@ -424,7 +403,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3C83A30D4DF3980518A1AE9E115ED53E_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -433,7 +411,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_5C9DCF83444019EA94C8738CEB44F9DE
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_5C9DCF83444019EA94C8738CEB44F9DE()
 {
@@ -442,7 +420,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_5C9DCF83444019EA94C8738CEB44F9DE_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -451,7 +428,7 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_5FCE87A443B1F27A6CCE9BA6749B9336
-// (Net, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_5FCE87A443B1F27A6CCE9BA6749B9336()
 {
@@ -460,7 +437,6 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 	UABP_AR_Toad_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_5FCE87A443B1F27A6CCE9BA6749B9336_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -469,9 +445,9 @@ void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_Ani
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3430093E4ACD755369E80FA040441B22
-// (Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3430093E4ACD755369E80FA040441B22()
+void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3430093E4ACD755369E80FA040441B22()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3430093E4ACD755369E80FA040441B22");
 
@@ -486,9 +462,9 @@ void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_T
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_091FBA48422F745B88770E9A021F6F24
-// (NetReliable, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_091FBA48422F745B88770E9A021F6F24()
+void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_091FBA48422F745B88770E9A021F6F24()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_091FBA48422F745B88770E9A021F6F24");
 
@@ -503,9 +479,9 @@ void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_T
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3D3A628241F1D58DFBFA34ADEC039155
-// (Net, NetRequest, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3D3A628241F1D58DFBFA34ADEC039155()
+void UABP_AR_Toad_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3D3A628241F1D58DFBFA34ADEC039155()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3D3A628241F1D58DFBFA34ADEC039155");
 
@@ -520,9 +496,9 @@ void UABP_AR_Toad_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_T
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Dead_Anim_End
-// (NetRequest, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Dead_Anim_End()
+void UABP_AR_Toad_C::AnimNotify_Toad_Dead_Anim_End()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Dead_Anim_End");
 
@@ -537,9 +513,9 @@ void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Dead_Anim_End()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Walk_Anim_End
-// (NetRequest, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Walk_Anim_End()
+void UABP_AR_Toad_C::AnimNotify_Toad_Walk_Anim_End()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Walk_Anim_End");
 
@@ -554,9 +530,9 @@ void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Walk_Anim_End()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Jump_Anim_End
-// (Net, NetReliable, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Jump_Anim_End()
+void UABP_AR_Toad_C::AnimNotify_Toad_Jump_Anim_End()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Jump_Anim_End");
 
@@ -571,9 +547,9 @@ void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Jump_Anim_End()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Idle_Anim_End
-// (Net, NetReliable, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Idle_Anim_End()
+void UABP_AR_Toad_C::AnimNotify_Toad_Idle_Anim_End()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Idle_Anim_End");
 
@@ -588,7 +564,7 @@ void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Idle_Anim_End()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Move_Zero
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_AR_Toad_C::AnimNotify_Toad_Move_Zero()
 {
@@ -605,7 +581,7 @@ void UABP_AR_Toad_C::AnimNotify_Toad_Move_Zero()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Max_Jump
-// (Net, NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_AR_Toad_C::AnimNotify_Toad_Max_Jump()
 {
@@ -622,7 +598,7 @@ void UABP_AR_Toad_C::AnimNotify_Toad_Max_Jump()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Jump_Start
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_AR_Toad_C::AnimNotify_Toad_Jump_Start()
 {
@@ -631,7 +607,6 @@ void UABP_AR_Toad_C::AnimNotify_Toad_Jump_Start()
 	UABP_AR_Toad_C_AnimNotify_Toad_Jump_Start_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -640,9 +615,9 @@ void UABP_AR_Toad_C::AnimNotify_Toad_Jump_Start()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Walk_st_end
-// (NetReliable, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Walk_st_end()
+void UABP_AR_Toad_C::AnimNotify_Toad_Walk_st_end()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Walk_st_end");
 
@@ -657,9 +632,9 @@ void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Walk_st_end()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Walk_st_move_start
-// (Net, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Walk_st_move_start()
+void UABP_AR_Toad_C::AnimNotify_Toad_Walk_st_move_start()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_Toad_Walk_st_move_start");
 
@@ -674,9 +649,9 @@ void UABP_AR_Toad_C::STATIC_AnimNotify_Toad_Walk_st_move_start()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_MG_WalkTiming
-// (Net, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_AnimNotify_MG_WalkTiming()
+void UABP_AR_Toad_C::AnimNotify_MG_WalkTiming()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_MG_WalkTiming");
 
@@ -691,9 +666,9 @@ void UABP_AR_Toad_C::STATIC_AnimNotify_MG_WalkTiming()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_MG_CryTiming
-// (Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_AnimNotify_MG_CryTiming()
+void UABP_AR_Toad_C::AnimNotify_MG_CryTiming()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.AnimNotify_MG_CryTiming");
 
@@ -708,7 +683,7 @@ void UABP_AR_Toad_C::STATIC_AnimNotify_MG_CryTiming()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.ExecuteUbergraph_ABP_AR_Toad
-// (NetReliable, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -728,16 +703,15 @@ void UABP_AR_Toad_C::ExecuteUbergraph_ABP_AR_Toad(int EntryPoint)
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.CrySETiming__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_CrySETiming__DelegateSignature()
+void UABP_AR_Toad_C::CrySETiming__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.CrySETiming__DelegateSignature");
 
 	UABP_AR_Toad_C_CrySETiming__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -746,16 +720,15 @@ void UABP_AR_Toad_C::STATIC_CrySETiming__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.WalkSETiming__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_WalkSETiming__DelegateSignature()
+void UABP_AR_Toad_C::WalkSETiming__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.WalkSETiming__DelegateSignature");
 
 	UABP_AR_Toad_C_WalkSETiming__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -764,16 +737,15 @@ void UABP_AR_Toad_C::STATIC_WalkSETiming__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.WalkStEnd__DelegateSignature
-// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_WalkStEnd__DelegateSignature()
+void UABP_AR_Toad_C::WalkStEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.WalkStEnd__DelegateSignature");
 
 	UABP_AR_Toad_C_WalkStEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -782,16 +754,15 @@ void UABP_AR_Toad_C::STATIC_WalkStEnd__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.WalkMoveStart__DelegateSignature
-// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_WalkMoveStart__DelegateSignature()
+void UABP_AR_Toad_C::WalkMoveStart__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.WalkMoveStart__DelegateSignature");
 
 	UABP_AR_Toad_C_WalkMoveStart__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -800,16 +771,15 @@ void UABP_AR_Toad_C::STATIC_WalkMoveStart__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.JumpStart__DelegateSignature
-// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_JumpStart__DelegateSignature()
+void UABP_AR_Toad_C::JumpStart__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.JumpStart__DelegateSignature");
 
 	UABP_AR_Toad_C_JumpStart__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -818,16 +788,15 @@ void UABP_AR_Toad_C::STATIC_JumpStart__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.MaxJump__DelegateSignature
-// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_MaxJump__DelegateSignature()
+void UABP_AR_Toad_C::MaxJump__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.MaxJump__DelegateSignature");
 
 	UABP_AR_Toad_C_MaxJump__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -836,16 +805,15 @@ void UABP_AR_Toad_C::STATIC_MaxJump__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.MoveZero__DelegateSignature
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_MoveZero__DelegateSignature()
+void UABP_AR_Toad_C::MoveZero__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.MoveZero__DelegateSignature");
 
 	UABP_AR_Toad_C_MoveZero__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -854,16 +822,15 @@ void UABP_AR_Toad_C::STATIC_MoveZero__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.Jump2AnimEnd__DelegateSignature
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_Jump2AnimEnd__DelegateSignature()
+void UABP_AR_Toad_C::Jump2AnimEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.Jump2AnimEnd__DelegateSignature");
 
 	UABP_AR_Toad_C_Jump2AnimEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -872,16 +839,15 @@ void UABP_AR_Toad_C::STATIC_Jump2AnimEnd__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.JumpAnimEnd__DelegateSignature
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_JumpAnimEnd__DelegateSignature()
+void UABP_AR_Toad_C::JumpAnimEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.JumpAnimEnd__DelegateSignature");
 
 	UABP_AR_Toad_C_JumpAnimEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -890,16 +856,15 @@ void UABP_AR_Toad_C::STATIC_JumpAnimEnd__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.WalkAnimEnd__DelegateSignature
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_WalkAnimEnd__DelegateSignature()
+void UABP_AR_Toad_C::WalkAnimEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.WalkAnimEnd__DelegateSignature");
 
 	UABP_AR_Toad_C_WalkAnimEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -908,16 +873,15 @@ void UABP_AR_Toad_C::STATIC_WalkAnimEnd__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.WaitAnimEnd__DelegateSignature
-// (Net, NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_WaitAnimEnd__DelegateSignature()
+void UABP_AR_Toad_C::WaitAnimEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.WaitAnimEnd__DelegateSignature");
 
 	UABP_AR_Toad_C_WaitAnimEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -926,16 +890,15 @@ void UABP_AR_Toad_C::STATIC_WaitAnimEnd__DelegateSignature()
 
 
 // Function ABP_AR_Toad.ABP_AR_Toad_C.IdleAnimEnd__DelegateSignature
-// (Net, NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_AR_Toad_C::STATIC_IdleAnimEnd__DelegateSignature()
+void UABP_AR_Toad_C::IdleAnimEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AR_Toad.ABP_AR_Toad_C.IdleAnimEnd__DelegateSignature");
 
 	UABP_AR_Toad_C_IdleAnimEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

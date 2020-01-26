@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 // Function BP_CutsceneManager.BP_CutsceneManager_C.SkipToEnd
 struct ABP_CutsceneManager_C_SkipToEnd_Params
 {
-	bool                                               DEBUG;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Debug;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishedUnloadCutsceneLevelWithBattleLevelStreaming
@@ -347,7 +347,7 @@ struct ABP_CutsceneManager_C_IsLoadCompleted_Params
 struct ABP_CutsceneManager_C_FindCutscenePlayer_Params
 {
 	struct FName                                       CutsceneId;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class ABP_CutscenePlayer_C*                        FoundPlayer;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -369,7 +369,7 @@ struct ABP_CutsceneManager_C_SetPlayInfo_Params
 struct ABP_CutsceneManager_C_FindPlayInfo_Params
 {
 	struct FName                                       CutsceneId;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                Index;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.StartCutscene
-// (Native, NetResponse, Static, NetMulticast, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugCutsceneListItem_C::STATIC_StartCutscene()
+void UBW_DebugCutsceneListItem_C::StartCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.StartCutscene");
 
 	UBW_DebugCutsceneListItem_C_StartCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,16 +31,15 @@ void UBW_DebugCutsceneListItem_C::STATIC_StartCutscene()
 
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.SetupLastSelectedDebugMenuCutsceneID
-// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugCutsceneListItem_C::STATIC_SetupLastSelectedDebugMenuCutsceneID()
+void UBW_DebugCutsceneListItem_C::SetupLastSelectedDebugMenuCutsceneID()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.SetupLastSelectedDebugMenuCutsceneID");
 
 	UBW_DebugCutsceneListItem_C_SetupLastSelectedDebugMenuCutsceneID_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,18 +48,17 @@ void UBW_DebugCutsceneListItem_C::STATIC_SetupLastSelectedDebugMenuCutsceneID()
 
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.GetCutsceneID
-// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBW_DebugCutsceneListItem_C::STATIC_GetCutsceneID()
+struct FString UBW_DebugCutsceneListItem_C::GetCutsceneID()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.GetCutsceneID");
 
 	UBW_DebugCutsceneListItem_C_GetCutsceneID_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,9 +69,9 @@ struct FString UBW_DebugCutsceneListItem_C::STATIC_GetCutsceneID()
 
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.SetFocusToButton
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugCutsceneListItem_C::STATIC_SetFocusToButton()
+void UBW_DebugCutsceneListItem_C::SetFocusToButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.SetFocusToButton");
 
@@ -89,11 +86,11 @@ void UBW_DebugCutsceneListItem_C::STATIC_SetFocusToButton()
 
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.GetCutsceneListLabel
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBW_DebugCutsceneListItem_C::STATIC_GetCutsceneListLabel()
+struct FString UBW_DebugCutsceneListItem_C::GetCutsceneListLabel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.GetCutsceneListLabel");
 
@@ -110,7 +107,7 @@ struct FString UBW_DebugCutsceneListItem_C::STATIC_GetCutsceneListLabel()
 
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.Get_Description_Text
-// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -131,7 +128,7 @@ struct FText UBW_DebugCutsceneListItem_C::Get_Description_Text()
 
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.Get_MainButtonLabel_Text
-// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -152,7 +149,7 @@ struct FText UBW_DebugCutsceneListItem_C::Get_MainButtonLabel_Text()
 
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.Construct
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBW_DebugCutsceneListItem_C::Construct()
 {
@@ -169,7 +166,7 @@ void UBW_DebugCutsceneListItem_C::Construct()
 
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature
-// (Net, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UBW_DebugCutsceneListItem_C::BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature()
 {
@@ -186,11 +183,11 @@ void UBW_DebugCutsceneListItem_C::BndEvt__ItemButton_K2Node_ComponentBoundEvent_
 
 
 // Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.ExecuteUbergraph_BW_DebugCutsceneListItem
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugCutsceneListItem_C::STATIC_ExecuteUbergraph_BW_DebugCutsceneListItem(int EntryPoint)
+void UBW_DebugCutsceneListItem_C::ExecuteUbergraph_BW_DebugCutsceneListItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugCutsceneListItem.BW_DebugCutsceneListItem_C.ExecuteUbergraph_BW_DebugCutsceneListItem");
 
@@ -198,7 +195,6 @@ void UBW_DebugCutsceneListItem_C::STATIC_ExecuteUbergraph_BW_DebugCutsceneListIt
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

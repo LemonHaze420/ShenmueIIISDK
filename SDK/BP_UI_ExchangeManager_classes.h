@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_UI_ExchangeManager.BP_UI_ExchangeManager_C
-// 0x000F (0x0408 - 0x03F9)
+// 0x0008 (0x0460 - 0x0458)
 class ABP_UI_ExchangeManager_C : public ABP_UI_ShopBaseManager_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x03F9(0x0007) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0400(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0458(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -27,9 +26,9 @@ public:
 	}
 
 
-	void STATIC_IsVisibleRStickCenterPos(bool* IsCenter);
+	void IsVisibleRStickCenterPos(bool* IsCenter);
 	bool IsVisibleRStickOnlyViewMode();
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_UI_ExchangeManager(int EntryPoint);
 };

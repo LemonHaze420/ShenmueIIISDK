@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,7 +90,7 @@ public:
 
 
 	void SetIsInRaceFlag(bool IsInRace);
-	void STATIC_setDelayAnimStartPos(float StartPos);
+	void setDelayAnimStartPos(float StartPos);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_8BF005F643A26396E28026BBAF826D81();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_D47E434F4CA145B4A2EE76B04D90CF46();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_DC6BA0154CDFED4E808DF59F433FC686();
@@ -108,39 +108,39 @@ public:
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_2C57EED64B70BA93CF9681A53B5A7138();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3C9E286749CB380CC551DDB1C0E9C8D3();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_13F8459147F0BF03D4B92C91185DFA71();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_304EE9B546BF61ABB23D8C80D57B93D8();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B93D175141CA0C0179741EBDB3CF6B04();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_304EE9B546BF61ABB23D8C80D57B93D8();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_B93D175141CA0C0179741EBDB3CF6B04();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_26E9A9F7426829DFC37EECB323AEF5B2();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3C83A30D4DF3980518A1AE9E115ED53E();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_5C9DCF83444019EA94C8738CEB44F9DE();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_5FCE87A443B1F27A6CCE9BA6749B9336();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3430093E4ACD755369E80FA040441B22();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_091FBA48422F745B88770E9A021F6F24();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3D3A628241F1D58DFBFA34ADEC039155();
-	void STATIC_AnimNotify_Toad_Dead_Anim_End();
-	void STATIC_AnimNotify_Toad_Walk_Anim_End();
-	void STATIC_AnimNotify_Toad_Jump_Anim_End();
-	void STATIC_AnimNotify_Toad_Idle_Anim_End();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3430093E4ACD755369E80FA040441B22();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_SequencePlayer_091FBA48422F745B88770E9A021F6F24();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AR_Toad_AnimGraphNode_TransitionResult_3D3A628241F1D58DFBFA34ADEC039155();
+	void AnimNotify_Toad_Dead_Anim_End();
+	void AnimNotify_Toad_Walk_Anim_End();
+	void AnimNotify_Toad_Jump_Anim_End();
+	void AnimNotify_Toad_Idle_Anim_End();
 	void AnimNotify_Toad_Move_Zero();
 	void AnimNotify_Toad_Max_Jump();
 	void AnimNotify_Toad_Jump_Start();
-	void STATIC_AnimNotify_Toad_Walk_st_end();
-	void STATIC_AnimNotify_Toad_Walk_st_move_start();
-	void STATIC_AnimNotify_MG_WalkTiming();
-	void STATIC_AnimNotify_MG_CryTiming();
+	void AnimNotify_Toad_Walk_st_end();
+	void AnimNotify_Toad_Walk_st_move_start();
+	void AnimNotify_MG_WalkTiming();
+	void AnimNotify_MG_CryTiming();
 	void ExecuteUbergraph_ABP_AR_Toad(int EntryPoint);
-	void STATIC_CrySETiming__DelegateSignature();
-	void STATIC_WalkSETiming__DelegateSignature();
-	void STATIC_WalkStEnd__DelegateSignature();
-	void STATIC_WalkMoveStart__DelegateSignature();
-	void STATIC_JumpStart__DelegateSignature();
-	void STATIC_MaxJump__DelegateSignature();
-	void STATIC_MoveZero__DelegateSignature();
-	void STATIC_Jump2AnimEnd__DelegateSignature();
-	void STATIC_JumpAnimEnd__DelegateSignature();
-	void STATIC_WalkAnimEnd__DelegateSignature();
-	void STATIC_WaitAnimEnd__DelegateSignature();
-	void STATIC_IdleAnimEnd__DelegateSignature();
+	void CrySETiming__DelegateSignature();
+	void WalkSETiming__DelegateSignature();
+	void WalkStEnd__DelegateSignature();
+	void WalkMoveStart__DelegateSignature();
+	void JumpStart__DelegateSignature();
+	void MaxJump__DelegateSignature();
+	void MoveZero__DelegateSignature();
+	void Jump2AnimEnd__DelegateSignature();
+	void JumpAnimEnd__DelegateSignature();
+	void WalkAnimEnd__DelegateSignature();
+	void WaitAnimEnd__DelegateSignature();
+	void IdleAnimEnd__DelegateSignature();
 };
 
 

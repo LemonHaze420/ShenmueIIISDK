@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,11 +35,11 @@ public:
 
 
 	float GetMaxDeviationDistSqr();
-	void STATIC_Update(float DeltaSeconds);
+	void Update(float DeltaSeconds);
 	void Initialize(class USceneComponent* PositionSource, int Samples, float WindowTime);
 	bool CompletedWindow();
-	void STATIC_Reset();
-	struct FVector STATIC_GetAverageLocation();
+	void Reset();
+	struct FVector GetAverageLocation();
 	void OnWindowCompleted__DelegateSignature();
 };
 

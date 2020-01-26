@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,33 +62,33 @@ public:
 	void PlayBlinkAnimation(ES3PadButtonIndex Index);
 	void GetLightFromPadIndex(ES3PadButtonIndex PadIndex, class UWBP_QTESimonLight_C** Light);
 	void PlayLightAnimation(ES3PadButtonIndex Index);
-	void STATIC_GetButtonFromPadIndex(ES3PadButtonIndex Selection, class UWBP_QTEFreeCommandButton_C** Button);
-	void STATIC_SetSuccessText(const struct FText& InText);
-	float STATIC_GetMaxOutAnimationLength();
-	float STATIC_GetInAnimationLength();
-	void STATIC_SetAutoOutOkAfterInputSuccess(bool IsAutoOut);
-	void STATIC_SetTimeGaugeRate(float Rate);
-	bool STATIC_IsPlayingOut();
+	void GetButtonFromPadIndex(ES3PadButtonIndex Selection, class UWBP_QTEFreeCommandButton_C** Button);
+	void SetSuccessText(const struct FText& InText);
+	float GetMaxOutAnimationLength();
+	float GetInAnimationLength();
+	void SetAutoOutOkAfterInputSuccess(bool IsAutoOut);
+	void SetTimeGaugeRate(float Rate);
+	bool IsPlayingOut();
 	bool IsPlayingIn();
-	void STATIC_PlayOutNg();
-	void STATIC_PlayOutOk();
-	void STATIC_PlayIn();
+	void PlayOutNg();
+	void PlayOutOk();
+	void PlayIn();
 	bool IsPlayingInputSuccess();
-	void STATIC_ResetAllButtonZOrder();
+	void ResetAllButtonZOrder();
 	void ResetButtonZOrder(class UWBP_QTEFreeCommandButton_C* TargetButton);
 	void SetButtonZOrderToFront(class UWBP_QTEFreeCommandButton_C* TargetButton);
 	void SetupButtonImages();
 	void PlayInputSuccess(const struct FName& InputName, bool IsAutoHide);
 	void Reset();
 	void GetButtonFromInputName(const struct FName& InputName, class UWBP_QTEFreeCommandButton_C** Button);
-	void STATIC_Construct();
-	void STATIC_OnButtonInputAnimationFinished();
-	void STATIC_BndEvt__Outro_Success_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void STATIC_BndEvt__Outro_Failure_K2Node_ComponentBoundEvent_4_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void STATIC_ExecuteUbergraph_WBP_QTEFreeCommand(int EntryPoint);
-	void STATIC_OnOutAnimationFinishedDispatcher__DelegateSignature();
-	void STATIC_OnInAnimationFinishedDispatcher__DelegateSignature();
-	void STATIC_OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature();
+	void Construct();
+	void OnButtonInputAnimationFinished();
+	void BndEvt__Outro_Success_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void BndEvt__Outro_Failure_K2Node_ComponentBoundEvent_4_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void ExecuteUbergraph_WBP_QTEFreeCommand(int EntryPoint);
+	void OnOutAnimationFinishedDispatcher__DelegateSignature();
+	void OnInAnimationFinishedDispatcher__DelegateSignature();
+	void OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature();
 };
 
 

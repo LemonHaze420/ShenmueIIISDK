@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.CheckEnabledFlagState
-// (NetReliable, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           UseFlag                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -39,11 +39,11 @@ void ABP_MiniGame_KungFuBase_C::CheckEnabledFlagState(bool* UseFlag, bool* Enabl
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.CheckFirstDetection
-// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsFirst                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_CheckFirstDetection(bool* IsFirst)
+void ABP_MiniGame_KungFuBase_C::CheckFirstDetection(bool* IsFirst)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.CheckFirstDetection");
 
@@ -61,7 +61,7 @@ void ABP_MiniGame_KungFuBase_C::STATIC_CheckFirstDetection(bool* IsFirst)
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.ChangeRelativePosZ
-// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USceneComponent*         Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          LocationZ                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -75,7 +75,6 @@ void ABP_MiniGame_KungFuBase_C::ChangeRelativePosZ(class USceneComponent* Target
 	params.LocationZ = LocationZ;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,18 +83,17 @@ void ABP_MiniGame_KungFuBase_C::ChangeRelativePosZ(class USceneComponent* Target
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.GetHelpPriority
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpPriority                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ES3HelpPriority ABP_MiniGame_KungFuBase_C::STATIC_GetHelpPriority()
+ES3HelpPriority ABP_MiniGame_KungFuBase_C::GetHelpPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.GetHelpPriority");
 
 	ABP_MiniGame_KungFuBase_C_GetHelpPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -106,7 +104,7 @@ ES3HelpPriority ABP_MiniGame_KungFuBase_C::STATIC_GetHelpPriority()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.GetClothMeshComponent
-// (Net, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -127,11 +125,11 @@ class UMeshComponent* ABP_MiniGame_KungFuBase_C::GetClothMeshComponent()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.InitAsyncLoad
-// (NetReliable, Exec, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_InitAsyncLoad(bool* dummy)
+void ABP_MiniGame_KungFuBase_C::InitAsyncLoad(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.InitAsyncLoad");
 
@@ -149,9 +147,9 @@ void ABP_MiniGame_KungFuBase_C::STATIC_InitAsyncLoad(bool* dummy)
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.UpdatePlayContinueScript
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_UpdatePlayContinueScript()
+void ABP_MiniGame_KungFuBase_C::UpdatePlayContinueScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.UpdatePlayContinueScript");
 
@@ -166,7 +164,7 @@ void ABP_MiniGame_KungFuBase_C::STATIC_UpdatePlayContinueScript()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.IsKungFuSuccess
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -188,12 +186,12 @@ void ABP_MiniGame_KungFuBase_C::IsKungFuSuccess(bool* Success)
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.CalcKungFuLevel
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ChangeDifficuty                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ChangeProgress                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_CalcKungFuLevel(bool* ChangeDifficuty, bool* ChangeProgress)
+void ABP_MiniGame_KungFuBase_C::CalcKungFuLevel(bool* ChangeDifficuty, bool* ChangeProgress)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.CalcKungFuLevel");
 
@@ -213,11 +211,11 @@ void ABP_MiniGame_KungFuBase_C::STATIC_CalcKungFuLevel(bool* ChangeDifficuty, bo
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.SetKungFuDifficulty
-// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_SetKungFuDifficulty(int Level)
+void ABP_MiniGame_KungFuBase_C::SetKungFuDifficulty(int Level)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.SetKungFuDifficulty");
 
@@ -225,7 +223,6 @@ void ABP_MiniGame_KungFuBase_C::STATIC_SetKungFuDifficulty(int Level)
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,7 +231,7 @@ void ABP_MiniGame_KungFuBase_C::STATIC_SetKungFuDifficulty(int Level)
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.CheckValueInRance
-// (NetReliable, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          CheckValue                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          HighValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -265,7 +262,7 @@ void ABP_MiniGame_KungFuBase_C::CheckValueInRance(float CheckValue, float HighVa
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.GetDetectAction
-// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -276,7 +273,6 @@ TArray<struct FS3DetectActionParam> ABP_MiniGame_KungFuBase_C::GetDetectAction()
 	ABP_MiniGame_KungFuBase_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -287,12 +283,12 @@ TArray<struct FS3DetectActionParam> ABP_MiniGame_KungFuBase_C::GetDetectAction()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.GetPlayLabel
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGame_MahoPartnerState> State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   labelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName)
+void ABP_MiniGame_KungFuBase_C::GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.GetPlayLabel");
 
@@ -311,7 +307,7 @@ void ABP_MiniGame_KungFuBase_C::STATIC_GetPlayLabel(TEnumAsByte<E_MiniGame_MahoP
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.PlayScriptLabel
-// (NetReliable, NetRequest, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -333,11 +329,11 @@ void ABP_MiniGame_KungFuBase_C::PlayScriptLabel(const struct FName& Label, const
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.UpdateElapsedTime
-// (NetReliable, NetRequest, Static, NetMulticast, Public, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_UpdateElapsedTime(float DeltaSeconds)
+void ABP_MiniGame_KungFuBase_C::UpdateElapsedTime(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.UpdateElapsedTime");
 
@@ -353,11 +349,11 @@ void ABP_MiniGame_KungFuBase_C::STATIC_UpdateElapsedTime(float DeltaSeconds)
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.SpawnInputControlActor
-// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_MiniGameInputBase_C* ABP_MiniGame_KungFuBase_C::STATIC_SpawnInputControlActor()
+class ABP_MiniGameInputBase_C* ABP_MiniGame_KungFuBase_C::SpawnInputControlActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.SpawnInputControlActor");
 
@@ -374,9 +370,9 @@ class ABP_MiniGameInputBase_C* ABP_MiniGame_KungFuBase_C::STATIC_SpawnInputContr
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_UserConstructionScript()
+void ABP_MiniGame_KungFuBase_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.UserConstructionScript");
 
@@ -391,7 +387,7 @@ void ABP_MiniGame_KungFuBase_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.InputAction_ButtonRight
-// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::InputAction_ButtonRight()
 {
@@ -400,7 +396,6 @@ void ABP_MiniGame_KungFuBase_C::InputAction_ButtonRight()
 	ABP_MiniGame_KungFuBase_C_InputAction_ButtonRight_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -409,7 +404,7 @@ void ABP_MiniGame_KungFuBase_C::InputAction_ButtonRight()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.InputAction_Top
-// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::InputAction_Top()
 {
@@ -418,7 +413,6 @@ void ABP_MiniGame_KungFuBase_C::InputAction_Top()
 	ABP_MiniGame_KungFuBase_C_InputAction_Top_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -427,7 +421,7 @@ void ABP_MiniGame_KungFuBase_C::InputAction_Top()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.InputAction_Bottom
-// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::InputAction_Bottom()
 {
@@ -436,7 +430,6 @@ void ABP_MiniGame_KungFuBase_C::InputAction_Bottom()
 	ABP_MiniGame_KungFuBase_C_InputAction_Bottom_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -445,7 +438,7 @@ void ABP_MiniGame_KungFuBase_C::InputAction_Bottom()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.InputAction_ButtonBottom
-// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::InputAction_ButtonBottom()
 {
@@ -454,7 +447,6 @@ void ABP_MiniGame_KungFuBase_C::InputAction_ButtonBottom()
 	ABP_MiniGame_KungFuBase_C_InputAction_ButtonBottom_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -463,7 +455,7 @@ void ABP_MiniGame_KungFuBase_C::InputAction_ButtonBottom()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.StartMiniGame
-// (NetRequest, Exec, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::StartMiniGame()
 {
@@ -480,7 +472,7 @@ void ABP_MiniGame_KungFuBase_C::StartMiniGame()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.EndMiniGame
-// (Net, NetReliable, Exec, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::EndMiniGame()
 {
@@ -497,7 +489,7 @@ void ABP_MiniGame_KungFuBase_C::EndMiniGame()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.OnFinishedFade
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::OnFinishedFade()
 {
@@ -514,7 +506,7 @@ void ABP_MiniGame_KungFuBase_C::OnFinishedFade()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.WinMiniGame
-// (Net, NetReliable, Exec, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::WinMiniGame()
 {
@@ -531,7 +523,7 @@ void ABP_MiniGame_KungFuBase_C::WinMiniGame()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.LoseMiniGame
-// (NetReliable, Exec, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::LoseMiniGame()
 {
@@ -548,7 +540,7 @@ void ABP_MiniGame_KungFuBase_C::LoseMiniGame()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.DrawMiniGame
-// (Net, Exec, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::DrawMiniGame()
 {
@@ -565,7 +557,7 @@ void ABP_MiniGame_KungFuBase_C::DrawMiniGame()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.FinalizeTalk
-// (Net, Exec, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::FinalizeTalk()
 {
@@ -582,7 +574,7 @@ void ABP_MiniGame_KungFuBase_C::FinalizeTalk()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.OnFinishedCoinSequence
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::OnFinishedCoinSequence()
 {
@@ -599,7 +591,7 @@ void ABP_MiniGame_KungFuBase_C::OnFinishedCoinSequence()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.OnFinishedStart
-// (Net, NetRequest, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::OnFinishedStart()
 {
@@ -616,7 +608,7 @@ void ABP_MiniGame_KungFuBase_C::OnFinishedStart()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.StartGame
-// (Net, NetRequest, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::StartGame()
 {
@@ -633,7 +625,7 @@ void ABP_MiniGame_KungFuBase_C::StartGame()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.AfterFadeInEvent
-// (NetRequest, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::AfterFadeInEvent()
 {
@@ -650,7 +642,7 @@ void ABP_MiniGame_KungFuBase_C::AfterFadeInEvent()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.OnTimeUp
-// (NetRequest, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::OnTimeUp()
 {
@@ -667,7 +659,7 @@ void ABP_MiniGame_KungFuBase_C::OnTimeUp()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.OnSkillCountMax
-// (Net, NetReliable, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::OnSkillCountMax()
 {
@@ -684,7 +676,7 @@ void ABP_MiniGame_KungFuBase_C::OnSkillCountMax()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.OnResultEnd
-// (Net, NetReliable, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::OnResultEnd()
 {
@@ -701,7 +693,7 @@ void ABP_MiniGame_KungFuBase_C::OnResultEnd()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.TimeUpEvent
-// (NetReliable, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::TimeUpEvent()
 {
@@ -717,8 +709,25 @@ void ABP_MiniGame_KungFuBase_C::TimeUpEvent()
 }
 
 
+// Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.ReachedMaxKungFuLevel
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MiniGame_KungFuBase_C::ReachedMaxKungFuLevel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.ReachedMaxKungFuLevel");
+
+	ABP_MiniGame_KungFuBase_C_ReachedMaxKungFuLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.ReceiveBeginPlay
-// (NetReliable, Exec, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_KungFuBase_C::ReceiveBeginPlay()
 {
@@ -735,11 +744,11 @@ void ABP_MiniGame_KungFuBase_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.ReceiveTick
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_KungFuBase_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.ReceiveTick");
 
@@ -755,7 +764,7 @@ void ABP_MiniGame_KungFuBase_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -785,14 +794,14 @@ void ABP_MiniGame_KungFuBase_C::BndEvt__DetectorSensor_K2Node_ComponentBoundEven
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KungFuBase_C::STATIC_BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_MiniGame_KungFuBase_C::BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -803,7 +812,6 @@ void ABP_MiniGame_KungFuBase_C::STATIC_BndEvt__DetectorSensor_K2Node_ComponentBo
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -812,7 +820,7 @@ void ABP_MiniGame_KungFuBase_C::STATIC_BndEvt__DetectorSensor_K2Node_ComponentBo
 
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.ExecuteUbergraph_BP_MiniGame_KungFuBase
-// (NetRequest, Native, Event, NetMulticast, Public, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -824,7 +832,6 @@ void ABP_MiniGame_KungFuBase_C::ExecuteUbergraph_BP_MiniGame_KungFuBase(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

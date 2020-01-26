@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.PlayUnbeliAnim
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_MiniGame_Sunken_C::STATIC_PlayUnbeliAnim()
+void UWBP_MiniGame_Sunken_C::PlayUnbeliAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.PlayUnbeliAnim");
 
 	UWBP_MiniGame_Sunken_C_PlayUnbeliAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,16 +31,15 @@ void UWBP_MiniGame_Sunken_C::STATIC_PlayUnbeliAnim()
 
 
 // Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.PlayExcellentAnim
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_MiniGame_Sunken_C::STATIC_PlayExcellentAnim()
+void UWBP_MiniGame_Sunken_C::PlayExcellentAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.PlayExcellentAnim");
 
 	UWBP_MiniGame_Sunken_C_PlayExcellentAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,12 +48,12 @@ void UWBP_MiniGame_Sunken_C::STATIC_PlayExcellentAnim()
 
 
 // Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.SetLocalizeText
-// (Native, Static, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ExcellentText                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   UnbelievableText               (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_MiniGame_Sunken_C::STATIC_SetLocalizeText(const struct FText& ExcellentText, const struct FText& UnbelievableText)
+void UWBP_MiniGame_Sunken_C::SetLocalizeText(const struct FText& ExcellentText, const struct FText& UnbelievableText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.SetLocalizeText");
 
@@ -64,7 +62,6 @@ void UWBP_MiniGame_Sunken_C::STATIC_SetLocalizeText(const struct FText& Excellen
 	params.UnbelievableText = UnbelievableText;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +70,7 @@ void UWBP_MiniGame_Sunken_C::STATIC_SetLocalizeText(const struct FText& Excellen
 
 
 // Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.Construct
-// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MiniGame_Sunken_C::Construct()
 {
@@ -82,7 +79,6 @@ void UWBP_MiniGame_Sunken_C::Construct()
 	UWBP_MiniGame_Sunken_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +87,7 @@ void UWBP_MiniGame_Sunken_C::Construct()
 
 
 // Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.Tick
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -113,11 +109,11 @@ void UWBP_MiniGame_Sunken_C::Tick(const struct FGeometry& MyGeometry, float InDe
 
 
 // Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.ExecuteUbergraph_WBP_MiniGame_Sunken
-// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGame_Sunken_C::STATIC_ExecuteUbergraph_WBP_MiniGame_Sunken(int EntryPoint)
+void UWBP_MiniGame_Sunken_C::ExecuteUbergraph_WBP_MiniGame_Sunken(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Sunken.WBP_MiniGame_Sunken_C.ExecuteUbergraph_WBP_MiniGame_Sunken");
 

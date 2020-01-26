@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function DevelopmentText.DevelopmentText_C.UpdateDevelopText
-// (Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UDevelopmentText_C::UpdateDevelopText()
 {
@@ -31,7 +31,7 @@ void UDevelopmentText_C::UpdateDevelopText()
 
 
 // Function DevelopmentText.DevelopmentText_C.UpdateGameTime
-// (NetRequest, Exec, Native, NetMulticast, Protected, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UDevelopmentText_C::UpdateGameTime()
 {
@@ -40,7 +40,6 @@ void UDevelopmentText_C::UpdateGameTime()
 	UDevelopmentText_C_UpdateGameTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,9 +48,9 @@ void UDevelopmentText_C::UpdateGameTime()
 
 
 // Function DevelopmentText.DevelopmentText_C.UpdateACName
-// (Exec, Event, Static, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UDevelopmentText_C::STATIC_UpdateACName()
+void UDevelopmentText_C::UpdateACName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DevelopmentText.DevelopmentText_C.UpdateACName");
 
@@ -66,7 +65,7 @@ void UDevelopmentText_C::STATIC_UpdateACName()
 
 
 // Function DevelopmentText.DevelopmentText_C.GetDevelopText
-// (NetReliable, Exec, Native, Event, NetResponse, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -77,7 +76,6 @@ struct FText UDevelopmentText_C::GetDevelopText()
 	UDevelopmentText_C_GetDevelopText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,11 +86,11 @@ struct FText UDevelopmentText_C::GetDevelopText()
 
 
 // Function DevelopmentText.DevelopmentText_C.GetDevelopTextVisibility
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UDevelopmentText_C::STATIC_GetDevelopTextVisibility()
+ESlateVisibility UDevelopmentText_C::GetDevelopTextVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DevelopmentText.DevelopmentText_C.GetDevelopTextVisibility");
 
@@ -109,7 +107,7 @@ ESlateVisibility UDevelopmentText_C::STATIC_GetDevelopTextVisibility()
 
 
 // Function DevelopmentText.DevelopmentText_C.Construct
-// (NetReliable, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UDevelopmentText_C::Construct()
 {
@@ -126,7 +124,7 @@ void UDevelopmentText_C::Construct()
 
 
 // Function DevelopmentText.DevelopmentText_C.Tick
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -148,11 +146,11 @@ void UDevelopmentText_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 
 
 // Function DevelopmentText.DevelopmentText_C.ExecuteUbergraph_DevelopmentText
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UDevelopmentText_C::STATIC_ExecuteUbergraph_DevelopmentText(int EntryPoint)
+void UDevelopmentText_C::ExecuteUbergraph_DevelopmentText(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DevelopmentText.DevelopmentText_C.ExecuteUbergraph_DevelopmentText");
 
@@ -160,7 +158,6 @@ void UDevelopmentText_C::STATIC_ExecuteUbergraph_DevelopmentText(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

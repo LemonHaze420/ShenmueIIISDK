@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.IsRequestedEndDisp
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_DebugCutscenePlayAreaDispManager_C::STATIC_IsRequestedEndDisp()
+bool ABP_DebugCutscenePlayAreaDispManager_C::IsRequestedEndDisp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.IsRequestedEndDisp");
 
@@ -35,11 +35,11 @@ bool ABP_DebugCutscenePlayAreaDispManager_C::STATIC_IsRequestedEndDisp()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.IsDisp
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_DebugCutscenePlayAreaDispManager_C::STATIC_IsDisp()
+bool ABP_DebugCutscenePlayAreaDispManager_C::IsDisp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.IsDisp");
 
@@ -56,16 +56,15 @@ bool ABP_DebugCutscenePlayAreaDispManager_C::STATIC_IsDisp()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.RequestEndDisp
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_RequestEndDisp()
+void ABP_DebugCutscenePlayAreaDispManager_C::RequestEndDisp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.RequestEndDisp");
 
 	ABP_DebugCutscenePlayAreaDispManager_C_RequestEndDisp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,9 +73,9 @@ void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_RequestEndDisp()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.EndDisp
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_EndDisp()
+void ABP_DebugCutscenePlayAreaDispManager_C::EndDisp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.EndDisp");
 
@@ -91,7 +90,7 @@ void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_EndDisp()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.DispCutsceneArea
-// (Net, NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_DebugCutscenePlayAreaDispManager_C::DispCutsceneArea()
 {
@@ -108,11 +107,11 @@ void ABP_DebugCutscenePlayAreaDispManager_C::DispCutsceneArea()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.IsCurrentLevelUnloadable
-// (Net, NetRequest, Event, Static, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_DebugCutscenePlayAreaDispManager_C::STATIC_IsCurrentLevelUnloadable()
+bool ABP_DebugCutscenePlayAreaDispManager_C::IsCurrentLevelUnloadable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.IsCurrentLevelUnloadable");
 
@@ -129,7 +128,7 @@ bool ABP_DebugCutscenePlayAreaDispManager_C::STATIC_IsCurrentLevelUnloadable()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.AddCutsceneDispInfo
-// (Net, Exec, NetResponse, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_DbgCutscenePlayInfo InInfo                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -149,12 +148,12 @@ void ABP_DebugCutscenePlayAreaDispManager_C::AddCutsceneDispInfo(const struct FS
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.GetLoadLevelName
-// (Net, Static, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FST_DbgCutscenePlayInfo InPlayInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FName                   LevelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_GetLoadLevelName(const struct FST_DbgCutscenePlayInfo& InPlayInfo, struct FName* LevelName)
+void ABP_DebugCutscenePlayAreaDispManager_C::GetLoadLevelName(const struct FST_DbgCutscenePlayInfo& InPlayInfo, struct FName* LevelName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.GetLoadLevelName");
 
@@ -173,12 +172,12 @@ void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_GetLoadLevelName(const struc
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.IsAddedDispInfo
-// (Exec, Native, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FST_DbgCutscenePlayInfo InPlayInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_DebugCutscenePlayAreaDispManager_C::STATIC_IsAddedDispInfo(const struct FST_DbgCutscenePlayInfo& InPlayInfo)
+bool ABP_DebugCutscenePlayAreaDispManager_C::IsAddedDispInfo(const struct FST_DbgCutscenePlayInfo& InPlayInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.IsAddedDispInfo");
 
@@ -186,7 +185,6 @@ bool ABP_DebugCutscenePlayAreaDispManager_C::STATIC_IsAddedDispInfo(const struct
 	params.InPlayInfo = InPlayInfo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -197,7 +195,7 @@ bool ABP_DebugCutscenePlayAreaDispManager_C::STATIC_IsAddedDispInfo(const struct
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.GetDebugPlayInfoList
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_DebugCutscenePlayAreaDispManager_C::GetDebugPlayInfoList()
 {
@@ -206,7 +204,6 @@ void ABP_DebugCutscenePlayAreaDispManager_C::GetDebugPlayInfoList()
 	ABP_DebugCutscenePlayAreaDispManager_C_GetDebugPlayInfoList_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,16 +212,15 @@ void ABP_DebugCutscenePlayAreaDispManager_C::GetDebugPlayInfoList()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.StartDisp
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_StartDisp()
+void ABP_DebugCutscenePlayAreaDispManager_C::StartDisp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.StartDisp");
 
 	ABP_DebugCutscenePlayAreaDispManager_C_StartDisp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,7 +229,7 @@ void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_StartDisp()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.UserConstructionScript
-// (Net, Exec, Native, Event, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_DebugCutscenePlayAreaDispManager_C::UserConstructionScript()
 {
@@ -242,7 +238,6 @@ void ABP_DebugCutscenePlayAreaDispManager_C::UserConstructionScript()
 	ABP_DebugCutscenePlayAreaDispManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,16 +246,15 @@ void ABP_DebugCutscenePlayAreaDispManager_C::UserConstructionScript()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.ReceiveBeginPlay
-// (Native, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_ReceiveBeginPlay()
+void ABP_DebugCutscenePlayAreaDispManager_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.ReceiveBeginPlay");
 
 	ABP_DebugCutscenePlayAreaDispManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -269,11 +263,11 @@ void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_DebugCutscenePlayAreaDispManager_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.ReceiveTick");
 
@@ -281,7 +275,6 @@ void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_ReceiveTick(float DeltaSecon
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -290,9 +283,9 @@ void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_ReceiveTick(float DeltaSecon
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.InitializeDispInfo
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_InitializeDispInfo()
+void ABP_DebugCutscenePlayAreaDispManager_C::InitializeDispInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.InitializeDispInfo");
 
@@ -307,7 +300,7 @@ void ABP_DebugCutscenePlayAreaDispManager_C::STATIC_InitializeDispInfo()
 
 
 // Function BP_DebugCutscenePlayAreaDispManager.BP_DebugCutscenePlayAreaDispManager_C.ExecuteUbergraph_BP_DebugCutscenePlayAreaDispManager
-// (NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

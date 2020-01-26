@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -66,40 +66,40 @@ public:
 	}
 
 
-	void STATIC_GetBGM(class USoundAtomCue** BGM);
-	void STATIC_IsOverlappingCutsceneActor(const struct FName& CharacterName, bool* IsOverlap);
-	void STATIC_OverlapPlayer_Impl();
-	void STATIC_GetCurrentBGM(class USoundAtomCue** Sound);
+	void GetBGM(class USoundAtomCue** BGM);
+	void IsOverlappingCutsceneActor(const struct FName& CharacterName, bool* IsOverlap);
+	void OverlapPlayer_Impl();
+	void GetCurrentBGM(class USoundAtomCue** Sound);
 	void InitTick();
 	void StopSE();
 	void PlaySE();
-	void JudgeBGM(bool Play);
-	void STATIC_IsNeedCheckSound(bool* Need);
+	void JudgeBgm(bool Play);
+	void IsNeedCheckSound(bool* Need);
 	void UpdatePostProcess();
 	void IsPlayerInVolume(bool* In);
 	void CheckSound();
-	void STATIC_SetBGM(bool Play);
-	void STATIC_SetShadowGain();
-	void STATIC_SetGain();
+	void SetBGM(bool Play);
+	void SetShadowGain();
+	void SetGain();
 	void SetGamma();
-	void STATIC_SetPostProcessSetting(bool Play);
+	void SetPostProcessSetting(bool Play);
 	void GetLeavePoint(struct FVector* Location, struct FRotator* Rotation);
-	void STATIC_IsOverlappingActorByName(const struct FName& CharacterName, bool* IsOverlap);
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void IsOverlappingActorByName(const struct FName& CharacterName, bool* IsOverlap);
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void BndEvt__HouseBox1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__HouseBox1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__HouseBox1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void BndEvt__HouseBox2_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__HouseBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__HouseBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void BndEvt__HouseBox3_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__HouseBox3_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_ChangeGameTimeEvent(ES3DayTimeEvent EventType);
+	void BndEvt__HouseBox3_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void ChangeGameTimeEvent(ES3DayTimeEvent EventType);
 	void OverlapPlayer(class AActor* Actor, class UPrimitiveComponent* Component, bool bin);
-	void STATIC_StartCutscene();
-	void STATIC_EndCutscene();
-	void STATIC_ExecuteUbergraph_BP_S3BuildingStaticMeshActor(int EntryPoint);
+	void StartCutscene();
+	void EndCutscene();
+	void ExecuteUbergraph_BP_S3BuildingStaticMeshActor(int EntryPoint);
 };
 
 

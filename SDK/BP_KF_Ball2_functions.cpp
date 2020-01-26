@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.DisableBall
-// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_KF_Ball2_C::STATIC_DisableBall()
+void ABP_KF_Ball2_C::DisableBall()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_KF_Ball2.BP_KF_Ball2_C.DisableBall");
 
@@ -31,9 +31,9 @@ void ABP_KF_Ball2_C::STATIC_DisableBall()
 
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.EnableBall
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_KF_Ball2_C::STATIC_EnableBall()
+void ABP_KF_Ball2_C::EnableBall()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_KF_Ball2.BP_KF_Ball2_C.EnableBall");
 
@@ -48,7 +48,7 @@ void ABP_KF_Ball2_C::STATIC_EnableBall()
 
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.SetInsideArea
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Inside                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +68,7 @@ void ABP_KF_Ball2_C::SetInsideArea(bool Inside)
 
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.IsStopped
-// (Net, NetReliable, Native, NetResponse, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bStop                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -79,7 +79,6 @@ void ABP_KF_Ball2_C::IsStopped(bool* bStop)
 	ABP_KF_Ball2_C_IsStopped_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +90,7 @@ void ABP_KF_Ball2_C::IsStopped(bool* bStop)
 
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.UserConstructionScript
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_KF_Ball2_C::UserConstructionScript()
 {
@@ -108,7 +107,7 @@ void ABP_KF_Ball2_C::UserConstructionScript()
 
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -116,7 +115,7 @@ void ABP_KF_Ball2_C::UserConstructionScript()
 // struct FVector                 NormalImpulse                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FHitResult              Hit                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_KF_Ball2_C::STATIC_BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+void ABP_KF_Ball2_C::BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_KF_Ball2.BP_KF_Ball2_C.BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
 
@@ -136,16 +135,15 @@ void ABP_KF_Ball2_C::STATIC_BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_Compo
 
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_KF_Ball2_C::STATIC_ReceiveBeginPlay()
+void ABP_KF_Ball2_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_KF_Ball2.BP_KF_Ball2_C.ReceiveBeginPlay");
 
 	ABP_KF_Ball2_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,11 +152,11 @@ void ABP_KF_Ball2_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.ReceiveTick
-// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_KF_Ball2_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_KF_Ball2_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_KF_Ball2.BP_KF_Ball2_C.ReceiveTick");
 
@@ -174,11 +172,11 @@ void ABP_KF_Ball2_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.ExecuteUbergraph_BP_KF_Ball2
-// (Exec, Native, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_KF_Ball2_C::STATIC_ExecuteUbergraph_BP_KF_Ball2(int EntryPoint)
+void ABP_KF_Ball2_C::ExecuteUbergraph_BP_KF_Ball2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_KF_Ball2.BP_KF_Ball2_C.ExecuteUbergraph_BP_KF_Ball2");
 
@@ -186,7 +184,6 @@ void ABP_KF_Ball2_C::STATIC_ExecuteUbergraph_BP_KF_Ball2(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +192,7 @@ void ABP_KF_Ball2_C::STATIC_ExecuteUbergraph_BP_KF_Ball2(int EntryPoint)
 
 
 // Function BP_KF_Ball2.BP_KF_Ball2_C.EventDispatcher_BallHitXObj__DelegateSignature
-// (Net, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_KF_Ball2_C::EventDispatcher_BallHitXObj__DelegateSignature()
 {

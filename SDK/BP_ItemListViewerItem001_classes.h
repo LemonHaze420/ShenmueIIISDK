@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,13 +36,13 @@ public:
 	}
 
 
-	void STATIC_CalcBaseSize();
+	void CalcBaseSize();
 	void ChangeItem(class UStaticMesh* Mesh, class USkeletalMesh* SkelMesh, class UAnimationAsset* NewAnimToPlay);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveDestroyed();
-	void STATIC_ExecuteUbergraph_BP_ItemListViewerItem001(int EntryPoint);
+	void ExecuteUbergraph_BP_ItemListViewerItem001(int EntryPoint);
 };
 
 

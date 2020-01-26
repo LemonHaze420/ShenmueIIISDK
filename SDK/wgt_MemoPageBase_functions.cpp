@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_MemoPageBase.wgt_MemoPageBase_C.SetFontSize
-// (Net, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextBlock*              Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UTextBlock*              PlaceNameText                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void Uwgt_MemoPageBase_C::STATIC_SetFontSize(class UTextBlock* Text, class UTextBlock** PlaceNameText)
+void Uwgt_MemoPageBase_C::SetFontSize(class UTextBlock* Text, class UTextBlock** PlaceNameText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MemoPageBase.wgt_MemoPageBase_C.SetFontSize");
 
@@ -38,11 +38,11 @@ void Uwgt_MemoPageBase_C::STATIC_SetFontSize(class UTextBlock* Text, class UText
 
 
 // Function wgt_MemoPageBase.wgt_MemoPageBase_C.SetPageIndex
-// (Net, NetReliable, NetRequest, Static, NetMulticast, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_MemoPageBase_C::STATIC_SetPageIndex(int PageIndex)
+void Uwgt_MemoPageBase_C::SetPageIndex(int PageIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MemoPageBase.wgt_MemoPageBase_C.SetPageIndex");
 
@@ -58,7 +58,7 @@ void Uwgt_MemoPageBase_C::STATIC_SetPageIndex(int PageIndex)
 
 
 // Function wgt_MemoPageBase.wgt_MemoPageBase_C.Construct
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_MemoPageBase_C::Construct()
 {
@@ -75,12 +75,12 @@ void Uwgt_MemoPageBase_C::Construct()
 
 
 // Function wgt_MemoPageBase.wgt_MemoPageBase_C.SetSlotContent
-// (Net, NetReliable, NetRequest, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3MemopadTextWidget*    Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void Uwgt_MemoPageBase_C::STATIC_SetSlotContent(int Index, class US3MemopadTextWidget* Widget)
+void Uwgt_MemoPageBase_C::SetSlotContent(int Index, class US3MemopadTextWidget* Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MemoPageBase.wgt_MemoPageBase_C.SetSlotContent");
 
@@ -97,7 +97,7 @@ void Uwgt_MemoPageBase_C::STATIC_SetSlotContent(int Index, class US3MemopadTextW
 
 
 // Function wgt_MemoPageBase.wgt_MemoPageBase_C.SetSlotHiddenFlag
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -119,11 +119,11 @@ void Uwgt_MemoPageBase_C::SetSlotHiddenFlag(int Index, bool flag)
 
 
 // Function wgt_MemoPageBase.wgt_MemoPageBase_C.ExecuteUbergraph_wgt_MemoPageBase
-// (NetRequest, Native, Static, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_MemoPageBase_C::STATIC_ExecuteUbergraph_wgt_MemoPageBase(int EntryPoint)
+void Uwgt_MemoPageBase_C::ExecuteUbergraph_wgt_MemoPageBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MemoPageBase.wgt_MemoPageBase_C.ExecuteUbergraph_wgt_MemoPageBase");
 
@@ -131,7 +131,6 @@ void Uwgt_MemoPageBase_C::STATIC_ExecuteUbergraph_wgt_MemoPageBase(int EntryPoin
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,7 +139,7 @@ void Uwgt_MemoPageBase_C::STATIC_ExecuteUbergraph_wgt_MemoPageBase(int EntryPoin
 
 
 // Function wgt_MemoPageBase.wgt_MemoPageBase_C.ED_LoadFinish__DelegateSignature
-// (NetReliable, Native, Event, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_MemoPageBase_C::ED_LoadFinish__DelegateSignature()
 {
@@ -149,7 +148,6 @@ void Uwgt_MemoPageBase_C::ED_LoadFinish__DelegateSignature()
 	Uwgt_MemoPageBase_C_ED_LoadFinish__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

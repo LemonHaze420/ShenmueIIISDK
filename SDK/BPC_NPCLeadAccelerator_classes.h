@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,13 +34,13 @@ public:
 
 
 	void SetSpeedInstant(float Speed);
-	void STATIC_GetTargetSpeed(float* TargetSpeed);
-	float STATIC_ClampSpeed(float Value);
-	float STATIC_MapToSpeedRange(float Value, float InRangeA, float InRangeB);
-	void STATIC_SetTargetSpeed(float TargetSpeed);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_Reset();
+	void GetTargetSpeed(float* TargetSpeed);
+	float ClampSpeed(float Value);
+	float MapToSpeedRange(float Value, float InRangeA, float InRangeB);
+	void SetTargetSpeed(float TargetSpeed);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void Reset();
 	void ExecuteUbergraph_BPC_NPCLeadAccelerator(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void STATIC_ResetLookAtParamater(bool bResetTarget);
+	void ResetLookAtParamater(bool bResetTarget);
 	void GetStateOwner(class AActor** OwnerActor);
-	void STATIC_StateOnInitialize();
+	void StateOnInitialize();
 	void ExecuteUbergraph_BP_State_LookAtBase(int EntryPoint);
 };
 

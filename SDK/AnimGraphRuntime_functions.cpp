@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_TwoBoneIK
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 RootPos                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct FVector                 JointPos                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -27,7 +27,7 @@ namespace SDK
 // float                          StartStretchRatio              (Parm, ZeroConstructor, IsPlainOldData)
 // float                          MaxStretchScale                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UKismetAnimationLibrary::K2_TwoBoneIK(const struct FVector& RootPos, const struct FVector& JointPos, const struct FVector& EndPos, const struct FVector& JointTarget, const struct FVector& Effector, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale, struct FVector* OutJointPos, struct FVector* OutEndPos)
+void UKismetAnimationLibrary::STATIC_K2_TwoBoneIK(const struct FVector& RootPos, const struct FVector& JointPos, const struct FVector& EndPos, const struct FVector& JointTarget, const struct FVector& Effector, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale, struct FVector* OutJointPos, struct FVector* OutEndPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_TwoBoneIK");
 
@@ -42,6 +42,7 @@ void UKismetAnimationLibrary::K2_TwoBoneIK(const struct FVector& RootPos, const 
 	params.MaxStretchScale = MaxStretchScale;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ void UKismetAnimationLibrary::K2_TwoBoneIK(const struct FVector& RootPos, const 
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt
-// ()
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FTransform              CurrentTransform               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct FVector                 TargetPosition                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -65,7 +66,7 @@ void UKismetAnimationLibrary::K2_TwoBoneIK(const struct FVector& RootPos, const 
 // float                          ClampConeInDegree              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FTransform UKismetAnimationLibrary::K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree)
+struct FTransform UKismetAnimationLibrary::STATIC_K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt");
 
@@ -78,6 +79,7 @@ struct FTransform UKismetAnimationLibrary::K2_LookAt(const struct FTransform& Cu
 	params.ClampConeInDegree = ClampConeInDegree;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,7 +90,7 @@ struct FTransform UKismetAnimationLibrary::K2_LookAt(const struct FTransform& Cu
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
-// ()
+// (Final, Native, Protected, HasOutParms)
 // Parameters:
 // struct FName                   NotifyName                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBranchingPointNotifyPayload BranchingPointNotifyPayload    (ConstParm, Parm, OutParm, ReferenceParm)
@@ -102,6 +104,7 @@ void UPlayMontageCallbackProxy::OnNotifyEndReceived(const struct FName& NotifyNa
 	params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,7 +113,7 @@ void UPlayMontageCallbackProxy::OnNotifyEndReceived(const struct FName& NotifyNa
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
-// ()
+// (Final, Native, Protected, HasOutParms)
 // Parameters:
 // struct FName                   NotifyName                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBranchingPointNotifyPayload BranchingPointNotifyPayload    (ConstParm, Parm, OutParm, ReferenceParm)
@@ -124,6 +127,7 @@ void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const struct FName& Notify
 	params.BranchingPointNotifyPayload = BranchingPointNotifyPayload;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +136,7 @@ void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const struct FName& Notify
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
-// ()
+// (Final, Native, Protected)
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bInterrupted                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -146,6 +150,7 @@ void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool
 	params.bInterrupted = bInterrupted;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,7 +159,7 @@ void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
-// ()
+// (Final, Native, Protected)
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bInterrupted                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -168,6 +173,7 @@ void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage
 	params.bInterrupted = bInterrupted;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,7 +182,7 @@ void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class USkeletalMeshComponent*  InSkeletalMeshComponent        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimMontage*            MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
@@ -185,7 +191,7 @@ void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage
 // struct FName                   StartingSection                (Parm, ZeroConstructor, IsPlainOldData)
 // class UPlayMontageCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, const struct FName& StartingSection)
+class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::STATIC_CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, const struct FName& StartingSection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage");
 
@@ -197,6 +203,7 @@ class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::CreateProxyObjectFor
 	params.StartingSection = StartingSection;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

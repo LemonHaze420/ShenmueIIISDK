@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MemoTextureDataManager.BP_MemoTextureDataManager_C.GetTextureData
-// (Exec, NetResponse, Static, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Offset                         (Parm, OutParm, IsPlainOldData)
 // class UTexture*                TextureReference               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MemoTextureDataManager_C::STATIC_GetTextureData(const struct FName& Label, struct FVector2D* Offset, class UTexture** TextureReference)
+void ABP_MemoTextureDataManager_C::GetTextureData(const struct FName& Label, struct FVector2D* Offset, class UTexture** TextureReference)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoTextureDataManager.BP_MemoTextureDataManager_C.GetTextureData");
 
@@ -41,7 +41,7 @@ void ABP_MemoTextureDataManager_C::STATIC_GetTextureData(const struct FName& Lab
 
 
 // Function BP_MemoTextureDataManager.BP_MemoTextureDataManager_C.UserConstructionScript
-// (NetReliable, Event, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MemoTextureDataManager_C::UserConstructionScript()
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,7 +49,7 @@ public:
 
 	void SetRowTrialSetting(class UBPW_UI_Config_Row_C* Row, TEnumAsByte<EN_ConfigParam> Type);
 	void ChangeLanguage();
-	void STATIC_SetCanUseLocal(TEnumAsByte<EN_ConfigParam> ConfigParam);
+	void SetCanUseLocal(TEnumAsByte<EN_ConfigParam> ConfigParam);
 	void PushRightStick();
 	void LeanRightStick(float AxisValue);
 	void IsSaveLoadWidgetVisible(bool* newParam);
@@ -61,7 +61,7 @@ public:
 	void PushCancelButton();
 	void PushDressDecide();
 	void InputConfigUpDown();
-	void STATIC_PushDown();
+	void PushDown();
 	void PushUp();
 	void PushRight();
 	void PushLeft();
@@ -69,7 +69,7 @@ public:
 	void CreateDressModeWidget();
 	void CreatePasswordWidget();
 	void CancelKeyConfigWidget();
-	void STATIC_CancelPasswordWidget(bool* Success);
+	void CancelPasswordWidget(bool* Success);
 	void CancelDressWidget();
 	void DestroyConfigManager(bool* IsDestroy);
 	void SetConfigName();

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,12 +31,12 @@ public:
 
 
 	void AddAcquiredMoney(int Acquired);
-	void STATIC_GetTotalMoney(int* Money);
+	void GetTotalMoney(int* Money);
 	void GetPreGameResult(bool* bSuccess, TEnumAsByte<E_MiniGameResult>* Result);
-	void STATIC_GetTotalNumberOfResult(TEnumAsByte<E_MiniGameResult> Result, int* TotalCount);
-	void STATIC_GetContinuousResultNumber(TEnumAsByte<E_MiniGameResult> Result, int* Count);
-	void STATIC_GetContinuousPlayCount(int* PlayCount);
-	void STATIC_Finalize();
+	void GetTotalNumberOfResult(TEnumAsByte<E_MiniGameResult> Result, int* TotalCount);
+	void GetContinuousResultNumber(TEnumAsByte<E_MiniGameResult> Result, int* Count);
+	void GetContinuousPlayCount(int* PlayCount);
+	void Finalize();
 	void Initialize();
 	void BindMiniGameEvents(class ABP_MiniGameBase_C* MiniGame);
 	void UnbindMiniGameEvents(class ABP_MiniGameBase_C* MiniGame);
@@ -46,7 +46,7 @@ public:
 	void OnDrawMiniGame(class ABP_MiniGameBase_C* SelfMiniGame);
 	void OnStartMiniGame(class ABP_MiniGameBase_C* SelfMiniGame);
 	void OnRestartMiniGame(class ABP_MiniGameBase_C* SelfMiniGame);
-	void STATIC_ExecuteUbergraph_BPC_MiniGameTalkTemporaryStorage(int EntryPoint);
+	void ExecuteUbergraph_BPC_MiniGameTalkTemporaryStorage(int EntryPoint);
 };
 
 

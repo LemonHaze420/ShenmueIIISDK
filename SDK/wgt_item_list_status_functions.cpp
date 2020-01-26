@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_item_list_status.wgt_item_list_status_C.CheckFade
-// (NetRequest, Native, Event, NetResponse, Static, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_item_list_status_C::STATIC_CheckFade()
+void Uwgt_item_list_status_C::CheckFade()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_item_list_status.wgt_item_list_status_C.CheckFade");
 
 	Uwgt_item_list_status_C_CheckFade_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void Uwgt_item_list_status_C::STATIC_CheckFade()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.UpdateEnergyText
-// (NetReliable, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::UpdateEnergyText()
 {
@@ -49,7 +48,7 @@ void Uwgt_item_list_status_C::UpdateEnergyText()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.StartFade
-// (Net, NetRequest, NetResponse, NetMulticast, Delegate, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -69,7 +68,7 @@ void Uwgt_item_list_status_C::StartFade(bool In)
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.PriceAnim
-// (Net, NetReliable, Event, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -89,7 +88,7 @@ void Uwgt_item_list_status_C::PriceAnim(bool Add)
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.SetPriceAnimData
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Price                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_ValueType>      ValueType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -103,7 +102,6 @@ void Uwgt_item_list_status_C::SetPriceAnimData(int Price, TEnumAsByte<EN_ValueTy
 	params.ValueType = ValueType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,11 +110,11 @@ void Uwgt_item_list_status_C::SetPriceAnimData(int Price, TEnumAsByte<EN_ValueTy
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.SetVisible
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_item_list_status_C::STATIC_SetVisible(ESlateVisibility InVisibility)
+void Uwgt_item_list_status_C::SetVisible(ESlateVisibility InVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_item_list_status.wgt_item_list_status_C.SetVisible");
 
@@ -132,9 +130,9 @@ void Uwgt_item_list_status_C::STATIC_SetVisible(ESlateVisibility InVisibility)
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.Construct
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_item_list_status_C::STATIC_Construct()
+void Uwgt_item_list_status_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_item_list_status.wgt_item_list_status_C.Construct");
 
@@ -149,7 +147,7 @@ void Uwgt_item_list_status_C::STATIC_Construct()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.Tick
-// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -163,7 +161,6 @@ void Uwgt_item_list_status_C::Tick(const struct FGeometry& MyGeometry, float InD
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -172,9 +169,9 @@ void Uwgt_item_list_status_C::Tick(const struct FGeometry& MyGeometry, float InD
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.Destruct
-// (Net, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_item_list_status_C::STATIC_Destruct()
+void Uwgt_item_list_status_C::Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_item_list_status.wgt_item_list_status_C.Destruct");
 
@@ -189,9 +186,9 @@ void Uwgt_item_list_status_C::STATIC_Destruct()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (Net, NetReliable, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void Uwgt_item_list_status_C::STATIC_BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_item_list_status_C::BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_item_list_status.wgt_item_list_status_C.BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -206,7 +203,7 @@ void Uwgt_item_list_status_C::STATIC_BndEvt__FadeOut_K2Node_ComponentBoundEvent_
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ExecuteUbergraph_wgt_item_list_status
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -218,7 +215,6 @@ void Uwgt_item_list_status_C::ExecuteUbergraph_wgt_item_list_status(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,7 +223,7 @@ void Uwgt_item_list_status_C::ExecuteUbergraph_wgt_item_list_status(int EntryPoi
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.OnFadeOutFinished__DelegateSignature
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::OnFadeOutFinished__DelegateSignature()
 {
@@ -236,7 +232,6 @@ void Uwgt_item_list_status_C::OnFadeOutFinished__DelegateSignature()
 	Uwgt_item_list_status_C_OnFadeOutFinished__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -245,7 +240,7 @@ void Uwgt_item_list_status_C::OnFadeOutFinished__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_StartAnim__DelegateSignature
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_StartAnim__DelegateSignature()
 {
@@ -254,7 +249,6 @@ void Uwgt_item_list_status_C::ED_StartAnim__DelegateSignature()
 	Uwgt_item_list_status_C_ED_StartAnim__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -263,7 +257,7 @@ void Uwgt_item_list_status_C::ED_StartAnim__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_FinishAnim__DelegateSignature
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_FinishAnim__DelegateSignature()
 {
@@ -272,7 +266,6 @@ void Uwgt_item_list_status_C::ED_FinishAnim__DelegateSignature()
 	Uwgt_item_list_status_C_ED_FinishAnim__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -281,7 +274,7 @@ void Uwgt_item_list_status_C::ED_FinishAnim__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_LeftStick_Down__DelegateSignature
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_LeftStick_Down__DelegateSignature()
 {
@@ -290,7 +283,6 @@ void Uwgt_item_list_status_C::ED_LeftStick_Down__DelegateSignature()
 	Uwgt_item_list_status_C_ED_LeftStick_Down__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,7 +291,7 @@ void Uwgt_item_list_status_C::ED_LeftStick_Down__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_LeftStick_Up__DelegateSignature
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_LeftStick_Up__DelegateSignature()
 {
@@ -308,7 +300,6 @@ void Uwgt_item_list_status_C::ED_LeftStick_Up__DelegateSignature()
 	Uwgt_item_list_status_C_ED_LeftStick_Up__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -317,7 +308,7 @@ void Uwgt_item_list_status_C::ED_LeftStick_Up__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_LeftStick_Left__DelegateSignature
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_LeftStick_Left__DelegateSignature()
 {
@@ -326,7 +317,6 @@ void Uwgt_item_list_status_C::ED_LeftStick_Left__DelegateSignature()
 	Uwgt_item_list_status_C_ED_LeftStick_Left__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -335,7 +325,7 @@ void Uwgt_item_list_status_C::ED_LeftStick_Left__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_LeftStick_Right__DelegateSignature
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_LeftStick_Right__DelegateSignature()
 {
@@ -344,7 +334,6 @@ void Uwgt_item_list_status_C::ED_LeftStick_Right__DelegateSignature()
 	Uwgt_item_list_status_C_ED_LeftStick_Right__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -353,7 +342,7 @@ void Uwgt_item_list_status_C::ED_LeftStick_Right__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PressDown__DelegateSignature
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PressDown__DelegateSignature()
 {
@@ -362,7 +351,6 @@ void Uwgt_item_list_status_C::ED_PressDown__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PressDown__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -371,7 +359,7 @@ void Uwgt_item_list_status_C::ED_PressDown__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PressUp__DelegateSignature
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PressUp__DelegateSignature()
 {
@@ -380,7 +368,6 @@ void Uwgt_item_list_status_C::ED_PressUp__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PressUp__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -389,7 +376,7 @@ void Uwgt_item_list_status_C::ED_PressUp__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PushCancel__DelegateSignature
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PushCancel__DelegateSignature()
 {
@@ -398,7 +385,6 @@ void Uwgt_item_list_status_C::ED_PushCancel__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PushCancel__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -407,7 +393,7 @@ void Uwgt_item_list_status_C::ED_PushCancel__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PushUp__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PushUp__DelegateSignature()
 {
@@ -416,7 +402,6 @@ void Uwgt_item_list_status_C::ED_PushUp__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PushUp__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -425,7 +410,7 @@ void Uwgt_item_list_status_C::ED_PushUp__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PushDown__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PushDown__DelegateSignature()
 {
@@ -434,7 +419,6 @@ void Uwgt_item_list_status_C::ED_PushDown__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PushDown__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -443,7 +427,7 @@ void Uwgt_item_list_status_C::ED_PushDown__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PushDecide__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PushDecide__DelegateSignature()
 {
@@ -452,7 +436,6 @@ void Uwgt_item_list_status_C::ED_PushDecide__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PushDecide__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -461,7 +444,7 @@ void Uwgt_item_list_status_C::ED_PushDecide__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PressRight__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PressRight__DelegateSignature()
 {
@@ -470,7 +453,6 @@ void Uwgt_item_list_status_C::ED_PressRight__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PressRight__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -479,7 +461,7 @@ void Uwgt_item_list_status_C::ED_PressRight__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PressLeft__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PressLeft__DelegateSignature()
 {
@@ -488,7 +470,6 @@ void Uwgt_item_list_status_C::ED_PressLeft__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PressLeft__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -497,7 +478,7 @@ void Uwgt_item_list_status_C::ED_PressLeft__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PushRight__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PushRight__DelegateSignature()
 {
@@ -506,7 +487,6 @@ void Uwgt_item_list_status_C::ED_PushRight__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PushRight__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -515,7 +495,7 @@ void Uwgt_item_list_status_C::ED_PushRight__DelegateSignature()
 
 
 // Function wgt_item_list_status.wgt_item_list_status_C.ED_PushLeft__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_item_list_status_C::ED_PushLeft__DelegateSignature()
 {
@@ -524,7 +504,6 @@ void Uwgt_item_list_status_C::ED_PushLeft__DelegateSignature()
 	Uwgt_item_list_status_C_ED_PushLeft__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

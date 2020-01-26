@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,7 +77,7 @@ struct UBW_UDSController_C_FloatPropertyChanged_Event_2_Params
 };
 
 // Function BW_UDSController.BW_UDSController_C.«0¹0¿0à0¤0Ù0ó0È0_1
-struct UBW_UDSController_C__UnknownFunc01_Params
+struct UBW_UDSController_C_«0¹0¿0à0¤0Ù0ó0È0_1_Params
 {
 };
 

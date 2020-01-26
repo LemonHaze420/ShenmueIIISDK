@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,9 +50,9 @@ public:
 	}
 
 
-	bool STATIC_IsUseStepFilterPath();
-	bool STATIC_Get_DataListComboBox_bIsEnabled_1();
-	void STATIC_GetEventStepToString(struct FString* Result);
+	bool IsUseStepFilterPath();
+	bool Get_DataListComboBox_bIsEnabled_1();
+	void GetEventStepToString(struct FString* Result);
 	void IncrementTextDataIndex();
 	void IsUseEventStepFilter(bool* bUseFilter);
 	void Value_Committed(class USpinBox* InputPin, float NewValue, TEnumAsByte<ETextCommit> Method);
@@ -60,22 +60,22 @@ public:
 	struct FText Get_TextBlock_4_Text_1();
 	struct FText Get_CurrentTextdataIndex_Text_1();
 	void Construct();
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Destruct();
 	void BndEvt__PathTypeProperty_K2Node_ComponentBoundEvent_175_EnumPropertyChanged__DelegateSignature();
 	void BndEvt__LocaleProperty_K2Node_ComponentBoundEvent_184_EnumPropertyChanged__DelegateSignature();
 	void UpdateTextDataAssets();
-	void STATIC_BndEvt__ComboBoxString_0_K2Node_ComponentBoundEvent_205_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void BndEvt__ComboBoxString_0_K2Node_ComponentBoundEvent_205_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_43_OnButtonPressedEvent__DelegateSignature();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_261_OnButtonPressedEvent__DelegateSignature();
 	void Finalize();
 	void PlaySubtitlePlayer();
 	void OnChangeStep();
-	void STATIC_BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
-	void STATIC_BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
-	void STATIC_BndEvt__DataListComboBox_K2Node_ComponentBoundEvent_1010_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
+	void BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
+	void BndEvt__DataListComboBox_K2Node_ComponentBoundEvent_1010_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void UpdatePullDownTextDataList();
-	void STATIC_ExecuteUbergraph_BW_DebugTextData(int EntryPoint);
+	void ExecuteUbergraph_BW_DebugTextData(int EntryPoint);
 };
 
 

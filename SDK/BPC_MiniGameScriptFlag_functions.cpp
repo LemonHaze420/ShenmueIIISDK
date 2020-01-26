@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameScriptFlag.BPC_MiniGameScriptFlag_C.GetGlobalFlagMiniGameResultNum
-// (Net, NetReliable, Native, Event, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UBPC_MiniGameScriptFlag_C::GetGlobalFlagMiniGameResultNum(int* Result)
 	UBPC_MiniGameScriptFlag_C_GetGlobalFlagMiniGameResultNum_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void UBPC_MiniGameScriptFlag_C::GetGlobalFlagMiniGameResultNum(int* Result)
 
 
 // Function BPC_MiniGameScriptFlag.BPC_MiniGameScriptFlag_C.SetGlobalFlagMiniGameResultNum
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -49,7 +48,6 @@ void UBPC_MiniGameScriptFlag_C::SetGlobalFlagMiniGameResultNum(int Result)
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,11 +56,11 @@ void UBPC_MiniGameScriptFlag_C::SetGlobalFlagMiniGameResultNum(int Result)
 
 
 // Function BPC_MiniGameScriptFlag.BPC_MiniGameScriptFlag_C.GetGlobalFlagMiniGameScore
-// (NetReliable, Exec, NetResponse, Static, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Score                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameScriptFlag_C::STATIC_GetGlobalFlagMiniGameScore(int* Score)
+void UBPC_MiniGameScriptFlag_C::GetGlobalFlagMiniGameScore(int* Score)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameScriptFlag.BPC_MiniGameScriptFlag_C.GetGlobalFlagMiniGameScore");
 
@@ -80,7 +78,7 @@ void UBPC_MiniGameScriptFlag_C::STATIC_GetGlobalFlagMiniGameScore(int* Score)
 
 
 // Function BPC_MiniGameScriptFlag.BPC_MiniGameScriptFlag_C.SetGlobalFlagMiniGameScore
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Score                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -92,7 +90,6 @@ void UBPC_MiniGameScriptFlag_C::SetGlobalFlagMiniGameScore(int Score)
 	params.Score = Score;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

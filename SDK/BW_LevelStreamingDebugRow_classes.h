@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,8 +34,8 @@ public:
 	}
 
 
-	struct FText STATIC_Get_LoadTimeWidget_Text();
-	struct FText STATIC_Get_VisibilityTime_Text();
+	struct FText Get_LoadTimeWidget_Text();
+	struct FText Get_VisibilityTime_Text();
 	struct FText Get_LevelName_Text();
 	struct FSlateColor Get_LevelName_ColorAndOpacity();
 };

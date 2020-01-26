@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,10 +32,10 @@ public:
 
 	void CalcTeleportLocation(class AActor* Character, class ABP_NPCLeadManager_C* LeaderAI, struct FVector* DestLocation, struct FRotator* DestRotation);
 	void CalcNextMoveLocation(class AActor* Character, class ABP_NPCLeadManager_C* LeaderAI, float DeltaSeconds, float Speed, struct FVector* DestLocation, struct FRotator* DestRotation, bool* IsEnd);
-	void STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void EndFailure();
 	void StartPanicTeleport();
-	void STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ExecuteUbergraph_BTT_PlayerFollow_SkipToNextEvent(int EntryPoint);
 };
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.SetVisibleIcon
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,9 +34,9 @@ void UWBP_MiniGameMoveIcon_C::SetVisibleIcon(bool Visible)
 
 
 // Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.Construct
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_MiniGameMoveIcon_C::STATIC_Construct()
+void UWBP_MiniGameMoveIcon_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.Construct");
 
@@ -51,11 +51,11 @@ void UWBP_MiniGameMoveIcon_C::STATIC_Construct()
 
 
 // Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.ExecuteUbergraph_WBP_MiniGameMoveIcon
-// (Native, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGameMoveIcon_C::STATIC_ExecuteUbergraph_WBP_MiniGameMoveIcon(int EntryPoint)
+void UWBP_MiniGameMoveIcon_C::ExecuteUbergraph_WBP_MiniGameMoveIcon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.ExecuteUbergraph_WBP_MiniGameMoveIcon");
 
@@ -63,7 +63,6 @@ void UWBP_MiniGameMoveIcon_C::STATIC_ExecuteUbergraph_WBP_MiniGameMoveIcon(int E
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

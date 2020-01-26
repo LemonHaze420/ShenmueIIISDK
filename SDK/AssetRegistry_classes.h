@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,35 +25,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class AssetRegistry.AssetRegistryHelpers
-// 0x0000 (0x0028 - 0x0028)
-class UAssetRegistryHelpers : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryHelpers");
-		return ptr;
-	}
-
-
-	struct FSoftObjectPath ToSoftObjectPath(const struct FAssetData& InAssetData);
-	struct FARFilter SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues);
-	bool IsValid(const struct FAssetData& InAssetData);
-	bool IsUAsset(const struct FAssetData& InAssetData);
-	bool IsRedirector(const struct FAssetData& InAssetData);
-	bool IsAssetLoaded(const struct FAssetData& InAssetData);
-	bool GetTagValue(const struct FAssetData& InAssetData, const struct FName& InTagName, struct FString* OutTagValue);
-	struct FString GetFullName(const struct FAssetData& InAssetData);
-	struct FString GetExportTextName(const struct FAssetData& InAssetData);
-	class UClass* GetClass(const struct FAssetData& InAssetData);
-	TScriptInterface<class UAssetRegistry> GetAssetRegistry();
-	class UObject* GetAsset(const struct FAssetData& InAssetData);
-	struct FAssetData CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass);
 };
 
 
@@ -86,6 +57,35 @@ public:
 	struct FAssetData GetAssetByObjectPath(const struct FName& ObjectPath, bool bIncludeOnlyOnDiskAssets);
 	void GetAllCachedPaths(TArray<struct FString>* OutPathList);
 	bool GetAllAssets(bool bIncludeOnlyOnDiskAssets, TArray<struct FAssetData>* OutAssetData);
+};
+
+
+// Class AssetRegistry.AssetRegistryHelpers
+// 0x0000 (0x0028 - 0x0028)
+class UAssetRegistryHelpers : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AssetRegistry.AssetRegistryHelpers");
+		return ptr;
+	}
+
+
+	struct FSoftObjectPath STATIC_ToSoftObjectPath(const struct FAssetData& InAssetData);
+	struct FARFilter STATIC_SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues);
+	bool STATIC_IsValid(const struct FAssetData& InAssetData);
+	bool STATIC_IsUAsset(const struct FAssetData& InAssetData);
+	bool STATIC_IsRedirector(const struct FAssetData& InAssetData);
+	bool STATIC_IsAssetLoaded(const struct FAssetData& InAssetData);
+	bool STATIC_GetTagValue(const struct FAssetData& InAssetData, const struct FName& InTagName, struct FString* OutTagValue);
+	struct FString STATIC_GetFullName(const struct FAssetData& InAssetData);
+	struct FString STATIC_GetExportTextName(const struct FAssetData& InAssetData);
+	class UClass* STATIC_GetClass(const struct FAssetData& InAssetData);
+	TScriptInterface<class UAssetRegistry> STATIC_GetAssetRegistry();
+	class UObject* STATIC_GetAsset(const struct FAssetData& InAssetData);
+	struct FAssetData STATIC_CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass);
 };
 
 

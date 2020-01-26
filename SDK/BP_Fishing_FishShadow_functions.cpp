@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.UpdateFishBaseLocation
-// (Exec, Native, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 BaseLocation                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_Fishing_FishShadow_C::STATIC_UpdateFishBaseLocation(const struct FVector& BaseLocation)
+void ABP_Fishing_FishShadow_C::UpdateFishBaseLocation(const struct FVector& BaseLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.UpdateFishBaseLocation");
 
@@ -26,7 +26,6 @@ void ABP_Fishing_FishShadow_C::STATIC_UpdateFishBaseLocation(const struct FVecto
 	params.BaseLocation = BaseLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void ABP_Fishing_FishShadow_C::STATIC_UpdateFishBaseLocation(const struct FVecto
 
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.CheckBite
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ArgBite                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_FishShadow_C::STATIC_CheckBite(bool* ArgBite)
+void ABP_Fishing_FishShadow_C::CheckBite(bool* ArgBite)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.CheckBite");
 
@@ -57,7 +56,7 @@ void ABP_Fishing_FishShadow_C::STATIC_CheckBite(bool* ArgBite)
 
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.MoveEnd
-// (Net, NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_FishShadow_C::MoveEnd()
 {
@@ -74,14 +73,14 @@ void ABP_Fishing_FishShadow_C::MoveEnd()
 
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.MoveStart
-// (Exec, Native, Static, NetMulticast, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ArgType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ArgFishNum                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ArgCenterPos                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          BiteWait                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_FishShadow_C::STATIC_MoveStart(int ArgType, int ArgFishNum, const struct FVector& ArgCenterPos, float BiteWait)
+void ABP_Fishing_FishShadow_C::MoveStart(int ArgType, int ArgFishNum, const struct FVector& ArgCenterPos, float BiteWait)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.MoveStart");
 
@@ -92,7 +91,6 @@ void ABP_Fishing_FishShadow_C::STATIC_MoveStart(int ArgType, int ArgFishNum, con
 	params.BiteWait = BiteWait;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -101,7 +99,7 @@ void ABP_Fishing_FishShadow_C::STATIC_MoveStart(int ArgType, int ArgFishNum, con
 
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.Init
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_FishShadow_C::Init()
 {
@@ -110,7 +108,6 @@ void ABP_Fishing_FishShadow_C::Init()
 	ABP_Fishing_FishShadow_C_Init_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,11 +116,11 @@ void ABP_Fishing_FishShadow_C::Init()
 
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.StartInfinitySymbolMove
-// (Net, NetRequest, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ArgBasePos                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_Fishing_FishShadow_C::STATIC_StartInfinitySymbolMove(const struct FVector& ArgBasePos)
+void ABP_Fishing_FishShadow_C::StartInfinitySymbolMove(const struct FVector& ArgBasePos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.StartInfinitySymbolMove");
 
@@ -131,7 +128,6 @@ void ABP_Fishing_FishShadow_C::STATIC_StartInfinitySymbolMove(const struct FVect
 	params.ArgBasePos = ArgBasePos;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,16 +136,15 @@ void ABP_Fishing_FishShadow_C::STATIC_StartInfinitySymbolMove(const struct FVect
 
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.Move_InfinitySymbol
-// (NetRequest, Exec, Native, NetResponse, Static, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Fishing_FishShadow_C::STATIC_Move_InfinitySymbol()
+void ABP_Fishing_FishShadow_C::Move_InfinitySymbol()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.Move_InfinitySymbol");
 
 	ABP_Fishing_FishShadow_C_Move_InfinitySymbol_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,7 +153,7 @@ void ABP_Fishing_FishShadow_C::STATIC_Move_InfinitySymbol()
 
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.UserConstructionScript
-// (Net, NetRequest, NetResponse, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_FishShadow_C::UserConstructionScript()
 {
@@ -175,11 +170,11 @@ void ABP_Fishing_FishShadow_C::UserConstructionScript()
 
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.ReceiveTick
-// (Net, NetReliable, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_FishShadow_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_Fishing_FishShadow_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.ReceiveTick");
 
@@ -195,7 +190,7 @@ void ABP_Fishing_FishShadow_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Fishing_FishShadow.BP_Fishing_FishShadow_C.ExecuteUbergraph_BP_Fishing_FishShadow
-// (Exec, Event, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

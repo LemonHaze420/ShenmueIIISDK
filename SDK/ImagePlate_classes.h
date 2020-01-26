@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -65,18 +65,19 @@ public:
 };
 
 
-// Class ImagePlate.MovieSceneImagePlateSection
-// 0x0010 (0x00F0 - 0x00E0)
-class UMovieSceneImagePlateSection : public UMovieSceneSection
+// Class ImagePlate.ImagePlateFileSequence
+// 0x0028 (0x0050 - 0x0028)
+class UImagePlateFileSequence : public UObject
 {
 public:
-	class UImagePlateFileSequence*                     FileSequence;                                             // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bReuseExistingTexture;                                    // 0x00E8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00E9(0x0007) MISSED OFFSET
+	struct FDirectoryPath                              SequencePath;                                             // 0x0028(0x0010) (Edit)
+	struct FString                                     FileWildcard;                                             // 0x0038(0x0010) (Edit, ZeroConstructor)
+	float                                              FrameRate;                                                // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ImagePlate.MovieSceneImagePlateSection");
+		static auto ptr = UObject::FindClass("Class ImagePlate.ImagePlateFileSequence");
 		return ptr;
 	}
 
@@ -98,19 +99,18 @@ public:
 };
 
 
-// Class ImagePlate.ImagePlateFileSequence
-// 0x0028 (0x0050 - 0x0028)
-class UImagePlateFileSequence : public UObject
+// Class ImagePlate.MovieSceneImagePlateSection
+// 0x0010 (0x00F0 - 0x00E0)
+class UMovieSceneImagePlateSection : public UMovieSceneSection
 {
 public:
-	struct FDirectoryPath                              SequencePath;                                             // 0x0028(0x0010) (Edit)
-	struct FString                                     FileWildcard;                                             // 0x0038(0x0010) (Edit, ZeroConstructor)
-	float                                              FrameRate;                                                // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	class UImagePlateFileSequence*                     FileSequence;                                             // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bReuseExistingTexture;                                    // 0x00E8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00E9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class ImagePlate.ImagePlateFileSequence");
+		static auto ptr = UObject::FindClass("Class ImagePlate.MovieSceneImagePlateSection");
 		return ptr;
 	}
 

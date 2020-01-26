@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,25 +84,25 @@ public:
 	void CalcAndMoveCameraToSafeLocation();
 	void CutOffNearBlur();
 	struct FVector GetLookTargetSocketLocation(const struct FName& InSocketName);
-	void STATIC_CalcFinalDistance(float* FinishCameraDistance);
-	void STATIC_CalcFinalSpin(struct FRotator* FinalSpin);
+	void CalcFinalDistance(float* FinishCameraDistance);
+	void CalcFinalSpin(struct FRotator* FinalSpin);
 	void UpdateComponent();
 	void GetCamera(class UCameraComponent** Camera);
-	void STATIC_GetForwardVector(class USkeletalMeshComponent* Target, struct FVector* Forward);
+	void GetForwardVector(class USkeletalMeshComponent* Target, struct FVector* Forward);
 	void AdjustRotationFromDistance(const struct FRotator& Rotation, float DistanceRatio, struct FRotator* AdjustmentRotation);
 	void AdjustCameraDistance(float CharacterHalfDistance, float CameraDistance, float* AdjustmentCameraDistance);
-	void STATIC_GetLockPointDepthOffset(struct FVector* DepthOffset);
+	void GetLockPointDepthOffset(struct FVector* DepthOffset);
 	void GetLockPointOffset(struct FVector* LockPointOffset);
-	void STATIC_SetSkeletalMeshFromTalkActor();
+	void SetSkeletalMeshFromTalkActor();
 	void Movement_DollyZoom(float DeltaSeconds);
 	void Movement_FovZoom(float DeltaSeconds);
-	void STATIC_Movement_Spin(float DeltaSeconds);
-	void STATIC_Rotater___Rotater(const struct FRotator& Rotator_A, const struct FRotator& Rotator_B, struct FRotator* Rotator);
+	void Movement_Spin(float DeltaSeconds);
+	void Rotater___Rotater(const struct FRotator& Rotator_A, const struct FRotator& Rotator_B, struct FRotator* Rotator);
 	void StartupSettingsCaseLookPair();
-	void STATIC_StartupSettingsCaseLookAlone();
+	void StartupSettingsCaseLookAlone();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
+	void ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_DefaultTalkCamera(int EntryPoint);
 };

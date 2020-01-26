@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,32 +56,32 @@ public:
 	}
 
 
-	int STATIC_GetPriority();
-	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
+	int GetPriority();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void CheckRay(bool* Enable);
 	void ChangeSelectText();
 	void LavelIDtoText(const struct FName& LavelID, struct FText* GetText);
-	void STATIC_CheckBeginTriggerIn(bool* BeginIn);
+	void CheckBeginTriggerIn(bool* BeginIn);
 	void ChangeBSEnable(bool BsEnable);
 	void CheckItemValid(bool* Valid);
 	void BSAction(class UActorComponent* Component);
-	void STATIC_SetItemEnable();
+	void SetItemEnable();
 	void RegisterDetect(class UActorComponent* Component, bool Register);
-	void STATIC_UserConstructionScript();
-	void STATIC_Catch_OnSelect(int Index);
-	void STATIC_Select_Cancel(bool IsDeny);
+	void UserConstructionScript();
+	void Catch_OnSelect(int Index);
+	void Select_Cancel(bool IsDeny);
 	void SaveLoadWidgetFinish();
 	void OpenSyetemMenuSelect();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_DecideDetectAction(ES3ActionIconType Type);
+	void DecideDetectAction(ES3ActionIconType Type);
 	void BeginBsIn();
 	void BndEvt__DetectArea_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void CancelBsIn();
 	void ReceiveBeginPlay();
 	void CheckLoadEnd();
 	void CheckFadein();
-	void STATIC_ExecuteUbergraph_BP_SleepPoint_Template(int EntryPoint);
+	void ExecuteUbergraph_BP_SleepPoint_Template(int EntryPoint);
 	void ED_DoSleep__DelegateSignature();
 };
 

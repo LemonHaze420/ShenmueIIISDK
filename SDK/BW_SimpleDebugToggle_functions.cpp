@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.SetState
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ECheckBoxState                 State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBW_SimpleDebugToggle_C::SetState(ECheckBoxState State)
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.GetState
-// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ECheckBoxState                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -45,7 +45,6 @@ ECheckBoxState UBW_SimpleDebugToggle_C::GetState()
 	UBW_SimpleDebugToggle_C_GetState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +55,7 @@ ECheckBoxState UBW_SimpleDebugToggle_C::GetState()
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.GetParameterName
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -77,7 +76,7 @@ struct FText UBW_SimpleDebugToggle_C::GetParameterName()
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.Tick
-// (Event, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -99,9 +98,9 @@ void UBW_SimpleDebugToggle_C::Tick(const struct FGeometry& MyGeometry, float InD
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (BlueprintEvent)
 
-void UBW_SimpleDebugToggle_C::STATIC_BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature()
+void UBW_SimpleDebugToggle_C::BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature");
 
@@ -116,7 +115,7 @@ void UBW_SimpleDebugToggle_C::STATIC_BndEvt__S3Button_12_K2Node_ComponentBoundEv
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.PreConstruct
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -128,7 +127,6 @@ void UBW_SimpleDebugToggle_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +135,7 @@ void UBW_SimpleDebugToggle_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.OnAddedToFocusPath
-// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FFocusEvent             InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -157,7 +155,7 @@ void UBW_SimpleDebugToggle_C::OnAddedToFocusPath(const struct FFocusEvent& InFoc
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.BndEvt__BoolValue_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
-// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintEvent)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -177,7 +175,7 @@ void UBW_SimpleDebugToggle_C::BndEvt__BoolValue_K2Node_ComponentBoundEvent_0_OnC
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.ExecuteUbergraph_BW_SimpleDebugToggle
-// (Exec, Public, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -197,11 +195,11 @@ void UBW_SimpleDebugToggle_C::ExecuteUbergraph_BW_SimpleDebugToggle(int EntryPoi
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.OnFocused__DelegateSignature
-// (Net, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget*                 Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_SimpleDebugToggle_C::STATIC_OnFocused__DelegateSignature(class UWidget* Widget)
+void UBW_SimpleDebugToggle_C::OnFocused__DelegateSignature(class UWidget* Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.OnFocused__DelegateSignature");
 
@@ -209,7 +207,6 @@ void UBW_SimpleDebugToggle_C::STATIC_OnFocused__DelegateSignature(class UWidget*
 	params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -218,12 +215,12 @@ void UBW_SimpleDebugToggle_C::STATIC_OnFocused__DelegateSignature(class UWidget*
 
 
 // Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.OnChangedByUser__DelegateSignature
-// (Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBW_SimpleDebugToggle_C* Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // ECheckBoxState                 NewValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_SimpleDebugToggle_C::STATIC_OnChangedByUser__DelegateSignature(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue)
+void UBW_SimpleDebugToggle_C::OnChangedByUser__DelegateSignature(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SimpleDebugToggle.BW_SimpleDebugToggle_C.OnChangedByUser__DelegateSignature");
 
@@ -232,7 +229,6 @@ void UBW_SimpleDebugToggle_C::STATIC_OnChangedByUser__DelegateSignature(class UB
 	params.NewValue = NewValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

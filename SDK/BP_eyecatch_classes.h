@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,27 +43,27 @@ public:
 
 
 	void UpdateDateTime();
-	void STATIC_HideWidget();
-	void STATIC_IsVisible(bool* Visible);
-	void STATIC_SetVisibility(bool Visible);
+	void HideWidget();
+	void IsVisible(bool* Visible);
+	void SetVisibility(bool Visible);
 	void setTitle(const struct FText& main1, const struct FText& sub1);
 	void setWaitTime(float Value);
 	void UpdateWidget();
 	void ShowEyecatch(const struct FText& main1, const struct FText& sub1, bool Fade);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_catchFadeInFinished();
-	void STATIC_waitEasy();
-	void STATIC_catchEndWaitEasy();
-	void STATIC_endEasy();
-	void STATIC_catchFadeOutFinished();
-	void STATIC_finishEasy();
-	void STATIC_BindFinishFadeIn();
-	void STATIC_branch_easy_in_();
-	void STATIC_BindFinishFadeOut();
-	void STATIC_branch_easy_out_();
-	void STATIC_startEasy();
-	void STATIC_ExecuteUbergraph_BP_eyecatch(int EntryPoint);
+	void ReceiveBeginPlay();
+	void catchFadeInFinished();
+	void waitEasy();
+	void catchEndWaitEasy();
+	void endEasy();
+	void catchFadeOutFinished();
+	void finishEasy();
+	void BindFinishFadeIn();
+	void branch_easy_in_();
+	void BindFinishFadeOut();
+	void branch_easy_out_();
+	void startEasy();
+	void ExecuteUbergraph_BP_eyecatch(int EntryPoint);
 	void onFadeStart_out___DelegateSignature();
 	void onFadeStart_in___DelegateSignature();
 	void onFadeFinish_out___DelegateSignature();

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.MakeString_EN
-// (Net, Native, Event, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FString>         String                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -25,7 +25,6 @@ void ABP_CreateMemoTexture_C::MakeString_EN(TArray<struct FString>* String)
 	ABP_CreateMemoTexture_C_MakeString_EN_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ABP_CreateMemoTexture_C::MakeString_EN(TArray<struct FString>* String)
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.SetRowCountAndTexturePos
-// (NetRequest, Native, Event, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Front                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsMemoFlag                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -55,7 +54,6 @@ void ABP_CreateMemoTexture_C::SetRowCountAndTexturePos(bool Front, bool IsMemoFl
 	params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,7 +62,7 @@ void ABP_CreateMemoTexture_C::SetRowCountAndTexturePos(bool Front, bool IsMemoFl
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.PrintErrorLog
-// (Net, NetRequest, Exec, Native, Event, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            MemoIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -78,7 +76,6 @@ void ABP_CreateMemoTexture_C::PrintErrorLog(int MemoIndex, int page)
 	params.page = page;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +84,7 @@ void ABP_CreateMemoTexture_C::PrintErrorLog(int MemoIndex, int page)
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.GetMemoLabel
-// (Net, NetReliable, Exec, Event, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            MemoIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Label                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -111,7 +108,7 @@ void ABP_CreateMemoTexture_C::GetMemoLabel(int MemoIndex, struct FName* Label)
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.SetTexture
-// (Net, NetRequest, Native, Event, MulticastDelegate, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<int>                    MemoNo                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           Right                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -124,7 +121,6 @@ void ABP_CreateMemoTexture_C::SetTexture(bool Right, TArray<int>* MemoNo)
 	params.Right = Right;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,7 +132,7 @@ void ABP_CreateMemoTexture_C::SetTexture(bool Right, TArray<int>* MemoNo)
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.RenderContactInfo
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            RowCount                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class Uwgt_S3Memopad_textContentBase_C* Widget                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -149,7 +145,6 @@ void ABP_CreateMemoTexture_C::RenderContactInfo(int RowCount, class Uwgt_S3Memop
 	params.RowCount = RowCount;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,7 +156,7 @@ void ABP_CreateMemoTexture_C::RenderContactInfo(int RowCount, class Uwgt_S3Memop
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.GetMemoNo
-// (Event, NetResponse, NetMulticast, Private, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            PageNo                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    MemoNo                         (Parm, OutParm, ZeroConstructor)
@@ -185,7 +180,7 @@ void ABP_CreateMemoTexture_C::GetMemoNo(int PageNo, TArray<int>* MemoNo)
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.DestroyActor
-// (Net, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_CreateMemoTexture_C::DestroyActor()
 {
@@ -202,7 +197,7 @@ void ABP_CreateMemoTexture_C::DestroyActor()
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_CreateMemoTexture_C::UserConstructionScript()
 {
@@ -219,7 +214,7 @@ void ABP_CreateMemoTexture_C::UserConstructionScript()
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.ReceiveBeginPlay
-// (NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_CreateMemoTexture_C::ReceiveBeginPlay()
 {
@@ -236,7 +231,7 @@ void ABP_CreateMemoTexture_C::ReceiveBeginPlay()
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.Update
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_CreateMemoTexture_C::Update()
 {
@@ -245,7 +240,6 @@ void ABP_CreateMemoTexture_C::Update()
 	ABP_CreateMemoTexture_C_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,11 +248,11 @@ void ABP_CreateMemoTexture_C::Update()
 
 
 // Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.ExecuteUbergraph_BP_CreateMemoTexture
-// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Public, Protected, HasOutParms, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CreateMemoTexture_C::STATIC_ExecuteUbergraph_BP_CreateMemoTexture(int EntryPoint)
+void ABP_CreateMemoTexture_C::ExecuteUbergraph_BP_CreateMemoTexture(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CreateMemoTexture.BP_CreateMemoTexture_C.ExecuteUbergraph_BP_CreateMemoTexture");
 

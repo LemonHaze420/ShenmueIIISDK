@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,47 +47,47 @@ public:
 	}
 
 
-	void STATIC_StartTalkClipper(const struct FName& CharaName, struct FString* ClipperData);
-	void STATIC_UpdateDelayPlayVoice();
+	void StartTalkClipper(const struct FName& CharaName, struct FString* ClipperData);
+	void UpdateDelayPlayVoice();
 	void RemoveDelayVoiceData(class ABP_S3SoundPlayer_C* InSoundPlayer);
-	void STATIC_AddDelayVoiceData(class ABP_S3SoundPlayer_C* InSoundPlayer);
-	void STATIC_SetLeavePreviousVoice(bool InLeave);
+	void AddDelayVoiceData(class ABP_S3SoundPlayer_C* InSoundPlayer);
+	void SetLeavePreviousVoice(bool InLeave);
 	void UnbindOnSubVoiceAudioFinished(class ABP_S3SoundPlayer_C* InSoundPlayer);
 	void BindOnSubVoiceAudioFinished(class ABP_S3SoundPlayer_C* InSoundPlayer);
-	void STATIC_OnSubVoiceAudioFinished(class ABP_S3SoundPlayer_C* InSoundPlayer);
-	void STATIC_EndAllVoicePlaying();
-	void STATIC_EndSubVoicePlaying(class ABP_S3SoundPlayer_C* InSoundPlayer);
-	void STATIC_ConvertCurrentVoicePlayerToSub();
-	void STATIC_SetPlayTimeMin(float NewTime);
+	void OnSubVoiceAudioFinished(class ABP_S3SoundPlayer_C* InSoundPlayer);
+	void EndAllVoicePlaying();
+	void EndSubVoicePlaying(class ABP_S3SoundPlayer_C* InSoundPlayer);
+	void ConvertCurrentVoicePlayerToSub();
+	void SetPlayTimeMin(float NewTime);
 	void CheckAutoStop(float DeltaTime);
-	void STATIC_IsVoicePlaying(bool* Playing);
-	void STATIC_SetPlayVolume(float NewVolume);
-	void STATIC_GetVoicePlayer(class ABP_S3SoundPlayer_C** VoicePlayer);
-	void STATIC_SetCurrentPlayingTime(float CurrentPlayingTime);
-	void STATIC_SetIsAutoStopFlag(bool bFlag);
-	void STATIC_SetIsPlayingFlag(bool bFlag);
-	void STATIC_GetSubtitlesWidget(class UUMG_Subtitles_C** SubtitlesWidget);
+	void IsVoicePlaying(bool* Playing);
+	void SetPlayVolume(float NewVolume);
+	void GetVoicePlayer(class ABP_S3SoundPlayer_C** VoicePlayer);
+	void SetCurrentPlayingTime(float CurrentPlayingTime);
+	void SetIsAutoStopFlag(bool bFlag);
+	void SetIsPlayingFlag(bool bFlag);
+	void GetSubtitlesWidget(class UUMG_Subtitles_C** SubtitlesWidget);
 	void CalcPlayTimeMin(const struct FString& Text);
-	bool STATIC_IsPlaying();
-	void STATIC_GetSubtitleSpeakerID(const struct FName& CharaName, struct FName* ID);
+	bool IsPlaying();
+	void GetSubtitleSpeakerID(const struct FName& CharaName, struct FName* ID);
 	void GetSubtitleChara(const struct FName& CharaName, TEnumAsByte<EN_TalkCharacterType>* Chara);
 	void Stop();
-	void STATIC_Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop);
+	void Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop);
 	void EndVoicePlaying();
 	void PlayVoice(class UObject* VoiceData);
-	void STATIC_CreateVoicePlayer(class USoundAtomCue* Cue);
-	void STATIC_SetSubtitlesWidgetVisible(bool IsVisible);
-	void STATIC_FinalizeSubtitlesWidget();
+	void CreateVoicePlayer(class USoundAtomCue* Cue);
+	void SetSubtitlesWidgetVisible(bool IsVisible);
+	void FinalizeSubtitlesWidget();
 	void CreateSubtitlesWidget();
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_BindOnVoiceAudioFinished();
-	void STATIC_UnbindOnVoiceAudioFinished();
-	void STATIC_OnVoiceAudioFinished(class ABP_S3SoundPlayer_C* SoundPlayer);
-	void STATIC_sePlay();
-	void STATIC_bindSePlay();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void BindOnVoiceAudioFinished();
+	void UnbindOnVoiceAudioFinished();
+	void OnVoiceAudioFinished(class ABP_S3SoundPlayer_C* SoundPlayer);
+	void sePlay();
+	void bindSePlay();
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_SubtitlePlayer(int EntryPoint);
 	void OnEndSubtitle__DelegateSignature();
 };

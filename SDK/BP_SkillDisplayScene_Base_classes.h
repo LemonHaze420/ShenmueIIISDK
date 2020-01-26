@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,16 +33,16 @@ public:
 
 
 	bool IsLoading();
-	bool STATIC_GetWidgetVisible(class UWidget* self2);
+	bool GetWidgetVisible(class UWidget* self2);
 	void CaptureSingleFrame(const struct FName& Item, bool* Success);
 	void SetRenderTexture(class UTextureRenderTarget2D* TextureRenderTarget2D);
 	void EnableDrawToTexture(bool bRender);
 	void StopMotion(bool* bSuccess);
 	void PlayMotionForItem(const struct FName& Skill, bool* bSuccess);
 	void UserConstructionScript();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BP_SkillDisplayScene_Base(int EntryPoint);
+	void ExecuteUbergraph_BP_SkillDisplayScene_Base(int EntryPoint);
 };
 
 

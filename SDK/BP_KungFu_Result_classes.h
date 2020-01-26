@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,10 +36,10 @@ public:
 	}
 
 
-	void STATIC_ConstructWidget();
+	void ConstructWidget();
 	void UserConstructionScript();
-	void STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void OnWidgetAnimationFinished();
 	void StartClose();
 	void ReceiveBeginPlay();

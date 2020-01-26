@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetHelpPriority
-// (Exec, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpPriority                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ES3HelpPriority ABP_ScheduleNPC_C::STATIC_GetHelpPriority()
+ES3HelpPriority ABP_ScheduleNPC_C::GetHelpPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetHelpPriority");
 
 	ABP_ScheduleNPC_C_GetHelpPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,18 +35,17 @@ ES3HelpPriority ABP_ScheduleNPC_C::STATIC_GetHelpPriority()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetHelpName
-// (NetReliable, NetRequest, Native, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName ABP_ScheduleNPC_C::STATIC_GetHelpName()
+struct FName ABP_ScheduleNPC_C::GetHelpName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetHelpName");
 
 	ABP_ScheduleNPC_C_GetHelpName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +56,7 @@ struct FName ABP_ScheduleNPC_C::STATIC_GetHelpName()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.IsActivateHelp
-// (NetReliable, Exec, Public, Protected, Delegate, NetServer, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -79,7 +77,7 @@ bool ABP_ScheduleNPC_C::IsActivateHelp()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.RegisterHelp
-// (Exec, Native, Event, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpRegisterTiming          Timing                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -92,7 +90,6 @@ bool ABP_ScheduleNPC_C::RegisterHelp(ES3HelpRegisterTiming Timing)
 	params.Timing = Timing;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,12 +100,12 @@ bool ABP_ScheduleNPC_C::RegisterHelp(ES3HelpRegisterTiming Timing)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.UnregisterHelp
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpRegisterTiming          Timing                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_ScheduleNPC_C::STATIC_UnregisterHelp(ES3HelpRegisterTiming Timing)
+bool ABP_ScheduleNPC_C::UnregisterHelp(ES3HelpRegisterTiming Timing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.UnregisterHelp");
 
@@ -116,7 +113,6 @@ bool ABP_ScheduleNPC_C::STATIC_UnregisterHelp(ES3HelpRegisterTiming Timing)
 	params.Timing = Timing;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,18 +123,17 @@ bool ABP_ScheduleNPC_C::STATIC_UnregisterHelp(ES3HelpRegisterTiming Timing)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetPriority
-// (NetReliable, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_ScheduleNPC_C::STATIC_GetPriority()
+int ABP_ScheduleNPC_C::GetPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetPriority");
 
 	ABP_ScheduleNPC_C_GetPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +144,7 @@ int ABP_ScheduleNPC_C::STATIC_GetPriority()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetDetectAction
-// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -170,16 +165,15 @@ TArray<struct FS3DetectActionParam> ABP_ScheduleNPC_C::GetDetectAction()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.CheckRewardNotice
-// (Exec, Native, Event, Static, MulticastDelegate, Public, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_CheckRewardNotice()
+void ABP_ScheduleNPC_C::CheckRewardNotice()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.CheckRewardNotice");
 
 	ABP_ScheduleNPC_C_CheckRewardNotice_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -188,7 +182,7 @@ void ABP_ScheduleNPC_C::STATIC_CheckRewardNotice()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.IsDisableFootIK
-// (Native, Event, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bDisable                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -199,7 +193,6 @@ void ABP_ScheduleNPC_C::IsDisableFootIK(bool* bDisable)
 	ABP_ScheduleNPC_C_IsDisableFootIK_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -211,16 +204,15 @@ void ABP_ScheduleNPC_C::IsDisableFootIK(bool* bDisable)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.DestroyCameraCollisionSub
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_DestroyCameraCollisionSub()
+void ABP_ScheduleNPC_C::DestroyCameraCollisionSub()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.DestroyCameraCollisionSub");
 
 	ABP_ScheduleNPC_C_DestroyCameraCollisionSub_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -229,12 +221,12 @@ void ABP_ScheduleNPC_C::STATIC_DestroyCameraCollisionSub()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.CreateCameraCollisionSub
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Radius                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          HalfHeight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_CreateCameraCollisionSub(float Radius, float HalfHeight)
+void ABP_ScheduleNPC_C::CreateCameraCollisionSub(float Radius, float HalfHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.CreateCameraCollisionSub");
 
@@ -243,7 +235,6 @@ void ABP_ScheduleNPC_C::STATIC_CreateCameraCollisionSub(float Radius, float Half
 	params.HalfHeight = HalfHeight;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -252,18 +243,17 @@ void ABP_ScheduleNPC_C::STATIC_CreateCameraCollisionSub(float Radius, float Half
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.IsLookAtBody
-// (NetRequest, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_IsLookAtBody(bool* Enable)
+void ABP_ScheduleNPC_C::IsLookAtBody(bool* Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.IsLookAtBody");
 
 	ABP_ScheduleNPC_C_IsLookAtBody_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -275,11 +265,11 @@ void ABP_ScheduleNPC_C::STATIC_IsLookAtBody(bool* Enable)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetLookAtBody
-// (Net, NetReliable, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_SetLookAtBody(bool Enable)
+void ABP_ScheduleNPC_C::SetLookAtBody(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetLookAtBody");
 
@@ -287,7 +277,6 @@ void ABP_ScheduleNPC_C::STATIC_SetLookAtBody(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -296,16 +285,15 @@ void ABP_ScheduleNPC_C::STATIC_SetLookAtBody(bool Enable)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.ResetCloseEye
-// (NetReliable, NetRequest, Exec, Native, Static, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_ResetCloseEye()
+void ABP_ScheduleNPC_C::ResetCloseEye()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.ResetCloseEye");
 
 	ABP_ScheduleNPC_C_ResetCloseEye_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -314,11 +302,11 @@ void ABP_ScheduleNPC_C::STATIC_ResetCloseEye()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetCloseEye
-// (Event, Static, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_SetCloseEye(bool Enable)
+void ABP_ScheduleNPC_C::SetCloseEye(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetCloseEye");
 
@@ -334,18 +322,17 @@ void ABP_ScheduleNPC_C::STATIC_SetCloseEye(bool Enable)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.IsTalking
-// (Exec, Native, Event, Static, NetMulticast, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_ScheduleNPC_C::STATIC_IsTalking()
+bool ABP_ScheduleNPC_C::IsTalking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.IsTalking");
 
 	ABP_ScheduleNPC_C_IsTalking_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -356,11 +343,11 @@ bool ABP_ScheduleNPC_C::STATIC_IsTalking()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.StairsIgnoreCollision
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bIgnore                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_StairsIgnoreCollision(bool bIgnore)
+void ABP_ScheduleNPC_C::StairsIgnoreCollision(bool bIgnore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.StairsIgnoreCollision");
 
@@ -368,7 +355,6 @@ void ABP_ScheduleNPC_C::STATIC_StairsIgnoreCollision(bool bIgnore)
 	params.bIgnore = bIgnore;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -377,18 +363,17 @@ void ABP_ScheduleNPC_C::STATIC_StairsIgnoreCollision(bool bIgnore)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetEnableIK
-// (NetReliable, Exec, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bIKEnabled                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_GetEnableIK(bool* bIKEnabled)
+void ABP_ScheduleNPC_C::GetEnableIK(bool* bIKEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetEnableIK");
 
 	ABP_ScheduleNPC_C_GetEnableIK_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -400,7 +385,7 @@ void ABP_ScheduleNPC_C::STATIC_GetEnableIK(bool* bIKEnabled)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.CalcCharaHeight
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_ScheduleNPC_C::CalcCharaHeight()
 {
@@ -409,7 +394,6 @@ void ABP_ScheduleNPC_C::CalcCharaHeight()
 	ABP_ScheduleNPC_C_CalcCharaHeight_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -418,11 +402,11 @@ void ABP_ScheduleNPC_C::CalcCharaHeight()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.StairsSetting
-// (NetReliable, Event, Static, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bIsEnable                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_StairsSetting(bool bIsEnable)
+void ABP_ScheduleNPC_C::StairsSetting(bool bIsEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.StairsSetting");
 
@@ -438,7 +422,7 @@ void ABP_ScheduleNPC_C::STATIC_StairsSetting(bool bIsEnable)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.UpdateStairs
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_ScheduleNPC_C::UpdateStairs()
 {
@@ -455,9 +439,9 @@ void ABP_ScheduleNPC_C::UpdateStairs()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetupHaveItem
-// (NetRequest, Exec, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_SetupHaveItem()
+void ABP_ScheduleNPC_C::SetupHaveItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetupHaveItem");
 
@@ -472,12 +456,12 @@ void ABP_ScheduleNPC_C::STATIC_SetupHaveItem()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetEnableIK
-// (Net, NetRequest, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bInIKEnabled                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy)
+void ABP_ScheduleNPC_C::SetEnableIK(bool bInIKEnabled, bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetEnableIK");
 
@@ -485,7 +469,6 @@ void ABP_ScheduleNPC_C::STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy)
 	params.bInIKEnabled = bInIKEnabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -497,7 +480,7 @@ void ABP_ScheduleNPC_C::STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.ReturnOutOfWorld
-// (NetReliable, Exec, Native, NetMulticast, Public, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -508,7 +491,6 @@ bool ABP_ScheduleNPC_C::ReturnOutOfWorld()
 	ABP_ScheduleNPC_C_ReturnOutOfWorld_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -519,16 +501,15 @@ bool ABP_ScheduleNPC_C::ReturnOutOfWorld()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.RemoveDebugTraceComponent
-// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_RemoveDebugTraceComponent()
+void ABP_ScheduleNPC_C::RemoveDebugTraceComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.RemoveDebugTraceComponent");
 
 	ABP_ScheduleNPC_C_RemoveDebugTraceComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -537,7 +518,7 @@ void ABP_ScheduleNPC_C::STATIC_RemoveDebugTraceComponent()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.AddDebugTraceComponent
-// (NetReliable, Native, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_ScheduleNPC_C::AddDebugTraceComponent()
 {
@@ -546,7 +527,6 @@ void ABP_ScheduleNPC_C::AddDebugTraceComponent()
 	ABP_ScheduleNPC_C_AddDebugTraceComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -555,7 +535,7 @@ void ABP_ScheduleNPC_C::AddDebugTraceComponent()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.UpdateDoor
-// (Net, NetReliable, Event, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_ScheduleNPC_C::UpdateDoor()
 {
@@ -572,7 +552,7 @@ void ABP_ScheduleNPC_C::UpdateDoor()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.UpdateFootIK
-// (Net, NetRequest, Exec, NetResponse, NetMulticast, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -592,16 +572,15 @@ void ABP_ScheduleNPC_C::UpdateFootIK(float DeltaSeconds)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.CheckNamePlate
-// (Net, NetReliable, Native, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_CheckNamePlate()
+void ABP_ScheduleNPC_C::CheckNamePlate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.CheckNamePlate");
 
 	ABP_ScheduleNPC_C_CheckNamePlate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -610,7 +589,7 @@ void ABP_ScheduleNPC_C::STATIC_CheckNamePlate()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.UpdateDebug
-// (Net, NetMulticast, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_ScheduleNPC_C::UpdateDebug()
 {
@@ -627,18 +606,17 @@ void ABP_ScheduleNPC_C::UpdateDebug()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.CheckCanUseDoor
-// (NetRequest, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsUseDoor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_CheckCanUseDoor(bool* IsUseDoor)
+void ABP_ScheduleNPC_C::CheckCanUseDoor(bool* IsUseDoor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.CheckCanUseDoor");
 
 	ABP_ScheduleNPC_C_CheckCanUseDoor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -650,7 +628,7 @@ void ABP_ScheduleNPC_C::STATIC_CheckCanUseDoor(bool* IsUseDoor)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.GetS3PathFollowingComponent
-// (NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class US3PathFollowingComponent* AsS3Path_Following_Component   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -672,18 +650,17 @@ void ABP_ScheduleNPC_C::GetS3PathFollowingComponent(class US3PathFollowingCompon
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.AddTurnAroundComponent
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBPC_TurnAround_C*       Component                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_AddTurnAroundComponent(class UBPC_TurnAround_C** Component)
+void ABP_ScheduleNPC_C::AddTurnAroundComponent(class UBPC_TurnAround_C** Component)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.AddTurnAroundComponent");
 
 	ABP_ScheduleNPC_C_AddTurnAroundComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -695,9 +672,9 @@ void ABP_ScheduleNPC_C::STATIC_AddTurnAroundComponent(class UBPC_TurnAround_C** 
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.UserConstructionScript
-// (NetReliable, NetRequest, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_UserConstructionScript()
+void ABP_ScheduleNPC_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.UserConstructionScript");
 
@@ -712,11 +689,11 @@ void ABP_ScheduleNPC_C::STATIC_UserConstructionScript()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.ReceiveTick
-// (NetReliable, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_ScheduleNPC_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.ReceiveTick");
 
@@ -724,7 +701,6 @@ void ABP_ScheduleNPC_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -733,9 +709,9 @@ void ABP_ScheduleNPC_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OpenDoor
-// (Net, NetReliable, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_OpenDoor()
+void ABP_ScheduleNPC_C::OpenDoor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OpenDoor");
 
@@ -750,9 +726,9 @@ void ABP_ScheduleNPC_C::STATIC_OpenDoor()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.ReceiveBeginPlay
-// (NetReliable, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_ReceiveBeginPlay()
+void ABP_ScheduleNPC_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.ReceiveBeginPlay");
 
@@ -767,11 +743,11 @@ void ABP_ScheduleNPC_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnFinishedTurn
-// (NetReliable, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBPC_TurnAround_C*       SelfTurnAroundComponent        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnFinishedTurn(class UBPC_TurnAround_C* SelfTurnAroundComponent)
+void ABP_ScheduleNPC_C::OnFinishedTurn(class UBPC_TurnAround_C* SelfTurnAroundComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnFinishedTurn");
 
@@ -779,7 +755,6 @@ void ABP_ScheduleNPC_C::STATIC_OnFinishedTurn(class UBPC_TurnAround_C* SelfTurnA
 	params.SelfTurnAroundComponent = SelfTurnAroundComponent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -788,9 +763,9 @@ void ABP_ScheduleNPC_C::STATIC_OnFinishedTurn(class UBPC_TurnAround_C* SelfTurnA
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnNPCInitialized
-// (Net, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_OnNPCInitialized()
+void ABP_ScheduleNPC_C::OnNPCInitialized()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnNPCInitialized");
 
@@ -805,11 +780,11 @@ void ABP_ScheduleNPC_C::STATIC_OnNPCInitialized()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnDoorAreaOutsideBeginOverlap
-// (Net, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnDoorAreaOutsideBeginOverlap(class AS3GimmickOpenDoor* Door)
+void ABP_ScheduleNPC_C::OnDoorAreaOutsideBeginOverlap(class AS3GimmickOpenDoor* Door)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnDoorAreaOutsideBeginOverlap");
 
@@ -817,7 +792,6 @@ void ABP_ScheduleNPC_C::STATIC_OnDoorAreaOutsideBeginOverlap(class AS3GimmickOpe
 	params.Door = Door;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -826,11 +800,11 @@ void ABP_ScheduleNPC_C::STATIC_OnDoorAreaOutsideBeginOverlap(class AS3GimmickOpe
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnDoorAreaOutsideEndOverlap
-// (Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Door)
+void ABP_ScheduleNPC_C::OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Door)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnDoorAreaOutsideEndOverlap");
 
@@ -838,7 +812,6 @@ void ABP_ScheduleNPC_C::STATIC_OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenD
 	params.Door = Door;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -847,11 +820,11 @@ void ABP_ScheduleNPC_C::STATIC_OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenD
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnDoorAreaBeginOverlap
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnDoorAreaBeginOverlap(class AS3GimmickOpenDoor* Door)
+void ABP_ScheduleNPC_C::OnDoorAreaBeginOverlap(class AS3GimmickOpenDoor* Door)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnDoorAreaBeginOverlap");
 
@@ -859,7 +832,6 @@ void ABP_ScheduleNPC_C::STATIC_OnDoorAreaBeginOverlap(class AS3GimmickOpenDoor* 
 	params.Door = Door;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -868,13 +840,13 @@ void ABP_ScheduleNPC_C::STATIC_OnDoorAreaBeginOverlap(class AS3GimmickOpenDoor* 
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnFriendStop
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3Character*            Me                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AS3Character*            MyFriend                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Friendliness                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnFriendStop(class AS3Character* Me, class AS3Character* MyFriend, float Friendliness)
+void ABP_ScheduleNPC_C::OnFriendStop(class AS3Character* Me, class AS3Character* MyFriend, float Friendliness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnFriendStop");
 
@@ -892,12 +864,12 @@ void ABP_ScheduleNPC_C::STATIC_OnFriendStop(class AS3Character* Me, class AS3Cha
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.StartCharaFadeOut
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FadeTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_StartCharaFadeOut(class AActor* Executor, float FadeTime)
+void ABP_ScheduleNPC_C::StartCharaFadeOut(class AActor* Executor, float FadeTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.StartCharaFadeOut");
 
@@ -906,7 +878,6 @@ void ABP_ScheduleNPC_C::STATIC_StartCharaFadeOut(class AActor* Executor, float F
 	params.FadeTime = FadeTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -915,11 +886,11 @@ void ABP_ScheduleNPC_C::STATIC_StartCharaFadeOut(class AActor* Executor, float F
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.ReceiveEndPlay
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_ScheduleNPC_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.ReceiveEndPlay");
 
@@ -927,7 +898,6 @@ void ABP_ScheduleNPC_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPla
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -936,12 +906,12 @@ void ABP_ScheduleNPC_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPla
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.StartCharaFadeIn
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FadeTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_StartCharaFadeIn(class AActor* Executor, float FadeTime)
+void ABP_ScheduleNPC_C::StartCharaFadeIn(class AActor* Executor, float FadeTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.StartCharaFadeIn");
 
@@ -950,7 +920,6 @@ void ABP_ScheduleNPC_C::STATIC_StartCharaFadeIn(class AActor* Executor, float Fa
 	params.FadeTime = FadeTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -959,11 +928,11 @@ void ABP_ScheduleNPC_C::STATIC_StartCharaFadeIn(class AActor* Executor, float Fa
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnBeginOverlapStairs
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   Staircase                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnBeginOverlapStairs(class ABP_S3StaircaseBase_C* Staircase)
+void ABP_ScheduleNPC_C::OnBeginOverlapStairs(class ABP_S3StaircaseBase_C* Staircase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnBeginOverlapStairs");
 
@@ -971,7 +940,6 @@ void ABP_ScheduleNPC_C::STATIC_OnBeginOverlapStairs(class ABP_S3StaircaseBase_C*
 	params.Staircase = Staircase;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -980,11 +948,11 @@ void ABP_ScheduleNPC_C::STATIC_OnBeginOverlapStairs(class ABP_S3StaircaseBase_C*
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnEndOverlapStairs
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   Staircase                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnEndOverlapStairs(class ABP_S3StaircaseBase_C* Staircase)
+void ABP_ScheduleNPC_C::OnEndOverlapStairs(class ABP_S3StaircaseBase_C* Staircase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnEndOverlapStairs");
 
@@ -992,7 +960,6 @@ void ABP_ScheduleNPC_C::STATIC_OnEndOverlapStairs(class ABP_S3StaircaseBase_C* S
 	params.Staircase = Staircase;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1001,11 +968,11 @@ void ABP_ScheduleNPC_C::STATIC_OnEndOverlapStairs(class ABP_S3StaircaseBase_C* S
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.DecideDetectAction
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
+void ABP_ScheduleNPC_C::DecideDetectAction(ES3ActionIconType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.DecideDetectAction");
 
@@ -1013,7 +980,6 @@ void ABP_ScheduleNPC_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1022,9 +988,9 @@ void ABP_ScheduleNPC_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnNPCUninitialized
-// (Net, Exec, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_OnNPCUninitialized()
+void ABP_ScheduleNPC_C::OnNPCUninitialized()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnNPCUninitialized");
 
@@ -1039,11 +1005,11 @@ void ABP_ScheduleNPC_C::STATIC_OnNPCUninitialized()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnBeginStairs
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   Staircase                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnBeginStairs(class ABP_S3StaircaseBase_C* Staircase)
+void ABP_ScheduleNPC_C::OnBeginStairs(class ABP_S3StaircaseBase_C* Staircase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnBeginStairs");
 
@@ -1051,7 +1017,6 @@ void ABP_ScheduleNPC_C::STATIC_OnBeginStairs(class ABP_S3StaircaseBase_C* Stairc
 	params.Staircase = Staircase;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1060,11 +1025,11 @@ void ABP_ScheduleNPC_C::STATIC_OnBeginStairs(class ABP_S3StaircaseBase_C* Stairc
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.StairsPreSetting
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AActor*                  StairActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_StairsPreSetting(class AActor* StairActor)
+void ABP_ScheduleNPC_C::StairsPreSetting(class AActor* StairActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.StairsPreSetting");
 
@@ -1072,7 +1037,6 @@ void ABP_ScheduleNPC_C::STATIC_StairsPreSetting(class AActor* StairActor)
 	params.StairActor = StairActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1081,9 +1045,9 @@ void ABP_ScheduleNPC_C::STATIC_StairsPreSetting(class AActor* StairActor)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnEndStairs
-// (Exec, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_OnEndStairs()
+void ABP_ScheduleNPC_C::OnEndStairs()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnEndStairs");
 
@@ -1098,12 +1062,12 @@ void ABP_ScheduleNPC_C::STATIC_OnEndStairs()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnTalkFinished
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           interrupted                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted)
+void ABP_ScheduleNPC_C::OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnTalkFinished");
 
@@ -1120,11 +1084,11 @@ void ABP_ScheduleNPC_C::STATIC_OnTalkFinished(class US3TalkComponent* TalkCompon
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnTalkStart
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_OnTalkStart(class US3TalkComponent* TalkComponent)
+void ABP_ScheduleNPC_C::OnTalkStart(class US3TalkComponent* TalkComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnTalkStart");
 
@@ -1132,7 +1096,6 @@ void ABP_ScheduleNPC_C::STATIC_OnTalkStart(class US3TalkComponent* TalkComponent
 	params.TalkComponent = TalkComponent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1141,9 +1104,9 @@ void ABP_ScheduleNPC_C::STATIC_OnTalkStart(class US3TalkComponent* TalkComponent
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnStartStairs
-// (NetReliable, NetRequest, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_OnStartStairs()
+void ABP_ScheduleNPC_C::OnStartStairs()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.OnStartStairs");
 
@@ -1158,9 +1121,9 @@ void ABP_ScheduleNPC_C::STATIC_OnStartStairs()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.Screen_Player
-// (NetReliable, NetRequest, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_Screen_Player()
+void ABP_ScheduleNPC_C::Screen_Player()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.Screen_Player");
 
@@ -1175,9 +1138,9 @@ void ABP_ScheduleNPC_C::STATIC_Screen_Player()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.Screen_NPC
-// (Net, NetRequest, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_Screen_NPC()
+void ABP_ScheduleNPC_C::Screen_NPC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.Screen_NPC");
 
@@ -1192,11 +1155,11 @@ void ABP_ScheduleNPC_C::STATIC_Screen_NPC()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetAttachObjectHiddenInGame
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           bNewHidden                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_SetAttachObjectHiddenInGame(bool bNewHidden)
+void ABP_ScheduleNPC_C::SetAttachObjectHiddenInGame(bool bNewHidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.SetAttachObjectHiddenInGame");
 
@@ -1204,7 +1167,6 @@ void ABP_ScheduleNPC_C::STATIC_SetAttachObjectHiddenInGame(bool bNewHidden)
 	params.bNewHidden = bNewHidden;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1213,12 +1175,12 @@ void ABP_ScheduleNPC_C::STATIC_SetAttachObjectHiddenInGame(bool bNewHidden)
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.CreateCameraCollision
-// (Net, NetRequest, Native, Event, Static, NetMulticast, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          Radius                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          HalfHeight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ScheduleNPC_C::STATIC_CreateCameraCollision(float Radius, float HalfHeight)
+void ABP_ScheduleNPC_C::CreateCameraCollision(float Radius, float HalfHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.CreateCameraCollision");
 
@@ -1227,7 +1189,6 @@ void ABP_ScheduleNPC_C::STATIC_CreateCameraCollision(float Radius, float HalfHei
 	params.HalfHeight = HalfHeight;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1236,9 +1197,9 @@ void ABP_ScheduleNPC_C::STATIC_CreateCameraCollision(float Radius, float HalfHei
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.DestroyCameraCollision
-// (NetRequest, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void ABP_ScheduleNPC_C::STATIC_DestroyCameraCollision()
+void ABP_ScheduleNPC_C::DestroyCameraCollision()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ScheduleNPC.BP_ScheduleNPC_C.DestroyCameraCollision");
 
@@ -1253,7 +1214,7 @@ void ABP_ScheduleNPC_C::STATIC_DestroyCameraCollision()
 
 
 // Function BP_ScheduleNPC.BP_ScheduleNPC_C.ExecuteUbergraph_BP_ScheduleNPC
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

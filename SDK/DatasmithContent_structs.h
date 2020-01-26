@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,16 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Enums
 //---------------------------------------------------------------------------
-
-// Enum DatasmithContent.EDatasmithImportHierarchy
-enum class EDatasmithImportHierarchy : uint8_t
-{
-	EDatasmithImportHierarchy__UseMultipleActors = 0,
-	EDatasmithImportHierarchy__UseSingleActor = 1,
-	EDatasmithImportHierarchy__UseOneBlueprint = 2,
-	EDatasmithImportHierarchy__EDatasmithImportHierarchy_MAX = 3
-};
-
 
 // Enum DatasmithContent.EDatasmithAreaLightActorShape
 enum class EDatasmithAreaLightActorShape : uint8_t
@@ -57,6 +47,19 @@ enum class EDatasmithImportLightmapMax : uint8_t
 };
 
 
+// Enum DatasmithContent.EDatasmithImportLightmapMin
+enum class EDatasmithImportLightmapMin : uint8_t
+{
+	EDatasmithImportLightmapMin__LIGHTMAP = 0,
+	EDatasmithImportLightmapMin__LIGHTMAP01 = 1,
+	EDatasmithImportLightmapMin__LIGHTMAP02 = 2,
+	EDatasmithImportLightmapMin__LIGHTMAP03 = 3,
+	EDatasmithImportLightmapMin__LIGHTMAP04 = 4,
+	EDatasmithImportLightmapMin__LIGHTMAP05 = 5,
+	EDatasmithImportLightmapMin__LIGHTMAP_MAX = 6
+};
+
+
 // Enum DatasmithContent.EDatasmithImportMaterialQuality
 enum class EDatasmithImportMaterialQuality : uint8_t
 {
@@ -67,13 +70,13 @@ enum class EDatasmithImportMaterialQuality : uint8_t
 };
 
 
-// Enum DatasmithContent.EDatasmithImportActorPolicy
-enum class EDatasmithImportActorPolicy : uint8_t
+// Enum DatasmithContent.EDatasmithImportHierarchy
+enum class EDatasmithImportHierarchy : uint8_t
 {
-	EDatasmithImportActorPolicy__Update = 0,
-	EDatasmithImportActorPolicy__Full = 1,
-	EDatasmithImportActorPolicy__Ignore = 2,
-	EDatasmithImportActorPolicy__EDatasmithImportActorPolicy_MAX = 3
+	EDatasmithImportHierarchy__UseMultipleActors = 0,
+	EDatasmithImportHierarchy__UseSingleActor = 1,
+	EDatasmithImportHierarchy__UseOneBlueprint = 2,
+	EDatasmithImportHierarchy__EDatasmithImportHierarchy_MAX = 3
 };
 
 
@@ -97,16 +100,13 @@ enum class EDatasmithImportSearchPackagePolicy : uint8_t
 };
 
 
-// Enum DatasmithContent.EDatasmithImportLightmapMin
-enum class EDatasmithImportLightmapMin : uint8_t
+// Enum DatasmithContent.EDatasmithImportActorPolicy
+enum class EDatasmithImportActorPolicy : uint8_t
 {
-	EDatasmithImportLightmapMin__LIGHTMAP = 0,
-	EDatasmithImportLightmapMin__LIGHTMAP01 = 1,
-	EDatasmithImportLightmapMin__LIGHTMAP02 = 2,
-	EDatasmithImportLightmapMin__LIGHTMAP03 = 3,
-	EDatasmithImportLightmapMin__LIGHTMAP04 = 4,
-	EDatasmithImportLightmapMin__LIGHTMAP05 = 5,
-	EDatasmithImportLightmapMin__LIGHTMAP_MAX = 6
+	EDatasmithImportActorPolicy__Update = 0,
+	EDatasmithImportActorPolicy__Full = 1,
+	EDatasmithImportActorPolicy__Ignore = 2,
+	EDatasmithImportActorPolicy__EDatasmithImportActorPolicy_MAX = 3
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.IsHeightFixEnabled
-// (Net, Native, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bEnabled                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UBPC_S3StairClimber_C::IsHeightFixEnabled(bool* bEnabled)
 	UBPC_S3StairClimber_C_IsHeightFixEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,13 +36,13 @@ void UBPC_S3StairClimber_C::IsHeightFixEnabled(bool* bEnabled)
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.MatchHorizontal
-// (NetReliable, Exec, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 TargetRelativeY                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector UBPC_S3StairClimber_C::STATIC_MatchHorizontal(const struct FVector& InLocation, const struct FVector& TargetRelativeY)
+struct FVector UBPC_S3StairClimber_C::MatchHorizontal(const struct FVector& InLocation, const struct FVector& TargetRelativeY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3StairClimber.BPC_S3StairClimber_C.MatchHorizontal");
 
@@ -62,13 +61,13 @@ struct FVector UBPC_S3StairClimber_C::STATIC_MatchHorizontal(const struct FVecto
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.ValidateStairCollisionWithTrace
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 TestLocation                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class ABP_S3StaircaseBase_C*   Stair                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_S3StairClimber_C::STATIC_ValidateStairCollisionWithTrace(const struct FVector& TestLocation, class ABP_S3StaircaseBase_C* Stair)
+bool UBPC_S3StairClimber_C::ValidateStairCollisionWithTrace(const struct FVector& TestLocation, class ABP_S3StaircaseBase_C* Stair)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3StairClimber.BPC_S3StairClimber_C.ValidateStairCollisionWithTrace");
 
@@ -87,11 +86,11 @@ bool UBPC_S3StairClimber_C::STATIC_ValidateStairCollisionWithTrace(const struct 
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.SetMainStairs
-// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   StairsIn                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3StairClimber_C::STATIC_SetMainStairs(class ABP_S3StaircaseBase_C* StairsIn)
+void UBPC_S3StairClimber_C::SetMainStairs(class ABP_S3StaircaseBase_C* StairsIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3StairClimber.BPC_S3StairClimber_C.SetMainStairs");
 
@@ -99,7 +98,6 @@ void UBPC_S3StairClimber_C::STATIC_SetMainStairs(class ABP_S3StaircaseBase_C* St
 	params.StairsIn = StairsIn;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,7 +106,7 @@ void UBPC_S3StairClimber_C::STATIC_SetMainStairs(class ABP_S3StaircaseBase_C* St
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.IgnoreStairCollision
-// (Net, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bShouldIgnore                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3StaircaseBase_C*   Stair                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -122,7 +120,6 @@ void UBPC_S3StairClimber_C::IgnoreStairCollision(bool bShouldIgnore, class ABP_S
 	params.Stair = Stair;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,7 +128,7 @@ void UBPC_S3StairClimber_C::IgnoreStairCollision(bool bShouldIgnore, class ABP_S
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.PostUpdateHeightFix
-// (Net, Exec, Native, Event, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3StairClimber_C::PostUpdateHeightFix()
 {
@@ -140,7 +137,6 @@ void UBPC_S3StairClimber_C::PostUpdateHeightFix()
 	UBPC_S3StairClimber_C_PostUpdateHeightFix_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +145,7 @@ void UBPC_S3StairClimber_C::PostUpdateHeightFix()
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.BottomToCenterLocation
-// (Net, Exec, NetResponse, NetMulticast, Delegate, DLLImport, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Bottom                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Center                         (Parm, OutParm, IsPlainOldData)
@@ -173,7 +169,7 @@ void UBPC_S3StairClimber_C::BottomToCenterLocation(const struct FVector& Bottom,
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.TrySelectAndUpdateStairs
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Private, Protected, DLLImport, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   InStairs                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -197,7 +193,7 @@ void UBPC_S3StairClimber_C::TrySelectAndUpdateStairs(class ABP_S3StaircaseBase_C
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.CalculateMovePosition
-// (Net, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 PrevLocation                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          PrevAnimCycle                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -225,7 +221,7 @@ void UBPC_S3StairClimber_C::CalculateMovePosition(const struct FVector& PrevLoca
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.CalculateAngleData
-// (Net, NetReliable, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   Stairs                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OutRawVeerAngle                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -241,7 +237,6 @@ void UBPC_S3StairClimber_C::CalculateAngleData(class ABP_S3StaircaseBase_C* Stai
 	params.Stairs = Stairs;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,7 +254,7 @@ void UBPC_S3StairClimber_C::CalculateAngleData(class ABP_S3StaircaseBase_C* Stai
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.CheckOnStairs
-// (NetReliable, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   Stairs                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StrideScale                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -286,7 +281,7 @@ bool UBPC_S3StairClimber_C::CheckOnStairs(class ABP_S3StaircaseBase_C* Stairs, f
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.GetArcTOA
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, DLLImport, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               End                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               Start                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -312,12 +307,12 @@ void UBPC_S3StairClimber_C::GetArcTOA(const struct FVector2D& End, const struct 
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.GetWeightedAngleToCorner
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsLeftSide                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Angle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3StairClimber_C::STATIC_GetWeightedAngleToCorner(bool IsLeftSide, float* Angle)
+void UBPC_S3StairClimber_C::GetWeightedAngleToCorner(bool IsLeftSide, float* Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3StairClimber.BPC_S3StairClimber_C.GetWeightedAngleToCorner");
 
@@ -336,11 +331,11 @@ void UBPC_S3StairClimber_C::STATIC_GetWeightedAngleToCorner(bool IsLeftSide, flo
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.SetInteractingStairs
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   Stair                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3StairClimber_C::STATIC_SetInteractingStairs(class ABP_S3StaircaseBase_C* Stair)
+void UBPC_S3StairClimber_C::SetInteractingStairs(class ABP_S3StaircaseBase_C* Stair)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3StairClimber.BPC_S3StairClimber_C.SetInteractingStairs");
 
@@ -348,7 +343,6 @@ void UBPC_S3StairClimber_C::STATIC_SetInteractingStairs(class ABP_S3StaircaseBas
 	params.Stair = Stair;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -357,7 +351,7 @@ void UBPC_S3StairClimber_C::STATIC_SetInteractingStairs(class ABP_S3StaircaseBas
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.MatchAnimCycle
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          InAnimPosition                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InStairPosition                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -374,7 +368,6 @@ void UBPC_S3StairClimber_C::MatchAnimCycle(float InAnimPosition, float InStairPo
 	params.bUp = bUp;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -386,7 +379,7 @@ void UBPC_S3StairClimber_C::MatchAnimCycle(float InAnimPosition, float InStairPo
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.ClampDirection
-// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, DLLImport, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Clamped                        (Parm, OutParm, IsPlainOldData)
@@ -399,7 +392,6 @@ void UBPC_S3StairClimber_C::ClampDirection(const struct FVector& Direction, stru
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -411,7 +403,7 @@ void UBPC_S3StairClimber_C::ClampDirection(const struct FVector& Direction, stru
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.Update
-// (NetReliable, NetResponse, NetMulticast, Public, Private, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -431,16 +423,15 @@ void UBPC_S3StairClimber_C::Update(float DeltaTime)
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_S3StairClimber_C::STATIC_ReceiveBeginPlay()
+void UBPC_S3StairClimber_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3StairClimber.BPC_S3StairClimber_C.ReceiveBeginPlay");
 
 	UBPC_S3StairClimber_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -449,11 +440,11 @@ void UBPC_S3StairClimber_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.ReceiveTick
-// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3StairClimber_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UBPC_S3StairClimber_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3StairClimber.BPC_S3StairClimber_C.ReceiveTick");
 
@@ -461,7 +452,6 @@ void UBPC_S3StairClimber_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -470,11 +460,11 @@ void UBPC_S3StairClimber_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.OnBeginOverlapStairs
-// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   Staircase                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3StairClimber_C::STATIC_OnBeginOverlapStairs(class ABP_S3StaircaseBase_C* Staircase)
+void UBPC_S3StairClimber_C::OnBeginOverlapStairs(class ABP_S3StaircaseBase_C* Staircase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3StairClimber.BPC_S3StairClimber_C.OnBeginOverlapStairs");
 
@@ -482,7 +472,6 @@ void UBPC_S3StairClimber_C::STATIC_OnBeginOverlapStairs(class ABP_S3StaircaseBas
 	params.Staircase = Staircase;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -491,11 +480,11 @@ void UBPC_S3StairClimber_C::STATIC_OnBeginOverlapStairs(class ABP_S3StaircaseBas
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.OnEndOverlapStairs
-// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3StaircaseBase_C*   Staircase                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3StairClimber_C::STATIC_OnEndOverlapStairs(class ABP_S3StaircaseBase_C* Staircase)
+void UBPC_S3StairClimber_C::OnEndOverlapStairs(class ABP_S3StaircaseBase_C* Staircase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3StairClimber.BPC_S3StairClimber_C.OnEndOverlapStairs");
 
@@ -503,7 +492,6 @@ void UBPC_S3StairClimber_C::STATIC_OnEndOverlapStairs(class ABP_S3StaircaseBase_
 	params.Staircase = Staircase;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -512,7 +500,7 @@ void UBPC_S3StairClimber_C::STATIC_OnEndOverlapStairs(class ABP_S3StaircaseBase_
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.ExecuteUbergraph_BPC_S3StairClimber
-// (Net, NetReliable, NetResponse, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -532,7 +520,7 @@ void UBPC_S3StairClimber_C::ExecuteUbergraph_BPC_S3StairClimber(int EntryPoint)
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.OnEndStairUse__DelegateSignature
-// (NetReliable, Native, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3StairClimber_C::OnEndStairUse__DelegateSignature()
 {
@@ -541,7 +529,6 @@ void UBPC_S3StairClimber_C::OnEndStairUse__DelegateSignature()
 	UBPC_S3StairClimber_C_OnEndStairUse__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -550,7 +537,7 @@ void UBPC_S3StairClimber_C::OnEndStairUse__DelegateSignature()
 
 
 // Function BPC_S3StairClimber.BPC_S3StairClimber_C.OnStartStairUse__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3StairClimber_C::OnStartStairUse__DelegateSignature()
 {

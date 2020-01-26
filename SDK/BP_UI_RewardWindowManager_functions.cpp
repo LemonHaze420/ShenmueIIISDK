@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_RewardWindowManager.BP_UI_RewardWindowManager_C.UserConstructionScript
-// (Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_UI_RewardWindowManager_C::STATIC_UserConstructionScript()
+void ABP_UI_RewardWindowManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_RewardWindowManager.BP_UI_RewardWindowManager_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_UI_RewardWindowManager_C::STATIC_UserConstructionScript()
 
 
 // Function BP_UI_RewardWindowManager.BP_UI_RewardWindowManager_C.ReceiveBeginPlay
-// (Net, NetReliable, Native, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_UI_RewardWindowManager_C::ReceiveBeginPlay()
 {
@@ -40,7 +40,6 @@ void ABP_UI_RewardWindowManager_C::ReceiveBeginPlay()
 	ABP_UI_RewardWindowManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,7 +48,7 @@ void ABP_UI_RewardWindowManager_C::ReceiveBeginPlay()
 
 
 // Function BP_UI_RewardWindowManager.BP_UI_RewardWindowManager_C.FinsihRewardWindow
-// (NetReliable, Native, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_UI_RewardWindowManager_C::FinsihRewardWindow()
 {
@@ -58,7 +57,6 @@ void ABP_UI_RewardWindowManager_C::FinsihRewardWindow()
 	ABP_UI_RewardWindowManager_C_FinsihRewardWindow_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -67,7 +65,7 @@ void ABP_UI_RewardWindowManager_C::FinsihRewardWindow()
 
 
 // Function BP_UI_RewardWindowManager.BP_UI_RewardWindowManager_C.AddNotice
-// (Native, NetResponse, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3RewardCategory              Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -79,7 +77,6 @@ void ABP_UI_RewardWindowManager_C::AddNotice(ES3RewardCategory Category)
 	params.Category = Category;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,7 +85,7 @@ void ABP_UI_RewardWindowManager_C::AddNotice(ES3RewardCategory Category)
 
 
 // Function BP_UI_RewardWindowManager.BP_UI_RewardWindowManager_C.ReceiveEndPlay
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -108,11 +105,11 @@ void ABP_UI_RewardWindowManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 
 
 // Function BP_UI_RewardWindowManager.BP_UI_RewardWindowManager_C.ExecuteUbergraph_BP_UI_RewardWindowManager
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_RewardWindowManager_C::STATIC_ExecuteUbergraph_BP_UI_RewardWindowManager(int EntryPoint)
+void ABP_UI_RewardWindowManager_C::ExecuteUbergraph_BP_UI_RewardWindowManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_RewardWindowManager.BP_UI_RewardWindowManager_C.ExecuteUbergraph_BP_UI_RewardWindowManager");
 
@@ -120,7 +117,6 @@ void ABP_UI_RewardWindowManager_C::STATIC_ExecuteUbergraph_BP_UI_RewardWindowMan
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.Editor_Fixup
-// (Net, NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Battle_TrackSpline_C::STATIC_Editor_Fixup()
+void ABP_Battle_TrackSpline_C::Editor_Fixup()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.Editor_Fixup");
 
 	ABP_Battle_TrackSpline_C_Editor_Fixup_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_Battle_TrackSpline_C::STATIC_Editor_Fixup()
 
 
 // Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.SetBlockDistance
-// (NetReliable, NetRequest, Exec, NetResponse, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -52,14 +51,14 @@ void ABP_Battle_TrackSpline_C::SetBlockDistance(float Distance)
 
 
 // Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.CalculateClosestDirection
-// (Exec, Native, Event, Static, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 SourceLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 SourceDirection                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          LookAheadAmount                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 OutDirection                   (Parm, OutParm, IsPlainOldData)
 
-void ABP_Battle_TrackSpline_C::STATIC_CalculateClosestDirection(const struct FVector& SourceLocation, const struct FVector& SourceDirection, float LookAheadAmount, struct FVector* OutDirection)
+void ABP_Battle_TrackSpline_C::CalculateClosestDirection(const struct FVector& SourceLocation, const struct FVector& SourceDirection, float LookAheadAmount, struct FVector* OutDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.CalculateClosestDirection");
 
@@ -69,7 +68,6 @@ void ABP_Battle_TrackSpline_C::STATIC_CalculateClosestDirection(const struct FVe
 	params.LookAheadAmount = LookAheadAmount;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,13 +79,13 @@ void ABP_Battle_TrackSpline_C::STATIC_CalculateClosestDirection(const struct FVe
 
 
 // Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.LookAhead
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 CurrentLocation                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          DistanceAhead                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
 
-void ABP_Battle_TrackSpline_C::STATIC_LookAhead(const struct FVector& CurrentLocation, float DistanceAhead, struct FVector* OutLocation)
+void ABP_Battle_TrackSpline_C::LookAhead(const struct FVector& CurrentLocation, float DistanceAhead, struct FVector* OutLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.LookAhead");
 
@@ -96,7 +94,6 @@ void ABP_Battle_TrackSpline_C::STATIC_LookAhead(const struct FVector& CurrentLoc
 	params.DistanceAhead = DistanceAhead;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,12 +105,12 @@ void ABP_Battle_TrackSpline_C::STATIC_LookAhead(const struct FVector& CurrentLoc
 
 
 // Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.FindTangent
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 WorldLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Tangent                        (Parm, OutParm, IsPlainOldData)
 
-void ABP_Battle_TrackSpline_C::STATIC_FindTangent(const struct FVector& WorldLocation, struct FVector* Tangent)
+void ABP_Battle_TrackSpline_C::FindTangent(const struct FVector& WorldLocation, struct FVector* Tangent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.FindTangent");
 
@@ -121,7 +118,6 @@ void ABP_Battle_TrackSpline_C::STATIC_FindTangent(const struct FVector& WorldLoc
 	params.WorldLocation = WorldLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,7 +129,7 @@ void ABP_Battle_TrackSpline_C::STATIC_FindTangent(const struct FVector& WorldLoc
 
 
 // Function BP_Battle_TrackSpline.BP_Battle_TrackSpline_C.UserConstructionScript
-// (Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Battle_TrackSpline_C::UserConstructionScript()
 {
@@ -142,7 +138,6 @@ void ABP_Battle_TrackSpline_C::UserConstructionScript()
 	ABP_Battle_TrackSpline_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

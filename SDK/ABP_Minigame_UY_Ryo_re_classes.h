@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,13 +40,13 @@ public:
 	}
 
 
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_UY_Ryo_re_AnimGraphNode_TransitionResult_509C16264BA530F436B9ED8F80016869();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_UY_Ryo_re_AnimGraphNode_TransitionResult_B8F393A44EBC6C0F51F09FBD620F23B2();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_UY_Ryo_re_AnimGraphNode_SequencePlayer_9B3C32064CD53232711D6F8B7BE3488D();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_UY_Ryo_re_AnimGraphNode_TransitionResult_F10C59AF48008E53FADED288E0BAA42E();
-	void STATIC_AnimNotify_MiniGameThrow();
-	void STATIC_AnimNotify_TransIdleFromThrowStart();
-	void STATIC_InitThrow();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_UY_Ryo_re_AnimGraphNode_TransitionResult_509C16264BA530F436B9ED8F80016869();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_UY_Ryo_re_AnimGraphNode_TransitionResult_B8F393A44EBC6C0F51F09FBD620F23B2();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_UY_Ryo_re_AnimGraphNode_SequencePlayer_9B3C32064CD53232711D6F8B7BE3488D();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_UY_Ryo_re_AnimGraphNode_TransitionResult_F10C59AF48008E53FADED288E0BAA42E();
+	void AnimNotify_MiniGameThrow();
+	void AnimNotify_TransIdleFromThrowStart();
+	void InitThrow();
 	void ExecuteUbergraph_ABP_Minigame_UY_Ryo_re(int EntryPoint);
 };
 

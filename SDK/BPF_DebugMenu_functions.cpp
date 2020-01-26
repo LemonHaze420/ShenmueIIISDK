@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,14 +14,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_DebugMenu.BPF_DebugMenu_C.CheckPressButton
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UPanelWidget*            PanelWidget                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           press                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Press                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DebugMenu_C::STATIC_CheckPressButton(const struct FKeyEvent& InKeyEvent, class UPanelWidget* PanelWidget, class UObject* __WorldContext, bool* press)
+void UBPF_DebugMenu_C::STATIC_CheckPressButton(const struct FKeyEvent& InKeyEvent, class UPanelWidget* PanelWidget, class UObject* __WorldContext, bool* Press)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DebugMenu.BPF_DebugMenu_C.CheckPressButton");
 
@@ -36,13 +36,13 @@ void UBPF_DebugMenu_C::STATIC_CheckPressButton(const struct FKeyEvent& InKeyEven
 
 	fn->FunctionFlags = flags;
 
-	if (press != nullptr)
-		*press = params.press;
+	if (Press != nullptr)
+		*Press = params.Press;
 }
 
 
 // Function BPF_DebugMenu.BPF_DebugMenu_C.GetDebugMenu
-// (Net, NetReliable, Native, Static, Public, Delegate, BlueprintCallable)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBW_DebugMenu_C*         DebugMenu                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -55,7 +55,6 @@ void UBPF_DebugMenu_C::STATIC_GetDebugMenu(class UObject* __WorldContext, class 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

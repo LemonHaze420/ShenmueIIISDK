@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_PlayForceFeedBackEffect.BP_AnimNotify_PlayForceFeedBackEffect_C.Received_Notify
-// (NetReliable, Exec, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -39,11 +39,11 @@ bool UBP_AnimNotify_PlayForceFeedBackEffect_C::Received_Notify(class USkeletalMe
 
 
 // Function BP_AnimNotify_PlayForceFeedBackEffect.BP_AnimNotify_PlayForceFeedBackEffect_C.GetNotifyName
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBP_AnimNotify_PlayForceFeedBackEffect_C::STATIC_GetNotifyName()
+struct FString UBP_AnimNotify_PlayForceFeedBackEffect_C::GetNotifyName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_PlayForceFeedBackEffect.BP_AnimNotify_PlayForceFeedBackEffect_C.GetNotifyName");
 

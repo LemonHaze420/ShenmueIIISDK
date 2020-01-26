@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_PlayerFollow_SkipToNextEvent.BTT_PlayerFollow_SkipToNextEvent_C.CalcTeleportLocation
-// (NetResponse, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_NPCLeadManager_C*    LeaderAI                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -43,7 +43,7 @@ void UBTT_PlayerFollow_SkipToNextEvent_C::CalcTeleportLocation(class AActor* Cha
 
 
 // Function BTT_PlayerFollow_SkipToNextEvent.BTT_PlayerFollow_SkipToNextEvent_C.CalcNextMoveLocation
-// (NetResponse, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_NPCLeadManager_C*    LeaderAI                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -79,12 +79,12 @@ void UBTT_PlayerFollow_SkipToNextEvent_C::CalcNextMoveLocation(class AActor* Cha
 
 
 // Function BTT_PlayerFollow_SkipToNextEvent.BTT_PlayerFollow_SkipToNextEvent_C.ReceiveExecuteAI
-// (Net, NetReliable, Native, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_PlayerFollow_SkipToNextEvent_C::STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_PlayerFollow_SkipToNextEvent_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_SkipToNextEvent.BTT_PlayerFollow_SkipToNextEvent_C.ReceiveExecuteAI");
 
@@ -93,7 +93,6 @@ void UBTT_PlayerFollow_SkipToNextEvent_C::STATIC_ReceiveExecuteAI(class AAIContr
 	params.ControlledPawn = ControlledPawn;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +101,7 @@ void UBTT_PlayerFollow_SkipToNextEvent_C::STATIC_ReceiveExecuteAI(class AAIContr
 
 
 // Function BTT_PlayerFollow_SkipToNextEvent.BTT_PlayerFollow_SkipToNextEvent_C.EndFailure
-// (Exec, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_PlayerFollow_SkipToNextEvent_C::EndFailure()
 {
@@ -119,7 +118,7 @@ void UBTT_PlayerFollow_SkipToNextEvent_C::EndFailure()
 
 
 // Function BTT_PlayerFollow_SkipToNextEvent.BTT_PlayerFollow_SkipToNextEvent_C.StartPanicTeleport
-// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBTT_PlayerFollow_SkipToNextEvent_C::StartPanicTeleport()
 {
@@ -136,12 +135,12 @@ void UBTT_PlayerFollow_SkipToNextEvent_C::StartPanicTeleport()
 
 
 // Function BTT_PlayerFollow_SkipToNextEvent.BTT_PlayerFollow_SkipToNextEvent_C.ReceiveAbortAI
-// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_PlayerFollow_SkipToNextEvent_C::STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_PlayerFollow_SkipToNextEvent_C::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_SkipToNextEvent.BTT_PlayerFollow_SkipToNextEvent_C.ReceiveAbortAI");
 
@@ -150,7 +149,6 @@ void UBTT_PlayerFollow_SkipToNextEvent_C::STATIC_ReceiveAbortAI(class AAIControl
 	params.ControlledPawn = ControlledPawn;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -159,7 +157,7 @@ void UBTT_PlayerFollow_SkipToNextEvent_C::STATIC_ReceiveAbortAI(class AAIControl
 
 
 // Function BTT_PlayerFollow_SkipToNextEvent.BTT_PlayerFollow_SkipToNextEvent_C.ExecuteUbergraph_BTT_PlayerFollow_SkipToNextEvent
-// (Net, Exec, NetResponse, NetMulticast, Public, HasOutParms, DLLImport, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

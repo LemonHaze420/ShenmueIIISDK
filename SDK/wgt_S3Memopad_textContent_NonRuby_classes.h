@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,9 +31,9 @@ public:
 
 
 	void UpdateDisplay(const struct FString& Body, const struct FST_RubyInfo& RubyInfo, int MemoId, bool* newParam);
-	void STATIC_Construct();
-	void STATIC_Destruct();
-	void STATIC_ExecuteUbergraph_wgt_S3Memopad_textContent_NonRuby(int EntryPoint);
+	void Construct();
+	void Destruct();
+	void ExecuteUbergraph_wgt_S3Memopad_textContent_NonRuby(int EntryPoint);
 };
 
 

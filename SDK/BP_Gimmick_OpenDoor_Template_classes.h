@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -88,38 +88,38 @@ public:
 
 
 	bool IsTalking();
-	void STATIC_LockPlayerInteraction();
+	void LockPlayerInteraction();
 	void CheckOpenDoorFromDistance(class ABP_S3Character_C* SelfCharacter, class ABP_S3Character_C* OpponentCharacter, bool* Prioritize);
-	bool STATIC_IsNeedPositionRecovery(class ACharacter* SelfCharacter, class ACharacter* OpponentCharacter);
-	struct FTransform STATIC_GetRecoveryPoint(class ACharacter* Character, bool bBack);
+	bool IsNeedPositionRecovery(class ACharacter* SelfCharacter, class ACharacter* OpponentCharacter);
+	struct FTransform GetRecoveryPoint(class ACharacter* Character, bool bBack);
 	bool IsReserved();
-	void STATIC_SetDoorUseChara(class ABP_S3Character_C* DoorUseChara);
-	void STATIC_CallNotifyEvent();
-	bool STATIC_DoesScriptAllowPlayerInteraction();
+	void SetDoorUseChara(class ABP_S3Character_C* DoorUseChara);
+	void CallNotifyEvent();
+	bool DoesScriptAllowPlayerInteraction();
 	int GetCurrentDoorDataTime();
 	void TraceToNearInteract(class ABP_S3CharacterBase_C* Chara, bool* Hit);
-	struct FTransform STATIC_GetNearAlignment(class ABP_S3CharacterBase_C* Chara);
+	struct FTransform GetNearAlignment(class ABP_S3CharacterBase_C* Chara);
 	void GetAngleToDoor(const struct FVector& InLocation, const struct FVector& InDirection, float* OutAngle);
 	void InitReleaseCharaCount();
-	void STATIC_ChangeCollision(bool bLock);
-	void STATIC_EndEvent();
-	void STATIC_PrintDebugData(float DeltaTime);
+	void ChangeCollision(bool bLock);
+	void EndEvent();
+	void PrintDebugData(float DeltaTime);
 	void CheckCanUseChara(class ABP_S3Character_C* Chara, bool* CanUse);
 	void RecalculatePlayerGuides();
 	void CallEventComplete();
-	void STATIC_GetTargetDoorPoint(bool IsFront, struct FVector* Location, struct FRotator* Rotation);
+	void GetTargetDoorPoint(bool IsFront, struct FVector* Location, struct FRotator* Rotation);
 	void GetLengthCharaToAdjustPoint(class ABP_S3CharacterBase_C* Chara, float* Length);
 	void CheckCharaOnExtensionLine(class ABP_S3CharacterBase_C* Chara, bool* IsHit);
 	void CheckNPCOpen(class ABP_S3Character_C* NPC, bool* IsRegist);
 	void CheckDataTable(bool* Existance);
 	void CheckCan_tKnockDoorState(bool* IsOpen);
-	void STATIC_SetCanPlayEvent(bool CanPlayEvent);
-	void STATIC_ReleaseDoorUseChara();
-	void STATIC_RegistDoorUseChara(class ABP_S3Character_C* Chara, bool* IsRegist);
-	void STATIC_CheckAfterKnockPatarn(int Time, TEnumAsByte<EN_AfterNockType>* Patarn);
-	void STATIC_JudgePatarnAfterKnock();
+	void SetCanPlayEvent(bool CanPlayEvent);
+	void ReleaseDoorUseChara();
+	void RegistDoorUseChara(class ABP_S3Character_C* Chara, bool* IsRegist);
+	void CheckAfterKnockPatarn(int Time, TEnumAsByte<EN_AfterNockType>* Patarn);
+	void JudgePatarnAfterKnock();
 	void NPCOutOfRange();
-	void STATIC_CanOpenDoor_New_(class ABP_S3CharacterBase_C* Chara, bool* IsUseDoor);
+	void CanOpenDoor_New_(class ABP_S3CharacterBase_C* Chara, bool* IsUseDoor);
 	void CheckCharaIndoor(const struct FName& CharacterName, bool* Existance);
 	void CheckCharaNearSide(class ACharacter* Chara, bool* IsFront);
 	void FinishDoorKnock();
@@ -127,8 +127,8 @@ public:
 	void JudgeDoorInOrOut(bool* IsOut);
 	void FinishAdjustPosition();
 	void InitDoorUseChara();
-	void STATIC_OpenDoor(class ABP_S3CharacterBase_C* Chara, class UAnimSequence* AnimSequence, float AnimRate);
-	void STATIC_CheckCanUseDoor(class ABP_S3CharacterBase_C* Chara, bool* IsUseDoor);
+	void OpenDoor(class ABP_S3CharacterBase_C* Chara, class UAnimSequence* AnimSequence, float AnimRate);
+	void CheckCanUseDoor(class ABP_S3CharacterBase_C* Chara, bool* IsUseDoor);
 	void CheckNearSide(bool* IsFront);
 	void IsInBackDetectionArea(bool* inArea);
 	void IsInFrontDetectionArea(bool* inArea);
@@ -136,29 +136,29 @@ public:
 	void DeactivateOperation();
 	void ActivateOperation();
 	void UserConstructionScript();
-	void STATIC_OnNotifyEnd_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
-	void STATIC_OnNotifyBegin_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
-	void STATIC_OnInterrupted_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
-	void STATIC_OnBlendOut_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
-	void STATIC_OnCompleted_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
+	void OnNotifyEnd_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
+	void OnNotifyBegin_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
+	void OnInterrupted_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
+	void OnBlendOut_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
+	void OnCompleted_D9B9867F444EF4E776FADF9CDDAA1944(const struct FName& NotifyName);
 	void BndEvt__DetectArea_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void CheckFinishAnim(float Delay, bool IsFront);
 	void BndEvt__NPCCheckArea_K2Node_ComponentBoundEvent_42_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__DetectAreaOutside_K2Node_ComponentBoundEvent_42_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_BndEvt__DetectAreaGuide_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__DetectAreaGuide_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__DetectAreaGuide_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination);
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
-	void STATIC_OnTalkStart(class US3TalkComponent* TalkComponent);
+	void OnTalkStart(class US3TalkComponent* TalkComponent);
 	void Screen_Player();
 	void Screen_NPC();
-	void STATIC_ExecuteUbergraph_BP_Gimmick_OpenDoor_Template(int EntryPoint);
+	void ExecuteUbergraph_BP_Gimmick_OpenDoor_Template(int EntryPoint);
 	void DoorEventAnimFinish__DelegateSignature();
 	void NotifyEvent__DelegateSignature();
-	void STATIC_DoorEventComplete__DelegateSignature(class ABP_Gimmick_OpenDoor_Template_C* Door, bool Front);
+	void DoorEventComplete__DelegateSignature(class ABP_Gimmick_OpenDoor_Template_C* Door, bool Front);
 };
 
 

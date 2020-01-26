@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.GetRodTopPos
-// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -25,7 +25,6 @@ struct FVector ABP_Fishing_Ryo_C::GetRodTopPos()
 	ABP_Fishing_Ryo_C_GetRodTopPos_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +35,7 @@ struct FVector ABP_Fishing_Ryo_C::GetRodTopPos()
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.UpdateAnim
-// (Net, NetRequest, Exec, Event, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_Ryo_C::UpdateAnim()
 {
@@ -53,7 +52,7 @@ void ABP_Fishing_Ryo_C::UpdateAnim()
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.SetResultCamera
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_Ryo_C::SetResultCamera()
 {
@@ -62,7 +61,6 @@ void ABP_Fishing_Ryo_C::SetResultCamera()
 	ABP_Fishing_Ryo_C_SetResultCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +69,7 @@ void ABP_Fishing_Ryo_C::SetResultCamera()
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.ResetCamera
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_Fishing_Ryo_C::ResetCamera()
 {
@@ -80,7 +78,6 @@ void ABP_Fishing_Ryo_C::ResetCamera()
 	ABP_Fishing_Ryo_C_ResetCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,16 +86,15 @@ void ABP_Fishing_Ryo_C::ResetCamera()
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.DeleteRodMeshData
-// (Net, NetRequest, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Fishing_Ryo_C::STATIC_DeleteRodMeshData()
+void ABP_Fishing_Ryo_C::DeleteRodMeshData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.DeleteRodMeshData");
 
 	ABP_Fishing_Ryo_C_DeleteRodMeshData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,13 +103,13 @@ void ABP_Fishing_Ryo_C::STATIC_DeleteRodMeshData()
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.SetRodMeshData
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMesh*           MeshData                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstance*       Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsBacker                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Ryo_C::STATIC_SetRodMeshData(class USkeletalMesh* MeshData, class UMaterialInstance* Material, bool IsBacker)
+void ABP_Fishing_Ryo_C::SetRodMeshData(class USkeletalMesh* MeshData, class UMaterialInstance* Material, bool IsBacker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.SetRodMeshData");
 
@@ -131,16 +127,15 @@ void ABP_Fishing_Ryo_C::STATIC_SetRodMeshData(class USkeletalMesh* MeshData, cla
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.UserConstructionScript
-// (Net, NetReliable, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Fishing_Ryo_C::STATIC_UserConstructionScript()
+void ABP_Fishing_Ryo_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.UserConstructionScript");
 
 	ABP_Fishing_Ryo_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,11 +144,11 @@ void ABP_Fishing_Ryo_C::STATIC_UserConstructionScript()
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.Set Active
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           is_active                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Ryo_C::STATIC_Set_Active(bool is_active)
+void ABP_Fishing_Ryo_C::Set_Active(bool is_active)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.Set Active");
 
@@ -161,7 +156,6 @@ void ABP_Fishing_Ryo_C::STATIC_Set_Active(bool is_active)
 	params.is_active = is_active;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,11 +164,11 @@ void ABP_Fishing_Ryo_C::STATIC_Set_Active(bool is_active)
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.ReceiveTick
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Ryo_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_Fishing_Ryo_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.ReceiveTick");
 
@@ -182,7 +176,6 @@ void ABP_Fishing_Ryo_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,9 +184,9 @@ void ABP_Fishing_Ryo_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.ReceiveBeginPlay
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Fishing_Ryo_C::STATIC_ReceiveBeginPlay()
+void ABP_Fishing_Ryo_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.ReceiveBeginPlay");
 
@@ -208,7 +201,7 @@ void ABP_Fishing_Ryo_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_Fishing_Ryo.BP_Fishing_Ryo_C.ExecuteUbergraph_BP_Fishing_Ryo
-// (Net, NetReliable, Event, NetResponse, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

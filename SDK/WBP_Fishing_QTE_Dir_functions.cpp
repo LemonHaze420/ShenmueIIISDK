@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_Fishing_QTE_Dir.WBP_Fishing_QTE_Dir_C.Construct
-// (Exec, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Fishing_QTE_Dir_C::Construct()
 {
@@ -23,7 +23,6 @@ void UWBP_Fishing_QTE_Dir_C::Construct()
 	UWBP_Fishing_QTE_Dir_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,11 +31,11 @@ void UWBP_Fishing_QTE_Dir_C::Construct()
 
 
 // Function WBP_Fishing_QTE_Dir.WBP_Fishing_QTE_Dir_C.ExecuteUbergraph_WBP_Fishing_QTE_Dir
-// (NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_QTE_Dir_C::STATIC_ExecuteUbergraph_WBP_Fishing_QTE_Dir(int EntryPoint)
+void UWBP_Fishing_QTE_Dir_C::ExecuteUbergraph_WBP_Fishing_QTE_Dir(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_QTE_Dir.WBP_Fishing_QTE_Dir_C.ExecuteUbergraph_WBP_Fishing_QTE_Dir");
 

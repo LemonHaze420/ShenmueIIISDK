@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,14 +33,14 @@ public:
 	}
 
 
-	void STATIC_UpdateClosestSplinePoint();
+	void UpdateClosestSplinePoint();
 	void UpdateClosestSplineDistance();
-	void STATIC_StopPathing();
+	void StopPathing();
 	void Finish(bool Success);
-	bool STATIC_IsPlayerInSpline(float Buffer);
+	bool IsPlayerInSpline(float Buffer);
 	void OnFail_227D29014046C8BB113903BF06DFD651(TEnumAsByte<EPathFollowingResult> MovementResult);
 	void OnSuccess_227D29014046C8BB113903BF06DFD651(TEnumAsByte<EPathFollowingResult> MovementResult);
-	void STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
 	void WaitAndRepath();
 	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);

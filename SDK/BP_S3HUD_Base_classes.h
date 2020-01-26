@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,61 +47,61 @@ public:
 	}
 
 
-	int STATIC_GetScreenFadeZOrder();
+	int GetScreenFadeZOrder();
 	void MakeCustomDialogParam(class AActor* Executor, int FontSize, float WindowWidth, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, TArray<struct FName>* Labels, TArray<struct FST_GeneralWindow_Image>* Images, struct FST_GeneralWindowParam* Param);
-	void STATIC_ShowSaveMessage(TEnumAsByte<ESaveMessageType> Type);
-	void STATIC_IsVisibleLongLoading(bool* Visible);
+	void ShowSaveMessage(TEnumAsByte<ESaveMessageType> Type);
+	void IsVisibleLongLoading(bool* Visible);
 	void HideLongLoading();
 	void ShowLongLoading(ES3LoadingType Type);
-	bool STATIC_IsVisibleDialog();
+	bool IsVisibleDialog();
 	void GetMenuManagerActor(class AActor** Actor);
-	void STATIC_RemovePersistantWidget(class UUserWidget* Widget);
-	void STATIC_AddPersistantWidget(class UUserWidget* Widget, int ZOrder);
-	void STATIC_CleanUpOnHUDChange();
+	void RemovePersistantWidget(class UUserWidget* Widget);
+	void AddPersistantWidget(class UUserWidget* Widget, int ZOrder);
+	void CleanUpOnHUDChange();
 	void MakeCommonDialogParam(class AActor* Executor, int FontSize, float WindowWidth, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, TArray<struct FName>* Labels, struct FST_GeneralWindowParam* Param);
 	void ForbidDetectAction_Impl(class AActor* Actor, bool* dummy);
 	void PermitDetectAction_Impl(class AActor* Actor, bool* dummy);
-	void STATIC_CloseDialog_Impl(class AActor* Actor);
-	void STATIC_OpenCommonDialog_Impl(class AActor* Executor, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, TArray<struct FName>* Labels);
-	void STATIC_ForbidWindowUI_Impl(class AActor* Actor, bool* dummy);
+	void CloseDialog_Impl(class AActor* Actor);
+	void OpenCommonDialog_Impl(class AActor* Executor, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, TArray<struct FName>* Labels);
+	void ForbidWindowUI_Impl(class AActor* Actor, bool* dummy);
 	void PermitWindowUI_Impl(class AActor* Actor, bool* dummy);
-	void STATIC_OpenCustomDialog(const struct FST_GeneralWindowParam& Param);
-	bool STATIC_HideLoading(class AActor* Executor);
-	bool STATIC_ShowLoading(class AActor* Executor);
-	bool STATIC_ScreenFadeOut(float FadeTime, const struct FLinearColor& FadeColor);
-	bool STATIC_ScreenFadeInAutoColor(float FadeTime);
+	void OpenCustomDialog(const struct FST_GeneralWindowParam& Param);
+	bool HideLoading(class AActor* Executor);
+	bool ShowLoading(class AActor* Executor);
+	bool ScreenFadeOut(float FadeTime, const struct FLinearColor& FadeColor);
+	bool ScreenFadeInAutoColor(float FadeTime);
 	bool ScreenFadeIn(float FadeTime, const struct FLinearColor& FadeColor);
-	void STATIC_DisableAutoFadeIn();
-	void STATIC_IsHiddenFade(bool* Hidden);
+	void DisableAutoFadeIn();
+	void IsHiddenFade(bool* Hidden);
 	void GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* ColorAndOpacity);
 	void InitOnHUDChange(const struct FLinearColor& InitialColor, bool EnableAutoFadeIn, TArray<struct FST_WidgetZOrder>* ReceieveWidgets);
-	void STATIC_CastChildActor();
-	void STATIC_GetEyecatch(class ABP_eyecatch_C** BP_eyecatch);
-	void STATIC_DrawCameraLocation();
+	void CastChildActor();
+	void GetEyecatch(class ABP_eyecatch_C** BP_eyecatch);
+	void DrawCameraLocation();
 	void IsFinishedFadeOut(bool* Finished);
-	void STATIC_IsScreenFading(bool* Fading);
-	void STATIC_UserConstructionScript();
-	void STATIC_TL_ScreenFade__FinishedFunc();
-	void STATIC_TL_ScreenFade__UpdateFunc();
-	void STATIC_BindSaveMessage();
-	void STATIC_StartAutoSave(bool bSystem);
-	void STATIC_FinishAutoSave(bool bSuccess);
-	void STATIC_FinishSystemSave(bool bSuccess);
-	void STATIC_UnbindSaveMessage();
-	void STATIC_BeginScreenFade(bool Visible, float FadeTime, const struct FLinearColor& FadeColor);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveDestroyed();
+	void IsScreenFading(bool* Fading);
+	void UserConstructionScript();
+	void TL_ScreenFade__FinishedFunc();
+	void TL_ScreenFade__UpdateFunc();
+	void BindSaveMessage();
+	void StartAutoSave(bool bSystem);
+	void FinishAutoSave(bool bSuccess);
+	void FinishSystemSave(bool bSuccess);
+	void UnbindSaveMessage();
+	void BeginScreenFade(bool Visible, float FadeTime, const struct FLinearColor& FadeColor);
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
 	void ReceiveDrawHUD(int SizeX, int SizeY);
-	void STATIC_FinishedLoadLevel();
-	void STATIC_PermitWindowUI(class AActor* Actor);
-	void STATIC_ForbidWindowUI(class AActor* Actor);
+	void FinishedLoadLevel();
+	void PermitWindowUI(class AActor* Actor);
+	void ForbidWindowUI(class AActor* Actor);
 	void OpenCommonDialog(class AActor* Executor, TArray<struct FName> Labels, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify);
-	void STATIC_CloseDialog(class AActor* Executor);
-	void STATIC_PermitDetectAction(class AActor* Actor);
-	void STATIC_ForbidDetectAction(class AActor* Actor);
-	void STATIC_DestroyLoading();
-	void STATIC_DestroySaveMessage();
-	void STATIC_ExecuteUbergraph_BP_S3HUD_Base(int EntryPoint);
+	void CloseDialog(class AActor* Executor);
+	void PermitDetectAction(class AActor* Actor);
+	void ForbidDetectAction(class AActor* Actor);
+	void DestroyLoading();
+	void DestroySaveMessage();
+	void ExecuteUbergraph_BP_S3HUD_Base(int EntryPoint);
 };
 
 

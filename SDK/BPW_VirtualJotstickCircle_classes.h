@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,14 +34,14 @@ public:
 	}
 
 
-	void STATIC_SetInputZones(float Radii, float DeadZone, float RunZone);
-	void STATIC_GetDeltaPosition(const struct FVector2D& FindMyRelativePos, struct FVector2D* Relative);
+	void SetInputZones(float Radii, float DeadZone, float RunZone);
+	void GetDeltaPosition(const struct FVector2D& FindMyRelativePos, struct FVector2D* Relative);
 	void MakeAxii(const struct FVector2D& Position, struct FVector2D* Axii);
 	void SetRadius(float Radius_Pixels_);
-	void STATIC_SetCenterPosition(const struct FVector2D& Position);
-	struct FVector2D STATIC_ConstrainPosition(const struct FVector2D& Location);
-	void STATIC_PreConstruct(bool IsDesignTime);
-	void STATIC_ExecuteUbergraph_BPW_VirtualJotstickCircle(int EntryPoint);
+	void SetCenterPosition(const struct FVector2D& Position);
+	struct FVector2D ConstrainPosition(const struct FVector2D& Location);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_BPW_VirtualJotstickCircle(int EntryPoint);
 };
 
 

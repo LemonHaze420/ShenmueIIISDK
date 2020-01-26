@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_TrainingResultHint.wgt_TrainingResultHint_C.UpdateHintText
-// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void Uwgt_TrainingResultHint_C::UpdateHintText(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void Uwgt_TrainingResultHint_C::UpdateHintText(bool IsDesignTime)
 
 
 // Function wgt_TrainingResultHint.wgt_TrainingResultHint_C.IsValidHint
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Private, HasOutParms, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -46,7 +45,6 @@ bool Uwgt_TrainingResultHint_C::IsValidHint()
 	Uwgt_TrainingResultHint_C_IsValidHint_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,7 +55,7 @@ bool Uwgt_TrainingResultHint_C::IsValidHint()
 
 
 // Function wgt_TrainingResultHint.wgt_TrainingResultHint_C.SetHintType
-// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -77,7 +75,7 @@ void Uwgt_TrainingResultHint_C::SetHintType(int Selection)
 
 
 // Function wgt_TrainingResultHint.wgt_TrainingResultHint_C.PreConstruct
-// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -97,11 +95,11 @@ void Uwgt_TrainingResultHint_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_TrainingResultHint.wgt_TrainingResultHint_C.ExecuteUbergraph_wgt_TrainingResultHint
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_TrainingResultHint_C::STATIC_ExecuteUbergraph_wgt_TrainingResultHint(int EntryPoint)
+void Uwgt_TrainingResultHint_C::ExecuteUbergraph_wgt_TrainingResultHint(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_TrainingResultHint.wgt_TrainingResultHint_C.ExecuteUbergraph_wgt_TrainingResultHint");
 

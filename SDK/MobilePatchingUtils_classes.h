@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,27 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
-
-// Class MobilePatchingUtils.MobilePatchingLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UMobilePatchingLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobilePatchingLibrary");
-		return ptr;
-	}
-
-
-	void RequestContent(const struct FString& RemoteManifestURL, const struct FString& CloudURL, const struct FString& InstallDirectory, const struct FScriptDelegate& OnSucceeded, const struct FScriptDelegate& OnFailed);
-	bool HasActiveWiFiConnection();
-	TArray<struct FString> GetSupportedPlatformNames();
-	class UMobileInstalledContent* GetInstalledContent(const struct FString& InstallDirectory);
-	struct FString GetActiveDeviceProfileName();
-};
-
 
 // Class MobilePatchingUtils.MobileInstalledContent
 // 0x0020 (0x0048 - 0x0028)
@@ -74,6 +53,27 @@ public:
 	struct FText GetDownloadStatusText();
 	float GetDownloadSpeed();
 	float GetDownloadSize();
+};
+
+
+// Class MobilePatchingUtils.MobilePatchingLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UMobilePatchingLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobilePatchingLibrary");
+		return ptr;
+	}
+
+
+	void STATIC_RequestContent(const struct FString& RemoteManifestURL, const struct FString& CloudURL, const struct FString& InstallDirectory, const struct FScriptDelegate& OnSucceeded, const struct FScriptDelegate& OnFailed);
+	bool STATIC_HasActiveWiFiConnection();
+	TArray<struct FString> STATIC_GetSupportedPlatformNames();
+	class UMobileInstalledContent* STATIC_GetInstalledContent(const struct FString& InstallDirectory);
+	struct FString STATIC_GetActiveDeviceProfileName();
 };
 
 

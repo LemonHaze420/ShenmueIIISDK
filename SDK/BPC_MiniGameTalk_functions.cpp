@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.GetStartTalkActionType
-// (NetReliable, Event, Static, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bCanTalk                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FS3DetectActionParam    Params                         (Parm, OutParm)
 
-void UBPC_MiniGameTalk_C::STATIC_GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params)
+void UBPC_MiniGameTalk_C::GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.GetStartTalkActionType");
 
@@ -37,21 +37,20 @@ void UBPC_MiniGameTalk_C::STATIC_GetStartTalkActionType(bool bCanTalk, struct FS
 }
 
 
-// Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.GetActionType
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure)
+// Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.getActionType
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Sight                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FS3DetectActionParam> Params                         (Parm, OutParm, ZeroConstructor)
 
-void UBPC_MiniGameTalk_C::STATIC_GetActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params)
+void UBPC_MiniGameTalk_C::getActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.GetActionType");
+	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.getActionType");
 
-	UBPC_MiniGameTalk_C_GetActionType_Params params;
+	UBPC_MiniGameTalk_C_getActionType_Params params;
 	params.Sight = Sight;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,11 +62,11 @@ void UBPC_MiniGameTalk_C::STATIC_GetActionType(bool Sight, TArray<struct FS3Dete
 
 
 // Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.DecideDetectAction
-// (Exec, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              ActionType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameTalk_C::STATIC_DecideDetectAction(ES3ActionIconType ActionType)
+void UBPC_MiniGameTalk_C::DecideDetectAction(ES3ActionIconType ActionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.DecideDetectAction");
 
@@ -83,11 +82,11 @@ void UBPC_MiniGameTalk_C::STATIC_DecideDetectAction(ES3ActionIconType ActionType
 
 
 // Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.ParseTalkScriptData
-// (Net, NetReliable, NetRequest, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3TalkDataListBase*     TalkDataList                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameTalk_C::STATIC_ParseTalkScriptData(class US3TalkDataListBase* TalkDataList)
+void UBPC_MiniGameTalk_C::ParseTalkScriptData(class US3TalkDataListBase* TalkDataList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.ParseTalkScriptData");
 
@@ -103,7 +102,7 @@ void UBPC_MiniGameTalk_C::STATIC_ParseTalkScriptData(class US3TalkDataListBase* 
 
 
 // Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.FromExternalFunctions_MemoSet
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameTalk_C::FromExternalFunctions_MemoSet()
 {
@@ -112,7 +111,6 @@ void UBPC_MiniGameTalk_C::FromExternalFunctions_MemoSet()
 	UBPC_MiniGameTalk_C_FromExternalFunctions_MemoSet_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,7 +119,7 @@ void UBPC_MiniGameTalk_C::FromExternalFunctions_MemoSet()
 
 
 // Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.ExecuteUbergraph_BPC_MiniGameTalk
-// (NetReliable, MulticastDelegate, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

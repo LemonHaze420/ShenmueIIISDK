@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,14 +33,14 @@ public:
 	}
 
 
-	void STATIC_SetFenceMaterial(class UMaterialInterface* Material);
-	void STATIC_SetCollisionEnabled(bool Enabled);
-	struct FString STATIC_GetItemName(int Param);
-	void STATIC_SetCollisionScale(float Scale, int pocket_check, class UMaterialInterface* Material, class UMaterialInstance* ForceOverrideMaterial);
+	void SetFenceMaterial(class UMaterialInterface* Material);
+	void SetCollisionEnabled(bool Enabled);
+	struct FString GetItemName(int Param);
+	void SetCollisionScale(float Scale, int pocket_check, class UMaterialInterface* Material, class UMaterialInstance* ForceOverrideMaterial);
 	void UserConstructionScript();
 	void BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__WallHitSound_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__WallHitSound_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__WallHitSound_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__WallHitSound_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void ExecuteUbergraph_BP_OD_Fence(int EntryPoint);
 	void BeginHitEvent__DelegateSignature(int hit_index);
 };

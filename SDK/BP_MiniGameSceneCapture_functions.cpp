@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.GetMaterial
-// (Exec, Native, NetResponse, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UMaterialInstanceDynamic* UseMaterial                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void ABP_MiniGameSceneCapture_C::GetMaterial(class UMaterialInstanceDynamic** Us
 	ABP_MiniGameSceneCapture_C_GetMaterial_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ABP_MiniGameSceneCapture_C::GetMaterial(class UMaterialInstanceDynamic** Us
 
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.UserConstructionScript
-// (Net, Exec, Native, Event, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGameSceneCapture_C::UserConstructionScript()
 {
@@ -46,7 +45,6 @@ void ABP_MiniGameSceneCapture_C::UserConstructionScript()
 	ABP_MiniGameSceneCapture_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +53,7 @@ void ABP_MiniGameSceneCapture_C::UserConstructionScript()
 
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ReceiveBeginPlay
-// (Net, Exec, Native, NetResponse, NetServer)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGameSceneCapture_C::ReceiveBeginPlay()
 {
@@ -64,7 +62,6 @@ void ABP_MiniGameSceneCapture_C::ReceiveBeginPlay()
 	ABP_MiniGameSceneCapture_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,11 +70,11 @@ void ABP_MiniGameSceneCapture_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ReceiveEndPlay
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameSceneCapture_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_MiniGameSceneCapture_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ReceiveEndPlay");
 
@@ -85,7 +82,6 @@ void ABP_MiniGameSceneCapture_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReaso
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,11 +90,11 @@ void ABP_MiniGameSceneCapture_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReaso
 
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ExecuteUbergraph_BP_MiniGameSceneCapture
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameSceneCapture_C::STATIC_ExecuteUbergraph_BP_MiniGameSceneCapture(int EntryPoint)
+void ABP_MiniGameSceneCapture_C::ExecuteUbergraph_BP_MiniGameSceneCapture(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ExecuteUbergraph_BP_MiniGameSceneCapture");
 
@@ -106,7 +102,6 @@ void ABP_MiniGameSceneCapture_C::STATIC_ExecuteUbergraph_BP_MiniGameSceneCapture
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

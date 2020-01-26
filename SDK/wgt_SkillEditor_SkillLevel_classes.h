@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,13 +42,13 @@ public:
 
 
 	void SetLevelData(int Level, float Progress, int MaxLevel, bool* LevelChanged, bool* ProgressChanged);
-	void STATIC_RefreshLevel();
+	void RefreshLevel();
 	void SetMasterLevel(int Value);
 	bool IsMasterLevel(int A);
 	void PlayLevelUpAnimation();
-	void STATIC_SetLevel(int Level, bool* LevelChanged);
+	void SetLevel(int Level, bool* LevelChanged);
 	void SetFillRatio(float FillRatio, bool* Changed);
-	void STATIC_Construct();
+	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_wgt_SkillEditor_SkillLevel(int EntryPoint);

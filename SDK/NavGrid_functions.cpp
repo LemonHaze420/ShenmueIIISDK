@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function NavGrid.NG_GridComponent.SetNodeRelativeLocation
-// ()
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // int                            NodeIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 RelativeLocation               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -30,6 +30,7 @@ void UNG_GridComponent::SetNodeRelativeLocation(int NodeIndex, const struct FVec
 	params.bValidLocation = bValidLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UNG_GridComponent::SetNodeRelativeLocation(int NodeIndex, const struct FVec
 
 
 // Function NavGrid.NG_GridComponent.PreallocateNodes
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // int                            iNbNodes                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,6 +51,7 @@ void UNG_GridComponent::PreallocateNodes(int iNbNodes)
 	params.iNbNodes = iNbNodes;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +60,7 @@ void UNG_GridComponent::PreallocateNodes(int iNbNodes)
 
 
 // Function NavGrid.NG_GridComponent.GenerateLocalSpacePathTriangles
-// ()
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FCustomMeshTriangle> Triangles                      (Parm, OutParm, ZeroConstructor)
 // TArray<int>                    Path                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -77,6 +79,7 @@ void UNG_GridComponent::GenerateLocalSpacePathTriangles(TArray<int> Path, const 
 	params.RelativeGoal = RelativeGoal;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,7 +91,7 @@ void UNG_GridComponent::GenerateLocalSpacePathTriangles(TArray<int> Path, const 
 
 
 // Function NavGrid.NG_GridComponent.GenerateLocalSpaceLinkTriangles
-// ()
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FCustomMeshTriangle> Triangles                      (Parm, OutParm, ZeroConstructor)
 // struct FVector                 VisualisationUpOffset          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -101,6 +104,7 @@ void UNG_GridComponent::GenerateLocalSpaceLinkTriangles(const struct FVector& Vi
 	params.VisualisationUpOffset = VisualisationUpOffset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,7 +116,7 @@ void UNG_GridComponent::GenerateLocalSpaceLinkTriangles(const struct FVector& Vi
 
 
 // Function NavGrid.NG_GridComponent.GenerateBaseGrid
-// ()
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector                 Dimension                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct FVector                 CellSize                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -132,6 +136,7 @@ void UNG_GridComponent::GenerateBaseGrid(const struct FVector& Dimension, const 
 	params.GridZaxis = GridZaxis;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,7 +145,7 @@ void UNG_GridComponent::GenerateBaseGrid(const struct FVector& Dimension, const 
 
 
 // Function NavGrid.NG_GridComponent.FindPathFromNodes
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            StartNodeIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 // int                            GoalNodeIndex                  (Parm, ZeroConstructor, IsPlainOldData)
@@ -160,6 +165,7 @@ bool UNG_GridComponent::FindPathFromNodes(int StartNodeIndex, int GoalNodeIndex,
 	params.bIncludeGoalNode = bIncludeGoalNode;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,7 +179,7 @@ bool UNG_GridComponent::FindPathFromNodes(int StartNodeIndex, int GoalNodeIndex,
 
 
 // Function NavGrid.NG_GridComponent.FindPath
-// ()
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 RelativeStart                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct FVector                 RelativeGoal                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -197,6 +203,7 @@ bool UNG_GridComponent::FindPath(const struct FVector& RelativeStart, const stru
 	params.TraceRadius = TraceRadius;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -210,7 +217,7 @@ bool UNG_GridComponent::FindPath(const struct FVector& RelativeStart, const stru
 
 
 // Function NavGrid.NG_GridComponent.FindClosestNodeFromDirection
-// ()
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 RelativeLocation               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct FVector                 RelativeFromDirection          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -233,6 +240,7 @@ int UNG_GridComponent::FindClosestNodeFromDirection(const struct FVector& Relati
 	params.TraceRadius = TraceRadius;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,7 +251,7 @@ int UNG_GridComponent::FindClosestNodeFromDirection(const struct FVector& Relati
 
 
 // Function NavGrid.NG_GridComponent.FindClosestNode
-// ()
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 RelativeLocation               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // bool                           OnlyNodesWithLinks             (Parm, ZeroConstructor, IsPlainOldData)
@@ -264,6 +272,7 @@ int UNG_GridComponent::FindClosestNode(const struct FVector& RelativeLocation, b
 	params.TraceRadius = TraceRadius;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -274,7 +283,7 @@ int UNG_GridComponent::FindClosestNode(const struct FVector& RelativeLocation, b
 
 
 // Function NavGrid.NG_GridComponent.CreateNavGridMoveToProxyObject
-// ()
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
@@ -284,7 +293,7 @@ int UNG_GridComponent::FindClosestNode(const struct FVector& RelativeLocation, b
 // bool                           bStopOnOverlap                 (Parm, ZeroConstructor, IsPlainOldData)
 // class UAIAsyncTaskBlueprintProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAIAsyncTaskBlueprintProxy* UNG_GridComponent::CreateNavGridMoveToProxyObject(class UObject* WorldContextObject, class APawn* Pawn, const struct FVector& Destination, class AActor* TargetActor, float AcceptanceRadius, bool bStopOnOverlap)
+class UAIAsyncTaskBlueprintProxy* UNG_GridComponent::STATIC_CreateNavGridMoveToProxyObject(class UObject* WorldContextObject, class APawn* Pawn, const struct FVector& Destination, class AActor* TargetActor, float AcceptanceRadius, bool bStopOnOverlap)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NavGrid.NG_GridComponent.CreateNavGridMoveToProxyObject");
 
@@ -297,6 +306,7 @@ class UAIAsyncTaskBlueprintProxy* UNG_GridComponent::CreateNavGridMoveToProxyObj
 	params.bStopOnOverlap = bStopOnOverlap;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -307,7 +317,7 @@ class UAIAsyncTaskBlueprintProxy* UNG_GridComponent::CreateNavGridMoveToProxyObj
 
 
 // Function NavGrid.NG_GridComponent.AddLink
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // int                            NodeIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            OtherNodeIndex                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -323,6 +333,7 @@ void UNG_GridComponent::AddLink(int NodeIndex, int OtherNodeIndex, bool bBlocked
 	params.bBlocked = bBlocked;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

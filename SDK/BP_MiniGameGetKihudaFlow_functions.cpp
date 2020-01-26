@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.AddTicketItem
-// (Net, NetReliable, Native, Event, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameGetKihudaFlow_C::STATIC_AddTicketItem()
+void ABP_MiniGameGetKihudaFlow_C::AddTicketItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.AddTicketItem");
 
 	ABP_MiniGameGetKihudaFlow_C_AddTicketItem_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_MiniGameGetKihudaFlow_C::STATIC_AddTicketItem()
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.GetTicketItemID
-// (NetReliable, Native, Event, NetResponse, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGameBigWheelType> Type                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FName                   Name                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -45,7 +44,6 @@ void ABP_MiniGameGetKihudaFlow_C::GetTicketItemID(TEnumAsByte<E_MiniGameBigWheel
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,12 +55,12 @@ void ABP_MiniGameGetKihudaFlow_C::GetTicketItemID(TEnumAsByte<E_MiniGameBigWheel
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.GetMaterial
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGameBigWheelType> Type                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class UMaterial*               Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameGetKihudaFlow_C::STATIC_GetMaterial(TEnumAsByte<E_MiniGameBigWheelType> Type, class UMaterial** Value)
+void ABP_MiniGameGetKihudaFlow_C::GetMaterial(TEnumAsByte<E_MiniGameBigWheelType> Type, class UMaterial** Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.GetMaterial");
 
@@ -70,7 +68,6 @@ void ABP_MiniGameGetKihudaFlow_C::STATIC_GetMaterial(TEnumAsByte<E_MiniGameBigWh
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,7 +79,7 @@ void ABP_MiniGameGetKihudaFlow_C::STATIC_GetMaterial(TEnumAsByte<E_MiniGameBigWh
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.UpdateTicketFlag
-// (Exec, Native, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGameGetKihudaFlow_C::UpdateTicketFlag()
 {
@@ -91,7 +88,6 @@ void ABP_MiniGameGetKihudaFlow_C::UpdateTicketFlag()
 	ABP_MiniGameGetKihudaFlow_C_UpdateTicketFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -100,7 +96,7 @@ void ABP_MiniGameGetKihudaFlow_C::UpdateTicketFlag()
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.SpawnSecuencePlayer
-// (NetRequest, Native, Event, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULevelSequence*          InSequence                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  AttachActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -115,7 +111,6 @@ void ABP_MiniGameGetKihudaFlow_C::SpawnSecuencePlayer(class ULevelSequence* InSe
 	params.AttachActor = AttachActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,7 +122,7 @@ void ABP_MiniGameGetKihudaFlow_C::SpawnSecuencePlayer(class ULevelSequence* InSe
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.UserConstructionScript
-// (Net, NetReliable, Exec, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGameGetKihudaFlow_C::UserConstructionScript()
 {
@@ -144,7 +139,7 @@ void ABP_MiniGameGetKihudaFlow_C::UserConstructionScript()
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.StartGetKihudaFlow
-// (Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform              OffsetRelativeTrans            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -156,7 +151,6 @@ void ABP_MiniGameGetKihudaFlow_C::StartGetKihudaFlow(const struct FTransform& Of
 	params.OffsetRelativeTrans = OffsetRelativeTrans;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -165,11 +159,11 @@ void ABP_MiniGameGetKihudaFlow_C::StartGetKihudaFlow(const struct FTransform& Of
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.OnFinishedGetKihuda
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULevelSequencePlayer*    LevelSequencePlayer            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameGetKihudaFlow_C::STATIC_OnFinishedGetKihuda(class ULevelSequencePlayer* LevelSequencePlayer)
+void ABP_MiniGameGetKihudaFlow_C::OnFinishedGetKihuda(class ULevelSequencePlayer* LevelSequencePlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.OnFinishedGetKihuda");
 
@@ -185,7 +179,7 @@ void ABP_MiniGameGetKihudaFlow_C::STATIC_OnFinishedGetKihuda(class ULevelSequenc
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.OnStoppedPlayer
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGameGetKihudaFlow_C::OnStoppedPlayer()
 {
@@ -194,7 +188,6 @@ void ABP_MiniGameGetKihudaFlow_C::OnStoppedPlayer()
 	ABP_MiniGameGetKihudaFlow_C_OnStoppedPlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,11 +196,11 @@ void ABP_MiniGameGetKihudaFlow_C::OnStoppedPlayer()
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.ExecuteUbergraph_BP_MiniGameGetKihudaFlow
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameGetKihudaFlow_C::STATIC_ExecuteUbergraph_BP_MiniGameGetKihudaFlow(int EntryPoint)
+void ABP_MiniGameGetKihudaFlow_C::ExecuteUbergraph_BP_MiniGameGetKihudaFlow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.ExecuteUbergraph_BP_MiniGameGetKihudaFlow");
 
@@ -223,9 +216,9 @@ void ABP_MiniGameGetKihudaFlow_C::STATIC_ExecuteUbergraph_BP_MiniGameGetKihudaFl
 
 
 // Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.OnEndActorFlow__DelegateSignature
-// (NetReliable, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameGetKihudaFlow_C::STATIC_OnEndActorFlow__DelegateSignature()
+void ABP_MiniGameGetKihudaFlow_C::OnEndActorFlow__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameGetKihudaFlow.BP_MiniGameGetKihudaFlow_C.OnEndActorFlow__DelegateSignature");
 

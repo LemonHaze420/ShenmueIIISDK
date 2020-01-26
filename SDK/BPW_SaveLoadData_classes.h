@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,10 +43,10 @@ public:
 	}
 
 
-	void STATIC_CheckChinaName(const struct FString& inString, struct FString* OutString);
-	void STATIC_GetIconData(const struct FString& AreaId);
+	void CheckChinaName(const struct FString& inString, struct FString* OutString);
+	void GetIconData(const struct FString& AreaId);
 	void IsFocus(bool Focus);
-	void STATIC_SetData(const struct FString& Name, const struct FDateTime& SaveDate, const struct FDateTime& GameDate, ES3Where Location, int Index, bool Success, float DataSize, int Step, const struct FString& AreaId, const struct FS3BattleStatsSaveData& BattleData, int Money, int BetMoney);
+	void SetData(const struct FString& Name, const struct FDateTime& SaveDate, const struct FDateTime& GameDate, ES3Where Location, int Index, bool Success, float DataSize, int Step, const struct FString& AreaId, const struct FS3BattleStatsSaveData& BattleData, int Money, int BetMoney);
 	void OnLoaded_27F679DB4249387B3159F79A44E9A691(class UObject* Loaded);
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_27_OnButtonHoverEvent__DelegateSignature();
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature();

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,38 +60,38 @@ public:
 
 	void CanSkip(bool* CAN);
 	void UpdateQTEAnimationState();
-	void STATIC_DebugSetIsQTEForceSuccess(bool bForceSuccess);
+	void DebugSetIsQTEForceSuccess(bool bForceSuccess);
 	void OnFinishedQTELevelSequencePlayer(class ULevelSequencePlayer* LevelSequencePlayer);
 	int GetCurrentRetryCount(class ULevelSequence* InLevelSequence);
 	bool DebugIsEnableToSkip();
 	void EndSubSequence();
 	void PlaySubSequence();
-	void STATIC_FinalizeSubSequenceActor();
+	void FinalizeSubSequenceActor();
 	void InitializeSubSequenceActor();
 	void SetupNextLevelSequence();
-	void STATIC_UpdateLevelSequenceManually();
+	void UpdateLevelSequenceManually();
 	void SetupCurrentSequenceToRetryPoint();
 	void ExecuteRetry();
-	void STATIC_UpdatePlayingSequenceToRetry();
+	void UpdatePlayingSequenceToRetry();
 	void EndIntervalSequence();
 	void UpdatePlayingIntervalSequence();
 	struct FName GetQTESingleRandomInputAction();
 	void StartQTEInputSafeSlow(float RestLength, float QTELengthBeforeCountTime, float QTEInputLimitTime);
-	bool STATIC_IsExistQTEInSequence(struct FST_QTESequence* InQTESequence);
+	bool IsExistQTEInSequence(struct FST_QTESequence* InQTESequence);
 	void FindQTESequenceFromLevelSequence(class ULevelSequence* InLevelSequence, int* FoundIndex);
-	bool STATIC_GetLastQTEResult();
-	void STATIC_InputQTE(const struct FName& InInputAction);
-	void STATIC_StartQTE();
-	void STATIC_SetupCurrentQTE();
-	void STATIC_SetupCurrentSequenceFromIndex(int SequenceIndex);
+	bool GetLastQTEResult();
+	void InputQTE(const struct FName& InInputAction);
+	void StartQTE();
+	void SetupCurrentQTE();
+	void SetupCurrentSequenceFromIndex(int SequenceIndex);
 	void FinalizeQTEComponent();
 	void InitializeQTEComponent();
 	void DebugSkipToEnd();
-	void STATIC_EndSequence();
+	void EndSequence();
 	void PlaySequence();
-	void STATIC_InitSequencePlay();
+	void InitSequencePlay();
 	void ExitCutscene();
-	void STATIC_InitCutscene();
+	void InitCutscene();
 	void UserConstructionScript();
 	void InpActEvt_QTE_ButtonTop_K2Node_InputActionEvent_16(const struct FKey& Key);
 	void InpActEvt_QTE_ButtonBottom_K2Node_InputActionEvent_15(const struct FKey& Key);
@@ -101,11 +101,11 @@ public:
 	void InpActEvt_QTE_Bottom_K2Node_InputActionEvent_11(const struct FKey& Key);
 	void InpActEvt_QTE_Left_K2Node_InputActionEvent_10(const struct FKey& Key);
 	void InpActEvt_QTE_Right_K2Node_InputActionEvent_9(const struct FKey& Key);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_Event_InputStart();
-	void STATIC_Event_StopAround();
-	void STATIC_Event_ResumeAround();
-	void STATIC_ExecuteUbergraph_BP_QTECutscenePlayer(int EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
+	void Event_InputStart();
+	void Event_StopAround();
+	void Event_ResumeAround();
+	void ExecuteUbergraph_BP_QTECutscenePlayer(int EntryPoint);
 };
 
 

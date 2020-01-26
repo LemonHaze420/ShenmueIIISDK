@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_JumpProcessActor.BP_JumpProcessActor_C.AddGameTime
-// (Exec, NetResponse, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,18 +34,17 @@ void ABP_JumpProcessActor_C::AddGameTime(float Time)
 
 
 // Function BP_JumpProcessActor.BP_JumpProcessActor_C.CheckNPCSpawn
-// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_JumpProcessActor_C::STATIC_CheckNPCSpawn(bool* Success)
+void ABP_JumpProcessActor_C::CheckNPCSpawn(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_JumpProcessActor.BP_JumpProcessActor_C.CheckNPCSpawn");
 
 	ABP_JumpProcessActor_C_CheckNPCSpawn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,16 +56,15 @@ void ABP_JumpProcessActor_C::STATIC_CheckNPCSpawn(bool* Success)
 
 
 // Function BP_JumpProcessActor.BP_JumpProcessActor_C.UserConstructionScript
-// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_JumpProcessActor_C::STATIC_UserConstructionScript()
+void ABP_JumpProcessActor_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_JumpProcessActor.BP_JumpProcessActor_C.UserConstructionScript");
 
 	ABP_JumpProcessActor_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,7 +73,7 @@ void ABP_JumpProcessActor_C::STATIC_UserConstructionScript()
 
 
 // Function BP_JumpProcessActor.BP_JumpProcessActor_C.BindNPCSpawn
-// (NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_JumpProcessActor_C::BindNPCSpawn()
 {
@@ -92,11 +90,11 @@ void ABP_JumpProcessActor_C::BindNPCSpawn()
 
 
 // Function BP_JumpProcessActor.BP_JumpProcessActor_C.SpawnNPC
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGameplayTag            NPCID                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_JumpProcessActor_C::STATIC_SpawnNPC(const struct FGameplayTag& NPCID)
+void ABP_JumpProcessActor_C::SpawnNPC(const struct FGameplayTag& NPCID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_JumpProcessActor.BP_JumpProcessActor_C.SpawnNPC");
 
@@ -112,11 +110,11 @@ void ABP_JumpProcessActor_C::STATIC_SpawnNPC(const struct FGameplayTag& NPCID)
 
 
 // Function BP_JumpProcessActor.BP_JumpProcessActor_C.UnspawnNPC
-// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGameplayTag            NPCID                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_JumpProcessActor_C::STATIC_UnspawnNPC(const struct FGameplayTag& NPCID)
+void ABP_JumpProcessActor_C::UnspawnNPC(const struct FGameplayTag& NPCID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_JumpProcessActor.BP_JumpProcessActor_C.UnspawnNPC");
 
@@ -132,11 +130,11 @@ void ABP_JumpProcessActor_C::STATIC_UnspawnNPC(const struct FGameplayTag& NPCID)
 
 
 // Function BP_JumpProcessActor.BP_JumpProcessActor_C.ReceiveTick
-// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_JumpProcessActor_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_JumpProcessActor_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_JumpProcessActor.BP_JumpProcessActor_C.ReceiveTick");
 
@@ -152,7 +150,7 @@ void ABP_JumpProcessActor_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_JumpProcessActor.BP_JumpProcessActor_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Native, Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_JumpProcessActor_C::ReceiveBeginPlay()
 {
@@ -161,7 +159,6 @@ void ABP_JumpProcessActor_C::ReceiveBeginPlay()
 	ABP_JumpProcessActor_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,7 +167,7 @@ void ABP_JumpProcessActor_C::ReceiveBeginPlay()
 
 
 // Function BP_JumpProcessActor.BP_JumpProcessActor_C.ExecuteUbergraph_BP_JumpProcessActor
-// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

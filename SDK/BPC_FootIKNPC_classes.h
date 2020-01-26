@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,21 +60,21 @@ public:
 	}
 
 
-	void STATIC_GetSinkingDistance(float* SinkingDistance);
+	void GetSinkingDistance(float* SinkingDistance);
 	void InterpSinkingDistance(float Target, float* SinkingDistance);
-	void STATIC_UpdateRightFootRotaion(bool HitLeft, const struct FVector& Normal);
+	void UpdateRightFootRotaion(bool HitLeft, const struct FVector& Normal);
 	void UpdateLeftFootRotaion(bool HitLeft, const struct FVector& Normal);
-	void STATIC_GetFootRotaion(float* LeftFootRotaionX, float* LeftFootRotaionY, float* RightFootRotaionX, float* RightFootRotaionY);
+	void GetFootRotaion(float* LeftFootRotaionX, float* LeftFootRotaionY, float* RightFootRotaionX, float* RightFootRotaionY);
 	void TryGetSinkingDistance(const struct FName& FootSocketName, float StartLocationZ, float EndLocationZ, bool* bHit, float* SinkingDistance, struct FVector* HitNormal);
 	void TraceFromLocation(const struct FVector& StartLocation, const struct FVector& EndLocation, bool* bHit, struct FVector* Location, struct FVector* Normal);
-	void STATIC_TryGetFootSinkingOffset(float LocationX, float LocationY, float StartLocationZ, float EndLocationZ, bool* bHit, float* SinkingOffsetZ);
+	void TryGetFootSinkingOffset(float LocationX, float LocationY, float StartLocationZ, float EndLocationZ, bool* bHit, float* SinkingOffsetZ);
 	void UpdateMeshLocalOffsetZ(bool* bHitFootLeft, bool* bHitFootRight);
 	void UpdateFootIKOffset(bool bHitFootLeft, bool bHitFootRight);
 	void GetFootOffset(float* LeftFootOffsetZ, float* RightFootOffsetZ);
-	void STATIC_Update();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BPC_FootIKNPC(int EntryPoint);
-	void STATIC_OnFootIanding__DelegateSignature(float SinkingDistance_Z);
+	void Update();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BPC_FootIKNPC(int EntryPoint);
+	void OnFootIanding__DelegateSignature(float SinkingDistance_Z);
 };
 
 

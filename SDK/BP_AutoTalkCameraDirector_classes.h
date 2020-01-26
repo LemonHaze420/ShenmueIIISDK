@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,24 +51,24 @@ public:
 	}
 
 
-	void STATIC_GetNextCutChangeTime(float* CutChangeTIme);
+	void GetNextCutChangeTime(float* CutChangeTIme);
 	void PrintCameraInfo(const struct FST_AutoCameraAnalizedInfo& CameraInfo);
 	void SetCurrentCamera(const struct FST_AutoCameraAnalizedInfo& Info);
 	void GetCurrentCamera(struct FST_AutoCameraAnalizedInfo* ret);
 	void GetAllCamera(TArray<struct FST_AutoCameraAnalizedInfo>* AnalizedInfo, bool* Result);
 	void CalcNextCameraCut();
 	void IsSimilarToCurrentCamera(const struct FST_AutoCameraAnalizedInfo& CameraInfo, bool* Result);
-	void STATIC_WhetherToChangeCamera(const struct FName& LookTargetCharacterID, bool* Result);
+	void WhetherToChangeCamera(const struct FName& LookTargetCharacterID, bool* Result);
 	void GetSelectedCameras(bool* Result, TArray<struct FST_AutoCameraSelectedResult>* SelectedCameras);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void OnCameraChanged();
 	void OnBeginTalkEvent();
 	void OnEndTalkEvent();
-	void STATIC_OnSkipTalkTask(float SkipTaskDuration);
+	void OnSkipTalkTask(float SkipTaskDuration);
 	void OnInputQuestDebugKey();
-	void STATIC_ExecuteUbergraph_BP_AutoTalkCameraDirector(int EntryPoint);
+	void ExecuteUbergraph_BP_AutoTalkCameraDirector(int EntryPoint);
 };
 
 

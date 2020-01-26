@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.SetNameAndPrice
-// (Net, NetReliable, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   Price                          (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -36,11 +36,11 @@ void UBPW_UI_RentalButton_C::SetNameAndPrice(const struct FText& Name, const str
 
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.SelectButton
-// (NetReliable, Event, NetResponse, Static, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Select                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_RentalButton_C::STATIC_SelectButton(bool Select)
+void UBPW_UI_RentalButton_C::SelectButton(bool Select)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.SelectButton");
 
@@ -56,7 +56,7 @@ void UBPW_UI_RentalButton_C::STATIC_SelectButton(bool Select)
 
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.FocusButton
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Focus                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +68,6 @@ void UBPW_UI_RentalButton_C::FocusButton(bool Focus)
 	params.Focus = Focus;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,7 +76,7 @@ void UBPW_UI_RentalButton_C::FocusButton(bool Focus)
 
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.Construct
-// (Net, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_UI_RentalButton_C::Construct()
 {
@@ -94,7 +93,7 @@ void UBPW_UI_RentalButton_C::Construct()
 
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.ExecuteUbergraph_BPW_UI_RentalButton
-// (Net, Native, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -106,7 +105,6 @@ void UBPW_UI_RentalButton_C::ExecuteUbergraph_BPW_UI_RentalButton(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

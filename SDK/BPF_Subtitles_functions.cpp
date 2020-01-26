@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Subtitles.BPF_Subtitles_C.SetOutlineColor
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FSlateFontInfo          InFontInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -42,7 +42,7 @@ void UBPF_Subtitles_C::STATIC_SetOutlineColor(const struct FSlateFontInfo& InFon
 
 
 // Function BPF_Subtitles.BPF_Subtitles_C.InitialFont
-// (Net, NetRequest, Event, Static, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInstanceDynamic* DMI                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FSlateFontInfo          InFontInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)

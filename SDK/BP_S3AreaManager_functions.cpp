@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,14 +14,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AreaManager.BP_S3AreaManager_C.IsTargetComponentInBuilding
-// (NetReliable, Native, Static, NetMulticast, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     Primitive                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           UsePoint                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3BuildingStaticMeshActor_C* Building                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           isIn                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AreaManager_C::STATIC_IsTargetComponentInBuilding(class UPrimitiveComponent* Primitive, bool UsePoint, class ABP_S3BuildingStaticMeshActor_C** Building, bool* isIn)
+void ABP_S3AreaManager_C::IsTargetComponentInBuilding(class UPrimitiveComponent* Primitive, bool UsePoint, class ABP_S3BuildingStaticMeshActor_C** Building, bool* isIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AreaManager.BP_S3AreaManager_C.IsTargetComponentInBuilding");
 
@@ -30,7 +30,6 @@ void ABP_S3AreaManager_C::STATIC_IsTargetComponentInBuilding(class UPrimitiveCom
 	params.UsePoint = UsePoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -44,12 +43,12 @@ void ABP_S3AreaManager_C::STATIC_IsTargetComponentInBuilding(class UPrimitiveCom
 
 
 // Function BP_S3AreaManager.BP_S3AreaManager_C.GetBuildingByCharaName
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3BuildingStaticMeshActor_C* Building                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AreaManager_C::STATIC_GetBuildingByCharaName(const struct FName& CharaName, class ABP_S3BuildingStaticMeshActor_C** Building)
+void ABP_S3AreaManager_C::GetBuildingByCharaName(const struct FName& CharaName, class ABP_S3BuildingStaticMeshActor_C** Building)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AreaManager.BP_S3AreaManager_C.GetBuildingByCharaName");
 
@@ -57,7 +56,6 @@ void ABP_S3AreaManager_C::STATIC_GetBuildingByCharaName(const struct FName& Char
 	params.CharaName = CharaName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,7 +67,7 @@ void ABP_S3AreaManager_C::STATIC_GetBuildingByCharaName(const struct FName& Char
 
 
 // Function BP_S3AreaManager.BP_S3AreaManager_C.GetLeavePoint
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           InBuilding                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -99,12 +97,12 @@ void ABP_S3AreaManager_C::GetLeavePoint(class AActor* Actor, bool* InBuilding, s
 
 
 // Function BP_S3AreaManager.BP_S3AreaManager_C.GetBuildingByName
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 BuildingName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class ABP_S3BuildingStaticMeshActor_C* Building                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AreaManager_C::STATIC_GetBuildingByName(const struct FString& BuildingName, class ABP_S3BuildingStaticMeshActor_C** Building)
+void ABP_S3AreaManager_C::GetBuildingByName(const struct FString& BuildingName, class ABP_S3BuildingStaticMeshActor_C** Building)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AreaManager.BP_S3AreaManager_C.GetBuildingByName");
 
@@ -123,7 +121,7 @@ void ABP_S3AreaManager_C::STATIC_GetBuildingByName(const struct FString& Buildin
 
 
 // Function BP_S3AreaManager.BP_S3AreaManager_C.IsPlayerInBuilding
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3BuildingStaticMeshActor_C* Building                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           isIn                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -148,12 +146,12 @@ void ABP_S3AreaManager_C::IsPlayerInBuilding(class ABP_S3BuildingStaticMeshActor
 
 
 // Function BP_S3AreaManager.BP_S3AreaManager_C.SetBuilding
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3BuildingStaticMeshActor_C* Building                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Remove                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AreaManager_C::STATIC_SetBuilding(class ABP_S3BuildingStaticMeshActor_C* Building, bool Remove)
+void ABP_S3AreaManager_C::SetBuilding(class ABP_S3BuildingStaticMeshActor_C* Building, bool Remove)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AreaManager.BP_S3AreaManager_C.SetBuilding");
 
@@ -170,16 +168,15 @@ void ABP_S3AreaManager_C::STATIC_SetBuilding(class ABP_S3BuildingStaticMeshActor
 
 
 // Function BP_S3AreaManager.BP_S3AreaManager_C.UserConstructionScript
-// (Net, NetRequest, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AreaManager_C::STATIC_UserConstructionScript()
+void ABP_S3AreaManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AreaManager.BP_S3AreaManager_C.UserConstructionScript");
 
 	ABP_S3AreaManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HideInStep_Template.BP_HideInStep_Template_C.ChangeHide_Owner
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Hide                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_HideInStep_Template_C::STATIC_ChangeHide_Owner(bool Hide)
+void UBP_HideInStep_Template_C::ChangeHide_Owner(bool Hide)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HideInStep_Template.BP_HideInStep_Template_C.ChangeHide_Owner");
 
@@ -34,7 +34,7 @@ void UBP_HideInStep_Template_C::STATIC_ChangeHide_Owner(bool Hide)
 
 
 // Function BP_HideInStep_Template.BP_HideInStep_Template_C.CheckStep_MinMax
-// (NetReliable, NetRequest, Event, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintEvent, NetValidate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            MinStep                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            MaxStep                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -60,7 +60,7 @@ void UBP_HideInStep_Template_C::CheckStep_MinMax(int MinStep, int MaxStep, bool*
 
 
 // Function BP_HideInStep_Template.BP_HideInStep_Template_C.LocalEvt_ChangeStep
-// (Net, NetReliable, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, BlueprintPure, NetValidate)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,7 +80,7 @@ void UBP_HideInStep_Template_C::LocalEvt_ChangeStep(int SetSteps)
 
 
 // Function BP_HideInStep_Template.BP_HideInStep_Template_C.ReceiveTick
-// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, BlueprintPure, NetValidate)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -100,16 +100,15 @@ void UBP_HideInStep_Template_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_HideInStep_Template.BP_HideInStep_Template_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Event, Public, BlueprintEvent)
 
-void UBP_HideInStep_Template_C::STATIC_ReceiveBeginPlay()
+void UBP_HideInStep_Template_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HideInStep_Template.BP_HideInStep_Template_C.ReceiveBeginPlay");
 
 	UBP_HideInStep_Template_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,7 +117,7 @@ void UBP_HideInStep_Template_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_HideInStep_Template.BP_HideInStep_Template_C.ReceiveEndPlay
-// (Net, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, BlueprintPure, NetValidate)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -130,7 +129,6 @@ void UBP_HideInStep_Template_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -139,16 +137,15 @@ void UBP_HideInStep_Template_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 
 
 // Function BP_HideInStep_Template.BP_HideInStep_Template_C.StartIn
-// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_HideInStep_Template_C::STATIC_StartIn()
+void UBP_HideInStep_Template_C::StartIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HideInStep_Template.BP_HideInStep_Template_C.StartIn");
 
 	UBP_HideInStep_Template_C_StartIn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -157,11 +154,11 @@ void UBP_HideInStep_Template_C::STATIC_StartIn()
 
 
 // Function BP_HideInStep_Template.BP_HideInStep_Template_C.ExecuteUbergraph_BP_HideInStep_Template
-// (Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_HideInStep_Template_C::STATIC_ExecuteUbergraph_BP_HideInStep_Template(int EntryPoint)
+void UBP_HideInStep_Template_C::ExecuteUbergraph_BP_HideInStep_Template(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HideInStep_Template.BP_HideInStep_Template_C.ExecuteUbergraph_BP_HideInStep_Template");
 

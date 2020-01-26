@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.TryGetItemSocketLocation
-// (Net, NetReliable, NetRequest, NetResponse, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FName                   InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
@@ -41,11 +41,11 @@ void UBPC_ItemAttacher_C::TryGetItemSocketLocation(const struct FName& InputPin,
 
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.IsItemSpawned
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_ItemAttacher_C::STATIC_IsItemSpawned()
+bool UBPC_ItemAttacher_C::IsItemSpawned()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ItemAttacher.BPC_ItemAttacher_C.IsItemSpawned");
 
@@ -62,11 +62,11 @@ bool UBPC_ItemAttacher_C::STATIC_IsItemSpawned()
 
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.GetItemActor
-// (Net, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_PlayerTalkItem_C*    ItemBP                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ItemAttacher_C::STATIC_GetItemActor(class ABP_PlayerTalkItem_C** ItemBP)
+void UBPC_ItemAttacher_C::GetItemActor(class ABP_PlayerTalkItem_C** ItemBP)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ItemAttacher.BPC_ItemAttacher_C.GetItemActor");
 
@@ -84,7 +84,7 @@ void UBPC_ItemAttacher_C::STATIC_GetItemActor(class ABP_PlayerTalkItem_C** ItemB
 
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.DestroyItem
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_ItemAttacher_C::DestroyItem()
 {
@@ -101,12 +101,12 @@ void UBPC_ItemAttacher_C::DestroyItem()
 
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.SpawnItem
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ShowToOther                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ItemAttacher_C::STATIC_SpawnItem(const struct FName& ItemName, bool ShowToOther)
+void UBPC_ItemAttacher_C::SpawnItem(const struct FName& ItemName, bool ShowToOther)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ItemAttacher.BPC_ItemAttacher_C.SpawnItem");
 
@@ -123,7 +123,7 @@ void UBPC_ItemAttacher_C::STATIC_SpawnItem(const struct FName& ItemName, bool Sh
 
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.SetupItemMaterial
-// (Net, NetMulticast, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_ItemAttacher_C::SetupItemMaterial()
 {
@@ -140,9 +140,9 @@ void UBPC_ItemAttacher_C::SetupItemMaterial()
 
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.ReceiveBeginPlay
-// (Net, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_ItemAttacher_C::STATIC_ReceiveBeginPlay()
+void UBPC_ItemAttacher_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ItemAttacher.BPC_ItemAttacher_C.ReceiveBeginPlay");
 
@@ -157,9 +157,9 @@ void UBPC_ItemAttacher_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.HiddenItem
-// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_ItemAttacher_C::STATIC_HiddenItem()
+void UBPC_ItemAttacher_C::HiddenItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ItemAttacher.BPC_ItemAttacher_C.HiddenItem");
 
@@ -174,7 +174,7 @@ void UBPC_ItemAttacher_C::STATIC_HiddenItem()
 
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.ReceiveEndPlay
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -186,7 +186,6 @@ void UBPC_ItemAttacher_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReas
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +194,7 @@ void UBPC_ItemAttacher_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReas
 
 
 // Function BPC_ItemAttacher.BPC_ItemAttacher_C.ExecuteUbergraph_BPC_ItemAttacher
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -207,7 +206,6 @@ void UBPC_ItemAttacher_C::ExecuteUbergraph_BPC_ItemAttacher(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

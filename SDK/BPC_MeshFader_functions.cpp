@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MeshFader.BPC_MeshFader_C.RegisterSiblingMeshes
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MeshFader_C::STATIC_RegisterSiblingMeshes()
+void UBPC_MeshFader_C::RegisterSiblingMeshes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MeshFader.BPC_MeshFader_C.RegisterSiblingMeshes");
 
@@ -31,9 +31,9 @@ void UBPC_MeshFader_C::STATIC_RegisterSiblingMeshes()
 
 
 // Function BPC_MeshFader.BPC_MeshFader_C.RegisterSiblingSkeletalMeshes
-// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MeshFader_C::STATIC_RegisterSiblingSkeletalMeshes()
+void UBPC_MeshFader_C::RegisterSiblingSkeletalMeshes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MeshFader.BPC_MeshFader_C.RegisterSiblingSkeletalMeshes");
 
@@ -48,12 +48,12 @@ void UBPC_MeshFader_C::STATIC_RegisterSiblingSkeletalMeshes()
 
 
 // Function BPC_MeshFader.BPC_MeshFader_C.CreateFadeMaterial
-// (NetReliable, Exec, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInterface*      SourceMaterial                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInterface*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UMaterialInterface* UBPC_MeshFader_C::STATIC_CreateFadeMaterial(class UMaterialInterface* SourceMaterial)
+class UMaterialInterface* UBPC_MeshFader_C::CreateFadeMaterial(class UMaterialInterface* SourceMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MeshFader.BPC_MeshFader_C.CreateFadeMaterial");
 

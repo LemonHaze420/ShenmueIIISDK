@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_Config.BPW_UI_Config_C.SetDiscription
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UBPW_UI_Config_C::SetDiscription(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UBPW_UI_Config_C::SetDiscription(int Index)
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.ChangeSelectButtonIcon
-// (Exec, NetResponse, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_C::ChangeSelectButtonIcon()
 {
@@ -52,12 +51,12 @@ void UBPW_UI_Config_C::ChangeSelectButtonIcon()
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.PushLeftRightIndex
-// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_C::STATIC_PushLeftRightIndex(int Index, int Add)
+void UBPW_UI_Config_C::PushLeftRightIndex(int Index, int Add)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config.BPW_UI_Config_C.PushLeftRightIndex");
 
@@ -74,12 +73,12 @@ void UBPW_UI_Config_C::STATIC_PushLeftRightIndex(int Index, int Add)
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.InitChoiceList
-// (Net, Native, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FString>         ChoiceList                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBPW_UI_Config_C::STATIC_InitChoiceList(int Index, TArray<struct FString>* ChoiceList)
+void UBPW_UI_Config_C::InitChoiceList(int Index, TArray<struct FString>* ChoiceList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config.BPW_UI_Config_C.InitChoiceList");
 
@@ -87,7 +86,6 @@ void UBPW_UI_Config_C::STATIC_InitChoiceList(int Index, TArray<struct FString>* 
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,11 +97,11 @@ void UBPW_UI_Config_C::STATIC_InitChoiceList(int Index, TArray<struct FString>* 
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.SetPage
-// (Net, Exec, Event, NetResponse, Static, Private, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_C::STATIC_SetPage(int page)
+void UBPW_UI_Config_C::SetPage(int page)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config.BPW_UI_Config_C.SetPage");
 
@@ -119,7 +117,7 @@ void UBPW_UI_Config_C::STATIC_SetPage(int page)
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.InitDescription
-// (Net, NetReliable, NetRequest, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FString>         DescriptionList                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -141,11 +139,11 @@ void UBPW_UI_Config_C::InitDescription(TArray<struct FString>* DescriptionList)
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.SetConfigName
-// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FString>         NameList                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBPW_UI_Config_C::STATIC_SetConfigName(TArray<struct FString>* NameList)
+void UBPW_UI_Config_C::SetConfigName(TArray<struct FString>* NameList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config.BPW_UI_Config_C.SetConfigName");
 
@@ -163,11 +161,11 @@ void UBPW_UI_Config_C::STATIC_SetConfigName(TArray<struct FString>* NameList)
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.FocusButtonIndex
-// (NetReliable, NetRequest, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_C::STATIC_FocusButtonIndex(int Index)
+void UBPW_UI_Config_C::FocusButtonIndex(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config.BPW_UI_Config_C.FocusButtonIndex");
 
@@ -183,11 +181,11 @@ void UBPW_UI_Config_C::STATIC_FocusButtonIndex(int Index)
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.PreConstruct
-// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_C::STATIC_PreConstruct(bool IsDesignTime)
+void UBPW_UI_Config_C::PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config.BPW_UI_Config_C.PreConstruct");
 
@@ -203,7 +201,7 @@ void UBPW_UI_Config_C::STATIC_PreConstruct(bool IsDesignTime)
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.Construct
-// (Net, NetRequest, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_UI_Config_C::Construct()
 {
@@ -220,7 +218,7 @@ void UBPW_UI_Config_C::Construct()
 
 
 // Function BPW_UI_Config.BPW_UI_Config_C.ExecuteUbergraph_BPW_UI_Config
-// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

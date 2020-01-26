@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function DebugACActor.DebugACActor_C.UserConstructionScript
-// (Net, NetRequest, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ADebugACActor_C::STATIC_UserConstructionScript()
+void ADebugACActor_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DebugACActor.DebugACActor_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ADebugACActor_C::STATIC_UserConstructionScript()
 
 
 // Function DebugACActor.DebugACActor_C.ReceiveBeginPlay
-// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ADebugACActor_C::ReceiveBeginPlay()
 {
@@ -48,7 +48,7 @@ void ADebugACActor_C::ReceiveBeginPlay()
 
 
 // Function DebugACActor.DebugACActor_C.ExecuteUbergraph_DebugACActor
-// (Exec, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

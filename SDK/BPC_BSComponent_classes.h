@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,18 +34,18 @@ public:
 
 	void IntToGameTime(int Value, float* GameTime);
 	void ParseCurrentStepBsSchedule();
-	void STATIC_ResetEventCount(int newEventCount);
-	void STATIC_EventOnEnd(bool interrupted);
-	void STATIC_StringToGameTime(const struct FString& Time_String_, bool* IsNumeric, float* GameTime);
+	void ResetEventCount(int newEventCount);
+	void EventOnEnd(bool interrupted);
+	void StringToGameTime(const struct FString& Time_String_, bool* IsNumeric, float* GameTime);
 	void ReceiveBeginPlay();
 	void OnStartBS();
-	void STATIC_InitializeBSTalk(class US3TalkDataListBase* TalkDataList);
-	void STATIC_OnStepChanged(int SetSteps);
-	void STATIC_OnBsEnableScheduleEvent(float receiveTime);
-	void STATIC_OnBsCountScheduleEvent(float receiveTime);
-	void STATIC_OnReceiveTimeEvent(int EventIndex);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BPC_BSComponent(int EntryPoint);
+	void InitializeBSTalk(class US3TalkDataListBase* TalkDataList);
+	void OnStepChanged(int SetSteps);
+	void OnBsEnableScheduleEvent(float receiveTime);
+	void OnBsCountScheduleEvent(float receiveTime);
+	void OnReceiveTimeEvent(int EventIndex);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ExecuteUbergraph_BPC_BSComponent(int EntryPoint);
 	void OnEndTalkEvent__DelegateSignature(class AActor* Actor);
 };
 

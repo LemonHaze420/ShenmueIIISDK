@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,8 +27,8 @@ public:
 
 
 	void StateEnter(float Delta, bool* bProcessing);
-	void STATIC_StateUpdate(float Delta, bool* bDummy);
-	void STATIC_UpdateTransitions(float DeltaSeconds);
+	void StateUpdate(float Delta, bool* bDummy);
+	void UpdateTransitions(float DeltaSeconds);
 	void ExecuteUbergraph_BP_State_Follow_UsePOI(int EntryPoint);
 };
 

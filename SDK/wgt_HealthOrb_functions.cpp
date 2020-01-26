@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_HealthOrb.wgt_HealthOrb_C.SetFullTex
-// (NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              FullTexture                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void Uwgt_HealthOrb_C::SetFullTex(class UTexture2D* FullTexture)
 
 
 // Function wgt_HealthOrb.wgt_HealthOrb_C.SetFillRatio
-// (Net, NetReliable, NetRequest, Exec, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          FillRatio                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -58,12 +58,12 @@ void Uwgt_HealthOrb_C::SetFillRatio(float FillRatio, bool* Changed)
 
 
 // Function wgt_HealthOrb.wgt_HealthOrb_C.SetScaleRatio
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ScaleRatio                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HealthOrb_C::STATIC_SetScaleRatio(float ScaleRatio, bool* Changed)
+void Uwgt_HealthOrb_C::SetScaleRatio(float ScaleRatio, bool* Changed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HealthOrb.wgt_HealthOrb_C.SetScaleRatio");
 
@@ -82,7 +82,7 @@ void Uwgt_HealthOrb_C::STATIC_SetScaleRatio(float ScaleRatio, bool* Changed)
 
 
 // Function wgt_HealthOrb.wgt_HealthOrb_C.SetUse
-// (Net, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Use                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -102,16 +102,15 @@ void Uwgt_HealthOrb_C::SetUse(bool Use)
 
 
 // Function wgt_HealthOrb.wgt_HealthOrb_C.UpdateIcon
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_HealthOrb_C::STATIC_UpdateIcon()
+void Uwgt_HealthOrb_C::UpdateIcon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HealthOrb.wgt_HealthOrb_C.UpdateIcon");
 
 	Uwgt_HealthOrb_C_UpdateIcon_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,7 +119,7 @@ void Uwgt_HealthOrb_C::STATIC_UpdateIcon()
 
 
 // Function wgt_HealthOrb.wgt_HealthOrb_C.Construct
-// (Net, Exec, Event, NetResponse, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_HealthOrb_C::Construct()
 {
@@ -137,11 +136,11 @@ void Uwgt_HealthOrb_C::Construct()
 
 
 // Function wgt_HealthOrb.wgt_HealthOrb_C.ExecuteUbergraph_wgt_HealthOrb
-// (Net, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HealthOrb_C::STATIC_ExecuteUbergraph_wgt_HealthOrb(int EntryPoint)
+void Uwgt_HealthOrb_C::ExecuteUbergraph_wgt_HealthOrb(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HealthOrb.wgt_HealthOrb_C.ExecuteUbergraph_wgt_HealthOrb");
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.FlatteningMorph
-// (Exec, Event, NetResponse, Static, NetMulticast, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_SupportNPC_C::STATIC_FlatteningMorph()
+void ABP_MiniGame_SupportNPC_C::FlatteningMorph()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.FlatteningMorph");
 
@@ -31,7 +31,7 @@ void ABP_MiniGame_SupportNPC_C::STATIC_FlatteningMorph()
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.IsPlayingLabelVoice
-// (Net, NetRequest, Exec, NetResponse, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Playing                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -53,14 +53,14 @@ void ABP_MiniGame_SupportNPC_C::IsPlayingLabelVoice(bool* Playing)
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.GetActionData
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsSuccess                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Just                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Unbeli                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_MG_SupportNPCAction Data                           (Parm, OutParm)
 
-void ABP_MiniGame_SupportNPC_C::STATIC_GetActionData(bool IsSuccess, bool Just, bool Unbeli, struct FST_MG_SupportNPCAction* Data)
+void ABP_MiniGame_SupportNPC_C::GetActionData(bool IsSuccess, bool Just, bool Unbeli, struct FST_MG_SupportNPCAction* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.GetActionData");
 
@@ -81,11 +81,11 @@ void ABP_MiniGame_SupportNPC_C::STATIC_GetActionData(bool IsSuccess, bool Just, 
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.SetLookAtLocation
-// (Net, NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 LookAtLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_MiniGame_SupportNPC_C::STATIC_SetLookAtLocation(const struct FVector& LookAtLocation)
+void ABP_MiniGame_SupportNPC_C::SetLookAtLocation(const struct FVector& LookAtLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.SetLookAtLocation");
 
@@ -93,7 +93,6 @@ void ABP_MiniGame_SupportNPC_C::STATIC_SetLookAtLocation(const struct FVector& L
 	params.LookAtLocation = LookAtLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +101,7 @@ void ABP_MiniGame_SupportNPC_C::STATIC_SetLookAtLocation(const struct FVector& L
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.UpdateClipper
-// (NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_SupportNPC_C::UpdateClipper()
 {
@@ -119,12 +118,12 @@ void ABP_MiniGame_SupportNPC_C::UpdateClipper()
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.PlayScript
-// (Net, Native, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_SupportNPC_C::STATIC_PlayScript(const struct FName& Label, const struct FName& CharaName)
+void ABP_MiniGame_SupportNPC_C::PlayScript(const struct FName& Label, const struct FName& CharaName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.PlayScript");
 
@@ -133,7 +132,6 @@ void ABP_MiniGame_SupportNPC_C::STATIC_PlayScript(const struct FName& Label, con
 	params.CharaName = CharaName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,7 +140,7 @@ void ABP_MiniGame_SupportNPC_C::STATIC_PlayScript(const struct FName& Label, con
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.SetMesh
-// (NetReliable, Exec, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMesh*           NewMesh                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -162,13 +160,13 @@ void ABP_MiniGame_SupportNPC_C::SetMesh(class USkeletalMesh* NewMesh)
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.ChangeState
-// (NetReliable, Native, Event, NetResponse, Static, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsSuccess                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsJust                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsUnbeli                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_SupportNPC_C::STATIC_ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli)
+void ABP_MiniGame_SupportNPC_C::ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.ChangeState");
 
@@ -178,7 +176,6 @@ void ABP_MiniGame_SupportNPC_C::STATIC_ChangeState(bool IsSuccess, bool IsJust, 
 	params.IsUnbeli = IsUnbeli;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,11 +184,11 @@ void ABP_MiniGame_SupportNPC_C::STATIC_ChangeState(bool IsSuccess, bool IsJust, 
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.SetEnabled
-// (NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_SupportNPC_C::STATIC_SetEnabled(bool Enabled)
+void ABP_MiniGame_SupportNPC_C::SetEnabled(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.SetEnabled");
 
@@ -207,9 +204,9 @@ void ABP_MiniGame_SupportNPC_C::STATIC_SetEnabled(bool Enabled)
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.UserConstructionScript
-// (NetReliable, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_SupportNPC_C::STATIC_UserConstructionScript()
+void ABP_MiniGame_SupportNPC_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.UserConstructionScript");
 
@@ -224,7 +221,7 @@ void ABP_MiniGame_SupportNPC_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.ReceiveBeginPlay
-// (Net, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_SupportNPC_C::ReceiveBeginPlay()
 {
@@ -233,7 +230,6 @@ void ABP_MiniGame_SupportNPC_C::ReceiveBeginPlay()
 	ABP_MiniGame_SupportNPC_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,11 +238,11 @@ void ABP_MiniGame_SupportNPC_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.ReceiveTick
-// (NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_SupportNPC_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_SupportNPC_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.ReceiveTick");
 
@@ -254,7 +250,6 @@ void ABP_MiniGame_SupportNPC_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -263,13 +258,13 @@ void ABP_MiniGame_SupportNPC_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.Event_ChangeState
-// (NetReliable, Native, NetResponse, Static, Public, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsSuccess                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsJust                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsUnbeli                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_SupportNPC_C::STATIC_Event_ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli)
+void ABP_MiniGame_SupportNPC_C::Event_ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.Event_ChangeState");
 
@@ -279,7 +274,6 @@ void ABP_MiniGame_SupportNPC_C::STATIC_Event_ChangeState(bool IsSuccess, bool Is
 	params.IsUnbeli = IsUnbeli;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -288,7 +282,7 @@ void ABP_MiniGame_SupportNPC_C::STATIC_Event_ChangeState(bool IsSuccess, bool Is
 
 
 // Function BP_MiniGame_SupportNPC.BP_MiniGame_SupportNPC_C.ExecuteUbergraph_BP_MiniGame_SupportNPC
-// (Exec, Event, NetMulticast, Public, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

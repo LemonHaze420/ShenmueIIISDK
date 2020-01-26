@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,16 +41,16 @@ public:
 	void FindFirstScript(bool* Success);
 	void GetNPCCharacter(class ABP_ScheduleNPC_C** NPC);
 	void GetCheatManager(class UBP_CheatManager_C** CheatManager);
-	void STATIC_SelectScript(const struct FString& ScriptName);
-	void STATIC_CanTalk(class US3NPCDefinition* Definition, bool* CAN);
+	void SelectScript(const struct FString& ScriptName);
+	void CanTalk(class US3NPCDefinition* Definition, bool* CAN);
 	void UpdateScriptList(const struct FString& CharaName);
 	void MakeNPC_List();
 	class UWidget* On_NPC_List_GenerateWidget_1(const struct FString& Item);
 	void OnLoaded_DF6DB0F24FB757ADD0DEB9B481A12BEF(class UObject* Loaded);
 	void Construct();
-	void STATIC_BndEvt__NPC_List_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void BndEvt__NPC_List_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void BndEvt__S3Button_0_K2Node_ComponentBoundEvent_121_OnButtonPressedEvent__DelegateSignature();
-	void STATIC_BndEvt__ScriptList_K2Node_ComponentBoundEvent_137_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void BndEvt__ScriptList_K2Node_ComponentBoundEvent_137_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void EndTalk();
 	void BndEvt__FirstButton_K2Node_ComponentBoundEvent_158_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__S3Button_0_K2Node_ComponentBoundEvent_114_OnButtonClickedEvent__DelegateSignature();

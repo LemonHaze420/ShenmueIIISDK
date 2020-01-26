@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -137,28 +137,8 @@ public:
 		return ptr;
 	}
 
-	inline void ProcessEvent(class UFunction* function, void* parms)
-	{
-		return GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 65)(this, function, parms);
-	}
 
 	void ExecuteUbergraph(int EntryPoint);
-};
-
-
-// Class CoreUObject.Field
-// 0x0008 (0x0030 - 0x0028)
-class UField : public UObject
-{
-public:
-	class UField*                                      Next;                                                     // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.Field");
-		return ptr;
-	}
-
 };
 
 
@@ -172,6 +152,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.Package");
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.Field
+// 0x0008 (0x0030 - 0x0028)
+class UField : public UObject
+{
+public:
+	class UField*                                      Next;                                                     // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.Field");
 		return ptr;
 	}
 
@@ -235,6 +231,22 @@ public:
 };
 
 
+// Class CoreUObject.GCObjectReferencer
+// 0x0038 (0x0060 - 0x0028)
+class UGCObjectReferencer : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0028(0x0038) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.GCObjectReferencer");
+		return ptr;
+	}
+
+};
+
+
 // Class CoreUObject.TextBuffer
 // 0x0028 (0x0050 - 0x0028)
 class UTextBuffer : public UObject
@@ -245,6 +257,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.TextBuffer");
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.ScriptStruct
+// 0x0010 (0x0098 - 0x0088)
+class UScriptStruct : public UStruct
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0088(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.ScriptStruct");
 		return ptr;
 	}
 
@@ -308,6 +336,22 @@ public:
 };
 
 
+// Class CoreUObject.PackageMap
+// 0x00B8 (0x00E0 - 0x0028)
+class UPackageMap : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x0028(0x00B8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.PackageMap");
+		return ptr;
+	}
+
+};
+
+
 // Class CoreUObject.Enum
 // 0x0030 (0x0060 - 0x0030)
 class UEnum : public UField
@@ -318,38 +362,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.Enum");
-		return ptr;
-	}
-
-};
-
-
-// Class CoreUObject.ScriptStruct
-// 0x0010 (0x0098 - 0x0088)
-class UScriptStruct : public UStruct
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0088(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.ScriptStruct");
-		return ptr;
-	}
-
-};
-
-
-// Class CoreUObject.GCObjectReferencer
-// 0x0038 (0x0060 - 0x0028)
-class UGCObjectReferencer : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0028(0x0038) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.GCObjectReferencer");
 		return ptr;
 	}
 
@@ -388,22 +400,6 @@ public:
 };
 
 
-// Class CoreUObject.PackageMap
-// 0x00B8 (0x00E0 - 0x0028)
-class UPackageMap : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0xB8];                                      // 0x0028(0x00B8) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.PackageMap");
-		return ptr;
-	}
-
-};
-
-
 // Class CoreUObject.LinkerPlaceholderClass
 // 0x01B8 (0x03B0 - 0x01F8)
 class ULinkerPlaceholderClass : public UClass
@@ -414,22 +410,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.LinkerPlaceholderClass");
-		return ptr;
-	}
-
-};
-
-
-// Class CoreUObject.LinkerPlaceholderExportObject
-// 0x00C8 (0x00F0 - 0x0028)
-class ULinkerPlaceholderExportObject : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0xC8];                                      // 0x0028(0x00C8) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.LinkerPlaceholderExportObject");
 		return ptr;
 	}
 
@@ -462,6 +442,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.MetaData");
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.LinkerPlaceholderExportObject
+// 0x00C8 (0x00F0 - 0x0028)
+class ULinkerPlaceholderExportObject : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0xC8];                                      // 0x0028(0x00C8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.LinkerPlaceholderExportObject");
 		return ptr;
 	}
 
@@ -578,6 +574,22 @@ public:
 };
 
 
+// Class CoreUObject.ClassProperty
+// 0x0008 (0x0080 - 0x0078)
+class UClassProperty : public UObjectProperty
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0078(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.ClassProperty");
+		return ptr;
+	}
+
+};
+
+
 // Class CoreUObject.DelegateProperty
 // 0x0008 (0x0078 - 0x0070)
 class UDelegateProperty : public UProperty
@@ -588,6 +600,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.DelegateProperty");
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.DoubleProperty
+// 0x0000 (0x0070 - 0x0070)
+class UDoubleProperty : public UNumericProperty
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.DoubleProperty");
 		return ptr;
 	}
 
@@ -624,21 +651,6 @@ public:
 };
 
 
-// Class CoreUObject.DoubleProperty
-// 0x0000 (0x0070 - 0x0070)
-class UDoubleProperty : public UNumericProperty
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.DoubleProperty");
-		return ptr;
-	}
-
-};
-
-
 // Class CoreUObject.Int16Property
 // 0x0000 (0x0070 - 0x0070)
 class UInt16Property : public UNumericProperty
@@ -669,37 +681,6 @@ public:
 };
 
 
-// Class CoreUObject.Int64Property
-// 0x0000 (0x0070 - 0x0070)
-class UInt64Property : public UNumericProperty
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.Int64Property");
-		return ptr;
-	}
-
-};
-
-
-// Class CoreUObject.ClassProperty
-// 0x0008 (0x0080 - 0x0078)
-class UClassProperty : public UObjectProperty
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0078(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.ClassProperty");
-		return ptr;
-	}
-
-};
-
-
 // Class CoreUObject.InterfaceProperty
 // 0x0008 (0x0078 - 0x0070)
 class UInterfaceProperty : public UProperty
@@ -710,6 +691,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.InterfaceProperty");
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.LazyObjectProperty
+// 0x0000 (0x0078 - 0x0078)
+class ULazyObjectProperty : public UObjectPropertyBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.LazyObjectProperty");
 		return ptr;
 	}
 
@@ -732,21 +728,6 @@ public:
 };
 
 
-// Class CoreUObject.LazyObjectProperty
-// 0x0000 (0x0078 - 0x0078)
-class ULazyObjectProperty : public UObjectPropertyBase
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.LazyObjectProperty");
-		return ptr;
-	}
-
-};
-
-
 // Class CoreUObject.MulticastDelegateProperty
 // 0x0008 (0x0078 - 0x0070)
 class UMulticastDelegateProperty : public UProperty
@@ -757,6 +738,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.MulticastDelegateProperty");
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.NameProperty
+// 0x0000 (0x0070 - 0x0070)
+class UNameProperty : public UProperty
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.NameProperty");
 		return ptr;
 	}
 
@@ -825,21 +821,6 @@ public:
 };
 
 
-// Class CoreUObject.UInt32Property
-// 0x0000 (0x0070 - 0x0070)
-class UUInt32Property : public UNumericProperty
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.UInt32Property");
-		return ptr;
-	}
-
-};
-
-
 // Class CoreUObject.StructProperty
 // 0x0008 (0x0078 - 0x0070)
 class UStructProperty : public UProperty
@@ -871,6 +852,21 @@ public:
 };
 
 
+// Class CoreUObject.UInt32Property
+// 0x0000 (0x0070 - 0x0070)
+class UUInt32Property : public UNumericProperty
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.UInt32Property");
+		return ptr;
+	}
+
+};
+
+
 // Class CoreUObject.UInt64Property
 // 0x0000 (0x0070 - 0x0070)
 class UUInt64Property : public UNumericProperty
@@ -880,21 +876,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CoreUObject.UInt64Property");
-		return ptr;
-	}
-
-};
-
-
-// Class CoreUObject.TextProperty
-// 0x0000 (0x0070 - 0x0070)
-class UTextProperty : public UProperty
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.TextProperty");
 		return ptr;
 	}
 
@@ -916,15 +897,30 @@ public:
 };
 
 
-// Class CoreUObject.NameProperty
+// Class CoreUObject.TextProperty
 // 0x0000 (0x0070 - 0x0070)
-class UNameProperty : public UProperty
+class UTextProperty : public UProperty
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CoreUObject.NameProperty");
+		static auto ptr = UObject::FindClass("Class CoreUObject.TextProperty");
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.Int64Property
+// 0x0000 (0x0070 - 0x0070)
+class UInt64Property : public UNumericProperty
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CoreUObject.Int64Property");
 		return ptr;
 	}
 

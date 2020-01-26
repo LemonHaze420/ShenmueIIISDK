@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.InitDataTime
-// (NetReliable, NetRequest, Native, Event, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,7 +25,6 @@ bool ABP_S3WorldTimekeeper_C::InitDataTime()
 	ABP_S3WorldTimekeeper_C_InitDataTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,16 +35,15 @@ bool ABP_S3WorldTimekeeper_C::InitDataTime()
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, Static, Public, Delegate, HasOutParms, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3WorldTimekeeper_C::STATIC_UserConstructionScript()
+void ABP_S3WorldTimekeeper_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.UserConstructionScript");
 
 	ABP_S3WorldTimekeeper_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,9 +52,9 @@ void ABP_S3WorldTimekeeper_C::STATIC_UserConstructionScript()
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ReceiveBeginPlay
-// (NetReliable, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_S3WorldTimekeeper_C::STATIC_ReceiveBeginPlay()
+void ABP_S3WorldTimekeeper_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ReceiveBeginPlay");
 
@@ -71,11 +69,11 @@ void ABP_S3WorldTimekeeper_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ReceiveEndPlay
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3WorldTimekeeper_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3WorldTimekeeper_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ReceiveEndPlay");
 
@@ -83,7 +81,6 @@ void ABP_S3WorldTimekeeper_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> 
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,9 +89,9 @@ void ABP_S3WorldTimekeeper_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> 
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.WaitPlay
-// (Net, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3WorldTimekeeper_C::STATIC_WaitPlay()
+void ABP_S3WorldTimekeeper_C::WaitPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.WaitPlay");
 
@@ -109,7 +106,7 @@ void ABP_S3WorldTimekeeper_C::STATIC_WaitPlay()
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ExecuteUbergraph_BP_S3WorldTimekeeper
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, BlueprintCallable)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -121,7 +118,6 @@ void ABP_S3WorldTimekeeper_C::ExecuteUbergraph_BP_S3WorldTimekeeper(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

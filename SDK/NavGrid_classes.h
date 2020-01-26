@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,7 +53,7 @@ public:
 	bool FindPath(const struct FVector& RelativeStart, const struct FVector& RelativeGoal, float AcceptanceRadius, bool UseSingleLineTracingForFindStartAndGoal, float TraceHalfHeight, float TraceRadius, TArray<int>* OutNodes);
 	int FindClosestNodeFromDirection(const struct FVector& RelativeLocation, const struct FVector& RelativeFromDirection, bool OnlyNodesWithLinks, bool UseSingleLineTracing, float TraceHalfHeight, float TraceRadius);
 	int FindClosestNode(const struct FVector& RelativeLocation, bool OnlyNodesWithLinks, bool UseSingleLineTracing, float TraceHalfHeight, float TraceRadius);
-	class UAIAsyncTaskBlueprintProxy* CreateNavGridMoveToProxyObject(class UObject* WorldContextObject, class APawn* Pawn, const struct FVector& Destination, class AActor* TargetActor, float AcceptanceRadius, bool bStopOnOverlap);
+	class UAIAsyncTaskBlueprintProxy* STATIC_CreateNavGridMoveToProxyObject(class UObject* WorldContextObject, class APawn* Pawn, const struct FVector& Destination, class AActor* TargetActor, float AcceptanceRadius, bool bStopOnOverlap);
 	void AddLink(int NodeIndex, int OtherNodeIndex, bool bBlocked);
 };
 

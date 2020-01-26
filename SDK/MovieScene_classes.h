@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,21 +100,6 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneNameableTrack
-// 0x0000 (0x0058 - 0x0058)
-class UMovieSceneNameableTrack : public UMovieSceneTrack
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneNameableTrack");
-		return ptr;
-	}
-
-};
-
-
 // Class MovieScene.MovieSceneSubSection
 // 0x0070 (0x0150 - 0x00E0)
 class UMovieSceneSubSection : public UMovieSceneSection
@@ -134,6 +119,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneSubSection");
+		return ptr;
+	}
+
+};
+
+
+// Class MovieScene.MovieSceneNameableTrack
+// 0x0000 (0x0058 - 0x0058)
+class UMovieSceneNameableTrack : public UMovieSceneTrack
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneNameableTrack");
 		return ptr;
 	}
 
@@ -254,18 +254,18 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneBuiltInEasingFunction
-// 0x0010 (0x0038 - 0x0028)
-class UMovieSceneBuiltInEasingFunction : public UObject
+// Class MovieScene.MovieSceneBindingOverrides
+// 0x0070 (0x0098 - 0x0028)
+class UMovieSceneBindingOverrides : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	EMovieSceneBuiltInEasing                           Type;                                                     // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+	TArray<struct FMovieSceneBindingOverrideData>      BindingData;                                              // 0x0030(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x58];                                      // 0x0040(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneBuiltInEasingFunction");
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOverrides");
 		return ptr;
 	}
 
@@ -302,18 +302,35 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneBindingOverrides
-// 0x0070 (0x0098 - 0x0028)
-class UMovieSceneBindingOverrides : public UObject
+// Class MovieScene.MovieSceneBuiltInEasingFunction
+// 0x0010 (0x0038 - 0x0028)
+class UMovieSceneBuiltInEasingFunction : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	TArray<struct FMovieSceneBindingOverrideData>      BindingData;                                              // 0x0030(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x58];                                      // 0x0040(0x0058) MISSED OFFSET
+	EMovieSceneBuiltInEasing                           Type;                                                     // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneBindingOverrides");
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneBuiltInEasingFunction");
+		return ptr;
+	}
+
+};
+
+
+// Class MovieScene.MovieSceneEasingExternalCurve
+// 0x0010 (0x0038 - 0x0028)
+class UMovieSceneEasingExternalCurve : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	class UCurveFloat*                                 Curve;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingExternalCurve");
 		return ptr;
 	}
 
@@ -337,21 +354,6 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneKeyProxy
-// 0x0000 (0x0028 - 0x0028)
-class UMovieSceneKeyProxy : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneKeyProxy");
-		return ptr;
-	}
-
-};
-
-
 // Class MovieScene.MovieSceneFolder
 // 0x0048 (0x0070 - 0x0028)
 class UMovieSceneFolder : public UObject
@@ -372,15 +374,15 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneSegmentCompilerTestSection
-// 0x0000 (0x00E0 - 0x00E0)
-class UMovieSceneSegmentCompilerTestSection : public UMovieSceneSection
+// Class MovieScene.MovieSceneKeyProxy
+// 0x0000 (0x0028 - 0x0028)
+class UMovieSceneKeyProxy : public UInterface
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneSegmentCompilerTestSection");
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneKeyProxy");
 		return ptr;
 	}
 
@@ -405,17 +407,15 @@ public:
 };
 
 
-// Class MovieScene.MovieSceneEasingExternalCurve
-// 0x0010 (0x0038 - 0x0028)
-class UMovieSceneEasingExternalCurve : public UObject
+// Class MovieScene.MovieSceneSegmentCompilerTestSection
+// 0x0000 (0x00E0 - 0x00E0)
+class UMovieSceneSegmentCompilerTestSection : public UMovieSceneSection
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	class UCurveFloat*                                 Curve;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneEasingExternalCurve");
+		static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneSegmentCompilerTestSection");
 		return ptr;
 	}
 

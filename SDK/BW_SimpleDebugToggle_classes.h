@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,13 +36,13 @@ public:
 	ECheckBoxState GetState();
 	struct FText GetParameterName();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature();
 	void PreConstruct(bool IsDesignTime);
 	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
 	void BndEvt__BoolValue_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
 	void ExecuteUbergraph_BW_SimpleDebugToggle(int EntryPoint);
-	void STATIC_OnFocused__DelegateSignature(class UWidget* Widget);
-	void STATIC_OnChangedByUser__DelegateSignature(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue);
+	void OnFocused__DelegateSignature(class UWidget* Widget);
+	void OnChangedByUser__DelegateSignature(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue);
 };
 
 

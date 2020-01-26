@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_PCGroundSensor.BPC_PCGroundSensor_C.Update
-// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_PCGroundSensor_C::Update()
 {
@@ -31,9 +31,9 @@ void UBPC_PCGroundSensor_C::Update()
 
 
 // Function BPC_PCGroundSensor.BPC_PCGroundSensor_C.ReceiveBeginPlay
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_PCGroundSensor_C::STATIC_ReceiveBeginPlay()
+void UBPC_PCGroundSensor_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PCGroundSensor.BPC_PCGroundSensor_C.ReceiveBeginPlay");
 
@@ -48,7 +48,7 @@ void UBPC_PCGroundSensor_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_PCGroundSensor.BPC_PCGroundSensor_C.ExecuteUbergraph_BPC_PCGroundSensor
-// (Net, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

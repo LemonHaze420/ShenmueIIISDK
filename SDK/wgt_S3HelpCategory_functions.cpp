@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3HelpCategory.wgt_S3HelpCategory_C.Construct
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_S3HelpCategory_C::STATIC_Construct()
+void Uwgt_S3HelpCategory_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpCategory.wgt_S3HelpCategory_C.Construct");
 
 	Uwgt_S3HelpCategory_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,11 +31,11 @@ void Uwgt_S3HelpCategory_C::STATIC_Construct()
 
 
 // Function wgt_S3HelpCategory.wgt_S3HelpCategory_C.ExecuteUbergraph_wgt_S3HelpCategory
-// (Net, NetRequest, Exec, Event, Static, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3HelpCategory_C::STATIC_ExecuteUbergraph_wgt_S3HelpCategory(int EntryPoint)
+void Uwgt_S3HelpCategory_C::ExecuteUbergraph_wgt_S3HelpCategory(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpCategory.wgt_S3HelpCategory_C.ExecuteUbergraph_wgt_S3HelpCategory");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -91,7 +91,7 @@ public:
 
 	void ResetPartnerCollision();
 	void IgnorePartnerCollision();
-	void STATIC_StartActionBlock();
+	void StartActionBlock();
 	void ReleaseActionBlock();
 	void SetLookAtSpline(bool bCanLookAt);
 	void BindTalkEvents(bool bBind);
@@ -100,11 +100,11 @@ public:
 	bool Lead_IsCompleted();
 	bool Lead_StartNextWaitEvent();
 	bool Lead_MessageCompleted();
-	void STATIC_Lead_GetNextPointDistance(float* Next);
-	void STATIC_Lead_CalculateFollowerSpeed(float* Speed, float* TargetMatchAmt);
-	void STATIC_CheckLocationOnStairs(const struct FVector& Location, bool* OnStairs);
+	void Lead_GetNextPointDistance(float* Next);
+	void Lead_CalculateFollowerSpeed(float* Speed, float* TargetMatchAmt);
+	void CheckLocationOnStairs(const struct FVector& Location, bool* OnStairs);
 	struct FVector GetTalkLocation();
-	void STATIC_Pair(class ABP_S3_Character_Adventure_C* NewPartner);
+	void Pair(class ABP_S3_Character_Adventure_C* NewPartner);
 	void Unpair();
 	void SetPartnerCharacter(class ACharacter* InputPin, bool* bValid);
 	void Lead_EstimateSplineTravelDistance(class ACharacter* Character, float* Estimation, float* SqrDistanceFromSpline, bool* ProbablyCloseEnough);
@@ -112,39 +112,39 @@ public:
 	void ResumeMovement();
 	void StopMovement();
 	class USkeletalMesh* GetInitialSkeletalMesh();
-	void STATIC_TestCanSeeFollower(bool* OutCanSee);
-	void STATIC_Lead_WaitForFollower_TryTurnAndReact(bool bForwardOnly);
-	void STATIC_Lead_WaitForFollower_StartWave(float TurnAngle, float DistSqr);
+	void TestCanSeeFollower(bool* OutCanSee);
+	void Lead_WaitForFollower_TryTurnAndReact(bool bForwardOnly);
+	void Lead_WaitForFollower_StartWave(float TurnAngle, float DistSqr);
 	void Lead_WaitForFollower_StartTurn(float TurnAngle);
 	void Lead_WaitForFollower_StartTurnCooldown(bool JustWaved);
 	void GetRelativeAngleToLocation(const struct FVector& ToLocation, float* OutAngle);
-	void STATIC_GetRelativeAngleToFollower(float* OutAngle);
+	void GetRelativeAngleToFollower(float* OutAngle);
 	void GetDirectSqrDistanceToFollower(float* Distance);
-	void STATIC_SetPathMassagingEnabled(bool bNewValue);
+	void SetPathMassagingEnabled(bool bNewValue);
 	void Lead_UpdateDistanceTravelled();
-	void STATIC_Lead_CalculateSpeed();
-	void STATIC_CanFollow(bool* isFollow);
+	void Lead_CalculateSpeed();
+	void CanFollow(bool* isFollow);
 	void ChangeCollision(class AActor* Actor, bool Enable);
-	void STATIC_Follow_IsBeingObstacle(bool* bIsObstacle);
+	void Follow_IsBeingObstacle(bool* bIsObstacle);
 	void CheckStrayOff(const struct FVector& SplinePos, float Distance, bool* ForceMove);
-	void STATIC_Lead_WaitForFollower_Tick();
-	void STATIC_NextPoint();
+	void Lead_WaitForFollower_Tick();
+	void NextPoint();
 	void setFollwFlags(bool follow, bool syncGameinstance);
 	void NpcLeadActorExit();
 	void NpcLeadActorInit(const struct FVector& SpawnPos, float SpawnRot, bool FollowFlag, class ANPC_SplineMoveActor_C* NpcSplineMoveActorRef);
-	void STATIC_UserConstructionScript();
-	void STATIC_OnFail_9B54DB094FA168F07F4D998937B7C143(TEnumAsByte<EPathFollowingResult> MovementResult);
-	void STATIC_OnSuccess_9B54DB094FA168F07F4D998937B7C143(TEnumAsByte<EPathFollowingResult> MovementResult);
+	void UserConstructionScript();
+	void OnFail_9B54DB094FA168F07F4D998937B7C143(TEnumAsByte<EPathFollowingResult> MovementResult);
+	void OnSuccess_9B54DB094FA168F07F4D998937B7C143(TEnumAsByte<EPathFollowingResult> MovementResult);
 	void Tick_Lead();
 	void Tick_Follow();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void OnBeginTalk();
 	void OnEndTalk();
 	void UpdatePlayerInBuilding();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void OnHideRequestCounterChange();
-	void STATIC_ExecuteUbergraph_BP_NPCLeadManager(int EntryPoint);
+	void ExecuteUbergraph_BP_NPCLeadManager(int EntryPoint);
 };
 
 

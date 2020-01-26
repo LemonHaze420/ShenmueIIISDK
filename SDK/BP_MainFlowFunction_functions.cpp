@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.ChangeCollision
-// (Net, Native, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           on_off                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Change                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,7 +27,6 @@ void UBP_MainFlowFunction_C::ChangeCollision(bool on_off, bool* Change)
 	params.on_off = on_off;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,7 +38,7 @@ void UBP_MainFlowFunction_C::ChangeCollision(bool on_off, bool* Change)
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.CheckOccurs
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -50,7 +49,6 @@ void UBP_MainFlowFunction_C::CheckOccurs(bool* Result)
 	UBP_MainFlowFunction_C_CheckOccurs_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,7 +60,7 @@ void UBP_MainFlowFunction_C::CheckOccurs(bool* Result)
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.ExecUnbind
-// (NetRequest, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_MainFlowFunction_C::ExecUnbind()
 {
@@ -79,7 +77,7 @@ void UBP_MainFlowFunction_C::ExecUnbind()
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.TrgEvent_CanTrgEvent
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -101,7 +99,7 @@ void UBP_MainFlowFunction_C::TrgEvent_CanTrgEvent(bool* CAN)
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.TrgEvent_UnbindOnly
-// (Native, Event, NetResponse, MulticastDelegate, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           CarrigeUnbind                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ExecUnbind                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -114,7 +112,6 @@ void UBP_MainFlowFunction_C::TrgEvent_UnbindOnly(bool CarrigeUnbind, bool* ExecU
 	params.CarrigeUnbind = CarrigeUnbind;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,18 +123,17 @@ void UBP_MainFlowFunction_C::TrgEvent_UnbindOnly(bool CarrigeUnbind, bool* ExecU
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.TrgEvent_Exec
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           rc                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MainFlowFunction_C::STATIC_TrgEvent_Exec(bool* rc)
+void UBP_MainFlowFunction_C::TrgEvent_Exec(bool* rc)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowFunction.BP_MainFlowFunction_C.TrgEvent_Exec");
 
 	UBP_MainFlowFunction_C_TrgEvent_Exec_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +145,7 @@ void UBP_MainFlowFunction_C::STATIC_TrgEvent_Exec(bool* rc)
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.TrgEvent_Enable
-// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     TriggerCompo_Name              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -157,7 +153,7 @@ void UBP_MainFlowFunction_C::STATIC_TrgEvent_Exec(bool* rc)
 // TEnumAsByte<EN_MainFlowEventType> EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 UniqueParameta                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UBP_MainFlowFunction_C::STATIC_TrgEvent_Enable(class UPrimitiveComponent* TriggerCompo_Name, const struct FName& EventName, int ControlStatus, TEnumAsByte<EN_MainFlowEventType> EventType, const struct FString& UniqueParameta)
+void UBP_MainFlowFunction_C::TrgEvent_Enable(class UPrimitiveComponent* TriggerCompo_Name, const struct FName& EventName, int ControlStatus, TEnumAsByte<EN_MainFlowEventType> EventType, const struct FString& UniqueParameta)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowFunction.BP_MainFlowFunction_C.TrgEvent_Enable");
 
@@ -169,7 +165,6 @@ void UBP_MainFlowFunction_C::STATIC_TrgEvent_Enable(class UPrimitiveComponent* T
 	params.UniqueParameta = UniqueParameta;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,16 +173,15 @@ void UBP_MainFlowFunction_C::STATIC_TrgEvent_Enable(class UPrimitiveComponent* T
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.TrgEvent_Manager
-// (NetReliable, Native, Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_MainFlowFunction_C::STATIC_TrgEvent_Manager()
+void UBP_MainFlowFunction_C::TrgEvent_Manager()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowFunction.BP_MainFlowFunction_C.TrgEvent_Manager");
 
 	UBP_MainFlowFunction_C_TrgEvent_Manager_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,16 +190,15 @@ void UBP_MainFlowFunction_C::STATIC_TrgEvent_Manager()
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.CallTrgEvent
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_MainFlowFunction_C::STATIC_CallTrgEvent()
+void UBP_MainFlowFunction_C::CallTrgEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowFunction.BP_MainFlowFunction_C.CallTrgEvent");
 
 	UBP_MainFlowFunction_C_CallTrgEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -214,14 +207,14 @@ void UBP_MainFlowFunction_C::STATIC_CallTrgEvent()
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.OnEndOverlap
-// (Net, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MainFlowFunction_C::STATIC_OnEndOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void UBP_MainFlowFunction_C::OnEndOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowFunction.BP_MainFlowFunction_C.OnEndOverlap");
 
@@ -232,7 +225,6 @@ void UBP_MainFlowFunction_C::STATIC_OnEndOverlap(class UPrimitiveComponent* Over
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,16 +233,15 @@ void UBP_MainFlowFunction_C::STATIC_OnEndOverlap(class UPrimitiveComponent* Over
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.DoorNotify
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_MainFlowFunction_C::STATIC_DoorNotify()
+void UBP_MainFlowFunction_C::DoorNotify()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowFunction.BP_MainFlowFunction_C.DoorNotify");
 
 	UBP_MainFlowFunction_C_DoorNotify_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,7 +250,7 @@ void UBP_MainFlowFunction_C::STATIC_DoorNotify()
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.AttentionOnAccprd
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 EventId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -271,7 +262,6 @@ void UBP_MainFlowFunction_C::AttentionOnAccprd(const struct FString& EventId)
 	params.EventId = EventId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -280,16 +270,15 @@ void UBP_MainFlowFunction_C::AttentionOnAccprd(const struct FString& EventId)
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.MemoFinish
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_MainFlowFunction_C::STATIC_MemoFinish()
+void UBP_MainFlowFunction_C::MemoFinish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowFunction.BP_MainFlowFunction_C.MemoFinish");
 
 	UBP_MainFlowFunction_C_MemoFinish_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,7 +287,7 @@ void UBP_MainFlowFunction_C::STATIC_MemoFinish()
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.ElapsedTime
-// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   CutsceneName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -310,7 +299,6 @@ void UBP_MainFlowFunction_C::ElapsedTime(const struct FName& CutsceneName)
 	params.CutsceneName = CutsceneName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -319,7 +307,7 @@ void UBP_MainFlowFunction_C::ElapsedTime(const struct FName& CutsceneName)
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.NewMessage
-// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowMsgDestinationID> Current_Destination_ID         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -331,7 +319,6 @@ void UBP_MainFlowFunction_C::NewMessage(TEnumAsByte<EN_MainFlowMsgDestinationID>
 	params.Current_Destination_ID = Current_Destination_ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -340,12 +327,12 @@ void UBP_MainFlowFunction_C::NewMessage(TEnumAsByte<EN_MainFlowMsgDestinationID>
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.FlagChanged
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MainFlowFunction_C::STATIC_FlagChanged(int ArrayIndex, int SetFlags)
+void UBP_MainFlowFunction_C::FlagChanged(int ArrayIndex, int SetFlags)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowFunction.BP_MainFlowFunction_C.FlagChanged");
 
@@ -354,7 +341,6 @@ void UBP_MainFlowFunction_C::STATIC_FlagChanged(int ArrayIndex, int SetFlags)
 	params.SetFlags = SetFlags;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -363,7 +349,7 @@ void UBP_MainFlowFunction_C::STATIC_FlagChanged(int ArrayIndex, int SetFlags)
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.OnBeginOverlap
-// (Net, NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -393,7 +379,7 @@ void UBP_MainFlowFunction_C::OnBeginOverlap(class UPrimitiveComponent* Overlappe
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.ItemChange
-// (Net, Event, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NewNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -417,7 +403,7 @@ void UBP_MainFlowFunction_C::ItemChange(const struct FName& ItemId, int NewNum, 
 
 
 // Function BP_MainFlowFunction.BP_MainFlowFunction_C.ExecuteUbergraph_BP_MainFlowFunction
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Protected, NetServer, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -429,7 +415,6 @@ void UBP_MainFlowFunction_C::ExecuteUbergraph_BP_MainFlowFunction(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

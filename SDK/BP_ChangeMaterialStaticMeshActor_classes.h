@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,14 +35,14 @@ public:
 	}
 
 
-	void STATIC_ChangeMaterial();
-	void STATIC_CheckTimeEvent();
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ChangeTimeEvent(ES3DayTimeEvent EventType);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_BP_ChangeMaterialStaticMeshActor(int EntryPoint);
+	void ChangeMaterial();
+	void CheckTimeEvent();
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ChangeTimeEvent(ES3DayTimeEvent EventType);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BP_ChangeMaterialStaticMeshActor(int EntryPoint);
 };
 
 

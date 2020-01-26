@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,15 +39,15 @@ public:
 
 	void ModPlayerForTeleport(bool ToTeleport);
 	void FadePlayer(bool Fade);
-	void STATIC_SetPortalTransform(const struct FTransform& Transform);
-	void STATIC_GetPortalTransform(struct FTransform* Transform);
-	void STATIC_isAvailable_player_(class AActor* OtherActor, bool* Result);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReturnPlayerState();
+	void SetPortalTransform(const struct FTransform& Transform);
+	void GetPortalTransform(struct FTransform* Transform);
+	void isAvailable_player_(class AActor* OtherActor, bool* Result);
+	void ReceiveBeginPlay();
+	void ReturnPlayerState();
 	void onTeleport(class AActor* OtherActor);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BP_Gimmick_warpPortalComp(int EntryPoint);
-	void STATIC_teleport__DelegateSignature(class AActor* OtherActor);
+	void ExecuteUbergraph_BP_Gimmick_warpPortalComp(int EntryPoint);
+	void teleport__DelegateSignature(class AActor* OtherActor);
 };
 
 

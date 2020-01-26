@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void STATIC_ChangeRow(int RowIndex);
+	void ChangeRow(int RowIndex);
 	void InitClothingLine(const struct FName& MeshName, const struct FST_ClothingCategory& Category, TMap<EClothPartsType, struct FS3ClothPartsArray> PartsArray, TArray<int>* SelectIndex);
 	void InitIconButton();
 };

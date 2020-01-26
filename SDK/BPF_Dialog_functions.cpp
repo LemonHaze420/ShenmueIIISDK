@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Dialog.BPF_Dialog_C.CreateItemDialogText
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FName>           InLabels                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ShowLabels                     (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Dialog_C::CreateItemDialogText(class UObject* __WorldContext, TArray<struct FName>* InLabels, TArray<struct FName>* ShowLabels)
+void UBPF_Dialog_C::STATIC_CreateItemDialogText(class UObject* __WorldContext, TArray<struct FName>* InLabels, TArray<struct FName>* ShowLabels)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Dialog.BPF_Dialog_C.CreateItemDialogText");
 
@@ -41,12 +41,12 @@ void UBPF_Dialog_C::CreateItemDialogText(class UObject* __WorldContext, TArray<s
 
 
 // Function BPF_Dialog.BPF_Dialog_C.GetPlatformCodeLabel
-// (Exec, Event, NetResponse, Delegate, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Label                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Dialog_C::GetPlatformCodeLabel(class UObject* __WorldContext, struct FName* Label)
+void UBPF_Dialog_C::STATIC_GetPlatformCodeLabel(class UObject* __WorldContext, struct FName* Label)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Dialog.BPF_Dialog_C.GetPlatformCodeLabel");
 
@@ -65,13 +65,13 @@ void UBPF_Dialog_C::GetPlatformCodeLabel(class UObject* __WorldContext, struct F
 
 
 // Function BPF_Dialog.BPF_Dialog_C.AllowRewardDialog
-// (NetMulticast, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3PlayerBehavior              ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Allow                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Dialog_C::AllowRewardDialog(ES3PlayerBehavior ID, class UObject* __WorldContext, bool* Allow)
+void UBPF_Dialog_C::STATIC_AllowRewardDialog(ES3PlayerBehavior ID, class UObject* __WorldContext, bool* Allow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Dialog.BPF_Dialog_C.AllowRewardDialog");
 
@@ -91,7 +91,7 @@ void UBPF_Dialog_C::AllowRewardDialog(ES3PlayerBehavior ID, class UObject* __Wor
 
 
 // Function BPF_Dialog.BPF_Dialog_C.CanShowDialog
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Reward                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -106,7 +106,6 @@ void UBPF_Dialog_C::STATIC_CanShowDialog(bool Reward, class UObject* __WorldCont
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,7 +117,7 @@ void UBPF_Dialog_C::STATIC_CanShowDialog(bool Reward, class UObject* __WorldCont
 
 
 // Function BPF_Dialog.BPF_Dialog_C.OverrideDialogButton
-// (Event, NetResponse, Delegate, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_GeneralWindowParam  Param                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FName                   DecideLabel                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -128,7 +127,7 @@ void UBPF_Dialog_C::STATIC_CanShowDialog(bool Reward, class UObject* __WorldCont
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_GeneralWindowParam  newParam                       (Parm, OutParm)
 
-void UBPF_Dialog_C::OverrideDialogButton(const struct FST_GeneralWindowParam& Param, const struct FName& DecideLabel, TEnumAsByte<EN_GeneralWindow_Button> DecideIcon, const struct FName& CancelLabel, TEnumAsByte<EN_GeneralWindow_Button> CancelIcon, class UObject* __WorldContext, struct FST_GeneralWindowParam* newParam)
+void UBPF_Dialog_C::STATIC_OverrideDialogButton(const struct FST_GeneralWindowParam& Param, const struct FName& DecideLabel, TEnumAsByte<EN_GeneralWindow_Button> DecideIcon, const struct FName& CancelLabel, TEnumAsByte<EN_GeneralWindow_Button> CancelIcon, class UObject* __WorldContext, struct FST_GeneralWindowParam* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Dialog.BPF_Dialog_C.OverrideDialogButton");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,8 +33,8 @@ public:
 	}
 
 
-	void STATIC_UserConstructionScript();
-	void STATIC_Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop);
+	void UserConstructionScript();
+	void Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop);
 	void ExecuteUbergraph_BP_SubtitlePlayer_DebugTextData(int EntryPoint);
 };
 

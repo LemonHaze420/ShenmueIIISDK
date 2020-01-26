@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.UpdateFadeTimer
-// (Net, Exec, Static, Delegate, DLLImport, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Done                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerTalkItem_C::STATIC_UpdateFadeTimer(float DeltaSeconds, bool* Done)
+void ABP_PlayerTalkItem_C::UpdateFadeTimer(float DeltaSeconds, bool* Done)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.UpdateFadeTimer");
 
@@ -38,9 +38,9 @@ void ABP_PlayerTalkItem_C::STATIC_UpdateFadeTimer(float DeltaSeconds, bool* Done
 
 
 // Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.UpdateFade
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerTalkItem_C::STATIC_UpdateFade()
+void ABP_PlayerTalkItem_C::UpdateFade()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.UpdateFade");
 
@@ -55,9 +55,9 @@ void ABP_PlayerTalkItem_C::STATIC_UpdateFade()
 
 
 // Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.HideItem
-// (Net, NetReliable, NetRequest, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerTalkItem_C::STATIC_HideItem()
+void ABP_PlayerTalkItem_C::HideItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.HideItem");
 
@@ -72,7 +72,7 @@ void ABP_PlayerTalkItem_C::STATIC_HideItem()
 
 
 // Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.ShowItem
-// (NetRequest, Exec, NetResponse, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerTalkItem_C::ShowItem()
 {
@@ -89,16 +89,15 @@ void ABP_PlayerTalkItem_C::ShowItem()
 
 
 // Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.UserConstructionScript
-// (Net, NetReliable, Native, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerTalkItem_C::STATIC_UserConstructionScript()
+void ABP_PlayerTalkItem_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.UserConstructionScript");
 
 	ABP_PlayerTalkItem_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,11 +106,11 @@ void ABP_PlayerTalkItem_C::STATIC_UserConstructionScript()
 
 
 // Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.ReceiveTick
-// (Net, NetReliable, NetRequest, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerTalkItem_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_PlayerTalkItem_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.ReceiveTick");
 
@@ -127,7 +126,7 @@ void ABP_PlayerTalkItem_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.ExecuteUbergraph_BP_PlayerTalkItem
-// (NetRequest, Exec, NetMulticast, Delegate, DLLImport, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -147,7 +146,7 @@ void ABP_PlayerTalkItem_C::ExecuteUbergraph_BP_PlayerTalkItem(int EntryPoint)
 
 
 // Function BP_PlayerTalkItem.BP_PlayerTalkItem_C.OnFinishHide__DelegateSignature
-// (Net, NetReliable, NetRequest, NetResponse, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerTalkItem_C::OnFinishHide__DelegateSignature()
 {

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_SWD_02.BP_TalkCamera_SWD_02_C.UserConstructionScript
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_TalkCamera_SWD_02_C::STATIC_UserConstructionScript()
+void ABP_TalkCamera_SWD_02_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_SWD_02.BP_TalkCamera_SWD_02_C.UserConstructionScript");
 
 	ABP_TalkCamera_SWD_02_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_TalkCamera_SWD_02_C::STATIC_UserConstructionScript()
 
 
 // Function BP_TalkCamera_SWD_02.BP_TalkCamera_SWD_02_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_TalkCamera_SWD_02_C::ReceiveBeginPlay()
 {
@@ -49,7 +48,7 @@ void ABP_TalkCamera_SWD_02_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_SWD_02.BP_TalkCamera_SWD_02_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Native, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -61,7 +60,6 @@ void ABP_TalkCamera_SWD_02_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,7 +68,7 @@ void ABP_TalkCamera_SWD_02_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_SWD_02.BP_TalkCamera_SWD_02_C.ExecuteUbergraph_BP_TalkCamera_SWD_02
-// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

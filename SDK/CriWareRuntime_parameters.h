@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -77,6 +77,110 @@ struct UAtomAsrRack_ApplyDspBusSnapshot_Params
 {
 	struct FString                                     SnapshotName;                                             // (Parm, ZeroConstructor)
 	int                                                Milliseconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.StopByName
+struct UAtomCategory_StopByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+};
+
+// Function CriWareRuntime.AtomCategory.SetVolumeByName
+struct UAtomCategory_SetVolumeByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+	float                                              Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.SetAisacControlByName
+struct UAtomCategory_SetAisacControlByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+	struct FString                                     AisacName;                                                // (Parm, ZeroConstructor)
+	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.ResetAllAisacControlByName
+struct UAtomCategory_ResetAllAisacControlByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.ResetAllAisacControlById
+struct UAtomCategory_ResetAllAisacControlById_Params
+{
+	int                                                CategoryId;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.PauseByName
+struct UAtomCategory_PauseByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+	bool                                               bPause;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.IsPausedByName
+struct UAtomCategory_IsPausedByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.GetVolumeByName
+struct UAtomCategory_GetVolumeByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsByName
+struct UAtomCategory_GetNumAttachedAisacsByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsById
+struct UAtomCategory_GetNumAttachedAisacsById_Params
+{
+	int                                                CategoryId;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueByName
+struct UAtomCategory_GetCurrentAisacControlValueByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+	struct FString                                     AisacControlName;                                         // (Parm, ZeroConstructor)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueById
+struct UAtomCategory_GetCurrentAisacControlValueById_Params
+{
+	int                                                CategoryId;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                AisacControlId;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoByName
+struct UAtomCategory_GetAttachedAisacInfoByName_Params
+{
+	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
+	int                                                AisacAttachedIndex;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsSuccess;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FAtomAisacInfo                              AisacInfo;                                                // (Parm, OutParm)
+};
+
+// Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoById
+struct UAtomCategory_GetAttachedAisacInfoById_Params
+{
+	int                                                CategoryId;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                AisacAttachedIndex;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsSuccess;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FAtomAisacInfo                              AisacInfo;                                                // (Parm, OutParm)
 };
 
 // Function CriWareRuntime.AtomComponent.Stop
@@ -313,110 +417,6 @@ struct UAtomCueSheetLoaderComponent_GetAtomCueSheet_Params
 	class USoundAtomCueSheet*                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function CriWareRuntime.AtomCategory.StopByName
-struct UAtomCategory_StopByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-};
-
-// Function CriWareRuntime.AtomCategory.SetVolumeByName
-struct UAtomCategory_SetVolumeByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-	float                                              Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.SetAisacControlByName
-struct UAtomCategory_SetAisacControlByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-	struct FString                                     AisacName;                                                // (Parm, ZeroConstructor)
-	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.ResetAllAisacControlByName
-struct UAtomCategory_ResetAllAisacControlByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.ResetAllAisacControlById
-struct UAtomCategory_ResetAllAisacControlById_Params
-{
-	int                                                CategoryId;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.PauseByName
-struct UAtomCategory_PauseByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-	bool                                               bPause;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.IsPausedByName
-struct UAtomCategory_IsPausedByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.GetVolumeByName
-struct UAtomCategory_GetVolumeByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsByName
-struct UAtomCategory_GetNumAttachedAisacsByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsById
-struct UAtomCategory_GetNumAttachedAisacsById_Params
-{
-	int                                                CategoryId;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueByName
-struct UAtomCategory_GetCurrentAisacControlValueByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-	struct FString                                     AisacControlName;                                         // (Parm, ZeroConstructor)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueById
-struct UAtomCategory_GetCurrentAisacControlValueById_Params
-{
-	int                                                CategoryId;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                AisacControlId;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoByName
-struct UAtomCategory_GetAttachedAisacInfoByName_Params
-{
-	struct FString                                     CategoryName;                                             // (Parm, ZeroConstructor)
-	int                                                AisacAttachedIndex;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsSuccess;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FAtomAisacInfo                              AisacInfo;                                                // (Parm, OutParm)
-};
-
-// Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoById
-struct UAtomCategory_GetAttachedAisacInfoById_Params
-{
-	int                                                CategoryId;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                AisacAttachedIndex;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IsSuccess;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FAtomAisacInfo                              AisacInfo;                                                // (Parm, OutParm)
-};
-
 // DelegateFunction CriWareRuntime.AtomDeviceWatcher.OnDeviceUpdated__DelegateSignature
 struct UAtomDeviceWatcher_OnDeviceUpdated__DelegateSignature_Params
 {
@@ -469,32 +469,6 @@ struct UAtomSpectrumAnalyzer_CreateDspSpectra_Params
 	class UAtomAsrRack*                                asr_rack;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     bus_name;                                                 // (Parm, ZeroConstructor)
 	int                                                num_bands;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function CriWareRuntime.CriFsBinderComponent.Stop
-struct UCriFsBinderComponent_Stop_Params
-{
-};
-
-// DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindError__DelegateSignature
-struct UCriFsBinderComponent_OnBindError__DelegateSignature_Params
-{
-};
-
-// DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindCompleted__DelegateSignature
-struct UCriFsBinderComponent_OnBindCompleted__DelegateSignature_Params
-{
-};
-
-// Function CriWareRuntime.CriFsBinderComponent.GetStatus
-struct UCriFsBinderComponent_GetStatus_Params
-{
-	ECriFsBinderStatus                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.CriFsBinderComponent.Bind
-struct UCriFsBinderComponent_Bind_Params
-{
 };
 
 // Function CriWareRuntime.AtomStatics.StopAllSounds
@@ -613,6 +587,41 @@ struct UAtomStatics_CreateRootedAtomComponent_Params
 	class UAtomComponent*                              ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
+// Function CriWareRuntime.AtomTriggerTableFunctionLibrary.GetDataTableRowFromName
+struct UAtomTriggerTableFunctionLibrary_GetDataTableRowFromName_Params
+{
+	class UDataTable*                                  Table;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       RowName;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FAtomTriggerRow                             OutRow;                                                   // (Parm, OutParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.CriFsBinderComponent.Stop
+struct UCriFsBinderComponent_Stop_Params
+{
+};
+
+// DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindError__DelegateSignature
+struct UCriFsBinderComponent_OnBindError__DelegateSignature_Params
+{
+};
+
+// DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindCompleted__DelegateSignature
+struct UCriFsBinderComponent_OnBindCompleted__DelegateSignature_Params
+{
+};
+
+// Function CriWareRuntime.CriFsBinderComponent.GetStatus
+struct UCriFsBinderComponent_GetStatus_Params
+{
+	ECriFsBinderStatus                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function CriWareRuntime.CriFsBinderComponent.Bind
+struct UCriFsBinderComponent_Bind_Params
+{
+};
+
 // DelegateFunction CriWareRuntime.CriFsLoaderComponent.OnLoadError__DelegateSignature
 struct UCriFsLoaderComponent_OnLoadError__DelegateSignature_Params
 {
@@ -665,33 +674,6 @@ struct UCriWareFunctionLibrary_SetGameVariableByName_Params
 struct UCriWareFunctionLibrary_SetAllPauseFlagMana_Params
 {
 	bool                                               bPause;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function CriWareRuntime.AtomTriggerTableFunctionLibrary.GetDataTableRowFromName
-struct UAtomTriggerTableFunctionLibrary_GetDataTableRowFromName_Params
-{
-	class UDataTable*                                  Table;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       RowName;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FAtomTriggerRow                             OutRow;                                                   // (Parm, OutParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function CriWareRuntime.FileManaMovie.SetFilePath
-struct UFileManaMovie_SetFilePath_Params
-{
-	struct FString                                     Path;                                                     // (Parm, ZeroConstructor)
-};
-
-// Function CriWareRuntime.DataManaMovie.SetDataArray
-struct UDataManaMovie_SetDataArray_Params
-{
-	TArray<unsigned char>                              InDataArray;                                              // (Parm, OutParm, ZeroConstructor)
-};
-
-// Function CriWareRuntime.DataManaMovie.GetDataArray
-struct UDataManaMovie_GetDataArray_Params
-{
-	TArray<unsigned char>                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function CriWareRuntime.ManaComponent.ToIndex
@@ -949,6 +931,24 @@ struct UManaComponent_ChangeSubtitlesChannel_Params
 	int                                                Channel;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function CriWareRuntime.FileManaMovie.SetFilePath
+struct UFileManaMovie_SetFilePath_Params
+{
+	struct FString                                     Path;                                                     // (Parm, ZeroConstructor)
+};
+
+// Function CriWareRuntime.DataManaMovie.SetDataArray
+struct UDataManaMovie_SetDataArray_Params
+{
+	TArray<unsigned char>                              InDataArray;                                              // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function CriWareRuntime.DataManaMovie.GetDataArray
+struct UDataManaMovie_GetDataArray_Params
+{
+	TArray<unsigned char>                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
 // Function CriWareRuntime.ManaPlaylist.RemoveAt
 struct UManaPlaylist_RemoveAt_Params
 {
@@ -1032,6 +1032,18 @@ struct UManaTexture_SetMovieSource_Params
 	class UManaSource*                                 InSource;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function CriWareRuntime.SoundAtomCue.GetUserData
+struct USoundAtomCue_GetUserData_Params
+{
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function CriWareRuntime.SoundAtomCue.GetLength
+struct USoundAtomCue_GetLength_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function CriWareRuntime.SoundAtomCueSheet.ReleaseAcb
 struct USoundAtomCueSheet_ReleaseAcb_Params
 {
@@ -1095,18 +1107,6 @@ struct USoundAtomCueSheet_ApplyDspBusSnapshot_Params
 {
 	struct FString                                     SnapshotName;                                             // (Parm, ZeroConstructor)
 	int                                                Milliseconds;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function CriWareRuntime.SoundAtomCue.GetUserData
-struct USoundAtomCue_GetUserData_Params
-{
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function CriWareRuntime.SoundAtomCue.GetLength
-struct USoundAtomCue_GetLength_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

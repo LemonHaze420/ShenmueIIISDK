@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Fishing_ResultFish.BP_Fishing_ResultFish_C.SetResultAnimation
-// (Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAnimationAsset*         NewAnimToPlay                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_ResultFish_C::STATIC_SetResultAnimation(class UAnimationAsset* NewAnimToPlay)
+void ABP_Fishing_ResultFish_C::SetResultAnimation(class UAnimationAsset* NewAnimToPlay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_ResultFish.BP_Fishing_ResultFish_C.SetResultAnimation");
 
@@ -34,9 +34,9 @@ void ABP_Fishing_ResultFish_C::STATIC_SetResultAnimation(class UAnimationAsset* 
 
 
 // Function BP_Fishing_ResultFish.BP_Fishing_ResultFish_C.UserConstructionScript
-// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Fishing_ResultFish_C::STATIC_UserConstructionScript()
+void ABP_Fishing_ResultFish_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_ResultFish.BP_Fishing_ResultFish_C.UserConstructionScript");
 

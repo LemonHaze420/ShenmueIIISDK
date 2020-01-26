@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -130,6 +130,25 @@ public:
 };
 
 
+// Class PhysXVehicles.TireConfig
+// 0x0020 (0x0050 - 0x0030)
+class UTireConfig : public UDataAsset
+{
+public:
+	float                                              FrictionScale;                                            // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	TArray<struct FTireConfigMaterialFriction>         TireFrictionScales;                                       // 0x0038(0x0010) (Edit, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class PhysXVehicles.TireConfig");
+		return ptr;
+	}
+
+};
+
+
 // Class PhysXVehicles.VehicleAnimInstance
 // 0x05A0 (0x0900 - 0x0360)
 class UVehicleAnimInstance : public UAnimInstance
@@ -147,25 +166,6 @@ public:
 
 
 	class AWheeledVehicle* GetVehicle();
-};
-
-
-// Class PhysXVehicles.TireConfig
-// 0x0020 (0x0050 - 0x0030)
-class UTireConfig : public UDataAsset
-{
-public:
-	float                                              FrictionScale;                                            // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	TArray<struct FTireConfigMaterialFriction>         TireFrictionScales;                                       // 0x0038(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class PhysXVehicles.TireConfig");
-		return ptr;
-	}
-
 };
 
 

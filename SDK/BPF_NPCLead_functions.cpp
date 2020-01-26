@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_NPCLead.BPF_NPCLead_C.GetNPCLeadCharacter
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_NPC_Lead_C*          newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,7 +27,6 @@ void UBPF_NPCLead_C::STATIC_GetNPCLeadCharacter(class UObject* __WorldContext, c
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,11 +38,11 @@ void UBPF_NPCLead_C::STATIC_GetNPCLeadCharacter(class UObject* __WorldContext, c
 
 
 // Function BPF_NPCLead.BPF_NPCLead_C.DestroyNPCLeadActor
-// (Net, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_NPCLead_C::DestroyNPCLeadActor(class UObject* __WorldContext)
+void UBPF_NPCLead_C::STATIC_DestroyNPCLeadActor(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_NPCLead.BPF_NPCLead_C.DestroyNPCLeadActor");
 
@@ -51,7 +50,6 @@ void UBPF_NPCLead_C::DestroyNPCLeadActor(class UObject* __WorldContext)
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +58,7 @@ void UBPF_NPCLead_C::DestroyNPCLeadActor(class UObject* __WorldContext)
 
 
 // Function BPF_NPCLead.BPF_NPCLead_C.SpawnNPCLeadActor
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 SpawnPos                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          SpawnRot                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -78,7 +76,6 @@ void UBPF_NPCLead_C::STATIC_SpawnNPCLeadActor(const struct FVector& SpawnPos, fl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +84,7 @@ void UBPF_NPCLead_C::STATIC_SpawnNPCLeadActor(const struct FVector& SpawnPos, fl
 
 
 // Function BPF_NPCLead.BPF_NPCLead_C.GetNPCLeadManager
-// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_NPCLeadManager_C*    newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -100,7 +97,6 @@ void UBPF_NPCLead_C::STATIC_GetNPCLeadManager(class UObject* __WorldContext, cla
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

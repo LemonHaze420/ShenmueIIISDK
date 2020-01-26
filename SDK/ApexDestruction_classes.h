@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,24 +61,6 @@ public:
 };
 
 
-// Class ApexDestruction.DestructibleMesh
-// 0x00A0 (0x03B0 - 0x0310)
-class UDestructibleMesh : public USkeletalMesh
-{
-public:
-	struct FDestructibleParameters                     DefaultDestructibleParameters;                            // 0x0310(0x0088) (Edit)
-	TArray<struct FFractureEffect>                     FractureEffects;                                          // 0x0398(0x0010) (Edit, EditFixedSize, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x03A8(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ApexDestruction.DestructibleMesh");
-		return ptr;
-	}
-
-};
-
-
 // Class ApexDestruction.DestructibleFractureSettings
 // 0x0090 (0x00B8 - 0x0028)
 class UDestructibleFractureSettings : public UObject
@@ -98,6 +80,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class ApexDestruction.DestructibleFractureSettings");
+		return ptr;
+	}
+
+};
+
+
+// Class ApexDestruction.DestructibleMesh
+// 0x00A0 (0x03B0 - 0x0310)
+class UDestructibleMesh : public USkeletalMesh
+{
+public:
+	struct FDestructibleParameters                     DefaultDestructibleParameters;                            // 0x0310(0x0088) (Edit)
+	TArray<struct FFractureEffect>                     FractureEffects;                                          // 0x0398(0x0010) (Edit, EditFixedSize, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x03A8(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ApexDestruction.DestructibleMesh");
 		return ptr;
 	}
 

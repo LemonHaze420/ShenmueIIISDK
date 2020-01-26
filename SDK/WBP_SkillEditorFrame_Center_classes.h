@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,10 +43,10 @@ public:
 
 
 	void SetBackColor(bool IsSelect);
-	ESlateVisibility STATIC_GetVisibility_Background();
-	ESlateVisibility STATIC_GetVisibility_FrameLine();
-	void STATIC_PreConstruct(bool IsDesignTime);
-	void STATIC_ExecuteUbergraph_WBP_SkillEditorFrame_Center(int EntryPoint);
+	ESlateVisibility GetVisibility_Background();
+	ESlateVisibility GetVisibility_FrameLine();
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_SkillEditorFrame_Center(int EntryPoint);
 };
 
 

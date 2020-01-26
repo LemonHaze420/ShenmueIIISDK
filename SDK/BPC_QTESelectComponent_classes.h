@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,19 +31,19 @@ public:
 
 
 	void UpdateAnimationState();
-	void STATIC_DebugQTEForceSuccessUpdateInternal();
-	float STATIC_GetLengthBeforeCountInputLimitTime();
+	void DebugQTEForceSuccessUpdateInternal();
+	float GetLengthBeforeCountInputLimitTime();
 	bool IsInputedOther();
-	void STATIC_SetupQTE(const struct FName& InLeftAction, const struct FName& InRightAction, const struct FName& InSuccessAction);
+	void SetupQTE(const struct FName& InLeftAction, const struct FName& InRightAction, const struct FName& InSuccessAction);
 	void PlayInputFailedAnimation();
-	void STATIC_PlayInputSuccessAnimation(bool InRight);
+	void PlayInputSuccessAnimation(bool InRight);
 	bool IsPlayingInAnimation();
-	void STATIC_PlayTimeUpFailedAnimation();
-	void STATIC_PlayInAnimation();
-	void STATIC_SetTimeGaugeRate(float InGaugeRate);
+	void PlayTimeUpFailedAnimation();
+	void PlayInAnimation();
+	void SetTimeGaugeRate(float InGaugeRate);
 	void ExecuteInputAction(const struct FName& InInputAction);
 	void Reset();
-	void STATIC_Finalize();
+	void Finalize();
 	void Initialize();
 };
 

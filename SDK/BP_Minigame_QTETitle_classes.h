@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,19 +35,19 @@ public:
 	class UStaticMeshComponent*                        VideoCabinet_UE;                                          // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_CDCC615B427228829B5412909D5FD5B0;     // 0x0688(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0689(0x0007) MISSED OFFSET
-	class UTimelineComponent* UnknownVar01;                                          // 0x0690(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          򠪦􆖐񍳔_1;                                           // 0x0690(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______4__Direction_000B4B2540C3627E8191098599E7E246;     // 0x0698(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0699(0x0007) MISSED OFFSET
-	class UTimelineComponent* UnknownVar02;                                          // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          򠪦􆖐񍳔_5;                                           // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    ScoreFlashTimeline__Direction_EFC8C32C4F94B5C66A70CB8B770FBF93;// 0x06A8(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x7];                                       // 0x06A9(0x0007) MISSED OFFSET
 	class UTimelineComponent*                          ScoreFlashTimeline;                                       // 0x06B0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______2__Direction_E811283B4F5239BBADB2249A4FBA65C4;     // 0x06B8(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x7];                                       // 0x06B9(0x0007) MISSED OFFSET
-	class UTimelineComponent*                          UnknownVar03;                                          // 0x06C0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          򠪦􆖐񍳔_3;                                           // 0x06C0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______1__Direction_0991D76A40F1B706D91C0687CB3F8CC9;     // 0x06C8(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x7];                                       // 0x06C9(0x0007) MISSED OFFSET
-	class UTimelineComponent* UnknownVar04;                                          // 0x06D0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          򠪦􆖐񍳔_2;                                           // 0x06D0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              MovingPadRightTimeline_Roll_EE297A3644AA70B51E67E2912169A19E;// 0x06D8(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    MovingPadRightTimeline__Direction_EE297A3644AA70B51E67E2912169A19E;// 0x06DC(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x3];                                       // 0x06DD(0x0003) MISSED OFFSET
@@ -149,123 +149,123 @@ public:
 	}
 
 
-	void STATIC_CreateIconMaterial(class UMaterialBillboardComponent* Component, class UTexture* Texture);
-	float STATIC_GetTimeOutValue();
-	void STATIC_InitializePadTrans();
+	void CreateIconMaterial(class UMaterialBillboardComponent* Component, class UTexture* Texture);
+	float GetTimeOutValue();
+	void InitializePadTrans();
 	void SetTime();
 	void GetLevelSequence(TEnumAsByte<EQTETitleSequence> Type, class ULevelSequence** Sequence);
-	void STATIC_InitAsyncLoad(bool* dummy);
-	void STATIC_InitButtonIcon();
-	void STATIC_ResetScore(class UChildActorComponent* ChildComponent);
-	void STATIC_SetScoreNum(class UChildActorComponent* ChildActor, int Number, bool IsStage);
+	void InitAsyncLoad(bool* dummy);
+	void InitButtonIcon();
+	void ResetScore(class UChildActorComponent* ChildComponent);
+	void SetScoreNum(class UChildActorComponent* ChildActor, int Number, bool IsStage);
 	void SetEnabledScore(bool bEnabled);
-	void STATIC_AllDestroySequenceActors();
+	void AllDestroySequenceActors();
 	void SpawnSequenceActor(class ULevelSequence* InSequence, class AActor* AttachParentActor, const struct FName& AttachSocketName, class ABP_SpawnableSequenceActor_C** SpawnObj);
 	void DebugDispLog();
-	void STATIC_DebugAutoPlay();
+	void DebugAutoPlay();
 	void Load();
-	void STATIC_Save();
-	void STATIC_ItemGetCheck(int* item_count1);
-	void STATIC_FeintCommandCheck(const struct FQTECommandStruct& Param, bool* is_feint);
-	void STATIC_AddRightCommand();
-	void STATIC_AddMiddleCommand();
-	void STATIC_AddLeftCommand();
-	void STATIC_RefreshScores(class AWBP_QT2_Score2_C* Score, class UChildActorComponent* ChildComponent);
-	void STATIC_QTETitleFadeIn();
-	void STATIC_SetPlayRate(int Buttons, class ULevelSequencePlayer* SequencerRef);
-	void STATIC_InitializeBoxingSequencers();
-	void STATIC_PickUpRandomBoxingSequencer(TArray<class ABP_SpawnableSequenceActor_C*>* InputSequencerArray, class ABP_SpawnableSequenceActor_C** OutputSequencer);
+	void Save();
+	void ItemGetCheck(int* item_count1);
+	void FeintCommandCheck(const struct FQTECommandStruct& Param, bool* is_feint);
+	void AddRightCommand();
+	void AddMiddleCommand();
+	void AddLeftCommand();
+	void RefreshScores(class AWBP_QT2_Score2_C* Score, class UChildActorComponent* ChildComponent);
+	void QTETitleFadeIn();
+	void SetPlayRate(int Buttons, class ULevelSequencePlayer* SequencerRef);
+	void InitializeBoxingSequencers();
+	void PickUpRandomBoxingSequencer(TArray<class ABP_SpawnableSequenceActor_C*>* InputSequencerArray, class ABP_SpawnableSequenceActor_C** OutputSequencer);
 	void ResetButtonUnPushed();
-	void STATIC_LoseCheck(int LifeLeft, bool* LostGame);
+	void LoseCheck(int LifeLeft, bool* LostGame);
 	void HideAllIcons();
-	void STATIC_ToggleIconRight(bool Hide);
+	void ToggleIconRight(bool Hide);
 	void ToggleIconMiddle(bool Hide);
-	void STATIC_ToggleIconLeft(bool Hide);
+	void ToggleIconLeft(bool Hide);
 	void TransferNameToEnum(const struct FName& InputName, Enum_QTETitleCommand* Output);
 	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
 	void UserConstructionScript();
-	void STATIC_MovingPadLeftTimeline__FinishedFunc();
-	void STATIC_MovingPadLeftTimeline__UpdateFunc();
-	void STATIC_MovingPadLeftTimeline__SE_Timing__EventFunc();
-	void STATIC_MovingPadLeftTimeline__Feint_Finish__EventFunc();
-	void STATIC_MovingPadLeftTimeline__ShowIcon__EventFunc();
-	void STATIC_MovingPadMiddleTimeline__FinishedFunc();
-	void STATIC_MovingPadMiddleTimeline__UpdateFunc();
-	void STATIC_MovingPadMiddleTimeline__SE_Timing__EventFunc();
-	void STATIC_MovingPadMiddleTimeline__Feint_Finish__EventFunc();
-	void STATIC_MovingPadMiddleTimeline__ShowIcon__EventFunc();
-	void STATIC_MovingPadRightTimeline__FinishedFunc();
-	void STATIC_MovingPadRightTimeline__UpdateFunc();
-	void STATIC_MovingPadRightTimeline__SE_Timing__EventFunc();
-	void STATIC_MovingPadRightTimeline__Feint_Finish__EventFunc();
-	void STATIC_MovingPadRightTimeline__ShowIcon__EventFunc();
-	void STATIC__UnknownFunc01();
-	void STATIC_ScoreFlashTimeline__FinishedFunc();
-	void STATIC_ScoreFlashTimeline__UpdateFunc();
-	void STATIC_ScoreFlashTimeline__test2__EventFunc();
-	void STATIC_ScoreFlashTimeline__test__EventFunc();
+	void MovingPadLeftTimeline__FinishedFunc();
+	void MovingPadLeftTimeline__UpdateFunc();
+	void MovingPadLeftTimeline__SE_Timing__EventFunc();
+	void MovingPadLeftTimeline__Feint_Finish__EventFunc();
+	void MovingPadLeftTimeline__ShowIcon__EventFunc();
+	void MovingPadMiddleTimeline__FinishedFunc();
+	void MovingPadMiddleTimeline__UpdateFunc();
+	void MovingPadMiddleTimeline__SE_Timing__EventFunc();
+	void MovingPadMiddleTimeline__Feint_Finish__EventFunc();
+	void MovingPadMiddleTimeline__ShowIcon__EventFunc();
+	void MovingPadRightTimeline__FinishedFunc();
+	void MovingPadRightTimeline__UpdateFunc();
+	void MovingPadRightTimeline__SE_Timing__EventFunc();
+	void MovingPadRightTimeline__Feint_Finish__EventFunc();
+	void MovingPadRightTimeline__ShowIcon__EventFunc();
+	void 򠪦􆖐񍳔_();
+	void ScoreFlashTimeline__FinishedFunc();
+	void ScoreFlashTimeline__UpdateFunc();
+	void ScoreFlashTimeline__test2__EventFunc();
+	void ScoreFlashTimeline__test__EventFunc();
 	void ReceiveBeginPlay();
 	void ReceiveActorBeginOverlap(class AActor* OtherActor);
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void StartMiniGame();
-	void STATIC_PlayIntro();
-	void STATIC_GameStart();
-	void STATIC_GetCommand();
-	void STATIC_LeftPunchPushed();
-	void STATIC_MiddlePunchPushed();
-	void STATIC_RightPunchPushed();
-	void STATIC_StartPlayList();
-	void STATIC_ContinuePlayList();
+	void PlayIntro();
+	void GameStart();
+	void GetCommand();
+	void LeftPunchPushed();
+	void MiddlePunchPushed();
+	void RightPunchPushed();
+	void StartPlayList();
+	void ContinuePlayList();
 	void EndMiniGame();
-	void STATIC_onFinishScreenFadeOut_Event_1();
-	void STATIC_TimeOutCheck();
+	void onFinishScreenFadeOut_Event_1();
+	void TimeOutCheck();
 	void WinMiniGame();
-	void STATIC_RightButtonPushed();
-	void STATIC_RightButtonReleased();
-	void STATIC_MiddleButtonPushed();
-	void STATIC_MiddleButtonReleased();
-	void STATIC_LeftButtonPushed();
-	void STATIC_LeftButtonReleased();
-	void STATIC_FaceButtonRPushed();
-	void STATIC_FaceButtonMPushed();
-	void STATIC_FaceButtonLPushed();
+	void RightButtonPushed();
+	void RightButtonReleased();
+	void MiddleButtonPushed();
+	void MiddleButtonReleased();
+	void LeftButtonPushed();
+	void LeftButtonReleased();
+	void FaceButtonRPushed();
+	void FaceButtonMPushed();
+	void FaceButtonLPushed();
 	void ShowMovingPadLeft(bool bHide);
-	void STATIC_PadLeftBack();
-	void STATIC_ReversePads();
+	void PadLeftBack();
+	void ReversePads();
 	void ShowMovingPadMiddle(bool bHide);
-	void STATIC_PadMiddleBack();
+	void PadMiddleBack();
 	void ShowMovingPadRight(bool bHide);
-	void STATIC_PadRightBack();
-	void STATIC_PunchSucceed();
+	void PadRightBack();
+	void PunchSucceed();
 	void LoseMiniGame();
-	void STATIC_PadRightFlash();
-	void STATIC_PadMiddleFlash();
-	void STATIC_PadLeftFlash();
+	void PadRightFlash();
+	void PadMiddleFlash();
+	void PadLeftFlash();
 	void Light_Flash(bool PlayLumpOffSE);
-	void STATIC_LifeDownSequence();
-	void STATIC_ScoreFlash();
-	void STATIC_GameClearSequence();
-	void STATIC_Play_UseCoin();
+	void LifeDownSequence();
+	void ScoreFlash();
+	void GameClearSequence();
+	void Play_UseCoin();
 	void Initialize();
 	void RestartMiniGame();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
-	void STATIC_ResumeMiniGame(const struct FString& ResumeKeyword);
-	void STATIC_OnTalkScriptEvent(int EventNumber);
+	void ResumeMiniGame(const struct FString& ResumeKeyword);
+	void OnTalkScriptEvent(int EventNumber);
 	void One_Play_End();
 	void PunchFlashStop();
 	void OnEndKihudaFlow();
 	void UseCoinFinished();
 	void CancelMiniGame();
 	void OnFinishedFadeEndGame();
-	void STATIC_OnIntroFinished();
-	void STATIC_EventUseCoinUnBind();
-	void STATIC_LifeDownFinished_Miss();
-	void STATIC_GameClearFinished_2();
-	void STATIC_OnFinished_Event_00();
-	void STATIC_PadRightStopFlash();
-	void STATIC_PadMiddleStopFlash();
-	void STATIC_PadLeftStopFlash();
+	void OnIntroFinished();
+	void EventUseCoinUnBind();
+	void LifeDownFinished_Miss();
+	void GameClearFinished_2();
+	void OnFinished_Event_00();
+	void PadRightStopFlash();
+	void PadMiddleStopFlash();
+	void PadLeftStopFlash();
 	void Event_ExecuteResult();
 	void Event_EndMiniGame();
 	void ExecuteUbergraph_BP_Minigame_QTETitle(int EntryPoint);

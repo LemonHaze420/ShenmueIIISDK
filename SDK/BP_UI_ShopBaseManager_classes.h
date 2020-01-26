@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C
-// 0x0095 (0x03F9 - 0x0364)
+// 0x00F4 (0x0458 - 0x0364)
 class ABP_UI_ShopBaseManager_C : public ABP_UI_Manager_C
 {
 public:
@@ -39,23 +39,28 @@ public:
 	bool                                               ViewMode;                                                 // 0x03D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               BeforeAddButton;                                          // 0x03D1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               BeforeSubButton;                                          // 0x03D2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               BeforePayButton;                                          // 0x03D3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               StickInput_vertical;                                      // 0x03D4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               StickInput_hor;                                           // 0x03D5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x2];                                       // 0x03D6(0x0002) MISSED OFFSET
+	bool                                               R2Press;                                                  // 0x03D3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               BeforePayButton;                                          // 0x03D4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               StickInput_vertical;                                      // 0x03D5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               StickInput_hor;                                           // 0x03D6(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x1];                                       // 0x03D7(0x0001) MISSED OFFSET
 	class UBP_CheatManager_C*                          CheatManager;                                             // 0x03D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              L2R2Value;                                                // 0x03E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               R2Press;                                                  // 0x03E4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               L2Press;                                                  // 0x03E5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsSubtraction;                                            // 0x03E6(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               RightPush;                                                // 0x03E7(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               LeftPush;                                                 // 0x03E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               UpPush;                                                   // 0x03E9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               DownPush;                                                 // 0x03EA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bSkipViewMode;                                            // 0x03EB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x03EC(0x0004) MISSED OFFSET
+	bool                                               L2Press;                                                  // 0x03E4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsSubtraction;                                            // 0x03E5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               RightPush;                                                // 0x03E6(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               LeftPush;                                                 // 0x03E7(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               UpPush;                                                   // 0x03E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DownPush;                                                 // 0x03E9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bSkipViewMode;                                            // 0x03EA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x5];                                       // 0x03EB(0x0005) MISSED OFFSET
 	class UBPW_UI_RStickIcon_C*                        RefWBP_RStickIcon;                                        // 0x03F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	bool                                               bVisibleRStickIconOnStart;                                // 0x03F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x03F9(0x0003) MISSED OFFSET
+	int                                                ITEM_INDEX_NONE;                                          // 0x03FC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                ITEM_INDEX_NOT_OWNED;                                     // 0x0400(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x4];                                       // 0x0404(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData09[0x50];                                      // 0x0404(0x0050) UNKNOWN PROPERTY: SetProperty BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SHOP_IDS_CRUDE_DRUG
 
 	static UClass* StaticClass()
 	{
@@ -64,42 +69,49 @@ public:
 	}
 
 
+	void TryChangePage(int Value);
+	bool HasValidVisibleItemId(int FocusItemIdx);
+	bool IsSetCompletionItem(int FocusItemNum);
+	void UpdateDescription(class UBPW_UI_BaseWindow_C* ShopWindow);
+	void CalcSetItemIconRange(int FocusItemNo, int* FirstItem, int* LastItem);
+	bool IsSetExchangeShop();
+	int ApplyCheatPrice(int ItemId, int BaseValue);
 	void SetRotateIconVisiblity(bool Visible, bool* dummy);
 	void SetRStickIconPos();
-	void STATIC_IsVisibleRStickCenterPos(bool* IsCenter);
+	void IsVisibleRStickCenterPos(bool* IsCenter);
 	bool IsVisibleRStickOnlyViewMode();
 	void SetViewModeSkip(bool SkipFlag);
-	void Get_NowCategory(ES3ItemDataGroup* Category);
-	bool STATIC_IsPawnShopMagicNumber();
-	void STATIC_SelectItemCount(int* Count);
-	void STATIC_SetSkillWindow();
-	void STATIC_ItemValidCheck(bool* IsValid);
+	void GetNowCategory(ES3ItemDataGroup* Category);
+	bool IsPawnShopSetExchangeCategory();
+	void GetItemIncrementNum(int* Count);
+	void SetSkillWindow();
+	void ItemValidCheck(bool* IsValid);
 	void Calc_BuyPrice(int ItemId, int Price, int* MarginPrice, float* Margin);
-	void STATIC_Check_ItemDescription_Ruby(int ItemId, bool* Ruby);
+	void UpdateDescription_Ruby(int ItemId, bool* Ruby);
 	void GetUITextData(const struct FName& Label, struct FString* OutString);
-	bool STATIC_Check_CrueDragOnly();
-	void CheckComplete(int FocusItemNo, bool* IsComplete);
-	void STATIC_SetExchange_CheckPayIcon();
+	bool IsCrudeDrugOnly();
+	void IsFocusedSetComplete(int FocusItemNo, bool* IsComplete);
+	void SetExchange_CheckPayIcon();
 	void SetShopName(int ShopID);
-	void STATIC_CheckSubEvent(TArray<int>* BuyItemList);
-	void STATIC_BeforDestroy();
-	void STATIC_PushAddSubButtonAfter();
-	void STATIC_SubSetItem();
-	void STATIC_AddSetItem();
+	void CheckSubEvent(TArray<int>* BuyItemList);
+	void BeforDestroy();
+	void PushAddSubButtonAfter();
+	void SubSetItem();
+	void AddSetItem();
 	void ChangePage(int Value);
 	void InitPageIcon();
 	void MoveCategoryFocusAfter();
 	void GetCategory(ES3ItemDataGroup* Category);
-	void STATIC_InitItemListWindow();
+	void InitItemListWindow();
 	void MoveCategoryFocus(int Value);
-	void STATIC_SetCategory(class UDataTable* DataTable);
+	void SetCategory(class UDataTable* DataTable);
 	void UpdateItemIDList();
-	void STATIC_VisibleButton_CheckDialog(bool Visible_CheckDialog);
+	void VisibleButton_CheckDialog(bool Visible_CheckDialog);
 	void CheckVisibleAddButton();
-	void STATIC_CheckVisibleSubButton();
-	void GetDescription(struct FText* Description);
-	void STATIC_CheckFocusItemNo();
-	void STATIC_UserConstructionScript();
+	void CheckVisibleSubButton();
+	void UpdateDescriptionSub(struct FText* Description);
+	void CheckFocusItemNo();
+	void UserConstructionScript();
 	void InpActEvt_ResetCamera_K2Node_InputActionEvent_18(const struct FKey& Key);
 	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_17(const struct FKey& Key);
 	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_16(const struct FKey& Key);
@@ -112,7 +124,6 @@ public:
 	void PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButton);
 	void FinishPriceAnim();
 	void ReceiveBeginPlay();
-	void PushButton(TEnumAsByte<EN_UI_Button> newParam);
 	void DecideDetectAction(ES3ActionIconType Type);
 	void OpenYesNoDialog();
 	void InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_4(float AxisValue);
@@ -123,8 +134,9 @@ public:
 	void PushL2R2_ViewMode(float InputPin);
 	void UpDownReset();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void PushButton(TEnumAsByte<EN_UI_Button> newParam);
 	void ExecuteUbergraph_BP_UI_ShopBaseManager(int EntryPoint);
-	void STATIC_ED_Switch_DoBuy__DelegateSignature(bool DoBuy);
+	void ED_Switch_DoBuy__DelegateSignature(bool DoBuy);
 };
 
 

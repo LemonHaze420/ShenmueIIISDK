@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,25 +74,25 @@ public:
 
 	void setMaxLength(float Length);
 	void SetFont(const struct FSlateFontInfo& font_info);
-	void STATIC_SetText(const struct FText& txt);
-	float STATIC_CalcTextBoxSize();
-	void STATIC_SetCalcText();
+	void SetText(const struct FText& txt);
+	float CalcTextBoxSize();
+	void SetCalcText();
 	void UpdateDecorationSize();
 	void setFrameBase(TEnumAsByte<EN_S3ActionSelect_frameType> Type);
 	void setVisibility_bar_(bool Visible);
 	void doCmd_fadeTx();
 	void updateOpacity_tit_(float Opacity);
-	void STATIC_updateOpacity_bar_(float Opacity);
+	void updateOpacity_bar_(float Opacity);
 	void doCmd_decide();
 	void doCmd_fadeOut();
 	void doCmd_fadeIn();
 	void Construct();
 	void OnAnimationFinished(class UWidgetAnimation* Animation);
 	void ResizeAroundText();
-	void STATIC_ExecuteUbergraph_wgt_S3actionSelect_elem(int EntryPoint);
+	void ExecuteUbergraph_wgt_S3actionSelect_elem(int EntryPoint);
 	void command_fadeTx__DelegateSignature();
 	void onEndFadeIn__DelegateSignature(class Uwgt_S3actionSelect_elem_C* Widget, class UWidgetAnimation* Animation);
-	void STATIC_onEndFadeOut__DelegateSignature(class Uwgt_S3actionSelect_elem_C* Widget, class UWidgetAnimation* Animation);
+	void onEndFadeOut__DelegateSignature(class Uwgt_S3actionSelect_elem_C* Widget, class UWidgetAnimation* Animation);
 	void command_decide__DelegateSignature();
 	void command_fadeOut__DelegateSignature();
 	void command_fadeIn__DelegateSignature();

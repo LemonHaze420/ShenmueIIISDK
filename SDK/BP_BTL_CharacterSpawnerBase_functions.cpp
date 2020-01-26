@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.isPlayer
-// (Net, NetReliable, NetRequest, Exec, Native, Static, Public, Delegate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_BTL_CharacterSpawnerBase_C::STATIC_isPlayer()
+bool ABP_BTL_CharacterSpawnerBase_C::isPlayer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.isPlayer");
 
 	ABP_BTL_CharacterSpawnerBase_C_isPlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,18 +35,17 @@ bool ABP_BTL_CharacterSpawnerBase_C::STATIC_isPlayer()
 
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.IsEnabled
-// (NetReliable, NetRequest, Exec, Native, Static, Public, Delegate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_BTL_CharacterSpawnerBase_C::STATIC_IsEnabled()
+bool ABP_BTL_CharacterSpawnerBase_C::IsEnabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.IsEnabled");
 
 	ABP_BTL_CharacterSpawnerBase_C_IsEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +56,7 @@ bool ABP_BTL_CharacterSpawnerBase_C::STATIC_IsEnabled()
 
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.GetSpawnInfo
-// (Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UObject*                 Outer                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBTL_Launch_NPC_C*       LaunchInfo                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -71,7 +69,6 @@ void ABP_BTL_CharacterSpawnerBase_C::GetSpawnInfo(class UObject* Outer, class UB
 	params.Outer = Outer;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,11 +80,11 @@ void ABP_BTL_CharacterSpawnerBase_C::GetSpawnInfo(class UObject* Outer, class UB
 
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.GetID
-// (NetRequest, Exec, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   Identifier                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BTL_CharacterSpawnerBase_C::STATIC_GetID(struct FName* Identifier)
+void ABP_BTL_CharacterSpawnerBase_C::GetID(struct FName* Identifier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.GetID");
 
@@ -105,7 +102,7 @@ void ABP_BTL_CharacterSpawnerBase_C::STATIC_GetID(struct FName* Identifier)
 
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.UserConstructionScript
-// (Net, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BTL_CharacterSpawnerBase_C::UserConstructionScript()
 {
@@ -114,7 +111,6 @@ void ABP_BTL_CharacterSpawnerBase_C::UserConstructionScript()
 	ABP_BTL_CharacterSpawnerBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

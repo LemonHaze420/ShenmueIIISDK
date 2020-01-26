@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,11 +31,11 @@ public:
 	}
 
 
-	void STATIC_GetSequence(class ABP_MiniGameBase_C* MiniGame, class ULevelSequence** GetSequence, class ULevelSequence** LookSequence);
+	void GetSequence(class ABP_MiniGameBase_C* MiniGame, class ULevelSequence** GetSequence, class ULevelSequence** LookSequence);
 	void StartGetKihudaFlow(const struct FTransform& OffsetRelativeTrans, bool IsGetMoreTicket);
-	void STATIC_OnFinishedActorFlow();
+	void OnFinishedActorFlow();
 	void ExecuteUbergraph_BPC_MiniGameGetKihudaFlow(int EntryPoint);
-	void STATIC_OnEndComponentFlow__DelegateSignature();
+	void OnEndComponentFlow__DelegateSignature();
 };
 
 

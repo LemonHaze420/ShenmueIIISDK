@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,11 +40,11 @@ public:
 
 
 	struct FName GetRandomScript();
-	void STATIC_IsLooking(bool* Look);
+	void IsLooking(bool* Look);
 	void UserConstructionScript();
 	void UniqueActionOnFind();
 	void ForceFindSelf();
-	void STATIC_SetEnabledHelp(bool Condition);
+	void SetEnabledHelp(bool Condition);
 	void UpdateEffect(float Value, bool Current);
 	void CreateEffect();
 	void ReceiveBeginPlay();

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,12 +27,12 @@ public:
 	}
 
 
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_8(const struct FKey& Key);
 	void InpActEvt_MG_Top_K2Node_InputActionEvent_7(const struct FKey& Key);
 	void InpActEvt_MG_Bottom_K2Node_InputActionEvent_6(const struct FKey& Key);
 	void InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_5(const struct FKey& Key);
-	void STATIC_ExecuteUbergraph_BP_MiniGame_KungFuBase_Input(int EntryPoint);
+	void ExecuteUbergraph_BP_MiniGame_KungFuBase_Input(int EntryPoint);
 };
 
 

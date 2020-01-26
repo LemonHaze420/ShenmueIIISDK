@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,11 +25,11 @@ public:
 	}
 
 
-	void SetEyeTrackedPlayer(class APlayerController* PlayerController);
-	bool IsStereoGazeDataAvailable();
-	bool IsEyeTrackerConnected();
-	bool GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData);
-	bool GetGazeData(struct FEyeTrackerGazeData* OutGazeData);
+	void STATIC_SetEyeTrackedPlayer(class APlayerController* PlayerController);
+	bool STATIC_IsStereoGazeDataAvailable();
+	bool STATIC_IsEyeTrackerConnected();
+	bool STATIC_GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData);
+	bool STATIC_GetGazeData(struct FEyeTrackerGazeData* OutGazeData);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,6 +23,28 @@ enum class EMediaWebcamCaptureDeviceFilter : uint8_t
 };
 
 
+// Enum MediaAssets.EMediaVideoCaptureDeviceFilter
+enum class EMediaVideoCaptureDeviceFilter : uint8_t
+{
+	EMediaVideoCaptureDeviceFilter__Card = 0,
+	EMediaVideoCaptureDeviceFilter__Software = 1,
+	EMediaVideoCaptureDeviceFilter__Unknown = 2,
+	EMediaVideoCaptureDeviceFilter__Webcam = 3,
+	EMediaVideoCaptureDeviceFilter__EMediaVideoCaptureDeviceFilter_MAX = 4
+};
+
+
+// Enum MediaAssets.EMediaAudioCaptureDeviceFilter
+enum class EMediaAudioCaptureDeviceFilter : uint8_t
+{
+	EMediaAudioCaptureDeviceFilter__Card = 0,
+	EMediaAudioCaptureDeviceFilter__Microphone = 1,
+	EMediaAudioCaptureDeviceFilter__Software = 2,
+	EMediaAudioCaptureDeviceFilter__Unknown = 3,
+	EMediaAudioCaptureDeviceFilter__EMediaAudioCaptureDeviceFilter_MAX = 4
+};
+
+
 // Enum MediaAssets.EMediaPlayerTrack
 enum class EMediaPlayerTrack : uint8_t
 {
@@ -37,17 +59,6 @@ enum class EMediaPlayerTrack : uint8_t
 };
 
 
-// Enum MediaAssets.EMediaVideoCaptureDeviceFilter
-enum class EMediaVideoCaptureDeviceFilter : uint8_t
-{
-	EMediaVideoCaptureDeviceFilter__Card = 0,
-	EMediaVideoCaptureDeviceFilter__Software = 1,
-	EMediaVideoCaptureDeviceFilter__Unknown = 2,
-	EMediaVideoCaptureDeviceFilter__Webcam = 3,
-	EMediaVideoCaptureDeviceFilter__EMediaVideoCaptureDeviceFilter_MAX = 4
-};
-
-
 // Enum MediaAssets.EMediaSoundChannels
 enum class EMediaSoundChannels : uint8_t
 {
@@ -55,17 +66,6 @@ enum class EMediaSoundChannels : uint8_t
 	EMediaSoundChannels__Stereo    = 1,
 	EMediaSoundChannels__Surround  = 2,
 	EMediaSoundChannels__EMediaSoundChannels_MAX = 3
-};
-
-
-// Enum MediaAssets.EMediaAudioCaptureDeviceFilter
-enum class EMediaAudioCaptureDeviceFilter : uint8_t
-{
-	EMediaAudioCaptureDeviceFilter__Card = 0,
-	EMediaAudioCaptureDeviceFilter__Microphone = 1,
-	EMediaAudioCaptureDeviceFilter__Software = 2,
-	EMediaAudioCaptureDeviceFilter__Unknown = 3,
-	EMediaAudioCaptureDeviceFilter__EMediaAudioCaptureDeviceFilter_MAX = 4
 };
 
 

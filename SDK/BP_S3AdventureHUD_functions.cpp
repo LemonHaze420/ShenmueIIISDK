@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ShowsClockOnPlayerBehavior
-// (NetRequest, Native, MulticastDelegate, Public, Protected, Delegate, DLLImport, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3PlayerBehavior              Behavior                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -27,7 +27,6 @@ bool ABP_S3AdventureHUD_C::ShowsClockOnPlayerBehavior(ES3PlayerBehavior Behavior
 	params.Behavior = Behavior;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +37,7 @@ bool ABP_S3AdventureHUD_C::ShowsClockOnPlayerBehavior(ES3PlayerBehavior Behavior
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.DestroyDevelopmentText
-// (Net, NetReliable, Exec, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AdventureHUD_C::DestroyDevelopmentText()
 {
@@ -55,7 +54,7 @@ void ABP_S3AdventureHUD_C::DestroyDevelopmentText()
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.HideEyecatch
-// (Net, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AdventureHUD_C::HideEyecatch()
 {
@@ -64,7 +63,6 @@ void ABP_S3AdventureHUD_C::HideEyecatch()
 	ABP_S3AdventureHUD_C_HideEyecatch_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,11 +71,11 @@ void ABP_S3AdventureHUD_C::HideEyecatch()
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetMenuManagerActor
-// (NetRequest, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AdventureHUD_C::STATIC_GetMenuManagerActor(class AActor** Actor)
+void ABP_S3AdventureHUD_C::GetMenuManagerActor(class AActor** Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetMenuManagerActor");
 
@@ -95,7 +93,7 @@ void ABP_S3AdventureHUD_C::STATIC_GetMenuManagerActor(class AActor** Actor)
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.PermitDetectAction_Impl
-// (Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -119,12 +117,12 @@ void ABP_S3AdventureHUD_C::PermitDetectAction_Impl(class AActor* Actor, bool* du
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ForbidDetectAction_Impl
-// (Net, NetReliable, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AdventureHUD_C::STATIC_ForbidDetectAction_Impl(class AActor* Actor, bool* dummy)
+void ABP_S3AdventureHUD_C::ForbidDetectAction_Impl(class AActor* Actor, bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ForbidDetectAction_Impl");
 
@@ -143,7 +141,7 @@ void ABP_S3AdventureHUD_C::STATIC_ForbidDetectAction_Impl(class AActor* Actor, b
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.PermitWindowUI_Impl
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -156,7 +154,6 @@ void ABP_S3AdventureHUD_C::PermitWindowUI_Impl(class AActor* Actor, bool* dummy)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -168,12 +165,12 @@ void ABP_S3AdventureHUD_C::PermitWindowUI_Impl(class AActor* Actor, bool* dummy)
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ForbidWindowUI_Impl
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AdventureHUD_C::STATIC_ForbidWindowUI_Impl(class AActor* Actor, bool* dummy)
+void ABP_S3AdventureHUD_C::ForbidWindowUI_Impl(class AActor* Actor, bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ForbidWindowUI_Impl");
 
@@ -181,7 +178,6 @@ void ABP_S3AdventureHUD_C::STATIC_ForbidWindowUI_Impl(class AActor* Actor, bool*
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,9 +189,9 @@ void ABP_S3AdventureHUD_C::STATIC_ForbidWindowUI_Impl(class AActor* Actor, bool*
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.UpdateClockVisibility
-// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AdventureHUD_C::STATIC_UpdateClockVisibility()
+void ABP_S3AdventureHUD_C::UpdateClockVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.UpdateClockVisibility");
 
@@ -210,16 +206,15 @@ void ABP_S3AdventureHUD_C::STATIC_UpdateClockVisibility()
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.SpawnManager
-// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AdventureHUD_C::STATIC_SpawnManager()
+void ABP_S3AdventureHUD_C::SpawnManager()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.SpawnManager");
 
 	ABP_S3AdventureHUD_C_SpawnManager_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -228,7 +223,7 @@ void ABP_S3AdventureHUD_C::STATIC_SpawnManager()
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.HideMoneyStatus
-// (Net, NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -240,7 +235,6 @@ void ABP_S3AdventureHUD_C::HideMoneyStatus(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -249,7 +243,7 @@ void ABP_S3AdventureHUD_C::HideMoneyStatus(class AActor* Actor)
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ShowMoneyStatus
-// (Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -269,7 +263,7 @@ void ABP_S3AdventureHUD_C::ShowMoneyStatus(class AActor* Actor)
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetMoneyStatus
-// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_money_status_C*      BP_MoneyStatus                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -280,7 +274,6 @@ void ABP_S3AdventureHUD_C::GetMoneyStatus(class ABP_money_status_C** BP_MoneySta
 	ABP_S3AdventureHUD_C_GetMoneyStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -292,7 +285,7 @@ void ABP_S3AdventureHUD_C::GetMoneyStatus(class ABP_money_status_C** BP_MoneySta
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ShowEyecatch
-// (Net, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FName                   ForceId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -314,11 +307,11 @@ void ABP_S3AdventureHUD_C::ShowEyecatch(const struct FVector& Location, const st
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetMinimap2DManager
-// (Net, NetRequest, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_MiniMap2DManager_C*  BP_MinimapManager              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AdventureHUD_C::STATIC_GetMinimap2DManager(class ABP_MiniMap2DManager_C** BP_MinimapManager)
+void ABP_S3AdventureHUD_C::GetMinimap2DManager(class ABP_MiniMap2DManager_C** BP_MinimapManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetMinimap2DManager");
 
@@ -336,7 +329,7 @@ void ABP_S3AdventureHUD_C::STATIC_GetMinimap2DManager(class ABP_MiniMap2DManager
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ShowCharaName
-// (NetResponse, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -358,7 +351,7 @@ void ABP_S3AdventureHUD_C::ShowCharaName(class AActor* Actor, bool Visible)
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ChangeDetectIcon
-// (NetReliable, Native, Event, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -376,7 +369,6 @@ void ABP_S3AdventureHUD_C::ChangeDetectIcon(class AActor* Actor, ES3ActionIconTy
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -385,7 +377,7 @@ void ABP_S3AdventureHUD_C::ChangeDetectIcon(class AActor* Actor, ES3ActionIconTy
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetMemoTextureDataManager
-// (NetRequest, Event, NetResponse, NetMulticast, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_MemoTextureDataManager_C* BP_MemoTextureDataManager      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -407,7 +399,7 @@ void ABP_S3AdventureHUD_C::GetMemoTextureDataManager(class ABP_MemoTextureDataMa
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetPopupItem
-// (Net, NetReliable, Event, NetResponse, NetMulticast, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_PopupItem_C*         BP_PopupItem                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -429,7 +421,7 @@ void ABP_S3AdventureHUD_C::GetPopupItem(class ABP_PopupItem_C** BP_PopupItem)
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetMenuManager
-// (NetReliable, Event, NetResponse, NetMulticast, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_MenuWindowManager_C* menuManager                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -451,7 +443,7 @@ void ABP_S3AdventureHUD_C::GetMenuManager(class ABP_MenuWindowManager_C** menuMa
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetMemopadManager
-// (Net, Event, NetResponse, NetMulticast, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_S3MemopadManager_C*  AsBP_S3Memopad_Manager         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -473,7 +465,7 @@ void ABP_S3AdventureHUD_C::GetMemopadManager(class ABP_S3MemopadManager_C** AsBP
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.GetDetectAction
-// (Event, NetResponse, NetMulticast, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_S3DetectAction_C*    AsBP_S3Detect_Action           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -495,9 +487,9 @@ void ABP_S3AdventureHUD_C::GetDetectAction(class ABP_S3DetectAction_C** AsBP_S3D
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.UserConstructionScript
-// (NetReliable, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AdventureHUD_C::STATIC_UserConstructionScript()
+void ABP_S3AdventureHUD_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.UserConstructionScript");
 
@@ -512,7 +504,7 @@ void ABP_S3AdventureHUD_C::STATIC_UserConstructionScript()
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, NetServer)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_S3AdventureHUD_C::ReceiveBeginPlay()
 {
@@ -521,7 +513,6 @@ void ABP_S3AdventureHUD_C::ReceiveBeginPlay()
 	ABP_S3AdventureHUD_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -530,11 +521,11 @@ void ABP_S3AdventureHUD_C::ReceiveBeginPlay()
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ReceiveTick
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AdventureHUD_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_S3AdventureHUD_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ReceiveTick");
 
@@ -550,7 +541,7 @@ void ABP_S3AdventureHUD_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ReceiveDestroyed
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
 void ABP_S3AdventureHUD_C::ReceiveDestroyed()
 {
@@ -559,7 +550,6 @@ void ABP_S3AdventureHUD_C::ReceiveDestroyed()
 	ABP_S3AdventureHUD_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -568,7 +558,7 @@ void ABP_S3AdventureHUD_C::ReceiveDestroyed()
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.CastChildActor
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3AdventureHUD_C::CastChildActor()
 {
@@ -577,7 +567,6 @@ void ABP_S3AdventureHUD_C::CastChildActor()
 	ABP_S3AdventureHUD_C_CastChildActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -586,11 +575,11 @@ void ABP_S3AdventureHUD_C::CastChildActor()
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ShowRewardNotice
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3RewardCategory              Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AdventureHUD_C::STATIC_ShowRewardNotice(ES3RewardCategory Category)
+void ABP_S3AdventureHUD_C::ShowRewardNotice(ES3RewardCategory Category)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ShowRewardNotice");
 
@@ -606,7 +595,7 @@ void ABP_S3AdventureHUD_C::STATIC_ShowRewardNotice(ES3RewardCategory Category)
 
 
 // Function BP_S3AdventureHUD.BP_S3AdventureHUD_C.ExecuteUbergraph_BP_S3AdventureHUD
-// (Net, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

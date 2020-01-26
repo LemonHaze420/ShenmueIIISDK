@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.DestroyTriangle
-// (Exec, Native, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGameChooseSelectTriangle_C::DestroyTriangle()
 {
@@ -23,7 +23,6 @@ void ABP_MiniGameChooseSelectTriangle_C::DestroyTriangle()
 	ABP_MiniGameChooseSelectTriangle_C_DestroyTriangle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,12 +31,12 @@ void ABP_MiniGameChooseSelectTriangle_C::DestroyTriangle()
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.SetLocationAndRotation
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UCameraComponent*        Camera                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_MiniGameChooseSelectTriangle_C::STATIC_SetLocationAndRotation(class AActor* TargetActor, class UCameraComponent* Camera)
+void ABP_MiniGameChooseSelectTriangle_C::SetLocationAndRotation(class AActor* TargetActor, class UCameraComponent* Camera)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.SetLocationAndRotation");
 
@@ -54,7 +53,7 @@ void ABP_MiniGameChooseSelectTriangle_C::STATIC_SetLocationAndRotation(class AAc
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.UpdateVisible
-// (Net, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -66,7 +65,6 @@ void ABP_MiniGameChooseSelectTriangle_C::UpdateVisible(int InputPin)
 	params.InputPin = InputPin;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,7 +73,7 @@ void ABP_MiniGameChooseSelectTriangle_C::UpdateVisible(int InputPin)
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.SetMiniGameLastIndex
-// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            MiniGameLastIndex              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -95,16 +93,15 @@ void ABP_MiniGameChooseSelectTriangle_C::SetMiniGameLastIndex(int MiniGameLastIn
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.UserConstructionScript
-// (Net, NetRequest, Native, Event, Static, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameChooseSelectTriangle_C::STATIC_UserConstructionScript()
+void ABP_MiniGameChooseSelectTriangle_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.UserConstructionScript");
 
 	ABP_MiniGameChooseSelectTriangle_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -113,9 +110,9 @@ void ABP_MiniGameChooseSelectTriangle_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ReceiveBeginPlay
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_MiniGameChooseSelectTriangle_C::STATIC_ReceiveBeginPlay()
+void ABP_MiniGameChooseSelectTriangle_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ReceiveBeginPlay");
 
@@ -130,11 +127,11 @@ void ABP_MiniGameChooseSelectTriangle_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ReceiveEndPlay
-// (Net, NetRequest, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameChooseSelectTriangle_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_MiniGameChooseSelectTriangle_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ReceiveEndPlay");
 
@@ -150,7 +147,7 @@ void ABP_MiniGameChooseSelectTriangle_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndP
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ExecuteUbergraph_BP_MiniGameChooseSelectTriangle
-// (Net, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

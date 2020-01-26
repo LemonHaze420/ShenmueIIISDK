@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Platform.BPF_Platform_C.GetVirtualUIPlatform
-// (Net, NetRequest, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3Platform                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ES3Platform UBPF_Platform_C::GetVirtualUIPlatform(class UObject* __WorldContext)
+ES3Platform UBPF_Platform_C::STATIC_GetVirtualUIPlatform(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Platform.BPF_Platform_C.GetVirtualUIPlatform");
 

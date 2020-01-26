@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Otoshidama_Base.BP_Otoshidama_Base_C
-// 0x023E (0x0848 - 0x060A)
+// 0x0237 (0x0841 - 0x060A)
 class ABP_Otoshidama_Base_C : public ABP_MiniGameBase_C
 {
 public:
@@ -53,57 +53,58 @@ public:
 	TEnumAsByte<ETimelineDirection>                    Timeline_StartCamera__Direction_72450F3442AFA787BAEC49B5C017CCE9;// 0x070C(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x070D(0x0003) MISSED OFFSET
 	class UTimelineComponent*                          Timeline_StartCamera;                                     // 0x0710(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FVector                                     init_spawn_location;                                      // 0x0718(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     init_camera_location;                                     // 0x0724(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	bool                                               is_playing;                                               // 0x0730(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               is_game_end;                                              // 0x0731(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               is_finished;                                              // 0x0732(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               is_release;                                               // 0x0733(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               right_hit_stop;                                           // 0x0734(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               left_hit_stop;                                            // 0x0735(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               right_down;                                               // 0x0736(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               left_down;                                                // 0x0737(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               up_down;                                                  // 0x0738(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               down_down;                                                // 0x0739(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x073A(0x0002) MISSED OFFSET
-	int                                                hit_count;                                                // 0x073C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                now_play_count;                                           // 0x0740(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              camera_offset;                                            // 0x0744(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FST_OtoshiDamaInfo                          Info;                                                     // 0x0748(0x0030) (Edit, BlueprintVisible)
-	class ABP_OD_ball_Test_C*                          current_ball;                                             // 0x0778(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	TArray<class ABP_OD_Fence_C*>                      fence_array;                                              // 0x0780(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<float>                                      left_axis;                                                // 0x0790(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class ABP_OD_Nail_C*>                       nail_list;                                                // 0x07A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	int                                                hit_result;                                               // 0x07B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x07B4(0x0004) MISSED OFFSET
-	TArray<class ABP_OD_CenterPocket_C*>               center_pocket;                                            // 0x07B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
-	float                                              hand_rate;                                                // 0x07C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               is_my_create_nail;                                        // 0x07CC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x07CD(0x0003) MISSED OFFSET
-	float                                              finish_wait_time;                                         // 0x07D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<E_OD_Type>                             OtoshidamaType;                                           // 0x07D4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x07D5(0x0003) MISSED OFFSET
-	float                                              CurrentMinHeight;                                         // 0x07D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bUpdateCameraHeight;                                      // 0x07DC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x07DD(0x0003) MISSED OFFSET
-	struct FVector                                     InitBallStartPos;                                         // 0x07E0(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     InitHandMeshRootPos;                                      // 0x07EC(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	float                                              ArmMoveSpeed;                                             // 0x07F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsStartCamera;                                            // 0x07FC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x07FD(0x0003) MISSED OFFSET
-	int                                                HitPocketIndex;                                           // 0x0800(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               LeftStick_left;                                           // 0x0804(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               LeftStick_right;                                          // 0x0805(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               LeftStick_up;                                             // 0x0806(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               LeftStick_down;                                           // 0x0807(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UUserWidget*                                 RefWidget;                                                // 0x0808(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FString                                     DummyNailLoadID;                                          // 0x0810(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               IsCasinoType;                                             // 0x0820(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x7];                                       // 0x0821(0x0007) MISSED OFFSET
-	class UMaterialInterface*                          ChangeFenceMaterial;                                      // 0x0828(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInstance*>                   CasinoPocketMaterialList;                                 // 0x0830(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              INITIALIZE_CAMERA_HEIGHT;                                 // 0x0840(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MIN_CAMERA_HEIGHT;                                        // 0x0844(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     init_camera_location;                                     // 0x0718(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	bool                                               is_playing;                                               // 0x0724(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               is_game_end;                                              // 0x0725(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               is_finished;                                              // 0x0726(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               is_release;                                               // 0x0727(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               right_hit_stop;                                           // 0x0728(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               left_hit_stop;                                            // 0x0729(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               right_down;                                               // 0x072A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               left_down;                                                // 0x072B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               up_down;                                                  // 0x072C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               down_down;                                                // 0x072D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x072E(0x0002) MISSED OFFSET
+	int                                                hit_count;                                                // 0x0730(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                now_play_count;                                           // 0x0734(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              camera_offset;                                            // 0x0738(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x073C(0x0004) MISSED OFFSET
+	struct FST_OtoshiDamaInfo                          Info;                                                     // 0x0740(0x0030) (Edit, BlueprintVisible)
+	class ABP_OD_ball_Test_C*                          current_ball;                                             // 0x0770(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	TArray<class ABP_OD_Fence_C*>                      fence_array;                                              // 0x0778(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<float>                                      left_axis;                                                // 0x0788(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class ABP_OD_Nail_C*>                       nail_list;                                                // 0x0798(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	int                                                hit_result;                                               // 0x07A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x07AC(0x0004) MISSED OFFSET
+	TArray<class ABP_OD_CenterPocket_C*>               center_pocket;                                            // 0x07B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
+	float                                              hand_rate;                                                // 0x07C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               is_my_create_nail;                                        // 0x07C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x07C5(0x0003) MISSED OFFSET
+	float                                              finish_wait_time;                                         // 0x07C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<E_OD_Type>                             OtoshidamaType;                                           // 0x07CC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x07CD(0x0003) MISSED OFFSET
+	float                                              CurrentMinHeight;                                         // 0x07D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bUpdateCameraHeight;                                      // 0x07D4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x3];                                       // 0x07D5(0x0003) MISSED OFFSET
+	struct FVector                                     InitBallStartPos;                                         // 0x07D8(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     InitHandMeshRootPos;                                      // 0x07E4(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	float                                              ArmMoveSpeed;                                             // 0x07F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsStartCamera;                                            // 0x07F4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x07F5(0x0003) MISSED OFFSET
+	int                                                HitPocketIndex;                                           // 0x07F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               LeftStick_left;                                           // 0x07FC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               LeftStick_right;                                          // 0x07FD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               LeftStick_up;                                             // 0x07FE(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               LeftStick_down;                                           // 0x07FF(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UUserWidget*                                 RefWidget;                                                // 0x0800(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FString                                     DummyNailLoadID;                                          // 0x0808(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               IsCasinoType;                                             // 0x0818(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x7];                                       // 0x0819(0x0007) MISSED OFFSET
+	class UMaterialInterface*                          ChangeFenceMaterial;                                      // 0x0820(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UMaterialInstance*>                   CasinoPocketMaterialList;                                 // 0x0828(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              INITIALIZE_CAMERA_HEIGHT;                                 // 0x0838(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MIN_CAMERA_HEIGHT;                                        // 0x083C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bEnabledCameraUpdate;                                     // 0x0840(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -124,21 +125,21 @@ public:
 	class UMeshComponent* GetClothMeshComponent();
 	struct FVector GetCameraPosition();
 	void SetBoardMaterial();
-	void STATIC_GetMiniGameHelpName(struct FString* String);
-	void STATIC_GetBottomPocketMaterial(int Index, class UMaterialInstance** return_value);
-	void STATIC_GetBottomPocketCount(int* Output);
-	void STATIC_GetBottomPocket(int Dimension_1, int* Output);
+	void GetMiniGameHelpName(struct FString* String);
+	void GetBottomPocketMaterial(int Index, class UMaterialInstance** return_value);
+	void GetBottomPocketCount(int* Output);
+	void GetBottomPocket(int Dimension_1, int* Output);
 	void UpdateHandMotion();
 	void SetHandMotion(float hand_rate);
-	void STATIC_CenterPocektHit(int hit_result);
+	void CenterPocektHit(int hit_result);
 	void HitCheck();
 	void DestroyNail();
-	void STATIC_CreateNail();
+	void CreateNail();
 	void Finalize_Check();
 	void BottomPocketHit(int hit_index);
-	bool STATIC_GetDataBaseValue(const struct FName& row_name, int* Value);
+	bool GetDataBaseValue(const struct FName& row_name, int* Value);
 	void SpawnBall(class ABP_OD_ball_Test_C** OutputPin);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void Timeline_StartCamera__FinishedFunc();
 	void Timeline_StartCamera__UpdateFunc();
 	void Action_Button_Pushed();
@@ -153,8 +154,8 @@ public:
 	void D_Down_Pushed();
 	void D_Up_Released();
 	void D_Up_Pushed();
-	void STATIC_LeftStick_X_Axis(float axis_value);
-	void STATIC_Left_Stick_Y_Axis(float axis_value);
+	void LeftStick_X_Axis(float Axis_Value);
+	void Left_Stick_Y_Axis(float Axis_Value);
 	void Initialize();
 	void Finalize();
 	void FinalizeReset();
@@ -164,40 +165,40 @@ public:
 	void SetChooseCameraTransform();
 	void OnFinishedFade();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void BndEvt__fall_area_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void GameStart();
 	void GameEnd();
-	void STATIC_BeginHitEvent(int hit_index);
+	void BeginHitEvent(int hit_index);
 	void bAllReset();
 	void BndEvt__right_hit_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__right_hit_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void BndEvt__left_hit_K2Node_ComponentBoundEvent_3_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__left_hit_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_BndEvt__WoodSound_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__WoodSound_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void OnTalkEnd();
-	void STATIC_CenterPocektHitEvent(int hit_element);
-	void STATIC_DestroyNailEvent(class ABP_OD_Nail_C* nail);
+	void CenterPocektHitEvent(int hit_element);
+	void DestroyNailEvent(class ABP_OD_Nail_C* nail);
 	void BndEvt__fall_area_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void WinMiniGame();
 	void LoseMiniGame();
 	void DrawMiniGame();
 	void BindTalkEndEvent();
 	void CreateNailEvent();
-	void STATIC_Otoshidama_End(bool is_success);
-	void STATIC_Set_Body_Collision_Enable(bool is_enable);
+	void Otoshidama_End(bool is_success);
+	void Set_Body_Collision_Enable(bool is_enable);
 	void BndEvt__WoodSound_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_SetEnabledPlayerEvent(bool Enabled);
+	void SetEnabledPlayerEvent(bool Enabled);
 	void RestartGamePlay();
 	void Event_CameraUpdate();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void Event_StopStartCamera();
 	void CancelMiniGame();
-	void STATIC_ChangedClothes(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
+	void ChangedClothes(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
 	void DelayedGameEnd();
 	void DelayedInitialize();
 	void EnabledPlayerOnDecide();

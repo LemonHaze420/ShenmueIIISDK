@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,31 +35,31 @@ public:
 
 
 	void IsUsingSpecialData(bool* UseSpecial);
-	void STATIC_PlayerBetAction(bool* dummy);
-	void STATIC_GetJumpDistance(float* Distance);
+	void PlayerBetAction(bool* dummy);
+	void GetJumpDistance(float* Distance);
 	void getSettingInfo(float* motion_rate, float* jump_height, float* jump_distance);
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_UpdateWalkRate();
-	void STATIC_Reset();
-	void STATIC_SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type);
-	void STATIC_ChangeShape(int Index);
-	void STATIC_MoveUpdate();
-	void STATIC_IdleEnd();
-	void STATIC_MoveAnimEnd();
-	void STATIC_SetSideRate();
-	void STATIC_MoveZero();
-	void STATIC_MaxJump();
-	void STATIC_ResetLocation();
-	void STATIC_Jump_Start();
-	void STATIC_walk_Start();
-	void STATIC_WalkStEnd();
-	void STATIC_Event_PlaySEWalk();
-	void STATIC_Event_PlaySECry();
-	void STATIC_CheerAnimalBoost();
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void UpdateWalkRate();
+	void Reset();
+	void SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type);
+	void ChangeShape(int Index);
+	void MoveUpdate();
+	void IdleEnd();
+	void MoveAnimEnd();
+	void SetSideRate();
+	void MoveZero();
+	void MaxJump();
+	void ResetLocation();
+	void Jump_Start();
+	void walk_Start();
+	void WalkStEnd();
+	void Event_PlaySEWalk();
+	void Event_PlaySECry();
+	void CheerAnimalBoost();
 	void DoubleJump();
-	void STATIC_SetAnimNotRaceStartPos(float Start);
+	void SetAnimNotRaceStartPos(float Start);
 	void ExecuteUbergraph_BP_AR_Toad(int EntryPoint);
 };
 

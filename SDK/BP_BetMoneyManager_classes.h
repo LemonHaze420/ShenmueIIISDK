@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,22 +47,22 @@ public:
 	}
 
 
-	int STATIC_GetPriority();
-	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
+	int GetPriority();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void GetPlayCount(int* PlayCount);
 	void GetBetMoney(int* BetMoney);
 	void UserConstructionScript();
-	void STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key);
+	void InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
+	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
+	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
+	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key);
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue);
-	void STATIC_InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float AxisValue);
-	void STATIC_DecideDetectAction(ES3ActionIconType Type);
+	void ReceiveTick(float DeltaSeconds);
+	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue);
+	void InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float AxisValue);
+	void DecideDetectAction(ES3ActionIconType Type);
 	void EndBet();
-	void STATIC_ExecuteUbergraph_BP_BetMoneyManager(int EntryPoint);
+	void ExecuteUbergraph_BP_BetMoneyManager(int EntryPoint);
 	void ED_PreDecideReturn__DelegateSignature();
 	void ED_PreDecideBet__DelegateSignature();
 	void ED_PostDecideReturn__DelegateSignature();

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,15 +30,15 @@ public:
 	}
 
 
-	bool STATIC_ShouldSetPlayerBehavior();
-	void STATIC_UserConstructionScript();
+	bool ShouldSetPlayerBehavior();
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_EnablePlayerInput(bool Condition);
-	void STATIC_BindDIalogFinish(bool Bind);
-	void STATIC_StartPause(bool Pause);
-	void STATIC_OnDialogClose(class AActor* Actor);
-	void STATIC_ExecuteUbergraph_BP_FoodTutorialEvent(int EntryPoint);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void EnablePlayerInput(bool Condition);
+	void BindDIalogFinish(bool Bind);
+	void StartPause(bool Pause);
+	void OnDialogClose(class AActor* Actor);
+	void ExecuteUbergraph_BP_FoodTutorialEvent(int EntryPoint);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,11 +36,11 @@ public:
 	}
 
 
-	int STATIC_AdjustForDifficultySetting(int PlayerLevelsAbove);
+	int AdjustForDifficultySetting(int PlayerLevelsAbove);
 	void CalcEnemyTeamAdjust(int LevelRef, int* MaxSimultaneousAttacks);
-	void STATIC_CalcEnemyAdjust(int PlayerLevelAbove, int* AIStep);
-	struct FString STATIC_DebugPrintEffects(int RelativeLevel, float InDamage, float OutDamage, int Adjust, bool Short);
-	void STATIC_PrintExampleStats();
+	void CalcEnemyAdjust(int PlayerLevelAbove, int* AIStep);
+	struct FString DebugPrintEffects(int RelativeLevel, float InDamage, float OutDamage, int Adjust, bool Short);
+	void PrintExampleStats();
 	void CalcPlayerAdjust(int PlayerLevelsAbove, bool* Apply, float* InDamageRatio, float* OutDamageRatio);
 };
 

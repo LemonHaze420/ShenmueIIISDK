@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.ResetItemCamera
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_UI_ItemCapture_C::STATIC_ResetItemCamera()
+void ABP_UI_ItemCapture_C::ResetItemCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.ResetItemCamera");
 
 	ABP_UI_ItemCapture_C_ResetItemCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_UI_ItemCapture_C::STATIC_ResetItemCamera()
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.SetupInterp
-// (Net, NetReliable, NetRequest, NetResponse, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 TargetLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 PreLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -54,7 +53,7 @@ void ABP_UI_ItemCapture_C::SetupInterp(const struct FVector& TargetLocation, con
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.UpdateInterp
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_UI_ItemCapture_C::UpdateInterp()
 {
@@ -71,11 +70,11 @@ void ABP_UI_ItemCapture_C::UpdateInterp()
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.InputAxis_Left
-// (NetReliable, NetRequest, NetResponse, Static, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ItemCapture_C::STATIC_InputAxis_Left(float AxisValue)
+void ABP_UI_ItemCapture_C::InputAxis_Left(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.InputAxis_Left");
 
@@ -91,19 +90,18 @@ void ABP_UI_ItemCapture_C::STATIC_InputAxis_Left(float AxisValue)
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.UpdateCamera
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          DeltaSecond                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          DeltaSEcond                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ItemCapture_C::STATIC_UpdateCamera(float DeltaSecond)
+void ABP_UI_ItemCapture_C::UpdateCamera(float DeltaSEcond)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.UpdateCamera");
 
 	ABP_UI_ItemCapture_C_UpdateCamera_Params params;
-	params.DeltaSecond = DeltaSecond;
+	params.DeltaSEcond = DeltaSEcond;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,12 +110,12 @@ void ABP_UI_ItemCapture_C::STATIC_UpdateCamera(float DeltaSecond)
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.InputAxis_Right
-// (Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Vertical                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ItemCapture_C::STATIC_InputAxis_Right(bool Vertical, float AxisValue)
+void ABP_UI_ItemCapture_C::InputAxis_Right(bool Vertical, float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.InputAxis_Right");
 
@@ -134,7 +132,7 @@ void ABP_UI_ItemCapture_C::STATIC_InputAxis_Right(bool Vertical, float AxisValue
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.SetViewMode
-// (Exec, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsViewMode                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -154,7 +152,7 @@ void ABP_UI_ItemCapture_C::SetViewMode(bool IsViewMode)
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.SetViewMesh
-// (Net, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -174,7 +172,7 @@ void ABP_UI_ItemCapture_C::SetViewMesh(int ItemId)
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_UI_ItemCapture_C::UserConstructionScript()
 {
@@ -191,16 +189,15 @@ void ABP_UI_ItemCapture_C::UserConstructionScript()
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.ReceiveBeginPlay
-// (Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_UI_ItemCapture_C::STATIC_ReceiveBeginPlay()
+void ABP_UI_ItemCapture_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.ReceiveBeginPlay");
 
 	ABP_UI_ItemCapture_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -209,7 +206,7 @@ void ABP_UI_ItemCapture_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.ReceiveTick
-// (Net, Native, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -221,7 +218,6 @@ void ABP_UI_ItemCapture_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -230,9 +226,9 @@ void ABP_UI_ItemCapture_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.ReceiveDestroyed
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void ABP_UI_ItemCapture_C::STATIC_ReceiveDestroyed()
+void ABP_UI_ItemCapture_C::ReceiveDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.ReceiveDestroyed");
 
@@ -247,7 +243,7 @@ void ABP_UI_ItemCapture_C::STATIC_ReceiveDestroyed()
 
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.ExecuteUbergraph_BP_UI_ItemCapture
-// (NetRequest, Exec, Event, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

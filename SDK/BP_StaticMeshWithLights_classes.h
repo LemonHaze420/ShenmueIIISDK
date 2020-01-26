@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,16 +38,16 @@ public:
 	}
 
 
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
 	void DayTimeEventDispatcher_Event_1(ES3DayTimeEvent EventType);
-	void STATIC_LightSourceChange(float Intensity, int MatID, class UMaterialInstanceDynamic* DMI, bool On);
+	void LightSourceChange(float Intensity, int MatID, class UMaterialInstanceDynamic* DMI, bool On);
 	void CustomEvent_1(int EventIndex);
-	void STATIC_OnSetLightEnable(bool bNewLightEnable);
-	void STATIC_OnSetLightCastShadow(bool bNewLightCastShadow);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BP_StaticMeshWithLights(int EntryPoint);
+	void OnSetLightEnable(bool bNewLightEnable);
+	void OnSetLightCastShadow(bool bNewLightCastShadow);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ExecuteUbergraph_BP_StaticMeshWithLights(int EntryPoint);
 };
 
 

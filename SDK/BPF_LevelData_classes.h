@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,15 +26,15 @@ public:
 
 
 	void STATIC_GetACLevelName(class UObject* __WorldContext, struct FName* LevelName);
-	void IsInChobuRyosya(class UObject* __WorldContext, bool* In);
+	void STATIC_IsInChobuRyosya(class UObject* __WorldContext, bool* In);
 	void STATIC_GetBPLevelName(class UObject* __WorldContext, struct FName* LevelName);
 	void STATIC_GetLookAtLevelName(class UObject* __WorldContext, struct FName* LevelName);
-	void GetLandscapeLevelNames(class UObject* __WorldContext, TArray<struct FName>* LevelNames);
+	void STATIC_GetLandscapeLevelNames(class UObject* __WorldContext, TArray<struct FName>* LevelNames);
 	void STATIC_GetMinimapLevelName(class UObject* __WorldContext, struct FName* LevelName);
 	void STATIC_GetNaviMeshLevelName(class UObject* __WorldContext, struct FName* LevelName);
 	void STATIC_GetNPCLevelName(class UObject* __WorldContext, struct FName* LevelName);
 	void STATIC_GetChobuLevelName(class UObject* __WorldContext, struct FName* LevelName);
-	void getLevelNameAndEnum(const struct FString& PersistentLevelName, bool Detail, class UObject* __WorldContext, struct FString* nameStr, ES3Where* enWhere);
+	void STATIC_getLevelNameAndEnum(const struct FString& PersistentLevelName, bool Detail, class UObject* __WorldContext, struct FString* nameStr, ES3Where* enWhere);
 	void STATIC_getLevelData(class UObject* __WorldContext, class US3LevelDataAsset** LevelData);
 };
 

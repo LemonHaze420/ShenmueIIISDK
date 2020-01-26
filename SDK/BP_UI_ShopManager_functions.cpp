@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_ShopManager.BP_UI_ShopManager_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_UI_ShopManager_C::STATIC_UserConstructionScript()
+void ABP_UI_ShopManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopManager.BP_UI_ShopManager_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_UI_ShopManager_C::STATIC_UserConstructionScript()
 
 
 // Function BP_UI_ShopManager.BP_UI_ShopManager_C.ReceiveBeginPlay
-// (Net, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_UI_ShopManager_C::ReceiveBeginPlay()
 {
@@ -48,11 +48,11 @@ void ABP_UI_ShopManager_C::ReceiveBeginPlay()
 
 
 // Function BP_UI_ShopManager.BP_UI_ShopManager_C.ExecuteUbergraph_BP_UI_ShopManager
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ShopManager_C::STATIC_ExecuteUbergraph_BP_UI_ShopManager(int EntryPoint)
+void ABP_UI_ShopManager_C::ExecuteUbergraph_BP_UI_ShopManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopManager.BP_UI_ShopManager_C.ExecuteUbergraph_BP_UI_ShopManager");
 
@@ -60,7 +60,6 @@ void ABP_UI_ShopManager_C::STATIC_ExecuteUbergraph_BP_UI_ShopManager(int EntryPo
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

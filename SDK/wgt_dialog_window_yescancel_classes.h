@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,15 +40,15 @@ public:
 	}
 
 
-	void STATIC_IsOpen(bool* Open);
-	void STATIC_Reset();
-	void STATIC_PushRight();
-	void STATIC_PushLeft();
-	void STATIC_Close();
+	void IsOpen(bool* Open);
+	void Reset();
+	void PushRight();
+	void PushLeft();
+	void Close();
 	void Open();
-	void STATIC_Construct();
-	void STATIC_Destruct();
-	void STATIC_ExecuteUbergraph_wgt_dialog_window_yescancel(int EntryPoint);
+	void Construct();
+	void Destruct();
+	void ExecuteUbergraph_wgt_dialog_window_yescancel(int EntryPoint);
 };
 
 

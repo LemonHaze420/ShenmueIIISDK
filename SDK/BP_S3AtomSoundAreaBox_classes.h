@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,12 @@ public:
 	}
 
 
-	void STATIC_IsDisable(bool* Disabled);
+	void IsDisable(bool* Disabled);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_0_S3SoundAreaCallback__DelegateSignature();
-	void STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_1_S3SoundAreaCallback__DelegateSignature();
-	void STATIC_ExecuteUbergraph_BP_S3AtomSoundAreaBox(int EntryPoint);
+	void ReceiveBeginPlay();
+	void BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_0_S3SoundAreaCallback__DelegateSignature();
+	void BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_1_S3SoundAreaCallback__DelegateSignature();
+	void ExecuteUbergraph_BP_S3AtomSoundAreaBox(int EntryPoint);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,17 +29,17 @@ public:
 
 
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_UpdateWalkRate();
-	void STATIC_Reset();
-	void STATIC_SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type);
-	void STATIC_ChangeShape(int Index);
-	void STATIC_Event_PlaySECry();
-	void STATIC_Event_PlaySEWalk();
-	void STATIC_SetWalkRate(float Rate);
-	void STATIC_SetAnimNotRaceStartPos(float Start);
-	void STATIC_SetAnimInRaceFlag(bool InRace);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void UpdateWalkRate();
+	void Reset();
+	void SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type);
+	void ChangeShape(int Index);
+	void Event_PlaySECry();
+	void Event_PlaySEWalk();
+	void SetWalkRate(float Rate);
+	void SetAnimNotRaceStartPos(float Start);
+	void SetAnimInRaceFlag(bool InRace);
 	void ExecuteUbergraph_BP_AR_BoxTurtle(int EntryPoint);
 };
 

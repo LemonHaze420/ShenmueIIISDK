@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.IsStillValidToWait
-// (NetRequest, Exec, NetResponse, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_NPCLeadWaitPointEvent_C::STATIC_IsStillValidToWait()
+bool ABP_NPCLeadWaitPointEvent_C::IsStillValidToWait()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.IsStillValidToWait");
 
@@ -35,11 +35,11 @@ bool ABP_NPCLeadWaitPointEvent_C::STATIC_IsStillValidToWait()
 
 
 // Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.StartEvent
-// (NetRequest, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadWaitPointEvent_C::STATIC_StartEvent(bool* Success)
+void ABP_NPCLeadWaitPointEvent_C::StartEvent(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.StartEvent");
 
@@ -57,9 +57,9 @@ void ABP_NPCLeadWaitPointEvent_C::STATIC_StartEvent(bool* Success)
 
 
 // Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.UserConstructionScript
-// (Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_NPCLeadWaitPointEvent_C::STATIC_UserConstructionScript()
+void ABP_NPCLeadWaitPointEvent_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.UserConstructionScript");
 

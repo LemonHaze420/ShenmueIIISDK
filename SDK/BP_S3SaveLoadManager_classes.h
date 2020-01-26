@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,16 +33,16 @@ public:
 	}
 
 
-	void STATIC_JudgeLoadingType(int EventStep, ES3LoadingType* Type);
-	void STATIC_ExecRetrySave();
+	void JudgeLoadingType(int EventStep, ES3LoadingType* Type);
+	void ExecRetrySave();
 	void ExecLoadRetrySaveData(bool* Success, class US3SaveGame** SaveData);
-	void STATIC_OpenIgnoreDialog(const struct FName& Label);
+	void OpenIgnoreDialog(const struct FName& Label);
 	void OpenSaveLoadTestWidget(const struct FName& Type);
 	bool ResetSaveData();
-	bool STATIC_OpenLevel(ES3Where LocationId, int EventStep);
-	void STATIC_ExecLoadAutoSaveData(bool* Success, class US3SaveGame** SaveData);
+	bool OpenLevel(ES3Where LocationId, int EventStep);
+	void ExecLoadAutoSaveData(bool* Success, class US3SaveGame** SaveData);
 	bool OpenLoadWidget();
-	bool STATIC_OpenSaveWidget();
+	bool OpenSaveWidget();
 	void UserConstructionScript();
 	void CustomEvent_1();
 	void CustomEvent_2();
@@ -50,18 +50,18 @@ public:
 	void OpenLoadWidgetImpl();
 	void OpenSaveWidgetImpl();
 	void CustomEvent_4();
-	void STATIC_BeginLoadData(class US3SaveGame* SaveGame, bool bRetryData);
-	void STATIC_CloseIgnoreDialog(class AActor* Actor);
-	void STATIC_ConfirmClearData();
-	void STATIC_SelectLevel(class AActor* Actor);
-	void STATIC_SelectChobu(class AActor* Actor);
-	void STATIC_SelectHakkason(class AActor* Actor);
+	void BeginLoadData(class US3SaveGame* SaveGame, bool bRetryData);
+	void CloseIgnoreDialog(class AActor* Actor);
+	void ConfirmClearData();
+	void SelectLevel(class AActor* Actor);
+	void SelectChobu(class AActor* Actor);
+	void SelectHakkason(class AActor* Actor);
 	void StartClearData();
 	void WidgetClosed();
 	void OpenSaveLoadWidget();
 	void ShowNotInstallDLCDialog();
-	void STATIC_CloseNotInstallDLC(class AActor* Actor);
-	void STATIC_ExecuteUbergraph_BP_S3SaveLoadManager(int EntryPoint);
+	void CloseNotInstallDLC(class AActor* Actor);
+	void ExecuteUbergraph_BP_S3SaveLoadManager(int EntryPoint);
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PlayerCtrl.PlayerCtrl_C.GetPriority
-// (NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ int APlayerCtrl_C::GetPriority()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.GetDetectAction
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -56,7 +56,7 @@ TArray<struct FS3DetectActionParam> APlayerCtrl_C::GetDetectAction()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_GetIsInFirstPersonMode
-// (NetRequest, Exec, Native, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -67,7 +67,6 @@ bool APlayerCtrl_C::PC_GetIsInFirstPersonMode()
 	APlayerCtrl_C_PC_GetIsInFirstPersonMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,11 +77,11 @@ bool APlayerCtrl_C::PC_GetIsInFirstPersonMode()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_InitPawn
-// (NetReliable, NetRequest, Exec, Native, Event, Static, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3_Character_Adventure_C* Pawn                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_InitPawn(class ABP_S3_Character_Adventure_C* Pawn)
+void APlayerCtrl_C::PC_InitPawn(class ABP_S3_Character_Adventure_C* Pawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_InitPawn");
 
@@ -90,7 +89,6 @@ void APlayerCtrl_C::STATIC_PC_InitPawn(class ABP_S3_Character_Adventure_C* Pawn)
 	params.Pawn = Pawn;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,11 +97,11 @@ void APlayerCtrl_C::STATIC_PC_InitPawn(class ABP_S3_Character_Adventure_C* Pawn)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_ShouldDelayTalkInteract
-// (NetReliable, NetRequest, Exec, NetResponse, Static, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APlayerCtrl_C::STATIC_PC_ShouldDelayTalkInteract()
+bool APlayerCtrl_C::PC_ShouldDelayTalkInteract()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_ShouldDelayTalkInteract");
 
@@ -120,11 +118,11 @@ bool APlayerCtrl_C::STATIC_PC_ShouldDelayTalkInteract()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_HasVirtualJoystickInput
-// (Net, NetRequest, Exec, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_HasVirtualJoystickInput(bool* newParam)
+void APlayerCtrl_C::PC_HasVirtualJoystickInput(bool* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_HasVirtualJoystickInput");
 
@@ -142,16 +140,15 @@ void APlayerCtrl_C::STATIC_PC_HasVirtualJoystickInput(bool* newParam)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.UseRunEnergy
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_UseRunEnergy()
+void APlayerCtrl_C::UseRunEnergy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.UseRunEnergy");
 
 	APlayerCtrl_C_UseRunEnergy_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,11 +157,11 @@ void APlayerCtrl_C::STATIC_UseRunEnergy()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionIsCrouch
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APlayerCtrl_C::STATIC_PC_TalkShowMotionIsCrouch()
+bool APlayerCtrl_C::PC_TalkShowMotionIsCrouch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionIsCrouch");
 
@@ -181,7 +178,7 @@ bool APlayerCtrl_C::STATIC_PC_TalkShowMotionIsCrouch()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_RequestFaceActor
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  PC_Sensor_InputDirWS           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -193,7 +190,6 @@ void APlayerCtrl_C::PC_RequestFaceActor(class AActor* PC_Sensor_InputDirWS)
 	params.PC_Sensor_InputDirWS = PC_Sensor_InputDirWS;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,16 +198,15 @@ void APlayerCtrl_C::PC_RequestFaceActor(class AActor* PC_Sensor_InputDirWS)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcMSLeave
-// (NetRequest, Native, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_StateProcMSLeave()
+void APlayerCtrl_C::PC_StateProcMSLeave()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StateProcMSLeave");
 
 	APlayerCtrl_C_PC_StateProcMSLeave_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,11 +215,11 @@ void APlayerCtrl_C::STATIC_PC_StateProcMSLeave()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsIdle
-// (Net, NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APlayerCtrl_C::STATIC_PC_IsIdle()
+bool APlayerCtrl_C::PC_IsIdle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_IsIdle");
 
@@ -241,11 +236,11 @@ bool APlayerCtrl_C::STATIC_PC_IsIdle()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsSafeToPlayEventMontages
-// (NetRequest, Event, NetResponse, Static, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APlayerCtrl_C::STATIC_PC_IsSafeToPlayEventMontages()
+bool APlayerCtrl_C::PC_IsSafeToPlayEventMontages()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_IsSafeToPlayEventMontages");
 
@@ -262,18 +257,17 @@ bool APlayerCtrl_C::STATIC_PC_IsSafeToPlayEventMontages()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_GetWalkStopMaxSpeed
-// (Native, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          WALK_SPEED_MAX                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_GetWalkStopMaxSpeed(float* WALK_SPEED_MAX)
+void APlayerCtrl_C::PC_GetWalkStopMaxSpeed(float* WALK_SPEED_MAX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_GetWalkStopMaxSpeed");
 
 	APlayerCtrl_C_PC_GetWalkStopMaxSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,11 +279,11 @@ void APlayerCtrl_C::STATIC_PC_GetWalkStopMaxSpeed(float* WALK_SPEED_MAX)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StopMontage
-// (Net, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAnimMontage*            Anim                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_StopMontage(class UAnimMontage* Anim)
+void APlayerCtrl_C::PC_StopMontage(class UAnimMontage* Anim)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StopMontage");
 
@@ -297,7 +291,6 @@ void APlayerCtrl_C::STATIC_PC_StopMontage(class UAnimMontage* Anim)
 	params.Anim = Anim;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -306,11 +299,11 @@ void APlayerCtrl_C::STATIC_PC_StopMontage(class UAnimMontage* Anim)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.GetAdventureCharacter
-// (NetReliable, NetRequest, Exec, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_S3_Character_Adventure_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_S3_Character_Adventure_C* APlayerCtrl_C::STATIC_GetAdventureCharacter()
+class ABP_S3_Character_Adventure_C* APlayerCtrl_C::GetAdventureCharacter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.GetAdventureCharacter");
 
@@ -327,11 +320,11 @@ class ABP_S3_Character_Adventure_C* APlayerCtrl_C::STATIC_GetAdventureCharacter(
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_ShouldRun
-// (Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APlayerCtrl_C::STATIC_PC_ShouldRun()
+bool APlayerCtrl_C::PC_ShouldRun()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_ShouldRun");
 
@@ -348,7 +341,7 @@ bool APlayerCtrl_C::STATIC_PC_ShouldRun()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_GetEnergyManager
-// (Net, NetRequest, Native, Event, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3EnergyManager*        EnergyMan                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -359,7 +352,6 @@ void APlayerCtrl_C::PC_GetEnergyManager(class AS3EnergyManager** EnergyMan)
 	APlayerCtrl_C_PC_GetEnergyManager_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -371,9 +363,9 @@ void APlayerCtrl_C::PC_GetEnergyManager(class AS3EnergyManager** EnergyMan)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcTickWalk
-// (Net, NetReliable, Exec, Event, Static, Private, HasOutParms, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_StateProcTickWalk()
+void APlayerCtrl_C::PC_StateProcTickWalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StateProcTickWalk");
 
@@ -388,13 +380,13 @@ void APlayerCtrl_C::STATIC_PC_StateProcTickWalk()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_HasAxisInput
-// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Input                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeadZone                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APlayerCtrl_C::STATIC_PC_HasAxisInput(float Input, float DeadZone)
+bool APlayerCtrl_C::PC_HasAxisInput(float Input, float DeadZone)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_HasAxisInput");
 
@@ -413,13 +405,13 @@ bool APlayerCtrl_C::STATIC_PC_HasAxisInput(float Input, float DeadZone)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_ApplyInputDeadzone
-// (NetReliable, Exec, Native, Static, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Input                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeadZone                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Gated                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_ApplyInputDeadzone(float Input, float DeadZone, float* Gated)
+void APlayerCtrl_C::PC_ApplyInputDeadzone(float Input, float DeadZone, float* Gated)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_ApplyInputDeadzone");
 
@@ -428,7 +420,6 @@ void APlayerCtrl_C::STATIC_PC_ApplyInputDeadzone(float Input, float DeadZone, fl
 	params.DeadZone = DeadZone;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -440,12 +431,12 @@ void APlayerCtrl_C::STATIC_PC_ApplyInputDeadzone(float Input, float DeadZone, fl
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_GateInputFloat
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Input                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Gated                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_GateInputFloat(float Input, float* Gated)
+void APlayerCtrl_C::PC_GateInputFloat(float Input, float* Gated)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_GateInputFloat");
 
@@ -453,7 +444,6 @@ void APlayerCtrl_C::STATIC_PC_GateInputFloat(float Input, float* Gated)
 	params.Input = Input;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -465,7 +455,7 @@ void APlayerCtrl_C::STATIC_PC_GateInputFloat(float Input, float* Gated)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsInputAllowed
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Allow                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -476,7 +466,6 @@ void APlayerCtrl_C::PC_IsInputAllowed(bool* Allow)
 	APlayerCtrl_C_PC_IsInputAllowed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -488,7 +477,7 @@ void APlayerCtrl_C::PC_IsInputAllowed(bool* Allow)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsInputAllowed_SpecialCased
-// (Net, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3PlayerBehavior              SpecialException               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Allow                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -512,11 +501,11 @@ void APlayerCtrl_C::PC_IsInputAllowed_SpecialCased(ES3PlayerBehavior SpecialExce
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_R2ButtonRunFlagSet
-// (Net, Native, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_R2ButtonRunFlagSet(bool Value)
+void APlayerCtrl_C::PC_R2ButtonRunFlagSet(bool Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_R2ButtonRunFlagSet");
 
@@ -524,7 +513,6 @@ void APlayerCtrl_C::STATIC_PC_R2ButtonRunFlagSet(bool Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -533,7 +521,7 @@ void APlayerCtrl_C::STATIC_PC_R2ButtonRunFlagSet(bool Value)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StartWalkStopMontage
-// (Exec, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          CycleStartTime_Fraction_       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -555,12 +543,12 @@ void APlayerCtrl_C::PC_StartWalkStopMontage(float CycleStartTime_Fraction_, clas
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_GetWalkCycleTime
-// (Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TimeFraction                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Valid                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_GetWalkCycleTime(float* TimeFraction, bool* Valid)
+void APlayerCtrl_C::PC_GetWalkCycleTime(float* TimeFraction, bool* Valid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_GetWalkCycleTime");
 
@@ -580,7 +568,7 @@ void APlayerCtrl_C::STATIC_PC_GetWalkCycleTime(float* TimeFraction, bool* Valid)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_GetWalkCycleTimeFraction
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TimeFraction                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Valid                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -592,7 +580,6 @@ void APlayerCtrl_C::PC_GetWalkCycleTimeFraction(float* TimeFraction, bool* Valid
 	APlayerCtrl_C_PC_GetWalkCycleTimeFraction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -606,11 +593,11 @@ void APlayerCtrl_C::PC_GetWalkCycleTimeFraction(float* TimeFraction, bool* Valid
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsRunning
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsRunning                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_IsRunning(bool* IsRunning)
+void APlayerCtrl_C::PC_IsRunning(bool* IsRunning)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_IsRunning");
 
@@ -628,7 +615,7 @@ void APlayerCtrl_C::STATIC_PC_IsRunning(bool* IsRunning)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_AllowZoomMode
-// (NetReliable, NetRequest, Event, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           OK                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -650,18 +637,17 @@ void APlayerCtrl_C::PC_AllowZoomMode(bool* OK)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_HasMoveInput
-// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bMove                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_HasMoveInput(bool* bMove)
+void APlayerCtrl_C::PC_HasMoveInput(bool* bMove)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_HasMoveInput");
 
 	APlayerCtrl_C_PC_HasMoveInput_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -673,7 +659,7 @@ void APlayerCtrl_C::STATIC_PC_HasMoveInput(bool* bMove)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_MatchTarget_RotationOnly
-// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                MatchRotation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          StartPercent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -692,7 +678,6 @@ void APlayerCtrl_C::PC_MatchTarget_RotationOnly(const struct FRotator& MatchRota
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -704,13 +689,13 @@ void APlayerCtrl_C::PC_MatchTarget_RotationOnly(const struct FRotator& MatchRota
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TurnBack
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UShapeComponent*         Shape                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 Normal                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           bNewReaction                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_TurnBack(class UShapeComponent* Shape, const struct FVector& Normal, bool* bNewReaction)
+void APlayerCtrl_C::PC_TurnBack(class UShapeComponent* Shape, const struct FVector& Normal, bool* bNewReaction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TurnBack");
 
@@ -730,16 +715,15 @@ void APlayerCtrl_C::STATIC_PC_TurnBack(class UShapeComponent* Shape, const struc
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcEnter_Stair
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_StateProcEnter_Stair()
+void APlayerCtrl_C::PC_StateProcEnter_Stair()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StateProcEnter_Stair");
 
 	APlayerCtrl_C_PC_StateProcEnter_Stair_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -748,9 +732,9 @@ void APlayerCtrl_C::STATIC_PC_StateProcEnter_Stair()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SkipTalkShowMotion
-// (Net, NetResponse, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_SkipTalkShowMotion()
+void APlayerCtrl_C::PC_SkipTalkShowMotion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SkipTalkShowMotion");
 
@@ -765,11 +749,11 @@ void APlayerCtrl_C::STATIC_PC_SkipTalkShowMotion()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_MustAdjustBeforeUseDoor
-// (NetRequest, Exec, Event, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bNeedsToAlgin                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_MustAdjustBeforeUseDoor(bool* bNeedsToAlgin)
+void APlayerCtrl_C::PC_MustAdjustBeforeUseDoor(bool* bNeedsToAlgin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_MustAdjustBeforeUseDoor");
 
@@ -787,18 +771,17 @@ void APlayerCtrl_C::STATIC_PC_MustAdjustBeforeUseDoor(bool* bNeedsToAlgin)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_CanStopWithCurrentSpeed
-// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bCanStop                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_CanStopWithCurrentSpeed(bool* bCanStop)
+void APlayerCtrl_C::PC_CanStopWithCurrentSpeed(bool* bCanStop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_CanStopWithCurrentSpeed");
 
 	APlayerCtrl_C_PC_CanStopWithCurrentSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -810,9 +793,9 @@ void APlayerCtrl_C::STATIC_PC_CanStopWithCurrentSpeed(bool* bCanStop)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_UpdateInputPostAI
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_UpdateInputPostAI()
+void APlayerCtrl_C::PC_UpdateInputPostAI()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_UpdateInputPostAI");
 
@@ -827,16 +810,15 @@ void APlayerCtrl_C::STATIC_PC_UpdateInputPostAI()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcTick_Door
-// (Exec, Native, Event, Static, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_StateProcTick_Door()
+void APlayerCtrl_C::PC_StateProcTick_Door()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StateProcTick_Door");
 
 	APlayerCtrl_C_PC_StateProcTick_Door_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -845,11 +827,11 @@ void APlayerCtrl_C::STATIC_PC_StateProcTick_Door()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_GetShouldStopForTalk
-// (Net, NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bShouldStop                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_GetShouldStopForTalk(bool* bShouldStop)
+void APlayerCtrl_C::PC_GetShouldStopForTalk(bool* bShouldStop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_GetShouldStopForTalk");
 
@@ -867,12 +849,12 @@ void APlayerCtrl_C::STATIC_PC_GetShouldStopForTalk(bool* bShouldStop)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_CalculateObstacleStopParams
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          OutTargetSpeed                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          OutTargetDeaccel               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_CalculateObstacleStopParams(float* OutTargetSpeed, float* OutTargetDeaccel)
+void APlayerCtrl_C::PC_CalculateObstacleStopParams(float* OutTargetSpeed, float* OutTargetDeaccel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_CalculateObstacleStopParams");
 
@@ -892,16 +874,15 @@ void APlayerCtrl_C::STATIC_PC_CalculateObstacleStopParams(float* OutTargetSpeed,
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TransitTalk
-// (Exec, Native, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_TransitTalk()
+void APlayerCtrl_C::PC_TransitTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TransitTalk");
 
 	APlayerCtrl_C_PC_TransitTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -910,11 +891,11 @@ void APlayerCtrl_C::STATIC_PC_TransitTalk()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionSelect
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UAnimMontage*            OutMontage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_TalkShowMotionSelect(class UAnimMontage** OutMontage)
+void APlayerCtrl_C::PC_TalkShowMotionSelect(class UAnimMontage** OutMontage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionSelect");
 
@@ -932,7 +913,7 @@ void APlayerCtrl_C::STATIC_PC_TalkShowMotionSelect(class UAnimMontage** OutMonta
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcMSE_Stop
-// (Net, Exec, Native, Event, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_StateProcMSE_Stop()
 {
@@ -941,7 +922,6 @@ void APlayerCtrl_C::PC_StateProcMSE_Stop()
 	APlayerCtrl_C_PC_StateProcMSE_Stop_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -950,9 +930,9 @@ void APlayerCtrl_C::PC_StateProcMSE_Stop()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcMSE_Door
-// (Net, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_StateProcMSE_Door()
+void APlayerCtrl_C::PC_StateProcMSE_Door()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StateProcMSE_Door");
 
@@ -967,16 +947,15 @@ void APlayerCtrl_C::STATIC_PC_StateProcMSE_Door()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_Sensor_UpdateNoInputForwardTrackAngle
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_Sensor_UpdateNoInputForwardTrackAngle()
+void APlayerCtrl_C::PC_Sensor_UpdateNoInputForwardTrackAngle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_Sensor_UpdateNoInputForwardTrackAngle");
 
 	APlayerCtrl_C_PC_Sensor_UpdateNoInputForwardTrackAngle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -985,7 +964,7 @@ void APlayerCtrl_C::STATIC_PC_Sensor_UpdateNoInputForwardTrackAngle()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_RequestTargetSwitching
-// (NetReliable, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 PC_Sensor_InputDirWS           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          PC_NPCSelectDir                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1007,7 +986,7 @@ void APlayerCtrl_C::PC_RequestTargetSwitching(const struct FVector& PC_Sensor_In
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_ApplySlopeSpeedFactor
-// (Exec, Event, NetMulticast, Public, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          OriginalSpeed                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          SlopeAngle                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1033,7 +1012,7 @@ void APlayerCtrl_C::PC_ApplySlopeSpeedFactor(float OriginalSpeed, float SlopeAng
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcLeave_Stair
-// (Event, NetResponse, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_StateProcLeave_Stair()
 {
@@ -1050,7 +1029,7 @@ void APlayerCtrl_C::PC_StateProcLeave_Stair()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcMSE_Stair
-// (Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_StateProcMSE_Stair()
 {
@@ -1067,7 +1046,7 @@ void APlayerCtrl_C::PC_StateProcMSE_Stair()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcTick_Stair
-// (Native, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_StateProcTick_Stair()
 {
@@ -1076,7 +1055,6 @@ void APlayerCtrl_C::PC_StateProcTick_Stair()
 	APlayerCtrl_C_PC_StateProcTick_Stair_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1085,7 +1063,7 @@ void APlayerCtrl_C::PC_StateProcTick_Stair()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcTick_WalkStop
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_StateProcTick_WalkStop()
 {
@@ -1102,16 +1080,15 @@ void APlayerCtrl_C::PC_StateProcTick_WalkStop()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SensorDetectTurnDirection
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_SensorDetectTurnDirection()
+void APlayerCtrl_C::PC_SensorDetectTurnDirection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SensorDetectTurnDirection");
 
 	APlayerCtrl_C_PC_SensorDetectTurnDirection_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1120,9 +1097,9 @@ void APlayerCtrl_C::STATIC_PC_SensorDetectTurnDirection()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_AI_UpdateTargetSwitching
-// (Net, Event, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_AI_UpdateTargetSwitching()
+void APlayerCtrl_C::PC_AI_UpdateTargetSwitching()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_AI_UpdateTargetSwitching");
 
@@ -1137,16 +1114,15 @@ void APlayerCtrl_C::STATIC_PC_AI_UpdateTargetSwitching()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_UpdateSensorHistory
-// (Net, NetRequest, Native, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_UpdateSensorHistory()
+void APlayerCtrl_C::PC_UpdateSensorHistory()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_UpdateSensorHistory");
 
 	APlayerCtrl_C_PC_UpdateSensorHistory_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1155,16 +1131,15 @@ void APlayerCtrl_C::STATIC_PC_UpdateSensorHistory()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_UpdateSensor_References
-// (Net, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_UpdateSensor_References()
+void APlayerCtrl_C::PC_UpdateSensor_References()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_UpdateSensor_References");
 
 	APlayerCtrl_C_PC_UpdateSensor_References_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1173,16 +1148,15 @@ void APlayerCtrl_C::STATIC_PC_UpdateSensor_References()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_UpdateSensor_Physical
-// (Exec, Native, NetResponse, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_UpdateSensor_Physical()
+void APlayerCtrl_C::PC_UpdateSensor_Physical()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_UpdateSensor_Physical");
 
 	APlayerCtrl_C_PC_UpdateSensor_Physical_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1191,7 +1165,7 @@ void APlayerCtrl_C::STATIC_PC_UpdateSensor_Physical()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcMSE_Turn
-// (Net, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_StateProcMSE_Turn()
 {
@@ -1208,12 +1182,12 @@ void APlayerCtrl_C::PC_StateProcMSE_Turn()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_Turn_GetTurnRelativeAngle
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Angle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_Turn_GetTurnRelativeAngle(const struct FVector& Direction, float* Angle)
+void APlayerCtrl_C::PC_Turn_GetTurnRelativeAngle(const struct FVector& Direction, float* Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_Turn_GetTurnRelativeAngle");
 
@@ -1232,7 +1206,7 @@ void APlayerCtrl_C::STATIC_PC_Turn_GetTurnRelativeAngle(const struct FVector& Di
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcTick_Turn
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_StateProcTick_Turn()
 {
@@ -1249,12 +1223,12 @@ void APlayerCtrl_C::PC_StateProcTick_Turn()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_CalcFootPivotRootDelta
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Angle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Delta                          (Parm, OutParm, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_CalcFootPivotRootDelta(float Angle, struct FVector* Delta)
+void APlayerCtrl_C::PC_CalcFootPivotRootDelta(float Angle, struct FVector* Delta)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_CalcFootPivotRootDelta");
 
@@ -1262,7 +1236,6 @@ void APlayerCtrl_C::STATIC_PC_CalcFootPivotRootDelta(float Angle, struct FVector
 	params.Angle = Angle;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1274,16 +1247,15 @@ void APlayerCtrl_C::STATIC_PC_CalcFootPivotRootDelta(float Angle, struct FVector
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TransitTurn
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_TransitTurn()
+void APlayerCtrl_C::PC_TransitTurn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TransitTurn");
 
 	APlayerCtrl_C_PC_TransitTurn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1292,7 +1264,7 @@ void APlayerCtrl_C::STATIC_PC_TransitTurn()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TransitStop
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_TransitStop()
 {
@@ -1309,7 +1281,7 @@ void APlayerCtrl_C::PC_TransitStop()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StopMontages
-// (Exec, Native, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UAnimMontage*>    AnimList                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -1320,7 +1292,6 @@ void APlayerCtrl_C::PC_StopMontages(TArray<class UAnimMontage*>* AnimList)
 	APlayerCtrl_C_PC_StopMontages_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1332,23 +1303,22 @@ void APlayerCtrl_C::PC_StopMontages(TArray<class UAnimMontage*>* AnimList)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateStair
-// (NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_PC_Stair>       NextMS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Continue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CONTINUE                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Interrupt                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_SetNextStateStair(TEnumAsByte<EN_PC_Stair> NextMS, bool Continue, bool Interrupt)
+void APlayerCtrl_C::PC_SetNextStateStair(TEnumAsByte<EN_PC_Stair> NextMS, bool CONTINUE, bool Interrupt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateStair");
 
 	APlayerCtrl_C_PC_SetNextStateStair_Params params;
 	params.NextMS = NextMS;
-	params.Continue = Continue;
+	params.CONTINUE = CONTINUE;
 	params.Interrupt = Interrupt;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1357,7 +1327,7 @@ void APlayerCtrl_C::STATIC_PC_SetNextStateStair(TEnumAsByte<EN_PC_Stair> NextMS,
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TransitStair
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_TransitStair()
 {
@@ -1374,7 +1344,7 @@ void APlayerCtrl_C::PC_TransitStair()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TransitWalk
-// (Exec, Event, NetResponse, Public, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_TransitWalk()
 {
@@ -1391,16 +1361,15 @@ void APlayerCtrl_C::PC_TransitWalk()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcLeave_Input
-// (Net, NetReliable, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_StateProcLeave_Input()
+void APlayerCtrl_C::PC_StateProcLeave_Input()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StateProcLeave_Input");
 
 	APlayerCtrl_C_PC_StateProcLeave_Input_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1409,9 +1378,9 @@ void APlayerCtrl_C::STATIC_PC_StateProcLeave_Input()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TransitIdle
-// (NetRequest, Exec, Event, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_TransitIdle()
+void APlayerCtrl_C::PC_TransitIdle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TransitIdle");
 
@@ -1426,16 +1395,15 @@ void APlayerCtrl_C::STATIC_PC_TransitIdle()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TransitDoor
-// (Net, NetReliable, Exec, Native, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_TransitDoor()
+void APlayerCtrl_C::PC_TransitDoor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TransitDoor");
 
 	APlayerCtrl_C_PC_TransitDoor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1444,7 +1412,7 @@ void APlayerCtrl_C::STATIC_PC_TransitDoor()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsAbleToTransitDoor
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1455,7 +1423,6 @@ bool APlayerCtrl_C::PC_IsAbleToTransitDoor()
 	APlayerCtrl_C_PC_IsAbleToTransitDoor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1466,9 +1433,9 @@ bool APlayerCtrl_C::PC_IsAbleToTransitDoor()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_DetectObstacle_Test
-// (Net, NetReliable, Static, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_DetectObstacle_Test()
+void APlayerCtrl_C::PC_DetectObstacle_Test()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_DetectObstacle_Test");
 
@@ -1483,7 +1450,7 @@ void APlayerCtrl_C::STATIC_PC_DetectObstacle_Test()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsAdjustedDoorFront
-// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Adjusted                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1494,7 +1461,6 @@ void APlayerCtrl_C::PC_IsAdjustedDoorFront(bool* Adjusted)
 	APlayerCtrl_C_PC_IsAdjustedDoorFront_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1506,23 +1472,22 @@ void APlayerCtrl_C::PC_IsAdjustedDoorFront(bool* Adjusted)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateDoor
-// (Net, NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_PC_Door>        NextMS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Continue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CONTINUE                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Interrupt                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_SetNextStateDoor(TEnumAsByte<EN_PC_Door> NextMS, bool Continue, bool Interrupt)
+void APlayerCtrl_C::PC_SetNextStateDoor(TEnumAsByte<EN_PC_Door> NextMS, bool CONTINUE, bool Interrupt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateDoor");
 
 	APlayerCtrl_C_PC_SetNextStateDoor_Params params;
 	params.NextMS = NextMS;
-	params.Continue = Continue;
+	params.CONTINUE = CONTINUE;
 	params.Interrupt = Interrupt;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1531,16 +1496,15 @@ void APlayerCtrl_C::STATIC_PC_SetNextStateDoor(TEnumAsByte<EN_PC_Door> NextMS, b
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_UpdateAccessibleObject
-// (NetReliable, Exec, Native, Static, NetMulticast, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_UpdateAccessibleObject()
+void APlayerCtrl_C::PC_UpdateAccessibleObject()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_UpdateAccessibleObject");
 
 	APlayerCtrl_C_PC_UpdateAccessibleObject_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1549,16 +1513,15 @@ void APlayerCtrl_C::STATIC_PC_UpdateAccessibleObject()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_AddDetectActorIfUnregistered
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_AddDetectActorIfUnregistered()
+void APlayerCtrl_C::PC_AddDetectActorIfUnregistered()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_AddDetectActorIfUnregistered");
 
 	APlayerCtrl_C_PC_AddDetectActorIfUnregistered_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1567,16 +1530,15 @@ void APlayerCtrl_C::STATIC_PC_AddDetectActorIfUnregistered()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_BeginPlayImpl
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_BeginPlayImpl()
+void APlayerCtrl_C::PC_BeginPlayImpl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_BeginPlayImpl");
 
 	APlayerCtrl_C_PC_BeginPlayImpl_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1585,7 +1547,7 @@ void APlayerCtrl_C::STATIC_PC_BeginPlayImpl()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_DrawShapeCollision
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UShapeComponent*         Shape                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          Thickness                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1603,7 +1565,6 @@ void APlayerCtrl_C::PC_DrawShapeCollision(class UShapeComponent* Shape, float Th
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1612,7 +1573,7 @@ void APlayerCtrl_C::PC_DrawShapeCollision(class UShapeComponent* Shape, float Th
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_DrawText
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FVector                 StartPos                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -1620,7 +1581,7 @@ void APlayerCtrl_C::PC_DrawShapeCollision(class UShapeComponent* Shape, float Th
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_DrawText(const struct FString& Text, const struct FVector& StartPos, const struct FVector& Offset, bool Enable, const struct FLinearColor& Color)
+void APlayerCtrl_C::PC_DrawText(const struct FString& Text, const struct FVector& StartPos, const struct FVector& Offset, bool Enable, const struct FLinearColor& Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_DrawText");
 
@@ -1640,11 +1601,11 @@ void APlayerCtrl_C::STATIC_PC_DrawText(const struct FString& Text, const struct 
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SetEnableFallDetection
-// (Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_SetEnableFallDetection(bool Enable)
+void APlayerCtrl_C::PC_SetEnableFallDetection(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SetEnableFallDetection");
 
@@ -1660,7 +1621,7 @@ void APlayerCtrl_C::STATIC_PC_SetEnableFallDetection(bool Enable)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_AI_Runable
-// (Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Start                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Runable                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1684,12 +1645,12 @@ void APlayerCtrl_C::PC_AI_Runable(bool Start, bool* Runable)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_AI_Walkable
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Start                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Walkable                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_AI_Walkable(bool Start, bool* Walkable)
+void APlayerCtrl_C::PC_AI_Walkable(bool Start, bool* Walkable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_AI_Walkable");
 
@@ -1708,16 +1669,15 @@ void APlayerCtrl_C::STATIC_PC_AI_Walkable(bool Start, bool* Walkable)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_ResetSensor
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_ResetSensor()
+void APlayerCtrl_C::PC_ResetSensor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_ResetSensor");
 
 	APlayerCtrl_C_PC_ResetSensor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1726,12 +1686,12 @@ void APlayerCtrl_C::STATIC_PC_ResetSensor()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_GetMontage
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_PC_EventMontage> MontageType                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            Montage                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_GetMontage(TEnumAsByte<EN_PC_EventMontage> MontageType, class UAnimMontage** Montage)
+void APlayerCtrl_C::PC_GetMontage(TEnumAsByte<EN_PC_EventMontage> MontageType, class UAnimMontage** Montage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_GetMontage");
 
@@ -1750,23 +1710,22 @@ void APlayerCtrl_C::STATIC_PC_GetMontage(TEnumAsByte<EN_PC_EventMontage> Montage
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateStop
-// (Net, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_PC_Stop>        NextMS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Continue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CONTINUE                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Interrupt                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_SetNextStateStop(TEnumAsByte<EN_PC_Stop> NextMS, bool Continue, bool Interrupt)
+void APlayerCtrl_C::PC_SetNextStateStop(TEnumAsByte<EN_PC_Stop> NextMS, bool CONTINUE, bool Interrupt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateStop");
 
 	APlayerCtrl_C_PC_SetNextStateStop_Params params;
 	params.NextMS = NextMS;
-	params.Continue = Continue;
+	params.CONTINUE = CONTINUE;
 	params.Interrupt = Interrupt;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1775,7 +1734,7 @@ void APlayerCtrl_C::STATIC_PC_SetNextStateStop(TEnumAsByte<EN_PC_Stop> NextMS, b
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_LockInputCancel
-// (Net, NetReliable, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_LockInputCancel()
 {
@@ -1792,7 +1751,7 @@ void APlayerCtrl_C::PC_LockInputCancel()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_LockInputDirTick
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_LockInputDirTick()
 {
@@ -1801,7 +1760,6 @@ void APlayerCtrl_C::PC_LockInputDirTick()
 	APlayerCtrl_C_PC_LockInputDirTick_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1810,11 +1768,11 @@ void APlayerCtrl_C::PC_LockInputDirTick()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_LockInputDir
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          inDuration                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_LockInputDir(float inDuration)
+void APlayerCtrl_C::PC_LockInputDir(float inDuration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_LockInputDir");
 
@@ -1830,7 +1788,7 @@ void APlayerCtrl_C::STATIC_PC_LockInputDir(float inDuration)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_DrawDirectionArrow
-// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 StartPos                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -1839,7 +1797,7 @@ void APlayerCtrl_C::STATIC_PC_LockInputDir(float inDuration)
 // struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_DrawDirectionArrow(const struct FVector& StartPos, const struct FVector& Direction, float Length, float Thickness, const struct FLinearColor& Color, bool Enable)
+void APlayerCtrl_C::PC_DrawDirectionArrow(const struct FVector& StartPos, const struct FVector& Direction, float Length, float Thickness, const struct FLinearColor& Color, bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_DrawDirectionArrow");
 
@@ -1860,7 +1818,7 @@ void APlayerCtrl_C::STATIC_PC_DrawDirectionArrow(const struct FVector& StartPos,
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SensorUpdateInputDir
-// (NetRequest, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_SensorUpdateInputDir()
 {
@@ -1877,14 +1835,14 @@ void APlayerCtrl_C::PC_SensorUpdateInputDir()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_CalcDirectionType
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 ForwardDir                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 InputDir                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // TEnumAsByte<EN_PC_DirectionType> DirectionType                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          AngleDegSigned                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_CalcDirectionType(const struct FVector& ForwardDir, const struct FVector& InputDir, TEnumAsByte<EN_PC_DirectionType>* DirectionType, float* AngleDegSigned)
+void APlayerCtrl_C::PC_CalcDirectionType(const struct FVector& ForwardDir, const struct FVector& InputDir, TEnumAsByte<EN_PC_DirectionType>* DirectionType, float* AngleDegSigned)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_CalcDirectionType");
 
@@ -1906,9 +1864,9 @@ void APlayerCtrl_C::STATIC_PC_CalcDirectionType(const struct FVector& ForwardDir
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_ResetInput
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_ResetInput()
+void APlayerCtrl_C::PC_ResetInput()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_ResetInput");
 
@@ -1923,9 +1881,9 @@ void APlayerCtrl_C::STATIC_PC_ResetInput()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_InputControl
-// (Exec, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_InputControl()
+void APlayerCtrl_C::PC_InputControl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_InputControl");
 
@@ -1940,12 +1898,12 @@ void APlayerCtrl_C::STATIC_PC_InputControl()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsPlayerBhv
-// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3PlayerBehavior              Behavior                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Same                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_IsPlayerBhv(ES3PlayerBehavior Behavior, bool* Same)
+void APlayerCtrl_C::PC_IsPlayerBhv(ES3PlayerBehavior Behavior, bool* Same)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_IsPlayerBhv");
 
@@ -1964,11 +1922,11 @@ void APlayerCtrl_C::STATIC_PC_IsPlayerBhv(ES3PlayerBehavior Behavior, bool* Same
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsTalkCrouchEnd
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           TalkCrouch                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_IsTalkCrouchEnd(bool* TalkCrouch)
+void APlayerCtrl_C::PC_IsTalkCrouchEnd(bool* TalkCrouch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_IsTalkCrouchEnd");
 
@@ -1986,7 +1944,7 @@ void APlayerCtrl_C::STATIC_PC_IsTalkCrouchEnd(bool* TalkCrouch)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsTalkStand
-// (NetRequest, Native, Event, NetMulticast, Public, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           TalkCrouch                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1997,7 +1955,6 @@ void APlayerCtrl_C::PC_IsTalkStand(bool* TalkCrouch)
 	APlayerCtrl_C_PC_IsTalkStand_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2009,18 +1966,17 @@ void APlayerCtrl_C::PC_IsTalkStand(bool* TalkCrouch)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsTalkCrouching
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           TalkCrouch                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_IsTalkCrouching(bool* TalkCrouch)
+void APlayerCtrl_C::PC_IsTalkCrouching(bool* TalkCrouch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_IsTalkCrouching");
 
 	APlayerCtrl_C_PC_IsTalkCrouching_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2032,12 +1988,12 @@ void APlayerCtrl_C::STATIC_PC_IsTalkCrouching(bool* TalkCrouch)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_ConvertBehaviorToState
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3PlayerBehavior              Behavior                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_PC_State>       State                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_ConvertBehaviorToState(ES3PlayerBehavior Behavior, TEnumAsByte<EN_PC_State>* State)
+void APlayerCtrl_C::PC_ConvertBehaviorToState(ES3PlayerBehavior Behavior, TEnumAsByte<EN_PC_State>* State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_ConvertBehaviorToState");
 
@@ -2045,7 +2001,6 @@ void APlayerCtrl_C::STATIC_PC_ConvertBehaviorToState(ES3PlayerBehavior Behavior,
 	params.Behavior = Behavior;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2057,13 +2012,13 @@ void APlayerCtrl_C::STATIC_PC_ConvertBehaviorToState(ES3PlayerBehavior Behavior,
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_ConvertBehaviorToMS
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3PlayerBehavior              Behavior                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_PC_State>       State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  MS                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_ConvertBehaviorToMS(ES3PlayerBehavior Behavior, TEnumAsByte<EN_PC_State> State, unsigned char* MS)
+void APlayerCtrl_C::PC_ConvertBehaviorToMS(ES3PlayerBehavior Behavior, TEnumAsByte<EN_PC_State> State, unsigned char* MS)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_ConvertBehaviorToMS");
 
@@ -2083,16 +2038,15 @@ void APlayerCtrl_C::STATIC_PC_ConvertBehaviorToMS(ES3PlayerBehavior Behavior, TE
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_ElapseTimeState
-// (Net, NetReliable, Native, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_ElapseTimeState()
+void APlayerCtrl_C::PC_ElapseTimeState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_ElapseTimeState");
 
 	APlayerCtrl_C_PC_ElapseTimeState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2101,9 +2055,9 @@ void APlayerCtrl_C::STATIC_PC_ElapseTimeState()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TransitState
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_TransitState()
+void APlayerCtrl_C::PC_TransitState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TransitState");
 
@@ -2118,16 +2072,15 @@ void APlayerCtrl_C::STATIC_PC_TransitState()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_UpdateState
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_UpdateState()
+void APlayerCtrl_C::PC_UpdateState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_UpdateState");
 
 	APlayerCtrl_C_PC_UpdateState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2136,19 +2089,19 @@ void APlayerCtrl_C::STATIC_PC_UpdateState()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateTalk
-// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_PC_Talk>        NextMS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Continue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CONTINUE                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Interrupt                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_SetNextStateTalk(TEnumAsByte<EN_PC_Talk> NextMS, bool Continue, bool Interrupt)
+void APlayerCtrl_C::PC_SetNextStateTalk(TEnumAsByte<EN_PC_Talk> NextMS, bool CONTINUE, bool Interrupt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateTalk");
 
 	APlayerCtrl_C_PC_SetNextStateTalk_Params params;
 	params.NextMS = NextMS;
-	params.Continue = Continue;
+	params.CONTINUE = CONTINUE;
 	params.Interrupt = Interrupt;
 
 	auto flags = fn->FunctionFlags;
@@ -2160,19 +2113,19 @@ void APlayerCtrl_C::STATIC_PC_SetNextStateTalk(TEnumAsByte<EN_PC_Talk> NextMS, b
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateTurn
-// (Net, NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_PC_Turn>        NextMS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Continue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CONTINUE                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Interrupt                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_SetNextStateTurn(TEnumAsByte<EN_PC_Turn> NextMS, bool Continue, bool Interrupt)
+void APlayerCtrl_C::PC_SetNextStateTurn(TEnumAsByte<EN_PC_Turn> NextMS, bool CONTINUE, bool Interrupt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateTurn");
 
 	APlayerCtrl_C_PC_SetNextStateTurn_Params params;
 	params.NextMS = NextMS;
-	params.Continue = Continue;
+	params.CONTINUE = CONTINUE;
 	params.Interrupt = Interrupt;
 
 	auto flags = fn->FunctionFlags;
@@ -2184,19 +2137,19 @@ void APlayerCtrl_C::STATIC_PC_SetNextStateTurn(TEnumAsByte<EN_PC_Turn> NextMS, b
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateWalk
-// (Net, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_PC_Walk>        NextMS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Continue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CONTINUE                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Interrupt                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_SetNextStateWalk(TEnumAsByte<EN_PC_Walk> NextMS, bool Continue, bool Interrupt)
+void APlayerCtrl_C::PC_SetNextStateWalk(TEnumAsByte<EN_PC_Walk> NextMS, bool CONTINUE, bool Interrupt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateWalk");
 
 	APlayerCtrl_C_PC_SetNextStateWalk_Params params;
 	params.NextMS = NextMS;
-	params.Continue = Continue;
+	params.CONTINUE = CONTINUE;
 	params.Interrupt = Interrupt;
 
 	auto flags = fn->FunctionFlags;
@@ -2208,19 +2161,19 @@ void APlayerCtrl_C::STATIC_PC_SetNextStateWalk(TEnumAsByte<EN_PC_Walk> NextMS, b
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateStand
-// (Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_PC_Stand>       NextMS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Continue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CONTINUE                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Interrupt                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_SetNextStateStand(TEnumAsByte<EN_PC_Stand> NextMS, bool Continue, bool Interrupt)
+void APlayerCtrl_C::PC_SetNextStateStand(TEnumAsByte<EN_PC_Stand> NextMS, bool CONTINUE, bool Interrupt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SetNextStateStand");
 
 	APlayerCtrl_C_PC_SetNextStateStand_Params params;
 	params.NextMS = NextMS;
-	params.Continue = Continue;
+	params.CONTINUE = CONTINUE;
 	params.Interrupt = Interrupt;
 
 	auto flags = fn->FunctionFlags;
@@ -2232,25 +2185,24 @@ void APlayerCtrl_C::STATIC_PC_SetNextStateStand(TEnumAsByte<EN_PC_Stand> NextMS,
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_SetNextState
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_PC_State>       NextState                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  NextMS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Continue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           CONTINUE                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Interrupt                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_SetNextState(TEnumAsByte<EN_PC_State> NextState, unsigned char NextMS, bool Continue, bool Interrupt)
+void APlayerCtrl_C::PC_SetNextState(TEnumAsByte<EN_PC_State> NextState, unsigned char NextMS, bool CONTINUE, bool Interrupt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_SetNextState");
 
 	APlayerCtrl_C_PC_SetNextState_Params params;
 	params.NextState = NextState;
 	params.NextMS = NextMS;
-	params.Continue = Continue;
+	params.CONTINUE = CONTINUE;
 	params.Interrupt = Interrupt;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2259,9 +2211,9 @@ void APlayerCtrl_C::STATIC_PC_SetNextState(TEnumAsByte<EN_PC_State> NextState, u
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcLeave
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_StateProcLeave()
+void APlayerCtrl_C::PC_StateProcLeave()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StateProcLeave");
 
@@ -2276,16 +2228,15 @@ void APlayerCtrl_C::STATIC_PC_StateProcLeave()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcMSEnter
-// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_StateProcMSEnter()
+void APlayerCtrl_C::PC_StateProcMSEnter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StateProcMSEnter");
 
 	APlayerCtrl_C_PC_StateProcMSEnter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2294,7 +2245,7 @@ void APlayerCtrl_C::STATIC_PC_StateProcMSEnter()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsPlayingMontageList
-// (Net, NetReliable, Exec, Event, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UAnimMontage*>    AnimMontageList                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           IsPlaying                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2319,12 +2270,12 @@ void APlayerCtrl_C::PC_IsPlayingMontageList(TArray<class UAnimMontage*>* AnimMon
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsPlayingMontage
-// (Net, NetRequest, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAnimMontage*            MontageRef                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsPlaying                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_IsPlayingMontage(class UAnimMontage* MontageRef, bool* IsPlaying)
+void APlayerCtrl_C::PC_IsPlayingMontage(class UAnimMontage* MontageRef, bool* IsPlaying)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_IsPlayingMontage");
 
@@ -2343,7 +2294,7 @@ void APlayerCtrl_C::STATIC_PC_IsPlayingMontage(class UAnimMontage* MontageRef, b
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcTick
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, NetServer)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_StateProcTick()
 {
@@ -2360,16 +2311,15 @@ void APlayerCtrl_C::PC_StateProcTick()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_StateProcEnter
-// (NetRequest, Native, Event, Static, Public, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_StateProcEnter()
+void APlayerCtrl_C::PC_StateProcEnter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_StateProcEnter");
 
 	APlayerCtrl_C_PC_StateProcEnter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2378,7 +2328,7 @@ void APlayerCtrl_C::STATIC_PC_StateProcEnter()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_UpdateSensor
-// (NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_UpdateSensor()
 {
@@ -2395,7 +2345,7 @@ void APlayerCtrl_C::PC_UpdateSensor()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_IsAbleToTalk
-// (NetMulticast, MulticastDelegate, Public, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -2417,16 +2367,15 @@ void APlayerCtrl_C::PC_IsAbleToTalk(bool* flag)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_Init
-// (Net, NetReliable, NetRequest, Native, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_Init()
+void APlayerCtrl_C::PC_Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_Init");
 
 	APlayerCtrl_C_PC_Init_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2435,11 +2384,11 @@ void APlayerCtrl_C::STATIC_PC_Init()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_Calc
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_Calc(bool* flag)
+void APlayerCtrl_C::PC_Calc(bool* flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_Calc");
 
@@ -2457,16 +2406,15 @@ void APlayerCtrl_C::STATIC_PC_Calc(bool* flag)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionCalc
-// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_PC_TalkShowMotionCalc()
+void APlayerCtrl_C::PC_TalkShowMotionCalc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionCalc");
 
 	APlayerCtrl_C_PC_TalkShowMotionCalc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2475,11 +2423,11 @@ void APlayerCtrl_C::STATIC_PC_TalkShowMotionCalc()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionEnd
-// (Exec, Native, Event, Static, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           StopMotion                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_TalkShowMotionEnd(bool StopMotion)
+void APlayerCtrl_C::PC_TalkShowMotionEnd(bool StopMotion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionEnd");
 
@@ -2487,7 +2435,6 @@ void APlayerCtrl_C::STATIC_PC_TalkShowMotionEnd(bool StopMotion)
 	params.StopMotion = StopMotion;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2496,14 +2443,14 @@ void APlayerCtrl_C::STATIC_PC_TalkShowMotionEnd(bool StopMotion)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionStart
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemNameId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            showType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_SHOW_ID>        ItemShowTypeId                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DirOtherFlag                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_PC_TalkShowMotionStart(const struct FName& ItemNameId, int showType, TEnumAsByte<EN_SHOW_ID> ItemShowTypeId, bool DirOtherFlag)
+void APlayerCtrl_C::PC_TalkShowMotionStart(const struct FName& ItemNameId, int showType, TEnumAsByte<EN_SHOW_ID> ItemShowTypeId, bool DirOtherFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.PC_TalkShowMotionStart");
 
@@ -2522,7 +2469,7 @@ void APlayerCtrl_C::STATIC_PC_TalkShowMotionStart(const struct FName& ItemNameId
 
 
 // Function PlayerCtrl.PlayerCtrl_C.PC_TalkStartInit
-// (Net, Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::PC_TalkStartInit()
 {
@@ -2539,7 +2486,7 @@ void APlayerCtrl_C::PC_TalkStartInit()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, Event, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void APlayerCtrl_C::UserConstructionScript()
 {
@@ -2548,7 +2495,6 @@ void APlayerCtrl_C::UserConstructionScript()
 	APlayerCtrl_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2557,7 +2503,7 @@ void APlayerCtrl_C::UserConstructionScript()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.InpActEvt_SwitchTarget_K2Node_InputActionEvent_6
-// (Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -2577,7 +2523,7 @@ void APlayerCtrl_C::InpActEvt_SwitchTarget_K2Node_InputActionEvent_6(const struc
 
 
 // Function PlayerCtrl.PlayerCtrl_C.InpActEvt_VirtualJoystickOn_K2Node_InputActionEvent_5
-// (Net, NetReliable, NetRequest, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -2597,7 +2543,7 @@ void APlayerCtrl_C::InpActEvt_VirtualJoystickOn_K2Node_InputActionEvent_5(const 
 
 
 // Function PlayerCtrl.PlayerCtrl_C.InpActEvt_VirtualJoystickOn_K2Node_InputActionEvent_4
-// (NetReliable, NetRequest, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -2617,7 +2563,7 @@ void APlayerCtrl_C::InpActEvt_VirtualJoystickOn_K2Node_InputActionEvent_4(const 
 
 
 // Function PlayerCtrl.PlayerCtrl_C.InternalRunAxis
-// (NetReliable, NetRequest, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2637,7 +2583,7 @@ void APlayerCtrl_C::InternalRunAxis(float AxisValue)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.InternalMoveForwardAxis
-// (Net, NetRequest, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2657,7 +2603,7 @@ void APlayerCtrl_C::InternalMoveForwardAxis(float AxisValue)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.InternalMoveRightAxis
-// (NetRequest, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2677,7 +2623,7 @@ void APlayerCtrl_C::InternalMoveRightAxis(float AxisValue)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_7
-// (Net, NetReliable, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2697,7 +2643,7 @@ void APlayerCtrl_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_7(float AxisVal
 
 
 // Function PlayerCtrl.PlayerCtrl_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_91
-// (NetReliable, NetRequest, Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2717,7 +2663,7 @@ void APlayerCtrl_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_91(float AxisValu
 
 
 // Function PlayerCtrl.PlayerCtrl_C.InpAxisEvt_RunAxis_K2Node_InputAxisEvent_13
-// (Net, NetRequest, Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2737,9 +2683,9 @@ void APlayerCtrl_C::InpAxisEvt_RunAxis_K2Node_InputAxisEvent_13(float AxisValue)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.BndEvt__BP_PlayerInputBufferComponent_K2Node_ComponentBoundEvent_0_OnTargetSelectAction__DelegateSignature
-// (NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_BndEvt__BP_PlayerInputBufferComponent_K2Node_ComponentBoundEvent_0_OnTargetSelectAction__DelegateSignature()
+void APlayerCtrl_C::BndEvt__BP_PlayerInputBufferComponent_K2Node_ComponentBoundEvent_0_OnTargetSelectAction__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.BndEvt__BP_PlayerInputBufferComponent_K2Node_ComponentBoundEvent_0_OnTargetSelectAction__DelegateSignature");
 
@@ -2754,7 +2700,7 @@ void APlayerCtrl_C::STATIC_BndEvt__BP_PlayerInputBufferComponent_K2Node_Componen
 
 
 // Function PlayerCtrl.PlayerCtrl_C.DecideDetectAction
-// (NetRequest, Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2774,7 +2720,7 @@ void APlayerCtrl_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.MouseMoveAxii
-// (NetRequest, Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               Axii                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -2794,13 +2740,13 @@ void APlayerCtrl_C::MouseMoveAxii(const struct FVector2D& Axii)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.SetVirtualMovementInput
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 WorldVector                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Magnitude                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Run                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_SetVirtualMovementInput(const struct FVector& WorldVector, float Magnitude, bool Run)
+void APlayerCtrl_C::SetVirtualMovementInput(const struct FVector& WorldVector, float Magnitude, bool Run)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.SetVirtualMovementInput");
 
@@ -2818,16 +2764,15 @@ void APlayerCtrl_C::STATIC_SetVirtualMovementInput(const struct FVector& WorldVe
 
 
 // Function PlayerCtrl.PlayerCtrl_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_ReceiveBeginPlay()
+void APlayerCtrl_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.ReceiveBeginPlay");
 
 	APlayerCtrl_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2836,7 +2781,7 @@ void APlayerCtrl_C::STATIC_ReceiveBeginPlay()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.ReceiveTick
-// (Net, NetReliable, Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2856,16 +2801,15 @@ void APlayerCtrl_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.Reinit
-// (NetReliable, NetRequest, Exec, Native, Event, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void APlayerCtrl_C::STATIC_Reinit()
+void APlayerCtrl_C::Reinit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.Reinit");
 
 	APlayerCtrl_C_Reinit_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2874,7 +2818,7 @@ void APlayerCtrl_C::STATIC_Reinit()
 
 
 // Function PlayerCtrl.PlayerCtrl_C.BndEvt__BPC_PlayerTargetSwitcher_K2Node_ComponentBoundEvent_0_OnFaceDirection__DelegateSignature
-// (NetReliable, Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintEvent)
 // Parameters:
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -2894,7 +2838,7 @@ void APlayerCtrl_C::BndEvt__BPC_PlayerTargetSwitcher_K2Node_ComponentBoundEvent_
 
 
 // Function PlayerCtrl.PlayerCtrl_C.ReceiveEndPlay
-// (Net, Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2914,11 +2858,11 @@ void APlayerCtrl_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.ExecuteUbergraph_PlayerCtrl
-// (NetReliable, NetRequest, Native, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerCtrl_C::STATIC_ExecuteUbergraph_PlayerCtrl(int EntryPoint)
+void APlayerCtrl_C::ExecuteUbergraph_PlayerCtrl(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerCtrl.PlayerCtrl_C.ExecuteUbergraph_PlayerCtrl");
 
@@ -2926,7 +2870,6 @@ void APlayerCtrl_C::STATIC_ExecuteUbergraph_PlayerCtrl(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2935,7 +2878,7 @@ void APlayerCtrl_C::STATIC_ExecuteUbergraph_PlayerCtrl(int EntryPoint)
 
 
 // Function PlayerCtrl.PlayerCtrl_C.DetectFallDispatcher__DelegateSignature
-// (Exec, Native, Event, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 CharaPos                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 CharaDir                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -2951,7 +2894,6 @@ void APlayerCtrl_C::DetectFallDispatcher__DelegateSignature(const struct FVector
 	params.IsRight = IsRight;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

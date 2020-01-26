@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,48 +44,48 @@ public:
 	}
 
 
-	void STATIC_GetPartsMaterial(class US3ClothPartsDataAsset* DataAsset);
+	void GetPartsMaterial(class US3ClothPartsDataAsset* DataAsset);
 	void InitSheParts();
-	void STATIC_GetDefaultPartsMap(bool RYO, TMap<EClothPartsType, struct FName>* Map);
-	void STATIC_IsReinitPose(class USkeletalMeshComponent* Component, const struct FName& CharaName, bool* ReinitPose);
+	void GetDefaultPartsMap(bool RYO, TMap<EClothPartsType, struct FName>* Map);
+	void IsReinitPose(class USkeletalMeshComponent* Component, const struct FName& CharaName, bool* ReinitPose);
 	void GetWearMeshType(bool RYO, ES3CharaMeshType* Type);
 	void UpdateWear(TMap<EClothPartsType, struct FName> Map);
 	void GetJeansMaterial(class UMaterialInstance** Material);
 	void GetTShirtsMaterial(class UMaterialInstance** Material);
-	void STATIC_ResetMaterial(class AS3Character* Character, class USkeletalMeshComponent* InComponent, class USkeletalMeshComponent** OutComponent);
-	void STATIC_GetShoesMaterialIndex(int* Index);
-	void STATIC_GetBottomsMaterialIndex(int* Index);
-	void STATIC_IsCharaTagMatching(class AActor* Target, const struct FName& Tag, bool* Match);
+	void ResetMaterial(class AS3Character* Character, class USkeletalMeshComponent* InComponent, class USkeletalMeshComponent** OutComponent);
+	void GetShoesMaterialIndex(int* Index);
+	void GetBottomsMaterialIndex(int* Index);
+	void IsCharaTagMatching(class AActor* Target, const struct FName& Tag, bool* Match);
 	void CheckUnlock(bool RYO);
-	void STATIC_GetUnlockedClothParts(bool bRyo, TArray<struct FName>* UnlockedParts);
-	void STATIC_IsStreaming(bool* Streaming);
-	void STATIC_CheckGetUnlockParts(const struct FName& ItemId, int Num);
+	void GetUnlockedClothParts(bool bRyo, TArray<struct FName>* UnlockedParts);
+	void IsStreaming(bool* Streaming);
+	void CheckGetUnlockParts(const struct FName& ItemId, int Num);
 	void CheckInitUnlockParts();
 	void FinishFitting(bool Apply);
-	void STATIC_Fitting(const TScriptInterface<class US3ClothInterface>& Interface, TArray<struct FST_ClothesFittingInfo>* FittingInfo);
+	void Fitting(const TScriptInterface<class US3ClothInterface>& Interface, TArray<struct FST_ClothesFittingInfo>* FittingInfo);
 	void DebugSetupRyoMesh();
 	void GetPartsReference(const struct FName& PartsID, EClothPartsType Type);
 	void GetMeshReference(const struct FName& MeshID, ES3CharaMeshType Type);
-	void STATIC_GetDebugPlayerCharaName(struct FName* CharaName);
-	void STATIC_ChangeClothes_Impl(const TScriptInterface<class US3ClothInterface>& Interface, ES3CharaMeshType Type);
+	void GetDebugPlayerCharaName(struct FName* CharaName);
+	void ChangeClothes_Impl(const TScriptInterface<class US3ClothInterface>& Interface, ES3CharaMeshType Type);
 	void UpdateShenfaMesh();
-	void STATIC_UpdateRyoMesh();
+	void UpdateRyoMesh();
 	void SetupSkeletalMesh(class AS3Character* S3Character, class USkeletalMeshComponent* Component, const TScriptInterface<class US3ClothInterface>& Interface, struct FS3ClothesChangeInfo* Info);
-	void STATIC_StartAsyncLoadObject(ES3CharaMeshType MeshType, const struct FName& CharaName, const TScriptInterface<class US3ClothInterface>& Interface);
-	void STATIC_DebugSetRyoMeshId(const struct FName& MeshID, bool WithChange);
-	void STATIC_UserConstructionScript();
-	void STATIC_OnLoaded_68DAAF824D005673C28CC89A68FA961E(class UObject* Loaded);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ChangeClothes(const TScriptInterface<class US3ClothInterface>& Interface, ES3CharaMeshType Type);
-	void STATIC_SetSheMeshType(ES3CharaMeshType Type, bool bWithChange);
-	void STATIC_WaitSpawnPlayer();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum);
-	void STATIC_SetRyoMeshType(ES3CharaMeshType Type, bool bWithChange);
-	void STATIC_WaitReward();
-	void STATIC_DelayCheckUnlock();
-	void STATIC_ExecuteUbergraph_BP_ClothManager(int EntryPoint);
+	void StartAsyncLoadObject(ES3CharaMeshType MeshType, const struct FName& CharaName, const TScriptInterface<class US3ClothInterface>& Interface);
+	void DebugSetRyoMeshId(const struct FName& MeshID, bool WithChange);
+	void UserConstructionScript();
+	void OnLoaded_68DAAF824D005673C28CC89A68FA961E(class UObject* Loaded);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ChangeClothes(const TScriptInterface<class US3ClothInterface>& Interface, ES3CharaMeshType Type);
+	void SetSheMeshType(ES3CharaMeshType Type, bool bWithChange);
+	void WaitSpawnPlayer();
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum);
+	void SetRyoMeshType(ES3CharaMeshType Type, bool bWithChange);
+	void WaitReward();
+	void DelayCheckUnlock();
+	void ExecuteUbergraph_BP_ClothManager(int EntryPoint);
 };
 
 

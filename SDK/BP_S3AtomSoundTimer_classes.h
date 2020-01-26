@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,20 +58,20 @@ public:
 	void IsDisable(bool* Disable);
 	void SetSelectorLabel();
 	void StopForbid();
-	void STATIC_SetSystemVolume(float Volume);
+	void SetSystemVolume(float Volume);
 	void PermitPlay();
-	void STATIC_StartPlay();
+	void StartPlay();
 	void SetParam(const struct FS3SoundTimerParam& newParam);
 	void UpdateInterval();
-	void STATIC_Initialize();
-	void STATIC_StopSound();
-	void STATIC_PlaySound();
+	void Initialize();
+	void StopSound();
+	void PlaySound();
 	void CheckInterval();
-	void STATIC_CheckStartTime();
+	void CheckStartTime();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_2_S3SoundAreaCallback__DelegateSignature();
 	void BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_3_S3SoundAreaCallback__DelegateSignature();
 	void ExecuteUbergraph_BP_S3AtomSoundTimer(int EntryPoint);

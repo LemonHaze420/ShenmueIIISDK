@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,18 +17,6 @@ namespace SDK
 struct FSessionServiceLogUnsubscribe
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct SessionMessages.SessionServiceLog
-// 0x0038
-struct FSessionServiceLog
-{
-	struct FName                                       Category;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FString                                     Data;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor)
-	struct FGuid                                       InstanceId;                                               // 0x0018(0x0010) (Edit, IsPlainOldData)
-	double                                             TimeSeconds;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      Verbosity;                                                // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct SessionMessages.SessionServicePong
@@ -51,11 +39,16 @@ struct FSessionServicePong
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
 };
 
-// ScriptStruct SessionMessages.SessionServiceLogSubscribe
-// 0x0001
-struct FSessionServiceLogSubscribe
+// ScriptStruct SessionMessages.SessionServiceLog
+// 0x0038
+struct FSessionServiceLog
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	struct FName                                       Category;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FString                                     Data;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor)
+	struct FGuid                                       InstanceId;                                               // 0x0018(0x0010) (Edit, IsPlainOldData)
+	double                                             TimeSeconds;                                              // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      Verbosity;                                                // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct SessionMessages.SessionServicePing
@@ -63,6 +56,13 @@ struct FSessionServiceLogSubscribe
 struct FSessionServicePing
 {
 	struct FString                                     UserName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct SessionMessages.SessionServiceLogSubscribe
+// 0x0001
+struct FSessionServiceLogSubscribe
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 }

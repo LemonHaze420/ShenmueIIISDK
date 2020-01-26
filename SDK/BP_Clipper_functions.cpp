@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Clipper.BP_Clipper_C.SetCharaName
-// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   NewName                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -27,7 +27,6 @@ bool ABP_Clipper_C::SetCharaName(const struct FName& NewName)
 	params.NewName = NewName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +37,7 @@ bool ABP_Clipper_C::SetCharaName(const struct FName& NewName)
 
 
 // Function BP_Clipper.BP_Clipper_C.SetTalkClipperInternal
-// (Net, NetRequest, Exec, Native, Event, Static, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 TalkClipperString              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -46,7 +45,7 @@ bool ABP_Clipper_C::SetCharaName(const struct FName& NewName)
 // class AS3SoundPlayer*          VoicePlayer                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_Clipper_C::STATIC_SetTalkClipperInternal(const struct FString& TalkClipperString, const struct FName& CharaName, bool bVoice, class AS3SoundPlayer* VoicePlayer)
+bool ABP_Clipper_C::SetTalkClipperInternal(const struct FString& TalkClipperString, const struct FName& CharaName, bool bVoice, class AS3SoundPlayer* VoicePlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Clipper.BP_Clipper_C.SetTalkClipperInternal");
 
@@ -57,7 +56,6 @@ bool ABP_Clipper_C::STATIC_SetTalkClipperInternal(const struct FString& TalkClip
 	params.VoicePlayer = VoicePlayer;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,11 +66,11 @@ bool ABP_Clipper_C::STATIC_SetTalkClipperInternal(const struct FString& TalkClip
 
 
 // Function BP_Clipper.BP_Clipper_C.UpdateElapsedTime
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Clipper_C::STATIC_UpdateElapsedTime(float DeltaSeconds)
+void ABP_Clipper_C::UpdateElapsedTime(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Clipper.BP_Clipper_C.UpdateElapsedTime");
 
@@ -88,7 +86,7 @@ void ABP_Clipper_C::STATIC_UpdateElapsedTime(float DeltaSeconds)
 
 
 // Function BP_Clipper.BP_Clipper_C.DebugLogMultiSample
-// (Net, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_Clipper_C::DebugLogMultiSample()
 {
@@ -105,9 +103,9 @@ void ABP_Clipper_C::DebugLogMultiSample()
 
 
 // Function BP_Clipper.BP_Clipper_C.CalcDeltaTime
-// (Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Clipper_C::STATIC_CalcDeltaTime()
+void ABP_Clipper_C::CalcDeltaTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Clipper.BP_Clipper_C.CalcDeltaTime");
 
@@ -122,9 +120,9 @@ void ABP_Clipper_C::STATIC_CalcDeltaTime()
 
 
 // Function BP_Clipper.BP_Clipper_C.TalkClipperStop
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Clipper_C::STATIC_TalkClipperStop()
+void ABP_Clipper_C::TalkClipperStop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Clipper.BP_Clipper_C.TalkClipperStop");
 
@@ -139,9 +137,9 @@ void ABP_Clipper_C::STATIC_TalkClipperStop()
 
 
 // Function BP_Clipper.BP_Clipper_C.Init
-// (Net, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Clipper_C::STATIC_Init()
+void ABP_Clipper_C::Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Clipper.BP_Clipper_C.Init");
 
@@ -156,9 +154,9 @@ void ABP_Clipper_C::STATIC_Init()
 
 
 // Function BP_Clipper.BP_Clipper_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Clipper_C::STATIC_UserConstructionScript()
+void ABP_Clipper_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Clipper.BP_Clipper_C.UserConstructionScript");
 
@@ -173,9 +171,9 @@ void ABP_Clipper_C::STATIC_UserConstructionScript()
 
 
 // Function BP_Clipper.BP_Clipper_C.ClearFaceId
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Clipper_C::STATIC_ClearFaceId()
+void ABP_Clipper_C::ClearFaceId()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Clipper.BP_Clipper_C.ClearFaceId");
 
@@ -190,7 +188,7 @@ void ABP_Clipper_C::STATIC_ClearFaceId()
 
 
 // Function BP_Clipper.BP_Clipper_C.SetPlayRate
-// (Exec, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          NewRate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -210,9 +208,9 @@ void ABP_Clipper_C::SetPlayRate(float NewRate)
 
 
 // Function BP_Clipper.BP_Clipper_C.EndPause
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Clipper_C::STATIC_EndPause()
+void ABP_Clipper_C::EndPause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Clipper.BP_Clipper_C.EndPause");
 
@@ -227,7 +225,7 @@ void ABP_Clipper_C::STATIC_EndPause()
 
 
 // Function BP_Clipper.BP_Clipper_C.ReceiveTick
-// (Net, Exec, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -247,9 +245,9 @@ void ABP_Clipper_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Clipper.BP_Clipper_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Clipper_C::STATIC_ReceiveBeginPlay()
+void ABP_Clipper_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Clipper.BP_Clipper_C.ReceiveBeginPlay");
 
@@ -264,7 +262,7 @@ void ABP_Clipper_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_Clipper.BP_Clipper_C.ExecuteUbergraph_BP_Clipper
-// (Exec, Native, Event, MulticastDelegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -276,7 +274,6 @@ void ABP_Clipper_C::ExecuteUbergraph_BP_Clipper(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,7 +53,8 @@ public:
 	}
 
 
-	void STATIC_GetTime_ForceEventStop(float AdjustTime, bool* reserve_enable, float* reserve_time);
+	void GetCurrentStockEvent(struct FName* newParam);
+	void GetTime_ForceEventStop(float AdjustTime, bool* reserve_enable, float* reserve_time);
 	void ChangeGimmickLock(bool ExecLock);
 	void isForceEventStop_TimeEnable(bool* ForcedEventStop_TimeON);
 	void ResetForceEventStop();
@@ -62,38 +63,38 @@ public:
 	void ChangeWorldTelecomLock(bool ExecLock);
 	void GetLockParent(struct FName* exec_lock);
 	void CheckRewardLock(bool* exec_lock);
-	void STATIC_ReleaseRewardLock();
-	void STATIC_StartRewardLock();
+	void ReleaseRewardLock();
+	void StartRewardLock();
 	void ForcedReleaseStepLock();
 	void CheckStepLock(bool* exec_lock);
 	void StartStepLock();
 	void SetActive();
 	void CheckLock(bool* exec_lock);
 	void ResetTimeLinkTable();
-	void STATIC_GetTimeLinkTableNextFoward(TEnumAsByte<EN_CutSceneTimeSchduleMarkID> TimeMarkID, bool* Result);
-	void STATIC_GetTimeLinkTableNext(TEnumAsByte<EN_CutSceneTimeSchduleMarkID> TimeMarkID, bool* Result);
+	void GetTimeLinkTableNextFoward(TEnumAsByte<EN_CutSceneTimeSchduleMarkID> TimeMarkID, bool* Result);
+	void GetTimeLinkTableNext(TEnumAsByte<EN_CutSceneTimeSchduleMarkID> TimeMarkID, bool* Result);
 	void GetTimeLinkTable(TEnumAsByte<EN_CutSceneTimeSchduleMarkID> TimeMarkID, bool* Result);
 	void SetTimeLinkTable(TEnumAsByte<EN_CutSceneTimeSchduleMarkID> TimeMarkID, bool SetValue);
 	void FindSchedulIndex(const struct FName& CutsceneName, int* Index);
 	void StartExecFlagChange(const struct FName& InputPin, bool* Change);
 	void CheckStockSchedule(bool* stock_on);
-	void STATIC_AddElapsedTime(const struct FName& CutsceneName, float HourLater);
+	void AddElapsedTime(const struct FName& CutsceneName, float HourLater);
 	void ExecStockEvent(bool* Event_Exec);
-	void STATIC_CheckStock(bool* Stock_available);
+	void CheckStock(bool* Stock_available);
 	void StartLock();
 	void ReleaseLock();
-	void STATIC_StockPushEvent(const struct FName& Event_Name, bool* Add);
-	void STATIC_CanEventStart(bool* Start_Enable);
+	void StockPushEvent(const struct FName& Event_Name, bool* Add);
+	void CanEventStart(bool* Start_Enable);
 	void CheckSchedule(bool* ExecEvent);
-	void STATIC_AddTimeSchedule(const struct FName& CutsceneName, float ScheduleHour);
-	void STATIC_IsTimeScheduleEnabled(const struct FName& CutsceneName, bool* IsEnabled);
-	void STATIC_StopTimeSchedule(const struct FName& CutscneName);
-	void STATIC_StartTimeSchedule(const struct FName& CutsceneName);
-	bool STATIC_IsCutsceneStartable();
+	void AddTimeSchedule(const struct FName& CutsceneName, float ScheduleHour);
+	void IsTimeScheduleEnabled(const struct FName& CutsceneName, bool* IsEnabled);
+	void StopTimeSchedule(const struct FName& CutscneName);
+	void StartTimeSchedule(const struct FName& CutsceneName);
+	bool IsCutsceneStartable();
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_CutsceneTimeScheduleManager(int EntryPoint);
-	void STATIC_StartElapsedTime__DelegateSignature(const struct FName& CutsceneName);
+	void StartElapsedTime__DelegateSignature(const struct FName& CutsceneName);
 	void StartTimerCutscene__DelegateSignature(const struct FName& CutsceneName);
 };
 

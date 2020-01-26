@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,7 +35,7 @@ public:
 
 
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_BlendSpacePlayer_CFFE93D24228543E52D83C8FF436CC11();
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198();
 	void ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re(int EntryPoint);
 };
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.ExecSave
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_AutoSave_Trigger_C::ExecSave()
 {
@@ -31,11 +31,11 @@ void ABP_AutoSave_Trigger_C::ExecSave()
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckBeginHit
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           BeginIn                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoSave_Trigger_C::STATIC_CheckBeginHit(bool* BeginIn)
+void ABP_AutoSave_Trigger_C::CheckBeginHit(bool* BeginIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckBeginHit");
 
@@ -53,11 +53,11 @@ void ABP_AutoSave_Trigger_C::STATIC_CheckBeginHit(bool* BeginIn)
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckDirection
-// (NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           DirectionOK                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoSave_Trigger_C::STATIC_CheckDirection(bool* DirectionOK)
+void ABP_AutoSave_Trigger_C::CheckDirection(bool* DirectionOK)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckDirection");
 
@@ -75,16 +75,15 @@ void ABP_AutoSave_Trigger_C::STATIC_CheckDirection(bool* DirectionOK)
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.ResetFlag
-// (Net, Native, NetResponse, Static, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AutoSave_Trigger_C::STATIC_ResetFlag()
+void ABP_AutoSave_Trigger_C::ResetFlag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.ResetFlag");
 
 	ABP_AutoSave_Trigger_C_ResetFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,11 +92,11 @@ void ABP_AutoSave_Trigger_C::STATIC_ResetFlag()
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckFlag
-// (Exec, Static, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           flag_on                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoSave_Trigger_C::STATIC_CheckFlag(bool* flag_on)
+void ABP_AutoSave_Trigger_C::CheckFlag(bool* flag_on)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckFlag");
 
@@ -115,18 +114,17 @@ void ABP_AutoSave_Trigger_C::STATIC_CheckFlag(bool* flag_on)
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckStep
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Result_EnableStep              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoSave_Trigger_C::STATIC_CheckStep(bool* Result_EnableStep)
+void ABP_AutoSave_Trigger_C::CheckStep(bool* Result_EnableStep)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckStep");
 
 	ABP_AutoSave_Trigger_C_CheckStep_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,16 +136,15 @@ void ABP_AutoSave_Trigger_C::STATIC_CheckStep(bool* Result_EnableStep)
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.UserConstructionScript
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AutoSave_Trigger_C::STATIC_UserConstructionScript()
+void ABP_AutoSave_Trigger_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.UserConstructionScript");
 
 	ABP_AutoSave_Trigger_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,7 +153,7 @@ void ABP_AutoSave_Trigger_C::STATIC_UserConstructionScript()
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, NetRequest, Exec, NetResponse, Static, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -165,7 +162,7 @@ void ABP_AutoSave_Trigger_C::STATIC_UserConstructionScript()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_AutoSave_Trigger_C::STATIC_BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_AutoSave_Trigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -186,16 +183,15 @@ void ABP_AutoSave_Trigger_C::STATIC_BndEvt__CollisionComponent_K2Node_ComponentB
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Native, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_AutoSave_Trigger_C::STATIC_ReceiveBeginPlay()
+void ABP_AutoSave_Trigger_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.ReceiveBeginPlay");
 
 	ABP_AutoSave_Trigger_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,11 +200,11 @@ void ABP_AutoSave_Trigger_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.EvtStepChange
-// (Exec, Native, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoSave_Trigger_C::STATIC_EvtStepChange(int SetSteps)
+void ABP_AutoSave_Trigger_C::EvtStepChange(int SetSteps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.EvtStepChange");
 
@@ -216,7 +212,6 @@ void ABP_AutoSave_Trigger_C::STATIC_EvtStepChange(int SetSteps)
 	params.SetSteps = SetSteps;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,16 +220,15 @@ void ABP_AutoSave_Trigger_C::STATIC_EvtStepChange(int SetSteps)
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckTriigerIn
-// (Net, NetRequest, Exec, Native, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AutoSave_Trigger_C::STATIC_CheckTriigerIn()
+void ABP_AutoSave_Trigger_C::CheckTriigerIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.CheckTriigerIn");
 
 	ABP_AutoSave_Trigger_C_CheckTriigerIn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,7 +237,7 @@ void ABP_AutoSave_Trigger_C::STATIC_CheckTriigerIn()
 
 
 // Function BP_AutoSave_Trigger.BP_AutoSave_Trigger_C.ExecuteUbergraph_BP_AutoSave_Trigger
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

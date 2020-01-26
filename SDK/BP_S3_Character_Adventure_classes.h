@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,36 +83,36 @@ public:
 	}
 
 
-	void STATIC_GetGroundFoot(TEnumAsByte<EN_FOOT_GROUND_STATE>* Grounded);
-	void STATIC_FootFrontLRCalc(bool* flag);
-	class UBPC_S3PlayerStairClimber_C* STATIC_GetStairClimber();
-	bool STATIC_IsTalking();
+	void GetGroundFoot(TEnumAsByte<EN_FOOT_GROUND_STATE>* Grounded);
+	void FootFrontLRCalc(bool* flag);
+	class UBPC_S3PlayerStairClimber_C* GetStairClimber();
+	bool IsTalking();
 	void UpdateCollisionResponses(TEnumAsByte<ECollisionChannel> JustChangedChannel);
-	void STATIC_RemoveIgnoreCollisionRequests(class UObject* Requester);
-	bool STATIC_HasIgnoreCollisionChannelRequest(TEnumAsByte<ECollisionChannel> Channel);
-	void STATIC_IgnoreCollisionChannel(TEnumAsByte<ECollisionChannel> Channel, bool StartIgnore, class UObject* Requester);
-	void STATIC_GetEnableIK(bool* bIKEnabled);
-	bool STATIC_ReturnOutOfWorld();
-	void STATIC_GetSearchMode(TEnumAsByte<EN_PC_SearchMode>* SearchMode);
-	void STATIC_SetSearchMode(TEnumAsByte<EN_PC_SearchMode> Mode);
-	void STATIC_SetMovementMode(class UObject* Executor, TEnumAsByte<EMovementMode> MovementMode, unsigned char NewCustomMode);
+	void RemoveIgnoreCollisionRequests(class UObject* Requester);
+	bool HasIgnoreCollisionChannelRequest(TEnumAsByte<ECollisionChannel> Channel);
+	void IgnoreCollisionChannel(TEnumAsByte<ECollisionChannel> Channel, bool StartIgnore, class UObject* Requester);
+	void GetEnableIK(bool* bIKEnabled);
+	bool ReturnOutOfWorld();
+	void GetSearchMode(TEnumAsByte<EN_PC_SearchMode>* SearchMode);
+	void SetSearchMode(TEnumAsByte<EN_PC_SearchMode> Mode);
+	void SetMovementMode(class UObject* Executor, TEnumAsByte<EMovementMode> MovementMode, unsigned char NewCustomMode);
 	void ReactToTeleported();
-	void STATIC_TeleportWithCamera(const struct FVector& NewLocation, const struct FRotator& NewRotation);
+	void TeleportWithCamera(const struct FVector& NewLocation, const struct FRotator& NewRotation);
 	void AddReflectorBoard();
 	void SetEnableIK(bool bInIKEnabled, bool* dummy);
 	void UpdateDoorActor();
 	void GetClosestDoor(class AS3GimmickOpenDoor** OutDoor);
-	void STATIC_IsInDoorTrigger(bool* bInTrigger);
+	void IsInDoorTrigger(bool* bInTrigger);
 	void ExpandNPCSensorDistance(float MinDistance);
-	void STATIC_UpdatePlayerFade();
+	void UpdatePlayerFade();
 	void AddTurnAroundComponent(class UBPC_TurnAround_C** Component);
 	void SetActorLocationAndRotationWithCamera(const struct FVector& NewLocation, const struct FRotator& NewRotation, bool Sweep, bool Teleport);
 	void ClearNotice();
 	void TalkStopMotion();
 	void TalkPlayMotion(bool SitFlag);
-	void STATIC_IsDenyInput(bool* Deny);
-	void STATIC_CheckInputAxis(float AxisValue, bool* bWasInput);
-	void STATIC_UserConstructionScript();
+	void IsDenyInput(bool* Deny);
+	void CheckInputAxis(float AxisValue, bool* bWasInput);
+	void UserConstructionScript();
 	void BindCutscene();
 	void UnbindCutscene();
 	void StartCutscene();
@@ -127,7 +127,7 @@ public:
 	void ReceiveDestroyed();
 	void StartNock();
 	void BndEvt__NPCSensor_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__NPCSensor_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__NPCSensor_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void OnDoorAreaBeginOverlap(class AS3GimmickOpenDoor* Door);
 	void OnDoorAreaEndOverlap(class AS3GimmickOpenDoor* Door);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);

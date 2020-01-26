@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.ChangeFontType
-// (Net, Exec, Event, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Loading_Long_C::STATIC_ChangeFontType()
+void UBPW_UI_Loading_Long_C::ChangeFontType()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.ChangeFontType");
 
@@ -31,16 +31,15 @@ void UBPW_UI_Loading_Long_C::STATIC_ChangeFontType()
 
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.CheckHiddenMirror
-// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Loading_Long_C::STATIC_CheckHiddenMirror()
+void UBPW_UI_Loading_Long_C::CheckHiddenMirror()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.CheckHiddenMirror");
 
 	UBPW_UI_Loading_Long_C_CheckHiddenMirror_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,7 +48,7 @@ void UBPW_UI_Loading_Long_C::STATIC_CheckHiddenMirror()
 
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.SetLoadingType
-// (Net, NetReliable, NetResponse, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3LoadingType                 Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -72,7 +71,7 @@ bool UBPW_UI_Loading_Long_C::SetLoadingType(ES3LoadingType Type)
 
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.SetDebugIndex
-// (NetRequest, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -92,7 +91,7 @@ void UBPW_UI_Loading_Long_C::SetDebugIndex(int Index)
 
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.GetProgressBarImage
-// (Exec, Event, Public, Private, Protected, NetServer, BlueprintCallable)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3LoadingProgressImage* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -113,7 +112,7 @@ class US3LoadingProgressImage* UBPW_UI_Loading_Long_C::GetProgressBarImage()
 
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.SetCharaData
-// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UImage*                  Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -139,16 +138,15 @@ void UBPW_UI_Loading_Long_C::SetCharaData(int Index, class UImage* Image, class 
 
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.SetTexture
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Loading_Long_C::STATIC_SetTexture()
+void UBPW_UI_Loading_Long_C::SetTexture()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.SetTexture");
 
 	UBPW_UI_Loading_Long_C_SetTexture_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -157,7 +155,7 @@ void UBPW_UI_Loading_Long_C::STATIC_SetTexture()
 
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.Tick
-// (Net, Exec, Event, Public, Private, Protected, NetServer, BlueprintCallable)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -179,7 +177,7 @@ void UBPW_UI_Loading_Long_C::Tick(const struct FGeometry& MyGeometry, float InDe
 
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.ExecuteUbergraph_BPW_UI_Loading_Long
-// (Net, NetRequest, Exec, Event, Protected, NetServer, BlueprintCallable)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -199,16 +197,15 @@ void UBPW_UI_Loading_Long_C::ExecuteUbergraph_BPW_UI_Loading_Long(int EntryPoint
 
 
 // Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.MirrorRotation__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Delegate, HasOutParms, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Loading_Long_C::STATIC_MirrorRotation__DelegateSignature()
+void UBPW_UI_Loading_Long_C::MirrorRotation__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Loading_Long.BPW_UI_Loading_Long_C.MirrorRotation__DelegateSignature");
 
 	UBPW_UI_Loading_Long_C_MirrorRotation__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

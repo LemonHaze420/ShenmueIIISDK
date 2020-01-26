@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SelectCloseUpCameras.TalkCam_SelectCloseUpCameras_C.ReceiveTickAI
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -30,7 +30,6 @@ void UTalkCam_SelectCloseUpCameras_C::ReceiveTickAI(class AAIController* OwnerCo
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,11 +38,11 @@ void UTalkCam_SelectCloseUpCameras_C::ReceiveTickAI(class AAIController* OwnerCo
 
 
 // Function TalkCam_SelectCloseUpCameras.TalkCam_SelectCloseUpCameras_C.ExecuteUbergraph_TalkCam_SelectCloseUpCameras
-// (Net, NetReliable, Exec, Event, Static, NetMulticast, Public, Delegate, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UTalkCam_SelectCloseUpCameras_C::STATIC_ExecuteUbergraph_TalkCam_SelectCloseUpCameras(int EntryPoint)
+void UTalkCam_SelectCloseUpCameras_C::ExecuteUbergraph_TalkCam_SelectCloseUpCameras(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TalkCam_SelectCloseUpCameras.TalkCam_SelectCloseUpCameras_C.ExecuteUbergraph_TalkCam_SelectCloseUpCameras");
 

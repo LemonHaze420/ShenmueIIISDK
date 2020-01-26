@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NewST_Stone.BP_NewST_Stone_C.UserConstructionScript
-// (Exec, Event, Static, NetMulticast, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_NewST_Stone_C::STATIC_UserConstructionScript()
+void ABP_NewST_Stone_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NewST_Stone.BP_NewST_Stone_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_NewST_Stone_C::STATIC_UserConstructionScript()
 
 
 // Function BP_NewST_Stone.BP_NewST_Stone_C.BndEvt__Mesh_Throw_K2Node_ComponentBoundEvent_4_ComponentHitSignature__DelegateSignature
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -39,7 +39,7 @@ void ABP_NewST_Stone_C::STATIC_UserConstructionScript()
 // struct FVector                 NormalImpulse                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FHitResult              Hit                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_NewST_Stone_C::STATIC_BndEvt__Mesh_Throw_K2Node_ComponentBoundEvent_4_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+void ABP_NewST_Stone_C::BndEvt__Mesh_Throw_K2Node_ComponentBoundEvent_4_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NewST_Stone.BP_NewST_Stone_C.BndEvt__Mesh_Throw_K2Node_ComponentBoundEvent_4_ComponentHitSignature__DelegateSignature");
 
@@ -59,7 +59,7 @@ void ABP_NewST_Stone_C::STATIC_BndEvt__Mesh_Throw_K2Node_ComponentBoundEvent_4_C
 
 
 // Function BP_NewST_Stone.BP_NewST_Stone_C.BndEvt__Sphere_BucketCheck_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -68,7 +68,7 @@ void ABP_NewST_Stone_C::STATIC_BndEvt__Mesh_Throw_K2Node_ComponentBoundEvent_4_C
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_NewST_Stone_C::STATIC_BndEvt__Sphere_BucketCheck_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_NewST_Stone_C::BndEvt__Sphere_BucketCheck_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NewST_Stone.BP_NewST_Stone_C.BndEvt__Sphere_BucketCheck_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -81,7 +81,6 @@ void ABP_NewST_Stone_C::STATIC_BndEvt__Sphere_BucketCheck_K2Node_ComponentBoundE
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,7 +89,7 @@ void ABP_NewST_Stone_C::STATIC_BndEvt__Sphere_BucketCheck_K2Node_ComponentBoundE
 
 
 // Function BP_NewST_Stone.BP_NewST_Stone_C.BndEvt__Sphere_BucketCheck_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature
-// (Exec, Event, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -116,7 +115,7 @@ void ABP_NewST_Stone_C::BndEvt__Sphere_BucketCheck_K2Node_ComponentBoundEvent_2_
 
 
 // Function BP_NewST_Stone.BP_NewST_Stone_C.ReceiveTick
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -136,9 +135,9 @@ void ABP_NewST_Stone_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_NewST_Stone.BP_NewST_Stone_C.FallBottom
-// (Net, NetReliable, Exec, Event, NetResponse, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_NewST_Stone_C::STATIC_FallBottom()
+void ABP_NewST_Stone_C::FallBottom()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NewST_Stone.BP_NewST_Stone_C.FallBottom");
 
@@ -153,7 +152,7 @@ void ABP_NewST_Stone_C::STATIC_FallBottom()
 
 
 // Function BP_NewST_Stone.BP_NewST_Stone_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -162,7 +161,7 @@ void ABP_NewST_Stone_C::STATIC_FallBottom()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_NewST_Stone_C::STATIC_BndEvt__Sphere_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_NewST_Stone_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NewST_Stone.BP_NewST_Stone_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -183,11 +182,11 @@ void ABP_NewST_Stone_C::STATIC_BndEvt__Sphere_K2Node_ComponentBoundEvent_5_Compo
 
 
 // Function BP_NewST_Stone.BP_NewST_Stone_C.ExecuteUbergraph_BP_NewST_Stone
-// (NetResponse, Static, NetMulticast, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NewST_Stone_C::STATIC_ExecuteUbergraph_BP_NewST_Stone(int EntryPoint)
+void ABP_NewST_Stone_C::ExecuteUbergraph_BP_NewST_Stone(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NewST_Stone.BP_NewST_Stone_C.ExecuteUbergraph_BP_NewST_Stone");
 

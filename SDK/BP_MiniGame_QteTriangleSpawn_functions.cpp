@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.SetVisible
-// (NetMulticast, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,11 +34,11 @@ void ABP_MiniGame_QteTriangleSpawn_C::SetVisible(bool Condition)
 
 
 // Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.RemoveTriangle
-// (NetReliable, Exec, Event, Static, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_QteTriangleSpawn_C::STATIC_RemoveTriangle(class AActor* Actor)
+void ABP_MiniGame_QteTriangleSpawn_C::RemoveTriangle(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.RemoveTriangle");
 
@@ -54,7 +54,7 @@ void ABP_MiniGame_QteTriangleSpawn_C::STATIC_RemoveTriangle(class AActor* Actor)
 
 
 // Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.DestroyTriangle
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_QteTriangleSpawn_C::DestroyTriangle()
 {
@@ -71,7 +71,7 @@ void ABP_MiniGame_QteTriangleSpawn_C::DestroyTriangle()
 
 
 // Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.UserConstructionScript
-// (NetReliable, NetRequest, NetResponse, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_QteTriangleSpawn_C::UserConstructionScript()
 {
@@ -88,16 +88,15 @@ void ABP_MiniGame_QteTriangleSpawn_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.ReceiveBeginPlay
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_MiniGame_QteTriangleSpawn_C::STATIC_ReceiveBeginPlay()
+void ABP_MiniGame_QteTriangleSpawn_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.ReceiveBeginPlay");
 
 	ABP_MiniGame_QteTriangleSpawn_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -106,11 +105,11 @@ void ABP_MiniGame_QteTriangleSpawn_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.ReceiveTick
-// (Net, NetReliable, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_QteTriangleSpawn_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_QteTriangleSpawn_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.ReceiveTick");
 
@@ -126,11 +125,11 @@ void ABP_MiniGame_QteTriangleSpawn_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.ExecuteUbergraph_BP_MiniGame_QteTriangleSpawn
-// (NetReliable, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_QteTriangleSpawn_C::STATIC_ExecuteUbergraph_BP_MiniGame_QteTriangleSpawn(int EntryPoint)
+void ABP_MiniGame_QteTriangleSpawn_C::ExecuteUbergraph_BP_MiniGame_QteTriangleSpawn(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_QteTriangleSpawn.BP_MiniGame_QteTriangleSpawn_C.ExecuteUbergraph_BP_MiniGame_QteTriangleSpawn");
 

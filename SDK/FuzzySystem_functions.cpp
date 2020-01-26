@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,261 +13,8 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR4
-// ()
-// Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term3                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term4                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyOR*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UFuzzyOR* UFuzzySystemFunctionLibrary::FuzzyCreateRule_OR4(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3, class UFuzzyTerm* Term4)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR4");
-
-	UFuzzySystemFunctionLibrary_FuzzyCreateRule_OR4_Params params;
-	params.Outer = Outer;
-	params.Term1 = Term1;
-	params.Term2 = Term2;
-	params.Term3 = Term3;
-	params.Term4 = Term4;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR3
-// ()
-// Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term3                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyOR*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UFuzzyOR* UFuzzySystemFunctionLibrary::FuzzyCreateRule_OR3(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR3");
-
-	UFuzzySystemFunctionLibrary_FuzzyCreateRule_OR3_Params params;
-	params.Outer = Outer;
-	params.Term1 = Term1;
-	params.Term2 = Term2;
-	params.Term3 = Term3;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR2
-// ()
-// Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyOR*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UFuzzyOR* UFuzzySystemFunctionLibrary::FuzzyCreateRule_OR2(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR2");
-
-	UFuzzySystemFunctionLibrary_FuzzyCreateRule_OR2_Params params;
-	params.Outer = Outer;
-	params.Term1 = Term1;
-	params.Term2 = Term2;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND4
-// ()
-// Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term3                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term4                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyAND*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UFuzzyAND* UFuzzySystemFunctionLibrary::FuzzyCreateRule_AND4(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3, class UFuzzyTerm* Term4)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND4");
-
-	UFuzzySystemFunctionLibrary_FuzzyCreateRule_AND4_Params params;
-	params.Outer = Outer;
-	params.Term1 = Term1;
-	params.Term2 = Term2;
-	params.Term3 = Term3;
-	params.Term4 = Term4;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND3
-// ()
-// Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term3                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyAND*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UFuzzyAND* UFuzzySystemFunctionLibrary::FuzzyCreateRule_AND3(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND3");
-
-	UFuzzySystemFunctionLibrary_FuzzyCreateRule_AND3_Params params;
-	params.Outer = Outer;
-	params.Term1 = Term1;
-	params.Term2 = Term2;
-	params.Term3 = Term3;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND2
-// ()
-// Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyAND*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UFuzzyAND* UFuzzySystemFunctionLibrary::FuzzyCreateRule_AND2(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND2");
-
-	UFuzzySystemFunctionLibrary_FuzzyCreateRule_AND2_Params params;
-	params.Outer = Outer;
-	params.Term1 = Term1;
-	params.Term2 = Term2;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateHedges_Very
-// ()
-// Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyMembershipFunction* FMF                            (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyVery*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UFuzzyVery* UFuzzySystemFunctionLibrary::FuzzyCreateHedges_Very(class UObject* Outer, class UFuzzyMembershipFunction* FMF)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateHedges_Very");
-
-	UFuzzySystemFunctionLibrary_FuzzyCreateHedges_Very_Params params;
-	params.Outer = Outer;
-	params.FMF = FMF;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateHedges_Fairly
-// ()
-// Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyMembershipFunction* FMF                            (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyFairly*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UFuzzyFairly* UFuzzySystemFunctionLibrary::FuzzyCreateHedges_Fairly(class UObject* Outer, class UFuzzyMembershipFunction* FMF)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateHedges_Fairly");
-
-	UFuzzySystemFunctionLibrary_FuzzyCreateHedges_Fairly_Params params;
-	params.Outer = Outer;
-	params.FMF = FMF;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function FuzzySystem.FuzzyVariable.AddMembershipFunction
-// ()
-// Parameters:
-// struct FName                   Key                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCurveFloat*             MembershipCurve                (Parm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyVariable*          OutFLV                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// class UFuzzyMembershipFunction* AddFMF                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UFuzzyVariable::AddMembershipFunction(const struct FName& Key, class UCurveFloat* MembershipCurve, class UFuzzyVariable** OutFLV, class UFuzzyMembershipFunction** AddFMF)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzyVariable.AddMembershipFunction");
-
-	UFuzzyVariable_AddMembershipFunction_Params params;
-	params.Key = Key;
-	params.MembershipCurve = MembershipCurve;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (OutFLV != nullptr)
-		*OutFLV = params.OutFLV;
-	if (AddFMF != nullptr)
-		*AddFMF = params.AddFMF;
-}
-
-
 // Function FuzzySystem.FuzzySystemComponent.ResetRule
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UFuzzySystemComponent::ResetRule()
 {
@@ -276,6 +23,7 @@ void UFuzzySystemComponent::ResetRule()
 	UFuzzySystemComponent_ResetRule_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -284,7 +32,7 @@ void UFuzzySystemComponent::ResetRule()
 
 
 // Function FuzzySystem.FuzzySystemComponent.Fuzzify
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // struct FName                   NameOfFLV                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -298,6 +46,7 @@ void UFuzzySystemComponent::Fuzzify(const struct FName& NameOfFLV, float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -306,7 +55,7 @@ void UFuzzySystemComponent::Fuzzify(const struct FName& NameOfFLV, float Value)
 
 
 // Function FuzzySystem.FuzzySystemComponent.DeFuzzify
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // struct FName                   NameOfFLV                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // EDefuzzifyMethod               Method                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -321,6 +70,7 @@ float UFuzzySystemComponent::DeFuzzify(const struct FName& NameOfFLV, EDefuzzify
 	params.Method = Method;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -331,7 +81,7 @@ float UFuzzySystemComponent::DeFuzzify(const struct FName& NameOfFLV, EDefuzzify
 
 
 // Function FuzzySystem.FuzzySystemComponent.CreateFLV
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // struct FName                   NameOfFLV                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class UFuzzyVariable*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -344,6 +94,7 @@ class UFuzzyVariable* UFuzzySystemComponent::CreateFLV(const struct FName& NameO
 	params.NameOfFLV = NameOfFLV;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,7 +105,7 @@ class UFuzzyVariable* UFuzzySystemComponent::CreateFLV(const struct FName& NameO
 
 
 // Function FuzzySystem.FuzzySystemComponent.AllResetFuzzify
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UFuzzySystemComponent::AllResetFuzzify()
 {
@@ -363,6 +114,7 @@ void UFuzzySystemComponent::AllResetFuzzify()
 	UFuzzySystemComponent_AllResetFuzzify_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -371,7 +123,7 @@ void UFuzzySystemComponent::AllResetFuzzify()
 
 
 // Function FuzzySystem.FuzzySystemComponent.AddRule
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UFuzzyTerm*              Antecedent                     (Parm, ZeroConstructor, IsPlainOldData)
 // class UFuzzyTerm*              Consequence                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -386,6 +138,7 @@ class UFuzzySystemComponent* UFuzzySystemComponent::AddRule(class UFuzzyTerm* An
 	params.Consequence = Consequence;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -396,7 +149,7 @@ class UFuzzySystemComponent* UFuzzySystemComponent::AddRule(class UFuzzyTerm* An
 
 
 // Function FuzzySystem.FuzzySystemComponent.AddMembershipFunctionFLV
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FName                   NameOfFLV                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Key                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
@@ -414,6 +167,269 @@ void UFuzzySystemComponent::AddMembershipFunctionFLV(const struct FName& NameOfF
 	params.MembershipCurve = MembershipCurve;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutFLV != nullptr)
+		*OutFLV = params.OutFLV;
+	if (AddFMF != nullptr)
+		*AddFMF = params.AddFMF;
+}
+
+
+// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR4
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term3                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term4                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyOR*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFuzzyOR* UFuzzySystemFunctionLibrary::STATIC_FuzzyCreateRule_OR4(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3, class UFuzzyTerm* Term4)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR4");
+
+	UFuzzySystemFunctionLibrary_FuzzyCreateRule_OR4_Params params;
+	params.Outer = Outer;
+	params.Term1 = Term1;
+	params.Term2 = Term2;
+	params.Term3 = Term3;
+	params.Term4 = Term4;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR3
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term3                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyOR*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFuzzyOR* UFuzzySystemFunctionLibrary::STATIC_FuzzyCreateRule_OR3(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR3");
+
+	UFuzzySystemFunctionLibrary_FuzzyCreateRule_OR3_Params params;
+	params.Outer = Outer;
+	params.Term1 = Term1;
+	params.Term2 = Term2;
+	params.Term3 = Term3;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR2
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyOR*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFuzzyOR* UFuzzySystemFunctionLibrary::STATIC_FuzzyCreateRule_OR2(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_OR2");
+
+	UFuzzySystemFunctionLibrary_FuzzyCreateRule_OR2_Params params;
+	params.Outer = Outer;
+	params.Term1 = Term1;
+	params.Term2 = Term2;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND4
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term3                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term4                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyAND*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFuzzyAND* UFuzzySystemFunctionLibrary::STATIC_FuzzyCreateRule_AND4(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3, class UFuzzyTerm* Term4)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND4");
+
+	UFuzzySystemFunctionLibrary_FuzzyCreateRule_AND4_Params params;
+	params.Outer = Outer;
+	params.Term1 = Term1;
+	params.Term2 = Term2;
+	params.Term3 = Term3;
+	params.Term4 = Term4;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND3
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term3                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyAND*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFuzzyAND* UFuzzySystemFunctionLibrary::STATIC_FuzzyCreateRule_AND3(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND3");
+
+	UFuzzySystemFunctionLibrary_FuzzyCreateRule_AND3_Params params;
+	params.Outer = Outer;
+	params.Term1 = Term1;
+	params.Term2 = Term2;
+	params.Term3 = Term3;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND2
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term1                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyTerm*              Term2                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyAND*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFuzzyAND* UFuzzySystemFunctionLibrary::STATIC_FuzzyCreateRule_AND2(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateRule_AND2");
+
+	UFuzzySystemFunctionLibrary_FuzzyCreateRule_AND2_Params params;
+	params.Outer = Outer;
+	params.Term1 = Term1;
+	params.Term2 = Term2;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateHedges_Very
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyMembershipFunction* FMF                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyVery*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFuzzyVery* UFuzzySystemFunctionLibrary::STATIC_FuzzyCreateHedges_Very(class UObject* Outer, class UFuzzyMembershipFunction* FMF)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateHedges_Very");
+
+	UFuzzySystemFunctionLibrary_FuzzyCreateHedges_Very_Params params;
+	params.Outer = Outer;
+	params.FMF = FMF;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateHedges_Fairly
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyMembershipFunction* FMF                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyFairly*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFuzzyFairly* UFuzzySystemFunctionLibrary::STATIC_FuzzyCreateHedges_Fairly(class UObject* Outer, class UFuzzyMembershipFunction* FMF)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzySystemFunctionLibrary.FuzzyCreateHedges_Fairly");
+
+	UFuzzySystemFunctionLibrary_FuzzyCreateHedges_Fairly_Params params;
+	params.Outer = Outer;
+	params.FMF = FMF;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function FuzzySystem.FuzzyVariable.AddMembershipFunction
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FName                   Key                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCurveFloat*             MembershipCurve                (Parm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyVariable*          OutFLV                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UFuzzyMembershipFunction* AddFMF                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UFuzzyVariable::AddMembershipFunction(const struct FName& Key, class UCurveFloat* MembershipCurve, class UFuzzyVariable** OutFLV, class UFuzzyMembershipFunction** AddFMF)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function FuzzySystem.FuzzyVariable.AddMembershipFunction");
+
+	UFuzzyVariable_AddMembershipFunction_Params params;
+	params.Key = Key;
+	params.MembershipCurve = MembershipCurve;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

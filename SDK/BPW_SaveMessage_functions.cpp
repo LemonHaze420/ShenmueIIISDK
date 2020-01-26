@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_SaveMessage.BPW_SaveMessage_C.ShowMessage
-// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ESaveMessageType>  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UBPW_SaveMessage_C::ShowMessage(TEnumAsByte<ESaveMessageType> Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UBPW_SaveMessage_C::ShowMessage(TEnumAsByte<ESaveMessageType> Type)
 
 
 // Function BPW_SaveMessage.BPW_SaveMessage_C.Construct
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_SaveMessage_C::Construct()
 {
@@ -44,7 +43,6 @@ void UBPW_SaveMessage_C::Construct()
 	UBPW_SaveMessage_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +51,11 @@ void UBPW_SaveMessage_C::Construct()
 
 
 // Function BPW_SaveMessage.BPW_SaveMessage_C.OnAnimationFinished
-// (Exec, NetResponse, Static, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // class UWidgetAnimation*        Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBPW_SaveMessage_C::STATIC_OnAnimationFinished(class UWidgetAnimation* Animation)
+void UBPW_SaveMessage_C::OnAnimationFinished(class UWidgetAnimation* Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveMessage.BPW_SaveMessage_C.OnAnimationFinished");
 
@@ -73,7 +71,7 @@ void UBPW_SaveMessage_C::STATIC_OnAnimationFinished(class UWidgetAnimation* Anim
 
 
 // Function BPW_SaveMessage.BPW_SaveMessage_C.ExecuteUbergraph_BPW_SaveMessage
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -93,9 +91,9 @@ void UBPW_SaveMessage_C::ExecuteUbergraph_BPW_SaveMessage(int EntryPoint)
 
 
 // Function BPW_SaveMessage.BPW_SaveMessage_C.OnFinishedSaveMessage__DelegateSignature
-// (NetReliable, Exec, Static, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBPW_SaveMessage_C::STATIC_OnFinishedSaveMessage__DelegateSignature()
+void UBPW_SaveMessage_C::OnFinishedSaveMessage__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveMessage.BPW_SaveMessage_C.OnFinishedSaveMessage__DelegateSignature");
 

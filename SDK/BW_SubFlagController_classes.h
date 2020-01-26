@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,13 +41,13 @@ public:
 	}
 
 
-	void STATIC_UpdateAllWidgetFlagIds();
-	void STATIC_WidgetIdxToFlagIdx(int WidgetIdx, int* FlagIdx);
-	void STATIC_UpdateWidgetValue(class UBW_IntegerProperty_C* Widget, int Index);
-	void STATIC_SetTargetFlagValue(int Index, int flag);
-	int STATIC_GetTargetFlagValue(int FlagIdx);
-	void STATIC_UpdateWidgetFlagId(class UBW_IntegerProperty_C* Widget, int WidgetIdx);
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void UpdateAllWidgetFlagIds();
+	void WidgetIdxToFlagIdx(int WidgetIdx, int* FlagIdx);
+	void UpdateWidgetValue(class UBW_IntegerProperty_C* Widget, int Index);
+	void SetTargetFlagValue(int Index, int flag);
+	int GetTargetFlagValue(int FlagIdx);
+	void UpdateWidgetFlagId(class UBW_IntegerProperty_C* Widget, int WidgetIdx);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ChangePage();
 	void OnFlagPropertyChanged(int Value, class UBW_IntegerProperty_C* Context);
 	void SetInitialFocus();

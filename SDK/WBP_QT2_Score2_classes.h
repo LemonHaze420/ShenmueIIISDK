@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,14 +34,14 @@ public:
 	}
 
 
-	void STATIC_SetEnabled(bool bEnabled);
+	void SetEnabled(bool bEnabled);
 	void GetTextArray(TArray<class UTextBlock*>* Array);
 	void Set_Text_New(const struct FText& Text);
-	void STATIC_SetVisibleScore(bool Visible);
-	void STATIC_SetVisibleText(bool Visible);
+	void SetVisibleScore(bool Visible);
+	void SetVisibleText(bool Visible);
 	void SetText(const struct FText& Text, bool NotNumber);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_WBP_QT2_Score2(int EntryPoint);
 };
 

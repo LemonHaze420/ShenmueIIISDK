@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,16 +21,16 @@ public:
 	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class Uwgt_S3ItemListViewerWindow_C*               gachaWindow;                                              // 0x0338(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBW_MenuTimer_C*                             MenuTimer;                                                // 0x0340(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	bool                                               IsBusy;                                                   // 0x0348(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               isBusy;                                                   // 0x0348(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0349(0x0003) MISSED OFFSET
 	int                                                CurrentIndex;                                             // 0x034C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FVector2D                                   startCurPos;                                              // 0x0350(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsRight;                                                  // 0x0358(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isLeft;                                                   // 0x0359(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               isUp;                                                     // 0x035A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsUp;                                                     // 0x035A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isDown;                                                   // 0x035B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x035C(0x0004) MISSED OFFSET
-	TArray<class ABP_ItemListViewerItemRotateRoot_C*>  itemList;                                                 // 0x0360(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
+	TArray<class ABP_ItemListViewerItemRotateRoot_C*>  ItemList;                                                 // 0x0360(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
 	int                                                itemSelIdxX;                                              // 0x0370(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                itemSelIdxY;                                              // 0x0374(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                currentCategory;                                          // 0x0378(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -157,62 +157,62 @@ public:
 
 
 	int GetPriority();
-	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
-	void STATIC_CheckTrialVersion();
-	bool STATIC_IsVisibleRStickOnlyViewMode(ES3ItemListMenuType Type);
-	void STATIC_InitializeCategories();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
+	void CheckTrialVersion();
+	bool IsVisibleRStickOnlyViewMode(ES3ItemListMenuType Type);
+	void InitializeCategories();
 	void SetSelectMenuTypeList();
-	bool STATIC_IsOnExchangeCategory();
-	void STATIC_UpdateSkillDisplay();
+	bool IsOnExchangeCategory();
+	void UpdateSkillDisplay();
 	void AddItemDataToList(int ItemId, TArray<struct FItemListItemTable> Table, int* NextTableIdx);
-	void STATIC_SimpleValueAdditiveSort(ES3ItemListMenuType CategoryType, TArray<struct FItemListItemTable>* itemList);
+	void SimpleValueAdditiveSort(ES3ItemListMenuType CategoryType, TArray<struct FItemListItemTable>* ItemList);
 	void SpaceOneItemPerRow(TArray<struct FItemListItemTable>* ItemDataList);
-	bool STATIC_IsSetMenu(ES3ItemListMenuType InputPin);
-	void STATIC_SortItemListByInt(TArray<int> IntArray, bool dsc, TArray<struct FItemListItemTable>* SortArray);
-	void STATIC_MoveContentsOfArray(TArray<struct FItemListItemTable>* Sorce_Array, TArray<struct FItemListItemTable>* Temp_Array);
-	TEnumAsByte<EN_Inventory_CategoryType> STATIC_GetDescriptionType(int Index);
-	bool STATIC_AllowsViewModeAxisInput(bool* TryTransit);
-	void STATIC_UpdateCategoryTipsImage();
+	bool IsSetMenu(ES3ItemListMenuType InputPin);
+	void SortItemListByInt(TArray<int> IntArray, bool dsc, TArray<struct FItemListItemTable>* SortArray);
+	void MoveContentsOfArray(TArray<struct FItemListItemTable>* Sorce_Array, TArray<struct FItemListItemTable>* Temp_Array);
+	TEnumAsByte<EN_Inventory_CategoryType> GetDescriptionType(int Index);
+	bool AllowsViewModeAxisInput(bool* TryTransit);
+	void UpdateCategoryTipsImage();
 	void NavigateSkillEditor(TEnumAsByte<Een_skill_key_type> Key);
 	void SetSkillWindow(TEnumAsByte<EMenuType> InputPin);
-	void STATIC_MakeFocusItemList(int ItemIndex);
+	void MakeFocusItemList(int ItemIndex);
 	void PlaySound(class USoundAtomCue* Sound);
-	void STATIC_OpenToFoodItem(int ItemId);
+	void OpenToFoodItem(int ItemId);
 	void ReleaseCursor();
 	void IsValidSetExchange(bool* IsValid);
 	void GetIndex(const struct FString& ItemLabel, int* ItemIndex);
 	void TickSelectKeyPresses(float DelayTime);
-	void STATIC_IsViewHelp(bool* IsDisp);
-	void STATIC_FlipPage(bool DirRight);
+	void IsViewHelp(bool* IsDisp);
+	void FlipPage(bool DirRight);
 	bool CanUseItem(bool Warn);
-	void STATIC_MovedCursor();
+	void MovedCursor();
 	void FormatItemString(const struct FS3ItemDataTable& S3ItemDataTable, bool Show, struct FString* OutString);
-	void STATIC_TrySelectCategory();
+	void TrySelectCategory();
 	void CloseUseItemWindow();
 	void LaunchUseItemWindow(TEnumAsByte<EMenuType> InputPin);
 	void GetCurrentItemUseAction(ES3ItemEffectTarget* Value_Target);
-	void STATIC_UseItem();
+	void UseItem();
 	void GetLocalizedText(TEnumAsByte<EUIText_Enum> ID, struct FString* Text);
 	void MakeLocalizedText();
 	void PlayCommonSound(TEnumAsByte<EN_InventorySE_List> ID);
-	void STATIC_MakeDetail();
-	void STATIC_SetVisibleDetail(int idx);
+	void MakeDetail();
+	void SetVisibleDetail(int idx);
 	void ResetSelect();
 	void AddCurrentItemNum(int Add);
-	void STATIC_GetItem(int ItemIndex, struct FText* ItemIndexText);
-	void STATIC_AllDestroy();
+	void GetItem(int ItemIndex, struct FText* ItemIndexText);
+	void AllDestroy();
 	void SetCursorMode(bool selectMode);
-	void STATIC_RightCursor();
-	void STATIC_LeftCursor();
-	void STATIC_UpCursor();
+	void RightCursor();
+	void LeftCursor();
+	void UpCursor();
 	void DownCursor();
-	void STATIC_UpdateDetailItemInfo();
+	void UpdateDetailItemInfo();
 	void changeItemList();
 	void RegisterForInput(bool isOpe);
-	bool STATIC_IsNoScrollRange();
-	void STATIC_ChangeCursorPos();
-	void STATIC_ChangeStatus();
-	void STATIC_ReturnStatus();
+	bool IsNoScrollRange();
+	void ChangeCursorPos();
+	void ChangeStatus();
+	void ReturnStatus();
 	void UserConstructionScript();
 	void InpActEvt_SearchBottomButton_K2Node_InputActionEvent_28(const struct FKey& Key);
 	void InpActEvt_SearchRightButton_K2Node_InputActionEvent_27(const struct FKey& Key);
@@ -256,7 +256,7 @@ public:
 	void ExecuteUbergraph_BP_S3ItemListViewerManager(int EntryPoint);
 	void ED_FinishInit__DelegateSignature();
 	void ED_DestroyManager__DelegateSignature();
-	void STATIC_ED_shopEnd__DelegateSignature();
+	void ED_shopEnd__DelegateSignature();
 };
 
 

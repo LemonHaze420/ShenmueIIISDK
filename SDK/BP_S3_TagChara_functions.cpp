@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3_TagChara.BP_S3_TagChara_C.SetProfileFromTable
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBP_S3_TagChara_C::SetProfileFromTable()
 {
@@ -23,7 +23,6 @@ void UBP_S3_TagChara_C::SetProfileFromTable()
 	UBP_S3_TagChara_C_SetProfileFromTable_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,9 +31,9 @@ void UBP_S3_TagChara_C::SetProfileFromTable()
 
 
 // Function BP_S3_TagChara.BP_S3_TagChara_C.ReceiveBeginPlay
-// (Net, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 
-void UBP_S3_TagChara_C::STATIC_ReceiveBeginPlay()
+void UBP_S3_TagChara_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_TagChara.BP_S3_TagChara_C.ReceiveBeginPlay");
 
@@ -49,11 +48,11 @@ void UBP_S3_TagChara_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_S3_TagChara.BP_S3_TagChara_C.ExecuteUbergraph_BP_S3_TagChara
-// (NetReliable, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3_TagChara_C::STATIC_ExecuteUbergraph_BP_S3_TagChara(int EntryPoint)
+void UBP_S3_TagChara_C::ExecuteUbergraph_BP_S3_TagChara(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_TagChara.BP_S3_TagChara_C.ExecuteUbergraph_BP_S3_TagChara");
 
@@ -61,7 +60,6 @@ void UBP_S3_TagChara_C::STATIC_ExecuteUbergraph_BP_S3_TagChara(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

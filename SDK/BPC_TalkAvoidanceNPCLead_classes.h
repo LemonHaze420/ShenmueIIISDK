@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ public:
 	bool FindFallbackLocation(class ACharacter* Player, struct FVector* Location);
 	struct FRotator MakeRotation(class AS3TalkEventManagerBase* TalkEventManager, const struct FVector& InVec);
 	void CanAvoidance(bool* bCan);
-	void STATIC_ProcessAvoidable(bool* bProcessed);
+	void ProcessAvoidable(bool* bProcessed);
 	void IsAvoiddableDecide(bool* bExecution);
 	void DistanceCheckTargetActors(const struct FVector& TestActorLocation, bool* bSuccess);
 	void DelayResumePhysics();

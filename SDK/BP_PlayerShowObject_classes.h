@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,7 +69,7 @@ public:
 	class UMeshComponent* GetClothMeshComponent();
 	void Zoom();
 	void SetShowObjeectScale(float Scale);
-	void STATIC_CacheFingerLocationAndRotation(const struct FString& soketName, int Length, TArray<struct FVector>* FingerLocations, TArray<struct FRotator>* FingerRotations);
+	void CacheFingerLocationAndRotation(const struct FString& soketName, int Length, TArray<struct FVector>* FingerLocations, TArray<struct FRotator>* FingerRotations);
 	void UserConstructionScript();
 	void SetTargetShowCamera();
 	void Reset(bool bNewVisibility);
@@ -79,7 +79,7 @@ public:
 	void Input_Wait_Update();
 	void InpAxisEvt_MoveRight_K2Node_InputAxisEvent_10(float AxisValue);
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_6(float AxisValue);
-	void STATIC_ExecuteUbergraph_BP_PlayerShowObject(int EntryPoint);
+	void ExecuteUbergraph_BP_PlayerShowObject(int EntryPoint);
 	void OnCalcFinishedDispatcher__DelegateSignature();
 };
 

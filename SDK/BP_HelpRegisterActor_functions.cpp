@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.GetHelpPriority
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpPriority                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ ES3HelpPriority ABP_HelpRegisterActor_C::GetHelpPriority()
 
 
 // Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.GetHelpName
-// (NetReliable, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -56,18 +56,17 @@ struct FName ABP_HelpRegisterActor_C::GetHelpName()
 
 
 // Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.IsActivateHelp
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetServer)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_HelpRegisterActor_C::STATIC_IsActivateHelp()
+bool ABP_HelpRegisterActor_C::IsActivateHelp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.IsActivateHelp");
 
 	ABP_HelpRegisterActor_C_IsActivateHelp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,12 +77,12 @@ bool ABP_HelpRegisterActor_C::STATIC_IsActivateHelp()
 
 
 // Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.RegisterHelp
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetServer)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpRegisterTiming          Timing                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_HelpRegisterActor_C::STATIC_RegisterHelp(ES3HelpRegisterTiming Timing)
+bool ABP_HelpRegisterActor_C::RegisterHelp(ES3HelpRegisterTiming Timing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.RegisterHelp");
 
@@ -91,7 +90,6 @@ bool ABP_HelpRegisterActor_C::STATIC_RegisterHelp(ES3HelpRegisterTiming Timing)
 	params.Timing = Timing;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +100,7 @@ bool ABP_HelpRegisterActor_C::STATIC_RegisterHelp(ES3HelpRegisterTiming Timing)
 
 
 // Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.UnregisterHelp
-// (NetMulticast, NetServer)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpRegisterTiming          Timing                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -125,7 +123,7 @@ bool ABP_HelpRegisterActor_C::UnregisterHelp(ES3HelpRegisterTiming Timing)
 
 
 // Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.UserConstructionScript
-// (NetReliable, Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HelpRegisterActor_C::UserConstructionScript()
 {
@@ -134,7 +132,6 @@ void ABP_HelpRegisterActor_C::UserConstructionScript()
 	ABP_HelpRegisterActor_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,16 +140,15 @@ void ABP_HelpRegisterActor_C::UserConstructionScript()
 
 
 // Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetServer)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_HelpRegisterActor_C::STATIC_ReceiveBeginPlay()
+void ABP_HelpRegisterActor_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.ReceiveBeginPlay");
 
 	ABP_HelpRegisterActor_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,7 +157,7 @@ void ABP_HelpRegisterActor_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.ReceiveEndPlay
-// (Net, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -181,11 +177,11 @@ void ABP_HelpRegisterActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 
 
 // Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.ExecuteUbergraph_BP_HelpRegisterActor
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HelpRegisterActor_C::STATIC_ExecuteUbergraph_BP_HelpRegisterActor(int EntryPoint)
+void ABP_HelpRegisterActor_C::ExecuteUbergraph_BP_HelpRegisterActor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HelpRegisterActor.BP_HelpRegisterActor_C.ExecuteUbergraph_BP_HelpRegisterActor");
 
@@ -193,7 +189,6 @@ void ABP_HelpRegisterActor_C::STATIC_ExecuteUbergraph_BP_HelpRegisterActor(int E
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,11 +30,11 @@ public:
 	}
 
 
-	void STATIC_GetLookAngle(float* Angle);
-	void STATIC_GetLookDistance(float* Distance);
-	void STATIC_StateExit(float Delta, bool* bProcessing);
-	void STATIC_StateUpdate(float Delta, bool* bDummy);
-	void STATIC_StateEnter(float Delta, bool* bProcessing);
+	void GetLookAngle(float* Angle);
+	void GetLookDistance(float* Distance);
+	void StateExit(float Delta, bool* bProcessing);
+	void StateUpdate(float Delta, bool* bDummy);
+	void StateEnter(float Delta, bool* bProcessing);
 };
 
 

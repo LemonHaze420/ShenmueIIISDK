@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,30 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class FiniteStateMachine.FiniteStateBase
+// 0x0010 (0x0038 - 0x0028)
+class UFiniteStateBase : public UObject
+{
+public:
+	struct FName                                       StateName;                                                // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UFiniteStateMachineComponent*                StateMachineComponent;                                    // 0x0030(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class FiniteStateMachine.FiniteStateBase");
+		return ptr;
+	}
+
+
+	void StateUpdate(float Delta, bool* bDummy);
+	void StateOnSuspend(bool* bDummy);
+	void StateOnResume(bool* bDummy);
+	void StateOnInitialize();
+	void StateExit(float Delta, bool* bProcessing);
+	void StateEnter(float Delta, bool* bProcessing);
+};
+
 
 // Class FiniteStateMachine.FiniteStateMachineComponent
 // 0x00D0 (0x01C0 - 0x00F0)
@@ -50,30 +74,6 @@ public:
 	void CreateStateInstance();
 	void ChangeStateLazy(const struct FName& NewStateName);
 	void ChangeState(const struct FName& NewStateName);
-};
-
-
-// Class FiniteStateMachine.FiniteStateBase
-// 0x0010 (0x0038 - 0x0028)
-class UFiniteStateBase : public UObject
-{
-public:
-	struct FName                                       StateName;                                                // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UFiniteStateMachineComponent*                StateMachineComponent;                                    // 0x0030(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class FiniteStateMachine.FiniteStateBase");
-		return ptr;
-	}
-
-
-	void StateUpdate(float Delta, bool* bDummy);
-	void StateOnSuspend(bool* bDummy);
-	void StateOnResume(bool* bDummy);
-	void StateOnInitialize();
-	void StateExit(float Delta, bool* bProcessing);
-	void StateEnter(float Delta, bool* bProcessing);
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Experience.BPF_Experience_C.BPF_UpdateTrainingLevelUpData
-// (NetReliable, NetResponse, Static, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_SparringResultLevelUpData Player                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FST_SparringResultLevelUpData ATK                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -47,7 +47,7 @@ bool UBPF_Experience_C::STATIC_BPF_UpdateTrainingLevelUpData(class UObject* __Wo
 
 
 // Function BPF_Experience.BPF_Experience_C.BPF_InitializeTrainingLevelUpData
-// (Net, NetReliable, NetResponse, Static, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_SparringResultLevelUpData Player                         (Parm, OutParm)
@@ -77,7 +77,7 @@ void UBPF_Experience_C::STATIC_BPF_InitializeTrainingLevelUpData(class UObject* 
 
 
 // Function BPF_Experience.BPF_Experience_C.BPF_ShouldShowExpHintPostTraining
-// (Net, NetReliable, NetRequest, Static, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -100,7 +100,7 @@ bool UBPF_Experience_C::STATIC_BPF_ShouldShowExpHintPostTraining(class UObject* 
 
 
 // Function BPF_Experience.BPF_Experience_C.BPF_CalcPlayerExpModifer_Energy_Lerp
-// (Net, NetReliable, Exec, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Min                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Max                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -128,11 +128,11 @@ void UBPF_Experience_C::STATIC_BPF_CalcPlayerExpModifer_Energy_Lerp(float Min, f
 
 
 // Function BPF_Experience.BPF_Experience_C.BPF_DebugLogPlayerExpModifier
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Experience_C::BPF_DebugLogPlayerExpModifier(class UObject* __WorldContext)
+void UBPF_Experience_C::STATIC_BPF_DebugLogPlayerExpModifier(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Experience.BPF_Experience_C.BPF_DebugLogPlayerExpModifier");
 
@@ -148,7 +148,7 @@ void UBPF_Experience_C::BPF_DebugLogPlayerExpModifier(class UObject* __WorldCont
 
 
 // Function BPF_Experience.BPF_Experience_C.BPF_CalcPlayerExpModifier_Energy
-// (Exec, Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Multiplier                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -172,7 +172,7 @@ void UBPF_Experience_C::STATIC_BPF_CalcPlayerExpModifier_Energy(class UObject* _
 
 
 // Function BPF_Experience.BPF_Experience_C.BPF_CalcPlayerExpModifier_Difficulty
-// (Net, NetRequest, Native, Event, Static, NetServer, NetClient)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -185,7 +185,6 @@ float UBPF_Experience_C::STATIC_BPF_CalcPlayerExpModifier_Difficulty(class UObje
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,7 +195,7 @@ float UBPF_Experience_C::STATIC_BPF_CalcPlayerExpModifier_Difficulty(class UObje
 
 
 // Function BPF_Experience.BPF_Experience_C.BPF_CalcPlayerExpModifier
-// (Net, NetRequest, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -209,7 +208,6 @@ float UBPF_Experience_C::STATIC_BPF_CalcPlayerExpModifier(class UObject* __World
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

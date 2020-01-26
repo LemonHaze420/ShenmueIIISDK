@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,14 +49,14 @@ public:
 
 
 	void SetPhoto(int Index, const struct FName& Name, class UTexture* Texture, float IsMaterialRender);
-	void STATIC_SetPageTexture(int IndexR, int IndexF);
-	void STATIC_SetTextMesh(int Index, const struct FName& Name, class UTexture* Texture, bool turning, int page);
-	void STATIC_CanReady();
+	void SetPageTexture(int IndexR, int IndexF);
+	void SetTextMesh(int Index, const struct FName& Name, class UTexture* Texture, bool Turning, int page);
+	void CanReady();
 	void SetTurnState(TEnumAsByte<EN_memopadTurntype> Turn, bool LastPage);
 	void Initialize(bool CoverFlg, bool bRight);
 	void EndAnim();
 	void GetTurnState(TEnumAsByte<EN_memopadTurntype>* State);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ViewPage();
 	void ReceiveTick(float DeltaSeconds);

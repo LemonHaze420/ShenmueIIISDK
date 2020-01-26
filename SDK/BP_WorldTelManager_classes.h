@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,25 +39,25 @@ public:
 
 
 	bool CheckCursorMove(const struct FVector2D& BeforPos);
-	void STATIC_SetAddressBook(class ABP_AddressBook_C* AddressBook);
-	void STATIC_SetData(class ABP_CreateMemoTexture_C* newParam);
-	void STATIC_GetUseManager(bool* UseManager);
-	void STATIC_SetUseManager(bool UseManager);
-	void STATIC_SetAddressBookPageWidgetR(class Uwgt_AddressPage_1_C* AddressBookPageWidgetR);
-	void STATIC_SetEnableInput(bool bEnableInput);
+	void SetAddressBook(class ABP_AddressBook_C* AddressBook);
+	void SetData(class ABP_CreateMemoTexture_C* newParam);
+	void GetUseManager(bool* UseManager);
+	void SetUseManager(bool UseManager);
+	void SetAddressBookPageWidgetR(class Uwgt_AddressPage_1_C* AddressBookPageWidgetR);
+	void SetEnableInput(bool bEnableInput);
 	void SetAddressBookPageWidgetF(class Uwgt_AddressPage_0_C* AddressBookPageWidgetF);
 	void UserConstructionScript();
-	void STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
+	void InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
+	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
+	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
 	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5(const struct FKey& Key);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ChangeSelection(const struct FVector2D& Delta);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_SetSelectionWithSound(const struct FVector2D& NewPos);
-	void STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue);
-	void STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_2(float AxisValue);
-	void STATIC_ExecuteUbergraph_BP_WorldTelManager(int EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
+	void ChangeSelection(const struct FVector2D& Delta);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void SetSelectionWithSound(const struct FVector2D& NewPos);
+	void InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue);
+	void InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_2(float AxisValue);
+	void ExecuteUbergraph_BP_WorldTelManager(int EntryPoint);
 };
 
 

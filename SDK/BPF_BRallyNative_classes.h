@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,8 +25,8 @@ public:
 	}
 
 
-	bool BPF_IsBattleRallyGamemode(class UObject* __WorldContext);
-	class US3_BRallyAwardSystem* BPF_GetBRallyAwardComponent(class UObject* __WorldContext);
+	bool STATIC_BPF_IsBattleRallyGamemode(class UObject* __WorldContext);
+	class US3_BRallyAwardSystem* STATIC_BPF_GetBRallyAwardComponent(class UObject* __WorldContext);
 };
 
 

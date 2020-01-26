@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,13 +68,13 @@ public:
 	}
 
 
-	void STATIC_ForceVisiblityOff();
-	struct FSlateBrush STATIC_Get_FlareImage_Brush_1();
+	void ForceVisiblityOff();
+	struct FSlateBrush Get_FlareImage_Brush_1();
 	void OcclusionOpacityUpdate();
 	void Initialize(float OffsetAmount, const struct FVector& ParentLocation, float Opacity_Edge_Fade_X, float Opacity_Edge_Fade_Y, float Fade_Distance, const struct FVector2D& ScaleCenterSize, const struct FVector2D& ScaleOuterSize, const struct FVector2D& ScalingInfluence, bool Enable_Scaling, const struct FVector2D& Screen_Position_Offset, bool Enable_Orbit_Rotation, float Initial_Rotation_Offset, const struct FVector2D& Size, bool Fadeout_EnableShrink, bool Fadeout_EnableOpacity, bool FadeOut_FlareLocation, bool EnableLocationOpacity, float LocOpacityCenter, float LocOpacityEdge, const struct FVector2D& LocOpacityInfluence, float RotationAmount, const struct FLinearColor& Color, bool AdditiveFlag);
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Construct();
-	void STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
+	void ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
 	void Destruct();
 	void ExecuteUbergraph_FlareWidget(int EntryPoint);
 	void NewEventDispatcher_0__DelegateSignature();

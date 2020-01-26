@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.CalcBaseSize
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_ItemListViewerItem001_C::STATIC_CalcBaseSize()
+void ABP_ItemListViewerItem001_C::CalcBaseSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.CalcBaseSize");
 
 	ABP_ItemListViewerItem001_C_CalcBaseSize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_ItemListViewerItem001_C::STATIC_CalcBaseSize()
 
 
 // Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.ChangeItem
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMesh*             Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           SkelMesh                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -56,16 +55,15 @@ void ABP_ItemListViewerItem001_C::ChangeItem(class UStaticMesh* Mesh, class USke
 
 
 // Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.UserConstructionScript
-// (Net, NetReliable, Native, NetResponse, Static, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ItemListViewerItem001_C::STATIC_UserConstructionScript()
+void ABP_ItemListViewerItem001_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.UserConstructionScript");
 
 	ABP_ItemListViewerItem001_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +72,7 @@ void ABP_ItemListViewerItem001_C::STATIC_UserConstructionScript()
 
 
 // Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_ItemListViewerItem001_C::ReceiveBeginPlay()
 {
@@ -83,7 +81,6 @@ void ABP_ItemListViewerItem001_C::ReceiveBeginPlay()
 	ABP_ItemListViewerItem001_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +89,7 @@ void ABP_ItemListViewerItem001_C::ReceiveBeginPlay()
 
 
 // Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -112,7 +109,7 @@ void ABP_ItemListViewerItem001_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.ReceiveDestroyed
-// (NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
 void ABP_ItemListViewerItem001_C::ReceiveDestroyed()
 {
@@ -129,11 +126,11 @@ void ABP_ItemListViewerItem001_C::ReceiveDestroyed()
 
 
 // Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.ExecuteUbergraph_BP_ItemListViewerItem001
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ItemListViewerItem001_C::STATIC_ExecuteUbergraph_BP_ItemListViewerItem001(int EntryPoint)
+void ABP_ItemListViewerItem001_C::ExecuteUbergraph_BP_ItemListViewerItem001(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemListViewerItem001.BP_ItemListViewerItem001_C.ExecuteUbergraph_BP_ItemListViewerItem001");
 
@@ -141,7 +138,6 @@ void ABP_ItemListViewerItem001_C::STATIC_ExecuteUbergraph_BP_ItemListViewerItem0
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

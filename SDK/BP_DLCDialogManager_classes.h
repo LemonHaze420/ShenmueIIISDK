@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,13 +33,13 @@ public:
 	}
 
 
-	void STATIC_AddItem(int ItemId);
+	void AddItem(int ItemId);
 	void CheckBattleRallyItem();
 	void CheckDLCDialog();
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void CheckFreerun();
-	void STATIC_DecideDialog(class AActor* Actor);
-	void STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
+	void DecideDialog(class AActor* Actor);
+	void ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
 	void ExecCheck();
 	void ShowDLCDialog();
 	void FinishedDLC();

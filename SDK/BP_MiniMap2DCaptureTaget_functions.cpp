@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniMap2DCaptureTaget.BP_MiniMap2DCaptureTaget_C.GetCaptureSize(2DVector)
-// (Net, Exec, Native, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               Center                         (Parm, OutParm, IsPlainOldData)
 // struct FVector2D               half_size                      (Parm, OutParm, IsPlainOldData)
@@ -26,7 +26,6 @@ void ABP_MiniMap2DCaptureTaget_C::GetCaptureSize_2DVector_(struct FVector2D* Cen
 	ABP_MiniMap2DCaptureTaget_C_GetCaptureSize_2DVector__Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,7 +39,7 @@ void ABP_MiniMap2DCaptureTaget_C::GetCaptureSize_2DVector_(struct FVector2D* Cen
 
 
 // Function BP_MiniMap2DCaptureTaget.BP_MiniMap2DCaptureTaget_C.GetCaptureSize
-// (Net, NetRequest, Exec, Native, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          CenterX                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          CenterY                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -53,7 +52,6 @@ void ABP_MiniMap2DCaptureTaget_C::GetCaptureSize(float* CenterX, float* CenterY,
 	ABP_MiniMap2DCaptureTaget_C_GetCaptureSize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,7 +67,7 @@ void ABP_MiniMap2DCaptureTaget_C::GetCaptureSize(float* CenterX, float* CenterY,
 
 
 // Function BP_MiniMap2DCaptureTaget.BP_MiniMap2DCaptureTaget_C.UserConstructionScript
-// (Net, Exec, Native, Event, NetMulticast, Protected, NetServer, HasOutParms, NetClient, DLLImport)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniMap2DCaptureTaget_C::UserConstructionScript()
 {
@@ -78,7 +76,6 @@ void ABP_MiniMap2DCaptureTaget_C::UserConstructionScript()
 	ABP_MiniMap2DCaptureTaget_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

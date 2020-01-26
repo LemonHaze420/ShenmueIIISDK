@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,10 +30,10 @@ public:
 
 
 	void GetStairsGimmickInfo(class AActor** StairsGimmick, struct FTransform* ActorTransform, struct FTransform* RelativeTransform, struct FVector* StepDimensions, int* Steps, int* Widths);
-	void STATIC_UpdateStairsInfo();
+	void UpdateStairsInfo();
 	void UpdateDebugStairs();
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination);
+	void UserConstructionScript();
+	void ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination);
 	void ExecuteUbergraph_BP_NavLink_Stairs(int EntryPoint);
 };
 

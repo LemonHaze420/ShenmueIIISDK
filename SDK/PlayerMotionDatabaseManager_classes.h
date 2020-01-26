@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,8 +29,8 @@ public:
 
 	void GetSelectedDatabase(TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType, class APlayerMotionDatabase_C** Database);
 	void GetDatabase(class APlayerMotionDatabase_C** Datagbase);
-	void STATIC_Initialize();
-	void STATIC_SwitchDatabase(TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType);
+	void Initialize();
+	void SwitchDatabase(TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType);
 };
 
 

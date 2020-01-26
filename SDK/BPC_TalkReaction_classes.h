@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,9 +34,9 @@ public:
 
 
 	void GetSubAnimCharacterBase(class USubABP_CharacterBase_C** AsSub_ABP_Character_Base);
-	void STATIC_OwnerStopAnimation();
-	void STATIC_OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1(class UObject* Loaded);
-	void STATIC_ReceiveBeginPlay();
+	void OwnerStopAnimation();
+	void OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1(class UObject* Loaded);
+	void ReceiveBeginPlay();
 	void PlayReactionAnimation(int ReactionId, float PlayRate, float BlendWeights, int ReturnFlag);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BPC_TalkReaction(int EntryPoint);

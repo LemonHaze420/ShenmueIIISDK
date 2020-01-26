@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_PlayPrice.BPW_PlayPrice_C.SetPlayPrice
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            PlayPrice                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PlayPrice_C::STATIC_SetPlayPrice(int PlayPrice)
+void UBPW_PlayPrice_C::SetPlayPrice(int PlayPrice)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PlayPrice.BPW_PlayPrice_C.SetPlayPrice");
 
@@ -34,7 +34,7 @@ void UBPW_PlayPrice_C::STATIC_SetPlayPrice(int PlayPrice)
 
 
 // Function BPW_PlayPrice.BPW_PlayPrice_C.Construct
-// (Net, NetReliable, NetRequest, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_PlayPrice_C::Construct()
 {
@@ -51,11 +51,11 @@ void UBPW_PlayPrice_C::Construct()
 
 
 // Function BPW_PlayPrice.BPW_PlayPrice_C.ExecuteUbergraph_BPW_PlayPrice
-// (Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PlayPrice_C::STATIC_ExecuteUbergraph_BPW_PlayPrice(int EntryPoint)
+void UBPW_PlayPrice_C::ExecuteUbergraph_BPW_PlayPrice(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PlayPrice.BPW_PlayPrice_C.ExecuteUbergraph_BPW_PlayPrice");
 
@@ -63,7 +63,6 @@ void UBPW_PlayPrice_C::STATIC_ExecuteUbergraph_BPW_PlayPrice(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

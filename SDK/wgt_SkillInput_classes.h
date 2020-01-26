@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,15 +32,15 @@ public:
 
 
 	void GetShoulderInputImage(TEnumAsByte<EGamepadShoulder> Selection, class UTexture2D** Image);
-	void STATIC_SetInputByShoulderButton(TEnumAsByte<EGamepadShoulder> Modifier);
-	TEnumAsByte<EShoulderButtonStyle> STATIC_GetShoulderStyle();
-	void STATIC_GetModifierInputImage(EBTL_HoldInputType Selection, class UTexture2D** Image);
-	void STATIC_SetStyle(TEnumAsByte<EFaceButtonImageStyle> Style);
-	void STATIC_SetInputByModifierButton(EBTL_HoldInputType Modifier);
-	void STATIC_SetInputByActionName(const struct FName& Selection);
-	void STATIC_GetAttackInputImage(const struct FName& Selection, class UTexture2D** Graphic);
-	void STATIC_Construct();
-	void STATIC_ExecuteUbergraph_wgt_SkillInput(int EntryPoint);
+	void SetInputByShoulderButton(TEnumAsByte<EGamepadShoulder> Modifier);
+	TEnumAsByte<EShoulderButtonStyle> GetShoulderStyle();
+	void GetModifierInputImage(EBTL_HoldInputType Selection, class UTexture2D** Image);
+	void SetStyle(TEnumAsByte<EFaceButtonImageStyle> Style);
+	void SetInputByModifierButton(EBTL_HoldInputType Modifier);
+	void SetInputByActionName(const struct FName& Selection);
+	void GetAttackInputImage(const struct FName& Selection, class UTexture2D** Graphic);
+	void Construct();
+	void ExecuteUbergraph_wgt_SkillInput(int EntryPoint);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,13 +39,13 @@ public:
 	}
 
 
-	void STATIC_InitializeViewMeshComponent(int ViewMeshNum, class UBPC_MiniGameBoardNum_C* Component);
+	void InitializeViewMeshComponent(int ViewMeshNum, class UBPC_MiniGameBoardNum_C* Component);
 	void OnObjectLoaded(const struct FString& LoadId, class UObject* LoadedObject);
 	void SetNumberPos();
-	void STATIC_SetBoardInfoOnePlay(TEnumAsByte<E_MiniGameGambleType> Index, int OnePlayPrice, bool IsKihuda);
+	void SetBoardInfoOnePlay(TEnumAsByte<E_MiniGameGambleType> Index, int OnePlayPrice, bool IsKihuda);
 	void SetBoardInfo(TEnumAsByte<E_MiniGameGambleType> Index, int MinNum, int MaxNum, int OddNum);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_MiniGame_GamblingSignboard(int EntryPoint);
 };
 

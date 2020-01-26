@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_AdventureMouseControl.BPC_AdventureMouseControl_C.IsInputEnabled
-// (Exec, Native, Event, NetResponse, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           InputEnabled                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UBPC_AdventureMouseControl_C::IsInputEnabled(bool* InputEnabled)
 	UBPC_AdventureMouseControl_C_IsInputEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,19 +36,18 @@ void UBPC_AdventureMouseControl_C::IsInputEnabled(bool* InputEnabled)
 
 
 // Function BPC_AdventureMouseControl.BPC_AdventureMouseControl_C.TickSoftwareCursor
-// (NetReliable, Exec, Native, Event, NetResponse, Static, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               MoveAxii                       (Parm, OutParm, IsPlainOldData)
 // bool                           JoystickOn                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_AdventureMouseControl_C::STATIC_TickSoftwareCursor(struct FVector2D* MoveAxii, bool* JoystickOn)
+void UBPC_AdventureMouseControl_C::TickSoftwareCursor(struct FVector2D* MoveAxii, bool* JoystickOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AdventureMouseControl.BPC_AdventureMouseControl_C.TickSoftwareCursor");
 
 	UBPC_AdventureMouseControl_C_TickSoftwareCursor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,7 +61,7 @@ void UBPC_AdventureMouseControl_C::STATIC_TickSoftwareCursor(struct FVector2D* M
 
 
 // Function BPC_AdventureMouseControl.BPC_AdventureMouseControl_C.EnableVirtualJoystick
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnable                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -75,7 +73,6 @@ void UBPC_AdventureMouseControl_C::EnableVirtualJoystick(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,11 +81,11 @@ void UBPC_AdventureMouseControl_C::EnableVirtualJoystick(bool bEnable)
 
 
 // Function BPC_AdventureMouseControl.BPC_AdventureMouseControl_C.ReceiveEndPlay
-// (NetReliable, Exec, Native, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_AdventureMouseControl_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void UBPC_AdventureMouseControl_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AdventureMouseControl.BPC_AdventureMouseControl_C.ReceiveEndPlay");
 
@@ -96,7 +93,6 @@ void UBPC_AdventureMouseControl_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayRea
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,16 +101,15 @@ void UBPC_AdventureMouseControl_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayRea
 
 
 // Function BPC_AdventureMouseControl.BPC_AdventureMouseControl_C.ReceiveBeginPlay
-// (Net, Exec, Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_AdventureMouseControl_C::STATIC_ReceiveBeginPlay()
+void UBPC_AdventureMouseControl_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AdventureMouseControl.BPC_AdventureMouseControl_C.ReceiveBeginPlay");
 
 	UBPC_AdventureMouseControl_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,7 +118,7 @@ void UBPC_AdventureMouseControl_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_AdventureMouseControl.BPC_AdventureMouseControl_C.ExecuteUbergraph_BPC_AdventureMouseControl
-// (Native, Event, NetResponse, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -135,7 +130,6 @@ void UBPC_AdventureMouseControl_C::ExecuteUbergraph_BPC_AdventureMouseControl(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

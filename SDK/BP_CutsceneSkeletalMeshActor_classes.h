@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,42 +58,42 @@ public:
 	}
 
 
-	void STATIC_OverwriteWithAnimation(bool* ret);
-	void STATIC_CheckWetness();
+	void OverwriteWithAnimation(bool* ret);
+	void CheckWetness();
 	float GetManualEyeCloseRate();
-	bool STATIC_IsManualEyeClose();
+	bool IsManualEyeClose();
 	float GetEyeRotationVerticalBaseAngle();
 	float GetEyeRotationHorizontalBaseAngle();
 	float GetEyeRotationVerticalRate();
 	float GetEyeRotationHorizontalRate();
 	float GetEyeRotationAlpha();
 	void SetupIndoorCollision();
-	void STATIC_GetProfile(struct FS3CharacterProfile* Profile);
-	void STATIC_SetProfileFromTable();
+	void GetProfile(struct FS3CharacterProfile* Profile);
+	void SetProfileFromTable();
 	float GetRightHandIKAlpha();
-	class AActor* STATIC_GetRightHandIKEffectorTarget();
-	bool STATIC_IsUseRightHandIK();
+	class AActor* GetRightHandIKEffectorTarget();
+	bool IsUseRightHandIK();
 	float GetLeftHandIKAlpha();
-	class AActor* STATIC_GetLeftHandIKEffectorTarget();
-	bool STATIC_IsUseLeftHandIK();
+	class AActor* GetLeftHandIKEffectorTarget();
+	bool IsUseLeftHandIK();
 	struct FName GetCharaName();
 	float GetWeightFullBody_SEQ2();
 	float GetWeightH_R2();
 	float GetWeightH_L2();
-	bool STATIC_IsEnabledCalcEmotion();
-	bool STATIC_IsForceEyeClose();
+	bool IsEnabledCalcEmotion();
+	bool IsForceEyeClose();
 	float GetWeightF_SEQ2();
-	bool STATIC_IsTalkSelf();
-	bool STATIC_IsEnabledFreeStateEmotion();
-	void STATIC_ReleaseCutscenePlayer();
-	void STATIC_SetCutscenePlayer(class ABP_CutscenePlayer_C* CutscenePlayer);
+	bool IsTalkSelf();
+	bool IsEnabledFreeStateEmotion();
+	void ReleaseCutscenePlayer();
+	void SetCutscenePlayer(class ABP_CutscenePlayer_C* CutscenePlayer);
 	bool IsEnabledEyeBlink();
 	bool IsEnabledClipper();
-	void STATIC_SetUpdateEnabled(bool Enabled);
-	void STATIC_UserConstructionScript();
-	void STATIC_SpawnMiniGame();
-	void STATIC_ChangedClothes(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
-	void STATIC_ReceiveBeginPlay();
+	void SetUpdateEnabled(bool Enabled);
+	void UserConstructionScript();
+	void SpawnMiniGame();
+	void ChangedClothes(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_CutsceneSkeletalMeshActor(int EntryPoint);
 };
 

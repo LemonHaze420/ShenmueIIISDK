@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,7 +84,7 @@ struct AAIController_MoveToLocation_Params
 // Function AIModule.AIController.MoveToActor
 struct AAIController_MoveToActor_Params
 {
-	class AActor*                                      Goal;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      goal;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              AcceptanceRadius;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bStopOnOverlap;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bUsePathfinding;                                          // (Parm, ZeroConstructor, IsPlainOldData)
@@ -255,14 +255,14 @@ struct UAIBlueprintHelperLibrary_SpawnAIFromClass_Params
 struct UAIBlueprintHelperLibrary_SimpleMoveToLocation_Params
 {
 	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Goal;                                                     // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct FVector                                     goal;                                                     // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
 // Function AIModule.AIBlueprintHelperLibrary.SimpleMoveToActor
 struct UAIBlueprintHelperLibrary_SimpleMoveToActor_Params
 {
 	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Goal;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      goal;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function AIModule.AIBlueprintHelperLibrary.SendAIMessage
@@ -1328,6 +1328,80 @@ struct UEnvQueryManager_RunEQSQuery_Params
 	class UEnvQueryInstanceBlueprintWrapper*           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
+struct UNavLocalGridManager_SetLocalNavigationGridDensity_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              CellSize;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
+struct UNavLocalGridManager_RemoveLocalNavigationGrid_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                GridId;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath
+struct UNavLocalGridManager_FindLocalNavigationGridPath_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Start;                                                    // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct FVector                                     End;                                                      // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	TArray<struct FVector>                             PathPoints;                                               // (Parm, OutParm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
+struct UNavLocalGridManager_AddLocalNavigationGridForPoints_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVector>                             Locations;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	int                                                Radius2D;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Height;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
+struct UNavLocalGridManager_AddLocalNavigationGridForPoint_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Location;                                                 // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	int                                                Radius2D;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Height;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
+struct UNavLocalGridManager_AddLocalNavigationGridForCapsule_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Location;                                                 // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	float                                              CapsuleRadius;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              CapsuleHalfHeight;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Radius2D;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Height;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
+struct UNavLocalGridManager_AddLocalNavigationGridForBox_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Location;                                                 // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct FVector                                     Extent;                                                   // (Parm, IsPlainOldData)
+	struct FRotator                                    Rotation;                                                 // (Parm, IsPlainOldData)
+	int                                                Radius2D;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Height;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function AIModule.PawnAction.GetActionPriority
 struct UPawnAction_GetActionPriority_Params
 {
@@ -1454,80 +1528,6 @@ struct UPawnSensingComponent_GetPeripheralVisionCosine_Params
 struct UPawnSensingComponent_GetPeripheralVisionAngle_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
-struct UNavLocalGridManager_SetLocalNavigationGridDensity_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              CellSize;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
-struct UNavLocalGridManager_RemoveLocalNavigationGrid_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                GridId;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath
-struct UNavLocalGridManager_FindLocalNavigationGridPath_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Start;                                                    // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct FVector                                     End;                                                      // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	TArray<struct FVector>                             PathPoints;                                               // (Parm, OutParm, ZeroConstructor)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
-struct UNavLocalGridManager_AddLocalNavigationGridForPoints_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FVector>                             Locations;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	int                                                Radius2D;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Height;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
-struct UNavLocalGridManager_AddLocalNavigationGridForPoint_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Location;                                                 // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	int                                                Radius2D;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Height;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
-struct UNavLocalGridManager_AddLocalNavigationGridForCapsule_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Location;                                                 // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	float                                              CapsuleRadius;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              CapsuleHalfHeight;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                Radius2D;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Height;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
-struct UNavLocalGridManager_AddLocalNavigationGridForBox_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Location;                                                 // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct FVector                                     Extent;                                                   // (Parm, IsPlainOldData)
-	struct FRotator                                    Rotation;                                                 // (Parm, IsPlainOldData)
-	int                                                Radius2D;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Height;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bRebuildGrids;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

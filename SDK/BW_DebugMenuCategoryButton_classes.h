@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,8 +35,8 @@ public:
 	struct FText GetText_1();
 	struct FEventReply OnMouseButtonDown_1(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void PreConstruct(bool IsDesignTime);
-	void STATIC_ExecuteUbergraph_BW_DebugMenuCategoryButton(int EntryPoint);
-	void STATIC_OnClick__DelegateSignature(class UBW_DebugMenuCategoryButton_C* Clicked);
+	void ExecuteUbergraph_BW_DebugMenuCategoryButton(int EntryPoint);
+	void OnClick__DelegateSignature(class UBW_DebugMenuCategoryButton_C* Clicked);
 };
 
 

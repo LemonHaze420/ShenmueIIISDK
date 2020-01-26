@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -57,8 +57,8 @@ public:
 
 
 	void UpdateAnimationState();
-	float STATIC_GetInAnimationLength();
-	void STATIC_SetButtonImageFromInputName(const struct FName& InputName);
+	float GetInAnimationLength();
+	void SetButtonImageFromInputName(const struct FName& InputName);
 	void SetAutoOutOkAfterInputSuccess(bool IsAutoOut);
 	void SetTimeGaugeRate(float Rate);
 	bool IsPlayingOut();
@@ -66,14 +66,14 @@ public:
 	void PlayOutNg();
 	void PlayOutOk();
 	void StartAnimationPlayList();
-	void STATIC_PlayAnimationPlayList(bool* isPlay);
-	void STATIC_InitializeAnimationSet();
+	void PlayAnimationPlayList(bool* isPlay);
+	void InitializeAnimationSet();
 	void PlayIn();
 	bool IsPlayingInputSuccess();
-	void STATIC_ResetAllButtonZOrder();
-	void STATIC_ResetButtonZOrder(class UWBP_QTEFreeCommandButton_C* TargetButton);
+	void ResetAllButtonZOrder();
+	void ResetButtonZOrder(class UWBP_QTEFreeCommandButton_C* TargetButton);
 	void SetButtonZOrderToFront(class UWBP_QTEFreeCommandButton_C* TargetButton);
-	void STATIC_GetButtonImage(const struct FName& InputName, class UTexture2D** Image);
+	void GetButtonImage(const struct FName& InputName, class UTexture2D** Image);
 	void PlayInputSuccess(bool IsAutoHide);
 	void Reset();
 	void Construct();
@@ -87,7 +87,7 @@ public:
 	void BindOnOutAnimationFinished();
 	void OnOutAnimationFinished();
 	void UnbindOnOutAnimationFinished();
-	void STATIC_ExecuteUbergraph_WBP_QTESingle(int EntryPoint);
+	void ExecuteUbergraph_WBP_QTESingle(int EntryPoint);
 	void OnOutAnimationFinishedDispatcher__DelegateSignature();
 	void OnInAnimationFinishedDispatcher__DelegateSignature();
 	void OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature();

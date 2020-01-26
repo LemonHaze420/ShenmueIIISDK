@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,14 +14,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPlatformDpadImage_ByIndex
-// (NetRequest, Event, NetMulticast, Public, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EDpadButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PadButtonIndex              Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UTexture2D* UBPF_ImageGamePad_C::GetPlatformDpadImage_ByIndex(TEnumAsByte<EDpadButtonImageStyle> Style, ES3PadButtonIndex Index, class UObject* __WorldContext)
+class UTexture2D* UBPF_ImageGamePad_C::STATIC_GetPlatformDpadImage_ByIndex(TEnumAsByte<EDpadButtonImageStyle> Style, ES3PadButtonIndex Index, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPlatformDpadImage_ByIndex");
 
@@ -41,7 +41,7 @@ class UTexture2D* UBPF_ImageGamePad_C::GetPlatformDpadImage_ByIndex(TEnumAsByte<
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetInputDeviceImageSet
-// (Net, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3InputDeviceModel            DeviceType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -56,7 +56,6 @@ void UBPF_ImageGamePad_C::STATIC_GetInputDeviceImageSet(ES3InputDeviceModel Devi
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,12 +67,12 @@ void UBPF_ImageGamePad_C::STATIC_GetInputDeviceImageSet(ES3InputDeviceModel Devi
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPlatformFullDpadImage
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UTexture2D* UBPF_ImageGamePad_C::GetPlatformFullDpadImage(class UObject* __WorldContext)
+class UTexture2D* UBPF_ImageGamePad_C::STATIC_GetPlatformFullDpadImage(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPlatformFullDpadImage");
 
@@ -81,7 +80,6 @@ class UTexture2D* UBPF_ImageGamePad_C::GetPlatformFullDpadImage(class UObject* _
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,13 +90,13 @@ class UTexture2D* UBPF_ImageGamePad_C::GetPlatformFullDpadImage(class UObject* _
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetCancelButtonImage
-// (Net, NetReliable, NetRequest, NetMulticast, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UTexture2D* UBPF_ImageGamePad_C::GetCancelButtonImage(TEnumAsByte<EFaceButtonImageStyle> Style, class UObject* __WorldContext)
+class UTexture2D* UBPF_ImageGamePad_C::STATIC_GetCancelButtonImage(TEnumAsByte<EFaceButtonImageStyle> Style, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetCancelButtonImage");
 
@@ -117,13 +115,13 @@ class UTexture2D* UBPF_ImageGamePad_C::GetCancelButtonImage(TEnumAsByte<EFaceBut
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetConfirmButtonImage
-// (NetRequest, NetMulticast, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UTexture2D* UBPF_ImageGamePad_C::GetConfirmButtonImage(TEnumAsByte<EFaceButtonImageStyle> Style, class UObject* __WorldContext)
+class UTexture2D* UBPF_ImageGamePad_C::STATIC_GetConfirmButtonImage(TEnumAsByte<EFaceButtonImageStyle> Style, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetConfirmButtonImage");
 
@@ -142,7 +140,7 @@ class UTexture2D* UBPF_ImageGamePad_C::GetConfirmButtonImage(TEnumAsByte<EFaceBu
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPlatformShoulderImage
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EShoulderButtonStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EGamepadShoulder>  Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -159,7 +157,6 @@ class UTexture2D* UBPF_ImageGamePad_C::STATIC_GetPlatformShoulderImage(TEnumAsBy
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,14 +167,14 @@ class UTexture2D* UBPF_ImageGamePad_C::STATIC_GetPlatformShoulderImage(TEnumAsBy
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetShoulderSetAsset
-// (NetMulticast, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EShoulderButtonStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3Platform                    Platform                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadShoulderSetAsset_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UBP_GamePadShoulderSetAsset_C* UBPF_ImageGamePad_C::GetShoulderSetAsset(TEnumAsByte<EShoulderButtonStyle> Style, ES3Platform Platform, class UObject* __WorldContext)
+class UBP_GamePadShoulderSetAsset_C* UBPF_ImageGamePad_C::STATIC_GetShoulderSetAsset(TEnumAsByte<EShoulderButtonStyle> Style, ES3Platform Platform, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetShoulderSetAsset");
 
@@ -197,7 +194,7 @@ class UBP_GamePadShoulderSetAsset_C* UBPF_ImageGamePad_C::GetShoulderSetAsset(TE
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetShoulderImage
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TEnumAsByte<EShoulderButtonStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EGamepadShoulder>  Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -216,7 +213,6 @@ class UTexture2D* UBPF_ImageGamePad_C::STATIC_GetShoulderImage(TEnumAsByte<EShou
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,13 +223,13 @@ class UTexture2D* UBPF_ImageGamePad_C::STATIC_GetShoulderImage(TEnumAsByte<EShou
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetGamePadImageSet
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3Platform                    Platform                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadImageSetAsset_C* SET                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ImageGamePad_C::GetGamePadImageSet(ES3Platform Platform, class UObject* __WorldContext, class UBP_GamePadImageSetAsset_C** SET)
+void UBPF_ImageGamePad_C::STATIC_GetGamePadImageSet(ES3Platform Platform, class UObject* __WorldContext, class UBP_GamePadImageSetAsset_C** SET)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetGamePadImageSet");
 
@@ -253,7 +249,7 @@ void UBPF_ImageGamePad_C::GetGamePadImageSet(ES3Platform Platform, class UObject
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPlatformFaceButtonImage_ByIndex
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PadButtonIndex              Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -270,7 +266,6 @@ void UBPF_ImageGamePad_C::STATIC_GetPlatformFaceButtonImage_ByIndex(TEnumAsByte<
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -282,7 +277,7 @@ void UBPF_ImageGamePad_C::STATIC_GetPlatformFaceButtonImage_ByIndex(TEnumAsByte<
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetFaceButtonImage_ByIndex
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3Platform                    Platform                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -312,7 +307,7 @@ void UBPF_ImageGamePad_C::STATIC_GetFaceButtonImage_ByIndex(TEnumAsByte<EFaceBut
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetDpadButtonSetAsset
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EDpadButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3Platform                    Platform                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -340,7 +335,7 @@ void UBPF_ImageGamePad_C::STATIC_GetDpadButtonSetAsset(TEnumAsByte<EDpadButtonIm
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetFaceButtonSetAsset
-// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3Platform                    Platform                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -368,7 +363,7 @@ void UBPF_ImageGamePad_C::STATIC_GetFaceButtonSetAsset(TEnumAsByte<EFaceButtonIm
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPopPlatformButtonImage
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Protected, NetServer, NetClient, DLLImport)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           Absolute                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -378,7 +373,7 @@ void UBPF_ImageGamePad_C::STATIC_GetFaceButtonSetAsset(TEnumAsByte<EFaceButtonIm
 // class UTexture2D*              ButtonY                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ButtonBlank                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ImageGamePad_C::GetPopPlatformButtonImage(bool Absolute, class UObject* __WorldContext, class UTexture2D** ButtonA, class UTexture2D** ButtonB, class UTexture2D** ButtonX, class UTexture2D** ButtonY, class UTexture2D** ButtonBlank)
+void UBPF_ImageGamePad_C::STATIC_GetPopPlatformButtonImage(bool Absolute, class UObject* __WorldContext, class UTexture2D** ButtonA, class UTexture2D** ButtonB, class UTexture2D** ButtonX, class UTexture2D** ButtonY, class UTexture2D** ButtonBlank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPopPlatformButtonImage");
 
@@ -387,7 +382,6 @@ void UBPF_ImageGamePad_C::GetPopPlatformButtonImage(bool Absolute, class UObject
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -407,7 +401,7 @@ void UBPF_ImageGamePad_C::GetPopPlatformButtonImage(bool Absolute, class UObject
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetDefaultPlatformButtonImage
-// (Net, Event, NetMulticast, Public, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           Absolute                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -417,7 +411,7 @@ void UBPF_ImageGamePad_C::GetPopPlatformButtonImage(bool Absolute, class UObject
 // class UTexture2D*              ButtonY                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ButtonBlank                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ImageGamePad_C::GetDefaultPlatformButtonImage(bool Absolute, class UObject* __WorldContext, class UTexture2D** ButtonA, class UTexture2D** ButtonB, class UTexture2D** ButtonX, class UTexture2D** ButtonY, class UTexture2D** ButtonBlank)
+void UBPF_ImageGamePad_C::STATIC_GetDefaultPlatformButtonImage(bool Absolute, class UObject* __WorldContext, class UTexture2D** ButtonA, class UTexture2D** ButtonB, class UTexture2D** ButtonX, class UTexture2D** ButtonY, class UTexture2D** ButtonBlank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetDefaultPlatformButtonImage");
 
@@ -445,7 +439,7 @@ void UBPF_ImageGamePad_C::GetDefaultPlatformButtonImage(bool Absolute, class UOb
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPlatformFaceButtonImage
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Absolute                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -466,7 +460,6 @@ void UBPF_ImageGamePad_C::STATIC_GetPlatformFaceButtonImage(TEnumAsByte<EFaceBut
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -486,7 +479,7 @@ void UBPF_ImageGamePad_C::STATIC_GetPlatformFaceButtonImage(TEnumAsByte<EFaceBut
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetFaceButtonImage
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3Platform                    Platform                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -497,7 +490,7 @@ void UBPF_ImageGamePad_C::STATIC_GetPlatformFaceButtonImage(TEnumAsByte<EFaceBut
 // class UTexture2D*              ButtonY                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ButtonBlank                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ImageGamePad_C::GetFaceButtonImage(TEnumAsByte<EFaceButtonImageStyle> Style, ES3Platform Platform, class UObject* __WorldContext, class UTexture2D** ButtonA, class UTexture2D** Button_B, class UTexture2D** ButtonX, class UTexture2D** ButtonY, class UTexture2D** ButtonBlank)
+void UBPF_ImageGamePad_C::STATIC_GetFaceButtonImage(TEnumAsByte<EFaceButtonImageStyle> Style, ES3Platform Platform, class UObject* __WorldContext, class UTexture2D** ButtonA, class UTexture2D** Button_B, class UTexture2D** ButtonX, class UTexture2D** ButtonY, class UTexture2D** ButtonBlank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetFaceButtonImage");
 
@@ -526,7 +519,7 @@ void UBPF_ImageGamePad_C::GetFaceButtonImage(TEnumAsByte<EFaceButtonImageStyle> 
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPlatformDpadImage
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              DpadUP                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -535,7 +528,7 @@ void UBPF_ImageGamePad_C::GetFaceButtonImage(TEnumAsByte<EFaceButtonImageStyle> 
 // class UTexture2D*              dpadLEFT                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              DpadNEUTRAL                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ImageGamePad_C::GetPlatformDpadImage(class UObject* __WorldContext, class UTexture2D** DpadUP, class UTexture2D** dpadDOWN, class UTexture2D** dpadRIGHT, class UTexture2D** dpadLEFT, class UTexture2D** DpadNEUTRAL)
+void UBPF_ImageGamePad_C::STATIC_GetPlatformDpadImage(class UObject* __WorldContext, class UTexture2D** DpadUP, class UTexture2D** dpadDOWN, class UTexture2D** dpadRIGHT, class UTexture2D** dpadLEFT, class UTexture2D** DpadNEUTRAL)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetPlatformDpadImage");
 
@@ -562,7 +555,7 @@ void UBPF_ImageGamePad_C::GetPlatformDpadImage(class UObject* __WorldContext, cl
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetDpadImage
-// (NetRequest, Static, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3Platform                    Platform                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -600,7 +593,7 @@ void UBPF_ImageGamePad_C::STATIC_GetDpadImage(ES3Platform Platform, class UObjec
 
 
 // Function BPF_ImageGamePad.BPF_ImageGamePad_C.GetQTEPlatformButtonImage
-// (NetReliable, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ButtonA                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)

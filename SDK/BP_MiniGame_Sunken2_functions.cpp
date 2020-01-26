@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.CheckEnabledFlagState
-// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           UseFlag                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken2_C::STATIC_CheckEnabledFlagState(bool* UseFlag, bool* Enabled)
+void ABP_MiniGame_Sunken2_C::CheckEnabledFlagState(bool* UseFlag, bool* Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.CheckEnabledFlagState");
 
@@ -39,18 +39,17 @@ void ABP_MiniGame_Sunken2_C::STATIC_CheckEnabledFlagState(bool* UseFlag, bool* E
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.CheckFirstDetection
-// (NetReliable, Exec, Native, Static, Protected, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsFirst                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken2_C::STATIC_CheckFirstDetection(bool* IsFirst)
+void ABP_MiniGame_Sunken2_C::CheckFirstDetection(bool* IsFirst)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.CheckFirstDetection");
 
 	ABP_MiniGame_Sunken2_C_CheckFirstDetection_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,19 +61,18 @@ void ABP_MiniGame_Sunken2_C::STATIC_CheckFirstDetection(bool* IsFirst)
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.CheckBarTiming
-// (NetRequest, Native, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsJust                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsEx                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken2_C::STATIC_CheckBarTiming(bool* IsJust, bool* IsEx)
+void ABP_MiniGame_Sunken2_C::CheckBarTiming(bool* IsJust, bool* IsEx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.CheckBarTiming");
 
 	ABP_MiniGame_Sunken2_C_CheckBarTiming_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,16 +86,15 @@ void ABP_MiniGame_Sunken2_C::STATIC_CheckBarTiming(bool* IsJust, bool* IsEx)
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.SetIdleMotionPlayRate
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Sunken2_C::STATIC_SetIdleMotionPlayRate()
+void ABP_MiniGame_Sunken2_C::SetIdleMotionPlayRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.SetIdleMotionPlayRate");
 
 	ABP_MiniGame_Sunken2_C_SetIdleMotionPlayRate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -106,18 +103,17 @@ void ABP_MiniGame_Sunken2_C::STATIC_SetIdleMotionPlayRate()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.GetHelpPriority
-// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpPriority                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ES3HelpPriority ABP_MiniGame_Sunken2_C::STATIC_GetHelpPriority()
+ES3HelpPriority ABP_MiniGame_Sunken2_C::GetHelpPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.GetHelpPriority");
 
 	ABP_MiniGame_Sunken2_C_GetHelpPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -128,7 +124,7 @@ ES3HelpPriority ABP_MiniGame_Sunken2_C::STATIC_GetHelpPriority()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.WaitBarUpdate
-// (Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          WaitMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           WaitEnd                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -141,7 +137,6 @@ void ABP_MiniGame_Sunken2_C::WaitBarUpdate(float WaitMax, bool* WaitEnd)
 	params.WaitMax = WaitMax;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,7 +148,7 @@ void ABP_MiniGame_Sunken2_C::WaitBarUpdate(float WaitMax, bool* WaitEnd)
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.AppendPreloadLabels
-// (Exec, Native, NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FName>           Labels                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FST_MG_SupportNPCAction> Actions                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -165,7 +160,6 @@ void ABP_MiniGame_Sunken2_C::AppendPreloadLabels(TArray<struct FName>* Labels, T
 	ABP_MiniGame_Sunken2_C_AppendPreloadLabels_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,7 +173,7 @@ void ABP_MiniGame_Sunken2_C::AppendPreloadLabels(TArray<struct FName>* Labels, T
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.SetPreloadLabels
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::SetPreloadLabels()
 {
@@ -196,7 +190,7 @@ void ABP_MiniGame_Sunken2_C::SetPreloadLabels()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.GetClothMeshComponent
-// (Net, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -217,11 +211,11 @@ class UMeshComponent* ABP_MiniGame_Sunken2_C::GetClothMeshComponent()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.InitAsyncLoad
-// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken2_C::STATIC_InitAsyncLoad(bool* dummy)
+void ABP_MiniGame_Sunken2_C::InitAsyncLoad(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.InitAsyncLoad");
 
@@ -239,7 +233,7 @@ void ABP_MiniGame_Sunken2_C::STATIC_InitAsyncLoad(bool* dummy)
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.CalcDifficulty
-// (Net, NetReliable, Native, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Change                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -250,7 +244,6 @@ void ABP_MiniGame_Sunken2_C::CalcDifficulty(bool* Change)
 	ABP_MiniGame_Sunken2_C_CalcDifficulty_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -262,11 +255,11 @@ void ABP_MiniGame_Sunken2_C::CalcDifficulty(bool* Change)
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.GetDetectAction
-// (NetRequest, NetResponse, Static, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FS3DetectActionParam> ABP_MiniGame_Sunken2_C::STATIC_GetDetectAction()
+TArray<struct FS3DetectActionParam> ABP_MiniGame_Sunken2_C::GetDetectAction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.GetDetectAction");
 
@@ -283,7 +276,7 @@ TArray<struct FS3DetectActionParam> ABP_MiniGame_Sunken2_C::STATIC_GetDetectActi
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.Enabled3DUISideBar
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -303,7 +296,7 @@ void ABP_MiniGame_Sunken2_C::Enabled3DUISideBar(bool Enabled)
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.Update3DUI
-// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::Update3DUI()
 {
@@ -320,16 +313,15 @@ void ABP_MiniGame_Sunken2_C::Update3DUI()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.SetDifficultyData
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Sunken2_C::STATIC_SetDifficultyData()
+void ABP_MiniGame_Sunken2_C::SetDifficultyData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.SetDifficultyData");
 
 	ABP_MiniGame_Sunken2_C_SetDifficultyData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -338,7 +330,7 @@ void ABP_MiniGame_Sunken2_C::STATIC_SetDifficultyData()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.DecideWoodId
-// (Net, NetReliable, Exec, Event, NetResponse, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::DecideWoodId()
 {
@@ -355,7 +347,7 @@ void ABP_MiniGame_Sunken2_C::DecideWoodId()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.UpdateChopCount
-// (Net, Exec, Native, NetResponse, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::UpdateChopCount()
 {
@@ -364,7 +356,6 @@ void ABP_MiniGame_Sunken2_C::UpdateChopCount()
 	ABP_MiniGame_Sunken2_C_UpdateChopCount_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -373,7 +364,7 @@ void ABP_MiniGame_Sunken2_C::UpdateChopCount()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.IsGameFinished
-// (Net, NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -394,11 +385,11 @@ bool ABP_MiniGame_Sunken2_C::IsGameFinished()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.SpawnInputControlActor
-// (NetRequest, NetResponse, Static, Private, Delegate, NetServer)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_MiniGameInputBase_C* ABP_MiniGame_Sunken2_C::STATIC_SpawnInputControlActor()
+class ABP_MiniGameInputBase_C* ABP_MiniGame_Sunken2_C::SpawnInputControlActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.SpawnInputControlActor");
 
@@ -415,7 +406,7 @@ class ABP_MiniGameInputBase_C* ABP_MiniGame_Sunken2_C::STATIC_SpawnInputControlA
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::UserConstructionScript()
 {
@@ -424,7 +415,6 @@ void ABP_MiniGame_Sunken2_C::UserConstructionScript()
 	ABP_MiniGame_Sunken2_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -433,7 +423,7 @@ void ABP_MiniGame_Sunken2_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.Timeline_UpdatFieldOfView__FinishedFunc
-// (Net, NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::Timeline_UpdatFieldOfView__FinishedFunc()
 {
@@ -450,7 +440,7 @@ void ABP_MiniGame_Sunken2_C::Timeline_UpdatFieldOfView__FinishedFunc()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.Timeline_UpdatFieldOfView__UpdateFunc
-// (Net, NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::Timeline_UpdatFieldOfView__UpdateFunc()
 {
@@ -467,7 +457,7 @@ void ABP_MiniGame_Sunken2_C::Timeline_UpdatFieldOfView__UpdateFunc()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.NormalHitObjectImpact__FinishedFunc
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::NormalHitObjectImpact__FinishedFunc()
 {
@@ -484,7 +474,7 @@ void ABP_MiniGame_Sunken2_C::NormalHitObjectImpact__FinishedFunc()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.NormalHitObjectImpact__UpdateFunc
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::NormalHitObjectImpact__UpdateFunc()
 {
@@ -501,7 +491,7 @@ void ABP_MiniGame_Sunken2_C::NormalHitObjectImpact__UpdateFunc()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.Timeline_EyeClose__FinishedFunc
-// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::Timeline_EyeClose__FinishedFunc()
 {
@@ -518,7 +508,7 @@ void ABP_MiniGame_Sunken2_C::Timeline_EyeClose__FinishedFunc()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.Timeline_EyeClose__UpdateFunc
-// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::Timeline_EyeClose__UpdateFunc()
 {
@@ -535,7 +525,7 @@ void ABP_MiniGame_Sunken2_C::Timeline_EyeClose__UpdateFunc()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.StartMiniGame
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::StartMiniGame()
 {
@@ -544,7 +534,6 @@ void ABP_MiniGame_Sunken2_C::StartMiniGame()
 	ABP_MiniGame_Sunken2_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -553,7 +542,7 @@ void ABP_MiniGame_Sunken2_C::StartMiniGame()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.EndMiniGame
-// (Net, NetReliable, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::EndMiniGame()
 {
@@ -562,7 +551,6 @@ void ABP_MiniGame_Sunken2_C::EndMiniGame()
 	ABP_MiniGame_Sunken2_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -571,7 +559,7 @@ void ABP_MiniGame_Sunken2_C::EndMiniGame()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.WinMiniGame
-// (Net, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::WinMiniGame()
 {
@@ -580,7 +568,6 @@ void ABP_MiniGame_Sunken2_C::WinMiniGame()
 	ABP_MiniGame_Sunken2_C_WinMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -589,7 +576,7 @@ void ABP_MiniGame_Sunken2_C::WinMiniGame()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.LoseMiniGame
-// (Net, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::LoseMiniGame()
 {
@@ -598,7 +585,6 @@ void ABP_MiniGame_Sunken2_C::LoseMiniGame()
 	ABP_MiniGame_Sunken2_C_LoseMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -607,7 +593,7 @@ void ABP_MiniGame_Sunken2_C::LoseMiniGame()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.DrawMiniGame
-// (Net, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::DrawMiniGame()
 {
@@ -616,7 +602,6 @@ void ABP_MiniGame_Sunken2_C::DrawMiniGame()
 	ABP_MiniGame_Sunken2_C_DrawMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -625,7 +610,7 @@ void ABP_MiniGame_Sunken2_C::DrawMiniGame()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.OnFinishedFade
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::OnFinishedFade()
 {
@@ -642,7 +627,7 @@ void ABP_MiniGame_Sunken2_C::OnFinishedFade()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.FinalizeTalk
-// (Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::FinalizeTalk()
 {
@@ -651,7 +636,6 @@ void ABP_MiniGame_Sunken2_C::FinalizeTalk()
 	ABP_MiniGame_Sunken2_C_FinalizeTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -660,7 +644,7 @@ void ABP_MiniGame_Sunken2_C::FinalizeTalk()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.OnFinishedCoinSequence
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::OnFinishedCoinSequence()
 {
@@ -677,7 +661,7 @@ void ABP_MiniGame_Sunken2_C::OnFinishedCoinSequence()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.OnFinishedStart
-// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::OnFinishedStart()
 {
@@ -694,7 +678,7 @@ void ABP_MiniGame_Sunken2_C::OnFinishedStart()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.Event_TimeUp
-// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::Event_TimeUp()
 {
@@ -711,7 +695,7 @@ void ABP_MiniGame_Sunken2_C::Event_TimeUp()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.Event_SkillCountMax
-// (NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::Event_SkillCountMax()
 {
@@ -728,7 +712,7 @@ void ABP_MiniGame_Sunken2_C::Event_SkillCountMax()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.Event_ResultEnd
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::Event_ResultEnd()
 {
@@ -745,7 +729,7 @@ void ABP_MiniGame_Sunken2_C::Event_ResultEnd()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.ReceiveBeginPlay
-// (NetReliable, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::ReceiveBeginPlay()
 {
@@ -754,7 +738,6 @@ void ABP_MiniGame_Sunken2_C::ReceiveBeginPlay()
 	ABP_MiniGame_Sunken2_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -763,7 +746,7 @@ void ABP_MiniGame_Sunken2_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.GameStart
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::GameStart()
 {
@@ -780,7 +763,7 @@ void ABP_MiniGame_Sunken2_C::GameStart()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.AxAction
-// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::AxAction()
 {
@@ -797,11 +780,11 @@ void ABP_MiniGame_Sunken2_C::AxAction()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.ReceiveTick
-// (Exec, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken2_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_Sunken2_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.ReceiveTick");
 
@@ -817,7 +800,7 @@ void ABP_MiniGame_Sunken2_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.ResetResultMenuEvent
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::ResetResultMenuEvent()
 {
@@ -834,7 +817,7 @@ void ABP_MiniGame_Sunken2_C::ResetResultMenuEvent()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.GameStartEvent
-// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::GameStartEvent()
 {
@@ -851,7 +834,7 @@ void ABP_MiniGame_Sunken2_C::GameStartEvent()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.InputAction_ButtonRight
-// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::InputAction_ButtonRight()
 {
@@ -868,7 +851,7 @@ void ABP_MiniGame_Sunken2_C::InputAction_ButtonRight()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.PunchMotionEnd
-// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::PunchMotionEnd()
 {
@@ -885,7 +868,7 @@ void ABP_MiniGame_Sunken2_C::PunchMotionEnd()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.PlayCameraImpact
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::PlayCameraImpact()
 {
@@ -902,7 +885,7 @@ void ABP_MiniGame_Sunken2_C::PlayCameraImpact()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.InputAction_ButtonTop
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::InputAction_ButtonTop()
 {
@@ -919,7 +902,7 @@ void ABP_MiniGame_Sunken2_C::InputAction_ButtonTop()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.InputAction_ButtonBottom
-// (Net, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::InputAction_ButtonBottom()
 {
@@ -936,7 +919,7 @@ void ABP_MiniGame_Sunken2_C::InputAction_ButtonBottom()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.ImpactToObject
-// (Net, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::ImpactToObject()
 {
@@ -953,7 +936,7 @@ void ABP_MiniGame_Sunken2_C::ImpactToObject()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.PlayEyeCloseTimeline
-// (Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::PlayEyeCloseTimeline()
 {
@@ -970,7 +953,7 @@ void ABP_MiniGame_Sunken2_C::PlayEyeCloseTimeline()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.EndEyeCloseTimeline
-// (Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken2_C::EndEyeCloseTimeline()
 {
@@ -987,7 +970,7 @@ void ABP_MiniGame_Sunken2_C::EndEyeCloseTimeline()
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1009,7 +992,6 @@ void ABP_MiniGame_Sunken2_C::BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_0
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1018,14 +1000,14 @@ void ABP_MiniGame_Sunken2_C::BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_0
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (Net, NetResponse, Static, MulticastDelegate, Private, NetServer, BlueprintCallable)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken2_C::STATIC_BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_MiniGame_Sunken2_C::BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1044,11 +1026,11 @@ void ABP_MiniGame_Sunken2_C::STATIC_BndEvt__DetectorSensor_K2Node_ComponentBound
 
 
 // Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.ExecuteUbergraph_BP_MiniGame_Sunken2
-// (Net, Exec, Native, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken2_C::STATIC_ExecuteUbergraph_BP_MiniGame_Sunken2(int EntryPoint)
+void ABP_MiniGame_Sunken2_C::ExecuteUbergraph_BP_MiniGame_Sunken2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken2.BP_MiniGame_Sunken2_C.ExecuteUbergraph_BP_MiniGame_Sunken2");
 
@@ -1056,7 +1038,6 @@ void ABP_MiniGame_Sunken2_C::STATIC_ExecuteUbergraph_BP_MiniGame_Sunken2(int Ent
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

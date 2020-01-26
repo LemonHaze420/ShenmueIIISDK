@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Gacha_Input.BP_Gacha_Input_C.UserConstructionScript
-// (NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Gacha_Input_C::STATIC_UserConstructionScript()
+void ABP_Gacha_Input_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gacha_Input.BP_Gacha_Input_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_Gacha_Input_C::STATIC_UserConstructionScript()
 
 
 // Function BP_Gacha_Input.BP_Gacha_Input_C.StartMiniGame
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Gacha_Input_C::StartMiniGame()
 {
@@ -48,7 +48,7 @@ void ABP_Gacha_Input_C::StartMiniGame()
 
 
 // Function BP_Gacha_Input.BP_Gacha_Input_C.EndMiniGame
-// (Net, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Gacha_Input_C::EndMiniGame()
 {
@@ -65,11 +65,11 @@ void ABP_Gacha_Input_C::EndMiniGame()
 
 
 // Function BP_Gacha_Input.BP_Gacha_Input_C.ExecuteUbergraph_BP_Gacha_Input
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Gacha_Input_C::STATIC_ExecuteUbergraph_BP_Gacha_Input(int EntryPoint)
+void ABP_Gacha_Input_C::ExecuteUbergraph_BP_Gacha_Input(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gacha_Input.BP_Gacha_Input_C.ExecuteUbergraph_BP_Gacha_Input");
 

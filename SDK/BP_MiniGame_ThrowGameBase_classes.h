@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,17 +34,17 @@ public:
 	}
 
 
-	class UMeshComponent* STATIC_GetClothMeshComponent();
-	void STATIC_SpawnThrowObject(class UClass* Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class ABP_MiniGame_ThrowObjectBase_C** CurrentThrowObject);
-	void STATIC_SetupAnimInstance(class UClass* NewClass);
-	void STATIC_UserConstructionScript();
+	class UMeshComponent* GetClothMeshComponent();
+	void SpawnThrowObject(class UClass* Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class ABP_MiniGame_ThrowObjectBase_C** CurrentThrowObject);
+	void SetupAnimInstance(class UClass* NewClass);
+	void UserConstructionScript();
 	void StartMiniGame();
 	void EndMiniGame();
 	void WinMiniGame();
 	void LoseMiniGame();
 	void DrawMiniGame();
 	void RestartMiniGame();
-	void STATIC_OnThorwObject();
+	void OnThorwObject();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_MiniGame_ThrowGameBase(int EntryPoint);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,22 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
-
-// Class CriWareRuntime.MovieSceneAtomTrack
-// 0x0010 (0x0068 - 0x0058)
-class UMovieSceneAtomTrack : public UMovieSceneNameableTrack
-{
-public:
-	TArray<class UMovieSceneSection*>                  AtomSections;                                             // 0x0058(0x0010) (ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.MovieSceneAtomTrack");
-		return ptr;
-	}
-
-};
-
 
 // Class CriWareRuntime.MovieSceneAtomSection
 // 0x0158 (0x0238 - 0x00E0)
@@ -44,6 +28,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CriWareRuntime.MovieSceneAtomSection");
+		return ptr;
+	}
+
+};
+
+
+// Class CriWareRuntime.MovieSceneAtomTrack
+// 0x0010 (0x0068 - 0x0058)
+class UMovieSceneAtomTrack : public UMovieSceneNameableTrack
+{
+public:
+	TArray<class UMovieSceneSection*>                  AtomSections;                                             // 0x0058(0x0010) (ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.MovieSceneAtomTrack");
 		return ptr;
 	}
 
@@ -68,12 +68,42 @@ public:
 	void SetEffectBypass(const struct FString& BusName, const struct FString& EffectName, bool Bypasses);
 	void SetBusVolumeByName(const struct FString& BusName, float Volume);
 	void SetBusSendLevelByName(const struct FString& SourceBusName, const struct FString& DestBusName, float Level);
-	class UAtomAsrRack* GetDefaultAsrRack();
+	class UAtomAsrRack* STATIC_GetDefaultAsrRack();
 	bool GetBusAnalyzerInfo(const struct FString& DspBusName, int* num_channels, TArray<float>* rms_levels, TArray<float>* peak_levels, TArray<float>* peak_hold_levels);
-	class UAtomAsrRack* GetAsrRack(int AsrRackId);
+	class UAtomAsrRack* STATIC_GetAsrRack(int AsrRackId);
 	void DetachDspBusSetting();
 	void AttachDspBusSetting(const struct FString& SettingName);
 	void ApplyDspBusSnapshot(const struct FString& SnapshotName, int Milliseconds);
+};
+
+
+// Class CriWareRuntime.AtomCategory
+// 0x0000 (0x0028 - 0x0028)
+class UAtomCategory : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomCategory");
+		return ptr;
+	}
+
+
+	void STATIC_StopByName(const struct FString& CategoryName);
+	void STATIC_SetVolumeByName(const struct FString& CategoryName, float Volume);
+	void STATIC_SetAisacControlByName(const struct FString& CategoryName, const struct FString& AisacName, float Value);
+	bool STATIC_ResetAllAisacControlByName(const struct FString& CategoryName);
+	bool STATIC_ResetAllAisacControlById(int CategoryId);
+	void STATIC_PauseByName(const struct FString& CategoryName, bool bPause);
+	bool STATIC_IsPausedByName(const struct FString& CategoryName);
+	float STATIC_GetVolumeByName(const struct FString& CategoryName);
+	int STATIC_GetNumAttachedAisacsByName(const struct FString& CategoryName);
+	int STATIC_GetNumAttachedAisacsById(int CategoryId);
+	float STATIC_GetCurrentAisacControlValueByName(const struct FString& CategoryName, const struct FString& AisacControlName);
+	float STATIC_GetCurrentAisacControlValueById(int CategoryId, int AisacControlId);
+	void STATIC_GetAttachedAisacInfoByName(const struct FString& CategoryName, int AisacAttachedIndex, bool* IsSuccess, struct FAtomAisacInfo* AisacInfo);
+	void STATIC_GetAttachedAisacInfoById(int CategoryId, int AisacAttachedIndex, bool* IsSuccess, struct FAtomAisacInfo* AisacInfo);
 };
 
 
@@ -123,7 +153,7 @@ public:
 	void SetPitchMultiplier(float NewPitchMultiplier);
 	void SetPitch(float Pitch);
 	void SetNextBlockIndex(int BlockIndex);
-	void SetDefaultAttenuationEnable(bool bEnable);
+	void STATIC_SetDefaultAttenuationEnable(bool bEnable);
 	void SetBusSendLevelOffsetByName(const struct FString& BusName, float LevelOffset);
 	void SetBusSendLevelOffset(int BusId, float LevelOffset);
 	void SetBusSendLevelByName(const struct FString& BusName, float Level);
@@ -139,13 +169,13 @@ public:
 	EAtomComponentStatus GetStatus();
 	float GetSequencePosition();
 	int GetNumQueuedSounds();
-	bool GetDefaultAttenuationEnable();
+	bool STATIC_GetDefaultAttenuationEnable();
 	struct FString GetCueName();
 	int GetAtomComponentID();
 	void FadeOut(float FadeOutDuration, float FadeVolumeLevel);
 	void FadeIn(float FadeInDuration, float FadeVolumeLevel, float StartTime);
 	void EnqueueSound(class USoundAtomCue* NewSound);
-	void DestroyComponentByID(int TargetID);
+	void STATIC_DestroyComponentByID(int TargetID);
 };
 
 
@@ -172,40 +202,10 @@ public:
 	void OnLoadError__DelegateSignature();
 	void OnLoadCompleted__DelegateSignature();
 	void OnAtomCueSheetLoaded__DelegateSignature(class USoundAtomCueSheet* Loaded);
-	void LoadAtomCueSheet(class UObject* WorldContextObject, const struct FScriptDelegate& OnLoaded, const struct FLatentActionInfo& LatentInfo);
+	void STATIC_LoadAtomCueSheet(class UObject* WorldContextObject, const struct FScriptDelegate& OnLoaded, const struct FLatentActionInfo& LatentInfo);
 	void Load();
 	EAtomCueSheetLoaderComponentStatus GetStatus();
 	class USoundAtomCueSheet* GetAtomCueSheet();
-};
-
-
-// Class CriWareRuntime.AtomCategory
-// 0x0000 (0x0028 - 0x0028)
-class UAtomCategory : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomCategory");
-		return ptr;
-	}
-
-
-	void StopByName(const struct FString& CategoryName);
-	void SetVolumeByName(const struct FString& CategoryName, float Volume);
-	void SetAisacControlByName(const struct FString& CategoryName, const struct FString& AisacName, float Value);
-	bool ResetAllAisacControlByName(const struct FString& CategoryName);
-	bool ResetAllAisacControlById(int CategoryId);
-	void PauseByName(const struct FString& CategoryName, bool bPause);
-	bool IsPausedByName(const struct FString& CategoryName);
-	float GetVolumeByName(const struct FString& CategoryName);
-	int GetNumAttachedAisacsByName(const struct FString& CategoryName);
-	int GetNumAttachedAisacsById(int CategoryId);
-	float GetCurrentAisacControlValueByName(const struct FString& CategoryName, const struct FString& AisacControlName);
-	float GetCurrentAisacControlValueById(int CategoryId, int AisacControlId);
-	void GetAttachedAisacInfoByName(const struct FString& CategoryName, int AisacAttachedIndex, bool* IsSuccess, struct FAtomAisacInfo* AisacInfo);
-	void GetAttachedAisacInfoById(int CategoryId, int AisacAttachedIndex, bool* IsSuccess, struct FAtomAisacInfo* AisacInfo);
 };
 
 
@@ -230,22 +230,6 @@ public:
 };
 
 
-// Class CriWareRuntime.AtomListenerFocusPoint
-// 0x0010 (0x0250 - 0x0240)
-class UAtomListenerFocusPoint : public USceneComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0240(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomListenerFocusPoint");
-		return ptr;
-	}
-
-};
-
-
 // Class CriWareRuntime.AtomDisposer
 // 0x0010 (0x0338 - 0x0328)
 class AAtomDisposer : public AActor
@@ -262,16 +246,32 @@ public:
 };
 
 
-// Class CriWareRuntime.AtomSound
-// 0x0008 (0x0330 - 0x0328)
-class AAtomSound : public AActor
+// Class CriWareRuntime.AtomListenerFocusPoint
+// 0x0010 (0x0250 - 0x0240)
+class UAtomListenerFocusPoint : public USceneComponent
 {
 public:
-	class UAtomComponent*                              AtomComponent;                                            // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0240(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomSound");
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomListenerFocusPoint");
+		return ptr;
+	}
+
+};
+
+
+// Class CriWareRuntime.AtomParameterComponent
+// 0x0008 (0x00F8 - 0x00F0)
+class UAtomParameterComponent : public UActorComponent
+{
+public:
+	class UAtomSoundObject*                            SoundObject;                                              // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomParameterComponent");
 		return ptr;
 	}
 
@@ -291,8 +291,41 @@ public:
 	}
 
 
-	TArray<struct FAtomProfileItem> CriWareAdx2ProfileDataUpdate(class UObject* WorldContextObject);
-	void CriWareAdx2ProfileDataSort(TArray<struct FAtomProfileItem> original_item, EAtomProfileSortType sort_type, EAtomSortOrderType order_type, TArray<struct FAtomProfileItem>* sorted_item);
+	TArray<struct FAtomProfileItem> STATIC_CriWareAdx2ProfileDataUpdate(class UObject* WorldContextObject);
+	void STATIC_CriWareAdx2ProfileDataSort(TArray<struct FAtomProfileItem> original_item, EAtomProfileSortType sort_type, EAtomSortOrderType order_type, TArray<struct FAtomProfileItem>* sorted_item);
+};
+
+
+// Class CriWareRuntime.AtomSound
+// 0x0008 (0x0330 - 0x0328)
+class AAtomSound : public AActor
+{
+public:
+	class UAtomComponent*                              AtomComponent;                                            // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomSound");
+		return ptr;
+	}
+
+};
+
+
+// Class CriWareRuntime.AtomSoundData
+// 0x0010 (0x0338 - 0x0328)
+class AAtomSoundData : public AActor
+{
+public:
+	class USoundAtomCueSheet*                          CueSheet;                                                 // 0x0328(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0330(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomSoundData");
+		return ptr;
+	}
+
 };
 
 
@@ -327,9 +360,52 @@ public:
 	}
 
 
-	void GetLevelsDB(float display_range, TArray<float>* spectra);
-	void GetLevels(TArray<float>* spectra);
-	void CreateDspSpectra(class UAtomAsrRack* asr_rack, const struct FString& bus_name, int num_bands);
+	void STATIC_GetLevelsDB(float display_range, TArray<float>* spectra);
+	void STATIC_GetLevels(TArray<float>* spectra);
+	void STATIC_CreateDspSpectra(class UAtomAsrRack* asr_rack, const struct FString& bus_name, int num_bands);
+};
+
+
+// Class CriWareRuntime.AtomStatics
+// 0x0000 (0x0028 - 0x0028)
+class UAtomStatics : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomStatics");
+		return ptr;
+	}
+
+
+	void STATIC_StopAllSounds();
+	class UAtomComponent* STATIC_SpawnSoundAttached(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, bool bAutoDestroy);
+	class UAtomComponent* STATIC_SpawnSoundAtLocation(class UObject* WorldContextObject, class USoundAtomCue* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, bool bAutoDestroy);
+	class UAtomComponent* STATIC_SpawnSound2D(class UObject* WorldContextObject, class USoundAtomCue* Sound, float PitchMultiplier, float StartTime, bool bPersistAcrossLevelTransition, bool bAutoDestroy);
+	void STATIC_PlaySoundForAnimNotify(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings);
+	class UAtomComponent* STATIC_PlaySoundAttached(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings);
+	void STATIC_PlaySoundAtLocation(class UObject* WorldContextObject, class USoundAtomCue* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings);
+	void STATIC_PauseAudioOutput(bool bPause);
+	bool STATIC_LoadAtomConfig(class USoundAtomConfig* AcfObject);
+	class UAtomComponent* STATIC_CreateRootedAtomComponent(class UObject* WorldContextObject, bool bAutoDestroy);
+};
+
+
+// Class CriWareRuntime.AtomTriggerTableFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UAtomTriggerTableFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomTriggerTableFunctionLibrary");
+		return ptr;
+	}
+
+
+	bool STATIC_GetDataTableRowFromName(class UDataTable* Table, const struct FName& RowName, struct FAtomTriggerRow* OutRow);
 };
 
 
@@ -355,32 +431,6 @@ public:
 	void OnBindCompleted__DelegateSignature();
 	ECriFsBinderStatus GetStatus();
 	void Bind();
-};
-
-
-// Class CriWareRuntime.AtomStatics
-// 0x0000 (0x0028 - 0x0028)
-class UAtomStatics : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomStatics");
-		return ptr;
-	}
-
-
-	void StopAllSounds();
-	class UAtomComponent* SpawnSoundAttached(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, bool bAutoDestroy);
-	class UAtomComponent* SpawnSoundAtLocation(class UObject* WorldContextObject, class USoundAtomCue* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, bool bAutoDestroy);
-	class UAtomComponent* SpawnSound2D(class UObject* WorldContextObject, class USoundAtomCue* Sound, float PitchMultiplier, float StartTime, bool bPersistAcrossLevelTransition, bool bAutoDestroy);
-	void PlaySoundForAnimNotify(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings);
-	class UAtomComponent* PlaySoundAttached(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings);
-	void PlaySoundAtLocation(class UObject* WorldContextObject, class USoundAtomCue* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings);
-	void PauseAudioOutput(bool bPause);
-	bool LoadAtomConfig(class USoundAtomConfig* AcfObject);
-	class UAtomComponent* CreateRootedAtomComponent(class UObject* WorldContextObject, bool bAutoDestroy);
 };
 
 
@@ -425,23 +475,6 @@ public:
 };
 
 
-// Class CriWareRuntime.AtomSoundData
-// 0x0010 (0x0338 - 0x0328)
-class AAtomSoundData : public AActor
-{
-public:
-	class USoundAtomCueSheet*                          CueSheet;                                                 // 0x0328(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0330(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomSoundData");
-		return ptr;
-	}
-
-};
-
-
 // Class CriWareRuntime.CriWareFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UCriWareFunctionLibrary : public UBlueprintFunctionLibrary
@@ -455,27 +488,25 @@ public:
 	}
 
 
-	void SetSpeakerAngleArray(ECriWareSpeakerSystem SpeakerSystem, TArray<float> Angles);
-	void SetGlobalLabelToSelectorByName(const struct FString& SelectorName, const struct FString& labelName);
-	void SetGameVariableByName(const struct FString& GameVariableName, float Value);
-	void SetAllPauseFlagMana(bool bPause);
+	void STATIC_SetSpeakerAngleArray(ECriWareSpeakerSystem SpeakerSystem, TArray<float> Angles);
+	void STATIC_SetGlobalLabelToSelectorByName(const struct FString& SelectorName, const struct FString& labelName);
+	void STATIC_SetGameVariableByName(const struct FString& GameVariableName, float Value);
+	void STATIC_SetAllPauseFlagMana(bool bPause);
 };
 
 
-// Class CriWareRuntime.AtomTriggerTableFunctionLibrary
+// Class CriWareRuntime.CriWareInitializer
 // 0x0000 (0x0028 - 0x0028)
-class UAtomTriggerTableFunctionLibrary : public UBlueprintFunctionLibrary
+class UCriWareInitializer : public UObject
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomTriggerTableFunctionLibrary");
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.CriWareInitializer");
 		return ptr;
 	}
 
-
-	bool GetDataTableRowFromName(class UDataTable* Table, const struct FName& RowName, struct FAtomTriggerRow* OutRow);
 };
 
 
@@ -610,104 +641,6 @@ public:
 };
 
 
-// Class CriWareRuntime.ManaSource
-// 0x0000 (0x0028 - 0x0028)
-class UManaSource : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.ManaSource");
-		return ptr;
-	}
-
-};
-
-
-// Class CriWareRuntime.ManaMovie
-// 0x0040 (0x0068 - 0x0028)
-class UManaMovie : public UManaSource
-{
-public:
-	TArray<struct FManaVideoTrackInfo>                 VideoTracks;                                              // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	TArray<struct FManaAudioTrackInfo>                 AudioTracks;                                              // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	TArray<struct FManaEventPointInfo>                 EventPoints;                                              // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	int                                                NumSubtitleChannels;                                      // 0x0058(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                MaxSubtitleSize;                                          // 0x005C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      bIsAlpha : 1;                                             // 0x0060(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.ManaMovie");
-		return ptr;
-	}
-
-};
-
-
-// Class CriWareRuntime.FileManaMovie
-// 0x0018 (0x0080 - 0x0068)
-class UFileManaMovie : public UManaMovie
-{
-public:
-	bool                                               bPrecacheFile;                                            // 0x0068(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
-	struct FString                                     FilePath;                                                 // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.FileManaMovie");
-		return ptr;
-	}
-
-
-	void SetFilePath(const struct FString& Path);
-};
-
-
-// Class CriWareRuntime.DataManaMovie
-// 0x0008 (0x0070 - 0x0068)
-class UDataManaMovie : public UManaMovie
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.DataManaMovie");
-		return ptr;
-	}
-
-
-	void SetDataArray(TArray<unsigned char>* InDataArray);
-	TArray<unsigned char> GetDataArray();
-};
-
-
-// Class CriWareRuntime.ManaComponentTexture
-// 0x0020 (0x00D8 - 0x00B8)
-class UManaComponentTexture : public UTexture
-{
-public:
-	int                                                SizeX;                                                    // 0x00B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                SizeY;                                                    // 0x00BC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	TEnumAsByte<EPixelFormat>                          Format;                                                   // 0x00C0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	EManaComponentTextureType                          ComponentType;                                            // 0x00C1(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	TEnumAsByte<ETextureAddress>                       AddressX;                                                 // 0x00C2(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	TEnumAsByte<ETextureAddress>                       AddressY;                                                 // 0x00C3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x14];                                      // 0x00C4(0x0014) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.ManaComponentTexture");
-		return ptr;
-	}
-
-};
-
-
 // Class CriWareRuntime.ManaComponent
 // 0x0130 (0x0220 - 0x00F0)
 class UManaComponent : public UActorComponent
@@ -787,6 +720,104 @@ public:
 };
 
 
+// Class CriWareRuntime.ManaComponentTexture
+// 0x0020 (0x00D8 - 0x00B8)
+class UManaComponentTexture : public UTexture
+{
+public:
+	int                                                SizeX;                                                    // 0x00B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                SizeY;                                                    // 0x00BC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	TEnumAsByte<EPixelFormat>                          Format;                                                   // 0x00C0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	EManaComponentTextureType                          ComponentType;                                            // 0x00C1(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	TEnumAsByte<ETextureAddress>                       AddressX;                                                 // 0x00C2(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	TEnumAsByte<ETextureAddress>                       AddressY;                                                 // 0x00C3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x14];                                      // 0x00C4(0x0014) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.ManaComponentTexture");
+		return ptr;
+	}
+
+};
+
+
+// Class CriWareRuntime.ManaSource
+// 0x0000 (0x0028 - 0x0028)
+class UManaSource : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.ManaSource");
+		return ptr;
+	}
+
+};
+
+
+// Class CriWareRuntime.ManaMovie
+// 0x0040 (0x0068 - 0x0028)
+class UManaMovie : public UManaSource
+{
+public:
+	TArray<struct FManaVideoTrackInfo>                 VideoTracks;                                              // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	TArray<struct FManaAudioTrackInfo>                 AudioTracks;                                              // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	TArray<struct FManaEventPointInfo>                 EventPoints;                                              // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	int                                                NumSubtitleChannels;                                      // 0x0058(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                MaxSubtitleSize;                                          // 0x005C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      bIsAlpha : 1;                                             // 0x0060(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.ManaMovie");
+		return ptr;
+	}
+
+};
+
+
+// Class CriWareRuntime.FileManaMovie
+// 0x0018 (0x0080 - 0x0068)
+class UFileManaMovie : public UManaMovie
+{
+public:
+	bool                                               bPrecacheFile;                                            // 0x0068(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
+	struct FString                                     FilePath;                                                 // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.FileManaMovie");
+		return ptr;
+	}
+
+
+	void SetFilePath(const struct FString& Path);
+};
+
+
+// Class CriWareRuntime.DataManaMovie
+// 0x0008 (0x0070 - 0x0068)
+class UDataManaMovie : public UManaMovie
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.DataManaMovie");
+		return ptr;
+	}
+
+
+	void SetDataArray(TArray<unsigned char>* InDataArray);
+	TArray<unsigned char> GetDataArray();
+};
+
+
 // Class CriWareRuntime.ManaPlaylist
 // 0x0018 (0x0040 - 0x0028)
 class UManaPlaylist : public UManaSource
@@ -820,19 +851,35 @@ public:
 };
 
 
-// Class CriWareRuntime.AtomParameterComponent
-// 0x0008 (0x00F8 - 0x00F0)
-class UAtomParameterComponent : public UActorComponent
+// Class CriWareRuntime.ManaTexture
+// 0x0070 (0x0128 - 0x00B8)
+class UManaTexture : public UTexture
 {
 public:
-	class UAtomSoundObject*                            SoundObject;                                              // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UManaSource*                                 MovieSource;                                              // 0x00B8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FString                                     MovieFilePath;                                            // 0x00C0(0x0010) (ZeroConstructor, Deprecated)
+	unsigned char                                      bRenderToTexture : 1;                                     // 0x00D0(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x00D1(0x0003) MISSED OFFSET
+	float                                              TargetGamma;                                              // 0x00D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bHDR : 1;                                                 // 0x00D8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x00D9(0x0003) MISSED OFFSET
+	TEnumAsByte<ETextureAddress>                       AddressX;                                                 // 0x00DC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ETextureAddress>                       AddressY;                                                 // 0x00DD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x00DE(0x0002) MISSED OFFSET
+	struct FLinearColor                                ClearColor;                                               // 0x00E0(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	TEnumAsByte<EPixelFormat>                          OverrideFormat;                                           // 0x00F0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
+	TArray<class UManaComponentTexture*>               ComponentTextures;                                        // 0x00F8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	unsigned char                                      UnknownData04[0x20];                                      // 0x0108(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.AtomParameterComponent");
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.ManaTexture");
 		return ptr;
 	}
 
+
+	void SetMovieSource(class UManaSource* InSource);
 };
 
 
@@ -874,38 +921,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class CriWareRuntime.ManaTexture
-// 0x0070 (0x0128 - 0x00B8)
-class UManaTexture : public UTexture
-{
-public:
-	class UManaSource*                                 MovieSource;                                              // 0x00B8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FString                                     MovieFilePath;                                            // 0x00C0(0x0010) (ZeroConstructor, Deprecated)
-	unsigned char                                      bRenderToTexture : 1;                                     // 0x00D0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x00D1(0x0003) MISSED OFFSET
-	float                                              TargetGamma;                                              // 0x00D4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bHDR : 1;                                                 // 0x00D8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x00D9(0x0003) MISSED OFFSET
-	TEnumAsByte<ETextureAddress>                       AddressX;                                                 // 0x00DC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ETextureAddress>                       AddressY;                                                 // 0x00DD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x00DE(0x0002) MISSED OFFSET
-	struct FLinearColor                                ClearColor;                                               // 0x00E0(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	TEnumAsByte<EPixelFormat>                          OverrideFormat;                                           // 0x00F0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
-	TArray<class UManaComponentTexture*>               ComponentTextures;                                        // 0x00F8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	unsigned char                                      UnknownData04[0x20];                                      // 0x0108(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.ManaTexture");
-		return ptr;
-	}
-
-
-	void SetMovieSource(class UManaSource* InSource);
 };
 
 
@@ -989,21 +1004,6 @@ public:
 };
 
 
-// Class CriWareRuntime.MatineeTrackAtomCategoryVolume
-// 0x0000 (0x0090 - 0x0090)
-class UMatineeTrackAtomCategoryVolume : public UMatineeTrackAtomFloatBase
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.MatineeTrackAtomCategoryVolume");
-		return ptr;
-	}
-
-};
-
-
 // Class CriWareRuntime.MatineeTrackAtomCategoryName
 // 0x0018 (0x0088 - 0x0070)
 class UMatineeTrackAtomCategoryName : public UMatineeTrackAtomBase
@@ -1016,6 +1016,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CriWareRuntime.MatineeTrackAtomCategoryName");
+		return ptr;
+	}
+
+};
+
+
+// Class CriWareRuntime.MatineeTrackAtomCategoryVolume
+// 0x0000 (0x0090 - 0x0090)
+class UMatineeTrackAtomCategoryVolume : public UMatineeTrackAtomFloatBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.MatineeTrackAtomCategoryVolume");
 		return ptr;
 	}
 
@@ -1041,15 +1056,19 @@ public:
 };
 
 
-// Class CriWareRuntime.CriWareInitializer
-// 0x0000 (0x0028 - 0x0028)
-class UCriWareInitializer : public UObject
+// Class CriWareRuntime.MatineeTrackAtomCueName
+// 0x0038 (0x00B0 - 0x0078)
+class UMatineeTrackAtomCueName : public UMatineeTrackAtomSoundBase
 {
 public:
+	TArray<struct FString>                             AisacList;                                                // 0x0078(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FString>                             SelectorList;                                             // 0x0088(0x0010) (Edit, ZeroConstructor)
+	class USoundAtomCueSheet*                          CueSheet;                                                 // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FAtomCueNameTrackKeyframe>           KeyframeList;                                             // 0x00A0(0x0010) (Edit, EditFixedSize, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.CriWareInitializer");
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.MatineeTrackAtomCueName");
 		return ptr;
 	}
 
@@ -1066,25 +1085,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class CriWareRuntime.MatineeTrackAtomSelector");
-		return ptr;
-	}
-
-};
-
-
-// Class CriWareRuntime.MatineeTrackAtomCueName
-// 0x0038 (0x00B0 - 0x0078)
-class UMatineeTrackAtomCueName : public UMatineeTrackAtomSoundBase
-{
-public:
-	TArray<struct FString>                             AisacList;                                                // 0x0078(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FString>                             SelectorList;                                             // 0x0088(0x0010) (Edit, ZeroConstructor)
-	class USoundAtomCueSheet*                          CueSheet;                                                 // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FAtomCueNameTrackKeyframe>           KeyframeList;                                             // 0x00A0(0x0010) (Edit, EditFixedSize, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.MatineeTrackAtomCueName");
 		return ptr;
 	}
 
@@ -1128,42 +1128,6 @@ public:
 };
 
 
-// Class CriWareRuntime.SoundAtomCueSheet
-// 0x0100 (0x0128 - 0x0028)
-class USoundAtomCueSheet : public UObject
-{
-public:
-	bool                                               Contains;                                                 // 0x0028(0x0001) (Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-	struct FString                                     AcbFilePath;                                              // 0x0030(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x70];                                      // 0x0040(0x0070) MISSED OFFSET
-	bool                                               bOverrideAwbDirectory;                                    // 0x00B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x00B1(0x0007) MISSED OFFSET
-	struct FDirectoryPath                              AwbDirectory;                                             // 0x00B8(0x0010) (Edit)
-	struct FString                                     CueSheetName;                                             // 0x00C8(0x0010) (Edit, ZeroConstructor, EditConst)
-	int                                                NumSlots;                                                 // 0x00D8(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4C];                                      // 0x00DC(0x004C) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CriWareRuntime.SoundAtomCueSheet");
-		return ptr;
-	}
-
-
-	void ReleaseAcb(const struct FName& AcbName);
-	class USoundAtomCueSheet* LoadAtomCueSheet(class USoundAtomCueSheet* CueSheet);
-	class USoundAtomCueSheet* LoadAcb(const struct FName& AcbName);
-	bool IsLoaded();
-	class USoundAtomCue* GetAtomCueByName(const struct FString& CueName);
-	class USoundAtomCue* GetAtomCueByIndex(int CueIndex);
-	class USoundAtomCue* GetAtomCueById(int CueId);
-	void DetachDspBusSetting();
-	void AttachDspBusSetting(const struct FString& SettingName);
-	void ApplyDspBusSnapshot(const struct FString& SnapshotName, int Milliseconds);
-};
-
-
 // Class CriWareRuntime.SoundAtomCue
 // 0x0070 (0x0098 - 0x0028)
 class USoundAtomCue : public UObject
@@ -1192,6 +1156,42 @@ public:
 
 	struct FString GetUserData();
 	int GetLength();
+};
+
+
+// Class CriWareRuntime.SoundAtomCueSheet
+// 0x0100 (0x0128 - 0x0028)
+class USoundAtomCueSheet : public UObject
+{
+public:
+	bool                                               Contains;                                                 // 0x0028(0x0001) (Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	struct FString                                     AcbFilePath;                                              // 0x0030(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x70];                                      // 0x0040(0x0070) MISSED OFFSET
+	bool                                               bOverrideAwbDirectory;                                    // 0x00B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x00B1(0x0007) MISSED OFFSET
+	struct FDirectoryPath                              AwbDirectory;                                             // 0x00B8(0x0010) (Edit)
+	struct FString                                     CueSheetName;                                             // 0x00C8(0x0010) (Edit, ZeroConstructor, EditConst)
+	int                                                NumSlots;                                                 // 0x00D8(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4C];                                      // 0x00DC(0x004C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CriWareRuntime.SoundAtomCueSheet");
+		return ptr;
+	}
+
+
+	void STATIC_ReleaseAcb(const struct FName& AcbName);
+	class USoundAtomCueSheet* STATIC_LoadAtomCueSheet(class USoundAtomCueSheet* CueSheet);
+	class USoundAtomCueSheet* STATIC_LoadAcb(const struct FName& AcbName);
+	bool IsLoaded();
+	class USoundAtomCue* GetAtomCueByName(const struct FString& CueName);
+	class USoundAtomCue* GetAtomCueByIndex(int CueIndex);
+	class USoundAtomCue* GetAtomCueById(int CueId);
+	void STATIC_DetachDspBusSetting();
+	void STATIC_AttachDspBusSetting(const struct FString& SettingName);
+	void STATIC_ApplyDspBusSnapshot(const struct FString& SnapshotName, int Milliseconds);
 };
 
 

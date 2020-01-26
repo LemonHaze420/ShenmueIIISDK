@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_TurnAround.BPC_TurnAround_C.CheckMinigameRotation
-// (Event, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FRotator                Rotation                       (Parm, OutParm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -39,7 +39,7 @@ bool UBPC_TurnAround_C::CheckMinigameRotation(struct FRotator* Rotation)
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.GetTalkingMinigame
-// (Exec, Native, NetMulticast, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class US3TalkComponent*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -50,7 +50,6 @@ class US3TalkComponent* UBPC_TurnAround_C::GetTalkingMinigame()
 	UBPC_TurnAround_C_GetTalkingMinigame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,18 +60,17 @@ class US3TalkComponent* UBPC_TurnAround_C::GetTalkingMinigame()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.TryPreTalkJump
-// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_TurnAround_C::STATIC_TryPreTalkJump()
+bool UBPC_TurnAround_C::TryPreTalkJump()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.TryPreTalkJump");
 
 	UBPC_TurnAround_C_TryPreTalkJump_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,18 +81,17 @@ bool UBPC_TurnAround_C::STATIC_TryPreTalkJump()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.ShouldLookAtTalkCenter
-// (Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_TurnAround_C::STATIC_ShouldLookAtTalkCenter()
+bool UBPC_TurnAround_C::ShouldLookAtTalkCenter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.ShouldLookAtTalkCenter");
 
 	UBPC_TurnAround_C_ShouldLookAtTalkCenter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,7 +102,7 @@ bool UBPC_TurnAround_C::STATIC_ShouldLookAtTalkCenter()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.CalcLookAtRotation
-// (Net, NetReliable, Exec, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Target                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -128,7 +125,7 @@ struct FRotator UBPC_TurnAround_C::CalcLookAtRotation(const struct FVector& Targ
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.TryPostTeleportTurnaround
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bTeleported                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -148,7 +145,7 @@ void UBPC_TurnAround_C::TryPostTeleportTurnaround(bool bTeleported)
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.CalcTurnAroundWithin
-// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -169,7 +166,7 @@ bool UBPC_TurnAround_C::CalcTurnAroundWithin()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.SetTurnAroundTarget
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                Rotator                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -181,7 +178,6 @@ void UBPC_TurnAround_C::SetTurnAroundTarget(const struct FRotator& Rotator)
 	params.Rotator = Rotator;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -190,16 +186,15 @@ void UBPC_TurnAround_C::SetTurnAroundTarget(const struct FRotator& Rotator)
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.TurnAroundTickFinish
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void UBPC_TurnAround_C::STATIC_TurnAroundTickFinish()
+void UBPC_TurnAround_C::TurnAroundTickFinish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.TurnAroundTickFinish");
 
 	UBPC_TurnAround_C_TurnAroundTickFinish_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,7 +203,7 @@ void UBPC_TurnAround_C::STATIC_TurnAroundTickFinish()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.GetLookAtCenterRotation
-// (Net, NetRequest, Exec, Event, NetMulticast, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -229,7 +224,7 @@ struct FRotator UBPC_TurnAround_C::GetLookAtCenterRotation()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.ForceFinishTurnAroundAuto
-// (Net, NetRequest, Event, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_TurnAround_C::ForceFinishTurnAroundAuto()
 {
@@ -246,16 +241,15 @@ void UBPC_TurnAround_C::ForceFinishTurnAroundAuto()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.RemoveTurnAroundComponent
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_TurnAround_C::STATIC_RemoveTurnAroundComponent()
+void UBPC_TurnAround_C::RemoveTurnAroundComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.RemoveTurnAroundComponent");
 
 	UBPC_TurnAround_C_RemoveTurnAroundComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -264,9 +258,9 @@ void UBPC_TurnAround_C::STATIC_RemoveTurnAroundComponent()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.SetAdjustTurnAroundAngle
-// (NetRequest, Exec, Event, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPC_TurnAround_C::STATIC_SetAdjustTurnAroundAngle()
+void UBPC_TurnAround_C::SetAdjustTurnAroundAngle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.SetAdjustTurnAroundAngle");
 
@@ -281,12 +275,12 @@ void UBPC_TurnAround_C::STATIC_SetAdjustTurnAroundAngle()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.ForceFinishTurnAround
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bUpdateRotation                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                NewRotation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPC_TurnAround_C::STATIC_ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation)
+void UBPC_TurnAround_C::ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.ForceFinishTurnAround");
 
@@ -303,7 +297,7 @@ void UBPC_TurnAround_C::STATIC_ForceFinishTurnAround(bool bUpdateRotation, const
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.IsMultipleTalking
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsTalking                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -314,7 +308,6 @@ void UBPC_TurnAround_C::IsMultipleTalking(bool* IsTalking)
 	UBPC_TurnAround_C_IsMultipleTalking_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -326,16 +319,15 @@ void UBPC_TurnAround_C::IsMultipleTalking(bool* IsTalking)
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.ReturnPreTalkRotationActor
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_TurnAround_C::STATIC_ReturnPreTalkRotationActor()
+void UBPC_TurnAround_C::ReturnPreTalkRotationActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.ReturnPreTalkRotationActor");
 
 	UBPC_TurnAround_C_ReturnPreTalkRotationActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -344,7 +336,7 @@ void UBPC_TurnAround_C::STATIC_ReturnPreTalkRotationActor()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.CachedPreTalkRotationActor
-// (Net, Exec, Event, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_TurnAround_C::CachedPreTalkRotationActor()
 {
@@ -361,12 +353,12 @@ void UBPC_TurnAround_C::CachedPreTalkRotationActor()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.UpdateTurnAround
-// (Net, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFinish                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_C::STATIC_UpdateTurnAround(float Delta, bool* bFinish)
+void UBPC_TurnAround_C::UpdateTurnAround(float Delta, bool* bFinish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.UpdateTurnAround");
 
@@ -385,18 +377,17 @@ void UBPC_TurnAround_C::STATIC_UpdateTurnAround(float Delta, bool* bFinish)
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.IsTurnedAroundState
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bTurned                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_C::STATIC_IsTurnedAroundState(bool* bTurned)
+void UBPC_TurnAround_C::IsTurnedAroundState(bool* bTurned)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.IsTurnedAroundState");
 
 	UBPC_TurnAround_C_IsTurnedAroundState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -408,11 +399,11 @@ void UBPC_TurnAround_C::STATIC_IsTurnedAroundState(bool* bTurned)
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.CanTurnAround
-// (Net, NetRequest, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bCan                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_C::STATIC_CanTurnAround(bool* bCan)
+void UBPC_TurnAround_C::CanTurnAround(bool* bCan)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.CanTurnAround");
 
@@ -430,7 +421,7 @@ void UBPC_TurnAround_C::STATIC_CanTurnAround(bool* bCan)
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.ResetTurnAroundParamater
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_TurnAround_C::ResetTurnAroundParamater()
 {
@@ -447,11 +438,11 @@ void UBPC_TurnAround_C::ResetTurnAroundParamater()
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.ReceiveTick
-// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UBPC_TurnAround_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.ReceiveTick");
 
@@ -467,7 +458,7 @@ void UBPC_TurnAround_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.StartTurnAroundByRotation
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          MotionDelayTime                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                TargetRotation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -491,7 +482,7 @@ void UBPC_TurnAround_C::StartTurnAroundByRotation(float MotionDelayTime, const s
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.StartTurnAroundByActor
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          MotionDelayTime                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -515,7 +506,7 @@ void UBPC_TurnAround_C::StartTurnAroundByActor(float MotionDelayTime, class AAct
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.InternalStartRotation
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delay                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                TargetRotation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -539,7 +530,7 @@ void UBPC_TurnAround_C::InternalStartRotation(float Delay, const struct FRotator
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.ExecuteUbergraph_BPC_TurnAround
-// (Net, NetReliable, NetRequest, Native, Event, Protected, NetServer, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -551,7 +542,6 @@ void UBPC_TurnAround_C::ExecuteUbergraph_BPC_TurnAround(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -560,11 +550,11 @@ void UBPC_TurnAround_C::ExecuteUbergraph_BPC_TurnAround(int EntryPoint)
 
 
 // Function BPC_TurnAround.BPC_TurnAround_C.OnFinishTurnAroundDispatcher__DelegateSignature
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBPC_TurnAround_C*       SelfTurnAroundComponent        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBPC_TurnAround_C::STATIC_OnFinishTurnAroundDispatcher__DelegateSignature(class UBPC_TurnAround_C* SelfTurnAroundComponent)
+void UBPC_TurnAround_C::OnFinishTurnAroundDispatcher__DelegateSignature(class UBPC_TurnAround_C* SelfTurnAroundComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround.BPC_TurnAround_C.OnFinishTurnAroundDispatcher__DelegateSignature");
 
@@ -572,7 +562,6 @@ void UBPC_TurnAround_C::STATIC_OnFinishTurnAroundDispatcher__DelegateSignature(c
 	params.SelfTurnAroundComponent = SelfTurnAroundComponent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

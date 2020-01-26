@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.SetBlockAction
-// (Net, NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bBlockAction                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_SetBlockAction(bool bBlockAction)
+void UABP_MiniGame_SupportNPC_C::SetBlockAction(bool bBlockAction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.SetBlockAction");
 
@@ -26,7 +26,6 @@ void UABP_MiniGame_SupportNPC_C::STATIC_SetBlockAction(bool bBlockAction)
 	params.bBlockAction = bBlockAction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void UABP_MiniGame_SupportNPC_C::STATIC_SetBlockAction(bool bBlockAction)
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.IsBlockAction
-// (Net, Exec, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsAction                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_IsBlockAction(bool* IsAction)
+void UABP_MiniGame_SupportNPC_C::IsBlockAction(bool* IsAction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.IsBlockAction");
 
@@ -57,11 +56,11 @@ void UABP_MiniGame_SupportNPC_C::STATIC_IsBlockAction(bool* IsAction)
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.ChangeAnim
-// (NetReliable, Exec, Native, Event, NetResponse, Static, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAnimSequenceBase*       Anim                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_ChangeAnim(class UAnimSequenceBase* Anim)
+void UABP_MiniGame_SupportNPC_C::ChangeAnim(class UAnimSequenceBase* Anim)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.ChangeAnim");
 
@@ -69,7 +68,6 @@ void UABP_MiniGame_SupportNPC_C::STATIC_ChangeAnim(class UAnimSequenceBase* Anim
 	params.Anim = Anim;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +76,7 @@ void UABP_MiniGame_SupportNPC_C::STATIC_ChangeAnim(class UAnimSequenceBase* Anim
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.SetLookAtLocation
-// (NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 LookAtLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -90,7 +88,6 @@ void UABP_MiniGame_SupportNPC_C::SetLookAtLocation(const struct FVector& LookAtL
 	params.LookAtLocation = LookAtLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,16 +96,15 @@ void UABP_MiniGame_SupportNPC_C::SetLookAtLocation(const struct FVector& LookAtL
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.Finalize
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_Finalize()
+void UABP_MiniGame_SupportNPC_C::Finalize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.Finalize");
 
 	UABP_MiniGame_SupportNPC_C_Finalize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +113,7 @@ void UABP_MiniGame_SupportNPC_C::STATIC_Finalize()
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.Initialize
-// (NetRequest, Exec, Event, NetResponse, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAnimSequenceBase*       AnimIdle                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -137,16 +133,15 @@ void UABP_MiniGame_SupportNPC_C::Initialize(class UAnimSequenceBase* AnimIdle)
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_494534884C266C388A80F3B7BFCE5829
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_494534884C266C388A80F3B7BFCE5829()
+void UABP_MiniGame_SupportNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_494534884C266C388A80F3B7BFCE5829()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_494534884C266C388A80F3B7BFCE5829");
 
 	UABP_MiniGame_SupportNPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_494534884C266C388A80F3B7BFCE5829_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,16 +150,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergr
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_BlendListByInt_BA32322944E76EDA95F923A3E0FEA094
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_BlendListByInt_BA32322944E76EDA95F923A3E0FEA094()
+void UABP_MiniGame_SupportNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_BlendListByInt_BA32322944E76EDA95F923A3E0FEA094()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_BlendListByInt_BA32322944E76EDA95F923A3E0FEA094");
 
 	UABP_MiniGame_SupportNPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_BlendListByInt_BA32322944E76EDA95F923A3E0FEA094_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,16 +167,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergr
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_99AEF4FC4870A13BA2259F9BE265EC01
-// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_99AEF4FC4870A13BA2259F9BE265EC01()
+void UABP_MiniGame_SupportNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_99AEF4FC4870A13BA2259F9BE265EC01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_99AEF4FC4870A13BA2259F9BE265EC01");
 
 	UABP_MiniGame_SupportNPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_99AEF4FC4870A13BA2259F9BE265EC01_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,16 +184,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergr
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_6396293C4212A647DB5E98BE4BDF7D90
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_6396293C4212A647DB5E98BE4BDF7D90()
+void UABP_MiniGame_SupportNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_6396293C4212A647DB5E98BE4BDF7D90()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_6396293C4212A647DB5E98BE4BDF7D90");
 
 	UABP_MiniGame_SupportNPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_6396293C4212A647DB5E98BE4BDF7D90_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -209,16 +201,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergr
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_FE78588F42E05D1601917A85D5EF0E00
-// (Net, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_FE78588F42E05D1601917A85D5EF0E00()
+void UABP_MiniGame_SupportNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_FE78588F42E05D1601917A85D5EF0E00()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_FE78588F42E05D1601917A85D5EF0E00");
 
 	UABP_MiniGame_SupportNPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_SequencePlayer_FE78588F42E05D1601917A85D5EF0E00_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,16 +218,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergr
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_0C943C0E467DD3B6B51E038DBCFD50DC
-// (Net, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_0C943C0E467DD3B6B51E038DBCFD50DC()
+void UABP_MiniGame_SupportNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_0C943C0E467DD3B6B51E038DBCFD50DC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_0C943C0E467DD3B6B51E038DBCFD50DC");
 
 	UABP_MiniGame_SupportNPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_0C943C0E467DD3B6B51E038DBCFD50DC_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -245,16 +235,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergr
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_F9516E7D4BA35AECDBAA789D688B23AF
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_F9516E7D4BA35AECDBAA789D688B23AF()
+void UABP_MiniGame_SupportNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_F9516E7D4BA35AECDBAA789D688B23AF()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_F9516E7D4BA35AECDBAA789D688B23AF");
 
 	UABP_MiniGame_SupportNPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_F9516E7D4BA35AECDBAA789D688B23AF_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -263,16 +252,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergr
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_35C3E4AB45E86A307EDA428B25391388
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_35C3E4AB45E86A307EDA428B25391388()
+void UABP_MiniGame_SupportNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_35C3E4AB45E86A307EDA428B25391388()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_35C3E4AB45E86A307EDA428B25391388");
 
 	UABP_MiniGame_SupportNPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_LookAt_35C3E4AB45E86A307EDA428B25391388_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -281,16 +269,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergr
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_3FC9E51644D08B3E760BD281AB3E13F5
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_3FC9E51644D08B3E760BD281AB3E13F5()
+void UABP_MiniGame_SupportNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_3FC9E51644D08B3E760BD281AB3E13F5()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_3FC9E51644D08B3E760BD281AB3E13F5");
 
 	UABP_MiniGame_SupportNPC_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_SupportNPC_AnimGraphNode_TransitionResult_3FC9E51644D08B3E760BD281AB3E13F5_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,7 +286,7 @@ void UABP_MiniGame_SupportNPC_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergr
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.BlueprintUpdateAnimation
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -311,7 +298,6 @@ void UABP_MiniGame_SupportNPC_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	params.DeltaTimeX = DeltaTimeX;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,16 +306,15 @@ void UABP_MiniGame_SupportNPC_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.AnimNotify_StartTransitionIdlle
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_AnimNotify_StartTransitionIdlle()
+void UABP_MiniGame_SupportNPC_C::AnimNotify_StartTransitionIdlle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.AnimNotify_StartTransitionIdlle");
 
 	UABP_MiniGame_SupportNPC_C_AnimNotify_StartTransitionIdlle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -338,16 +323,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_AnimNotify_StartTransitionIdlle()
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.AnimNotify_EndTransitionIdle
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_AnimNotify_EndTransitionIdle()
+void UABP_MiniGame_SupportNPC_C::AnimNotify_EndTransitionIdle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.AnimNotify_EndTransitionIdle");
 
 	UABP_MiniGame_SupportNPC_C_AnimNotify_EndTransitionIdle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -356,16 +340,15 @@ void UABP_MiniGame_SupportNPC_C::STATIC_AnimNotify_EndTransitionIdle()
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.AnimNotify_StartTransitionActionToIdle
-// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_SupportNPC_C::STATIC_AnimNotify_StartTransitionActionToIdle()
+void UABP_MiniGame_SupportNPC_C::AnimNotify_StartTransitionActionToIdle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.AnimNotify_StartTransitionActionToIdle");
 
 	UABP_MiniGame_SupportNPC_C_AnimNotify_StartTransitionActionToIdle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -374,7 +357,7 @@ void UABP_MiniGame_SupportNPC_C::STATIC_AnimNotify_StartTransitionActionToIdle()
 
 
 // Function ABP_MiniGame_SupportNPC.ABP_MiniGame_SupportNPC_C.ExecuteUbergraph_ABP_MiniGame_SupportNPC
-// (NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

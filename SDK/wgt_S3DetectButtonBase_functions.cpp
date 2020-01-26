@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.FadeBase
-// (Net, Exec, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void Uwgt_S3DetectButtonBase_C::FadeBase(bool In)
 
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.OnAnimationFinished
-// (Net, Exec, Native, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // class UWidgetAnimation*        Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -46,7 +46,6 @@ void Uwgt_S3DetectButtonBase_C::OnAnimationFinished(class UWidgetAnimation* Anim
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +54,7 @@ void Uwgt_S3DetectButtonBase_C::OnAnimationFinished(class UWidgetAnimation* Anim
 
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.Construct
-// (NetReliable, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_S3DetectButtonBase_C::Construct()
 {
@@ -72,7 +71,7 @@ void Uwgt_S3DetectButtonBase_C::Construct()
 
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.ExecuteUbergraph_wgt_S3DetectButtonBase
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -92,16 +91,15 @@ void Uwgt_S3DetectButtonBase_C::ExecuteUbergraph_wgt_S3DetectButtonBase(int Entr
 
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.onAnimEnd__DelegateSignature
-// (NetRequest, Native, Static, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3DetectButtonBase_C::STATIC_onAnimEnd__DelegateSignature()
+void Uwgt_S3DetectButtonBase_C::onAnimEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.onAnimEnd__DelegateSignature");
 
 	Uwgt_S3DetectButtonBase_C_onAnimEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTD_TalkCam_OnMiddleTalk.BTD_TalkCam_OnMiddleTalk_C.PerformConditionCheck
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTD_TalkCam_OnMiddleTalk_C::STATIC_PerformConditionCheck(class AActor* OwnerActor)
+bool UBTD_TalkCam_OnMiddleTalk_C::PerformConditionCheck(class AActor* OwnerActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTD_TalkCam_OnMiddleTalk.BTD_TalkCam_OnMiddleTalk_C.PerformConditionCheck");
 
@@ -27,7 +27,6 @@ bool UBTD_TalkCam_OnMiddleTalk_C::STATIC_PerformConditionCheck(class AActor* Own
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

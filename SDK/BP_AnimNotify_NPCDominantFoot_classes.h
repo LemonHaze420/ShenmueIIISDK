@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,7 @@ namespace SDK
 class UBP_AnimNotify_NPCDominantFoot_C : public UAnimNotify
 {
 public:
-	bool                                               RightFoot;                                                // 0x0038(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0038(0x0001) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -26,7 +26,7 @@ public:
 	}
 
 
-	struct FString STATIC_GetNotifyName();
+	struct FString GetNotifyName();
 	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 };
 

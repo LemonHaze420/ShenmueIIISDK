@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,14 +28,14 @@ public:
 	}
 
 
-	void STATIC_IsNPCLocomotionAnimation(bool* bReturnValue);
-	void STATIC_IsNPCLocomotionSit(bool* bReturnValue);
+	void IsNPCLocomotionAnimation(bool* bReturnValue);
+	void IsNPCLocomotionSit(bool* bReturnValue);
 	void IsNPCLocomotionWalk(bool* bReturnValue);
-	void STATIC_IsNPCLocomotionIdle(bool* bReturnValue);
+	void IsNPCLocomotionIdle(bool* bReturnValue);
 	void IsInitializeState(bool* bSuccess);
 	void StateOnInitialize();
-	void STATIC_Setup();
-	void STATIC_ExecuteUbergraph_BP_State_LookAtNPC(int EntryPoint);
+	void Setup();
+	void ExecuteUbergraph_BP_State_LookAtNPC(int EntryPoint);
 };
 
 

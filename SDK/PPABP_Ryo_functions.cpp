@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_1882EE35462FAC8B442D57B340793292
-// (Net, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_1882EE35462FAC8B442D57B340793292()
 {
@@ -31,7 +31,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_0E1DA0F947B20D97F23658AD6F942686
-// (Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_0E1DA0F947B20D97F23658AD6F942686()
 {
@@ -48,7 +48,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_E26933CD45BF3430233684BAEBC9F6A6
-// (Net, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_E26933CD45BF3430233684BAEBC9F6A6()
 {
@@ -65,7 +65,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_CCAC2B3E4D7D95990D2C72A81F58613F
-// (Net, NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_CCAC2B3E4D7D95990D2C72A81F58613F()
 {
@@ -82,7 +82,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_27D6E30442BE8F9CDDC9CE84595D7F5B
-// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_27D6E30442BE8F9CDDC9CE84595D7F5B()
 {
@@ -99,7 +99,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_9EAE9E9A4E4F73F2AD956DB22BCA26F0
-// (Net, NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_9EAE9E9A4E4F73F2AD956DB22BCA26F0()
 {
@@ -116,7 +116,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_DBABBB4B45F3CE9E60F2AA94CB5D294F
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_DBABBB4B45F3CE9E60F2AA94CB5D294F()
 {
@@ -133,7 +133,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_BlendListByBool_589F587A496748E71EFB79B0EDC36470
-// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_BlendListByBool_589F587A496748E71EFB79B0EDC36470()
 {
@@ -150,7 +150,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_EB0EE10A4EB0378F51749EB8FAB02258
-// (Net, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_EB0EE10A4EB0378F51749EB8FAB02258()
 {
@@ -167,7 +167,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_DD8D54C04AA9088F58587581B76C3200
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_DD8D54C04AA9088F58587581B76C3200()
 {
@@ -184,7 +184,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_21794F504BC6438621DE8E88EE0AAC19
-// (Net, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_21794F504BC6438621DE8E88EE0AAC19()
 {
@@ -201,7 +201,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_109DD06841C933E3291CC0A7FFDD04B2
-// (Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_109DD06841C933E3291CC0A7FFDD04B2()
 {
@@ -218,7 +218,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_0D9A6CBC47D2BC3D6B13968870DE14C3
-// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_0D9A6CBC47D2BC3D6B13968870DE14C3()
 {
@@ -235,7 +235,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_306A308E4454C6CE8F135489AD674250
-// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
 void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGraphNode_AnimDynamics_306A308E4454C6CE8F135489AD674250()
 {
@@ -252,7 +252,7 @@ void UPPABP_Ryo_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Ryo_AnimGra
 
 
 // Function PPABP_Ryo.PPABP_Ryo_C.ExecuteUbergraph_PPABP_Ryo
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Delegate, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -264,7 +264,6 @@ void UPPABP_Ryo_C::ExecuteUbergraph_PPABP_Ryo(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,13 +31,13 @@ public:
 
 
 	void TryGetItemSocketLocation(const struct FName& InputPin, struct FVector* Location, bool* Success);
-	bool STATIC_IsItemSpawned();
-	void STATIC_GetItemActor(class ABP_PlayerTalkItem_C** ItemBP);
+	bool IsItemSpawned();
+	void GetItemActor(class ABP_PlayerTalkItem_C** ItemBP);
 	void DestroyItem();
-	void STATIC_SpawnItem(const struct FName& ItemName, bool ShowToOther);
+	void SpawnItem(const struct FName& ItemName, bool ShowToOther);
 	void SetupItemMaterial();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_HiddenItem();
+	void ReceiveBeginPlay();
+	void HiddenItem();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BPC_ItemAttacher(int EntryPoint);
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,9 +28,9 @@ public:
 
 
 	class UStaticMeshComponent* GetStaticMeshComp();
-	bool STATIC_IsMeshVisibility();
+	bool IsMeshVisibility();
 	void UserConstructionScript();
-	void STATIC_SetMeshVisibility(bool bEnable);
+	void SetMeshVisibility(bool bEnable);
 	void ExecuteUbergraph_BP_SpawningAttachment(int EntryPoint);
 };
 

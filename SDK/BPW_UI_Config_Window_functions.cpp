@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_Config_Window.BPW_UI_Config_Window_C.PushRightButton
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UBPW_UI_Config_Window_C::PushRightButton(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UBPW_UI_Config_Window_C::PushRightButton(int Index)
 
 
 // Function BPW_UI_Config_Window.BPW_UI_Config_Window_C.PushLeftRightCursor
-// (NetRequest, Native, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -49,7 +48,6 @@ void UBPW_UI_Config_Window_C::PushLeftRightCursor(int Index, int Add)
 	params.Add = Add;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +56,7 @@ void UBPW_UI_Config_Window_C::PushLeftRightCursor(int Index, int Add)
 
 
 // Function BPW_UI_Config_Window.BPW_UI_Config_Window_C.InitChoiceList
-// (Exec, Native, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FString>         ChoiceList                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -71,7 +69,6 @@ void UBPW_UI_Config_Window_C::InitChoiceList(int Index, TArray<struct FString>* 
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,7 +80,7 @@ void UBPW_UI_Config_Window_C::InitChoiceList(int Index, TArray<struct FString>* 
 
 
 // Function BPW_UI_Config_Window.BPW_UI_Config_Window_C.SetConfigName
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FString>         NameList                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -105,11 +102,11 @@ void UBPW_UI_Config_Window_C::SetConfigName(TArray<struct FString>* NameList)
 
 
 // Function BPW_UI_Config_Window.BPW_UI_Config_Window_C.FocusButtonIndex
-// (Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, HasDefaults, NetClient)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Window_C::STATIC_FocusButtonIndex(int Index)
+void UBPW_UI_Config_Window_C::FocusButtonIndex(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Window.BPW_UI_Config_Window_C.FocusButtonIndex");
 
@@ -117,7 +114,6 @@ void UBPW_UI_Config_Window_C::STATIC_FocusButtonIndex(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,7 +122,7 @@ void UBPW_UI_Config_Window_C::STATIC_FocusButtonIndex(int Index)
 
 
 // Function BPW_UI_Config_Window.BPW_UI_Config_Window_C.Construct
-// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_UI_Config_Window_C::Construct()
 {
@@ -135,7 +131,6 @@ void UBPW_UI_Config_Window_C::Construct()
 	UBPW_UI_Config_Window_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,7 +139,7 @@ void UBPW_UI_Config_Window_C::Construct()
 
 
 // Function BPW_UI_Config_Window.BPW_UI_Config_Window_C.ExecuteUbergraph_BPW_UI_Config_Window
-// (NetRequest, Exec, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

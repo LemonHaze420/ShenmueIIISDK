@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.SetVisible
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameChooseTriangleSpawn_C::STATIC_SetVisible(bool Condition)
+void ABP_MiniGameChooseTriangleSpawn_C::SetVisible(bool Condition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.SetVisible");
 
@@ -34,7 +34,7 @@ void ABP_MiniGameChooseTriangleSpawn_C::STATIC_SetVisible(bool Condition)
 
 
 // Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.RemoveTriangle
-// (Net, NetRequest, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,16 +54,15 @@ void ABP_MiniGameChooseTriangleSpawn_C::RemoveTriangle(class AActor* Actor)
 
 
 // Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.DestroyTriangle
-// (Net, NetReliable, Native, Static, NetMulticast, Private, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameChooseTriangleSpawn_C::STATIC_DestroyTriangle()
+void ABP_MiniGameChooseTriangleSpawn_C::DestroyTriangle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.DestroyTriangle");
 
 	ABP_MiniGameChooseTriangleSpawn_C_DestroyTriangle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,9 +71,9 @@ void ABP_MiniGameChooseTriangleSpawn_C::STATIC_DestroyTriangle()
 
 
 // Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.UserConstructionScript
-// (Net, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameChooseTriangleSpawn_C::STATIC_UserConstructionScript()
+void ABP_MiniGameChooseTriangleSpawn_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.UserConstructionScript");
 
@@ -89,7 +88,7 @@ void ABP_MiniGameChooseTriangleSpawn_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.ReceiveTick
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -101,7 +100,6 @@ void ABP_MiniGameChooseTriangleSpawn_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,11 +108,11 @@ void ABP_MiniGameChooseTriangleSpawn_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.ExecuteUbergraph_BP_MiniGameChooseTriangleSpawn
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameChooseTriangleSpawn_C::STATIC_ExecuteUbergraph_BP_MiniGameChooseTriangleSpawn(int EntryPoint)
+void ABP_MiniGameChooseTriangleSpawn_C::ExecuteUbergraph_BP_MiniGameChooseTriangleSpawn(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseTriangleSpawn.BP_MiniGameChooseTriangleSpawn_C.ExecuteUbergraph_BP_MiniGameChooseTriangleSpawn");
 

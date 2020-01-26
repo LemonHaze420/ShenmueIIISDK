@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_locale.BPF_locale_C.FormatTimeMMSSss
-// (NetRequest, Native, Event, NetResponse, NetMulticast, Private, Protected, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FBTL_TimeMSC            Time                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBPF_locale_C::FormatTimeMMSSss(const struct FBTL_TimeMSC& Time, class UObject* __WorldContext)
+struct FString UBPF_locale_C::STATIC_FormatTimeMMSSss(const struct FBTL_TimeMSC& Time, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_locale.BPF_locale_C.FormatTimeMMSSss");
 
@@ -29,7 +29,6 @@ struct FString UBPF_locale_C::FormatTimeMMSSss(const struct FBTL_TimeMSC& Time, 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,7 +39,7 @@ struct FString UBPF_locale_C::FormatTimeMMSSss(const struct FBTL_TimeMSC& Time, 
 
 
 // Function BPF_locale.BPF_locale_C.GetAlphabetType
-// (Net, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3Locale                      Locale                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -65,13 +64,13 @@ TEnumAsByte<EAlphabetType> UBPF_locale_C::STATIC_GetAlphabetType(ES3Locale Local
 
 
 // Function BPF_locale.BPF_locale_C.UsesFullWidthCharacters
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3Locale                      Locale                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_locale_C::UsesFullWidthCharacters(ES3Locale Locale, class UObject* __WorldContext)
+bool UBPF_locale_C::STATIC_UsesFullWidthCharacters(ES3Locale Locale, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_locale.BPF_locale_C.UsesFullWidthCharacters");
 
@@ -90,13 +89,13 @@ bool UBPF_locale_C::UsesFullWidthCharacters(ES3Locale Locale, class UObject* __W
 
 
 // Function BPF_locale.BPF_locale_C.UsesLatinAlphabet
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3Locale                      Locale                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_locale_C::UsesLatinAlphabet(ES3Locale Locale, class UObject* __WorldContext)
+bool UBPF_locale_C::STATIC_UsesLatinAlphabet(ES3Locale Locale, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_locale.BPF_locale_C.UsesLatinAlphabet");
 
@@ -115,13 +114,13 @@ bool UBPF_locale_C::UsesLatinAlphabet(ES3Locale Locale, class UObject* __WorldCo
 
 
 // Function BPF_locale.BPF_locale_C.FormatTimeMMSSss(float)
-// (Exec, Native, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBPF_locale_C::FormatTimeMMSSss_float_(float Time, class UObject* __WorldContext)
+struct FString UBPF_locale_C::STATIC_FormatTimeMMSSss_float_(float Time, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_locale.BPF_locale_C.FormatTimeMMSSss(float)");
 
@@ -130,7 +129,6 @@ struct FString UBPF_locale_C::FormatTimeMMSSss_float_(float Time, class UObject*
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,7 +139,7 @@ struct FString UBPF_locale_C::FormatTimeMMSSss_float_(float Time, class UObject*
 
 
 // Function BPF_locale.BPF_locale_C.GetLanguage
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3Locale                      Locale                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -167,13 +165,13 @@ void UBPF_locale_C::STATIC_GetLanguage(ES3Locale Locale, class UObject* __WorldC
 
 
 // Function BPF_locale.BPF_locale_C.MakeLocale
-// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, BlueprintCallable)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ret                            (Parm, OutParm, ZeroConstructor)
 
-void UBPF_locale_C::MakeLocale(class UObject* __WorldContext, struct FText* InText, struct FString* ret)
+void UBPF_locale_C::STATIC_MakeLocale(class UObject* __WorldContext, struct FText* InText, struct FString* ret)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_locale.BPF_locale_C.MakeLocale");
 
@@ -181,7 +179,6 @@ void UBPF_locale_C::MakeLocale(class UObject* __WorldContext, struct FText* InTe
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +192,7 @@ void UBPF_locale_C::MakeLocale(class UObject* __WorldContext, struct FText* InTe
 
 
 // Function BPF_locale.BPF_locale_C.FormatRealMoney
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Money                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -210,7 +207,6 @@ void UBPF_locale_C::STATIC_FormatRealMoney(float Money, class UObject* __WorldCo
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,13 +218,13 @@ void UBPF_locale_C::STATIC_FormatRealMoney(float Money, class UObject* __WorldCo
 
 
 // Function BPF_locale.BPF_locale_C.FormatGameMoney
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Money                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 String                         (Parm, OutParm, ZeroConstructor)
 
-void UBPF_locale_C::FormatGameMoney(int Money, class UObject* __WorldContext, struct FString* String)
+void UBPF_locale_C::STATIC_FormatGameMoney(int Money, class UObject* __WorldContext, struct FString* String)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_locale.BPF_locale_C.FormatGameMoney");
 
@@ -248,13 +244,13 @@ void UBPF_locale_C::FormatGameMoney(int Money, class UObject* __WorldContext, st
 
 
 // Function BPF_locale.BPF_locale_C.FormatNumerics(float)
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 String                         (Parm, OutParm, ZeroConstructor)
 
-void UBPF_locale_C::FormatNumerics_float_(float Value, class UObject* __WorldContext, struct FString* String)
+void UBPF_locale_C::STATIC_FormatNumerics_float_(float Value, class UObject* __WorldContext, struct FString* String)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_locale.BPF_locale_C.FormatNumerics(float)");
 
@@ -274,13 +270,13 @@ void UBPF_locale_C::FormatNumerics_float_(float Value, class UObject* __WorldCon
 
 
 // Function BPF_locale.BPF_locale_C.FormatNumerics(int)
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 String                         (Parm, OutParm, ZeroConstructor)
 
-void UBPF_locale_C::FormatNumerics_int_(int Value, class UObject* __WorldContext, struct FString* String)
+void UBPF_locale_C::STATIC_FormatNumerics_int_(int Value, class UObject* __WorldContext, struct FString* String)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_locale.BPF_locale_C.FormatNumerics(int)");
 

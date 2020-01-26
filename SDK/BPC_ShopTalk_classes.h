@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,10 +27,10 @@ public:
 	}
 
 
-	void STATIC_GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params);
-	void GetActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params);
-	void STATIC_DecideDetectAction(ES3ActionIconType ActionType);
-	void STATIC_ExecuteUbergraph_BPC_ShopTalk(int EntryPoint);
+	void GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params);
+	void getActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params);
+	void DecideDetectAction(ES3ActionIconType ActionType);
+	void ExecuteUbergraph_BPC_ShopTalk(int EntryPoint);
 };
 
 

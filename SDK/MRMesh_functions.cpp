@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function MRMesh.MeshReconstructorBase.StopReconstruction
-// ()
+// (Native, Public, BlueprintCallable)
 
 void UMeshReconstructorBase::StopReconstruction()
 {
@@ -23,6 +23,7 @@ void UMeshReconstructorBase::StopReconstruction()
 	UMeshReconstructorBase_StopReconstruction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UMeshReconstructorBase::StopReconstruction()
 
 
 // Function MRMesh.MeshReconstructorBase.StartReconstruction
-// ()
+// (Native, Public, BlueprintCallable)
 
 void UMeshReconstructorBase::StartReconstruction()
 {
@@ -40,6 +41,7 @@ void UMeshReconstructorBase::StartReconstruction()
 	UMeshReconstructorBase_StartReconstruction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void UMeshReconstructorBase::StartReconstruction()
 
 
 // Function MRMesh.MeshReconstructorBase.PauseReconstruction
-// ()
+// (Native, Public, BlueprintCallable)
 
 void UMeshReconstructorBase::PauseReconstruction()
 {
@@ -57,6 +59,7 @@ void UMeshReconstructorBase::PauseReconstruction()
 	UMeshReconstructorBase_PauseReconstruction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,7 +68,7 @@ void UMeshReconstructorBase::PauseReconstruction()
 
 
 // Function MRMesh.MeshReconstructorBase.IsReconstructionStarted
-// ()
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,6 +79,7 @@ bool UMeshReconstructorBase::IsReconstructionStarted()
 	UMeshReconstructorBase_IsReconstructionStarted_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,7 +90,7 @@ bool UMeshReconstructorBase::IsReconstructionStarted()
 
 
 // Function MRMesh.MeshReconstructorBase.IsReconstructionPaused
-// ()
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -97,6 +101,7 @@ bool UMeshReconstructorBase::IsReconstructionPaused()
 	UMeshReconstructorBase_IsReconstructionPaused_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,7 +112,7 @@ bool UMeshReconstructorBase::IsReconstructionPaused()
 
 
 // Function MRMesh.MeshReconstructorBase.DisconnectMRMesh
-// ()
+// (Native, Public)
 
 void UMeshReconstructorBase::DisconnectMRMesh()
 {
@@ -116,6 +121,7 @@ void UMeshReconstructorBase::DisconnectMRMesh()
 	UMeshReconstructorBase_DisconnectMRMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +130,7 @@ void UMeshReconstructorBase::DisconnectMRMesh()
 
 
 // Function MRMesh.MeshReconstructorBase.ConnectMRMesh
-// ()
+// (Native, Public)
 // Parameters:
 // class UMRMeshComponent*        Mesh                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -136,6 +142,7 @@ void UMeshReconstructorBase::ConnectMRMesh(class UMRMeshComponent* Mesh)
 	params.Mesh = Mesh;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,7 +151,7 @@ void UMeshReconstructorBase::ConnectMRMesh(class UMRMeshComponent* Mesh)
 
 
 // Function MRMesh.MRMeshComponent.IsConnected
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -155,6 +162,7 @@ bool UMRMeshComponent::IsConnected()
 	UMRMeshComponent_IsConnected_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -165,7 +173,7 @@ bool UMRMeshComponent::IsConnected()
 
 
 // Function MRMesh.MRMeshComponent.ForceNavMeshUpdate
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UMRMeshComponent::ForceNavMeshUpdate()
 {
@@ -174,6 +182,7 @@ void UMRMeshComponent::ForceNavMeshUpdate()
 	UMRMeshComponent_ForceNavMeshUpdate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -182,7 +191,7 @@ void UMRMeshComponent::ForceNavMeshUpdate()
 
 
 // Function MRMesh.MRMeshComponent.Clear
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void UMRMeshComponent::Clear()
 {
@@ -191,6 +200,7 @@ void UMRMeshComponent::Clear()
 	UMRMeshComponent_Clear_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

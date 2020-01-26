@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_RequestAnimation.BP_AnimNotify_RequestAnimation_C.GetNotifyName
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, NetValidate)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -25,7 +25,6 @@ struct FString UBP_AnimNotify_RequestAnimation_C::GetNotifyName()
 	UBP_AnimNotify_RequestAnimation_C_GetNotifyName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,13 +35,13 @@ struct FString UBP_AnimNotify_RequestAnimation_C::GetNotifyName()
 
 
 // Function BP_AnimNotify_RequestAnimation.BP_AnimNotify_RequestAnimation_C.Received_Notify
-// (NetReliable, NetRequest, NetResponse, Static, Public, HasOutParms, HasDefaults, NetValidate)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_AnimNotify_RequestAnimation_C::STATIC_Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+bool UBP_AnimNotify_RequestAnimation_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_RequestAnimation.BP_AnimNotify_RequestAnimation_C.Received_Notify");
 

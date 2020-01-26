@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_HandMotion.BP_AnimNotify_HandMotion_C.GetNotifyName
-// (NetReliable, NetRequest, Exec, Static, Public, NetServer)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBP_AnimNotify_HandMotion_C::STATIC_GetNotifyName()
+struct FString UBP_AnimNotify_HandMotion_C::GetNotifyName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_HandMotion.BP_AnimNotify_HandMotion_C.GetNotifyName");
 
@@ -35,7 +35,7 @@ struct FString UBP_AnimNotify_HandMotion_C::STATIC_GetNotifyName()
 
 
 // Function BP_AnimNotify_HandMotion.BP_AnimNotify_HandMotion_C.Received_Notify
-// (NetReliable, Native, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -50,7 +50,6 @@ bool UBP_AnimNotify_HandMotion_C::Received_Notify(class USkeletalMeshComponent* 
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

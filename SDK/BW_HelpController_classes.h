@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -63,13 +63,13 @@ public:
 	}
 
 
-	void STATIC_ChangeCheck(class UCheckBox* CheckBox);
+	void ChangeCheck(class UCheckBox* CheckBox);
 	struct FEventReply OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent);
 	void SetHelpFlag(int Index, class UTextBlock* Text, class UCheckBox* flag);
 	void MakeHelpFlagList();
-	void STATIC_UpdateHelpFlag();
+	void UpdateHelpFlag();
 	void Construct();
-	void STATIC_BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_0_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
+	void BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_0_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void BndEvt__Button0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button1_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature();

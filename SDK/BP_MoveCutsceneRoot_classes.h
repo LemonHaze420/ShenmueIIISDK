@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,14 +32,14 @@ public:
 
 
 	void AttachActor(class AActor* AttachTarget);
-	void STATIC_StopCutScenePlayerByTag(const struct FName& Tag);
+	void StopCutScenePlayerByTag(const struct FName& Tag);
 	void StopCutScenePlayer();
-	void STATIC_FindCutScenePlayerByTag(const struct FName& Tag, class ABP_CutscenePlayer_C** CutscenePlayer);
+	void FindCutScenePlayerByTag(const struct FName& Tag, class ABP_CutscenePlayer_C** CutscenePlayer);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ResetTransform();
-	void STATIC_SetVisibleAllCutsceneActors(bool bNewHidden);
-	void STATIC_SetInfiniteTransform();
+	void ReceiveBeginPlay();
+	void ResetTransform();
+	void SetVisibleAllCutsceneActors(bool bNewHidden);
+	void SetInfiniteTransform();
 	void ExecuteUbergraph_BP_MoveCutsceneRoot(int EntryPoint);
 };
 

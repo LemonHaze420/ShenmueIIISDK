@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -156,52 +156,52 @@ public:
 	}
 
 
-	void STATIC_SetChinaTextures();
-	float STATIC_GetAppearRate();
+	void SetChinaTextures();
+	float GetAppearRate();
 	void GetChinaText(int Index, struct FString* Return);
-	struct FVector STATIC_MainCameraEndPos();
-	void STATIC_InitializeGameCollision();
-	void STATIC_UpdateBackerEventCount();
+	struct FVector MainCameraEndPos();
+	void InitializeGameCollision();
+	void UpdateBackerEventCount();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
 	float GetResultWaitTime(TEnumAsByte<EMiniGameKFTypeEnum> Index);
-	void STATIC_GetRandomResult(TEnumAsByte<EMiniGameKFTypeEnum> IgnoreType, bool UseIgnoreType, TEnumAsByte<EMiniGameKFTypeEnum>* Type);
+	void GetRandomResult(TEnumAsByte<EMiniGameKFTypeEnum> IgnoreType, bool UseIgnoreType, TEnumAsByte<EMiniGameKFTypeEnum>* Type);
 	void UpdatePlayCountWinFlag();
 	void SpawnForceResultSequence(TEnumAsByte<EMiniGameKFTypeEnum> Type);
 	class UMeshComponent* GetClothMeshComponent();
 	void GetLevelSequence(TEnumAsByte<EMiniGameKFTypeEnum> Type, class ULevelSequence** Sequence);
 	void InitAsyncLoad(bool* dummy);
-	void STATIC_CalcForceWinRate();
-	void STATIC_IsForceWinByFortune(bool* IsForceWin);
-	void STATIC_IsBackerEvent(bool* IsEvent);
+	void CalcForceWinRate();
+	void IsForceWinByFortune(bool* IsForceWin);
+	void IsBackerEvent(bool* IsEvent);
 	void SetGameCollisionEnabled(bool Enabled);
 	bool IsEventStep();
-	void STATIC_SaveEventLosing();
+	void SaveEventLosing();
 	void IsForceWin(bool* ForceWin);
 	void LoadEventLosing();
 	void SetBoardInfo();
 	void GetBallThrowPower(float* Power);
-	void STATIC_DetachAndThrowBall();
+	void DetachAndThrowBall();
 	void GetAnimInstance(class UABP_MiniGame_KF_Ryo_C** AsABP_Mini_Game_KF_Ryo);
-	void STATIC_ForceRepay();
+	void ForceRepay();
 	void UpdateBallMove(float DeltaSeconds);
-	void STATIC_InitializeValue();
+	void InitializeValue();
 	void UpdateGameMainCamera(float DeltaSeconds);
-	void STATIC_SpawnBall();
+	void SpawnBall();
 	void DecideType(bool* Return);
 	void SetPlayerMeshPos(const struct FVector& pos);
 	void InterpPlayerMeshPos(float DeltaSeconds);
 	void InputAction(TEnumAsByte<EMiniGameKFTypeEnum> Command);
-	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
+	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
 	void UserConstructionScript();
 	void BndEvt__FlowerCol_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__FlowerCol_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__FlowerCol_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void BndEvt__BirdCol_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__BirdCol_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_BndEvt__WindCol_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__WindCol_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_BndEvt__MoonCol_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__MoonCol_K2Node_ComponentBoundEvent_7_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_BndEvt__GameArea_K2Node_ComponentBoundEvent_656_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__BirdCol_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__WindCol_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__WindCol_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__MoonCol_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__MoonCol_K2Node_ComponentBoundEvent_7_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void BndEvt__GameArea_K2Node_ComponentBoundEvent_656_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void BndEvt__CoverCollision_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void BndEvt__BowlCol1_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void BndEvt__BowlCol2_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
@@ -216,11 +216,11 @@ public:
 	void FinalizeTalk();
 	void OnFinishedFade();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
-	void STATIC_OnTalkScriptEvent(int EventNumber);
-	void STATIC_ResumeMiniGame(const struct FString& ResumeKeyword);
+	void OnTalkScriptEvent(int EventNumber);
+	void ResumeMiniGame(const struct FString& ResumeKeyword);
 	void ThrowBall();
 	void FlowSelectDecideEvent();
 	void ThrowBallFromAnim();
@@ -231,7 +231,7 @@ public:
 	void ConsumeGamblePrice();
 	void ForceLoseEvent();
 	void DelayedInitialize();
-	void STATIC_GameFlowForChina(TEnumAsByte<EMiniGameKFTypeEnum> Result);
+	void GameFlowForChina(TEnumAsByte<EMiniGameKFTypeEnum> Result);
 	void ActionForChina();
 	void PlayAppearUIAnim();
 	void DecideResultForChina();

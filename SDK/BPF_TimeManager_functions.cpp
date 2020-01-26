@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_TimeManager.BPF_TimeManager_C.getS3GameTimeManager
-// (NetRequest, Exec, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3WorldTimekeeper_C* BP_S3World_Timekeeper          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_TimeManager_C::getS3GameTimeManager(class UObject* __WorldContext, class ABP_S3WorldTimekeeper_C** BP_S3World_Timekeeper)
+void UBPF_TimeManager_C::STATIC_getS3GameTimeManager(class UObject* __WorldContext, class ABP_S3WorldTimekeeper_C** BP_S3World_Timekeeper)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_TimeManager.BPF_TimeManager_C.getS3GameTimeManager");
 

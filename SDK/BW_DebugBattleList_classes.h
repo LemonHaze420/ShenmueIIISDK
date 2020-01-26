@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,47 +50,47 @@ public:
 	}
 
 
-	void STATIC_AddBattles(class ABP_DebugBattleListActor_C* DebugList);
-	void STATIC_AddBattleWidget(class UBW_DebugBattleListItem_C* NewItem);
-	struct FText STATIC_MakeRankText(const struct FName& InName, const struct FST_DojoVictoryStandard& ST_DojoVictoryStandard);
+	void AddBattles(class ABP_DebugBattleListActor_C* DebugList);
+	void AddBattleWidget(class UBW_DebugBattleListItem_C* NewItem);
+	struct FText MakeRankText(const struct FName& InName, const struct FST_DojoVictoryStandard& ST_DojoVictoryStandard);
 	void SetSkillItemCount(int Num);
-	void STATIC_ChangeDojoRank(TEnumAsByte<EDojoPlace> Dojo, int Direction);
+	void ChangeDojoRank(TEnumAsByte<EDojoPlace> Dojo, int Direction);
 	void GetHealingItemCount(int* Num);
-	void STATIC_AddHealingItems(int Amt);
-	void STATIC_FilterNonMaxLevel(TArray<struct FName>* Array, TArray<struct FName>* OutArray);
-	void STATIC_GetOwnedLevelableSkills(TArray<struct FName>* ItemLabels);
-	void STATIC_AddSkillItems(int AddNum);
-	void STATIC_LevelAnySkills(int CompleteSkills);
-	void STATIC_AddPointsToCurrentSkillSet(float Value);
-	void STATIC_UpdateTextHeavy();
+	void AddHealingItems(int Amt);
+	void FilterNonMaxLevel(TArray<struct FName>* Array, TArray<struct FName>* OutArray);
+	void GetOwnedLevelableSkills(TArray<struct FName>* ItemLabels);
+	void AddSkillItems(int AddNum);
+	void LevelAnySkills(int CompleteSkills);
+	void AddPointsToCurrentSkillSet(float Value);
+	void UpdateTextHeavy();
 	void UpdateText();
-	void STATIC_CallOnStartBattle();
+	void CallOnStartBattle();
 	void Initialize();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_Construct();
-	void STATIC_BndEvt__BW_DebugBattleListStat_K2Node_ComponentBoundEvent_3_OnPlus__DelegateSignature();
-	void STATIC_BndEvt__BW_DebugBattleListStat_K2Node_ComponentBoundEvent_4_OnMinus__DelegateSignature();
-	void STATIC_BndEvt__BW_DebugBattleListStat_K2Node_ComponentBoundEvent_5_OnMax__DelegateSignature();
-	void STATIC_BndEvt__HealItems_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature();
-	void STATIC_BndEvt__HealItems_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature();
-	void STATIC_BndEvt__HealItems_K2Node_ComponentBoundEvent_2_OnMax__DelegateSignature();
-	void STATIC_BndEvt__Button_ChobuStart_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_BndEvt__ChoDojoStat_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature();
-	void STATIC_BndEvt__ChoDojoStat_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature();
-	void STATIC_BndEvt__HakDojoStat_K2Node_ComponentBoundEvent_2_OnPlus__DelegateSignature();
-	void STATIC_BndEvt__HakDojoStat_K2Node_ComponentBoundEvent_3_OnMinus__DelegateSignature();
-	void STATIC_BndEvt__Button_HakkasonStart_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_BndEvt__Button_MaxRyo_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_BndEvt__Difficulty_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature();
-	void STATIC_BndEvt__Difficulty_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature();
+	void Construct();
+	void BndEvt__BW_DebugBattleListStat_K2Node_ComponentBoundEvent_3_OnPlus__DelegateSignature();
+	void BndEvt__BW_DebugBattleListStat_K2Node_ComponentBoundEvent_4_OnMinus__DelegateSignature();
+	void BndEvt__BW_DebugBattleListStat_K2Node_ComponentBoundEvent_5_OnMax__DelegateSignature();
+	void BndEvt__HealItems_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature();
+	void BndEvt__HealItems_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature();
+	void BndEvt__HealItems_K2Node_ComponentBoundEvent_2_OnMax__DelegateSignature();
+	void BndEvt__Button_ChobuStart_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__ChoDojoStat_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature();
+	void BndEvt__ChoDojoStat_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature();
+	void BndEvt__HakDojoStat_K2Node_ComponentBoundEvent_2_OnPlus__DelegateSignature();
+	void BndEvt__HakDojoStat_K2Node_ComponentBoundEvent_3_OnMinus__DelegateSignature();
+	void BndEvt__Button_HakkasonStart_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Button_MaxRyo_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__Difficulty_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature();
+	void BndEvt__Difficulty_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature();
 	void BndEvt__BW_DebugBattleListLevelStat_K2Node_ComponentBoundEvent_1_OnChanged__DelegateSignature(int Value);
 	void BndEvt__AttackLevel_K2Node_ComponentBoundEvent_0_OnChanged__DelegateSignature(int Value);
 	void BndEvt__VitalityLevel_K2Node_ComponentBoundEvent_1_OnChanged__DelegateSignature(int Value);
-	void STATIC_BndEvt__BW_BoolProperty_K2Node_ComponentBoundEvent_1_BoolPropertyChanged__DelegateSignature();
+	void BndEvt__BW_BoolProperty_K2Node_ComponentBoundEvent_1_BoolPropertyChanged__DelegateSignature();
 	void OnBattleButtonFocused(class US3Button* Button);
-	void STATIC_BuildMenu();
-	void STATIC_SetInitialFocus();
-	void STATIC_ExecuteUbergraph_BW_DebugBattleList(int EntryPoint);
+	void BuildMenu();
+	void SetInitialFocus();
+	void ExecuteUbergraph_BW_DebugBattleList(int EntryPoint);
 	void OnStartBattle__DelegateSignature();
 };
 

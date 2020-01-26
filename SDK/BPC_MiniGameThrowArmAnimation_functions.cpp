@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.IsInitializeVariables
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UBPC_MiniGameThrowArmAnimation_C::IsInitializeVariables(bool* bSuccess)
 	UBPC_MiniGameThrowArmAnimation_C_IsInitializeVariables_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,16 +36,15 @@ void UBPC_MiniGameThrowArmAnimation_C::IsInitializeVariables(bool* bSuccess)
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.AllStopAnimation
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameThrowArmAnimation_C::STATIC_AllStopAnimation()
+void UBPC_MiniGameThrowArmAnimation_C::AllStopAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.AllStopAnimation");
 
 	UBPC_MiniGameThrowArmAnimation_C_AllStopAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,11 +53,11 @@ void UBPC_MiniGameThrowArmAnimation_C::STATIC_AllStopAnimation()
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.UpdateArmRotation
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                Add                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPC_MiniGameThrowArmAnimation_C::STATIC_UpdateArmRotation(const struct FRotator& Add)
+void UBPC_MiniGameThrowArmAnimation_C::UpdateArmRotation(const struct FRotator& Add)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.UpdateArmRotation");
 
@@ -75,7 +73,7 @@ void UBPC_MiniGameThrowArmAnimation_C::STATIC_UpdateArmRotation(const struct FRo
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.IsAligned
-// (Net, NetRequest, Event, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bAligned                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -97,7 +95,7 @@ void UBPC_MiniGameThrowArmAnimation_C::IsAligned(bool* bAligned)
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.PlayTakeOutAnimation
-// (Net, Native, Event, NetMulticast, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameThrowArmAnimation_C::PlayTakeOutAnimation()
 {
@@ -106,7 +104,6 @@ void UBPC_MiniGameThrowArmAnimation_C::PlayTakeOutAnimation()
 	UBPC_MiniGameThrowArmAnimation_C_PlayTakeOutAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,7 +112,7 @@ void UBPC_MiniGameThrowArmAnimation_C::PlayTakeOutAnimation()
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.StopTakeOutAnimation
-// (Net, Native, Event, NetMulticast, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameThrowArmAnimation_C::StopTakeOutAnimation()
 {
@@ -124,7 +121,6 @@ void UBPC_MiniGameThrowArmAnimation_C::StopTakeOutAnimation()
 	UBPC_MiniGameThrowArmAnimation_C_StopTakeOutAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,7 +129,7 @@ void UBPC_MiniGameThrowArmAnimation_C::StopTakeOutAnimation()
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.PlayThrowAnimation
-// (NetRequest, Exec, Native, Event, NetResponse, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameThrowArmAnimation_C::PlayThrowAnimation()
 {
@@ -142,7 +138,6 @@ void UBPC_MiniGameThrowArmAnimation_C::PlayThrowAnimation()
 	UBPC_MiniGameThrowArmAnimation_C_PlayThrowAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,9 +146,9 @@ void UBPC_MiniGameThrowArmAnimation_C::PlayThrowAnimation()
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.StopThrowAnimation
-// (Net, NetReliable, NetRequest, Exec, Static, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameThrowArmAnimation_C::STATIC_StopThrowAnimation()
+void UBPC_MiniGameThrowArmAnimation_C::StopThrowAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.StopThrowAnimation");
 
@@ -168,16 +163,15 @@ void UBPC_MiniGameThrowArmAnimation_C::STATIC_StopThrowAnimation()
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.PlayThrowEndAnimation
-// (Net, Native, Static, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameThrowArmAnimation_C::STATIC_PlayThrowEndAnimation()
+void UBPC_MiniGameThrowArmAnimation_C::PlayThrowEndAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.PlayThrowEndAnimation");
 
 	UBPC_MiniGameThrowArmAnimation_C_PlayThrowEndAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -186,9 +180,9 @@ void UBPC_MiniGameThrowArmAnimation_C::STATIC_PlayThrowEndAnimation()
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.StopThrowEndAnimation
-// (NetReliable, NetRequest, Exec, Static, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameThrowArmAnimation_C::STATIC_StopThrowEndAnimation()
+void UBPC_MiniGameThrowArmAnimation_C::StopThrowEndAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.StopThrowEndAnimation");
 
@@ -203,11 +197,11 @@ void UBPC_MiniGameThrowArmAnimation_C::STATIC_StopThrowEndAnimation()
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.ReceiveTick
-// (Exec, NetResponse, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameThrowArmAnimation_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UBPC_MiniGameThrowArmAnimation_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.ReceiveTick");
 
@@ -223,7 +217,7 @@ void UBPC_MiniGameThrowArmAnimation_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.InitializeVariables
-// (NetReliable, Native, NetResponse, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameThrowArmAnimation_C::InitializeVariables()
 {
@@ -232,7 +226,6 @@ void UBPC_MiniGameThrowArmAnimation_C::InitializeVariables()
 	UBPC_MiniGameThrowArmAnimation_C_InitializeVariables_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,16 +234,15 @@ void UBPC_MiniGameThrowArmAnimation_C::InitializeVariables()
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.ResetVariables
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameThrowArmAnimation_C::STATIC_ResetVariables()
+void UBPC_MiniGameThrowArmAnimation_C::ResetVariables()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.ResetVariables");
 
 	UBPC_MiniGameThrowArmAnimation_C_ResetVariables_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,7 +251,7 @@ void UBPC_MiniGameThrowArmAnimation_C::STATIC_ResetVariables()
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.ExecuteUbergraph_BPC_MiniGameThrowArmAnimation
-// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -271,7 +263,6 @@ void UBPC_MiniGameThrowArmAnimation_C::ExecuteUbergraph_BPC_MiniGameThrowArmAnim
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -280,9 +271,9 @@ void UBPC_MiniGameThrowArmAnimation_C::ExecuteUbergraph_BPC_MiniGameThrowArmAnim
 
 
 // Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.OnFinishedTakeOutDispatcher__DelegateSignature
-// (Event, NetResponse, Static, MulticastDelegate, Public, NetServer, BlueprintCallable)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameThrowArmAnimation_C::STATIC_OnFinishedTakeOutDispatcher__DelegateSignature()
+void UBPC_MiniGameThrowArmAnimation_C::OnFinishedTakeOutDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameThrowArmAnimation.BPC_MiniGameThrowArmAnimation_C.OnFinishedTakeOutDispatcher__DelegateSignature");
 

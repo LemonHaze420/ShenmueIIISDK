@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ExitActor.BP_ExitActor_C.UserConstructionScript
-// (Net, Native, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_ExitActor_C::UserConstructionScript()
 {
@@ -23,7 +23,6 @@ void ABP_ExitActor_C::UserConstructionScript()
 	ABP_ExitActor_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_ExitActor_C::UserConstructionScript()
 
 
 // Function BP_ExitActor.BP_ExitActor_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_ExitActor_C::ReceiveBeginPlay()
 {
@@ -49,7 +48,7 @@ void ABP_ExitActor_C::ReceiveBeginPlay()
 
 
 // Function BP_ExitActor.BP_ExitActor_C.ReceiveEndPlay
-// (NetReliable, Exec, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -69,7 +68,7 @@ void ABP_ExitActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 
 
 // Function BP_ExitActor.BP_ExitActor_C.SelectDecide
-// (Exec, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -89,7 +88,7 @@ void ABP_ExitActor_C::SelectDecide(class AActor* Actor)
 
 
 // Function BP_ExitActor.BP_ExitActor_C.SelectCancel
-// (Net, Exec, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -109,11 +108,11 @@ void ABP_ExitActor_C::SelectCancel(class AActor* Actor)
 
 
 // Function BP_ExitActor.BP_ExitActor_C.ExecuteUbergraph_BP_ExitActor
-// (Net, Static, Private, Protected, Delegate, NetServer, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ExitActor_C::STATIC_ExecuteUbergraph_BP_ExitActor(int EntryPoint)
+void ABP_ExitActor_C::ExecuteUbergraph_BP_ExitActor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExitActor.BP_ExitActor_C.ExecuteUbergraph_BP_ExitActor");
 

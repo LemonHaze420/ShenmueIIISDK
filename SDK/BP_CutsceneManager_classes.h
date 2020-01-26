@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,74 +48,74 @@ public:
 	}
 
 
-	void STATIC_SkipToEnd(bool DEBUG);
+	void SkipToEnd(bool Debug);
 	void OnFinishedUnloadCutsceneLevelWithBattleLevelStreaming(const struct FName& InId);
-	void STATIC_OnFinishedLoadCutsceneLevelWithBattleLevelStreaming(const struct FName& InId);
-	void STATIC_RequestUnloadCurrentCutsceneLevel();
-	void STATIC_RequestLoadCurrentCutsceneLevel();
-	bool STATIC_DebugGetIsQTEForceSuccess();
+	void OnFinishedLoadCutsceneLevelWithBattleLevelStreaming(const struct FName& InId);
+	void RequestUnloadCurrentCutsceneLevel();
+	void RequestLoadCurrentCutsceneLevel();
+	bool DebugGetIsQTEForceSuccess();
 	void DebugSetIsQTEForceSuccess(bool bForceSuccess);
 	void UpdateFinishingFinishLoadingScreen();
 	void UpdateFinishingWaitLevelStreamingLoadLevel();
 	void UpdateFinishingUnloadLevel();
 	void SetupCurrentCutscenePlayerEndFadeInfo();
 	void ResumeGameTime();
-	void STATIC_StopGameTime();
-	void STATIC_UpdateStartingFinishLoadingScreen();
-	void STATIC_UpdateStartingLoadOther();
-	void STATIC_UpdateStartingLoadLevel();
+	void StopGameTime();
+	void UpdateStartingFinishLoadingScreen();
+	void UpdateStartingLoadOther();
+	void UpdateStartingLoadLevel();
 	void UpdateStartingFadeOut();
 	TArray<struct FName> GetRequiredUnloadLevelList(const struct FName& CutsceneId);
-	bool STATIC_CheckLoadLevelTarget(const struct FName& InLevelName);
+	bool CheckLoadLevelTarget(const struct FName& InLevelName);
 	struct FRotator GetLastCutsceneCharaReplaceRotation(const struct FName& CharaName);
 	struct FVector GetLastCutsceneCharaReplaceLocation(const struct FName& CharaName);
 	struct FTransform GetLastCutsceneCharaReplaceTransform(const struct FName& CharaName);
-	bool STATIC_DoesLastCutsceneCharaReplaceInfoExist(const struct FName& CharaName);
+	bool DoesLastCutsceneCharaReplaceInfoExist(const struct FName& CharaName);
 	void UpdateLastCutsceneCharaReplaceInfo();
-	void STATIC_HideLoadingScreen();
-	void STATIC_ShowLoadingScreen();
-	void STATIC_OnFinishedLoadLevelAfterPlayerFinished();
+	void HideLoadingScreen();
+	void ShowLoadingScreen();
+	void OnFinishedLoadLevelAfterPlayerFinished();
 	void OnCutscenePlayerStartSequence();
-	void STATIC_OnFinishLoadingScreen();
+	void OnFinishLoadingScreen();
 	void SetupFadeData();
 	bool StartCutscene(const struct FName& CutsceneId, bool UseFadeOut);
 	bool IsUsingForceWeather();
 	TArray<struct FName> GetRequiredLoadLevelList(const struct FName& CutsceneId);
 	bool IsExistLevelData(const struct FName& CutsceneId);
-	void STATIC_ExecuteOnFinishedUnloadCutsceneLevel();
-	bool STATIC_DebugGetUseAnotherShenfa();
-	class USkeletalMesh* STATIC_DebugGetAnotherShenfaMesh();
-	void STATIC_DebugSetAnotherShenfaMesh(class USkeletalMesh* Mesh);
-	void STATIC_DebugSetupAnotherShenfa();
-	bool STATIC_DebugGetIsUseAnotherShenfa();
-	void STATIC_DebugSetIsUseAnotherShenfa(bool bUse);
-	float STATIC_TmpGetSkyForceTimeOfDayValue();
-	float STATIC_GetForceTimeOfDayValue();
-	bool STATIC_IsUsingForceTimeOfDay();
-	void STATIC_DebugToggleDispSkeletalMeshInfo();
-	bool STATIC_DebugIsFormalMesh(const struct FString& MeshName);
-	bool STATIC_DebugIsFormalSkeleton(const struct FString& SkeletonName);
-	void STATIC_DebugDispSkeletalMeshInfo();
-	void STATIC_DisableReplacePlayer();
-	void STATIC_UpdateLastCutsceneQTEResult();
-	void STATIC_getLevelData(const struct FName& CutsceneId, class US3CutsceneLevelData** LevelData);
+	void ExecuteOnFinishedUnloadCutsceneLevel();
+	bool DebugGetUseAnotherShenfa();
+	class USkeletalMesh* DebugGetAnotherShenfaMesh();
+	void DebugSetAnotherShenfaMesh(class USkeletalMesh* Mesh);
+	void DebugSetupAnotherShenfa();
+	bool DebugGetIsUseAnotherShenfa();
+	void DebugSetIsUseAnotherShenfa(bool bUse);
+	float TmpGetSkyForceTimeOfDayValue();
+	float GetForceTimeOfDayValue();
+	bool IsUsingForceTimeOfDay();
+	void DebugToggleDispSkeletalMeshInfo();
+	bool DebugIsFormalMesh(const struct FString& MeshName);
+	bool DebugIsFormalSkeleton(const struct FString& SkeletonName);
+	void DebugDispSkeletalMeshInfo();
+	void DisableReplacePlayer();
+	void UpdateLastCutsceneQTEResult();
+	void getLevelData(const struct FName& CutsceneId, class US3CutsceneLevelData** LevelData);
 	void ExecuteOnFinishedCutscenePlayer();
 	void ExecuteOnFinishedLoadCutsceneLevel();
-	void STATIC_GetCurrentCutscenePlayer(class ABP_CutscenePlayer_C** CutscenePlayer);
-	void STATIC_GetCurrentCutscene(struct FName* Cutscene);
-	bool STATIC_IsWaitingFinishFadeOut();
-	bool STATIC_IsLoadCompleted(const struct FName& CutsceneId);
-	void STATIC_FindCutscenePlayer(const struct FName& CutsceneId, bool* IsFound, class ABP_CutscenePlayer_C** FoundPlayer);
+	void GetCurrentCutscenePlayer(class ABP_CutscenePlayer_C** CutscenePlayer);
+	void GetCurrentCutscene(struct FName* Cutscene);
+	bool IsWaitingFinishFadeOut();
+	bool IsLoadCompleted(const struct FName& CutsceneId);
+	void FindCutscenePlayer(const struct FName& CutsceneId, bool* isFound, class ABP_CutscenePlayer_C** FoundPlayer);
 	void SetPlayInfos(TArray<struct FST_CutscenePlayInfo>* newParam);
 	void SetPlayInfo(const struct FName& CutsceneId, TArray<struct FName>* LoadLevels, TArray<struct FName>* InvisibleLevels);
-	void STATIC_FindPlayInfo(const struct FName& CutsceneId, bool* IsFound, int* Index);
-	void STATIC_UserConstructionScript();
+	void FindPlayInfo(const struct FName& CutsceneId, bool* isFound, int* Index);
+	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_OnFinishedCutscenePlayer();
-	void STATIC_BindOnFinishedCutscenePlayerEvent();
-	void STATIC_UnbindOnFinishedCutscenePlayerEvent();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BP_CutsceneManager(int EntryPoint);
+	void OnFinishedCutscenePlayer();
+	void BindOnFinishedCutscenePlayerEvent();
+	void UnbindOnFinishedCutscenePlayerEvent();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_CutsceneManager(int EntryPoint);
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.Tick
-// (NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_AdventureHealthBar_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void Uwgt_AdventureHealthBar_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.Tick");
 
@@ -36,11 +36,11 @@ void Uwgt_AdventureHealthBar_C::STATIC_Tick(const struct FGeometry& MyGeometry, 
 
 
 // Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.PreConstruct
-// (Net, NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_AdventureHealthBar_C::STATIC_PreConstruct(bool IsDesignTime)
+void Uwgt_AdventureHealthBar_C::PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.PreConstruct");
 
@@ -56,7 +56,7 @@ void Uwgt_AdventureHealthBar_C::STATIC_PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.ExecuteUbergraph_wgt_AdventureHealthBar
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

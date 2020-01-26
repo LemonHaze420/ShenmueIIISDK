@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,13 +40,13 @@ public:
 	}
 
 
-	void STATIC_ResetRotation();
-	void STATIC_SetLocation(const struct FVector& NewLocation);
+	void ResetRotation();
+	void SetLocation(const struct FVector& NewLocation);
 	void SetItemData(class UStaticMesh* NewMesh, const struct FRotator& Rotation);
 	void UserConstructionScript();
-	void STATIC_OnLoaded_218B594649E9FBD554432E8844E18A3C(class UObject* Loaded);
+	void OnLoaded_218B594649E9FBD554432E8844E18A3C(class UObject* Loaded);
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_BP_UI_ViewItem(int EntryPoint);
+	void ExecuteUbergraph_BP_UI_ViewItem(int EntryPoint);
 	void ED_FinishMeshLoad__DelegateSignature();
 };
 

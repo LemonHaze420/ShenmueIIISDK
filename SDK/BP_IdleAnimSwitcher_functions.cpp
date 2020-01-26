@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_IdleAnimSwitcher.BP_IdleAnimSwitcher_C.EndIdle
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            IdleVariation                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void UBP_IdleAnimSwitcher_C::EndIdle(int* IdleVariation)
 
 
 // Function BP_IdleAnimSwitcher.BP_IdleAnimSwitcher_C.UpdateIdle
-// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            IdleVariation                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -60,11 +60,11 @@ void UBP_IdleAnimSwitcher_C::UpdateIdle(float DeltaSeconds, int* IdleVariation)
 
 
 // Function BP_IdleAnimSwitcher.BP_IdleAnimSwitcher_C.StartIdle
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            IdleVariation                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UBP_IdleAnimSwitcher_C::STATIC_StartIdle(int* IdleVariation)
+void UBP_IdleAnimSwitcher_C::StartIdle(int* IdleVariation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_IdleAnimSwitcher.BP_IdleAnimSwitcher_C.StartIdle");
 

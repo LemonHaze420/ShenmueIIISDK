@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,21 +51,21 @@ public:
 	}
 
 
-	void STATIC_SetRotateAnimMode(bool IsHighSpeed);
+	void SetRotateAnimMode(bool IsHighSpeed);
 	void SetDistanceMax(float DistanceMax);
 	void SetVisibleIcon(bool ButtonVisible, bool RotateVisible, bool LStickVisible);
-	struct FText STATIC_GetFishGramText();
-	void STATIC_SetImagePositionY(class UImage* ArgImage, float ArgPosY);
-	void STATIC_StartFishGaugeAnime();
+	struct FText GetFishGramText();
+	void SetImagePositionY(class UImage* ArgImage, float ArgPosY);
+	void StartFishGaugeAnime();
 	void UpdateFishGauge(bool* IsUpdate);
 	void SetDispFishGaugeAll(bool ArgDisp);
 	struct FText GetDistanceText();
-	struct FText STATIC_GetFishScaleText();
-	struct FText STATIC_GetFishNameText();
+	struct FText GetFishScaleText();
+	struct FText GetFishNameText();
 	void Construct();
-	void STATIC_SetCaptcherVisible(ESlateVisibility InVisibility);
-	void STATIC_SetResultVIsible(ESlateVisibility InVisibility);
-	void STATIC_ExecuteUbergraph_WBP_Fishing_test(int EntryPoint);
+	void SetCaptcherVisible(ESlateVisibility InVisibility);
+	void SetResultVisible(ESlateVisibility InVisibility);
+	void ExecuteUbergraph_WBP_Fishing_test(int EntryPoint);
 };
 
 

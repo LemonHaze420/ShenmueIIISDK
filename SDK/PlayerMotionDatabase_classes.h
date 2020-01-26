@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,15 +37,15 @@ public:
 	void IndexMontageByInt(TArray<class UAnimMontage*> List, int Int, class UAnimMontage** Output);
 	void SearchMontage_Event(TEnumAsByte<EN_PC_EventMontage> Event, class UAnimMontage** Output);
 	void SearchMontage_KnockDoor(TEnumAsByte<EN_DoorOpenType> Enum, class UAnimMontage** Output);
-	void STATIC_SearchMontage_OpenDoor(TEnumAsByte<EN_DoorOpenType> Enum, bool RightSide, class UAnimMontage** Output);
-	void STATIC_SearchMontage_TalkShow(TEnumAsByte<EN_SHOW_ID> Item, bool Crouch, class UAnimMontage** Output);
-	void STATIC_SearchMontage_WalkEnd(bool Right, class UAnimMontage** Output);
-	void STATIC_IndexMontageByEnum(TArray<class UAnimMontage*> List, unsigned char Enum, class UAnimMontage** Output);
+	void SearchMontage_OpenDoor(TEnumAsByte<EN_DoorOpenType> Enum, bool RightSide, class UAnimMontage** Output);
+	void SearchMontage_TalkShow(TEnumAsByte<EN_SHOW_ID> Item, bool Crouch, class UAnimMontage** Output);
+	void SearchMontage_WalkEnd(bool Right, class UAnimMontage** Output);
+	void IndexMontageByEnum(TArray<class UAnimMontage*> List, unsigned char Enum, class UAnimMontage** Output);
 	void SearchMontage_Turn(TEnumAsByte<EN_PC_TurnDirection10> TurnDir10, class UAnimMontage** Output);
 	void Initialize();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_PlayerMotionDatabase(int EntryPoint);
+	void ExecuteUbergraph_PlayerMotionDatabase(int EntryPoint);
 };
 
 

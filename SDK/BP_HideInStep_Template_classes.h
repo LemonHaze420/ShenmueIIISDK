@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,14 +32,14 @@ public:
 	}
 
 
-	void STATIC_ChangeHide_Owner(bool Hide);
+	void ChangeHide_Owner(bool Hide);
 	void CheckStep_MinMax(int MinStep, int MaxStep, bool* Result);
 	void LocalEvt_ChangeStep(int SetSteps);
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_StartIn();
-	void STATIC_ExecuteUbergraph_BP_HideInStep_Template(int EntryPoint);
+	void StartIn();
+	void ExecuteUbergraph_BP_HideInStep_Template(int EntryPoint);
 };
 
 

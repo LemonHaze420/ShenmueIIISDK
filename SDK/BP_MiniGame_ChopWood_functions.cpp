@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.UpdateMeshWetness
-// (Net, NetRequest, Exec, Event, NetResponse, Static, Private, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_ChopWood_C::STATIC_UpdateMeshWetness()
+void ABP_MiniGame_ChopWood_C::UpdateMeshWetness()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.UpdateMeshWetness");
 
@@ -31,18 +31,17 @@ void ABP_MiniGame_ChopWood_C::STATIC_UpdateMeshWetness()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.GetDetectAction
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FS3DetectActionParam> ABP_MiniGame_ChopWood_C::STATIC_GetDetectAction()
+TArray<struct FS3DetectActionParam> ABP_MiniGame_ChopWood_C::GetDetectAction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.GetDetectAction");
 
 	ABP_MiniGame_ChopWood_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +52,7 @@ TArray<struct FS3DetectActionParam> ABP_MiniGame_ChopWood_C::STATIC_GetDetectAct
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.SetVisibleUIButtonIcon
-// (NetRequest, Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer, DLLImport, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -65,7 +64,6 @@ void ABP_MiniGame_ChopWood_C::SetVisibleUIButtonIcon(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +72,7 @@ void ABP_MiniGame_ChopWood_C::SetVisibleUIButtonIcon(bool Visible)
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.GetClothMeshComponent
-// (Net, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -85,7 +83,6 @@ class UMeshComponent* ABP_MiniGame_ChopWood_C::GetClothMeshComponent()
 	ABP_MiniGame_ChopWood_C_GetClothMeshComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,18 +93,17 @@ class UMeshComponent* ABP_MiniGame_ChopWood_C::GetClothMeshComponent()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.InitAsyncLoad
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_ChopWood_C::STATIC_InitAsyncLoad(bool* dummy)
+void ABP_MiniGame_ChopWood_C::InitAsyncLoad(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.InitAsyncLoad");
 
 	ABP_MiniGame_ChopWood_C_InitAsyncLoad_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,7 +115,7 @@ void ABP_MiniGame_ChopWood_C::STATIC_InitAsyncLoad(bool* dummy)
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.StopAllChopBGM
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::StopAllChopBGM()
 {
@@ -128,7 +124,6 @@ void ABP_MiniGame_ChopWood_C::StopAllChopBGM()
 	ABP_MiniGame_ChopWood_C_StopAllChopBGM_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,11 +132,11 @@ void ABP_MiniGame_ChopWood_C::StopAllChopBGM()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.StopChopBGM
-// (Net, NetReliable, Event, NetResponse, Static, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<E_MiniGame_CW_BGMType> Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_ChopWood_C::STATIC_StopChopBGM(TEnumAsByte<E_MiniGame_CW_BGMType> Index)
+void ABP_MiniGame_ChopWood_C::StopChopBGM(TEnumAsByte<E_MiniGame_CW_BGMType> Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.StopChopBGM");
 
@@ -157,7 +152,7 @@ void ABP_MiniGame_ChopWood_C::STATIC_StopChopBGM(TEnumAsByte<E_MiniGame_CW_BGMTy
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.PlayChopBGMFromCue
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<E_MiniGame_CW_BGMType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -169,7 +164,6 @@ void ABP_MiniGame_ChopWood_C::PlayChopBGMFromCue(TEnumAsByte<E_MiniGame_CW_BGMTy
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,7 +172,7 @@ void ABP_MiniGame_ChopWood_C::PlayChopBGMFromCue(TEnumAsByte<E_MiniGame_CW_BGMTy
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.DecideWoodId
-// (Net, NetReliable, Native, Event, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::DecideWoodId()
 {
@@ -187,7 +181,6 @@ void ABP_MiniGame_ChopWood_C::DecideWoodId()
 	ABP_MiniGame_ChopWood_C_DecideWoodId_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,7 +189,7 @@ void ABP_MiniGame_ChopWood_C::DecideWoodId()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.UpdateChopCount
-// (Exec, Native, Event, NetResponse, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::UpdateChopCount()
 {
@@ -205,7 +198,6 @@ void ABP_MiniGame_ChopWood_C::UpdateChopCount()
 	ABP_MiniGame_ChopWood_C_UpdateChopCount_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -214,7 +206,7 @@ void ABP_MiniGame_ChopWood_C::UpdateChopCount()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.SetAnimXmoveFromHit
-// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           JustHit                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           PlusAngle                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -228,7 +220,6 @@ void ABP_MiniGame_ChopWood_C::SetAnimXmoveFromHit(bool JustHit, bool PlusAngle)
 	params.PlusAngle = PlusAngle;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -237,7 +228,7 @@ void ABP_MiniGame_ChopWood_C::SetAnimXmoveFromHit(bool JustHit, bool PlusAngle)
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.AddDebugVolumeType
-// (NetReliable, Native, NetResponse, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -249,7 +240,6 @@ void ABP_MiniGame_ChopWood_C::AddDebugVolumeType(int Add)
 	params.Add = Add;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -258,7 +248,7 @@ void ABP_MiniGame_ChopWood_C::AddDebugVolumeType(int Add)
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.SetVolume
-// (Net, NetReliable, NetResponse, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -278,7 +268,7 @@ void ABP_MiniGame_ChopWood_C::SetVolume(float Value)
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.CheckHitWood
-// (Net, NetRequest, Native, Event, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Hit                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           JustHit                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -290,7 +280,6 @@ void ABP_MiniGame_ChopWood_C::CheckHitWood(bool* Hit, bool* JustHit)
 	ABP_MiniGame_ChopWood_C_CheckHitWood_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -304,7 +293,7 @@ void ABP_MiniGame_ChopWood_C::CheckHitWood(bool* Hit, bool* JustHit)
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.IsGameFinished
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -325,7 +314,7 @@ bool ABP_MiniGame_ChopWood_C::IsGameFinished()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.SpawnInputControlActor
-// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Delegate, NetServer)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -336,7 +325,6 @@ class ABP_MiniGameInputBase_C* ABP_MiniGame_ChopWood_C::SpawnInputControlActor()
 	ABP_MiniGame_ChopWood_C_SpawnInputControlActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -347,7 +335,7 @@ class ABP_MiniGameInputBase_C* ABP_MiniGame_ChopWood_C::SpawnInputControlActor()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.SpawnWood
-// (NetReliable, NetMulticast, MulticastDelegate, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::SpawnWood()
 {
@@ -364,7 +352,7 @@ void ABP_MiniGame_ChopWood_C::SpawnWood()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.UserConstructionScript
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::UserConstructionScript()
 {
@@ -373,7 +361,6 @@ void ABP_MiniGame_ChopWood_C::UserConstructionScript()
 	ABP_MiniGame_ChopWood_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -382,7 +369,7 @@ void ABP_MiniGame_ChopWood_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.TImeline_Xmove__FinishedFunc
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::TImeline_Xmove__FinishedFunc()
 {
@@ -391,7 +378,6 @@ void ABP_MiniGame_ChopWood_C::TImeline_Xmove__FinishedFunc()
 	ABP_MiniGame_ChopWood_C_TImeline_Xmove__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -400,7 +386,7 @@ void ABP_MiniGame_ChopWood_C::TImeline_Xmove__FinishedFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.TImeline_Xmove__UpdateFunc
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::TImeline_Xmove__UpdateFunc()
 {
@@ -409,7 +395,6 @@ void ABP_MiniGame_ChopWood_C::TImeline_Xmove__UpdateFunc()
 	ABP_MiniGame_ChopWood_C_TImeline_Xmove__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -418,7 +403,7 @@ void ABP_MiniGame_ChopWood_C::TImeline_Xmove__UpdateFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Timeline_Ymove_Chop__FinishedFunc
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__FinishedFunc()
 {
@@ -427,7 +412,6 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__FinishedFunc()
 	ABP_MiniGame_ChopWood_C_Timeline_Ymove_Chop__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -436,7 +420,7 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__FinishedFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Timeline_Ymove_Chop__UpdateFunc
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__UpdateFunc()
 {
@@ -445,7 +429,6 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__UpdateFunc()
 	ABP_MiniGame_ChopWood_C_Timeline_Ymove_Chop__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -454,7 +437,7 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__UpdateFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Timeline_Ymove_Chop__EndHitCheck__EventFunc
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__EndHitCheck__EventFunc()
 {
@@ -463,7 +446,6 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__EndHitCheck__EventFunc()
 	ABP_MiniGame_ChopWood_C_Timeline_Ymove_Chop__EndHitCheck__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -472,7 +454,7 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__EndHitCheck__EventFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Timeline_Ymove_Chop__TimingOfHit__EventFunc
-// (Net, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__TimingOfHit__EventFunc()
 {
@@ -481,7 +463,6 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__TimingOfHit__EventFunc()
 	ABP_MiniGame_ChopWood_C_Timeline_Ymove_Chop__TimingOfHit__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -490,7 +471,7 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Chop__TimingOfHit__EventFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Timeline_Ymove_Reset__FinishedFunc
-// (Net, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Reset__FinishedFunc()
 {
@@ -499,7 +480,6 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Reset__FinishedFunc()
 	ABP_MiniGame_ChopWood_C_Timeline_Ymove_Reset__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -508,7 +488,7 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Reset__FinishedFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Timeline_Ymove_Reset__UpdateFunc
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Reset__UpdateFunc()
 {
@@ -517,7 +497,6 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Reset__UpdateFunc()
 	ABP_MiniGame_ChopWood_C_Timeline_Ymove_Reset__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -526,7 +505,7 @@ void ABP_MiniGame_ChopWood_C::Timeline_Ymove_Reset__UpdateFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Timeline_UpdatFieldOfView__FinishedFunc
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Timeline_UpdatFieldOfView__FinishedFunc()
 {
@@ -535,7 +514,6 @@ void ABP_MiniGame_ChopWood_C::Timeline_UpdatFieldOfView__FinishedFunc()
 	ABP_MiniGame_ChopWood_C_Timeline_UpdatFieldOfView__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -544,7 +522,7 @@ void ABP_MiniGame_ChopWood_C::Timeline_UpdatFieldOfView__FinishedFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Timeline_UpdatFieldOfView__UpdateFunc
-// (Net, NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Timeline_UpdatFieldOfView__UpdateFunc()
 {
@@ -553,7 +531,6 @@ void ABP_MiniGame_ChopWood_C::Timeline_UpdatFieldOfView__UpdateFunc()
 	ABP_MiniGame_ChopWood_C_Timeline_UpdatFieldOfView__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -562,7 +539,7 @@ void ABP_MiniGame_ChopWood_C::Timeline_UpdatFieldOfView__UpdateFunc()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.OnFinishedFade
-// (Net, NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::OnFinishedFade()
 {
@@ -571,7 +548,6 @@ void ABP_MiniGame_ChopWood_C::OnFinishedFade()
 	ABP_MiniGame_ChopWood_C_OnFinishedFade_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -580,7 +556,7 @@ void ABP_MiniGame_ChopWood_C::OnFinishedFade()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.FinalizeTalk
-// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::FinalizeTalk()
 {
@@ -589,7 +565,6 @@ void ABP_MiniGame_ChopWood_C::FinalizeTalk()
 	ABP_MiniGame_ChopWood_C_FinalizeTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -598,7 +573,7 @@ void ABP_MiniGame_ChopWood_C::FinalizeTalk()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.DrawMiniGame
-// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::DrawMiniGame()
 {
@@ -607,7 +582,6 @@ void ABP_MiniGame_ChopWood_C::DrawMiniGame()
 	ABP_MiniGame_ChopWood_C_DrawMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -616,7 +590,7 @@ void ABP_MiniGame_ChopWood_C::DrawMiniGame()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.LoseMiniGame
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::LoseMiniGame()
 {
@@ -625,7 +599,6 @@ void ABP_MiniGame_ChopWood_C::LoseMiniGame()
 	ABP_MiniGame_ChopWood_C_LoseMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -634,7 +607,7 @@ void ABP_MiniGame_ChopWood_C::LoseMiniGame()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.WinMiniGame
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::WinMiniGame()
 {
@@ -643,7 +616,6 @@ void ABP_MiniGame_ChopWood_C::WinMiniGame()
 	ABP_MiniGame_ChopWood_C_WinMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -652,7 +624,7 @@ void ABP_MiniGame_ChopWood_C::WinMiniGame()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.EndMiniGame
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::EndMiniGame()
 {
@@ -661,7 +633,6 @@ void ABP_MiniGame_ChopWood_C::EndMiniGame()
 	ABP_MiniGame_ChopWood_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -670,7 +641,7 @@ void ABP_MiniGame_ChopWood_C::EndMiniGame()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.OnfinishedSequence_Start
-// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::OnfinishedSequence_Start()
 {
@@ -679,7 +650,6 @@ void ABP_MiniGame_ChopWood_C::OnfinishedSequence_Start()
 	ABP_MiniGame_ChopWood_C_OnfinishedSequence_Start_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -688,7 +658,7 @@ void ABP_MiniGame_ChopWood_C::OnfinishedSequence_Start()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.PlaySEResultWood
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::PlaySEResultWood()
 {
@@ -697,7 +667,6 @@ void ABP_MiniGame_ChopWood_C::PlaySEResultWood()
 	ABP_MiniGame_ChopWood_C_PlaySEResultWood_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -706,7 +675,7 @@ void ABP_MiniGame_ChopWood_C::PlaySEResultWood()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.PlaySEResultMoney
-// (Net, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::PlaySEResultMoney()
 {
@@ -715,7 +684,6 @@ void ABP_MiniGame_ChopWood_C::PlaySEResultMoney()
 	ABP_MiniGame_ChopWood_C_PlaySEResultMoney_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -724,7 +692,7 @@ void ABP_MiniGame_ChopWood_C::PlaySEResultMoney()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Event_WidgetEndMiniGame
-// (Net, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Event_WidgetEndMiniGame()
 {
@@ -733,7 +701,6 @@ void ABP_MiniGame_ChopWood_C::Event_WidgetEndMiniGame()
 	ABP_MiniGame_ChopWood_C_Event_WidgetEndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -742,7 +709,7 @@ void ABP_MiniGame_ChopWood_C::Event_WidgetEndMiniGame()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.DelayedPauseAnim
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::DelayedPauseAnim()
 {
@@ -751,7 +718,6 @@ void ABP_MiniGame_ChopWood_C::DelayedPauseAnim()
 	ABP_MiniGame_ChopWood_C_DelayedPauseAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -760,7 +726,7 @@ void ABP_MiniGame_ChopWood_C::DelayedPauseAnim()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.StartMiniGame
-// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::StartMiniGame()
 {
@@ -769,7 +735,6 @@ void ABP_MiniGame_ChopWood_C::StartMiniGame()
 	ABP_MiniGame_ChopWood_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -778,7 +743,7 @@ void ABP_MiniGame_ChopWood_C::StartMiniGame()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.ReceiveBeginPlay
-// (Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::ReceiveBeginPlay()
 {
@@ -787,7 +752,6 @@ void ABP_MiniGame_ChopWood_C::ReceiveBeginPlay()
 	ABP_MiniGame_ChopWood_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -796,7 +760,7 @@ void ABP_MiniGame_ChopWood_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.GameStart
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::GameStart()
 {
@@ -805,7 +769,6 @@ void ABP_MiniGame_ChopWood_C::GameStart()
 	ABP_MiniGame_ChopWood_C_GameStart_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -814,7 +777,7 @@ void ABP_MiniGame_ChopWood_C::GameStart()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.AxAction
-// (Net, NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::AxAction()
 {
@@ -823,7 +786,6 @@ void ABP_MiniGame_ChopWood_C::AxAction()
 	ABP_MiniGame_ChopWood_C_AxAction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -832,11 +794,11 @@ void ABP_MiniGame_ChopWood_C::AxAction()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.ReceiveTick
-// (Net, NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_ChopWood_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_ChopWood_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.ReceiveTick");
 
@@ -852,7 +814,7 @@ void ABP_MiniGame_ChopWood_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.ResetResultMenuEvent
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::ResetResultMenuEvent()
 {
@@ -861,7 +823,6 @@ void ABP_MiniGame_ChopWood_C::ResetResultMenuEvent()
 	ABP_MiniGame_ChopWood_C_ResetResultMenuEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -870,11 +831,11 @@ void ABP_MiniGame_ChopWood_C::ResetResultMenuEvent()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.PlayGetWoodMotion
-// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Angle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_ChopWood_C::STATIC_PlayGetWoodMotion(float Angle)
+void ABP_MiniGame_ChopWood_C::PlayGetWoodMotion(float Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.PlayGetWoodMotion");
 
@@ -890,7 +851,7 @@ void ABP_MiniGame_ChopWood_C::STATIC_PlayGetWoodMotion(float Angle)
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.ReadyWood
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::ReadyWood()
 {
@@ -899,7 +860,6 @@ void ABP_MiniGame_ChopWood_C::ReadyWood()
 	ABP_MiniGame_ChopWood_C_ReadyWood_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -908,7 +868,7 @@ void ABP_MiniGame_ChopWood_C::ReadyWood()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.SetXmoveTimeLine
-// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::SetXmoveTimeLine()
 {
@@ -917,7 +877,6 @@ void ABP_MiniGame_ChopWood_C::SetXmoveTimeLine()
 	ABP_MiniGame_ChopWood_C_SetXmoveTimeLine_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -926,7 +885,7 @@ void ABP_MiniGame_ChopWood_C::SetXmoveTimeLine()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.GameStartEvent
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::GameStartEvent()
 {
@@ -935,7 +894,6 @@ void ABP_MiniGame_ChopWood_C::GameStartEvent()
 	ABP_MiniGame_ChopWood_C_GameStartEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -944,7 +902,7 @@ void ABP_MiniGame_ChopWood_C::GameStartEvent()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.Event_EndMiniGame
-// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ChopWood_C::Event_EndMiniGame()
 {
@@ -953,7 +911,6 @@ void ABP_MiniGame_ChopWood_C::Event_EndMiniGame()
 	ABP_MiniGame_ChopWood_C_Event_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -962,7 +919,7 @@ void ABP_MiniGame_ChopWood_C::Event_EndMiniGame()
 
 
 // Function BP_MiniGame_ChopWood.BP_MiniGame_ChopWood_C.ExecuteUbergraph_BP_MiniGame_ChopWood
-// (NetMulticast, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

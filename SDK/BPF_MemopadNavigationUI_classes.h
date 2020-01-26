@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,8 +26,8 @@ public:
 
 
 	void STATIC_BPF_UpdateMemopadShoulderUIGlow2(class UMaterialInstanceDynamic* Material, float Alpha, bool bInteractable, class UObject* __WorldContext);
-	void BPF_UpdateMemopadShoulderUIGlow(class UMaterialInstanceDynamic* Material, class UImage* AlphaSource, bool bInteractable, class UObject* __WorldContext);
-	void BPF_InitMemopadShoulderUI(class UImage* Right, class UImage* Left, class UObject* __WorldContext, class UMaterialInstanceDynamic** RightMaterial, class UMaterialInstanceDynamic** LeftMaterial);
+	void STATIC_BPF_UpdateMemopadShoulderUIGlow(class UMaterialInstanceDynamic* Material, class UImage* AlphaSource, bool bInteractable, class UObject* __WorldContext);
+	void STATIC_BPF_InitMemopadShoulderUI(class UImage* Right, class UImage* Left, class UObject* __WorldContext, class UMaterialInstanceDynamic** RightMaterial, class UMaterialInstanceDynamic** LeftMaterial);
 };
 
 

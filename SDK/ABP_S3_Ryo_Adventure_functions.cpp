@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.IsCrouchSubState
-// (Native, Event, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Enter                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -27,7 +27,6 @@ bool UABP_S3_Ryo_Adventure_C::IsCrouchSubState(bool Enter)
 	params.Enter = Enter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +37,7 @@ bool UABP_S3_Ryo_Adventure_C::IsCrouchSubState(bool Enter)
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.UpdateIKAlpha
-// (NetReliable, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UABP_S3_Ryo_Adventure_C::UpdateIKAlpha()
 {
@@ -55,7 +54,7 @@ void UABP_S3_Ryo_Adventure_C::UpdateIKAlpha()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.IsReadyTalk
-// (NetRequest, Native, NetResponse, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -66,7 +65,6 @@ bool UABP_S3_Ryo_Adventure_C::IsReadyTalk()
 	UABP_S3_Ryo_Adventure_C_IsReadyTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,9 +75,9 @@ bool UABP_S3_Ryo_Adventure_C::IsReadyTalk()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.UpdateRootMotionMode
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_UpdateRootMotionMode()
+void UABP_S3_Ryo_Adventure_C::UpdateRootMotionMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.UpdateRootMotionMode");
 
@@ -94,7 +92,7 @@ void UABP_S3_Ryo_Adventure_C::STATIC_UpdateRootMotionMode()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.GetEyeRotateEmotionRate
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          EyeRotateEmotionRate           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -116,7 +114,7 @@ void UABP_S3_Ryo_Adventure_C::GetEyeRotateEmotionRate(float* EyeRotateEmotionRat
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.TryGetFootOffset
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          LocationX                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          LocationY                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -124,7 +122,7 @@ void UABP_S3_Ryo_Adventure_C::GetEyeRotateEmotionRate(float* EyeRotateEmotionRat
 // float                          ToLocationZ                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Offset                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_TryGetFootOffset(float LocationX, float LocationY, float LocationZ, float ToLocationZ, float* Offset)
+void UABP_S3_Ryo_Adventure_C::TryGetFootOffset(float LocationX, float LocationY, float LocationZ, float ToLocationZ, float* Offset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.TryGetFootOffset");
 
@@ -135,7 +133,6 @@ void UABP_S3_Ryo_Adventure_C::STATIC_TryGetFootOffset(float LocationX, float Loc
 	params.ToLocationZ = ToLocationZ;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,7 +144,7 @@ void UABP_S3_Ryo_Adventure_C::STATIC_TryGetFootOffset(float LocationX, float Loc
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_2D942E174AC6D08E92AA9C9FA46219AF
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_2D942E174AC6D08E92AA9C9FA46219AF()
 {
@@ -156,7 +153,6 @@ void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3
 	UABP_S3_Ryo_Adventure_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_2D942E174AC6D08E92AA9C9FA46219AF_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -165,9 +161,9 @@ void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_34D2F7614094E987B6C89CB46987B0F1
-// (Net, NetReliable, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_34D2F7614094E987B6C89CB46987B0F1()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_34D2F7614094E987B6C89CB46987B0F1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_34D2F7614094E987B6C89CB46987B0F1");
 
@@ -182,9 +178,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_197664294DE7604637833796D9EE4242
-// (Net, NetReliable, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_197664294DE7604637833796D9EE4242()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_197664294DE7604637833796D9EE4242()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_197664294DE7604637833796D9EE4242");
 
@@ -199,16 +195,15 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_4273B96548EDA421C16249BF2C2A3BC3
-// (NetRequest, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_4273B96548EDA421C16249BF2C2A3BC3()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_4273B96548EDA421C16249BF2C2A3BC3()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_4273B96548EDA421C16249BF2C2A3BC3");
 
 	UABP_S3_Ryo_Adventure_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_4273B96548EDA421C16249BF2C2A3BC3_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,16 +212,15 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_8C924C0F41DF00E02A236C9497DCA06B
-// (NetRequest, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_8C924C0F41DF00E02A236C9497DCA06B()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_8C924C0F41DF00E02A236C9497DCA06B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_8C924C0F41DF00E02A236C9497DCA06B");
 
 	UABP_S3_Ryo_Adventure_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_8C924C0F41DF00E02A236C9497DCA06B_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -235,16 +229,15 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendSpacePlayer_626D9A5543ACC2C1B9FEBFA9D4D37A92
-// (Net, NetReliable, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendSpacePlayer_626D9A5543ACC2C1B9FEBFA9D4D37A92()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendSpacePlayer_626D9A5543ACC2C1B9FEBFA9D4D37A92()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendSpacePlayer_626D9A5543ACC2C1B9FEBFA9D4D37A92");
 
 	UABP_S3_Ryo_Adventure_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendSpacePlayer_626D9A5543ACC2C1B9FEBFA9D4D37A92_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -253,7 +246,7 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_4EDA23474A9AD7DFCD432291D567DA7B
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_4EDA23474A9AD7DFCD432291D567DA7B()
 {
@@ -262,7 +255,6 @@ void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3
 	UABP_S3_Ryo_Adventure_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_4EDA23474A9AD7DFCD432291D567DA7B_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -271,9 +263,9 @@ void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByInt_80A3B02B4A386BA3104DDC9CBFF11C0E
-// (NetReliable, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByInt_80A3B02B4A386BA3104DDC9CBFF11C0E()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByInt_80A3B02B4A386BA3104DDC9CBFF11C0E()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByInt_80A3B02B4A386BA3104DDC9CBFF11C0E");
 
@@ -288,9 +280,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequencePlayer_32A9BCC6436ACB445B9F409D77EFC84C
-// (NetReliable, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequencePlayer_32A9BCC6436ACB445B9F409D77EFC84C()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequencePlayer_32A9BCC6436ACB445B9F409D77EFC84C()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequencePlayer_32A9BCC6436ACB445B9F409D77EFC84C");
 
@@ -305,9 +297,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_9E61388E4BE417BB784B009AF145F982
-// (Net, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_9E61388E4BE417BB784B009AF145F982()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_9E61388E4BE417BB784B009AF145F982()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_SequenceEvaluator_9E61388E4BE417BB784B009AF145F982");
 
@@ -322,9 +314,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_LayeredBoneBlend_E7852581436ED83A7BA6E98D2BA70C75
-// (Net, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_LayeredBoneBlend_E7852581436ED83A7BA6E98D2BA70C75()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_LayeredBoneBlend_E7852581436ED83A7BA6E98D2BA70C75()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_LayeredBoneBlend_E7852581436ED83A7BA6E98D2BA70C75");
 
@@ -339,9 +331,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3SpeedWarping_B1AFACDE4596DC529F0E2595AFBB0FEC
-// (Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3SpeedWarping_B1AFACDE4596DC529F0E2595AFBB0FEC()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3SpeedWarping_B1AFACDE4596DC529F0E2595AFBB0FEC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3SpeedWarping_B1AFACDE4596DC529F0E2595AFBB0FEC");
 
@@ -356,9 +348,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendSpacePlayer_4B306F7C44EB9F9E03F5719C847DBDD9
-// (Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendSpacePlayer_4B306F7C44EB9F9E03F5719C847DBDD9()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendSpacePlayer_4B306F7C44EB9F9E03F5719C847DBDD9()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendSpacePlayer_4B306F7C44EB9F9E03F5719C847DBDD9");
 
@@ -373,9 +365,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3TwoBoneIK_2D6E1A2C4A2A0A43358B75BE3751F48B
-// (Net, NetReliable, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3TwoBoneIK_2D6E1A2C4A2A0A43358B75BE3751F48B()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3TwoBoneIK_2D6E1A2C4A2A0A43358B75BE3751F48B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3TwoBoneIK_2D6E1A2C4A2A0A43358B75BE3751F48B");
 
@@ -390,9 +382,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3SpeedWarping_246F6CD345E4CE5F1DC6C39BDFF04B49
-// (Net, NetReliable, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3SpeedWarping_246F6CD345E4CE5F1DC6C39BDFF04B49()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3SpeedWarping_246F6CD345E4CE5F1DC6C39BDFF04B49()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_S3SpeedWarping_246F6CD345E4CE5F1DC6C39BDFF04B49");
 
@@ -407,9 +399,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TwoWayBlend_48192F054BAF015E7A8C5293F7FB708C
-// (NetReliable, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TwoWayBlend_48192F054BAF015E7A8C5293F7FB708C()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TwoWayBlend_48192F054BAF015E7A8C5293F7FB708C()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TwoWayBlend_48192F054BAF015E7A8C5293F7FB708C");
 
@@ -424,9 +416,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByBool_774C036E45BBF0A1004D968017EB2759
-// (NetReliable, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByBool_774C036E45BBF0A1004D968017EB2759()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByBool_774C036E45BBF0A1004D968017EB2759()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByBool_774C036E45BBF0A1004D968017EB2759");
 
@@ -441,9 +433,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByBool_7E563A014AE735B0978C0997CE6493C7
-// (Net, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByBool_7E563A014AE735B0978C0997CE6493C7()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByBool_7E563A014AE735B0978C0997CE6493C7()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_BlendListByBool_7E563A014AE735B0978C0997CE6493C7");
 
@@ -458,9 +450,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_01C2E928454C7B4060B2609B4E81306A
-// (Net, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_01C2E928454C7B4060B2609B4E81306A()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_01C2E928454C7B4060B2609B4E81306A()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_01C2E928454C7B4060B2609B4E81306A");
 
@@ -475,9 +467,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_AdvanceFootL
-// (NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_AdvanceFootL()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_AdvanceFootL()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_AdvanceFootL");
 
@@ -492,9 +484,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_AdvanceFootL()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_AdvanceFootR
-// (NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_AdvanceFootR()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_AdvanceFootR()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_AdvanceFootR");
 
@@ -509,9 +501,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_AdvanceFootR()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_73FB11B64A3DD637EBBE559FE99F2133
-// (Net, NetReliable, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_73FB11B64A3DD637EBBE559FE99F2133()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_73FB11B64A3DD637EBBE559FE99F2133()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_73FB11B64A3DD637EBBE559FE99F2133");
 
@@ -526,9 +518,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_GroundingFootL
-// (Net, NetReliable, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_GroundingFootL()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_GroundingFootL()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_GroundingFootL");
 
@@ -543,9 +535,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_GroundingFootL()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_GroundingFootR
-// (NetReliable, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_GroundingFootR()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_GroundingFootR()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_GroundingFootR");
 
@@ -560,9 +552,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_GroundingFootR()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_OpenDoor
-// (NetReliable, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_OpenDoor()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_OpenDoor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_OpenDoor");
 
@@ -577,9 +569,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_OpenDoor()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StopStartLeft
-// (Net, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StopStartLeft()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_StopStartLeft()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StopStartLeft");
 
@@ -594,9 +586,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StopStartLeft()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StopStartRight
-// (Net, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StopStartRight()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_StopStartRight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StopStartRight");
 
@@ -611,9 +603,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StopStartRight()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_ResetState
-// (Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_ResetState()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_ResetState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_ResetState");
 
@@ -628,9 +620,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_ResetState()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StateIdleStart
-// (Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StateIdleStart()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_StateIdleStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StateIdleStart");
 
@@ -645,16 +637,15 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StateIdleStart()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_TransitFrame
-// (Net, NetReliable, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_TransitFrame()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_TransitFrame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_TransitFrame");
 
 	UABP_S3_Ryo_Adventure_C_AnimNotify_TransitFrame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -663,16 +654,15 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_TransitFrame()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_EnterMove
-// (NetReliable, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_EnterMove()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_EnterMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_EnterMove");
 
 	UABP_S3_Ryo_Adventure_C_AnimNotify_EnterMove_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -681,16 +671,15 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_EnterMove()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_ShowItemZoomCameraStart
-// (NetReliable, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_ShowItemZoomCameraStart()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_ShowItemZoomCameraStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_ShowItemZoomCameraStart");
 
 	UABP_S3_Ryo_Adventure_C_AnimNotify_ShowItemZoomCameraStart_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -699,16 +688,15 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_ShowItemZoomCameraStart()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StateIdleEnd
-// (Net, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StateIdleEnd()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_StateIdleEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StateIdleEnd");
 
 	UABP_S3_Ryo_Adventure_C_AnimNotify_StateIdleEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -717,7 +705,7 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StateIdleEnd()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.UpdateStateIdle
-// (NetReliable, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -737,16 +725,15 @@ void UABP_S3_Ryo_Adventure_C::UpdateStateIdle(float DeltaSeconds)
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_LeftMove
-// (Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_LeftMove()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_LeftMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_LeftMove");
 
 	UABP_S3_Ryo_Adventure_C_AnimNotify_LeftMove_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -755,16 +742,15 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_LeftMove()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_3FBA78674A5BD3C247312B9647B92959
-// (Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_3FBA78674A5BD3C247312B9647B92959()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_3FBA78674A5BD3C247312B9647B92959()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_3FBA78674A5BD3C247312B9647B92959");
 
 	UABP_S3_Ryo_Adventure_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_3FBA78674A5BD3C247312B9647B92959_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -773,9 +759,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_ShowItemTakeOut
-// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_ShowItemTakeOut()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_ShowItemTakeOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_ShowItemTakeOut");
 
@@ -790,9 +776,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_ShowItemTakeOut()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_ShowItemPutAway
-// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_ShowItemPutAway()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_ShowItemPutAway()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_ShowItemPutAway");
 
@@ -807,9 +793,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_ShowItemPutAway()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StateLookAtTurnAroundEnd
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StateLookAtTurnAroundEnd()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_StateLookAtTurnAroundEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StateLookAtTurnAroundEnd");
 
@@ -824,9 +810,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StateLookAtTurnAroundEnd()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StateLookAtTurnAroundEntered
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StateLookAtTurnAroundEntered()
+void UABP_S3_Ryo_Adventure_C::AnimNotify_StateLookAtTurnAroundEntered()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.AnimNotify_StateLookAtTurnAroundEntered");
 
@@ -841,7 +827,7 @@ void UABP_S3_Ryo_Adventure_C::STATIC_AnimNotify_StateLookAtTurnAroundEntered()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.BlueprintUpdateAnimation
-// (NetReliable, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -861,9 +847,9 @@ void UABP_S3_Ryo_Adventure_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.BlueprintInitializeAnimation
-// (Net, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_BlueprintInitializeAnimation()
+void UABP_S3_Ryo_Adventure_C::BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.BlueprintInitializeAnimation");
 
@@ -878,9 +864,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_BlueprintInitializeAnimation()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.BlueprintPostEvaluateAnimation
-// (NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_BlueprintPostEvaluateAnimation()
+void UABP_S3_Ryo_Adventure_C::BlueprintPostEvaluateAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.BlueprintPostEvaluateAnimation");
 
@@ -895,9 +881,9 @@ void UABP_S3_Ryo_Adventure_C::STATIC_BlueprintPostEvaluateAnimation()
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_9D9706E14BC3C593F586E69BF949A3D3
-// (NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_9D9706E14BC3C593F586E69BF949A3D3()
+void UABP_S3_Ryo_Adventure_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_9D9706E14BC3C593F586E69BF949A3D3()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_Adventure_AnimGraphNode_TransitionResult_9D9706E14BC3C593F586E69BF949A3D3");
 
@@ -912,7 +898,7 @@ void UABP_S3_Ryo_Adventure_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph
 
 
 // Function ABP_S3_Ryo_Adventure.ABP_S3_Ryo_Adventure_C.ExecuteUbergraph_ABP_S3_Ryo_Adventure
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

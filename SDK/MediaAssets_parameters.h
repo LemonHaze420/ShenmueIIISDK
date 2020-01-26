@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,12 +24,6 @@ struct UMediaSource_Validate_Params
 struct UMediaSource_GetUrl_Params
 {
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function MediaAssets.FileMediaSource.SetFilePath
-struct UFileMediaSource_SetFilePath_Params
-{
-	struct FString                                     Path;                                                     // (Parm, ZeroConstructor)
 };
 
 // Function MediaAssets.MediaPlayer.SupportsSeeking
@@ -481,27 +475,6 @@ struct UMediaPlayer_CanPause_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
-struct UMediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices_Params
-{
-	TArray<struct FMediaCaptureDevice>                 OutDevices;                                               // (Parm, OutParm, ZeroConstructor)
-	int                                                Filter;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
-struct UMediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices_Params
-{
-	TArray<struct FMediaCaptureDevice>                 OutDevices;                                               // (Parm, OutParm, ZeroConstructor)
-	int                                                Filter;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
-struct UMediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices_Params
-{
-	TArray<struct FMediaCaptureDevice>                 OutDevices;                                               // (Parm, OutParm, ZeroConstructor)
-	int                                                Filter;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function MediaAssets.MediaPlaylist.Replace
 struct UMediaPlaylist_Replace_Params
 {
@@ -586,6 +559,25 @@ struct UMediaPlaylist_Add_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
+struct UMediaSoundComponent_SetMediaPlayer_Params
+{
+	class UMediaPlayer*                                NewMediaPlayer;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
+struct UMediaSoundComponent_GetMediaPlayer_Params
+{
+	class UMediaPlayer*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
+struct UMediaSoundComponent_BP_GetAttenuationSettingsToApply_Params
+{
+	struct FSoundAttenuationSettings                   OutAttenuationSettings;                                   // (Parm, OutParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function MediaAssets.MediaTexture.SetMediaPlayer
 struct UMediaTexture_SetMediaPlayer_Params
 {
@@ -616,23 +608,31 @@ struct UMediaTexture_GetAspectRatio_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
-struct UMediaSoundComponent_SetMediaPlayer_Params
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
+struct UMediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices_Params
 {
-	class UMediaPlayer*                                NewMediaPlayer;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FMediaCaptureDevice>                 OutDevices;                                               // (Parm, OutParm, ZeroConstructor)
+	int                                                Filter;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
-struct UMediaSoundComponent_GetMediaPlayer_Params
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
+struct UMediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices_Params
 {
-	class UMediaPlayer*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	TArray<struct FMediaCaptureDevice>                 OutDevices;                                               // (Parm, OutParm, ZeroConstructor)
+	int                                                Filter;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
-struct UMediaSoundComponent_BP_GetAttenuationSettingsToApply_Params
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
+struct UMediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices_Params
 {
-	struct FSoundAttenuationSettings                   OutAttenuationSettings;                                   // (Parm, OutParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	TArray<struct FMediaCaptureDevice>                 OutDevices;                                               // (Parm, OutParm, ZeroConstructor)
+	int                                                Filter;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function MediaAssets.FileMediaSource.SetFilePath
+struct UFileMediaSource_SetFilePath_Params
+{
+	struct FString                                     Path;                                                     // (Parm, ZeroConstructor)
 };
 
 }

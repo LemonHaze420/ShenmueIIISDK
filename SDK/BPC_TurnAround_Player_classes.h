@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,13 +28,13 @@ public:
 
 
 	bool TryPreTalkJump();
-	class AActor* STATIC_GetTalkedMinigame();
+	class AActor* GetTalkedMinigame();
 	void CanTurnAround(bool* bCan);
-	void STATIC_ReturnPreTalkRotationActor();
-	void STATIC_ReceiveBeginPlay();
+	void ReturnPreTalkRotationActor();
+	void ReceiveBeginPlay();
 	void ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
-	void STATIC_TurnAroundTickFinish();
-	void STATIC_ExecuteUbergraph_BPC_TurnAround_Player(int EntryPoint);
+	void TurnAroundTickFinish();
+	void ExecuteUbergraph_BPC_TurnAround_Player(int EntryPoint);
 };
 
 

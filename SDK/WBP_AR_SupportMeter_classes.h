@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,10 +31,10 @@ public:
 	}
 
 
-	void STATIC_SetFlogNumber(int Number);
-	void STATIC_SetTurtleColor(int SelectIndex);
-	void STATIC_PreConstruct(bool IsDesignTime);
-	void STATIC_ExecuteUbergraph_WBP_AR_SupportMeter(int EntryPoint);
+	void SetFlogNumber(int Number);
+	void SetTurtleColor(int SelectIndex);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_AR_SupportMeter(int EntryPoint);
 };
 
 

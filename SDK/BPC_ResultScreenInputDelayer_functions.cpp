@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.SetInputEnabled
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bValue                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBPC_ResultScreenInputDelayer_C::SetInputEnabled(bool bValue)
 
 
 // Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.DelayInput
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delay                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBPW_UI_GeneralWindow_Button_C* Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -56,9 +56,9 @@ void UBPC_ResultScreenInputDelayer_C::DelayInput(float Delay, class UBPW_UI_Gene
 
 
 // Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.NotifyAnimationComplete
-// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_ResultScreenInputDelayer_C::STATIC_NotifyAnimationComplete()
+void UBPC_ResultScreenInputDelayer_C::NotifyAnimationComplete()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.NotifyAnimationComplete");
 
@@ -73,7 +73,7 @@ void UBPC_ResultScreenInputDelayer_C::STATIC_NotifyAnimationComplete()
 
 
 // Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.ReceiveEndPlay
-// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -93,11 +93,11 @@ void UBPC_ResultScreenInputDelayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>
 
 
 // Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.ExecuteUbergraph_BPC_ResultScreenInputDelayer
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ResultScreenInputDelayer_C::STATIC_ExecuteUbergraph_BPC_ResultScreenInputDelayer(int EntryPoint)
+void UBPC_ResultScreenInputDelayer_C::ExecuteUbergraph_BPC_ResultScreenInputDelayer(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.ExecuteUbergraph_BPC_ResultScreenInputDelayer");
 
@@ -113,7 +113,7 @@ void UBPC_ResultScreenInputDelayer_C::STATIC_ExecuteUbergraph_BPC_ResultScreenIn
 
 
 // Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.OnDisableInput__DelegateSignature
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPC_ResultScreenInputDelayer_C::OnDisableInput__DelegateSignature()
 {
@@ -130,9 +130,9 @@ void UBPC_ResultScreenInputDelayer_C::OnDisableInput__DelegateSignature()
 
 
 // Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.OnEnableInput__DelegateSignature
-// (Net, NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBPC_ResultScreenInputDelayer_C::STATIC_OnEnableInput__DelegateSignature()
+void UBPC_ResultScreenInputDelayer_C::OnEnableInput__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ResultScreenInputDelayer.BPC_ResultScreenInputDelayer_C.OnEnableInput__DelegateSignature");
 

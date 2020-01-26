@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Keiho_Input_C::STATIC_UserConstructionScript()
+void ABP_MiniGame_Keiho_Input_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.UserConstructionScript");
 
 	ABP_MiniGame_Keiho_Input_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,11 +31,11 @@ void ABP_MiniGame_Keiho_Input_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_4
-// (Net, NetReliable, Exec, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGame_Keiho_Input_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_4(const struct FKey& Key)
+void ABP_MiniGame_Keiho_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_4(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_4");
 
@@ -52,11 +51,11 @@ void ABP_MiniGame_Keiho_Input_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent
 
 
 // Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_3
-// (Net, Exec, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGame_Keiho_Input_C::STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_3(const struct FKey& Key)
+void ABP_MiniGame_Keiho_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_3(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_3");
 
@@ -72,11 +71,11 @@ void ABP_MiniGame_Keiho_Input_C::STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEv
 
 
 // Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_21
-// (NetReliable, NetRequest, Exec, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_Input_C::STATIC_InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_21(float AxisValue)
+void ABP_MiniGame_Keiho_Input_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_21(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_21");
 
@@ -92,11 +91,11 @@ void ABP_MiniGame_Keiho_Input_C::STATIC_InpAxisEvt_MG_RightStickHorizontal_K2Nod
 
 
 // Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_24
-// (Net, NetRequest, Exec, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_Input_C::STATIC_InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_24(float AxisValue)
+void ABP_MiniGame_Keiho_Input_C::InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_24(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_24");
 
@@ -112,11 +111,11 @@ void ABP_MiniGame_Keiho_Input_C::STATIC_InpAxisEvt_MG_RightStickVertical_K2Node_
 
 
 // Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_13
-// (NetRequest, Exec, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_Input_C::STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_13(float AxisValue)
+void ABP_MiniGame_Keiho_Input_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_13(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_13");
 
@@ -132,11 +131,11 @@ void ABP_MiniGame_Keiho_Input_C::STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node
 
 
 // Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_14
-// (NetRequest, Exec, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_Input_C::STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_14(float AxisValue)
+void ABP_MiniGame_Keiho_Input_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_14(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_14");
 
@@ -152,7 +151,7 @@ void ABP_MiniGame_Keiho_Input_C::STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_I
 
 
 // Function BP_MiniGame_Keiho_Input.BP_MiniGame_Keiho_Input_C.ExecuteUbergraph_BP_MiniGame_Keiho_Input
-// (Net, NetReliable, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

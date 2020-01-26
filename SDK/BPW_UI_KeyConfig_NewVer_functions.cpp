@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_KeyConfig_NewVer.BPW_UI_KeyConfig_NewVer_C.PushRightLeftCursor
-// (Net, Exec, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_KeyConfig_NewVer_C::STATIC_PushRightLeftCursor(int Add)
+void UBPW_UI_KeyConfig_NewVer_C::PushRightLeftCursor(int Add)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_KeyConfig_NewVer.BPW_UI_KeyConfig_NewVer_C.PushRightLeftCursor");
 
@@ -34,11 +34,11 @@ void UBPW_UI_KeyConfig_NewVer_C::STATIC_PushRightLeftCursor(int Add)
 
 
 // Function BPW_UI_KeyConfig_NewVer.BPW_UI_KeyConfig_NewVer_C.PushUpDownCursor
-// (NetReliable, NetRequest, Event, Static, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_KeyConfig_NewVer_C::STATIC_PushUpDownCursor(int Value)
+void UBPW_UI_KeyConfig_NewVer_C::PushUpDownCursor(int Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_KeyConfig_NewVer.BPW_UI_KeyConfig_NewVer_C.PushUpDownCursor");
 
@@ -54,7 +54,7 @@ void UBPW_UI_KeyConfig_NewVer_C::STATIC_PushUpDownCursor(int Value)
 
 
 // Function BPW_UI_KeyConfig_NewVer.BPW_UI_KeyConfig_NewVer_C.MakeSettingList
-// (NetReliable, Exec, NetResponse, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_KeyConfig_NewVer_C::MakeSettingList()
 {
@@ -71,16 +71,15 @@ void UBPW_UI_KeyConfig_NewVer_C::MakeSettingList()
 
 
 // Function BPW_UI_KeyConfig_NewVer.BPW_UI_KeyConfig_NewVer_C.Construct
-// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UBPW_UI_KeyConfig_NewVer_C::STATIC_Construct()
+void UBPW_UI_KeyConfig_NewVer_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_KeyConfig_NewVer.BPW_UI_KeyConfig_NewVer_C.Construct");
 
 	UBPW_UI_KeyConfig_NewVer_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,7 +88,7 @@ void UBPW_UI_KeyConfig_NewVer_C::STATIC_Construct()
 
 
 // Function BPW_UI_KeyConfig_NewVer.BPW_UI_KeyConfig_NewVer_C.ExecuteUbergraph_BPW_UI_KeyConfig_NewVer
-// (Net, NetReliable, Exec, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

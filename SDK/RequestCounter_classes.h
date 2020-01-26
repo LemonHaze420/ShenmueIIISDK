@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,14 +28,14 @@ public:
 	}
 
 
-	struct FString STATIC_CreateDebugString();
-	void STATIC_Clean();
+	struct FString CreateDebugString();
+	void Clean();
 	void HasRequestsFast(bool* bHasRequests);
-	void STATIC_HasRequests(bool* bHasRequests);
-	void STATIC_RemoveRequester(class UObject* Requester, bool* bNewlyRemoved);
-	void STATIC_AddRequester(class UObject* Requester, bool* bnewlyAdded);
-	void STATIC_OnLastRequestRemove__DelegateSignature();
-	void STATIC_OnFirstRequestAdd__DelegateSignature();
+	void HasRequests(bool* bHasRequests);
+	void RemoveRequester(class UObject* Requester, bool* bNewlyRemoved);
+	void AddRequester(class UObject* Requester, bool* bnewlyAdded);
+	void OnLastRequestRemove__DelegateSignature();
+	void OnFirstRequestAdd__DelegateSignature();
 };
 
 

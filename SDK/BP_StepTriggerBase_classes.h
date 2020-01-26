@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,33 +40,33 @@ public:
 	bool CheckTime();
 	bool HasGameTimeRestriction();
 	void CacheInStepAndTime(int* Previous, int* Next);
-	void STATIC_OnExitStepAndTime();
-	void STATIC_OnEnterStepAndTime();
-	bool STATIC_CheckSavedConditions();
-	bool STATIC_CanActionByBehaviorState();
-	void STATIC_EnableByStep(bool bEnable, bool* bDummy);
+	void OnExitStepAndTime();
+	void OnEnterStepAndTime();
+	bool CheckSavedConditions();
+	bool CanActionByBehaviorState();
+	void EnableByStep(bool bEnable, bool* bDummy);
 	void ResetBind();
-	void STATIC_ResetParam(bool* dummy);
-	void STATIC_CheckOverlapPlayer(bool* Overlap);
-	void STATIC_EndOverlap();
+	void ResetParam(bool* dummy);
+	void CheckOverlapPlayer(bool* Overlap);
+	void EndOverlap();
 	void CanAction(bool CheckOnly, bool* CAN);
 	void CheckStep(bool* ReturnFlag);
-	void STATIC_PlayAction(bool* Success);
-	void STATIC_CheckStepAndTime(bool* ReturnFlag);
+	void PlayAction(bool* Success);
+	void CheckStepAndTime(bool* ReturnFlag);
 	void UserConstructionScript();
-	void STATIC_BindTalkEvent();
+	void BindTalkEvent();
 	void OnEndTalk();
-	void STATIC_UnBindTalkEvent();
+	void UnBindTalkEvent();
 	void OnFinishedTurn(class UBPC_TurnAround_C* SelfTurnAroundComponent);
 	void BindPlayerBehavior();
 	void ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
-	void STATIC_UnbindPlayerBehavior();
-	void STATIC_ChangeTime(int EventIndex);
-	void STATIC_BindTimeChange(float Time);
+	void UnbindPlayerBehavior();
+	void ChangeTime(int EventIndex);
+	void BindTimeChange(float Time);
 	void UnbindTimeChange();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ChangeStep(int SetSteps);
 	void ChangeFlag(int ArrayIndex, int SetFlags);
 	void RepondToStepOrTime(bool Init);

@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BP_TalkEventManager.BP_TalkEventManager_C.SetCanSkip
+struct ABP_TalkEventManager_C_SetCanSkip_Params
+{
+	bool                                               Skip;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsStreetFightScript
 struct ABP_TalkEventManager_C_IsStreetFightScript_Params
@@ -43,13 +49,6 @@ struct ABP_TalkEventManager_C_StopForceSkip_Params
 {
 };
 
-// Function BP_TalkEventManager.BP_TalkEventManager_C.CheckCanSkip
-struct ABP_TalkEventManager_C_CheckCanSkip_Params
-{
-	bool                                               Skip;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               CAN;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecFade
 struct ABP_TalkEventManager_C_ExecFade_Params
 {
@@ -62,7 +61,7 @@ struct ABP_TalkEventManager_C_ExecFade_Params
 struct ABP_TalkEventManager_C_SkipTalk_Params
 {
 	bool                                               AC_Only;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               DEBUG;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Debug;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.NotifyCameraChange
@@ -759,7 +758,7 @@ struct ABP_TalkEventManager_C_ExecKsLabelTask_Params
 struct ABP_TalkEventManager_C_TryGetItemIndex_Params
 {
 	struct FString                                     FlagStr;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	bool                                               IsFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                Index;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -870,7 +869,7 @@ struct ABP_TalkEventManager_C_FindSubStrings_Params
 {
 	struct FString                                     InStr;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	TArray<struct FString>                             SubStrings;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	bool                                               IsFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FString>                             foundStrings;                                             // (Parm, OutParm, ZeroConstructor)
 };
 
@@ -924,26 +923,20 @@ struct ABP_TalkEventManager_C_UserConstructionScript_Params
 {
 };
 
-// Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Shift_C_K2Node_InputKeyEvent_8
-struct ABP_TalkEventManager_C_InpActEvt_Shift_C_K2Node_InputKeyEvent_8_Params
+// Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Shift_C_K2Node_InputKeyEvent_6
+struct ABP_TalkEventManager_C_InpActEvt_Shift_C_K2Node_InputKeyEvent_6_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Ctrl_Q_K2Node_InputKeyEvent_7
-struct ABP_TalkEventManager_C_InpActEvt_Ctrl_Q_K2Node_InputKeyEvent_7_Params
+// Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Ctrl_Q_K2Node_InputKeyEvent_5
+struct ABP_TalkEventManager_C_InpActEvt_Ctrl_Q_K2Node_InputKeyEvent_5_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Shift_K_K2Node_InputKeyEvent_6
-struct ABP_TalkEventManager_C_InpActEvt_Shift_K_K2Node_InputKeyEvent_6_Params
-{
-	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
-};
-
-// Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Q_K2Node_InputKeyEvent_5
-struct ABP_TalkEventManager_C_InpActEvt_Q_K2Node_InputKeyEvent_5_Params
+// Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Shift_K_K2Node_InputKeyEvent_4
+struct ABP_TalkEventManager_C_InpActEvt_Shift_K_K2Node_InputKeyEvent_4_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -1370,6 +1363,11 @@ struct ABP_TalkEventManager_C_LoadedCueSheet_Params
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.WaitLookAtTask
 struct ABP_TalkEventManager_C_WaitLookAtTask_Params
+{
+};
+
+// Function BP_TalkEventManager.BP_TalkEventManager_C.TrySkipFromBuffer
+struct ABP_TalkEventManager_C_TrySkipFromBuffer_Params
 {
 };
 

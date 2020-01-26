@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.SetValueInts
-// (Net, Native, NetResponse, Static, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Enum                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Denom                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugBattleListLevelStat_C::STATIC_SetValueInts(int Enum, int Denom)
+void UBW_DebugBattleListLevelStat_C::SetValueInts(int Enum, int Denom)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.SetValueInts");
 
@@ -28,7 +28,6 @@ void UBW_DebugBattleListLevelStat_C::STATIC_SetValueInts(int Enum, int Denom)
 	params.Denom = Denom;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void UBW_DebugBattleListLevelStat_C::STATIC_SetValueInts(int Enum, int Denom)
 
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.PreConstruct
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -49,7 +48,6 @@ void UBW_DebugBattleListLevelStat_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +56,7 @@ void UBW_DebugBattleListLevelStat_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UBW_DebugBattleListLevelStat_C::BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -75,7 +73,7 @@ void UBW_DebugBattleListLevelStat_C::BndEvt__Button_AddHP_K2Node_ComponentBoundE
 
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UBW_DebugBattleListLevelStat_C::BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
@@ -92,7 +90,7 @@ void UBW_DebugBattleListLevelStat_C::BndEvt__Button_MinusHP_K2Node_ComponentBoun
 
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.BndEvt__S3Button_1_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UBW_DebugBattleListLevelStat_C::BndEvt__S3Button_1_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
@@ -109,12 +107,12 @@ void UBW_DebugBattleListLevelStat_C::BndEvt__S3Button_1_K2Node_ComponentBoundEve
 
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.BndEvt__SpinBox_101_K2Node_ComponentBoundEvent_0_OnSpinBoxValueCommittedEvent__DelegateSignature
-// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugBattleListLevelStat_C::STATIC_BndEvt__SpinBox_101_K2Node_ComponentBoundEvent_0_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod)
+void UBW_DebugBattleListLevelStat_C::BndEvt__SpinBox_101_K2Node_ComponentBoundEvent_0_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.BndEvt__SpinBox_101_K2Node_ComponentBoundEvent_0_OnSpinBoxValueCommittedEvent__DelegateSignature");
 
@@ -123,7 +121,6 @@ void UBW_DebugBattleListLevelStat_C::STATIC_BndEvt__SpinBox_101_K2Node_Component
 	params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +129,7 @@ void UBW_DebugBattleListLevelStat_C::STATIC_BndEvt__SpinBox_101_K2Node_Component
 
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.BndEvt__Button_Min_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature
-// (Net, NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UBW_DebugBattleListLevelStat_C::BndEvt__Button_Min_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature()
 {
@@ -149,7 +146,7 @@ void UBW_DebugBattleListLevelStat_C::BndEvt__Button_Min_K2Node_ComponentBoundEve
 
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.ResetFocus
-// (NetReliable, NetRequest, Exec, Native, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController*       PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -161,7 +158,6 @@ void UBW_DebugBattleListLevelStat_C::ResetFocus(class APlayerController* PlayerC
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,11 +166,11 @@ void UBW_DebugBattleListLevelStat_C::ResetFocus(class APlayerController* PlayerC
 
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.ExecuteUbergraph_BW_DebugBattleListLevelStat
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugBattleListLevelStat_C::STATIC_ExecuteUbergraph_BW_DebugBattleListLevelStat(int EntryPoint)
+void UBW_DebugBattleListLevelStat_C::ExecuteUbergraph_BW_DebugBattleListLevelStat(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.ExecuteUbergraph_BW_DebugBattleListLevelStat");
 
@@ -182,7 +178,6 @@ void UBW_DebugBattleListLevelStat_C::STATIC_ExecuteUbergraph_BW_DebugBattleListL
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,7 +186,7 @@ void UBW_DebugBattleListLevelStat_C::STATIC_ExecuteUbergraph_BW_DebugBattleListL
 
 
 // Function BW_DebugBattleListLevelStat.BW_DebugBattleListLevelStat_C.OnChanged__DelegateSignature
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -203,7 +198,6 @@ void UBW_DebugBattleListLevelStat_C::OnChanged__DelegateSignature(int Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Memo.BPF_Memo_C.GetS3MemoTextureDataManager
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_MemoTextureDataManager_C* BP_MemoTextureDataManager      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,12 +38,12 @@ void UBPF_Memo_C::STATIC_GetS3MemoTextureDataManager(class UObject* __WorldConte
 
 
 // Function BPF_Memo.BPF_Memo_C.getS3MemopadManager
-// (Native, NetResponse, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3MemopadManager_C*  BPS3MemopadManager             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Memo_C::getS3MemopadManager(class UObject* __WorldContext, class ABP_S3MemopadManager_C** BPS3MemopadManager)
+void UBPF_Memo_C::STATIC_getS3MemopadManager(class UObject* __WorldContext, class ABP_S3MemopadManager_C** BPS3MemopadManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Memo.BPF_Memo_C.getS3MemopadManager");
 
@@ -51,7 +51,6 @@ void UBPF_Memo_C::getS3MemopadManager(class UObject* __WorldContext, class ABP_S
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

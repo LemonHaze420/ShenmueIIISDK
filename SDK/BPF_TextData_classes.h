@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void GetS3TextItemName(const struct FString& ItemId, class UObject* __WorldContext, struct FText* ItemName);
-	void getS3TextDataManager(class UObject* __WorldContext, class UBP_TextDataManager_C** TextDataManager);
+	void STATIC_GetS3TextItemName(const struct FString& ItemId, class UObject* __WorldContext, struct FText* ItemName);
+	void STATIC_getS3TextDataManager(class UObject* __WorldContext, class UBP_TextDataManager_C** TextDataManager);
 };
 
 

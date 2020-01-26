@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,9 +25,9 @@ public:
 	}
 
 
-	struct FVector BPF_Spline_FindPredictedWorldLocationWithProjection(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext);
+	struct FVector STATIC_BPF_Spline_FindPredictedWorldLocationWithProjection(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext);
 	float STATIC_BPF_Spline_FindDistanceClosestToWorldLocation(class USplineComponent* spline, const struct FVector& WorldLocation, class UObject* __WorldContext);
-	struct FVector BPF_Spline_FindPredictedWorldLocation(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext);
+	struct FVector STATIC_BPF_Spline_FindPredictedWorldLocation(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext);
 	struct FVector STATIC_BPF_Spline_FindTangentClosestToWorldLocation(class USplineComponent* spline, class UObject* __WorldContext, struct FVector* WorldLocation);
 };
 

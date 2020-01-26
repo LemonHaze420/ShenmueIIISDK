@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Character.BPF_Character_C.GetACCharacters
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class ABP_S3_ACCharacter_C*> Character                      (Parm, OutParm, ZeroConstructor)
@@ -38,7 +38,7 @@ void UBPF_Character_C::STATIC_GetACCharacters(class UObject* __WorldContext, TAr
 
 
 // Function BPF_Character.BPF_Character_C.TeleportForceAnim
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ACharacter*              Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 DestLocation                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -46,7 +46,7 @@ void UBPF_Character_C::STATIC_GetACCharacters(class UObject* __WorldContext, TAr
 // float                          ForceAnimTime                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Character_C::TeleportForceAnim(class ACharacter* Character, const struct FVector& DestLocation, const struct FRotator& DestRotation, float ForceAnimTime, class UObject* __WorldContext)
+void UBPF_Character_C::STATIC_TeleportForceAnim(class ACharacter* Character, const struct FVector& DestLocation, const struct FRotator& DestRotation, float ForceAnimTime, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Character.BPF_Character_C.TeleportForceAnim");
 
@@ -66,7 +66,7 @@ void UBPF_Character_C::TeleportForceAnim(class ACharacter* Character, const stru
 
 
 // Function BPF_Character.BPF_Character_C.CalcFootprint
-// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFootprintComponent_C*   FootprintComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class USkeletalMeshComponent*  MeshComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -84,7 +84,6 @@ void UBPF_Character_C::STATIC_CalcFootprint(class UFootprintComponent_C* Footpri
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

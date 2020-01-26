@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.UserConstructionScript
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_UserConstructionScript()
+void ABP_S3AdventurePlayerControllerBase_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.UserConstructionScript");
 
 	ABP_S3AdventurePlayerControllerBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,11 +31,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_UserConstructionScript()
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_debugView_K2Node_InputActionEvent_4
-// (Net, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_debugView_K2Node_InputActionEvent_4(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_debugView_K2Node_InputActionEvent_4(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_debugView_K2Node_InputActionEvent_4");
 
@@ -44,7 +43,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_debugView_K2Node_In
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +51,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_debugView_K2Node_In
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_P_K2Node_InputKeyEvent_70
-// (Net, NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_P_K2Node_InputKeyEvent_70(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_P_K2Node_InputKeyEvent_70(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_P_K2Node_InputKeyEvent_70");
 
@@ -73,11 +71,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_P_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_O_K2Node_InputKeyEvent_69
-// (Net, NetReliable, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_O_K2Node_InputKeyEvent_69(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_O_K2Node_InputKeyEvent_69(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_O_K2Node_InputKeyEvent_69");
 
@@ -93,11 +91,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_O_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd_Insert_K2Node_InputKeyEvent_68
-// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Insert_K2Node_InputKeyEvent_68(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Cmd_Insert_K2Node_InputKeyEvent_68(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd_Insert_K2Node_InputKeyEvent_68");
 
@@ -105,7 +103,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Insert_K2Node_I
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,11 +111,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Insert_K2Node_I
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Shift_PageUp_K2Node_InputKeyEvent_67
-// (Net, NetReliable, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Shift_PageUp_K2Node_InputKeyEvent_67(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Cmd_Shift_PageUp_K2Node_InputKeyEvent_67(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Shift_PageUp_K2Node_InputKeyEvent_67");
 
@@ -134,11 +131,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Shift_PageUp_K2
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Shift_PageDown_K2Node_InputKeyEvent_66
-// (Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Shift_PageDown_K2Node_InputKeyEvent_66(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Cmd_Shift_PageDown_K2Node_InputKeyEvent_66(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Shift_PageDown_K2Node_InputKeyEvent_66");
 
@@ -154,11 +151,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Shift_PageDown_
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd_PageUp_K2Node_InputKeyEvent_65
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_PageUp_K2Node_InputKeyEvent_65(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Cmd_PageUp_K2Node_InputKeyEvent_65(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd_PageUp_K2Node_InputKeyEvent_65");
 
@@ -166,7 +163,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_PageUp_K2Node_I
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,11 +171,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_PageUp_K2Node_I
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd_PageDown_K2Node_InputKeyEvent_64
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_PageDown_K2Node_InputKeyEvent_64(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Cmd_PageDown_K2Node_InputKeyEvent_64(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd_PageDown_K2Node_InputKeyEvent_64");
 
@@ -187,7 +183,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_PageDown_K2Node
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,11 +191,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_PageDown_K2Node
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Alt_PageUp_K2Node_InputKeyEvent_63
-// (Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Alt_PageUp_K2Node_InputKeyEvent_63(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Cmd_Alt_PageUp_K2Node_InputKeyEvent_63(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Alt_PageUp_K2Node_InputKeyEvent_63");
 
@@ -216,11 +211,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Alt_PageUp_K2No
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Alt_PageDown_K2Node_InputKeyEvent_62
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Alt_PageDown_K2Node_InputKeyEvent_62(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Cmd_Alt_PageDown_K2Node_InputKeyEvent_62(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Alt_PageDown_K2Node_InputKeyEvent_62");
 
@@ -228,7 +223,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Alt_PageDown_K2
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -237,11 +231,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Alt_PageDown_K2
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Alt_Insert_K2Node_InputKeyEvent_61
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Alt_Insert_K2Node_InputKeyEvent_61(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Cmd_Alt_Insert_K2Node_InputKeyEvent_61(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Cmd+Alt_Insert_K2Node_InputKeyEvent_61");
 
@@ -249,7 +243,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Alt_Insert_K2No
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -258,11 +251,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Cmd_Alt_Insert_K2No
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Two_K2Node_InputKeyEvent_60
-// (Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Two_K2Node_InputKeyEvent_60(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Two_K2Node_InputKeyEvent_60(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Two_K2Node_InputKeyEvent_60");
 
@@ -278,11 +271,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Two_K2Node_InputKey
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_One_K2Node_InputKeyEvent_59
-// (NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_One_K2Node_InputKeyEvent_59(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_One_K2Node_InputKeyEvent_59(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_One_K2Node_InputKeyEvent_59");
 
@@ -298,11 +291,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_One_K2Node_InputKey
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Add_K2Node_InputKeyEvent_58
-// (NetReliable, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Add_K2Node_InputKeyEvent_58(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Add_K2Node_InputKeyEvent_58(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Add_K2Node_InputKeyEvent_58");
 
@@ -318,11 +311,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Add_K2Node_InputKey
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Subtract_K2Node_InputKeyEvent_57
-// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Subtract_K2Node_InputKeyEvent_57(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Subtract_K2Node_InputKeyEvent_57(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Subtract_K2Node_InputKeyEvent_57");
 
@@ -338,11 +331,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Subtract_K2Node_Inp
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_L_K2Node_InputKeyEvent_56
-// (Net, NetReliable, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_L_K2Node_InputKeyEvent_56(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_L_K2Node_InputKeyEvent_56(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_L_K2Node_InputKeyEvent_56");
 
@@ -350,7 +343,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_L_K2Node_InputKeyEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -359,11 +351,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_L_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Alt_L_K2Node_InputKeyEvent_55
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_L_K2Node_InputKeyEvent_55(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Alt_L_K2Node_InputKeyEvent_55(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Alt_L_K2Node_InputKeyEvent_55");
 
@@ -371,7 +363,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_L_K2Node_InputK
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -380,11 +371,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_L_K2Node_InputK
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Alt+Shift_L_K2Node_InputKeyEvent_54
-// (Net, NetReliable, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_Shift_L_K2Node_InputKeyEvent_54(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Alt_Shift_L_K2Node_InputKeyEvent_54(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Alt+Shift_L_K2Node_InputKeyEvent_54");
 
@@ -400,11 +391,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_Shift_L_K2Node_
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Pause_K2Node_InputKeyEvent_53
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Pause_K2Node_InputKeyEvent_53(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Pause_K2Node_InputKeyEvent_53(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Pause_K2Node_InputKeyEvent_53");
 
@@ -420,11 +411,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Pause_K2Node_InputK
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Ctrl_F9_K2Node_InputKeyEvent_52
-// (Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Ctrl_F9_K2Node_InputKeyEvent_52(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Ctrl_F9_K2Node_InputKeyEvent_52(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Ctrl_F9_K2Node_InputKeyEvent_52");
 
@@ -432,7 +423,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Ctrl_F9_K2Node_Inpu
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -441,11 +431,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Ctrl_F9_K2Node_Inpu
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_F10_K2Node_InputKeyEvent_51
-// (Net, NetReliable, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_F10_K2Node_InputKeyEvent_51(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_F10_K2Node_InputKeyEvent_51(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_F10_K2Node_InputKeyEvent_51");
 
@@ -453,7 +443,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_F10_K2Node_InputKey
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -462,11 +451,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_F10_K2Node_InputKey
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Gamepad_DPad_Left_K2Node_InputKeyEvent_50
-// (NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Gamepad_DPad_Left_K2Node_InputKeyEvent_50(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Gamepad_DPad_Left_K2Node_InputKeyEvent_50(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Gamepad_DPad_Left_K2Node_InputKeyEvent_50");
 
@@ -474,7 +463,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Gamepad_DPad_Left_K
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -483,11 +471,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Gamepad_DPad_Left_K
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Gamepad_Special_Right_K2Node_InputKeyEvent_49
-// (Net, NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Gamepad_Special_Right_K2Node_InputKeyEvent_49(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Gamepad_Special_Right_K2Node_InputKeyEvent_49(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Gamepad_Special_Right_K2Node_InputKeyEvent_49");
 
@@ -495,7 +483,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Gamepad_Special_Rig
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -504,11 +491,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Gamepad_Special_Rig
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_E_K2Node_InputKeyEvent_48
-// (Net, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_E_K2Node_InputKeyEvent_48(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_E_K2Node_InputKeyEvent_48(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_E_K2Node_InputKeyEvent_48");
 
@@ -516,7 +503,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_E_K2Node_InputKeyEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -525,11 +511,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_E_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_T_K2Node_InputKeyEvent_47
-// (Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_T_K2Node_InputKeyEvent_47(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_T_K2Node_InputKeyEvent_47(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_T_K2Node_InputKeyEvent_47");
 
@@ -537,7 +523,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_T_K2Node_InputKeyEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -546,11 +531,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_T_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_U_K2Node_InputKeyEvent_46
-// (Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_U_K2Node_InputKeyEvent_46(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_U_K2Node_InputKeyEvent_46(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_U_K2Node_InputKeyEvent_46");
 
@@ -566,11 +551,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_U_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Y_K2Node_InputKeyEvent_45
-// (NetReliable, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Y_K2Node_InputKeyEvent_45(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Y_K2Node_InputKeyEvent_45(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Y_K2Node_InputKeyEvent_45");
 
@@ -586,11 +571,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Y_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Ctrl_Y_K2Node_InputKeyEvent_44
-// (NetReliable, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Ctrl_Y_K2Node_InputKeyEvent_44(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Ctrl_Y_K2Node_InputKeyEvent_44(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Ctrl_Y_K2Node_InputKeyEvent_44");
 
@@ -598,7 +583,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Ctrl_Y_K2Node_Input
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -607,11 +591,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Ctrl_Y_K2Node_Input
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_V_K2Node_InputKeyEvent_43
-// (Net, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_V_K2Node_InputKeyEvent_43(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_V_K2Node_InputKeyEvent_43(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_V_K2Node_InputKeyEvent_43");
 
@@ -627,11 +611,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_V_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_F_K2Node_InputKeyEvent_42
-// (NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_F_K2Node_InputKeyEvent_42(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_F_K2Node_InputKeyEvent_42(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_F_K2Node_InputKeyEvent_42");
 
@@ -639,7 +623,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_F_K2Node_InputKeyEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -648,11 +631,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_F_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Ctrl_T_K2Node_InputKeyEvent_41
-// (Net, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Ctrl_T_K2Node_InputKeyEvent_41(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Ctrl_T_K2Node_InputKeyEvent_41(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Ctrl_T_K2Node_InputKeyEvent_41");
 
@@ -660,7 +643,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Ctrl_T_K2Node_Input
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -669,11 +651,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Ctrl_T_K2Node_Input
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Z_K2Node_InputKeyEvent_40
-// (Net, NetReliable, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Z_K2Node_InputKeyEvent_40(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Z_K2Node_InputKeyEvent_40(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Z_K2Node_InputKeyEvent_40");
 
@@ -689,11 +671,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Z_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_D_K2Node_InputKeyEvent_39
-// (NetReliable, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_D_K2Node_InputKeyEvent_39(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_D_K2Node_InputKeyEvent_39(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_D_K2Node_InputKeyEvent_39");
 
@@ -701,7 +683,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_D_K2Node_InputKeyEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -710,11 +691,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_D_K2Node_InputKeyEv
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Alt_B_K2Node_InputKeyEvent_38
-// (NetRequest, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_B_K2Node_InputKeyEvent_38(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Alt_B_K2Node_InputKeyEvent_38(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Alt_B_K2Node_InputKeyEvent_38");
 
@@ -722,7 +703,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_B_K2Node_InputK
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -731,11 +711,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_B_K2Node_InputK
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Semicolon_K2Node_InputKeyEvent_37
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Semicolon_K2Node_InputKeyEvent_37(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Semicolon_K2Node_InputKeyEvent_37(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Semicolon_K2Node_InputKeyEvent_37");
 
@@ -751,11 +731,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Semicolon_K2Node_In
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Alt_T_K2Node_InputKeyEvent_36
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_T_K2Node_InputKeyEvent_36(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Alt_T_K2Node_InputKeyEvent_36(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Alt_T_K2Node_InputKeyEvent_36");
 
@@ -763,7 +743,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_T_K2Node_InputK
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -772,11 +751,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Alt_T_K2Node_InputK
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Exit_K2Node_InputActionEvent_3
-// (NetReliable, Native, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Exit_K2Node_InputActionEvent_3(const struct FKey& Key)
+void ABP_S3AdventurePlayerControllerBase_C::InpActEvt_Exit_K2Node_InputActionEvent_3(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.InpActEvt_Exit_K2Node_InputActionEvent_3");
 
@@ -784,7 +763,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Exit_K2Node_InputAc
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -793,11 +771,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_InpActEvt_Exit_K2Node_InputAc
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.ReceiveEndPlay
-// (Net, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3AdventurePlayerControllerBase_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.ReceiveEndPlay");
 
@@ -813,11 +791,11 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_ReceiveEndPlay(TEnumAsByte<EE
 
 
 // Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.ExecuteUbergraph_BP_S3AdventurePlayerControllerBase
-// (Net, NetReliable, Exec, Native, NetResponse, Static, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AdventurePlayerControllerBase_C::STATIC_ExecuteUbergraph_BP_S3AdventurePlayerControllerBase(int EntryPoint)
+void ABP_S3AdventurePlayerControllerBase_C::ExecuteUbergraph_BP_S3AdventurePlayerControllerBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AdventurePlayerControllerBase.BP_S3AdventurePlayerControllerBase_C.ExecuteUbergraph_BP_S3AdventurePlayerControllerBase");
 
@@ -825,7 +803,6 @@ void ABP_S3AdventurePlayerControllerBase_C::STATIC_ExecuteUbergraph_BP_S3Adventu
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

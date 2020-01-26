@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,24 +55,24 @@ public:
 	}
 
 
-	void STATIC_SetColor(class UImage* Image, const struct FLinearColor& Color);
-	void STATIC_AnimBase();
-	void STATIC_FlashAnimBase();
-	void STATIC_ResetParam();
+	void SetColor(class UImage* Image, const struct FLinearColor& Color);
+	void AnimBase();
+	void FlashAnimBase();
+	void ResetParam();
 	void PlayAnimIcon(class UWidgetAnimation* Anim, float PlaybackSpeed);
-	void STATIC_SetParam(int ButtonIndex, struct FS3DetectActionParam* Param);
-	void STATIC_InitIcon(ES3ActionIconType Type);
-	void STATIC_GetOpacity(class UImage* Image, float* Opacity);
-	void STATIC_SetOpacity(class UImage* Image, float Opacity);
-	void STATIC_SetIconFlipAnim(bool Active);
-	void STATIC_SetBaseBlink();
+	void SetParam(int ButtonIndex, struct FS3DetectActionParam* Param);
+	void InitIcon(ES3ActionIconType Type);
+	void GetOpacity(class UImage* Image, float* Opacity);
+	void SetOpacity(class UImage* Image, float Opacity);
+	void SetIconFlipAnim(bool Active);
+	void SetBaseBlink();
 	void Initialize(int Index);
-	void STATIC_SetActionType(ES3ActionIconType ActionType);
-	void STATIC_FadeIcon(bool In);
-	void STATIC_AnimIcon(bool In);
+	void SetActionType(ES3ActionIconType ActionType);
+	void FadeIcon(bool In);
+	void AnimIcon(bool In);
 	void OnAnimationFinished(class UWidgetAnimation* Animation);
-	void STATIC_Construct();
-	void STATIC_BndEvt__IconAnim_EX_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void Construct();
+	void BndEvt__IconAnim_EX_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
 	void ExecuteUbergraph_wgt_S3DetectButtonIcon(int EntryPoint);
 	void onAnimEnd__DelegateSignature();
 };

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_SBD_01.BP_TalkCamera_SBD_01_C.UserConstructionScript
-// (NetReliable, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_TalkCamera_SBD_01_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_TalkCamera_SBD_01_C::UserConstructionScript()
 
 
 // Function BP_TalkCamera_SBD_01.BP_TalkCamera_SBD_01_C.ReceiveBeginPlay
-// (NetReliable, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_TalkCamera_SBD_01_C::ReceiveBeginPlay()
 {
@@ -48,7 +48,7 @@ void ABP_TalkCamera_SBD_01_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_SBD_01.BP_TalkCamera_SBD_01_C.ReceiveTick
-// (Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +68,7 @@ void ABP_TalkCamera_SBD_01_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_SBD_01.BP_TalkCamera_SBD_01_C.ExecuteUbergraph_BP_TalkCamera_SBD_01
-// (Event, NetResponse, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

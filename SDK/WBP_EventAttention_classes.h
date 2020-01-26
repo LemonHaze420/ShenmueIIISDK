@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,17 +44,17 @@ public:
 	}
 
 
-	void STATIC_PlayFadeArrowAnim();
+	void PlayFadeArrowAnim();
 	void ForceEnabledDirectionArrow();
 	void ReverseArrow();
-	void STATIC_SetCenterCursorVisible(bool Visibility);
+	void SetCenterCursorVisible(bool Visibility);
 	void SetArrowAlpha(float BaseAlpha, float ZoomAlpha);
 	void SetArrowPosition(float OffsetRate);
 	void UpdateVisible(bool Visible);
-	void STATIC_UpdateDirectionArrow(TArray<struct FName>* VisibleArrowName);
-	void STATIC_PreConstruct(bool IsDesignTime);
-	void STATIC_Construct();
-	void STATIC_ExecuteUbergraph_WBP_EventAttention(int EntryPoint);
+	void UpdateDirectionArrow(TArray<struct FName>* VisibleArrowName);
+	void PreConstruct(bool IsDesignTime);
+	void Construct();
+	void ExecuteUbergraph_WBP_EventAttention(int EntryPoint);
 };
 
 

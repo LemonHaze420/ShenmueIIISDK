@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_BTL_SparringSetup.BPC_BTL_SparringSetup_C.GetShowSimon
-// (NetRequest, Native, NetResponse, Static, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_BTL_SparringSetup_C::STATIC_GetShowSimon()
+bool UBPC_BTL_SparringSetup_C::GetShowSimon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BTL_SparringSetup.BPC_BTL_SparringSetup_C.GetShowSimon");
 
 	UBPC_BTL_SparringSetup_C_GetShowSimon_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

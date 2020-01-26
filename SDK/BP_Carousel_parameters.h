@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_Carousel.BP_Carousel_C.IsBusy
-struct UBP_Carousel_C_IsBusy_Params
+// Function BP_Carousel.BP_Carousel_C.isBusy
+struct UBP_Carousel_C_isBusy_Params
 {
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

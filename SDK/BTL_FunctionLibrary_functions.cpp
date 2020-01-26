@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.Normalize_AccurateTime
-// (Native, Event, Static, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FAccurateTime           In                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -29,7 +29,6 @@ struct FAccurateTime UBTL_FunctionLibrary_C::STATIC_Normalize_AccurateTime(const
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,7 +39,7 @@ struct FAccurateTime UBTL_FunctionLibrary_C::STATIC_Normalize_AccurateTime(const
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.Add_AccurateTime
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FAccurateTime           A                              (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FAccurateTime           B                              (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -57,7 +56,6 @@ void UBTL_FunctionLibrary_C::STATIC_Add_AccurateTime(const struct FAccurateTime&
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,13 +67,13 @@ void UBTL_FunctionLibrary_C::STATIC_Add_AccurateTime(const struct FAccurateTime&
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.GetSecondsPassed
-// (Net, NetReliable, Exec, Native, NetResponse, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FAccurateTime           SinceTime                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Seconds                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_FunctionLibrary_C::GetSecondsPassed(const struct FAccurateTime& SinceTime, class UObject* __WorldContext, float* Seconds)
+void UBTL_FunctionLibrary_C::STATIC_GetSecondsPassed(const struct FAccurateTime& SinceTime, class UObject* __WorldContext, float* Seconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.GetSecondsPassed");
 
@@ -84,7 +82,6 @@ void UBTL_FunctionLibrary_C::GetSecondsPassed(const struct FAccurateTime& SinceT
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,7 +93,7 @@ void UBTL_FunctionLibrary_C::GetSecondsPassed(const struct FAccurateTime& SinceT
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.GetAccurateRealtimeStruct
-// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FAccurateTime           AccurateTime                   (Parm, OutParm)
@@ -109,7 +106,6 @@ void UBTL_FunctionLibrary_C::STATIC_GetAccurateRealtimeStruct(class UObject* __W
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,7 +117,7 @@ void UBTL_FunctionLibrary_C::STATIC_GetAccurateRealtimeStruct(class UObject* __W
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.AttackCollisionEnumToMainBoneTag
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EBattleAttackCollision> Enum                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -136,7 +132,6 @@ void UBTL_FunctionLibrary_C::STATIC_AttackCollisionEnumToMainBoneTag(TEnumAsByte
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -148,11 +143,11 @@ void UBTL_FunctionLibrary_C::STATIC_AttackCollisionEnumToMainBoneTag(TEnumAsByte
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.GetBattleDataTableList
-// (Net, NetReliable, Exec, Native, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_FunctionLibrary_C::GetBattleDataTableList(class UObject* __WorldContext)
+void UBTL_FunctionLibrary_C::STATIC_GetBattleDataTableList(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.GetBattleDataTableList");
 
@@ -160,7 +155,6 @@ void UBTL_FunctionLibrary_C::GetBattleDataTableList(class UObject* __WorldContex
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,13 +163,13 @@ void UBTL_FunctionLibrary_C::GetBattleDataTableList(class UObject* __WorldContex
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.AccurateTimeToFloat
-// (Net, Exec, Native, NetResponse, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FAccurateTime           InTime                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Seconds                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_FunctionLibrary_C::AccurateTimeToFloat(const struct FAccurateTime& InTime, class UObject* __WorldContext, float* Seconds)
+void UBTL_FunctionLibrary_C::STATIC_AccurateTimeToFloat(const struct FAccurateTime& InTime, class UObject* __WorldContext, float* Seconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.AccurateTimeToFloat");
 
@@ -184,7 +178,6 @@ void UBTL_FunctionLibrary_C::AccurateTimeToFloat(const struct FAccurateTime& InT
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,7 +189,7 @@ void UBTL_FunctionLibrary_C::AccurateTimeToFloat(const struct FAccurateTime& InT
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.SubtractAccurateTime
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FAccurateTime           Time                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FAccurateTime           SubtractTime                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -224,13 +217,13 @@ void UBTL_FunctionLibrary_C::STATIC_SubtractAccurateTime(const struct FAccurateT
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.AttackCollisionEnumToBoneGroupTag
-// (Net, NetReliable, Exec, NetMulticast, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EBattleAttackCollision> Enum                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Name                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_FunctionLibrary_C::AttackCollisionEnumToBoneGroupTag(TEnumAsByte<EBattleAttackCollision> Enum, class UObject* __WorldContext, struct FName* Name)
+void UBTL_FunctionLibrary_C::STATIC_AttackCollisionEnumToBoneGroupTag(TEnumAsByte<EBattleAttackCollision> Enum, class UObject* __WorldContext, struct FName* Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.AttackCollisionEnumToBoneGroupTag");
 
@@ -250,14 +243,14 @@ void UBTL_FunctionLibrary_C::AttackCollisionEnumToBoneGroupTag(TEnumAsByte<EBatt
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.GetCurrentAMSectionPercent
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAnimInstance*           AnimInstance                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          CheckPos                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Percent                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_FunctionLibrary_C::GetCurrentAMSectionPercent(class UAnimInstance* AnimInstance, float CheckPos, class UObject* __WorldContext, float* Percent)
+void UBTL_FunctionLibrary_C::STATIC_GetCurrentAMSectionPercent(class UAnimInstance* AnimInstance, float CheckPos, class UObject* __WorldContext, float* Percent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.GetCurrentAMSectionPercent");
 
@@ -278,7 +271,7 @@ void UBTL_FunctionLibrary_C::GetCurrentAMSectionPercent(class UAnimInstance* Ani
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.GetCurrentAMSectionPositiion
-// (Exec, Event, Static, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAnimInstance*           AnimInstance                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -307,7 +300,7 @@ void UBTL_FunctionLibrary_C::STATIC_GetCurrentAMSectionPositiion(class UAnimInst
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.CheckPlaneLineAndPointLR
-// (Net, NetReliable, Static, Public, Private, NetServer, HasOutParms, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 StartLinePos                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 EndLinePos                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -337,7 +330,7 @@ void UBTL_FunctionLibrary_C::STATIC_CheckPlaneLineAndPointLR(const struct FVecto
 
 
 // Function BTL_FunctionLibrary.BTL_FunctionLibrary_C.GetCharacterFootLocation
-// (NetRequest, Native, Static, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -352,7 +345,6 @@ void UBTL_FunctionLibrary_C::STATIC_GetCharacterFootLocation(class AActor* Chara
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

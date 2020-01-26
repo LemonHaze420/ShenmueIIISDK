@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,7 +31,7 @@ public:
 
 
 	void SetNameAndPrice(const struct FText& Name, const struct FText& Price);
-	void STATIC_SelectButton(bool Select);
+	void SelectButton(bool Select);
 	void FocusButton(bool Focus);
 	void Construct();
 	void ExecuteUbergraph_BPW_UI_RentalButton(int EntryPoint);

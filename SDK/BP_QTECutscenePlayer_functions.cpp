@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.CanSkip
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void ABP_QTECutscenePlayer_C::CanSkip(bool* CAN)
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.UpdateQTEAnimationState
-// (Exec, Native, Event, NetResponse, NetMulticast, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::UpdateQTEAnimationState()
 {
@@ -45,7 +45,6 @@ void ABP_QTECutscenePlayer_C::UpdateQTEAnimationState()
 	ABP_QTECutscenePlayer_C_UpdateQTEAnimationState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +53,11 @@ void ABP_QTECutscenePlayer_C::UpdateQTEAnimationState()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.DebugSetIsQTEForceSuccess
-// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bForceSuccess                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_QTECutscenePlayer_C::STATIC_DebugSetIsQTEForceSuccess(bool bForceSuccess)
+void ABP_QTECutscenePlayer_C::DebugSetIsQTEForceSuccess(bool bForceSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.DebugSetIsQTEForceSuccess");
 
@@ -74,7 +73,7 @@ void ABP_QTECutscenePlayer_C::STATIC_DebugSetIsQTEForceSuccess(bool bForceSucces
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.OnFinishedQTELevelSequencePlayer
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULevelSequencePlayer*    LevelSequencePlayer            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -94,7 +93,7 @@ void ABP_QTECutscenePlayer_C::OnFinishedQTELevelSequencePlayer(class ULevelSeque
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.GetCurrentRetryCount
-// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ULevelSequence*          InLevelSequence                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -117,7 +116,7 @@ int ABP_QTECutscenePlayer_C::GetCurrentRetryCount(class ULevelSequence* InLevelS
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.DebugIsEnableToSkip
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -128,7 +127,6 @@ bool ABP_QTECutscenePlayer_C::DebugIsEnableToSkip()
 	ABP_QTECutscenePlayer_C_DebugIsEnableToSkip_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -139,7 +137,7 @@ bool ABP_QTECutscenePlayer_C::DebugIsEnableToSkip()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.EndSubSequence
-// (NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::EndSubSequence()
 {
@@ -156,7 +154,7 @@ void ABP_QTECutscenePlayer_C::EndSubSequence()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.PlaySubSequence
-// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::PlaySubSequence()
 {
@@ -173,9 +171,9 @@ void ABP_QTECutscenePlayer_C::PlaySubSequence()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.FinalizeSubSequenceActor
-// (Exec, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_FinalizeSubSequenceActor()
+void ABP_QTECutscenePlayer_C::FinalizeSubSequenceActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.FinalizeSubSequenceActor");
 
@@ -190,7 +188,7 @@ void ABP_QTECutscenePlayer_C::STATIC_FinalizeSubSequenceActor()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InitializeSubSequenceActor
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::InitializeSubSequenceActor()
 {
@@ -199,7 +197,6 @@ void ABP_QTECutscenePlayer_C::InitializeSubSequenceActor()
 	ABP_QTECutscenePlayer_C_InitializeSubSequenceActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,7 +205,7 @@ void ABP_QTECutscenePlayer_C::InitializeSubSequenceActor()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.SetupNextLevelSequence
-// (Net, NetReliable, Native, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::SetupNextLevelSequence()
 {
@@ -217,7 +214,6 @@ void ABP_QTECutscenePlayer_C::SetupNextLevelSequence()
 	ABP_QTECutscenePlayer_C_SetupNextLevelSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -226,9 +222,9 @@ void ABP_QTECutscenePlayer_C::SetupNextLevelSequence()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.UpdateLevelSequenceManually
-// (Net, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_UpdateLevelSequenceManually()
+void ABP_QTECutscenePlayer_C::UpdateLevelSequenceManually()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.UpdateLevelSequenceManually");
 
@@ -243,7 +239,7 @@ void ABP_QTECutscenePlayer_C::STATIC_UpdateLevelSequenceManually()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.SetupCurrentSequenceToRetryPoint
-// (Net, NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::SetupCurrentSequenceToRetryPoint()
 {
@@ -260,7 +256,7 @@ void ABP_QTECutscenePlayer_C::SetupCurrentSequenceToRetryPoint()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.ExecuteRetry
-// (NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::ExecuteRetry()
 {
@@ -277,9 +273,9 @@ void ABP_QTECutscenePlayer_C::ExecuteRetry()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.UpdatePlayingSequenceToRetry
-// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_UpdatePlayingSequenceToRetry()
+void ABP_QTECutscenePlayer_C::UpdatePlayingSequenceToRetry()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.UpdatePlayingSequenceToRetry");
 
@@ -294,7 +290,7 @@ void ABP_QTECutscenePlayer_C::STATIC_UpdatePlayingSequenceToRetry()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.EndIntervalSequence
-// (Exec, Event, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::EndIntervalSequence()
 {
@@ -311,7 +307,7 @@ void ABP_QTECutscenePlayer_C::EndIntervalSequence()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.UpdatePlayingIntervalSequence
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::UpdatePlayingIntervalSequence()
 {
@@ -320,7 +316,6 @@ void ABP_QTECutscenePlayer_C::UpdatePlayingIntervalSequence()
 	ABP_QTECutscenePlayer_C_UpdatePlayingIntervalSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -329,7 +324,7 @@ void ABP_QTECutscenePlayer_C::UpdatePlayingIntervalSequence()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.GetQTESingleRandomInputAction
-// (Exec, Event, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -350,7 +345,7 @@ struct FName ABP_QTECutscenePlayer_C::GetQTESingleRandomInputAction()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.StartQTEInputSafeSlow
-// (NetRequest, Native, Event, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          RestLength                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          QTELengthBeforeCountTime       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -366,7 +361,6 @@ void ABP_QTECutscenePlayer_C::StartQTEInputSafeSlow(float RestLength, float QTEL
 	params.QTEInputLimitTime = QTEInputLimitTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -375,12 +369,12 @@ void ABP_QTECutscenePlayer_C::StartQTEInputSafeSlow(float RestLength, float QTEL
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.IsExistQTEInSequence
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FST_QTESequence         InQTESequence                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_QTECutscenePlayer_C::STATIC_IsExistQTEInSequence(struct FST_QTESequence* InQTESequence)
+bool ABP_QTECutscenePlayer_C::IsExistQTEInSequence(struct FST_QTESequence* InQTESequence)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.IsExistQTEInSequence");
 
@@ -400,7 +394,7 @@ bool ABP_QTECutscenePlayer_C::STATIC_IsExistQTEInSequence(struct FST_QTESequence
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.FindQTESequenceFromLevelSequence
-// (Native, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULevelSequence*          InLevelSequence                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            FoundIndex                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -413,7 +407,6 @@ void ABP_QTECutscenePlayer_C::FindQTESequenceFromLevelSequence(class ULevelSeque
 	params.InLevelSequence = InLevelSequence;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -425,11 +418,11 @@ void ABP_QTECutscenePlayer_C::FindQTESequenceFromLevelSequence(class ULevelSeque
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.GetLastQTEResult
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_QTECutscenePlayer_C::STATIC_GetLastQTEResult()
+bool ABP_QTECutscenePlayer_C::GetLastQTEResult()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.GetLastQTEResult");
 
@@ -446,11 +439,11 @@ bool ABP_QTECutscenePlayer_C::STATIC_GetLastQTEResult()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InputQTE
-// (Exec, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   InInputAction                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_QTECutscenePlayer_C::STATIC_InputQTE(const struct FName& InInputAction)
+void ABP_QTECutscenePlayer_C::InputQTE(const struct FName& InInputAction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InputQTE");
 
@@ -466,9 +459,9 @@ void ABP_QTECutscenePlayer_C::STATIC_InputQTE(const struct FName& InInputAction)
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.StartQTE
-// (Net, Exec, NetResponse, Static, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_StartQTE()
+void ABP_QTECutscenePlayer_C::StartQTE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.StartQTE");
 
@@ -483,16 +476,15 @@ void ABP_QTECutscenePlayer_C::STATIC_StartQTE()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.SetupCurrentQTE
-// (Net, NetReliable, NetRequest, Native, Event, Static, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_SetupCurrentQTE()
+void ABP_QTECutscenePlayer_C::SetupCurrentQTE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.SetupCurrentQTE");
 
 	ABP_QTECutscenePlayer_C_SetupCurrentQTE_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -501,11 +493,11 @@ void ABP_QTECutscenePlayer_C::STATIC_SetupCurrentQTE()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.SetupCurrentSequenceFromIndex
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SequenceIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_QTECutscenePlayer_C::STATIC_SetupCurrentSequenceFromIndex(int SequenceIndex)
+void ABP_QTECutscenePlayer_C::SetupCurrentSequenceFromIndex(int SequenceIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.SetupCurrentSequenceFromIndex");
 
@@ -521,7 +513,7 @@ void ABP_QTECutscenePlayer_C::STATIC_SetupCurrentSequenceFromIndex(int SequenceI
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.FinalizeQTEComponent
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::FinalizeQTEComponent()
 {
@@ -538,7 +530,7 @@ void ABP_QTECutscenePlayer_C::FinalizeQTEComponent()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InitializeQTEComponent
-// (Exec, Event, NetResponse, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::InitializeQTEComponent()
 {
@@ -555,7 +547,7 @@ void ABP_QTECutscenePlayer_C::InitializeQTEComponent()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.DebugSkipToEnd
-// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::DebugSkipToEnd()
 {
@@ -564,7 +556,6 @@ void ABP_QTECutscenePlayer_C::DebugSkipToEnd()
 	ABP_QTECutscenePlayer_C_DebugSkipToEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -573,16 +564,15 @@ void ABP_QTECutscenePlayer_C::DebugSkipToEnd()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.EndSequence
-// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_EndSequence()
+void ABP_QTECutscenePlayer_C::EndSequence()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.EndSequence");
 
 	ABP_QTECutscenePlayer_C_EndSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -591,7 +581,7 @@ void ABP_QTECutscenePlayer_C::STATIC_EndSequence()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.PlaySequence
-// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::PlaySequence()
 {
@@ -600,7 +590,6 @@ void ABP_QTECutscenePlayer_C::PlaySequence()
 	ABP_QTECutscenePlayer_C_PlaySequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -609,9 +598,9 @@ void ABP_QTECutscenePlayer_C::PlaySequence()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InitSequencePlay
-// (NetRequest, Exec, Event, NetResponse, Static, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_InitSequencePlay()
+void ABP_QTECutscenePlayer_C::InitSequencePlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InitSequencePlay");
 
@@ -626,7 +615,7 @@ void ABP_QTECutscenePlayer_C::STATIC_InitSequencePlay()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.ExitCutscene
-// (NetReliable, NetRequest, Native, NetResponse, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::ExitCutscene()
 {
@@ -635,7 +624,6 @@ void ABP_QTECutscenePlayer_C::ExitCutscene()
 	ABP_QTECutscenePlayer_C_ExitCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -644,9 +632,9 @@ void ABP_QTECutscenePlayer_C::ExitCutscene()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InitCutscene
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_InitCutscene()
+void ABP_QTECutscenePlayer_C::InitCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InitCutscene");
 
@@ -661,7 +649,7 @@ void ABP_QTECutscenePlayer_C::STATIC_InitCutscene()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.UserConstructionScript
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_QTECutscenePlayer_C::UserConstructionScript()
 {
@@ -678,7 +666,7 @@ void ABP_QTECutscenePlayer_C::UserConstructionScript()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InpActEvt_QTE_ButtonTop_K2Node_InputActionEvent_16
-// (NetReliable, Exec, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -690,7 +678,6 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_ButtonTop_K2Node_InputActionEvent_16
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -699,7 +686,7 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_ButtonTop_K2Node_InputActionEvent_16
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InpActEvt_QTE_ButtonBottom_K2Node_InputActionEvent_15
-// (Net, Exec, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -711,7 +698,6 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_ButtonBottom_K2Node_InputActionEvent
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -720,7 +706,7 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_ButtonBottom_K2Node_InputActionEvent
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InpActEvt_QTE_ButtonLeft_K2Node_InputActionEvent_14
-// (Exec, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -732,7 +718,6 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_ButtonLeft_K2Node_InputActionEvent_1
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -741,7 +726,7 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_ButtonLeft_K2Node_InputActionEvent_1
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InpActEvt_QTE_ButtonRight_K2Node_InputActionEvent_13
-// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -753,7 +738,6 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_ButtonRight_K2Node_InputActionEvent_
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -762,7 +746,7 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_ButtonRight_K2Node_InputActionEvent_
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InpActEvt_QTE_Top_K2Node_InputActionEvent_12
-// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -774,7 +758,6 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_Top_K2Node_InputActionEvent_12(const
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -783,7 +766,7 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_Top_K2Node_InputActionEvent_12(const
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InpActEvt_QTE_Bottom_K2Node_InputActionEvent_11
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -795,7 +778,6 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_Bottom_K2Node_InputActionEvent_11(co
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -804,7 +786,7 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_Bottom_K2Node_InputActionEvent_11(co
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InpActEvt_QTE_Left_K2Node_InputActionEvent_10
-// (Net, NetRequest, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -816,7 +798,6 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_Left_K2Node_InputActionEvent_10(cons
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -825,7 +806,7 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_Left_K2Node_InputActionEvent_10(cons
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.InpActEvt_QTE_Right_K2Node_InputActionEvent_9
-// (NetRequest, Native, Event, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -837,7 +818,6 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_Right_K2Node_InputActionEvent_9(cons
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -846,11 +826,11 @@ void ABP_QTECutscenePlayer_C::InpActEvt_QTE_Right_K2Node_InputActionEvent_9(cons
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_QTECutscenePlayer_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_QTECutscenePlayer_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.ReceiveTick");
 
@@ -866,16 +846,15 @@ void ABP_QTECutscenePlayer_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.Event_InputStart
-// (Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_Event_InputStart()
+void ABP_QTECutscenePlayer_C::Event_InputStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.Event_InputStart");
 
 	ABP_QTECutscenePlayer_C_Event_InputStart_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -884,9 +863,9 @@ void ABP_QTECutscenePlayer_C::STATIC_Event_InputStart()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.Event_StopAround
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_Event_StopAround()
+void ABP_QTECutscenePlayer_C::Event_StopAround()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.Event_StopAround");
 
@@ -901,9 +880,9 @@ void ABP_QTECutscenePlayer_C::STATIC_Event_StopAround()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.Event_ResumeAround
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_QTECutscenePlayer_C::STATIC_Event_ResumeAround()
+void ABP_QTECutscenePlayer_C::Event_ResumeAround()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.Event_ResumeAround");
 
@@ -918,11 +897,11 @@ void ABP_QTECutscenePlayer_C::STATIC_Event_ResumeAround()
 
 
 // Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.ExecuteUbergraph_BP_QTECutscenePlayer
-// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_QTECutscenePlayer_C::STATIC_ExecuteUbergraph_BP_QTECutscenePlayer(int EntryPoint)
+void ABP_QTECutscenePlayer_C::ExecuteUbergraph_BP_QTECutscenePlayer(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTECutscenePlayer.BP_QTECutscenePlayer_C.ExecuteUbergraph_BP_QTECutscenePlayer");
 
@@ -930,7 +909,6 @@ void ABP_QTECutscenePlayer_C::STATIC_ExecuteUbergraph_BP_QTECutscenePlayer(int E
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

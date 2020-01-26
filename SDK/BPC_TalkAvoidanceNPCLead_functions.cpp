@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_TalkAvoidanceNPCLead.BPC_TalkAvoidanceNPCLead_C.FindFallbackLocation
-// (Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ACharacter*              Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
@@ -28,7 +28,6 @@ bool UBPC_TalkAvoidanceNPCLead_C::FindFallbackLocation(class ACharacter* Player,
 	params.Player = Player;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -42,7 +41,7 @@ bool UBPC_TalkAvoidanceNPCLead_C::FindFallbackLocation(class ACharacter* Player,
 
 
 // Function BPC_TalkAvoidanceNPCLead.BPC_TalkAvoidanceNPCLead_C.MakeRotation
-// (NetReliable, NetRequest, Event, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3TalkEventManagerBase* TalkEventManager               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 InVec                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -67,7 +66,7 @@ struct FRotator UBPC_TalkAvoidanceNPCLead_C::MakeRotation(class AS3TalkEventMana
 
 
 // Function BPC_TalkAvoidanceNPCLead.BPC_TalkAvoidanceNPCLead_C.CanAvoidance
-// (NetRequest, Native, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bCan                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -78,7 +77,6 @@ void UBPC_TalkAvoidanceNPCLead_C::CanAvoidance(bool* bCan)
 	UBPC_TalkAvoidanceNPCLead_C_CanAvoidance_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,11 +88,11 @@ void UBPC_TalkAvoidanceNPCLead_C::CanAvoidance(bool* bCan)
 
 
 // Function BPC_TalkAvoidanceNPCLead.BPC_TalkAvoidanceNPCLead_C.ProcessAvoidable
-// (Net, NetReliable, Exec, Event, Static, NetMulticast, Public, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bProcessed                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TalkAvoidanceNPCLead_C::STATIC_ProcessAvoidable(bool* bProcessed)
+void UBPC_TalkAvoidanceNPCLead_C::ProcessAvoidable(bool* bProcessed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TalkAvoidanceNPCLead.BPC_TalkAvoidanceNPCLead_C.ProcessAvoidable");
 
@@ -112,7 +110,7 @@ void UBPC_TalkAvoidanceNPCLead_C::STATIC_ProcessAvoidable(bool* bProcessed)
 
 
 // Function BPC_TalkAvoidanceNPCLead.BPC_TalkAvoidanceNPCLead_C.IsAvoiddableDecide
-// (NetReliable, Native, NetResponse, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bExecution                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -123,7 +121,6 @@ void UBPC_TalkAvoidanceNPCLead_C::IsAvoiddableDecide(bool* bExecution)
 	UBPC_TalkAvoidanceNPCLead_C_IsAvoiddableDecide_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -135,7 +132,7 @@ void UBPC_TalkAvoidanceNPCLead_C::IsAvoiddableDecide(bool* bExecution)
 
 
 // Function BPC_TalkAvoidanceNPCLead.BPC_TalkAvoidanceNPCLead_C.DistanceCheckTargetActors
-// (NetReliable, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 TestActorLocation              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -159,7 +156,7 @@ void UBPC_TalkAvoidanceNPCLead_C::DistanceCheckTargetActors(const struct FVector
 
 
 // Function BPC_TalkAvoidanceNPCLead.BPC_TalkAvoidanceNPCLead_C.DelayResumePhysics
-// (Exec, Native, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPC_TalkAvoidanceNPCLead_C::DelayResumePhysics()
 {
@@ -168,7 +165,6 @@ void UBPC_TalkAvoidanceNPCLead_C::DelayResumePhysics()
 	UBPC_TalkAvoidanceNPCLead_C_DelayResumePhysics_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -177,7 +173,7 @@ void UBPC_TalkAvoidanceNPCLead_C::DelayResumePhysics()
 
 
 // Function BPC_TalkAvoidanceNPCLead.BPC_TalkAvoidanceNPCLead_C.ExecuteUbergraph_BPC_TalkAvoidanceNPCLead
-// (NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

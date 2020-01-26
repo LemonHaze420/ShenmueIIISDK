@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_skiledit.wgt_skiledit_C.SetWazeSlotSwitchSel
-// (Net, NetRequest, Native, Event, NetResponse, Static, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skiledit_C::STATIC_SetWazeSlotSwitchSel(bool Visible)
+void Uwgt_skiledit_C::SetWazeSlotSwitchSel(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skiledit.wgt_skiledit_C.SetWazeSlotSwitchSel");
 
@@ -26,7 +26,6 @@ void Uwgt_skiledit_C::STATIC_SetWazeSlotSwitchSel(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void Uwgt_skiledit_C::STATIC_SetWazeSlotSwitchSel(bool Visible)
 
 
 // Function wgt_skiledit.wgt_skiledit_C.SetWazePageSel
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skiledit_C::STATIC_SetWazePageSel(bool Visible)
+void Uwgt_skiledit_C::SetWazePageSel(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skiledit.wgt_skiledit_C.SetWazePageSel");
 
@@ -47,7 +46,6 @@ void Uwgt_skiledit_C::STATIC_SetWazePageSel(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +54,7 @@ void Uwgt_skiledit_C::STATIC_SetWazePageSel(bool Visible)
 
 
 // Function wgt_skiledit.wgt_skiledit_C.UpdatePageIcons
-// (NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_skiledit_C::UpdatePageIcons()
 {
@@ -73,16 +71,15 @@ void Uwgt_skiledit_C::UpdatePageIcons()
 
 
 // Function wgt_skiledit.wgt_skiledit_C.UpdateDetailPanel
-// (NetReliable, Native, Event, NetResponse, Static, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_skiledit_C::STATIC_UpdateDetailPanel()
+void Uwgt_skiledit_C::UpdateDetailPanel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skiledit.wgt_skiledit_C.UpdateDetailPanel");
 
 	Uwgt_skiledit_C_UpdateDetailPanel_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +88,7 @@ void Uwgt_skiledit_C::STATIC_UpdateDetailPanel()
 
 
 // Function wgt_skiledit.wgt_skiledit_C.UpdateBookItem
-// (NetReliable, Native, NetMulticast, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -102,7 +99,6 @@ void Uwgt_skiledit_C::UpdateBookItem(int* ItemIndex)
 	Uwgt_skiledit_C_UpdateBookItem_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,7 +110,7 @@ void Uwgt_skiledit_C::UpdateBookItem(int* ItemIndex)
 
 
 // Function wgt_skiledit.wgt_skiledit_C.OpenBookToItem(ItemIntID)
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemIntID                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetIndexOnInvalid              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -129,7 +125,6 @@ void Uwgt_skiledit_C::OpenBookToItem_ItemIntID_(int ItemIntID, int SetIndexOnInv
 	params.SetIndexOnInvalid = SetIndexOnInvalid;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,9 +136,9 @@ void Uwgt_skiledit_C::OpenBookToItem_ItemIntID_(int ItemIntID, int SetIndexOnInv
 
 
 // Function wgt_skiledit.wgt_skiledit_C.UpdateSetSelection
-// (NetRequest, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_skiledit_C::STATIC_UpdateSetSelection()
+void Uwgt_skiledit_C::UpdateSetSelection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skiledit.wgt_skiledit_C.UpdateSetSelection");
 
@@ -158,12 +153,12 @@ void Uwgt_skiledit_C::STATIC_UpdateSetSelection()
 
 
 // Function wgt_skiledit.wgt_skiledit_C.SetBookPage
-// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skiledit_C::STATIC_SetBookPage(int InputPin, bool* Changed)
+void Uwgt_skiledit_C::SetBookPage(int InputPin, bool* Changed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skiledit.wgt_skiledit_C.SetBookPage");
 
@@ -182,11 +177,11 @@ void Uwgt_skiledit_C::STATIC_SetBookPage(int InputPin, bool* Changed)
 
 
 // Function wgt_skiledit.wgt_skiledit_C.PushLR
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            AddPage                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skiledit_C::STATIC_PushLR(int AddPage)
+void Uwgt_skiledit_C::PushLR(int AddPage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skiledit.wgt_skiledit_C.PushLR");
 
@@ -194,7 +189,6 @@ void Uwgt_skiledit_C::STATIC_PushLR(int AddPage)
 	params.AddPage = AddPage;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,7 +197,7 @@ void Uwgt_skiledit_C::STATIC_PushLR(int AddPage)
 
 
 // Function wgt_skiledit.wgt_skiledit_C.InitPageIcon
-// (NetReliable, NetRequest, Native, NetMulticast, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_skiledit_C::InitPageIcon()
 {
@@ -212,7 +206,6 @@ void Uwgt_skiledit_C::InitPageIcon()
 	Uwgt_skiledit_C_InitPageIcon_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,12 +214,12 @@ void Uwgt_skiledit_C::InitPageIcon()
 
 
 // Function wgt_skiledit.wgt_skiledit_C.SetCurrentMode
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ESkillEditorInnnerModeType> current_mode                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skiledit_C::STATIC_SetCurrentMode(TEnumAsByte<ESkillEditorInnnerModeType> current_mode, int* ItemIndex)
+void Uwgt_skiledit_C::SetCurrentMode(TEnumAsByte<ESkillEditorInnnerModeType> current_mode, int* ItemIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skiledit.wgt_skiledit_C.SetCurrentMode");
 
@@ -245,7 +238,7 @@ void Uwgt_skiledit_C::STATIC_SetCurrentMode(TEnumAsByte<ESkillEditorInnnerModeTy
 
 
 // Function wgt_skiledit.wgt_skiledit_C.ExecDialog
-// (Net, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_skiledit_C::ExecDialog()
 {
@@ -262,13 +255,13 @@ void Uwgt_skiledit_C::ExecDialog()
 
 
 // Function wgt_skiledit.wgt_skiledit_C.InputSelectDirection
-// (NetRequest, Native, Event, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<Een_skill_key_type> Key                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsActionButton                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skiledit_C::STATIC_InputSelectDirection(TEnumAsByte<Een_skill_key_type> Key, bool* IsActionButton, int* ItemIndex)
+void Uwgt_skiledit_C::InputSelectDirection(TEnumAsByte<Een_skill_key_type> Key, bool* IsActionButton, int* ItemIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skiledit.wgt_skiledit_C.InputSelectDirection");
 
@@ -276,7 +269,6 @@ void Uwgt_skiledit_C::STATIC_InputSelectDirection(TEnumAsByte<Een_skill_key_type
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -290,7 +282,7 @@ void Uwgt_skiledit_C::STATIC_InputSelectDirection(TEnumAsByte<Een_skill_key_type
 
 
 // Function wgt_skiledit.wgt_skiledit_C.InputCancel
-// (Native, NetMulticast, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsEnd                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -301,7 +293,6 @@ void Uwgt_skiledit_C::InputCancel(bool* IsEnd)
 	Uwgt_skiledit_C_InputCancel_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -313,7 +304,7 @@ void Uwgt_skiledit_C::InputCancel(bool* IsEnd)
 
 
 // Function wgt_skiledit.wgt_skiledit_C.InputSelect
-// (NetRequest, NetMulticast, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -335,7 +326,7 @@ void Uwgt_skiledit_C::InputSelect(int* ItemIndex)
 
 
 // Function wgt_skiledit.wgt_skiledit_C.PreConstruct
-// (Net, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -355,7 +346,7 @@ void Uwgt_skiledit_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_skiledit.wgt_skiledit_C.Destruct
-// (NetReliable, Native, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_skiledit_C::Destruct()
 {
@@ -364,7 +355,6 @@ void Uwgt_skiledit_C::Destruct()
 	Uwgt_skiledit_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -373,7 +363,7 @@ void Uwgt_skiledit_C::Destruct()
 
 
 // Function wgt_skiledit.wgt_skiledit_C.Construct
-// (Net, Native, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_skiledit_C::Construct()
 {
@@ -382,7 +372,6 @@ void Uwgt_skiledit_C::Construct()
 	Uwgt_skiledit_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -391,7 +380,7 @@ void Uwgt_skiledit_C::Construct()
 
 
 // Function wgt_skiledit.wgt_skiledit_C.ExecuteUbergraph_wgt_skiledit
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

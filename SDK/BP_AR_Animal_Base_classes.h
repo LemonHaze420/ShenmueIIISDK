@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -102,37 +102,37 @@ public:
 	}
 
 
-	void STATIC_SetAnimInRaceFlag(bool InRace);
-	void STATIC_SetAnimNotRaceStartPos(float Start);
-	void STATIC_SetAnimDelayUpdateTime(float Time);
-	void STATIC_ChangeStateOnFree();
-	void STATIC_Finalize();
+	void SetAnimInRaceFlag(bool InRace);
+	void SetAnimNotRaceStartPos(float Start);
+	void SetAnimDelayUpdateTime(float Time);
+	void ChangeStateOnFree();
+	void Finalize();
 	bool TestSumFuncTurtle();
 	float GetMoveSpeed();
 	bool TestSumFuncToad();
 	void IsUsingSpecialData(bool* UseSpecial);
 	void CanCancelDelay(float Duration, bool* bComplete);
-	void STATIC_SetResultControl(bool IsWin);
+	void SetResultControl(bool IsWin);
 	void GetCourseMaterial(int ShapeType, class UMaterialInterface** Material);
 	void PlayerBetAction(bool* dummy);
 	void SetWalkRate(float Rate);
 	void SetSpeedListFromTableIndex(int Index, bool IsSpecialSpeed);
-	void STATIC_SettingSelectAnimal();
-	void STATIC_Initialize();
-	void STATIC_SetFortuneEnabled(bool bEnabled);
-	void STATIC_CheerAnimalBoost();
-	void STATIC_SetWalkSE(class USoundAtomCue* RefWalkCue);
-	void STATIC_PlayCrySE(float Volume);
-	void STATIC_SetCrySE(class USoundAtomCue* Sound);
-	void STATIC_SetUseSpline(bool bUseSpline);
-	void STATIC_GetMoveSpline(class USplineComponent** MoveSpline);
-	void STATIC_SetMoveSpline(class USplineComponent* MoveSpline);
+	void SettingSelectAnimal();
+	void Initialize();
+	void SetFortuneEnabled(bool bEnabled);
+	void CheerAnimalBoost();
+	void SetWalkSE(class USoundAtomCue* RefWalkCue);
+	void PlayCrySE(float Volume);
+	void SetCrySE(class USoundAtomCue* Sound);
+	void SetUseSpline(bool bUseSpline);
+	void GetMoveSpline(class USplineComponent** MoveSpline);
+	void SetMoveSpline(class USplineComponent* MoveSpline);
 	void GetSplineLocationAndRotation(float Distance, struct FVector* Location, struct FRotator* Rotation);
 	void UpdateRotate();
 	void ChangeShape(int Index);
 	void InitializeInfo(const struct FST_AR_AnimalInfo& table_offset, int Index);
 	void SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type);
-	void STATIC_GetDeathTime(float* death_time);
+	void GetDeathTime(float* death_time);
 	void SetDeath(bool is_death);
 	void UpdateWalkRate();
 	void SelectMotion(float Speed);
@@ -140,27 +140,27 @@ public:
 	void Reset();
 	void GetRandomSpeedFromTable(float* Speed);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_AnimStop();
-	void STATIC_Right_Hit_Begin(class UObject* A);
-	void STATIC_Left_Hit_Begin(class UObject* A);
-	void STATIC_Right_Hit_End(class UObject* A);
-	void STATIC_Left_Hit_End(class UObject* A);
-	void STATIC_MoveUpdate();
-	void STATIC_Idle_Reset();
-	void STATIC_Set_Tick_Enable(bool bEnabled, float DelayTime);
-	void STATIC_SetCurrentMoveSpeedTimingFromUpdate();
-	void STATIC_Event_PlaySECry();
-	void STATIC_Event_PlaySEWalk();
-	void STATIC_Event_EnabledCheer(bool Condition);
-	void STATIC_ResetDelayTime();
-	void STATIC_ResetIdleTime();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void AnimStop();
+	void Right_Hit_Begin(class UObject* A);
+	void Left_Hit_Begin(class UObject* A);
+	void Right_Hit_End(class UObject* A);
+	void Left_Hit_End(class UObject* A);
+	void MoveUpdate();
+	void Idle_Reset();
+	void Set_Tick_Enable(bool bEnabled, float DelayTime);
+	void SetCurrentMoveSpeedTimingFromUpdate();
+	void Event_PlaySECry();
+	void Event_PlaySEWalk();
+	void Event_EnabledCheer(bool Condition);
+	void ResetDelayTime();
+	void ResetIdleTime();
 	void SetAnimUpdateEnabled(bool Enabled, float DelayTime);
-	void STATIC_DelayedChangeStateOnFree();
-	void STATIC_DelayedChangeStateToWait();
-	void STATIC_DelayedInitialize(float DelayTime);
-	void STATIC_ExecuteUbergraph_BP_AR_Animal_Base(int EntryPoint);
+	void DelayedChangeStateOnFree();
+	void DelayedChangeStateToWait();
+	void DelayedInitialize(float DelayTime);
+	void ExecuteUbergraph_BP_AR_Animal_Base(int EntryPoint);
 	void OnEndCheerBoostDispacher__DelegateSignature();
 };
 

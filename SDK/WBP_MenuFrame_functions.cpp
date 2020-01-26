@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MenuFrame.WBP_MenuFrame_C.InitBGTint
-// (NetRequest, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWBP_MenuFrame_C::InitBGTint()
 {
@@ -31,11 +31,11 @@ void UWBP_MenuFrame_C::InitBGTint()
 
 
 // Function WBP_MenuFrame.WBP_MenuFrame_C.PreConstruct
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MenuFrame_C::STATIC_PreConstruct(bool IsDesignTime)
+void UWBP_MenuFrame_C::PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MenuFrame.WBP_MenuFrame_C.PreConstruct");
 
@@ -51,11 +51,11 @@ void UWBP_MenuFrame_C::STATIC_PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_MenuFrame.WBP_MenuFrame_C.ExecuteUbergraph_WBP_MenuFrame
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MenuFrame_C::STATIC_ExecuteUbergraph_WBP_MenuFrame(int EntryPoint)
+void UWBP_MenuFrame_C::ExecuteUbergraph_WBP_MenuFrame(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MenuFrame.WBP_MenuFrame_C.ExecuteUbergraph_WBP_MenuFrame");
 

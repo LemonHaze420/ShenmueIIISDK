@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,9 +29,9 @@ public:
 
 
 	void Finish(bool Result);
-	bool STATIC_IsPlayerInsideSpline(float Buffer);
-	void STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	bool IsPlayerInsideSpline(float Buffer);
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
 	void ExecuteUbergraph_BTT_PlayerFollow_TraverseSpline(int EntryPoint);
 };

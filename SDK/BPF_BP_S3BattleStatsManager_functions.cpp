@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_BP_S3BattleStatsManager.BPF_BP_S3BattleStatsManager_C.BPF_GetBPS3BattleStatsManager
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_S3BattleStatsManager_C* BPManager                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_BP_S3BattleStatsManager_C::BPF_GetBPS3BattleStatsManager(class UObject* __WorldContext, class UBP_S3BattleStatsManager_C** BPManager)
+void UBPF_BP_S3BattleStatsManager_C::STATIC_BPF_GetBPS3BattleStatsManager(class UObject* __WorldContext, class UBP_S3BattleStatsManager_C** BPManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BP_S3BattleStatsManager.BPF_BP_S3BattleStatsManager_C.BPF_GetBPS3BattleStatsManager");
 

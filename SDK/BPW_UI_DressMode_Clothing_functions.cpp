@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_DressMode_Clothing.BPW_UI_DressMode_Clothing_C.ChangeRow
-// (Net, NetRequest, Event, Static, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            RowIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_Clothing_C::STATIC_ChangeRow(int RowIndex)
+void UBPW_UI_DressMode_Clothing_C::ChangeRow(int RowIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode_Clothing.BPW_UI_DressMode_Clothing_C.ChangeRow");
 
@@ -34,7 +34,7 @@ void UBPW_UI_DressMode_Clothing_C::STATIC_ChangeRow(int RowIndex)
 
 
 // Function BPW_UI_DressMode_Clothing.BPW_UI_DressMode_Clothing_C.InitClothingLine
-// (Net, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<int>                    SelectIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FName                   MeshName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -62,7 +62,7 @@ void UBPW_UI_DressMode_Clothing_C::InitClothingLine(const struct FName& MeshName
 
 
 // Function BPW_UI_DressMode_Clothing.BPW_UI_DressMode_Clothing_C.InitIconButton
-// (Net, NetReliable, Event, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_DressMode_Clothing_C::InitIconButton()
 {

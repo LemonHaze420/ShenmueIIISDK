@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,10 +62,10 @@ public:
 	void QuadrangulateMesh(TArray<struct FPolygonID>* OutNewPolygonIDs);
 	void PropagateInstanceChanges();
 	void MoveVertices(TArray<struct FVertexToMove> VerticesToMove);
-	struct FVertexID MakeVertexID(int VertexIndex);
-	struct FPolygonID MakePolygonID(int PolygonIndex);
-	struct FPolygonGroupID MakePolygonGroupID(int PolygonGroupIndex);
-	struct FEdgeID MakeEdgeID(int EdgeIndex);
+	struct FVertexID STATIC_MakeVertexID(int VertexIndex);
+	struct FPolygonID STATIC_MakePolygonID(int PolygonIndex);
+	struct FPolygonGroupID STATIC_MakePolygonGroupID(int PolygonGroupIndex);
+	struct FEdgeID STATIC_MakeEdgeID(int EdgeIndex);
 	bool IsValidVertex(const struct FVertexID& VertexID);
 	bool IsValidPolygonGroup(const struct FPolygonGroupID& PolygonGroupID);
 	bool IsValidPolygon(const struct FPolygonID& PolygonID);
@@ -78,10 +78,10 @@ public:
 	bool IsCommittedAsInstance();
 	bool IsCommitted();
 	bool IsBeingModified();
-	struct FVertexID InvalidVertexID();
-	struct FPolygonID InvalidPolygonID();
-	struct FPolygonGroupID InvalidPolygonGroupID();
-	struct FEdgeID InvalidEdgeID();
+	struct FVertexID STATIC_InvalidVertexID();
+	struct FPolygonID STATIC_InvalidPolygonID();
+	struct FPolygonGroupID STATIC_InvalidPolygonGroupID();
+	struct FEdgeID STATIC_InvalidEdgeID();
 	void InsetPolygons(TArray<struct FPolygonID> PolygonIDs, float InsetFixedDistance, float InsetProgressTowardCenter, EInsetPolygonsMode Mode, TArray<struct FPolygonID>* OutNewCenterPolygonIDs, TArray<struct FPolygonID>* OutNewSidePolygonIDs);
 	void InsertPolygonPerimeterVertices(const struct FPolygonID& PolygonID, int InsertBeforeVertexNumber, TArray<struct FVertexAndAttributes> VerticesToInsert);
 	void InsertEdgeLoop(const struct FEdgeID& EdgeID, TArray<float> Splits, TArray<struct FEdgeID>* OutNewEdgeIDs);
@@ -193,6 +193,23 @@ public:
 };
 
 
+// Class EditableMesh.EditableMeshFactory
+// 0x0000 (0x0028 - 0x0028)
+class UEditableMeshFactory : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class EditableMesh.EditableMeshFactory");
+		return ptr;
+	}
+
+
+	class UEditableMesh* STATIC_MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int LODIndex);
+};
+
+
 // Class EditableMesh.EditableStaticMeshAdapter
 // 0x00B8 (0x00E0 - 0x0028)
 class UEditableStaticMeshAdapter : public UEditableMeshAdapter
@@ -209,23 +226,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class EditableMesh.EditableMeshFactory
-// 0x0000 (0x0028 - 0x0028)
-class UEditableMeshFactory : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class EditableMesh.EditableMeshFactory");
-		return ptr;
-	}
-
-
-	class UEditableMesh* MakeEditableMesh(class UPrimitiveComponent* PrimitiveComponent, int LODIndex);
 };
 
 

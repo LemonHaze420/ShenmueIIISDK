@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,20 +58,20 @@ public:
 	}
 
 
-	void STATIC_SetGradationSpeed(float Speed);
+	void SetGradationSpeed(float Speed);
 	void SetGradationPower(float Power);
 	void SetGradationScrollVisible(bool Visible);
 	void SetThrowResult(bool IsSuccess, int Point);
 	void SetSuccessRate(int SuccessCount);
-	void STATIC_SetThrowResultVisible(bool IsVisible);
+	void SetThrowResultVisible(bool IsVisible);
 	ESlateVisibility GetThrowResultVisibility();
-	void STATIC_SetResultVIsible(bool IsVisible);
-	void STATIC_SetNormalVisible(bool IsVisible);
+	void SetResultVisible(bool IsVisible);
+	void SetNormalVisible(bool IsVisible);
 	ESlateVisibility GetResultVisibility();
 	ESlateVisibility GetNormalVisibility();
-	void STATIC_SetScore(int InScore);
-	void STATIC_SetThrowCount(int newParam);
-	void STATIC_Construct();
+	void SetScore(int InScore);
+	void SetThrowCount(int newParam);
+	void Construct();
 	void ExecuteUbergraph_WBP_Test_STGame(int EntryPoint);
 };
 

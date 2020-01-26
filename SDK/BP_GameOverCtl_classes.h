@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,14 +33,14 @@ public:
 
 
 	void CheckLimitDay(struct FName* Type);
-	void STATIC_InitSet(bool* Make_Actor);
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_OnCutsceneEnd_M06_S9001();
-	void STATIC_OnStartCutscenePlayer_M06_S9001();
-	void STATIC_OnCutsceneEnd_M06_S9002();
-	void STATIC_OnStartCutscenePlayer_M06_S9002();
-	void STATIC_ExecuteUbergraph_BP_GameOverCtl(int EntryPoint);
+	void InitSet(bool* Make_Actor);
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds);
+	void OnCutsceneEnd_M06_S9001();
+	void OnStartCutscenePlayer_M06_S9001();
+	void OnCutsceneEnd_M06_S9002();
+	void OnStartCutscenePlayer_M06_S9002();
+	void ExecuteUbergraph_BP_GameOverCtl(int EntryPoint);
 };
 
 

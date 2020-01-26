@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtBase.BP_State_LookAtBase_C.ResetLookAtParamater
-// (NetReliable, NetRequest, Exec, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bResetTarget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtBase_C::STATIC_ResetLookAtParamater(bool bResetTarget)
+void UBP_State_LookAtBase_C::ResetLookAtParamater(bool bResetTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtBase.BP_State_LookAtBase_C.ResetLookAtParamater");
 
@@ -34,7 +34,7 @@ void UBP_State_LookAtBase_C::STATIC_ResetLookAtParamater(bool bResetTarget)
 
 
 // Function BP_State_LookAtBase.BP_State_LookAtBase_C.GetStateOwner
-// (Net, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  OwnerActor                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -56,9 +56,9 @@ void UBP_State_LookAtBase_C::GetStateOwner(class AActor** OwnerActor)
 
 
 // Function BP_State_LookAtBase.BP_State_LookAtBase_C.StateOnInitialize
-// (Net, Exec, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void UBP_State_LookAtBase_C::STATIC_StateOnInitialize()
+void UBP_State_LookAtBase_C::StateOnInitialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtBase.BP_State_LookAtBase_C.StateOnInitialize");
 
@@ -73,7 +73,7 @@ void UBP_State_LookAtBase_C::STATIC_StateOnInitialize()
 
 
 // Function BP_State_LookAtBase.BP_State_LookAtBase_C.ExecuteUbergraph_BP_State_LookAtBase
-// (Net, NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

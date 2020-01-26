@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,18 +33,18 @@ public:
 	}
 
 
-	float STATIC_CalculateLengthOverrideAlpha();
+	float CalculateLengthOverrideAlpha();
 	void SetCharacter(class ABP_S3Character_C* PlayerCharacter);
 	void CalculateSpringArmLength(float* Length, float* Alpha);
-	void STATIC_RegisterDoor(class AS3GimmickOpenDoor* Door);
-	void STATIC_StartDoorInteract(class ABP_Gimmick_OpenDoor_Template_C* Door);
-	void STATIC_OnDoorEndPlay(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_OnDoorAnimFinish();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_StartInteraction();
-	void STATIC_EndInteraction();
-	void STATIC_ExecuteUbergraph_BPC_DoorCameraControl(int EntryPoint);
+	void RegisterDoor(class AS3GimmickOpenDoor* Door);
+	void StartDoorInteract(class ABP_Gimmick_OpenDoor_Template_C* Door);
+	void OnDoorEndPlay(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void OnDoorAnimFinish();
+	void ReceiveTick(float DeltaSeconds);
+	void StartInteraction();
+	void EndInteraction();
+	void ExecuteUbergraph_BPC_DoorCameraControl(int EntryPoint);
 };
 
 

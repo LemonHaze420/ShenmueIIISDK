@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,11 +25,11 @@ public:
 	}
 
 
-	void CreateItemDialogText(class UObject* __WorldContext, TArray<struct FName>* InLabels, TArray<struct FName>* ShowLabels);
-	void GetPlatformCodeLabel(class UObject* __WorldContext, struct FName* Label);
-	void AllowRewardDialog(ES3PlayerBehavior ID, class UObject* __WorldContext, bool* Allow);
+	void STATIC_CreateItemDialogText(class UObject* __WorldContext, TArray<struct FName>* InLabels, TArray<struct FName>* ShowLabels);
+	void STATIC_GetPlatformCodeLabel(class UObject* __WorldContext, struct FName* Label);
+	void STATIC_AllowRewardDialog(ES3PlayerBehavior ID, class UObject* __WorldContext, bool* Allow);
 	void STATIC_CanShowDialog(bool Reward, class UObject* __WorldContext, bool* CAN);
-	void OverrideDialogButton(const struct FST_GeneralWindowParam& Param, const struct FName& DecideLabel, TEnumAsByte<EN_GeneralWindow_Button> DecideIcon, const struct FName& CancelLabel, TEnumAsByte<EN_GeneralWindow_Button> CancelIcon, class UObject* __WorldContext, struct FST_GeneralWindowParam* newParam);
+	void STATIC_OverrideDialogButton(const struct FST_GeneralWindowParam& Param, const struct FName& DecideLabel, TEnumAsByte<EN_GeneralWindow_Button> DecideIcon, const struct FName& CancelLabel, TEnumAsByte<EN_GeneralWindow_Button> CancelIcon, class UObject* __WorldContext, struct FST_GeneralWindowParam* newParam);
 };
 
 

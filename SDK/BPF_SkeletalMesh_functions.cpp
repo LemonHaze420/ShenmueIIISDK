@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_SkeletalMesh.BPF_SkeletalMesh_C.GetS3PostProcessAnimInstance
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3PostProcessAnimInstance* AnimInstance                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_SkeletalMesh_C::GetS3PostProcessAnimInstance(class AActor* Actor, class UObject* __WorldContext, class US3PostProcessAnimInstance** AnimInstance)
+void UBPF_SkeletalMesh_C::STATIC_GetS3PostProcessAnimInstance(class AActor* Actor, class UObject* __WorldContext, class US3PostProcessAnimInstance** AnimInstance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_SkeletalMesh.BPF_SkeletalMesh_C.GetS3PostProcessAnimInstance");
 
@@ -40,7 +40,7 @@ void UBPF_SkeletalMesh_C::GetS3PostProcessAnimInstance(class AActor* Actor, clas
 
 
 // Function BPF_SkeletalMesh.BPF_SkeletalMesh_C.ChangeMaterial
-// (Net, NetReliable, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*  Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // EClothPartsType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -66,7 +66,7 @@ void UBPF_SkeletalMesh_C::STATIC_ChangeMaterial(class USkeletalMeshComponent* Co
 
 
 // Function BPF_SkeletalMesh.BPF_SkeletalMesh_C.SetDisablePostProcessPhysics
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*  Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Disable                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -82,7 +82,6 @@ void UBPF_SkeletalMesh_C::STATIC_SetDisablePostProcessPhysics(class USkeletalMes
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +90,7 @@ void UBPF_SkeletalMesh_C::STATIC_SetDisablePostProcessPhysics(class USkeletalMes
 
 
 // Function BPF_SkeletalMesh.BPF_SkeletalMesh_C.GetFaceSubAnimInstance
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USkeletalMeshComponent*  Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -106,7 +105,6 @@ void UBPF_SkeletalMesh_C::STATIC_GetFaceSubAnimInstance(class USkeletalMeshCompo
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,7 +116,7 @@ void UBPF_SkeletalMesh_C::STATIC_GetFaceSubAnimInstance(class USkeletalMeshCompo
 
 
 // Function BPF_SkeletalMesh.BPF_SkeletalMesh_C.TryGetSocketLocation
-// (NetReliable, Event, NetResponse, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USceneComponent*         Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName                   InSocketName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -126,7 +124,7 @@ void UBPF_SkeletalMesh_C::STATIC_GetFaceSubAnimInstance(class USkeletalMeshCompo
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
 
-void UBPF_SkeletalMesh_C::TryGetSocketLocation(class USceneComponent* Target, const struct FName& InSocketName, class UObject* __WorldContext, bool* Result, struct FVector* Location)
+void UBPF_SkeletalMesh_C::STATIC_TryGetSocketLocation(class USceneComponent* Target, const struct FName& InSocketName, class UObject* __WorldContext, bool* Result, struct FVector* Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_SkeletalMesh.BPF_SkeletalMesh_C.TryGetSocketLocation");
 

@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,7 +74,7 @@ struct UBP_CheatManager_C_dbgCalcAddtime_Params
 {
 	float                                              Base;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Bias;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Signed;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               signed;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -134,12 +134,12 @@ struct UBP_CheatManager_C_OnKeyInput_2_Params
 };
 
 // Function BP_CheatManager.BP_CheatManager_C.OnKeyInput_Num+
-struct UBP_CheatManager_C_OnKeyInput_Num_Plus_Params
+struct UBP_CheatManager_C_OnKeyInput_Num__Params
 {
 };
 
 // Function BP_CheatManager.BP_CheatManager_C.OnKeyInput_Num-
-struct UBP_CheatManager_C_OnKeyInput_Num_Minus_Params
+struct UBP_CheatManager_C_OnKeyInput_Num__Params
 {
 };
 

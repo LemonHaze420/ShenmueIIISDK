@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,9 +43,9 @@ public:
 
 
 	void GetIconIndex(int* IconIndex);
-	void STATIC_SetIconIndex(int IconIndex, struct FName* Parts, EClothPartsType* PartsType);
-	struct FText STATIC_GetText_1();
-	void STATIC_SetText(const struct FText& InText);
+	void SetIconIndex(int IconIndex, struct FName* Parts, EClothPartsType* PartsType);
+	struct FText GetText_1();
+	void SetText(const struct FText& InText);
 	void InitIconButton(int ItemId, bool IsFocus, const struct FName& PartsName, const struct FS3ClothPartsArray& ClothPartsArray);
 	void Construct();
 	void ExecuteUbergraph_BPW_UI_DressMode_Clothing_OneLine(int EntryPoint);

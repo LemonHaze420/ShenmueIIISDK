@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,15 +46,15 @@ public:
 	}
 
 
-	void STATIC_GetPushCountRate(int Index, float* Output);
-	void STATIC_UpdateFillRatio();
+	void GetPushCountRate(int Index, float* Output);
+	void UpdateFillRatio();
 	void ChangeButtonIcon(TEnumAsByte<EN_padSwitch> ButtonType);
 	void Count_Check();
-	void STATIC_AddPushCount(bool Add);
+	void AddPushCount(bool Add);
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Reset();
-	void STATIC_SetEnabledSupportUI(bool Visible);
+	void SetEnabledSupportUI(bool Visible);
 	void ExecuteUbergraph_WBP_AR_Support(int EntryPoint);
 	void CountChange__DelegateSignature(int Count);
 	void CountMAX__DelegateSignature();

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,13 +35,13 @@ public:
 
 
 	float CalcMeterRatio(float Min, float Max);
-	float STATIC_GetMaxDisplayableRatio(float A);
-	void STATIC_GetOrbTresholds(int Index, float* Min, float* Max);
-	void STATIC_UpdateSubScaleRatios();
+	float GetMaxDisplayableRatio(float A);
+	void GetOrbTresholds(int Index, float* Min, float* Max);
+	void UpdateSubScaleRatios();
 	void UpdateSubFillRatios();
-	void STATIC_SetFillRatio(float FillRatio, bool* Changed);
+	void SetFillRatio(float FillRatio, bool* Changed);
 	void SetScaleRatio(float ScaleRatio, bool* Changed);
-	void STATIC_FindChildOrbs(class UPanelWidget* InputPin, bool Reverse);
+	void FindChildOrbs(class UPanelWidget* InputPin, bool Reverse);
 	void Construct();
 	void ExecuteUbergraph_wgt_MultiMeter(int EntryPoint);
 };

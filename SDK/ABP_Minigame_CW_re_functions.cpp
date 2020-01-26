@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_78DB1AC64A2D825264665D8541E4386A
-// (Net, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_78DB1AC64A2D825264665D8541E4386A()
+void UABP_Minigame_CW_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_78DB1AC64A2D825264665D8541E4386A()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_78DB1AC64A2D825264665D8541E4386A");
 
 	UABP_Minigame_CW_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_78DB1AC64A2D825264665D8541E4386A_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,16 +31,15 @@ void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_B1A11A0348B8211C2A3BDEA2736F4C62
-// (Net, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_B1A11A0348B8211C2A3BDEA2736F4C62()
+void UABP_Minigame_CW_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_B1A11A0348B8211C2A3BDEA2736F4C62()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_B1A11A0348B8211C2A3BDEA2736F4C62");
 
 	UABP_Minigame_CW_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_B1A11A0348B8211C2A3BDEA2736F4C62_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,16 +48,15 @@ void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_E8ED7E2A4C3D13EE104C91B460A1BE86
-// (Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_E8ED7E2A4C3D13EE104C91B460A1BE86()
+void UABP_Minigame_CW_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_E8ED7E2A4C3D13EE104C91B460A1BE86()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_E8ED7E2A4C3D13EE104C91B460A1BE86");
 
 	UABP_Minigame_CW_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_E8ED7E2A4C3D13EE104C91B460A1BE86_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,16 +65,15 @@ void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_77D2C573477B56AFFCA0BA944C3C7DFA
-// (Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_77D2C573477B56AFFCA0BA944C3C7DFA()
+void UABP_Minigame_CW_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_77D2C573477B56AFFCA0BA944C3C7DFA()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_77D2C573477B56AFFCA0BA944C3C7DFA");
 
 	UABP_Minigame_CW_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_77D2C573477B56AFFCA0BA944C3C7DFA_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,16 +82,15 @@ void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_44DD933C48EDFE26360EE69F3B52C8C1
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_44DD933C48EDFE26360EE69F3B52C8C1()
+void UABP_Minigame_CW_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_44DD933C48EDFE26360EE69F3B52C8C1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_44DD933C48EDFE26360EE69F3B52C8C1");
 
 	UABP_Minigame_CW_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_TransitionResult_44DD933C48EDFE26360EE69F3B52C8C1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,16 +99,15 @@ void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_51FF15F941338418DFAEEC84A016A06B
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_51FF15F941338418DFAEEC84A016A06B()
+void UABP_Minigame_CW_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_51FF15F941338418DFAEEC84A016A06B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_51FF15F941338418DFAEEC84A016A06B");
 
 	UABP_Minigame_CW_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_51FF15F941338418DFAEEC84A016A06B_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -122,16 +116,15 @@ void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_F8A2059445D7D1B65002109FFC68AD45
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_F8A2059445D7D1B65002109FFC68AD45()
+void UABP_Minigame_CW_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_F8A2059445D7D1B65002109FFC68AD45()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_F8A2059445D7D1B65002109FFC68AD45");
 
 	UABP_Minigame_CW_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Minigame_CW_re_AnimGraphNode_BlendSpacePlayer_F8A2059445D7D1B65002109FFC68AD45_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,7 +133,7 @@ void UABP_Minigame_CW_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.BlueprintUpdateAnimation
-// (Net, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -160,7 +153,7 @@ void UABP_Minigame_CW_re_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.PlayGetWoodMotion
-// (Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Angle                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -180,16 +173,15 @@ void UABP_Minigame_CW_re_C::PlayGetWoodMotion(float Angle)
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.AnimNotify_ReturnEnd
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_AnimNotify_ReturnEnd()
+void UABP_Minigame_CW_re_C::AnimNotify_ReturnEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.AnimNotify_ReturnEnd");
 
 	UABP_Minigame_CW_re_C_AnimNotify_ReturnEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -198,16 +190,15 @@ void UABP_Minigame_CW_re_C::STATIC_AnimNotify_ReturnEnd()
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.AnimNotify_ChangeStateFromGetWood
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_AnimNotify_ChangeStateFromGetWood()
+void UABP_Minigame_CW_re_C::AnimNotify_ChangeStateFromGetWood()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.AnimNotify_ChangeStateFromGetWood");
 
 	UABP_Minigame_CW_re_C_AnimNotify_ChangeStateFromGetWood_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -216,16 +207,15 @@ void UABP_Minigame_CW_re_C::STATIC_AnimNotify_ChangeStateFromGetWood()
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.AnimNotify_ChangeStateFromReturn
-// (NetReliable, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_AnimNotify_ChangeStateFromReturn()
+void UABP_Minigame_CW_re_C::AnimNotify_ChangeStateFromReturn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.AnimNotify_ChangeStateFromReturn");
 
 	UABP_Minigame_CW_re_C_AnimNotify_ChangeStateFromReturn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,16 +224,15 @@ void UABP_Minigame_CW_re_C::STATIC_AnimNotify_ChangeStateFromReturn()
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.AnimNotify_TransitionFromReturn
-// (NetReliable, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UABP_Minigame_CW_re_C::STATIC_AnimNotify_TransitionFromReturn()
+void UABP_Minigame_CW_re_C::AnimNotify_TransitionFromReturn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.AnimNotify_TransitionFromReturn");
 
 	UABP_Minigame_CW_re_C_AnimNotify_TransitionFromReturn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -252,11 +241,11 @@ void UABP_Minigame_CW_re_C::STATIC_AnimNotify_TransitionFromReturn()
 
 
 // Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.ExecuteUbergraph_ABP_Minigame_CW_re
-// (Exec, Native, NetResponse, Static, NetMulticast, DLLImport, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_Minigame_CW_re_C::STATIC_ExecuteUbergraph_ABP_Minigame_CW_re(int EntryPoint)
+void UABP_Minigame_CW_re_C::ExecuteUbergraph_ABP_Minigame_CW_re(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Minigame_CW_re.ABP_Minigame_CW_re_C.ExecuteUbergraph_ABP_Minigame_CW_re");
 
@@ -264,7 +253,6 @@ void UABP_Minigame_CW_re_C::STATIC_ExecuteUbergraph_ABP_Minigame_CW_re(int Entry
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

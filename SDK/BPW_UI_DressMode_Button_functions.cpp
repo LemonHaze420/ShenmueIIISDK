@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_DressMode_Button.BPW_UI_DressMode_Button_C.Set Mode
-// (Net, NetReliable, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_DressMode_SelectMode> Mode                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBPW_UI_DressMode_Button_C::Set_Mode(TEnumAsByte<EN_DressMode_SelectMode> M
 
 
 // Function BPW_UI_DressMode_Button.BPW_UI_DressMode_Button_C.SetFocusAndSelect
-// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsFocus                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsSelect                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -56,11 +56,11 @@ void UBPW_UI_DressMode_Button_C::SetFocusAndSelect(bool IsFocus, bool IsSelect)
 
 
 // Function BPW_UI_DressMode_Button.BPW_UI_DressMode_Button_C.SetImage
-// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_Button_C::STATIC_SetImage(class UTexture2D* Texture)
+void UBPW_UI_DressMode_Button_C::SetImage(class UTexture2D* Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode_Button.BPW_UI_DressMode_Button_C.SetImage");
 

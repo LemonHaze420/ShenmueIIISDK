@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,6 +33,16 @@ enum class ELandscapeGizmoType : uint8_t
 };
 
 
+// Enum Landscape.EGrassScaling
+enum class EGrassScaling : uint8_t
+{
+	EGrassScaling__Uniform         = 0,
+	EGrassScaling__Free            = 1,
+	EGrassScaling__LockXY          = 2,
+	EGrassScaling__EGrassScaling_MAX = 3
+};
+
+
 // Enum Landscape.ELandscapeLODFalloff
 enum class ELandscapeLODFalloff : uint8_t
 {
@@ -42,13 +52,13 @@ enum class ELandscapeLODFalloff : uint8_t
 };
 
 
-// Enum Landscape.EGrassScaling
-enum class EGrassScaling : uint8_t
+// Enum Landscape.ELandscapeLayerDisplayMode
+enum class ELandscapeLayerDisplayMode : uint8_t
 {
-	EGrassScaling__Uniform         = 0,
-	EGrassScaling__Free            = 1,
-	EGrassScaling__LockXY          = 2,
-	EGrassScaling__EGrassScaling_MAX = 3
+	ELandscapeLayerDisplayMode__Default = 0,
+	ELandscapeLayerDisplayMode__Alphabetical = 1,
+	ELandscapeLayerDisplayMode__UserSpecific = 2,
+	ELandscapeLayerDisplayMode__ELandscapeLayerDisplayMode_MAX = 3
 };
 
 
@@ -81,16 +91,6 @@ enum class ELandscapeSplineMeshOrientation : uint8_t
 };
 
 
-// Enum Landscape.ELandscapeLayerDisplayMode
-enum class ELandscapeLayerDisplayMode : uint8_t
-{
-	ELandscapeLayerDisplayMode__Default = 0,
-	ELandscapeLayerDisplayMode__Alphabetical = 1,
-	ELandscapeLayerDisplayMode__UserSpecific = 2,
-	ELandscapeLayerDisplayMode__ELandscapeLayerDisplayMode_MAX = 3
-};
-
-
 // Enum Landscape.ELandscapeLayerBlendType
 enum class ELandscapeLayerBlendType : uint8_t
 {
@@ -98,17 +98,6 @@ enum class ELandscapeLayerBlendType : uint8_t
 	LB_AlphaBlend                  = 1,
 	LB_HeightBlend                 = 2,
 	LB_MAX                         = 3
-};
-
-
-// Enum Landscape.ETerrainCoordMappingType
-enum class ETerrainCoordMappingType : uint8_t
-{
-	TCMT_Auto                      = 0,
-	TCMT_XY                        = 1,
-	TCMT_XZ                        = 2,
-	TCMT_YZ                        = 3,
-	TCMT_MAX                       = 4
 };
 
 
@@ -121,6 +110,17 @@ enum class ELandscapeCustomizedCoordType : uint8_t
 	LCCT_CustomUV2                 = 3,
 	LCCT_WeightMapUV               = 4,
 	LCCT_MAX                       = 5
+};
+
+
+// Enum Landscape.ETerrainCoordMappingType
+enum class ETerrainCoordMappingType : uint8_t
+{
+	TCMT_Auto                      = 0,
+	TCMT_XY                        = 1,
+	TCMT_XZ                        = 2,
+	TCMT_YZ                        = 3,
+	TCMT_MAX                       = 4
 };
 
 
@@ -166,13 +166,14 @@ struct FGrassVariety
 	unsigned char                                      UnknownData02[0x5];                                       // 0x0043(0x0005) MISSED OFFSET
 };
 
-// ScriptStruct Landscape.LandscapeSplineConnection
-// 0x0010
-struct FLandscapeSplineConnection
+// ScriptStruct Landscape.LandscapeSplineSegmentConnection
+// 0x0018
+struct FLandscapeSplineSegmentConnection
 {
-	class ULandscapeSplineSegment*                     Segment;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      End : 1;                                                  // 0x0008(0x0001)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+	class ULandscapeSplineControlPoint*                ControlPoint;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              TangentLen;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	struct FName                                       SocketName;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Landscape.LandscapeSplineInterpPoint
@@ -187,6 +188,15 @@ struct FLandscapeSplineInterpPoint
 	float                                              StartEndFalloff;                                          // 0x003C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Landscape.LandscapeSplineConnection
+// 0x0010
+struct FLandscapeSplineConnection
+{
+	class ULandscapeSplineSegment*                     Segment;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      End : 1;                                                  // 0x0008(0x0001)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+};
+
 // ScriptStruct Landscape.GrassInput
 // 0x0040
 struct FGrassInput
@@ -194,16 +204,6 @@ struct FGrassInput
 	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class ULandscapeGrassType*                         GrassType;                                                // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FExpressionInput                            Input;                                                    // 0x0010(0x0030)
-};
-
-// ScriptStruct Landscape.LandscapeSplineSegmentConnection
-// 0x0018
-struct FLandscapeSplineSegmentConnection
-{
-	class ULandscapeSplineControlPoint*                ControlPoint;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              TangentLen;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	struct FName                                       SocketName;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Landscape.LayerBlendInput
@@ -221,6 +221,19 @@ struct FLayerBlendInput
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Landscape.LandscapeEditToolRenderData
+// 0x0028
+struct FLandscapeEditToolRenderData
+{
+	class UMaterialInterface*                          ToolMaterial;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          GizmoMaterial;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                SelectedType;                                             // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                DebugChannelR;                                            // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                DebugChannelG;                                            // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                DebugChannelB;                                            // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  DataTexture;                                              // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Landscape.GizmoSelectData
 // 0x0050
 struct FGizmoSelectData
@@ -233,13 +246,6 @@ struct FGizmoSelectData
 struct FLandscapeImportLayerInfo
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct Landscape.LandscapeLayerStruct
-// 0x0008
-struct FLandscapeLayerStruct
-{
-	class ULandscapeLayerInfoObject*                   LayerInfoObj;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Landscape.LandscapeEditorLayerSettings
@@ -256,6 +262,13 @@ struct FLandscapeWeightmapUsage
 	class ULandscapeComponent*                         ChannelUsage[0x4];                                        // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
+// ScriptStruct Landscape.LandscapeLayerStruct
+// 0x0008
+struct FLandscapeLayerStruct
+{
+	class ULandscapeLayerInfoObject*                   LayerInfoObj;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Landscape.ForeignWorldSplineData
 // 0x0001
 struct FForeignWorldSplineData
@@ -263,16 +276,16 @@ struct FForeignWorldSplineData
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
-// ScriptStruct Landscape.ForeignSplineSegmentData
+// ScriptStruct Landscape.ForeignControlPointData
 // 0x0001
-struct FForeignSplineSegmentData
+struct FForeignControlPointData
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
-// ScriptStruct Landscape.ForeignControlPointData
+// ScriptStruct Landscape.ForeignSplineSegmentData
 // 0x0001
-struct FForeignControlPointData
+struct FForeignSplineSegmentData
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
@@ -301,19 +314,6 @@ struct FLandscapeInfoLayerSettings
 {
 	class ULandscapeLayerInfoObject*                   LayerInfoObj;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FName                                       LayerName;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Landscape.LandscapeEditToolRenderData
-// 0x0028
-struct FLandscapeEditToolRenderData
-{
-	class UMaterialInterface*                          ToolMaterial;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          GizmoMaterial;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                SelectedType;                                             // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                DebugChannelR;                                            // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                DebugChannelG;                                            // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                DebugChannelB;                                            // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  DataTexture;                                              // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

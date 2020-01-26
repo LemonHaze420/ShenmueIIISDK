@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -149,6 +149,20 @@ struct ULiveLinkBlueprintLibrary_ChildCount_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function LiveLink.LiveLinkComponent.GetSubjectData
+struct ULiveLinkComponent_GetSubjectData_Params
+{
+	struct FName                                       SubjectName;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bSuccess;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FSubjectFrameHandle                         SubjectFrameHandle;                                       // (Parm, OutParm)
+};
+
+// Function LiveLink.LiveLinkComponent.GetAvailableSubjectNames
+struct ULiveLinkComponent_GetAvailableSubjectNames_Params
+{
+	TArray<struct FName>                               SubjectNames;                                             // (Parm, OutParm, ZeroConstructor)
+};
+
 // Function LiveLink.LiveLinkMessageBusFinder.GetAvailableProviders
 struct ULiveLinkMessageBusFinder_GetAvailableProviders_Params
 {
@@ -189,20 +203,6 @@ struct ULiveLinkRemapAsset_GetRemappedBoneName_Params
 {
 	struct FName                                       BoneName;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function LiveLink.LiveLinkComponent.GetSubjectData
-struct ULiveLinkComponent_GetSubjectData_Params
-{
-	struct FName                                       SubjectName;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bSuccess;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FSubjectFrameHandle                         SubjectFrameHandle;                                       // (Parm, OutParm)
-};
-
-// Function LiveLink.LiveLinkComponent.GetAvailableSubjectNames
-struct ULiveLinkComponent_GetAvailableSubjectNames_Params
-{
-	TArray<struct FName>                               SubjectNames;                                             // (Parm, OutParm, ZeroConstructor)
 };
 
 }

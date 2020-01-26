@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void CalculateVerticalFOV(float HFOV, float AspectRatio, class UObject* __WorldContext, float* VFOV);
+	void STATIC_CalculateVerticalFOV(float HFOV, float AspectRatio, class UObject* __WorldContext, float* VFOV);
 	void STATIC_distanceVector(const struct FVector& A, const struct FVector& B, bool Is_Distance_2D, class UObject* __WorldContext, float* Length);
 };
 

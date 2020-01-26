@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_AutoCameraAnalizer.BPC_AutoCameraAnalizer_C.ReceiveBeginPlay
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
 void UBPC_AutoCameraAnalizer_C::ReceiveBeginPlay()
 {
@@ -23,7 +23,6 @@ void UBPC_AutoCameraAnalizer_C::ReceiveBeginPlay()
 	UBPC_AutoCameraAnalizer_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void UBPC_AutoCameraAnalizer_C::ReceiveBeginPlay()
 
 
 // Function BPC_AutoCameraAnalizer.BPC_AutoCameraAnalizer_C.ExecuteUbergraph_BPC_AutoCameraAnalizer
-// (MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

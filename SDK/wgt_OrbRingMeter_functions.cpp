@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.SetForegroundVisible
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_OrbRingMeter_C::STATIC_SetForegroundVisible(bool Visible)
+void Uwgt_OrbRingMeter_C::SetForegroundVisible(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.SetForegroundVisible");
 
@@ -26,7 +26,6 @@ void Uwgt_OrbRingMeter_C::STATIC_SetForegroundVisible(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void Uwgt_OrbRingMeter_C::STATIC_SetForegroundVisible(bool Visible)
 
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.SetColorByEnum
-// (NetReliable, Event, NetResponse, Private, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EHealthOrbColor>   Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -55,7 +54,7 @@ void Uwgt_OrbRingMeter_C::SetColorByEnum(TEnumAsByte<EHealthOrbColor> Color)
 
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.SetBackgroundTexture
-// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTexture2D*              Background                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,7 +66,6 @@ void Uwgt_OrbRingMeter_C::SetBackgroundTexture(class UTexture2D* Background)
 	params.Background = Background;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,11 +74,11 @@ void Uwgt_OrbRingMeter_C::SetBackgroundTexture(class UTexture2D* Background)
 
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.PreConstruct
-// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_OrbRingMeter_C::STATIC_PreConstruct(bool IsDesignTime)
+void Uwgt_OrbRingMeter_C::PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.PreConstruct");
 
@@ -88,7 +86,6 @@ void Uwgt_OrbRingMeter_C::STATIC_PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,7 +94,7 @@ void Uwgt_OrbRingMeter_C::STATIC_PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.ExecuteUbergraph_wgt_OrbRingMeter
-// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -109,7 +106,6 @@ void Uwgt_OrbRingMeter_C::ExecuteUbergraph_wgt_OrbRingMeter(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,7 +29,7 @@ public:
 
 	void GetGlobalFlagMiniGameResultNum(int* Result);
 	void SetGlobalFlagMiniGameResultNum(int Result);
-	void STATIC_GetGlobalFlagMiniGameScore(int* Score);
+	void GetGlobalFlagMiniGameScore(int* Score);
 	void SetGlobalFlagMiniGameScore(int Score);
 };
 

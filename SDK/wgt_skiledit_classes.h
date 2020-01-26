@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,19 +56,19 @@ public:
 	}
 
 
-	void STATIC_SetWazeSlotSwitchSel(bool Visible);
-	void STATIC_SetWazePageSel(bool Visible);
+	void SetWazeSlotSwitchSel(bool Visible);
+	void SetWazePageSel(bool Visible);
 	void UpdatePageIcons();
-	void STATIC_UpdateDetailPanel();
+	void UpdateDetailPanel();
 	void UpdateBookItem(int* ItemIndex);
 	void OpenBookToItem_ItemIntID_(int ItemIntID, int SetIndexOnInvalid, int* ItemIndex);
-	void STATIC_UpdateSetSelection();
-	void STATIC_SetBookPage(int InputPin, bool* Changed);
-	void STATIC_PushLR(int AddPage);
+	void UpdateSetSelection();
+	void SetBookPage(int InputPin, bool* Changed);
+	void PushLR(int AddPage);
 	void InitPageIcon();
-	void STATIC_SetCurrentMode(TEnumAsByte<ESkillEditorInnnerModeType> current_mode, int* ItemIndex);
+	void SetCurrentMode(TEnumAsByte<ESkillEditorInnnerModeType> current_mode, int* ItemIndex);
 	void ExecDialog();
-	void STATIC_InputSelectDirection(TEnumAsByte<Een_skill_key_type> Key, bool* IsActionButton, int* ItemIndex);
+	void InputSelectDirection(TEnumAsByte<Een_skill_key_type> Key, bool* IsActionButton, int* ItemIndex);
 	void InputCancel(bool* IsEnd);
 	void InputSelect(int* ItemIndex);
 	void PreConstruct(bool IsDesignTime);

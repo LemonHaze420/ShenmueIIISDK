@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_DisableAdventureHud.BTS_DisableAdventureHud_C.ReceiveDeactivationAI
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -28,7 +28,6 @@ void UBTS_DisableAdventureHud_C::ReceiveDeactivationAI(class AAIController* Owne
 	params.ControlledPawn = ControlledPawn;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void UBTS_DisableAdventureHud_C::ReceiveDeactivationAI(class AAIController* Owne
 
 
 // Function BTS_DisableAdventureHud.BTS_DisableAdventureHud_C.ReceiveActivationAI
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -51,7 +50,6 @@ void UBTS_DisableAdventureHud_C::ReceiveActivationAI(class AAIController* OwnerC
 	params.ControlledPawn = ControlledPawn;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +58,7 @@ void UBTS_DisableAdventureHud_C::ReceiveActivationAI(class AAIController* OwnerC
 
 
 // Function BTS_DisableAdventureHud.BTS_DisableAdventureHud_C.ExecuteUbergraph_BTS_DisableAdventureHud
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -72,7 +70,6 @@ void UBTS_DisableAdventureHud_C::ExecuteUbergraph_BTS_DisableAdventureHud(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

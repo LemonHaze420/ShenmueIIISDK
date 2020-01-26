@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,33 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.DefocusExchanges
+struct UBPW_UI_BaseWindow_C_DefocusExchanges_Params
+{
+};
+
+// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetExchangeIconFromFocusIdx
+struct UBPW_UI_BaseWindow_C_GetExchangeIconFromFocusIdx_Params
+{
+	int                                                FocusIdx;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UBPW_UI_SetExchangeIcon_C*                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetNumWithDefaultZero
+struct UBPW_UI_BaseWindow_C_GetNumWithDefaultZero_Params
+{
+	TArray<int>                                        Array;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetSellListOrDefault
+struct UBPW_UI_BaseWindow_C_GetSellListOrDefault_Params
+{
+	int                                                PageIdx;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FST_SelectSellItem                          Output;                                                   // (Parm, OutParm)
+};
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ResetSetName
 struct UBPW_UI_BaseWindow_C_ResetSetName_Params
@@ -269,8 +296,8 @@ struct UBPW_UI_BaseWindow_C_SubSelectItem_Params
 	int                                                SubCount;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.addSelectItem
-struct UBPW_UI_BaseWindow_C_addSelectItem_Params
+// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.AddSelectItem
+struct UBPW_UI_BaseWindow_C_AddSelectItem_Params
 {
 	int                                                FocusItem;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                AddCount;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -315,7 +342,7 @@ struct UBPW_UI_BaseWindow_C_FocusItem_Params
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetItemList
 struct UBPW_UI_BaseWindow_C_SetItemList_Params
 {
-	TArray<struct FST_ItemList>                        itemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FST_ItemList>                        ItemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int                                                page;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -324,10 +351,11 @@ struct UBPW_UI_BaseWindow_C_InitItemList_Params
 {
 };
 
-// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.PreConstruct
-struct UBPW_UI_BaseWindow_C_PreConstruct_Params
+// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.Tick
+struct UBPW_UI_BaseWindow_C_Tick_Params
 {
-	bool                                               IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FGeometry                                   MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.Construct
@@ -335,11 +363,10 @@ struct UBPW_UI_BaseWindow_C_Construct_Params
 {
 };
 
-// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.Tick
-struct UBPW_UI_BaseWindow_C_Tick_Params
+// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.PreConstruct
+struct UBPW_UI_BaseWindow_C_PreConstruct_Params
 {
-	struct FGeometry                                   MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	float                                              InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ExecuteUbergraph_BPW_UI_BaseWindow

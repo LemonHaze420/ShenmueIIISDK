@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.RefreshLayoutStringLen
-// (Static, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            StrLen                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Threshold                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_RefreshLayoutStringLen(int StrLen, int Threshold)
+void Uwgt_BattleSkillDisplay_C::RefreshLayoutStringLen(int StrLen, int Threshold)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.RefreshLayoutStringLen");
 
@@ -36,11 +36,11 @@ void Uwgt_BattleSkillDisplay_C::STATIC_RefreshLayoutStringLen(int StrLen, int Th
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.RefreshLayout
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Layout                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_RefreshLayout(int Layout)
+void Uwgt_BattleSkillDisplay_C::RefreshLayout(int Layout)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.RefreshLayout");
 
@@ -48,7 +48,6 @@ void Uwgt_BattleSkillDisplay_C::STATIC_RefreshLayout(int Layout)
 	params.Layout = Layout;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,12 +56,12 @@ void Uwgt_BattleSkillDisplay_C::STATIC_RefreshLayout(int Layout)
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.ReanchorWidget
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget*                 Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FAnchorData             AnchorData                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_ReanchorWidget(class UWidget* Widget, struct FAnchorData* AnchorData)
+void Uwgt_BattleSkillDisplay_C::ReanchorWidget(class UWidget* Widget, struct FAnchorData* AnchorData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.ReanchorWidget");
 
@@ -70,7 +69,6 @@ void Uwgt_BattleSkillDisplay_C::STATIC_ReanchorWidget(class UWidget* Widget, str
 	params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,11 +80,11 @@ void Uwgt_BattleSkillDisplay_C::STATIC_ReanchorWidget(class UWidget* Widget, str
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.SetLayout
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            LayoutType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_SetLayout(int LayoutType)
+void Uwgt_BattleSkillDisplay_C::SetLayout(int LayoutType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.SetLayout");
 
@@ -102,12 +100,12 @@ void Uwgt_BattleSkillDisplay_C::STATIC_SetLayout(int LayoutType)
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.CacheWidgetAchorData
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget*                 Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FAnchorData             AnchorData                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_CacheWidgetAchorData(class UWidget* Widget, struct FAnchorData* AnchorData)
+void Uwgt_BattleSkillDisplay_C::CacheWidgetAchorData(class UWidget* Widget, struct FAnchorData* AnchorData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.CacheWidgetAchorData");
 
@@ -115,7 +113,6 @@ void Uwgt_BattleSkillDisplay_C::STATIC_CacheWidgetAchorData(class UWidget* Widge
 	params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,7 +124,7 @@ void Uwgt_BattleSkillDisplay_C::STATIC_CacheWidgetAchorData(class UWidget* Widge
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.GetActiveSkillLibrary
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   SkillLibrary                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -139,7 +136,6 @@ void Uwgt_BattleSkillDisplay_C::GetActiveSkillLibrary(class UBTL_CommandLibrary_
 	Uwgt_BattleSkillDisplay_C_GetActiveSkillLibrary_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,7 +149,7 @@ void Uwgt_BattleSkillDisplay_C::GetActiveSkillLibrary(class UBTL_CommandLibrary_
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.SetSkillLibrary
-// (Exec, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   SkillLibrary                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -173,7 +169,7 @@ void Uwgt_BattleSkillDisplay_C::SetSkillLibrary(class UBTL_CommandLibrary_C* Ski
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.ShowSkillLevel
-// (Event, NetResponse, NetMulticast, Private, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Skill                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -193,7 +189,7 @@ void Uwgt_BattleSkillDisplay_C::ShowSkillLevel(const struct FName& Skill)
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.SetSkillLevel
-// (NetReliable, Native, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          NextProgress                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -209,7 +205,6 @@ void Uwgt_BattleSkillDisplay_C::SetSkillLevel(int Level, float NextProgress, int
 	params.MaxLevel = MaxLevel;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -218,7 +213,7 @@ void Uwgt_BattleSkillDisplay_C::SetSkillLevel(int Level, float NextProgress, int
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.SetSkill
-// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   SkillName                      (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -232,7 +227,6 @@ void Uwgt_BattleSkillDisplay_C::SetSkill(const struct FName& ItemId, const struc
 	params.SkillName = SkillName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,7 +235,7 @@ void Uwgt_BattleSkillDisplay_C::SetSkill(const struct FName& ItemId, const struc
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.SetSkillName
-// (Net, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Title                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // ES3Locale                      Language                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -263,11 +257,11 @@ void Uwgt_BattleSkillDisplay_C::SetSkillName(const struct FText& Title, ES3Local
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.ShowSkillCommand
-// (Net, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_ShowSkillCommand(const struct FName& Item)
+void Uwgt_BattleSkillDisplay_C::ShowSkillCommand(const struct FName& Item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.ShowSkillCommand");
 
@@ -275,7 +269,6 @@ void Uwgt_BattleSkillDisplay_C::STATIC_ShowSkillCommand(const struct FName& Item
 	params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -284,11 +277,11 @@ void Uwgt_BattleSkillDisplay_C::STATIC_ShowSkillCommand(const struct FName& Item
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.SetRenderTex
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextureRenderTarget2D*  RenderTex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_SetRenderTex(class UTextureRenderTarget2D* RenderTex)
+void Uwgt_BattleSkillDisplay_C::SetRenderTex(class UTextureRenderTarget2D* RenderTex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.SetRenderTex");
 
@@ -296,7 +289,6 @@ void Uwgt_BattleSkillDisplay_C::STATIC_SetRenderTex(class UTextureRenderTarget2D
 	params.RenderTex = RenderTex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -305,16 +297,15 @@ void Uwgt_BattleSkillDisplay_C::STATIC_SetRenderTex(class UTextureRenderTarget2D
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.StopMotion
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_StopMotion()
+void Uwgt_BattleSkillDisplay_C::StopMotion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.StopMotion");
 
 	Uwgt_BattleSkillDisplay_C_StopMotion_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -323,7 +314,7 @@ void Uwgt_BattleSkillDisplay_C::STATIC_StopMotion()
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.PlayItemMotion
-// (Net, NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -335,7 +326,6 @@ void Uwgt_BattleSkillDisplay_C::PlayItemMotion(const struct FName& ItemId)
 	params.ItemId = ItemId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -344,9 +334,9 @@ void Uwgt_BattleSkillDisplay_C::PlayItemMotion(const struct FName& ItemId)
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.Construct
-// (Net, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_Construct()
+void Uwgt_BattleSkillDisplay_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.Construct");
 
@@ -361,9 +351,9 @@ void Uwgt_BattleSkillDisplay_C::STATIC_Construct()
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.Destruct
-// (Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_Destruct()
+void Uwgt_BattleSkillDisplay_C::Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.Destruct");
 
@@ -378,11 +368,11 @@ void Uwgt_BattleSkillDisplay_C::STATIC_Destruct()
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.PreConstruct
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_PreConstruct(bool IsDesignTime)
+void Uwgt_BattleSkillDisplay_C::PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.PreConstruct");
 
@@ -390,7 +380,6 @@ void Uwgt_BattleSkillDisplay_C::STATIC_PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -399,9 +388,9 @@ void Uwgt_BattleSkillDisplay_C::STATIC_PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.BndEvt__wgt_BTL_MontagePlayer_K2Node_ComponentBoundEvent_0_OnSceneCapture__DelegateSignature
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void Uwgt_BattleSkillDisplay_C::STATIC_BndEvt__wgt_BTL_MontagePlayer_K2Node_ComponentBoundEvent_0_OnSceneCapture__DelegateSignature()
+void Uwgt_BattleSkillDisplay_C::BndEvt__wgt_BTL_MontagePlayer_K2Node_ComponentBoundEvent_0_OnSceneCapture__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.BndEvt__wgt_BTL_MontagePlayer_K2Node_ComponentBoundEvent_0_OnSceneCapture__DelegateSignature");
 
@@ -416,7 +405,7 @@ void Uwgt_BattleSkillDisplay_C::STATIC_BndEvt__wgt_BTL_MontagePlayer_K2Node_Comp
 
 
 // Function wgt_BattleSkillDisplay.wgt_BattleSkillDisplay_C.ExecuteUbergraph_wgt_BattleSkillDisplay
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -428,7 +417,6 @@ void Uwgt_BattleSkillDisplay_C::ExecuteUbergraph_wgt_BattleSkillDisplay(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

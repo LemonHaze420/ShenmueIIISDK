@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void STATIC_ReceiveNotify(const struct FName& Name);
-	void STATIC_ConsumeNotify(const struct FName& Name, bool* Exists);
-	bool STATIC_HasNotify(const struct FName& Name);
+	void ReceiveNotify(const struct FName& Name);
+	void ConsumeNotify(const struct FName& Name, bool* Exists);
+	bool HasNotify(const struct FName& Name);
 	void OnReceiveNotify__DelegateSignature(const struct FName& Name);
 };
 

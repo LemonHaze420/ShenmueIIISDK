@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,16 +51,16 @@ public:
 
 
 	void ExecSave();
-	void STATIC_CheckBeginHit(bool* BeginIn);
-	void STATIC_CheckDirection(bool* DirectionOK);
-	void STATIC_ResetFlag();
-	void STATIC_CheckFlag(bool* flag_on);
-	void STATIC_CheckStep(bool* Result_EnableStep);
-	void STATIC_UserConstructionScript();
-	void STATIC_BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_EvtStepChange(int SetSteps);
-	void STATIC_CheckTriigerIn();
+	void CheckBeginHit(bool* BeginIn);
+	void CheckDirection(bool* DirectionOK);
+	void ResetFlag();
+	void CheckFlag(bool* flag_on);
+	void CheckStep(bool* Result_EnableStep);
+	void UserConstructionScript();
+	void BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ReceiveBeginPlay();
+	void EvtStepChange(int SetSteps);
+	void CheckTriigerIn();
 	void ExecuteUbergraph_BP_AutoSave_Trigger(int EntryPoint);
 };
 

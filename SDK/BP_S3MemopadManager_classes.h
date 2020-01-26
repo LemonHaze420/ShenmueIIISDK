@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,32 +53,32 @@ public:
 
 	int GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
-	void STATIC_CheckOpenMainEventPage(bool* IsOpenMainEventPage);
+	void CheckOpenMainEventPage(bool* IsOpenMainEventPage);
 	void GetIsUnreadMainEvent(bool* IsUnreadMainEvent);
-	void STATIC_GetIsNowSubEventPage(bool* IsNowSubEventPage);
-	void STATIC_GetIsSubEventOngoing(bool* IsSubEventOngoing);
+	void GetIsNowSubEventPage(bool* IsNowSubEventPage);
+	void GetIsSubEventOngoing(bool* IsSubEventOngoing);
 	void CursoFade(bool FadeIn);
-	void STATIC_InitMemoPage();
+	void InitMemoPage();
 	void CheckCanUSeMemopad(bool* CanUse);
-	void STATIC_SetBlink();
-	void STATIC_IsDetected(bool* IsDetected);
+	void SetBlink();
+	void IsDetected(bool* IsDetected);
 	void _dbg_print_memoFlags_(bool Already);
 	void _dbg_check_memoFlags_(bool Already, TArray<struct FString>* Flags);
 	void checkEvent(bool* nowDisableMemopadEvent);
 	void SetDenyFlag(bool Deny, bool* succes);
 	void firstAttach(bool* Success);
-	void STATIC__dbgPrint_location_();
+	void _dbgPrint_location_();
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_delayedFirstAttach();
-	void STATIC_doCmd_FirstDetectRetain_memopadManager_();
-	void STATIC_delayedRegistCheck_detector_();
-	void STATIC_catch_onEndScreenIn();
-	void STATIC_Finalize();
+	void ReceiveBeginPlay();
+	void delayedFirstAttach();
+	void doCmd_FirstDetectRetain_memopadManager_();
+	void delayedRegistCheck_detector_();
+	void catch_onEndScreenIn();
+	void Finalize();
 	void InpAxisEvt_MoveRight_K2Node_InputAxisEvent_15(float AxisValue);
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_19(float AxisValue);
-	void STATIC_ForceDestroy();
+	void ForceDestroy();
 	void InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1(float AxisValue);
 	void InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_3(float AxisValue);
 	void StartMemopad(int OpenPageIndex);
@@ -89,7 +89,7 @@ public:
 	void DecideDetectAction(ES3ActionIconType Type);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_S3MemopadManager(int EntryPoint);
-	void STATIC_ED_MemoFinish__DelegateSignature();
+	void ED_MemoFinish__DelegateSignature();
 };
 
 

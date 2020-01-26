@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,35 +50,35 @@ public:
 	}
 
 
-	float STATIC_GetInAnimationLength();
-	void STATIC_StartWaitTime(float Time);
+	float GetInAnimationLength();
+	void StartWaitTime(float Time);
 	void Update(float DeltaTime);
-	void STATIC_SetUseRealTime(bool UseRealTime);
+	void SetUseRealTime(bool UseRealTime);
 	void InstantHideBack();
-	bool STATIC_IsPlayingInputSuccess();
-	bool STATIC_IsPlayingInstructions();
-	void STATIC_ResetAllButtonZOrder();
+	bool IsPlayingInputSuccess();
+	bool IsPlayingInstructions();
+	void ResetAllButtonZOrder();
 	void ResetButtonZOrder(class UWBP_QTECommandButton_C* TargetButton);
 	void SetButtonZOrderToFront(class UWBP_QTECommandButton_C* TargetButton);
-	void STATIC_SetupButton();
+	void SetupButton();
 	void GetButtonImage(const struct FName& InputName, class UTexture2D** Image);
-	void STATIC_PlayInputSuccess(const struct FName& InputName, bool IsAutoHide);
-	void STATIC_PlayOutBack();
-	void STATIC_GetCurrentInstructionButton(class UWBP_QTECommandButton_C** Button);
-	void STATIC_PlayInstructions(TArray<struct FName>* Inputs);
+	void PlayInputSuccess(const struct FName& InputName, bool IsAutoHide);
+	void PlayOutBack();
+	void GetCurrentInstructionButton(class UWBP_QTECommandButton_C** Button);
+	void PlayInstructions(TArray<struct FName>* Inputs);
 	void Reset();
-	void STATIC_GetButtonFromInputName(const struct FName& InputName, class UWBP_QTECommandButton_C** Button);
+	void GetButtonFromInputName(const struct FName& InputName, class UWBP_QTECommandButton_C** Button);
 	void Construct();
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void OnButtonInstructionAnimationFinished();
 	void OnButtonInputAnimationFinished();
-	void OnOutBackAnimationFinished();
+	void OnOutbackAnimationFinished();
 	void PlayFirstInstruction();
 	void OnWaitTimeFinishedAfterPlayAnim();
-	void STATIC_OnWaitTimeFinishedBeforeOutBack();
-	void STATIC_ExecuteUbergraph_WBP_QTECommand(int EntryPoint);
+	void OnWaitTimeFinishedBeforeOutBack();
+	void ExecuteUbergraph_WBP_QTECommand(int EntryPoint);
 	void OnWaitTimeFinished__DelegateSignature();
-	void STATIC_OnInstructionFinished__DelegateSignature();
+	void OnInstructionFinished__DelegateSignature();
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CreateMemoMapTexture.BP_CreateMemoMapTexture_C.UserConstructionScript
-// (Native, NetResponse, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_CreateMemoMapTexture_C::UserConstructionScript()
 {
@@ -23,7 +23,6 @@ void ABP_CreateMemoMapTexture_C::UserConstructionScript()
 	ABP_CreateMemoMapTexture_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_CreateMemoMapTexture_C::UserConstructionScript()
 
 
 // Function BP_CreateMemoMapTexture.BP_CreateMemoMapTexture_C.ReceiveBeginPlay
-// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_CreateMemoMapTexture_C::ReceiveBeginPlay()
 {
@@ -49,7 +48,7 @@ void ABP_CreateMemoMapTexture_C::ReceiveBeginPlay()
 
 
 // Function BP_CreateMemoMapTexture.BP_CreateMemoMapTexture_C.ExecuteUbergraph_BP_CreateMemoMapTexture
-// (Net, Exec, Native, Event, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -61,7 +60,6 @@ void ABP_CreateMemoMapTexture_C::ExecuteUbergraph_BP_CreateMemoMapTexture(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,14 +29,14 @@ public:
 	}
 
 
-	void STATIC_EnableHUD(bool Visible);
-	bool STATIC_IsResultDecided();
-	void STATIC_TryPlayerQuit(bool* dummy);
-	void STATIC_StartBattle();
-	void STATIC_ExecuteDebugCommand(const struct FString& Argument);
-	void STATIC_StartEndingBattle(TEnumAsByte<EBattleWinLoseResult> Result, bool* dummy);
-	void STATIC_CloseBattle(bool* dummy);
-	void STATIC_LaunchBattle(class UBTL_LaunchParameters_C* LaunchParams, bool* dummy);
+	void EnableHUD(bool Visible);
+	bool IsResultDecided();
+	void TryPlayerQuit(bool* dummy);
+	void StartBattle();
+	void ExecuteDebugCommand(const struct FString& Argument);
+	void StartEndingBattle(TEnumAsByte<EBattleWinLoseResult> Result, bool* dummy);
+	void CloseBattle(bool* dummy);
+	void LaunchBattle(class UBTL_LaunchParameters_C* LaunchParams, bool* dummy);
 	void UserConstructionScript();
 	void OnBattleClose__DelegateSignature();
 	void OnBattleEnd__DelegateSignature(TEnumAsByte<EBattleWinLoseResult> Result);

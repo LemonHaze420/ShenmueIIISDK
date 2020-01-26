@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.MaxOut
-// (NetReliable, NetRequest, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UPC_SimpleFloatMeter_C::STATIC_MaxOut()
+void UPC_SimpleFloatMeter_C::MaxOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.MaxOut");
 
@@ -31,9 +31,9 @@ void UPC_SimpleFloatMeter_C::STATIC_MaxOut()
 
 
 // Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.Reset
-// (Net, NetRequest, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UPC_SimpleFloatMeter_C::STATIC_Reset()
+void UPC_SimpleFloatMeter_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.Reset");
 
@@ -48,12 +48,12 @@ void UPC_SimpleFloatMeter_C::STATIC_Reset()
 
 
 // Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.Tick
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Increase                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UPC_SimpleFloatMeter_C::STATIC_Tick(bool Increase, float DeltaTime)
+void UPC_SimpleFloatMeter_C::Tick(bool Increase, float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.Tick");
 

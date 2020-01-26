@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,6 +24,27 @@ struct ABP_S3AttentionController_C_GetPriority_Params
 struct ABP_S3AttentionController_C_GetDetectAction_Params
 {
 	TArray<struct FS3DetectActionParam>                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function BP_S3AttentionController.BP_S3AttentionController_C.PrestreamIfNotOther
+struct ABP_S3AttentionController_C_PrestreamIfNotOther_Params
+{
+	class UActorComponent*                             Target;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               bEnableStreaming;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UActorComponent*                             Other;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function BP_S3AttentionController.BP_S3AttentionController_C.SetNextComponent
+struct ABP_S3AttentionController_C_SetNextComponent_Params
+{
+	class US3AttentionComponent*                       TargetComp;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function BP_S3AttentionController.BP_S3AttentionController_C.Prestream
+struct ABP_S3AttentionController_C_Prestream_Params
+{
+	class UActorComponent*                             Target;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               bEnableStreaming;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateButton
@@ -237,7 +258,7 @@ struct ABP_S3AttentionController_C_MultiCapsuleTrace_Params
 	float                                              Radius;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              HalfHeight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TArray<class AActor*>                              ignoreActors;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	bool                                               DEBUG;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Debug;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimitiveComponent*                         HitComponent;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 	struct FVector                                     MoveVec;                                                  // (Parm, OutParm, IsPlainOldData)
@@ -310,6 +331,7 @@ struct ABP_S3AttentionController_C_SearchTarget_Params
 // Function BP_S3AttentionController.BP_S3AttentionController_C.FreeMove
 struct ABP_S3AttentionController_C_FreeMove_Params
 {
+	float                                              DeltaSeconds;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.CheckNeighbourTarget

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Sound.BPF_Sound_C.IsVoiceCue
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -29,7 +29,6 @@ void UBPF_Sound_C::STATIC_IsVoiceCue(class USoundAtomCue* Cue, class UObject* __
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -41,7 +40,7 @@ void UBPF_Sound_C::STATIC_IsVoiceCue(class USoundAtomCue* Cue, class UObject* __
 
 
 // Function BPF_Sound.BPF_Sound_C.GetLanguageLabel
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Selector                       (Parm, OutParm, ZeroConstructor)
@@ -55,7 +54,6 @@ void UBPF_Sound_C::STATIC_GetLanguageLabel(class UObject* __WorldContext, struct
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,7 +67,7 @@ void UBPF_Sound_C::STATIC_GetLanguageLabel(class UObject* __WorldContext, struct
 
 
 // Function BPF_Sound.BPF_Sound_C.GetVoiceVolume
-// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Volume                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -93,7 +91,7 @@ void UBPF_Sound_C::STATIC_GetVoiceVolume(class UObject* __WorldContext, float* V
 
 
 // Function BPF_Sound.BPF_Sound_C.GetBGMVolume
-// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Volume                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -106,7 +104,6 @@ void UBPF_Sound_C::STATIC_GetBGMVolume(class UObject* __WorldContext, float* Vol
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,7 +115,7 @@ void UBPF_Sound_C::STATIC_GetBGMVolume(class UObject* __WorldContext, float* Vol
 
 
 // Function BPF_Sound.BPF_Sound_C.GetVolumeAdjustValue
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Volume                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -131,7 +128,6 @@ void UBPF_Sound_C::STATIC_GetVolumeAdjustValue(class UObject* __WorldContext, fl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,7 +139,7 @@ void UBPF_Sound_C::STATIC_GetVolumeAdjustValue(class UObject* __WorldContext, fl
 
 
 // Function BPF_Sound.BPF_Sound_C.GetSEVolume
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Volume                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -167,7 +163,7 @@ void UBPF_Sound_C::STATIC_GetSEVolume(class UObject* __WorldContext, float* Volu
 
 
 // Function BPF_Sound.BPF_Sound_C.GetWeatherLabel
-// (Net, NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Selector                       (Parm, OutParm, ZeroConstructor)
@@ -181,7 +177,6 @@ void UBPF_Sound_C::STATIC_GetWeatherLabel(class UObject* __WorldContext, struct 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,13 +190,13 @@ void UBPF_Sound_C::STATIC_GetWeatherLabel(class UObject* __WorldContext, struct 
 
 
 // Function BPF_Sound.BPF_Sound_C.GetBGMbyID
-// (NetReliable, NetRequest, Event, MulticastDelegate, Protected, HasOutParms, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InId                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FS3BgmTable             Data                           (Parm, OutParm)
 
-void UBPF_Sound_C::GetBGMbyID(const struct FName& InId, class UObject* __WorldContext, struct FS3BgmTable* Data)
+void UBPF_Sound_C::STATIC_GetBGMbyID(const struct FName& InId, class UObject* __WorldContext, struct FS3BgmTable* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Sound.BPF_Sound_C.GetBGMbyID");
 
@@ -221,7 +216,7 @@ void UBPF_Sound_C::GetBGMbyID(const struct FName& InId, class UObject* __WorldCo
 
 
 // Function BPF_Sound.BPF_Sound_C.PlayCommonSound
-// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ECommonSEType                  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -243,7 +238,7 @@ void UBPF_Sound_C::STATIC_PlayCommonSound(ECommonSEType Type, class UObject* __W
 
 
 // Function BPF_Sound.BPF_Sound_C.PlaySoundWithVolume
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -259,7 +254,6 @@ void UBPF_Sound_C::STATIC_PlaySoundWithVolume(class USoundAtomCue* Sound, float 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,7 +262,7 @@ void UBPF_Sound_C::STATIC_PlaySoundWithVolume(class USoundAtomCue* Sound, float 
 
 
 // Function BPF_Sound.BPF_Sound_C.ChoiceTimeEventBGM
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // ES3DayTimeEvent                CurrentEvent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           CurrentCue                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -288,7 +282,6 @@ void UBPF_Sound_C::STATIC_ChoiceTimeEventBGM(ES3DayTimeEvent CurrentEvent, class
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -302,7 +295,7 @@ void UBPF_Sound_C::STATIC_ChoiceTimeEventBGM(ES3DayTimeEvent CurrentEvent, class
 
 
 // Function BPF_Sound.BPF_Sound_C.PlaySoundAttachedComponent
-// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USceneComponent*         Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -336,7 +329,7 @@ void UBPF_Sound_C::STATIC_PlaySoundAttachedComponent(class USoundAtomCue* Sound,
 
 
 // Function BPF_Sound.BPF_Sound_C.PlaySoundAttached
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -368,7 +361,7 @@ void UBPF_Sound_C::STATIC_PlaySoundAttached(class USoundAtomCue* Sound, class AA
 
 
 // Function BPF_Sound.BPF_Sound_C.PlaySoundAtLocation
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -402,14 +395,14 @@ void UBPF_Sound_C::STATIC_PlaySoundAtLocation(class USoundAtomCue* Sound, const 
 
 
 // Function BPF_Sound.BPF_Sound_C.GetDuration
-// (NetReliable, NetRequest, Native, Event, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Sound_C::GetDuration(class USoundAtomCue* Cue, class UObject* __WorldContext, float* Duration, bool* Result)
+void UBPF_Sound_C::STATIC_GetDuration(class USoundAtomCue* Cue, class UObject* __WorldContext, float* Duration, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Sound.BPF_Sound_C.GetDuration");
 
@@ -418,7 +411,6 @@ void UBPF_Sound_C::GetDuration(class USoundAtomCue* Cue, class UObject* __WorldC
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -432,7 +424,7 @@ void UBPF_Sound_C::GetDuration(class USoundAtomCue* Cue, class UObject* __WorldC
 
 
 // Function BPF_Sound.BPF_Sound_C.GetS3SoundManager
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_SoundManager_C*      BP_SoundManager                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -445,7 +437,6 @@ void UBPF_Sound_C::STATIC_GetS3SoundManager(class UObject* __WorldContext, class
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

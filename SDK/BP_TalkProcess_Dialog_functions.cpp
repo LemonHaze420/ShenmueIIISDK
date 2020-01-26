@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.GetDialogStringId
-// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UBP_TalkProcess_Dialog_C::STATIC_GetDialogStringId()
+void UBP_TalkProcess_Dialog_C::GetDialogStringId()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.GetDialogStringId");
 
@@ -31,7 +31,7 @@ void UBP_TalkProcess_Dialog_C::STATIC_GetDialogStringId()
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.PlaySoundEffect
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bConfirm                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -51,11 +51,11 @@ void UBP_TalkProcess_Dialog_C::PlaySoundEffect(bool bConfirm)
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.MakeDialogParameter
-// (NetReliable, Exec, Event, Static, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_GeneralWindowParam  DialogParam                    (Parm, OutParm)
 
-void UBP_TalkProcess_Dialog_C::STATIC_MakeDialogParameter(struct FST_GeneralWindowParam* DialogParam)
+void UBP_TalkProcess_Dialog_C::MakeDialogParameter(struct FST_GeneralWindowParam* DialogParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.MakeDialogParameter");
 
@@ -73,7 +73,7 @@ void UBP_TalkProcess_Dialog_C::STATIC_MakeDialogParameter(struct FST_GeneralWind
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.BindRewardScreenEvents
-// (Net, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Dialog_C::BindRewardScreenEvents()
 {
@@ -90,7 +90,7 @@ void UBP_TalkProcess_Dialog_C::BindRewardScreenEvents()
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.UnbindRewardScreenEvents
-// (Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Dialog_C::UnbindRewardScreenEvents()
 {
@@ -107,7 +107,7 @@ void UBP_TalkProcess_Dialog_C::UnbindRewardScreenEvents()
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.OnRewardScreenEnd
-// (Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Dialog_C::OnRewardScreenEnd()
 {
@@ -124,7 +124,7 @@ void UBP_TalkProcess_Dialog_C::OnRewardScreenEnd()
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.OnWindowDecide
-// (Net, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -136,7 +136,6 @@ void UBP_TalkProcess_Dialog_C::OnWindowDecide(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,7 +144,7 @@ void UBP_TalkProcess_Dialog_C::OnWindowDecide(class AActor* Actor)
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.OnWindowCancel
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -165,7 +164,7 @@ void UBP_TalkProcess_Dialog_C::OnWindowCancel(class AActor* Actor)
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.OnWindowClose
-// (Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -177,7 +176,6 @@ void UBP_TalkProcess_Dialog_C::OnWindowClose(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -186,7 +184,7 @@ void UBP_TalkProcess_Dialog_C::OnWindowClose(class AActor* Actor)
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.BindDialogInput
-// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Dialog_C::BindDialogInput()
 {
@@ -195,7 +193,6 @@ void UBP_TalkProcess_Dialog_C::BindDialogInput()
 	UBP_TalkProcess_Dialog_C_BindDialogInput_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,7 +201,7 @@ void UBP_TalkProcess_Dialog_C::BindDialogInput()
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.UnbindDialogEvents
-// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Dialog_C::UnbindDialogEvents()
 {
@@ -213,7 +210,6 @@ void UBP_TalkProcess_Dialog_C::UnbindDialogEvents()
 	UBP_TalkProcess_Dialog_C_UnbindDialogEvents_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,7 +218,7 @@ void UBP_TalkProcess_Dialog_C::UnbindDialogEvents()
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.BindDialogClose
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Dialog_C::BindDialogClose()
 {
@@ -239,7 +235,7 @@ void UBP_TalkProcess_Dialog_C::BindDialogClose()
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.Activate
-// (NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
 void UBP_TalkProcess_Dialog_C::Activate()
 {
@@ -256,11 +252,11 @@ void UBP_TalkProcess_Dialog_C::Activate()
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.Update
-// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Dialog_C::STATIC_Update(float DeltaTime)
+void UBP_TalkProcess_Dialog_C::Update(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.Update");
 
@@ -268,7 +264,6 @@ void UBP_TalkProcess_Dialog_C::STATIC_Update(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -277,7 +272,7 @@ void UBP_TalkProcess_Dialog_C::STATIC_Update(float DeltaTime)
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.Finalize
-// (Net, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Dialog_C::Finalize()
 {
@@ -294,11 +289,11 @@ void UBP_TalkProcess_Dialog_C::Finalize()
 
 
 // Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.ExecuteUbergraph_BP_TalkProcess_Dialog
-// (Net, NetResponse, Static, MulticastDelegate, Protected, NetServer, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Dialog_C::STATIC_ExecuteUbergraph_BP_TalkProcess_Dialog(int EntryPoint)
+void UBP_TalkProcess_Dialog_C::ExecuteUbergraph_BP_TalkProcess_Dialog(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Dialog.BP_TalkProcess_Dialog_C.ExecuteUbergraph_BP_TalkProcess_Dialog");
 

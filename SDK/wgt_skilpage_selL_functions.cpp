@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_skilpage_selL.wgt_skilpage_selL_C.SetCursol
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skilpage_selL_C::STATIC_SetCursol(bool Visible)
+void Uwgt_skilpage_selL_C::SetCursol(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skilpage_selL.wgt_skilpage_selL_C.SetCursol");
 
@@ -34,7 +34,7 @@ void Uwgt_skilpage_selL_C::STATIC_SetCursol(bool Visible)
 
 
 // Function wgt_skilpage_selL.wgt_skilpage_selL_C.Construct
-// (Net, Exec, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_skilpage_selL_C::Construct()
 {
@@ -51,11 +51,11 @@ void Uwgt_skilpage_selL_C::Construct()
 
 
 // Function wgt_skilpage_selL.wgt_skilpage_selL_C.ExecuteUbergraph_wgt_skilpage_selL
-// (NetRequest, Exec, Native, Event, Static, Public, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skilpage_selL_C::STATIC_ExecuteUbergraph_wgt_skilpage_selL(int EntryPoint)
+void Uwgt_skilpage_selL_C::ExecuteUbergraph_wgt_skilpage_selL(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skilpage_selL.wgt_skilpage_selL_C.ExecuteUbergraph_wgt_skilpage_selL");
 
@@ -63,7 +63,6 @@ void Uwgt_skilpage_selL_C::STATIC_ExecuteUbergraph_wgt_skilpage_selL(int EntryPo
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

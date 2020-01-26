@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void STATIC_GetTurnAroundComponent(class UBPC_TurnAround_C** Component);
-	void STATIC_RemoveTurnAroundComponent(bool* bSuccess);
-	void STATIC_AddTurnAroundComponent(class UBPC_TurnAround_C** Component);
+	void GetTurnAroundComponent(class UBPC_TurnAround_C** Component);
+	void RemoveTurnAroundComponent(bool* bSuccess);
+	void AddTurnAroundComponent(class UBPC_TurnAround_C** Component);
 };
 
 

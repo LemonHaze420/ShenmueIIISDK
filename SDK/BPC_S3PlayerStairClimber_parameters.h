@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -100,7 +100,7 @@ struct UBPC_S3PlayerStairClimber_C_PlayMontage_Params
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ConsumeOutput
 struct UBPC_S3PlayerStairClimber_C_ConsumeOutput_Params
 {
-	bool                                               turning;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Turning;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     TurnDirection;                                            // (Parm, OutParm, IsPlainOldData)
 };
 

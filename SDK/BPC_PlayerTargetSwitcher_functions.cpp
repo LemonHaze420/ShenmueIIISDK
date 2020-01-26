@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.CachePawnData
-// (NetRequest, Native, MulticastDelegate, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Pawn                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UBPC_PlayerTargetSwitcher_C::CachePawnData(class AActor* Pawn)
 	params.Pawn = Pawn;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void UBPC_PlayerTargetSwitcher_C::CachePawnData(class AActor* Pawn)
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.DoPlayerRequestedSwitch
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Pawn                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_PlayerTargetSwitcher_C::STATIC_DoPlayerRequestedSwitch(class AActor* Pawn)
+void UBPC_PlayerTargetSwitcher_C::DoPlayerRequestedSwitch(class AActor* Pawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.DoPlayerRequestedSwitch");
 
@@ -55,7 +54,7 @@ void UBPC_PlayerTargetSwitcher_C::STATIC_DoPlayerRequestedSwitch(class AActor* P
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.UpdateDetectAction
-// (NetReliable, Exec, Native, Event, Protected, NetServer, HasOutParms, NetClient, DLLImport)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_PlayerTargetSwitcher_C::UpdateDetectAction()
 {
@@ -64,7 +63,6 @@ void UBPC_PlayerTargetSwitcher_C::UpdateDetectAction()
 	UBPC_PlayerTargetSwitcher_C_UpdateDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,16 +71,15 @@ void UBPC_PlayerTargetSwitcher_C::UpdateDetectAction()
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.Reset
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_PlayerTargetSwitcher_C::STATIC_Reset()
+void UBPC_PlayerTargetSwitcher_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.Reset");
 
 	UBPC_PlayerTargetSwitcher_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +88,7 @@ void UBPC_PlayerTargetSwitcher_C::STATIC_Reset()
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.FaceDirection
-// (NetRequest, Exec, Native, Event, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -103,7 +100,6 @@ void UBPC_PlayerTargetSwitcher_C::FaceDirection(const struct FVector& Direction)
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,12 +108,12 @@ void UBPC_PlayerTargetSwitcher_C::FaceDirection(const struct FVector& Direction)
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.IsNPCTalkative
-// (Net, NetReliable, Event, Static, NetMulticast, MulticastDelegate, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_PlayerTargetSwitcher_C::STATIC_IsNPCTalkative(class AActor* Target)
+bool UBPC_PlayerTargetSwitcher_C::IsNPCTalkative(class AActor* Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.IsNPCTalkative");
 
@@ -135,7 +131,7 @@ bool UBPC_PlayerTargetSwitcher_C::STATIC_IsNPCTalkative(class AActor* Target)
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.RequestManualDirection
-// (NetRequest, Exec, Native, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -147,7 +143,6 @@ void UBPC_PlayerTargetSwitcher_C::RequestManualDirection(const struct FVector& D
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,7 +151,7 @@ void UBPC_PlayerTargetSwitcher_C::RequestManualDirection(const struct FVector& D
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.GetTargetCandidates
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetClient, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AS3Character*>    OutNPCs                        (Parm, OutParm, ZeroConstructor)
 // TArray<float>                  OutScores                      (Parm, OutParm, ZeroConstructor)
@@ -181,7 +176,7 @@ void UBPC_PlayerTargetSwitcher_C::GetTargetCandidates(TArray<class AS3Character*
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.RequestSwitchTarget
-// (NetReliable, Exec, Native, Event, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_PlayerTargetSwitcher_C::RequestSwitchTarget()
 {
@@ -190,7 +185,6 @@ void UBPC_PlayerTargetSwitcher_C::RequestSwitchTarget()
 	UBPC_PlayerTargetSwitcher_C_RequestSwitchTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -199,11 +193,11 @@ void UBPC_PlayerTargetSwitcher_C::RequestSwitchTarget()
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.Update
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Protected, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APawn*                   Pawn                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_PlayerTargetSwitcher_C::STATIC_Update(class APawn* Pawn)
+void UBPC_PlayerTargetSwitcher_C::Update(class APawn* Pawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.Update");
 
@@ -219,11 +213,11 @@ void UBPC_PlayerTargetSwitcher_C::STATIC_Update(class APawn* Pawn)
 
 
 // Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.OnFaceDirection__DelegateSignature
-// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPC_PlayerTargetSwitcher_C::STATIC_OnFaceDirection__DelegateSignature(const struct FVector& Direction)
+void UBPC_PlayerTargetSwitcher_C::OnFaceDirection__DelegateSignature(const struct FVector& Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PlayerTargetSwitcher.BPC_PlayerTargetSwitcher_C.OnFaceDirection__DelegateSignature");
 
@@ -231,7 +225,6 @@ void UBPC_PlayerTargetSwitcher_C::STATIC_OnFaceDirection__DelegateSignature(cons
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

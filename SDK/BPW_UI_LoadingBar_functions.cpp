@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.Construct
-// (NetReliable, Event, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_UI_LoadingBar_C::Construct()
 {
@@ -31,12 +31,12 @@ void UBPW_UI_LoadingBar_C::Construct()
 
 
 // Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.Tick
-// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, BlueprintCallable)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_LoadingBar_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_UI_LoadingBar_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.Tick");
 
@@ -45,7 +45,6 @@ void UBPW_UI_LoadingBar_C::STATIC_Tick(const struct FGeometry& MyGeometry, float
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +53,11 @@ void UBPW_UI_LoadingBar_C::STATIC_Tick(const struct FGeometry& MyGeometry, float
 
 
 // Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.ExecuteUbergraph_BPW_UI_LoadingBar
-// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, BlueprintCallable)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_LoadingBar_C::STATIC_ExecuteUbergraph_BPW_UI_LoadingBar(int EntryPoint)
+void UBPW_UI_LoadingBar_C::ExecuteUbergraph_BPW_UI_LoadingBar(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.ExecuteUbergraph_BPW_UI_LoadingBar");
 
@@ -66,7 +65,6 @@ void UBPW_UI_LoadingBar_C::STATIC_ExecuteUbergraph_BPW_UI_LoadingBar(int EntryPo
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

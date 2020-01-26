@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_ExchangeManager.BP_UI_ExchangeManager_C.IsVisibleRStickCenterPos
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsCenter                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ExchangeManager_C::STATIC_IsVisibleRStickCenterPos(bool* IsCenter)
+void ABP_UI_ExchangeManager_C::IsVisibleRStickCenterPos(bool* IsCenter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ExchangeManager.BP_UI_ExchangeManager_C.IsVisibleRStickCenterPos");
 
@@ -36,7 +36,7 @@ void ABP_UI_ExchangeManager_C::STATIC_IsVisibleRStickCenterPos(bool* IsCenter)
 
 
 // Function BP_UI_ExchangeManager.BP_UI_ExchangeManager_C.IsVisibleRStickOnlyViewMode
-// (Net, NetRequest, Native, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -47,7 +47,6 @@ bool ABP_UI_ExchangeManager_C::IsVisibleRStickOnlyViewMode()
 	ABP_UI_ExchangeManager_C_IsVisibleRStickOnlyViewMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,9 +57,9 @@ bool ABP_UI_ExchangeManager_C::IsVisibleRStickOnlyViewMode()
 
 
 // Function BP_UI_ExchangeManager.BP_UI_ExchangeManager_C.UserConstructionScript
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_UI_ExchangeManager_C::STATIC_UserConstructionScript()
+void ABP_UI_ExchangeManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ExchangeManager.BP_UI_ExchangeManager_C.UserConstructionScript");
 
@@ -75,7 +74,7 @@ void ABP_UI_ExchangeManager_C::STATIC_UserConstructionScript()
 
 
 // Function BP_UI_ExchangeManager.BP_UI_ExchangeManager_C.ReceiveBeginPlay
-// (Event, NetMulticast, Public, Protected, NetServer)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_UI_ExchangeManager_C::ReceiveBeginPlay()
 {
@@ -92,7 +91,7 @@ void ABP_UI_ExchangeManager_C::ReceiveBeginPlay()
 
 
 // Function BP_UI_ExchangeManager.BP_UI_ExchangeManager_C.ExecuteUbergraph_BP_UI_ExchangeManager
-// (NetReliable, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

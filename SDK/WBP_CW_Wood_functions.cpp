@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.HideMiniWood
-// (Net, NetRequest, Native, NetResponse, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_CW_Wood_C::HideMiniWood()
 {
@@ -23,7 +23,6 @@ void UWBP_CW_Wood_C::HideMiniWood()
 	UWBP_CW_Wood_C_HideMiniWood_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void UWBP_CW_Wood_C::HideMiniWood()
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.IsEnd
-// (Exec, Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           End                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -43,7 +42,6 @@ void UWBP_CW_Wood_C::IsEnd(bool* End)
 	UWBP_CW_Wood_C_IsEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +53,7 @@ void UWBP_CW_Wood_C::IsEnd(bool* End)
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.PlayConcentrateAnim
-// (Net, NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_CW_Wood_C::PlayConcentrateAnim()
 {
@@ -72,7 +70,7 @@ void UWBP_CW_Wood_C::PlayConcentrateAnim()
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.SetWoodVisible
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            WoodNum                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -92,7 +90,7 @@ void UWBP_CW_Wood_C::SetWoodVisible(int WoodNum)
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.Construct
-// (Net, NetReliable, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_CW_Wood_C::Construct()
 {
@@ -109,7 +107,7 @@ void UWBP_CW_Wood_C::Construct()
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.Tick
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, NetClient, DLLImport)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -123,7 +121,6 @@ void UWBP_CW_Wood_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +129,7 @@ void UWBP_CW_Wood_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.ExecuteUbergraph_WBP_CW_Wood
-// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -144,7 +141,6 @@ void UWBP_CW_Wood_C::ExecuteUbergraph_WBP_CW_Wood(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

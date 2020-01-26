@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,8 +42,8 @@ public:
 
 	void isLive(bool* LIVE);
 	void ExecSelfKill(bool Forced);
-	void STATIC_ExecExspFlagSet();
-	void STATIC_GetJumpRot(float* Jump_point);
+	void ExecExspFlagSet();
+	void GetJumpRot(float* Jump_point);
 	void GetJumpTime(int* Hour, int* Min);
 	void SetKSinfo(int EnableTimeMin, int EnableTimeMax, int JumpHour, int JumpMin, const struct FVector& JumpLocation, const struct FRotator& jumprot, const struct FName& KSlavel, const struct FName& Eyecatch, int ExspFlagSet, const struct FName& ExspControl);
 	void GetJumpInfo(struct FVector* Jump_point);
@@ -52,7 +52,7 @@ public:
 	void CheckEnableTime();
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_BP_AppointKSchild(int EntryPoint);
+	void ExecuteUbergraph_BP_AppointKSchild(int EntryPoint);
 	void ApsChild_TimeOver__DelegateSignature();
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,15 +39,15 @@ public:
 	}
 
 
-	void STATIC_UpdateFishBaseLocation(const struct FVector& BaseLocation);
-	void STATIC_CheckBite(bool* ArgBite);
+	void UpdateFishBaseLocation(const struct FVector& BaseLocation);
+	void CheckBite(bool* ArgBite);
 	void MoveEnd();
-	void STATIC_MoveStart(int ArgType, int ArgFishNum, const struct FVector& ArgCenterPos, float BiteWait);
+	void MoveStart(int ArgType, int ArgFishNum, const struct FVector& ArgCenterPos, float BiteWait);
 	void Init();
-	void STATIC_StartInfinitySymbolMove(const struct FVector& ArgBasePos);
-	void STATIC_Move_InfinitySymbol();
+	void StartInfinitySymbolMove(const struct FVector& ArgBasePos);
+	void Move_InfinitySymbol();
 	void UserConstructionScript();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_Fishing_FishShadow(int EntryPoint);
 };
 

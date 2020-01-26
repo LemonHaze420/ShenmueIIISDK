@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_BattleCommandLibrary.BPF_BattleCommandLibrary_C.ChangeBattleCommandLibrary
-// (NetRequest, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  Class                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_BattleCommandLibrary_C::ChangeBattleCommandLibrary(class UClass* Class, class UObject* __WorldContext)
+void UBPF_BattleCommandLibrary_C::STATIC_ChangeBattleCommandLibrary(class UClass* Class, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BattleCommandLibrary.BPF_BattleCommandLibrary_C.ChangeBattleCommandLibrary");
 
@@ -28,7 +28,6 @@ void UBPF_BattleCommandLibrary_C::ChangeBattleCommandLibrary(class UClass* Class
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void UBPF_BattleCommandLibrary_C::ChangeBattleCommandLibrary(class UClass* Class
 
 
 // Function BPF_BattleCommandLibrary.BPF_BattleCommandLibrary_C.GetS3BattleCommandLibrary
-// (Net, Exec, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBTL_CommandLibrary_C*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

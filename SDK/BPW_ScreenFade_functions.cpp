@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_ScreenFade.BPW_ScreenFade_C.GetFadeColor
-// (NetReliable, Event, Static, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bIgnoreOpacity                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            ColorAndOpacity                (Parm, OutParm, IsPlainOldData)
 
-void UBPW_ScreenFade_C::STATIC_GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* ColorAndOpacity)
+void UBPW_ScreenFade_C::GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* ColorAndOpacity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ScreenFade.BPW_ScreenFade_C.GetFadeColor");
 
@@ -38,11 +38,11 @@ void UBPW_ScreenFade_C::STATIC_GetFadeColor(bool bIgnoreOpacity, struct FLinearC
 
 
 // Function BPW_ScreenFade.BPW_ScreenFade_C.SetFadeColor
-// (NetResponse, Static, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            FadeColor                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPW_ScreenFade_C::STATIC_SetFadeColor(const struct FLinearColor& FadeColor)
+void UBPW_ScreenFade_C::SetFadeColor(const struct FLinearColor& FadeColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ScreenFade.BPW_ScreenFade_C.SetFadeColor");
 

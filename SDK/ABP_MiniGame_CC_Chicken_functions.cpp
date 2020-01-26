@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_MiniGame_CC_Chicken.ABP_MiniGame_CC_Chicken_C.SetMiniGameMode
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UABP_MiniGame_CC_Chicken_C::SetMiniGameMode(bool Enabled)
 
 
 // Function ABP_MiniGame_CC_Chicken.ABP_MiniGame_CC_Chicken_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Chicken_AnimGraphNode_BlendListByEnum_6199A76F4BFDBDC8A1688D9981DB7322
-// (Net, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Chicken_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Chicken_AnimGraphNode_BlendListByEnum_6199A76F4BFDBDC8A1688D9981DB7322()
 {
@@ -51,7 +51,7 @@ void UABP_MiniGame_CC_Chicken_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP
 
 
 // Function ABP_MiniGame_CC_Chicken.ABP_MiniGame_CC_Chicken_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Chicken_AnimGraphNode_SequencePlayer_1FE28AF34C0B57553F05A99933807461
-// (Net, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Chicken_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Chicken_AnimGraphNode_SequencePlayer_1FE28AF34C0B57553F05A99933807461()
 {
@@ -68,7 +68,7 @@ void UABP_MiniGame_CC_Chicken_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP
 
 
 // Function ABP_MiniGame_CC_Chicken.ABP_MiniGame_CC_Chicken_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Chicken_AnimGraphNode_SequencePlayer_30A0372049E9165668375C8298EA95F5
-// (Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Chicken_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Chicken_AnimGraphNode_SequencePlayer_30A0372049E9165668375C8298EA95F5()
 {
@@ -85,7 +85,7 @@ void UABP_MiniGame_CC_Chicken_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP
 
 
 // Function ABP_MiniGame_CC_Chicken.ABP_MiniGame_CC_Chicken_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Chicken_AnimGraphNode_SequencePlayer_13D0CB8B4EDB8DA33E95298F58F87B5A
-// (Native, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Chicken_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Chicken_AnimGraphNode_SequencePlayer_13D0CB8B4EDB8DA33E95298F58F87B5A()
 {
@@ -94,7 +94,6 @@ void UABP_MiniGame_CC_Chicken_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP
 	UABP_MiniGame_CC_Chicken_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Chicken_AnimGraphNode_SequencePlayer_13D0CB8B4EDB8DA33E95298F58F87B5A_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,11 +102,11 @@ void UABP_MiniGame_CC_Chicken_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP
 
 
 // Function ABP_MiniGame_CC_Chicken.ABP_MiniGame_CC_Chicken_C.BlueprintUpdateAnimation
-// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_CC_Chicken_C::STATIC_BlueprintUpdateAnimation(float DeltaTimeX)
+void UABP_MiniGame_CC_Chicken_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Chicken.ABP_MiniGame_CC_Chicken_C.BlueprintUpdateAnimation");
 
@@ -123,11 +122,11 @@ void UABP_MiniGame_CC_Chicken_C::STATIC_BlueprintUpdateAnimation(float DeltaTime
 
 
 // Function ABP_MiniGame_CC_Chicken.ABP_MiniGame_CC_Chicken_C.ExecuteUbergraph_ABP_MiniGame_CC_Chicken
-// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_CC_Chicken_C::STATIC_ExecuteUbergraph_ABP_MiniGame_CC_Chicken(int EntryPoint)
+void UABP_MiniGame_CC_Chicken_C::ExecuteUbergraph_ABP_MiniGame_CC_Chicken(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Chicken.ABP_MiniGame_CC_Chicken_C.ExecuteUbergraph_ABP_MiniGame_CC_Chicken");
 

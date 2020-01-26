@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_EventIconDispRange.BP_EventIconDispRange_C.GetPriority
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_EventIconDispRange_C::STATIC_GetPriority()
+int ABP_EventIconDispRange_C::GetPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EventIconDispRange.BP_EventIconDispRange_C.GetPriority");
 
 	ABP_EventIconDispRange_C_GetPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +35,7 @@ int ABP_EventIconDispRange_C::STATIC_GetPriority()
 
 
 // Function BP_EventIconDispRange.BP_EventIconDispRange_C.GetDetectAction
-// (Net, NetRequest, Exec, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -57,7 +56,7 @@ TArray<struct FS3DetectActionParam> ABP_EventIconDispRange_C::GetDetectAction()
 
 
 // Function BP_EventIconDispRange.BP_EventIconDispRange_C.CheckBehavior
-// (Net, NetRequest, Event, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Enable                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -79,11 +78,11 @@ void ABP_EventIconDispRange_C::CheckBehavior(bool* Enable)
 
 
 // Function BP_EventIconDispRange.BP_EventIconDispRange_C.RegistDetect
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Unregister                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_EventIconDispRange_C::STATIC_RegistDetect(bool Unregister)
+void ABP_EventIconDispRange_C::RegistDetect(bool Unregister)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EventIconDispRange.BP_EventIconDispRange_C.RegistDetect");
 
@@ -99,7 +98,7 @@ void ABP_EventIconDispRange_C::STATIC_RegistDetect(bool Unregister)
 
 
 // Function BP_EventIconDispRange.BP_EventIconDispRange_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_EventIconDispRange_C::UserConstructionScript()
 {
@@ -116,7 +115,7 @@ void ABP_EventIconDispRange_C::UserConstructionScript()
 
 
 // Function BP_EventIconDispRange.BP_EventIconDispRange_C.BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -125,7 +124,7 @@ void ABP_EventIconDispRange_C::UserConstructionScript()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_EventIconDispRange_C::STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_EventIconDispRange_C::BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EventIconDispRange.BP_EventIconDispRange_C.BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -138,7 +137,6 @@ void ABP_EventIconDispRange_C::STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_0
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,14 +145,14 @@ void ABP_EventIconDispRange_C::STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_0
 
 
 // Function BP_EventIconDispRange.BP_EventIconDispRange_C.BndEvt__Range_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (Exec, Native, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_EventIconDispRange_C::STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_EventIconDispRange_C::BndEvt__Range_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EventIconDispRange.BP_EventIconDispRange_C.BndEvt__Range_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -165,7 +163,6 @@ void ABP_EventIconDispRange_C::STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_1
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -174,11 +171,11 @@ void ABP_EventIconDispRange_C::STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_1
 
 
 // Function BP_EventIconDispRange.BP_EventIconDispRange_C.DecideDetectAction
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_EventIconDispRange_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
+void ABP_EventIconDispRange_C::DecideDetectAction(ES3ActionIconType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EventIconDispRange.BP_EventIconDispRange_C.DecideDetectAction");
 
@@ -186,7 +183,6 @@ void ABP_EventIconDispRange_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +191,7 @@ void ABP_EventIconDispRange_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_EventIconDispRange.BP_EventIconDispRange_C.ExecuteUbergraph_BP_EventIconDispRange
-// (Net, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

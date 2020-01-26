@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,13 +31,13 @@ public:
 
 	ES3HelpPriority GetHelpPriority();
 	struct FName GetHelpName();
-	bool STATIC_IsActivateHelp();
-	bool STATIC_RegisterHelp(ES3HelpRegisterTiming Timing);
+	bool IsActivateHelp();
+	bool RegisterHelp(ES3HelpRegisterTiming Timing);
 	bool UnregisterHelp(ES3HelpRegisterTiming Timing);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BP_HelpRegisterActor(int EntryPoint);
+	void ExecuteUbergraph_BP_HelpRegisterActor(int EntryPoint);
 };
 
 

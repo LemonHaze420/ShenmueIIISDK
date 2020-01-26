@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.CreateIconMaterial
-// (Net, NetReliable, Event, NetResponse, Static, Private, Protected, HasOutParms, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialBillboardComponent* Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UTexture*                Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_CreateIconMaterial(class UMaterialBillboardComponent* Component, class UTexture* Texture)
+void ABP_Minigame_QTETitle_C::CreateIconMaterial(class UMaterialBillboardComponent* Component, class UTexture* Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.CreateIconMaterial");
 
@@ -36,11 +36,11 @@ void ABP_Minigame_QTETitle_C::STATIC_CreateIconMaterial(class UMaterialBillboard
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GetTimeOutValue
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_Minigame_QTETitle_C::STATIC_GetTimeOutValue()
+float ABP_Minigame_QTETitle_C::GetTimeOutValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GetTimeOutValue");
 
@@ -57,16 +57,15 @@ float ABP_Minigame_QTETitle_C::STATIC_GetTimeOutValue()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.InitializePadTrans
-// (Net, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_InitializePadTrans()
+void ABP_Minigame_QTETitle_C::InitializePadTrans()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.InitializePadTrans");
 
 	ABP_Minigame_QTETitle_C_InitializePadTrans_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,7 +74,7 @@ void ABP_Minigame_QTETitle_C::STATIC_InitializePadTrans()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.SetTime
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::SetTime()
 {
@@ -84,7 +83,6 @@ void ABP_Minigame_QTETitle_C::SetTime()
 	ABP_Minigame_QTETitle_C_SetTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,7 +91,7 @@ void ABP_Minigame_QTETitle_C::SetTime()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GetLevelSequence
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Protected, NetServer, DLLImport, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EQTETitleSequence> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ULevelSequence*          Sequence                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -106,7 +104,6 @@ void ABP_Minigame_QTETitle_C::GetLevelSequence(TEnumAsByte<EQTETitleSequence> Ty
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,18 +115,17 @@ void ABP_Minigame_QTETitle_C::GetLevelSequence(TEnumAsByte<EQTETitleSequence> Ty
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.InitAsyncLoad
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_InitAsyncLoad(bool* dummy)
+void ABP_Minigame_QTETitle_C::InitAsyncLoad(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.InitAsyncLoad");
 
 	ABP_Minigame_QTETitle_C_InitAsyncLoad_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,9 +137,9 @@ void ABP_Minigame_QTETitle_C::STATIC_InitAsyncLoad(bool* dummy)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.InitButtonIcon
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_InitButtonIcon()
+void ABP_Minigame_QTETitle_C::InitButtonIcon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.InitButtonIcon");
 
@@ -158,11 +154,11 @@ void ABP_Minigame_QTETitle_C::STATIC_InitButtonIcon()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ResetScore
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UChildActorComponent*    ChildComponent                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_ResetScore(class UChildActorComponent* ChildComponent)
+void ABP_Minigame_QTETitle_C::ResetScore(class UChildActorComponent* ChildComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ResetScore");
 
@@ -170,7 +166,6 @@ void ABP_Minigame_QTETitle_C::STATIC_ResetScore(class UChildActorComponent* Chil
 	params.ChildComponent = ChildComponent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,13 +174,13 @@ void ABP_Minigame_QTETitle_C::STATIC_ResetScore(class UChildActorComponent* Chil
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.SetScoreNum
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UChildActorComponent*    ChildActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            Number                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsStage                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_SetScoreNum(class UChildActorComponent* ChildActor, int Number, bool IsStage)
+void ABP_Minigame_QTETitle_C::SetScoreNum(class UChildActorComponent* ChildActor, int Number, bool IsStage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.SetScoreNum");
 
@@ -195,7 +190,6 @@ void ABP_Minigame_QTETitle_C::STATIC_SetScoreNum(class UChildActorComponent* Chi
 	params.IsStage = IsStage;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,7 +198,7 @@ void ABP_Minigame_QTETitle_C::STATIC_SetScoreNum(class UChildActorComponent* Chi
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.SetEnabledScore
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -216,7 +210,6 @@ void ABP_Minigame_QTETitle_C::SetEnabledScore(bool bEnabled)
 	params.bEnabled = bEnabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,9 +218,9 @@ void ABP_Minigame_QTETitle_C::SetEnabledScore(bool bEnabled)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.AllDestroySequenceActors
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_AllDestroySequenceActors()
+void ABP_Minigame_QTETitle_C::AllDestroySequenceActors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.AllDestroySequenceActors");
 
@@ -242,7 +235,7 @@ void ABP_Minigame_QTETitle_C::STATIC_AllDestroySequenceActors()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.SpawnSequenceActor
-// (Net, NetReliable, Event, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULevelSequence*          InSequence                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  AttachParentActor              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -270,7 +263,7 @@ void ABP_Minigame_QTETitle_C::SpawnSequenceActor(class ULevelSequence* InSequenc
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.DebugDispLog
-// (Net, NetReliable, Exec, Event, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::DebugDispLog()
 {
@@ -287,9 +280,9 @@ void ABP_Minigame_QTETitle_C::DebugDispLog()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.DebugAutoPlay
-// (Net, NetReliable, Static, MulticastDelegate, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_DebugAutoPlay()
+void ABP_Minigame_QTETitle_C::DebugAutoPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.DebugAutoPlay");
 
@@ -304,7 +297,7 @@ void ABP_Minigame_QTETitle_C::STATIC_DebugAutoPlay()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.Load
-// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::Load()
 {
@@ -313,7 +306,6 @@ void ABP_Minigame_QTETitle_C::Load()
 	ABP_Minigame_QTETitle_C_Load_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -322,16 +314,15 @@ void ABP_Minigame_QTETitle_C::Load()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.Save
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_Save()
+void ABP_Minigame_QTETitle_C::Save()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.Save");
 
 	ABP_Minigame_QTETitle_C_Save_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -340,11 +331,11 @@ void ABP_Minigame_QTETitle_C::STATIC_Save()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ItemGetCheck
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            item_count1                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_ItemGetCheck(int* item_count1)
+void ABP_Minigame_QTETitle_C::ItemGetCheck(int* item_count1)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ItemGetCheck");
 
@@ -362,12 +353,12 @@ void ABP_Minigame_QTETitle_C::STATIC_ItemGetCheck(int* item_count1)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.FeintCommandCheck
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FQTECommandStruct       Param                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           is_feint                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_FeintCommandCheck(const struct FQTECommandStruct& Param, bool* is_feint)
+void ABP_Minigame_QTETitle_C::FeintCommandCheck(const struct FQTECommandStruct& Param, bool* is_feint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.FeintCommandCheck");
 
@@ -386,16 +377,15 @@ void ABP_Minigame_QTETitle_C::STATIC_FeintCommandCheck(const struct FQTECommandS
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.AddRightCommand
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_AddRightCommand()
+void ABP_Minigame_QTETitle_C::AddRightCommand()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.AddRightCommand");
 
 	ABP_Minigame_QTETitle_C_AddRightCommand_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -404,16 +394,15 @@ void ABP_Minigame_QTETitle_C::STATIC_AddRightCommand()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.AddMiddleCommand
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_AddMiddleCommand()
+void ABP_Minigame_QTETitle_C::AddMiddleCommand()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.AddMiddleCommand");
 
 	ABP_Minigame_QTETitle_C_AddMiddleCommand_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -422,16 +411,15 @@ void ABP_Minigame_QTETitle_C::STATIC_AddMiddleCommand()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.AddLeftCommand
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_AddLeftCommand()
+void ABP_Minigame_QTETitle_C::AddLeftCommand()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.AddLeftCommand");
 
 	ABP_Minigame_QTETitle_C_AddLeftCommand_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -440,12 +428,12 @@ void ABP_Minigame_QTETitle_C::STATIC_AddLeftCommand()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.RefreshScores
-// (Native, Event, Static, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AWBP_QT2_Score2_C*       Score                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UChildActorComponent*    ChildComponent                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_RefreshScores(class AWBP_QT2_Score2_C* Score, class UChildActorComponent* ChildComponent)
+void ABP_Minigame_QTETitle_C::RefreshScores(class AWBP_QT2_Score2_C* Score, class UChildActorComponent* ChildComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.RefreshScores");
 
@@ -454,7 +442,6 @@ void ABP_Minigame_QTETitle_C::STATIC_RefreshScores(class AWBP_QT2_Score2_C* Scor
 	params.ChildComponent = ChildComponent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -463,16 +450,15 @@ void ABP_Minigame_QTETitle_C::STATIC_RefreshScores(class AWBP_QT2_Score2_C* Scor
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.QTETitleFadeIn
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_QTETitleFadeIn()
+void ABP_Minigame_QTETitle_C::QTETitleFadeIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.QTETitleFadeIn");
 
 	ABP_Minigame_QTETitle_C_QTETitleFadeIn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -481,12 +467,12 @@ void ABP_Minigame_QTETitle_C::STATIC_QTETitleFadeIn()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.SetPlayRate
-// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Buttons                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ULevelSequencePlayer*    SequencerRef                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_SetPlayRate(int Buttons, class ULevelSequencePlayer* SequencerRef)
+void ABP_Minigame_QTETitle_C::SetPlayRate(int Buttons, class ULevelSequencePlayer* SequencerRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.SetPlayRate");
 
@@ -495,7 +481,6 @@ void ABP_Minigame_QTETitle_C::STATIC_SetPlayRate(int Buttons, class ULevelSequen
 	params.SequencerRef = SequencerRef;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -504,9 +489,9 @@ void ABP_Minigame_QTETitle_C::STATIC_SetPlayRate(int Buttons, class ULevelSequen
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.InitializeBoxingSequencers
-// (NetReliable, Event, Static, MulticastDelegate, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_InitializeBoxingSequencers()
+void ABP_Minigame_QTETitle_C::InitializeBoxingSequencers()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.InitializeBoxingSequencers");
 
@@ -521,19 +506,18 @@ void ABP_Minigame_QTETitle_C::STATIC_InitializeBoxingSequencers()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PickUpRandomBoxingSequencer
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class ABP_SpawnableSequenceActor_C*> InputSequencerArray            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class ABP_SpawnableSequenceActor_C* OutputSequencer                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_PickUpRandomBoxingSequencer(TArray<class ABP_SpawnableSequenceActor_C*>* InputSequencerArray, class ABP_SpawnableSequenceActor_C** OutputSequencer)
+void ABP_Minigame_QTETitle_C::PickUpRandomBoxingSequencer(TArray<class ABP_SpawnableSequenceActor_C*>* InputSequencerArray, class ABP_SpawnableSequenceActor_C** OutputSequencer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PickUpRandomBoxingSequencer");
 
 	ABP_Minigame_QTETitle_C_PickUpRandomBoxingSequencer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -547,7 +531,7 @@ void ABP_Minigame_QTETitle_C::STATIC_PickUpRandomBoxingSequencer(TArray<class AB
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ResetButtonUnPushed
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::ResetButtonUnPushed()
 {
@@ -564,12 +548,12 @@ void ABP_Minigame_QTETitle_C::ResetButtonUnPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LoseCheck
-// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            LifeLeft                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           LostGame                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_LoseCheck(int LifeLeft, bool* LostGame)
+void ABP_Minigame_QTETitle_C::LoseCheck(int LifeLeft, bool* LostGame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LoseCheck");
 
@@ -577,7 +561,6 @@ void ABP_Minigame_QTETitle_C::STATIC_LoseCheck(int LifeLeft, bool* LostGame)
 	params.LifeLeft = LifeLeft;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -589,7 +572,7 @@ void ABP_Minigame_QTETitle_C::STATIC_LoseCheck(int LifeLeft, bool* LostGame)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.HideAllIcons
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::HideAllIcons()
 {
@@ -606,11 +589,11 @@ void ABP_Minigame_QTETitle_C::HideAllIcons()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ToggleIconRight
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Hide                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_ToggleIconRight(bool Hide)
+void ABP_Minigame_QTETitle_C::ToggleIconRight(bool Hide)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ToggleIconRight");
 
@@ -618,7 +601,6 @@ void ABP_Minigame_QTETitle_C::STATIC_ToggleIconRight(bool Hide)
 	params.Hide = Hide;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -627,7 +609,7 @@ void ABP_Minigame_QTETitle_C::STATIC_ToggleIconRight(bool Hide)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ToggleIconMiddle
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Hide                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -639,7 +621,6 @@ void ABP_Minigame_QTETitle_C::ToggleIconMiddle(bool Hide)
 	params.Hide = Hide;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -648,11 +629,11 @@ void ABP_Minigame_QTETitle_C::ToggleIconMiddle(bool Hide)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ToggleIconLeft
-// (Exec, Event, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Hide                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_ToggleIconLeft(bool Hide)
+void ABP_Minigame_QTETitle_C::ToggleIconLeft(bool Hide)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ToggleIconLeft");
 
@@ -668,7 +649,7 @@ void ABP_Minigame_QTETitle_C::STATIC_ToggleIconLeft(bool Hide)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.TransferNameToEnum
-// (Net, NetReliable, NetMulticast, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   InputName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // Enum_QTETitleCommand           Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -692,7 +673,7 @@ void ABP_Minigame_QTETitle_C::TransferNameToEnum(const struct FName& InputName, 
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.SpawnInputControlActor
-// (Net, NetReliable, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -713,7 +694,7 @@ class ABP_MiniGameInputBase_C* ABP_Minigame_QTETitle_C::SpawnInputControlActor()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.UserConstructionScript
-// (NetReliable, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::UserConstructionScript()
 {
@@ -730,16 +711,15 @@ void ABP_Minigame_QTETitle_C::UserConstructionScript()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__FinishedFunc
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__FinishedFunc()
+void ABP_Minigame_QTETitle_C::MovingPadLeftTimeline__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__FinishedFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadLeftTimeline__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -748,16 +728,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__FinishedFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__UpdateFunc
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__UpdateFunc()
+void ABP_Minigame_QTETitle_C::MovingPadLeftTimeline__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__UpdateFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadLeftTimeline__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -766,16 +745,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__UpdateFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__SE_Timing__EventFunc
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__SE_Timing__EventFunc()
+void ABP_Minigame_QTETitle_C::MovingPadLeftTimeline__SE_Timing__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__SE_Timing__EventFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadLeftTimeline__SE_Timing__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -784,16 +762,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__SE_Timing__EventFunc
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__Feint_Finish__EventFunc
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__Feint_Finish__EventFunc()
+void ABP_Minigame_QTETitle_C::MovingPadLeftTimeline__Feint_Finish__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__Feint_Finish__EventFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadLeftTimeline__Feint_Finish__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -802,16 +779,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__Feint_Finish__EventF
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__ShowIcon__EventFunc
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__ShowIcon__EventFunc()
+void ABP_Minigame_QTETitle_C::MovingPadLeftTimeline__ShowIcon__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadLeftTimeline__ShowIcon__EventFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadLeftTimeline__ShowIcon__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -820,16 +796,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadLeftTimeline__ShowIcon__EventFunc(
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__FinishedFunc
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__FinishedFunc()
+void ABP_Minigame_QTETitle_C::MovingPadMiddleTimeline__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__FinishedFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadMiddleTimeline__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -838,16 +813,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__FinishedFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__UpdateFunc
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__UpdateFunc()
+void ABP_Minigame_QTETitle_C::MovingPadMiddleTimeline__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__UpdateFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadMiddleTimeline__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -856,16 +830,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__UpdateFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__SE_Timing__EventFunc
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__SE_Timing__EventFunc()
+void ABP_Minigame_QTETitle_C::MovingPadMiddleTimeline__SE_Timing__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__SE_Timing__EventFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadMiddleTimeline__SE_Timing__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -874,16 +847,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__SE_Timing__EventFu
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__Feint_Finish__EventFunc
-// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__Feint_Finish__EventFunc()
+void ABP_Minigame_QTETitle_C::MovingPadMiddleTimeline__Feint_Finish__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__Feint_Finish__EventFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadMiddleTimeline__Feint_Finish__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -892,16 +864,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__Feint_Finish__Even
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__ShowIcon__EventFunc
-// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__ShowIcon__EventFunc()
+void ABP_Minigame_QTETitle_C::MovingPadMiddleTimeline__ShowIcon__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadMiddleTimeline__ShowIcon__EventFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadMiddleTimeline__ShowIcon__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -910,16 +881,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadMiddleTimeline__ShowIcon__EventFun
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__FinishedFunc
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__FinishedFunc()
+void ABP_Minigame_QTETitle_C::MovingPadRightTimeline__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__FinishedFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadRightTimeline__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -928,16 +898,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__FinishedFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__UpdateFunc
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__UpdateFunc()
+void ABP_Minigame_QTETitle_C::MovingPadRightTimeline__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__UpdateFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadRightTimeline__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -946,16 +915,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__UpdateFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__SE_Timing__EventFunc
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__SE_Timing__EventFunc()
+void ABP_Minigame_QTETitle_C::MovingPadRightTimeline__SE_Timing__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__SE_Timing__EventFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadRightTimeline__SE_Timing__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -964,16 +932,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__SE_Timing__EventFun
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__Feint_Finish__EventFunc
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__Feint_Finish__EventFunc()
+void ABP_Minigame_QTETitle_C::MovingPadRightTimeline__Feint_Finish__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__Feint_Finish__EventFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadRightTimeline__Feint_Finish__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -982,16 +949,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__Feint_Finish__Event
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__ShowIcon__EventFunc
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__ShowIcon__EventFunc()
+void ABP_Minigame_QTETitle_C::MovingPadRightTimeline__ShowIcon__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MovingPadRightTimeline__ShowIcon__EventFunc");
 
 	ABP_Minigame_QTETitle_C_MovingPadRightTimeline__ShowIcon__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1000,16 +966,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MovingPadRightTimeline__ShowIcon__EventFunc
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.򠪦􆖐񍳔_
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC__UnknownFunc01()
+void ABP_Minigame_QTETitle_C::򠪦􆖐񍳔_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.򠪦􆖐񍳔_");
 
-	ABP_Minigame_QTETitle_C__UnknownFunc01__Params params;
+	ABP_Minigame_QTETitle_C_򠪦􆖐񍳔__Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1018,9 +983,9 @@ void ABP_Minigame_QTETitle_C::STATIC__UnknownFunc01()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlashTimeline__FinishedFunc
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_ScoreFlashTimeline__FinishedFunc()
+void ABP_Minigame_QTETitle_C::ScoreFlashTimeline__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlashTimeline__FinishedFunc");
 
@@ -1035,9 +1000,9 @@ void ABP_Minigame_QTETitle_C::STATIC_ScoreFlashTimeline__FinishedFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlashTimeline__UpdateFunc
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_ScoreFlashTimeline__UpdateFunc()
+void ABP_Minigame_QTETitle_C::ScoreFlashTimeline__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlashTimeline__UpdateFunc");
 
@@ -1052,9 +1017,9 @@ void ABP_Minigame_QTETitle_C::STATIC_ScoreFlashTimeline__UpdateFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlashTimeline__test2__EventFunc
-// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_ScoreFlashTimeline__test2__EventFunc()
+void ABP_Minigame_QTETitle_C::ScoreFlashTimeline__test2__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlashTimeline__test2__EventFunc");
 
@@ -1069,9 +1034,9 @@ void ABP_Minigame_QTETitle_C::STATIC_ScoreFlashTimeline__test2__EventFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlashTimeline__test__EventFunc
-// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_ScoreFlashTimeline__test__EventFunc()
+void ABP_Minigame_QTETitle_C::ScoreFlashTimeline__test__EventFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlashTimeline__test__EventFunc");
 
@@ -1086,7 +1051,7 @@ void ABP_Minigame_QTETitle_C::STATIC_ScoreFlashTimeline__test__EventFunc()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ReceiveBeginPlay
-// (NetRequest, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::ReceiveBeginPlay()
 {
@@ -1103,7 +1068,7 @@ void ABP_Minigame_QTETitle_C::ReceiveBeginPlay()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ReceiveActorBeginOverlap
-// (Net, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1123,11 +1088,11 @@ void ABP_Minigame_QTETitle_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ReceiveTick
-// (Net, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_Minigame_QTETitle_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ReceiveTick");
 
@@ -1135,7 +1100,6 @@ void ABP_Minigame_QTETitle_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1144,7 +1108,7 @@ void ABP_Minigame_QTETitle_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.StartMiniGame
-// (NetReliable, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::StartMiniGame()
 {
@@ -1161,16 +1125,15 @@ void ABP_Minigame_QTETitle_C::StartMiniGame()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PlayIntro
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PlayIntro()
+void ABP_Minigame_QTETitle_C::PlayIntro()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PlayIntro");
 
 	ABP_Minigame_QTETitle_C_PlayIntro_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1179,16 +1142,15 @@ void ABP_Minigame_QTETitle_C::STATIC_PlayIntro()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GameStart
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_GameStart()
+void ABP_Minigame_QTETitle_C::GameStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GameStart");
 
 	ABP_Minigame_QTETitle_C_GameStart_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1197,16 +1159,15 @@ void ABP_Minigame_QTETitle_C::STATIC_GameStart()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GetCommand
-// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_GetCommand()
+void ABP_Minigame_QTETitle_C::GetCommand()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GetCommand");
 
 	ABP_Minigame_QTETitle_C_GetCommand_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1215,16 +1176,15 @@ void ABP_Minigame_QTETitle_C::STATIC_GetCommand()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LeftPunchPushed
-// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_LeftPunchPushed()
+void ABP_Minigame_QTETitle_C::LeftPunchPushed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LeftPunchPushed");
 
 	ABP_Minigame_QTETitle_C_LeftPunchPushed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1233,16 +1193,15 @@ void ABP_Minigame_QTETitle_C::STATIC_LeftPunchPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MiddlePunchPushed
-// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MiddlePunchPushed()
+void ABP_Minigame_QTETitle_C::MiddlePunchPushed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MiddlePunchPushed");
 
 	ABP_Minigame_QTETitle_C_MiddlePunchPushed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1251,16 +1210,15 @@ void ABP_Minigame_QTETitle_C::STATIC_MiddlePunchPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.RightPunchPushed
-// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_RightPunchPushed()
+void ABP_Minigame_QTETitle_C::RightPunchPushed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.RightPunchPushed");
 
 	ABP_Minigame_QTETitle_C_RightPunchPushed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1269,9 +1227,9 @@ void ABP_Minigame_QTETitle_C::STATIC_RightPunchPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.StartPlayList
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_StartPlayList()
+void ABP_Minigame_QTETitle_C::StartPlayList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.StartPlayList");
 
@@ -1286,9 +1244,9 @@ void ABP_Minigame_QTETitle_C::STATIC_StartPlayList()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ContinuePlayList
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_ContinuePlayList()
+void ABP_Minigame_QTETitle_C::ContinuePlayList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ContinuePlayList");
 
@@ -1303,7 +1261,7 @@ void ABP_Minigame_QTETitle_C::STATIC_ContinuePlayList()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.EndMiniGame
-// (Exec, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::EndMiniGame()
 {
@@ -1320,9 +1278,9 @@ void ABP_Minigame_QTETitle_C::EndMiniGame()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.onFinishScreenFadeOut_Event_1
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_onFinishScreenFadeOut_Event_1()
+void ABP_Minigame_QTETitle_C::onFinishScreenFadeOut_Event_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.onFinishScreenFadeOut_Event_1");
 
@@ -1337,9 +1295,9 @@ void ABP_Minigame_QTETitle_C::STATIC_onFinishScreenFadeOut_Event_1()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.TimeOutCheck
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_TimeOutCheck()
+void ABP_Minigame_QTETitle_C::TimeOutCheck()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.TimeOutCheck");
 
@@ -1354,7 +1312,7 @@ void ABP_Minigame_QTETitle_C::STATIC_TimeOutCheck()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.WinMiniGame
-// (Exec, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::WinMiniGame()
 {
@@ -1371,9 +1329,9 @@ void ABP_Minigame_QTETitle_C::WinMiniGame()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.RightButtonPushed
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_RightButtonPushed()
+void ABP_Minigame_QTETitle_C::RightButtonPushed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.RightButtonPushed");
 
@@ -1388,9 +1346,9 @@ void ABP_Minigame_QTETitle_C::STATIC_RightButtonPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.RightButtonReleased
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_RightButtonReleased()
+void ABP_Minigame_QTETitle_C::RightButtonReleased()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.RightButtonReleased");
 
@@ -1405,9 +1363,9 @@ void ABP_Minigame_QTETitle_C::STATIC_RightButtonReleased()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MiddleButtonPushed
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MiddleButtonPushed()
+void ABP_Minigame_QTETitle_C::MiddleButtonPushed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MiddleButtonPushed");
 
@@ -1422,9 +1380,9 @@ void ABP_Minigame_QTETitle_C::STATIC_MiddleButtonPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MiddleButtonReleased
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_MiddleButtonReleased()
+void ABP_Minigame_QTETitle_C::MiddleButtonReleased()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.MiddleButtonReleased");
 
@@ -1439,9 +1397,9 @@ void ABP_Minigame_QTETitle_C::STATIC_MiddleButtonReleased()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LeftButtonPushed
-// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_LeftButtonPushed()
+void ABP_Minigame_QTETitle_C::LeftButtonPushed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LeftButtonPushed");
 
@@ -1456,9 +1414,9 @@ void ABP_Minigame_QTETitle_C::STATIC_LeftButtonPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LeftButtonReleased
-// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_LeftButtonReleased()
+void ABP_Minigame_QTETitle_C::LeftButtonReleased()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LeftButtonReleased");
 
@@ -1473,9 +1431,9 @@ void ABP_Minigame_QTETitle_C::STATIC_LeftButtonReleased()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.FaceButtonRPushed
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_FaceButtonRPushed()
+void ABP_Minigame_QTETitle_C::FaceButtonRPushed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.FaceButtonRPushed");
 
@@ -1490,9 +1448,9 @@ void ABP_Minigame_QTETitle_C::STATIC_FaceButtonRPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.FaceButtonMPushed
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_FaceButtonMPushed()
+void ABP_Minigame_QTETitle_C::FaceButtonMPushed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.FaceButtonMPushed");
 
@@ -1507,16 +1465,15 @@ void ABP_Minigame_QTETitle_C::STATIC_FaceButtonMPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.FaceButtonLPushed
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_FaceButtonLPushed()
+void ABP_Minigame_QTETitle_C::FaceButtonLPushed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.FaceButtonLPushed");
 
 	ABP_Minigame_QTETitle_C_FaceButtonLPushed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1525,7 +1482,7 @@ void ABP_Minigame_QTETitle_C::STATIC_FaceButtonLPushed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ShowMovingPadLeft
-// (Native, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bHide                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1537,7 +1494,6 @@ void ABP_Minigame_QTETitle_C::ShowMovingPadLeft(bool bHide)
 	params.bHide = bHide;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1546,16 +1502,15 @@ void ABP_Minigame_QTETitle_C::ShowMovingPadLeft(bool bHide)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadLeftBack
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PadLeftBack()
+void ABP_Minigame_QTETitle_C::PadLeftBack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadLeftBack");
 
 	ABP_Minigame_QTETitle_C_PadLeftBack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1564,16 +1519,15 @@ void ABP_Minigame_QTETitle_C::STATIC_PadLeftBack()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ReversePads
-// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_ReversePads()
+void ABP_Minigame_QTETitle_C::ReversePads()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ReversePads");
 
 	ABP_Minigame_QTETitle_C_ReversePads_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1582,7 +1536,7 @@ void ABP_Minigame_QTETitle_C::STATIC_ReversePads()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ShowMovingPadMiddle
-// (Net, NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bHide                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1602,16 +1556,15 @@ void ABP_Minigame_QTETitle_C::ShowMovingPadMiddle(bool bHide)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadMiddleBack
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PadMiddleBack()
+void ABP_Minigame_QTETitle_C::PadMiddleBack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadMiddleBack");
 
 	ABP_Minigame_QTETitle_C_PadMiddleBack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1620,7 +1573,7 @@ void ABP_Minigame_QTETitle_C::STATIC_PadMiddleBack()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ShowMovingPadRight
-// (Net, NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bHide                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1640,16 +1593,15 @@ void ABP_Minigame_QTETitle_C::ShowMovingPadRight(bool bHide)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadRightBack
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PadRightBack()
+void ABP_Minigame_QTETitle_C::PadRightBack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadRightBack");
 
 	ABP_Minigame_QTETitle_C_PadRightBack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1658,16 +1610,15 @@ void ABP_Minigame_QTETitle_C::STATIC_PadRightBack()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PunchSucceed
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PunchSucceed()
+void ABP_Minigame_QTETitle_C::PunchSucceed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PunchSucceed");
 
 	ABP_Minigame_QTETitle_C_PunchSucceed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1676,7 +1627,7 @@ void ABP_Minigame_QTETitle_C::STATIC_PunchSucceed()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LoseMiniGame
-// (NetReliable, NetRequest, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::LoseMiniGame()
 {
@@ -1693,16 +1644,15 @@ void ABP_Minigame_QTETitle_C::LoseMiniGame()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadRightFlash
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PadRightFlash()
+void ABP_Minigame_QTETitle_C::PadRightFlash()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadRightFlash");
 
 	ABP_Minigame_QTETitle_C_PadRightFlash_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1711,16 +1661,15 @@ void ABP_Minigame_QTETitle_C::STATIC_PadRightFlash()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadMiddleFlash
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PadMiddleFlash()
+void ABP_Minigame_QTETitle_C::PadMiddleFlash()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadMiddleFlash");
 
 	ABP_Minigame_QTETitle_C_PadMiddleFlash_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1729,16 +1678,15 @@ void ABP_Minigame_QTETitle_C::STATIC_PadMiddleFlash()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadLeftFlash
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PadLeftFlash()
+void ABP_Minigame_QTETitle_C::PadLeftFlash()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadLeftFlash");
 
 	ABP_Minigame_QTETitle_C_PadLeftFlash_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1747,7 +1695,7 @@ void ABP_Minigame_QTETitle_C::STATIC_PadLeftFlash()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.Light Flash
-// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           PlayLumpOffSE                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1767,16 +1715,15 @@ void ABP_Minigame_QTETitle_C::Light_Flash(bool PlayLumpOffSE)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LifeDownSequence
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_LifeDownSequence()
+void ABP_Minigame_QTETitle_C::LifeDownSequence()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LifeDownSequence");
 
 	ABP_Minigame_QTETitle_C_LifeDownSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1785,16 +1732,15 @@ void ABP_Minigame_QTETitle_C::STATIC_LifeDownSequence()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlash
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_ScoreFlash()
+void ABP_Minigame_QTETitle_C::ScoreFlash()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ScoreFlash");
 
 	ABP_Minigame_QTETitle_C_ScoreFlash_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1803,16 +1749,15 @@ void ABP_Minigame_QTETitle_C::STATIC_ScoreFlash()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GameClearSequence
-// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_GameClearSequence()
+void ABP_Minigame_QTETitle_C::GameClearSequence()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GameClearSequence");
 
 	ABP_Minigame_QTETitle_C_GameClearSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1821,16 +1766,15 @@ void ABP_Minigame_QTETitle_C::STATIC_GameClearSequence()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.Play UseCoin
-// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_Play_UseCoin()
+void ABP_Minigame_QTETitle_C::Play_UseCoin()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.Play UseCoin");
 
 	ABP_Minigame_QTETitle_C_Play_UseCoin_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1839,7 +1783,7 @@ void ABP_Minigame_QTETitle_C::STATIC_Play_UseCoin()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.Initialize
-// (Net, NetReliable, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::Initialize()
 {
@@ -1856,7 +1800,7 @@ void ABP_Minigame_QTETitle_C::Initialize()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.RestartMiniGame
-// (Net, NetRequest, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::RestartMiniGame()
 {
@@ -1873,7 +1817,7 @@ void ABP_Minigame_QTETitle_C::RestartMiniGame()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature
-// (Net, NetReliable, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
 {
@@ -1890,7 +1834,7 @@ void ABP_Minigame_QTETitle_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Compone
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature
-// (NetReliable, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
 {
@@ -1907,11 +1851,11 @@ void ABP_Minigame_QTETitle_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Compone
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ResumeMiniGame
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_Minigame_QTETitle_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword)
+void ABP_Minigame_QTETitle_C::ResumeMiniGame(const struct FString& ResumeKeyword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ResumeMiniGame");
 
@@ -1919,7 +1863,6 @@ void ABP_Minigame_QTETitle_C::STATIC_ResumeMiniGame(const struct FString& Resume
 	params.ResumeKeyword = ResumeKeyword;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1928,11 +1871,11 @@ void ABP_Minigame_QTETitle_C::STATIC_ResumeMiniGame(const struct FString& Resume
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.OnTalkScriptEvent
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_QTETitle_C::STATIC_OnTalkScriptEvent(int EventNumber)
+void ABP_Minigame_QTETitle_C::OnTalkScriptEvent(int EventNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.OnTalkScriptEvent");
 
@@ -1940,7 +1883,6 @@ void ABP_Minigame_QTETitle_C::STATIC_OnTalkScriptEvent(int EventNumber)
 	params.EventNumber = EventNumber;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1949,7 +1891,7 @@ void ABP_Minigame_QTETitle_C::STATIC_OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.One Play End
-// (NetReliable, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::One_Play_End()
 {
@@ -1966,7 +1908,7 @@ void ABP_Minigame_QTETitle_C::One_Play_End()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PunchFlashStop
-// (Net, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::PunchFlashStop()
 {
@@ -1983,7 +1925,7 @@ void ABP_Minigame_QTETitle_C::PunchFlashStop()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.OnEndKihudaFlow
-// (Net, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::OnEndKihudaFlow()
 {
@@ -2000,7 +1942,7 @@ void ABP_Minigame_QTETitle_C::OnEndKihudaFlow()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.UseCoinFinished
-// (MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::UseCoinFinished()
 {
@@ -2017,7 +1959,7 @@ void ABP_Minigame_QTETitle_C::UseCoinFinished()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.CancelMiniGame
-// (NetReliable, NetRequest, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::CancelMiniGame()
 {
@@ -2034,7 +1976,7 @@ void ABP_Minigame_QTETitle_C::CancelMiniGame()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.OnFinishedFadeEndGame
-// (MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::OnFinishedFadeEndGame()
 {
@@ -2051,16 +1993,15 @@ void ABP_Minigame_QTETitle_C::OnFinishedFadeEndGame()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.OnIntroFinished
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_OnIntroFinished()
+void ABP_Minigame_QTETitle_C::OnIntroFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.OnIntroFinished");
 
 	ABP_Minigame_QTETitle_C_OnIntroFinished_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2069,16 +2010,15 @@ void ABP_Minigame_QTETitle_C::STATIC_OnIntroFinished()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.EventUseCoinUnBind
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_EventUseCoinUnBind()
+void ABP_Minigame_QTETitle_C::EventUseCoinUnBind()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.EventUseCoinUnBind");
 
 	ABP_Minigame_QTETitle_C_EventUseCoinUnBind_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2087,16 +2027,15 @@ void ABP_Minigame_QTETitle_C::STATIC_EventUseCoinUnBind()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LifeDownFinished_Miss
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_LifeDownFinished_Miss()
+void ABP_Minigame_QTETitle_C::LifeDownFinished_Miss()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.LifeDownFinished_Miss");
 
 	ABP_Minigame_QTETitle_C_LifeDownFinished_Miss_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2105,16 +2044,15 @@ void ABP_Minigame_QTETitle_C::STATIC_LifeDownFinished_Miss()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GameClearFinished_2
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_GameClearFinished_2()
+void ABP_Minigame_QTETitle_C::GameClearFinished_2()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.GameClearFinished_2");
 
 	ABP_Minigame_QTETitle_C_GameClearFinished_2_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2123,16 +2061,15 @@ void ABP_Minigame_QTETitle_C::STATIC_GameClearFinished_2()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.OnFinished_Event_00
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_OnFinished_Event_00()
+void ABP_Minigame_QTETitle_C::OnFinished_Event_00()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.OnFinished_Event_00");
 
 	ABP_Minigame_QTETitle_C_OnFinished_Event_00_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2141,16 +2078,15 @@ void ABP_Minigame_QTETitle_C::STATIC_OnFinished_Event_00()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadRightStopFlash
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PadRightStopFlash()
+void ABP_Minigame_QTETitle_C::PadRightStopFlash()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadRightStopFlash");
 
 	ABP_Minigame_QTETitle_C_PadRightStopFlash_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2159,16 +2095,15 @@ void ABP_Minigame_QTETitle_C::STATIC_PadRightStopFlash()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadMiddleStopFlash
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PadMiddleStopFlash()
+void ABP_Minigame_QTETitle_C::PadMiddleStopFlash()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadMiddleStopFlash");
 
 	ABP_Minigame_QTETitle_C_PadMiddleStopFlash_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2177,16 +2112,15 @@ void ABP_Minigame_QTETitle_C::STATIC_PadMiddleStopFlash()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadLeftStopFlash
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Minigame_QTETitle_C::STATIC_PadLeftStopFlash()
+void ABP_Minigame_QTETitle_C::PadLeftStopFlash()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.PadLeftStopFlash");
 
 	ABP_Minigame_QTETitle_C_PadLeftStopFlash_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2195,7 +2129,7 @@ void ABP_Minigame_QTETitle_C::STATIC_PadLeftStopFlash()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.Event_ExecuteResult
-// (NetRequest, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::Event_ExecuteResult()
 {
@@ -2212,7 +2146,7 @@ void ABP_Minigame_QTETitle_C::Event_ExecuteResult()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.Event_EndMiniGame
-// (Net, NetRequest, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_QTETitle_C::Event_EndMiniGame()
 {
@@ -2229,7 +2163,7 @@ void ABP_Minigame_QTETitle_C::Event_EndMiniGame()
 
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.ExecuteUbergraph_BP_Minigame_QTETitle
-// (Public, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

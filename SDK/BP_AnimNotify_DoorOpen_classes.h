@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,11 +26,11 @@ public:
 	}
 
 
-	void STATIC_SetDoorFlag(class AS3GimmickOpenDoor* Door);
+	void SetDoorFlag(class AS3GimmickOpenDoor* Door);
 	void GetDoorActor(class USkeletalMeshComponent* Mesh, class AS3GimmickOpenDoor** DoorActor);
 	void GetSound(class AS3GimmickOpenDoor* Door, class USoundAtomCue** Sound);
-	struct FString STATIC_GetNotifyName();
-	bool STATIC_Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
+	struct FString GetNotifyName();
+	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 };
 
 

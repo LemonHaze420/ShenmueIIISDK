@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,52 +36,52 @@ public:
 	}
 
 
-	void STATIC_PauseLevelBGM(bool bRequest, class UObject* Requester);
-	bool STATIC_ShouldBePaused();
-	bool STATIC_GetHighestPriority(EBgmPriority* OutPriority);
-	void STATIC_StopForceBGM();
-	void STATIC_IsForceBGM(bool* Force);
-	void STATIC_PlayForceBGM(class USoundAtomCue* Cue);
-	void STATIC_PauseSimple();
-	bool STATIC_Stop(const struct FName& ID);
-	void STATIC_ResetVolume(class AActor* Executor);
+	void PauseLevelBGM(bool bRequest, class UObject* Requester);
+	bool ShouldBePaused();
+	bool GetHighestPriority(EBgmPriority* OutPriority);
+	void StopForceBGM();
+	void IsForceBGM(bool* Force);
+	void PlayForceBGM(class USoundAtomCue* Cue);
+	void PauseSimple();
+	bool Stop(const struct FName& ID);
+	void ResetVolume(class AActor* Executor);
 	void GetCurrentVolume(float* Volume);
 	void SetVolume(class AActor* Executor, float Volume);
-	void STATIC_SetSystemVolume(float Volume);
+	void SetSystemVolume(float Volume);
 	void StopWithDestroy(const struct FName& ID);
-	void STATIC_RestartFromCutscene();
-	void STATIC_RestartSimple();
-	void STATIC_CanUpdatePlay(class ABP_S3BgmPlayer_C* Player, bool Pause, bool* CAN);
+	void RestartFromCutscene();
+	void RestartSimple();
+	void CanUpdatePlay(class ABP_S3BgmPlayer_C* Player, bool Pause, bool* CAN);
 	void PauseFromCutscene();
-	void STATIC_GetPlayingBgm(class USoundAtomCue** Sound);
-	class AS3BgmPlayer* STATIC_PlayFromCue(class UObject* Cue, const struct FName& ID, EBgmPriority Priority, bool AutoDestroy, float StartTime);
-	void STATIC_StopCutsceneBGM();
-	void STATIC_GetPlayerByPriority(EBgmPriority Priority, class ABP_S3BgmPlayer_C** Player);
-	void STATIC_PlayFromSequencer_Impl(class USoundAtomCue* Cue, const struct FName& SoundId, float StartTime, float Volume, float Pitch);
-	void STATIC_GetPlayerById(const struct FName& ID, class ABP_S3BgmPlayer_C** Player, int* Index);
-	void STATIC_PlayFromInfo(const struct FS3BgmAreaSourceInfo& SourceInfo);
-	void STATIC_AddPlayer(class ABP_S3BgmPlayer_C* Player, float StartTime);
-	void STATIC_UpdateBGM();
-	void STATIC_ChangeBgm(class UObject* Sound, const struct FName& ID);
+	void GetPlayingBgm(class USoundAtomCue** Sound);
+	class AS3BgmPlayer* PlayFromCue(class UObject* Cue, const struct FName& ID, EBgmPriority Priority, bool AutoDestroy, float StartTime);
+	void StopCutsceneBGM();
+	void GetPlayerByPriority(EBgmPriority Priority, class ABP_S3BgmPlayer_C** Player);
+	void PlayFromSequencer_Impl(class USoundAtomCue* Cue, const struct FName& SoundId, float StartTime, float Volume, float Pitch);
+	void GetPlayerById(const struct FName& ID, class ABP_S3BgmPlayer_C** Player, int* Index);
+	void PlayFromInfo(const struct FS3BgmAreaSourceInfo& SourceInfo);
+	void AddPlayer(class ABP_S3BgmPlayer_C* Player, float StartTime);
+	void UpdateBGM();
+	void ChangeBgm(class UObject* Sound, const struct FName& ID);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_OnBeginTouchArea(class AS3BgmArea* AreaActor);
-	void STATIC_OnEndTouchArea(class AS3BgmArea* AreaActor);
-	void STATIC_OnAreaBgmChanged(class AS3BgmArea* area);
+	void ReceiveBeginPlay();
+	void OnBeginTouchArea(class AS3BgmArea* AreaActor);
+	void OnEndTouchArea(class AS3BgmArea* AreaActor);
+	void OnAreaBgmChanged(class AS3BgmArea* area);
 	void PlayFromPlayer(class AS3BgmPlayer* BgmPlayer, float StartTime);
-	void STATIC_Pause();
-	void STATIC_Restart();
-	void STATIC_PlayFromSequencer(class USoundAtomCue* Cue, const struct FName& SoundId, float StartTime, float Volume, float Pitch);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_StartFadeIn();
-	void STATIC_StartFadeOut();
-	void STATIC_SwitchController(class APlayerController* PlayerController);
-	void STATIC_ShowEyecatch();
-	void STATIC_HideEyecatch();
-	void STATIC_ChangeSystemVolume(ES3SoundVolume Type);
-	void STATIC_SetTalkVolume(bool bReset);
-	void STATIC_ExecuteUbergraph_BP_S3BgmManager(int EntryPoint);
+	void Pause();
+	void Restart();
+	void PlayFromSequencer(class USoundAtomCue* Cue, const struct FName& SoundId, float StartTime, float Volume, float Pitch);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void StartFadeIn();
+	void StartFadeOut();
+	void SwitchController(class APlayerController* PlayerController);
+	void ShowEyecatch();
+	void HideEyecatch();
+	void ChangeSystemVolume(ES3SoundVolume Type);
+	void SetTalkVolume(bool bReset);
+	void ExecuteUbergraph_BP_S3BgmManager(int EntryPoint);
 };
 
 

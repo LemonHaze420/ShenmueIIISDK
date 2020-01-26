@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function SubABP_Grab.SubABP_Grab_C.RewindBoneAnimTime
-// (Net, NetReliable, Native, Event, Static, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   SocketName                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_Grab_C::STATIC_RewindBoneAnimTime(const struct FName& SocketName)
+void USubABP_Grab_C::RewindBoneAnimTime(const struct FName& SocketName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.RewindBoneAnimTime");
 
@@ -26,7 +26,6 @@ void USubABP_Grab_C::STATIC_RewindBoneAnimTime(const struct FName& SocketName)
 	params.SocketName = SocketName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,18 +34,17 @@ void USubABP_Grab_C::STATIC_RewindBoneAnimTime(const struct FName& SocketName)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.IsPlaying
-// (Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Finished                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_Grab_C::STATIC_IsPlaying(bool* Finished)
+void USubABP_Grab_C::IsPlaying(bool* Finished)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.IsPlaying");
 
 	USubABP_Grab_C_IsPlaying_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,16 +56,15 @@ void USubABP_Grab_C::STATIC_IsPlaying(bool* Finished)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.StartBlendIn
-// (Net, NetReliable, Native, Event, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_StartBlendIn()
+void USubABP_Grab_C::StartBlendIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.StartBlendIn");
 
 	USubABP_Grab_C_StartBlendIn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,16 +73,15 @@ void USubABP_Grab_C::STATIC_StartBlendIn()
 
 
 // Function SubABP_Grab.SubABP_Grab_C.StartBlendOut
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_StartBlendOut()
+void USubABP_Grab_C::StartBlendOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.StartBlendOut");
 
 	USubABP_Grab_C_StartBlendOut_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,18 +90,17 @@ void USubABP_Grab_C::STATIC_StartBlendOut()
 
 
 // Function SubABP_Grab.SubABP_Grab_C.GetOverlappedActors
-// (NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AActor*>          Actors                         (Parm, OutParm, ZeroConstructor)
 
-void USubABP_Grab_C::STATIC_GetOverlappedActors(TArray<class AActor*>* Actors)
+void USubABP_Grab_C::GetOverlappedActors(TArray<class AActor*>* Actors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.GetOverlappedActors");
 
 	USubABP_Grab_C_GetOverlappedActors_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +112,7 @@ void USubABP_Grab_C::STATIC_GetOverlappedActors(TArray<class AActor*>* Actors)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.IsFinished
-// (NetReliable, Native, Event, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Finished                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -128,7 +123,6 @@ void USubABP_Grab_C::IsFinished(bool* Finished)
 	USubABP_Grab_C_IsFinished_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,7 +134,7 @@ void USubABP_Grab_C::IsFinished(bool* Finished)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.ResetAnimation
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ResetTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -160,11 +154,11 @@ void USubABP_Grab_C::ResetAnimation(float ResetTime)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.InitColliders
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UPrimitiveComponent*> Primitives                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void USubABP_Grab_C::STATIC_InitColliders(TArray<class UPrimitiveComponent*>* Primitives)
+void USubABP_Grab_C::InitColliders(TArray<class UPrimitiveComponent*>* Primitives)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.InitColliders");
 
@@ -182,7 +176,7 @@ void USubABP_Grab_C::STATIC_InitColliders(TArray<class UPrimitiveComponent*>* Pr
 
 
 // Function SubABP_Grab.SubABP_Grab_C.PauseBoneAndParents
-// (NetReliable, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Bone                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -202,11 +196,11 @@ void USubABP_Grab_C::PauseBoneAndParents(const struct FName& Bone)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.StartAnimation
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          StartTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_Grab_C::STATIC_StartAnimation(float StartTime)
+void USubABP_Grab_C::StartAnimation(float StartTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.StartAnimation");
 
@@ -222,7 +216,7 @@ void USubABP_Grab_C::STATIC_StartAnimation(float StartTime)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.GetBoneAnimTime
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   BoneName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -246,7 +240,7 @@ void USubABP_Grab_C::GetBoneAnimTime(const struct FName& BoneName, float* Time)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.GetParentFingerBones
-// (NetReliable, Public, Private, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Bone                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           Bones                          (Parm, OutParm, ZeroConstructor)
@@ -270,7 +264,7 @@ void USubABP_Grab_C::GetParentFingerBones(const struct FName& Bone, TArray<struc
 
 
 // Function SubABP_Grab.SubABP_Grab_C.SetBoneAnimTime
-// (Net, NetReliable, Exec, Event, NetMulticast, Private, Delegate, NetServer)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   SocketName                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -292,16 +286,15 @@ void USubABP_Grab_C::SetBoneAnimTime(const struct FName& SocketName, float Time)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_19377CE5462D9DB570DD7D96A6186A21
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_19377CE5462D9DB570DD7D96A6186A21()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_19377CE5462D9DB570DD7D96A6186A21()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_19377CE5462D9DB570DD7D96A6186A21");
 
 	USubABP_Grab_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_19377CE5462D9DB570DD7D96A6186A21_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -310,16 +303,15 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_567DDB6D4C775863F5CD8EB548C0EBD9
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_567DDB6D4C775863F5CD8EB548C0EBD9()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_567DDB6D4C775863F5CD8EB548C0EBD9()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_567DDB6D4C775863F5CD8EB548C0EBD9");
 
 	USubABP_Grab_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_567DDB6D4C775863F5CD8EB548C0EBD9_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -328,16 +320,15 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C2AAAF0F4C89BCDA2DC109B3AE999D61
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C2AAAF0F4C89BCDA2DC109B3AE999D61()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C2AAAF0F4C89BCDA2DC109B3AE999D61()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C2AAAF0F4C89BCDA2DC109B3AE999D61");
 
 	USubABP_Grab_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C2AAAF0F4C89BCDA2DC109B3AE999D61_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -346,16 +337,15 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E280B4D9423985EC885D41813644F934
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E280B4D9423985EC885D41813644F934()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E280B4D9423985EC885D41813644F934()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E280B4D9423985EC885D41813644F934");
 
 	USubABP_Grab_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E280B4D9423985EC885D41813644F934_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -364,16 +354,15 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_0482EB604FA09D8849ECDDA4769202DF
-// (NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_0482EB604FA09D8849ECDDA4769202DF()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_0482EB604FA09D8849ECDDA4769202DF()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_0482EB604FA09D8849ECDDA4769202DF");
 
 	USubABP_Grab_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_0482EB604FA09D8849ECDDA4769202DF_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -382,16 +371,15 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_565AEAA548298064ADEBF89D438C15B4
-// (NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_565AEAA548298064ADEBF89D438C15B4()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_565AEAA548298064ADEBF89D438C15B4()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_565AEAA548298064ADEBF89D438C15B4");
 
 	USubABP_Grab_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_565AEAA548298064ADEBF89D438C15B4_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -400,16 +388,15 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C536418B48231CA1EE5A54B8B78CA8CE
-// (Net, NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C536418B48231CA1EE5A54B8B78CA8CE()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C536418B48231CA1EE5A54B8B78CA8CE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C536418B48231CA1EE5A54B8B78CA8CE");
 
 	USubABP_Grab_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C536418B48231CA1EE5A54B8B78CA8CE_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -418,16 +405,15 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_54D261244689807764D374B77605F380
-// (Net, NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_54D261244689807764D374B77605F380()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_54D261244689807764D374B77605F380()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_54D261244689807764D374B77605F380");
 
 	USubABP_Grab_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_54D261244689807764D374B77605F380_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -436,9 +422,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E3E8D9614ACCBDB72FA13DBA0F20D37B
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E3E8D9614ACCBDB72FA13DBA0F20D37B()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E3E8D9614ACCBDB72FA13DBA0F20D37B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E3E8D9614ACCBDB72FA13DBA0F20D37B");
 
@@ -453,9 +439,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_04749C2E4C7B0768CFF67E99193FC80D
-// (Net, NetRequest, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_04749C2E4C7B0768CFF67E99193FC80D()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_04749C2E4C7B0768CFF67E99193FC80D()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_04749C2E4C7B0768CFF67E99193FC80D");
 
@@ -470,9 +456,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_5CD85EA6404AC9DCE458448E07B8B996
-// (Net, NetRequest, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_5CD85EA6404AC9DCE458448E07B8B996()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_5CD85EA6404AC9DCE458448E07B8B996()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_5CD85EA6404AC9DCE458448E07B8B996");
 
@@ -487,9 +473,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E40701264EE04C4F663E9E87EDF4E57F
-// (NetRequest, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E40701264EE04C4F663E9E87EDF4E57F()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E40701264EE04C4F663E9E87EDF4E57F()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_E40701264EE04C4F663E9E87EDF4E57F");
 
@@ -504,9 +490,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_3BE61BA4451508B644ED258BF555C675
-// (NetRequest, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_3BE61BA4451508B644ED258BF555C675()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_3BE61BA4451508B644ED258BF555C675()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_3BE61BA4451508B644ED258BF555C675");
 
@@ -521,9 +507,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C69A9BEB4E358F6131F2FB80B41A331C
-// (Net, NetReliable, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C69A9BEB4E358F6131F2FB80B41A331C()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C69A9BEB4E358F6131F2FB80B41A331C()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_C69A9BEB4E358F6131F2FB80B41A331C");
 
@@ -538,9 +524,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_D8C019CC49B97D5028C652A52B1A3F2C
-// (Net, NetReliable, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_D8C019CC49B97D5028C652A52B1A3F2C()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_D8C019CC49B97D5028C652A52B1A3F2C()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_D8C019CC49B97D5028C652A52B1A3F2C");
 
@@ -555,9 +541,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_1276F4B048DD1630457E27B438428FBA
-// (NetReliable, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_1276F4B048DD1630457E27B438428FBA()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_1276F4B048DD1630457E27B438428FBA()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_1276F4B048DD1630457E27B438428FBA");
 
@@ -572,9 +558,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_B13BBE6A49F6900AE246258DDB000001
-// (NetReliable, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_B13BBE6A49F6900AE246258DDB000001()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_B13BBE6A49F6900AE246258DDB000001()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_B13BBE6A49F6900AE246258DDB000001");
 
@@ -589,9 +575,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_0B44694445C9783F77151492820F553E
-// (Net, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_0B44694445C9783F77151492820F553E()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_0B44694445C9783F77151492820F553E()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_0B44694445C9783F77151492820F553E");
 
@@ -606,9 +592,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_5894D8074E0C904E0024EF8EF2EA9460
-// (Net, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_5894D8074E0C904E0024EF8EF2EA9460()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_5894D8074E0C904E0024EF8EF2EA9460()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_5894D8074E0C904E0024EF8EF2EA9460");
 
@@ -623,9 +609,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_2DF7C37A4F123FF85B0EC7AE5E4A0AAF
-// (Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_2DF7C37A4F123FF85B0EC7AE5E4A0AAF()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_2DF7C37A4F123FF85B0EC7AE5E4A0AAF()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_SequenceEvaluator_2DF7C37A4F123FF85B0EC7AE5E4A0AAF");
 
@@ -640,9 +626,9 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_BlendListByBool_A712509C492F4FADAF125C8B44D31F3F
-// (Event, Static, NetMulticast, Public, Protected, NetServer)
+// (BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_BlendListByBool_A712509C492F4FADAF125C8B44D31F3F()
+void USubABP_Grab_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_BlendListByBool_A712509C492F4FADAF125C8B44D31F3F()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_Grab_AnimGraphNode_BlendListByBool_A712509C492F4FADAF125C8B44D31F3F");
 
@@ -657,11 +643,11 @@ void USubABP_Grab_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_G
 
 
 // Function SubABP_Grab.SubABP_Grab_C.BlueprintUpdateAnimation
-// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_Grab_C::STATIC_BlueprintUpdateAnimation(float DeltaTimeX)
+void USubABP_Grab_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.BlueprintUpdateAnimation");
 
@@ -677,16 +663,15 @@ void USubABP_Grab_C::STATIC_BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function SubABP_Grab.SubABP_Grab_C.BlueprintInitializeAnimation
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void USubABP_Grab_C::STATIC_BlueprintInitializeAnimation()
+void USubABP_Grab_C::BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_Grab.SubABP_Grab_C.BlueprintInitializeAnimation");
 
 	USubABP_Grab_C_BlueprintInitializeAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -695,7 +680,7 @@ void USubABP_Grab_C::STATIC_BlueprintInitializeAnimation()
 
 
 // Function SubABP_Grab.SubABP_Grab_C.OnBoneOverlap
-// (NetReliable, Event, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -725,7 +710,7 @@ void USubABP_Grab_C::OnBoneOverlap(class UPrimitiveComponent* OverlappedComponen
 
 
 // Function SubABP_Grab.SubABP_Grab_C.ExecuteUbergraph_SubABP_Grab
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

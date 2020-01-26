@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,6 +27,22 @@ public:
 };
 
 
+// Class FuzzySystem.FuzzyAND
+// 0x0010 (0x0038 - 0x0028)
+class UFuzzyAND : public UFuzzyTerm
+{
+public:
+	TArray<class UFuzzyTerm*>                          Terms;                                                    // 0x0028(0x0010) (ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyAND");
+		return ptr;
+	}
+
+};
+
+
 // Class FuzzySystem.FuzzyFairly
 // 0x0008 (0x0030 - 0x0028)
 class UFuzzyFairly : public UFuzzyTerm
@@ -37,6 +53,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyFairly");
+		return ptr;
+	}
+
+};
+
+
+// Class FuzzySystem.FuzzyMembershipFunction
+// 0x0010 (0x0038 - 0x0028)
+class UFuzzyMembershipFunction : public UFuzzyTerm
+{
+public:
+	class UCurveFloat*                                 MembershipCurve;                                          // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0030(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyMembershipFunction");
 		return ptr;
 	}
 
@@ -59,22 +92,6 @@ public:
 };
 
 
-// Class FuzzySystem.FuzzyAND
-// 0x0010 (0x0038 - 0x0028)
-class UFuzzyAND : public UFuzzyTerm
-{
-public:
-	TArray<class UFuzzyTerm*>                          Terms;                                                    // 0x0028(0x0010) (ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyAND");
-		return ptr;
-	}
-
-};
-
-
 // Class FuzzySystem.FuzzyRule
 // 0x0010 (0x0038 - 0x0028)
 class UFuzzyRule : public UObject
@@ -86,65 +103,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyRule");
-		return ptr;
-	}
-
-};
-
-
-// Class FuzzySystem.FuzzySystemFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UFuzzySystemFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzySystemFunctionLibrary");
-		return ptr;
-	}
-
-
-	class UFuzzyOR* FuzzyCreateRule_OR4(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3, class UFuzzyTerm* Term4);
-	class UFuzzyOR* FuzzyCreateRule_OR3(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3);
-	class UFuzzyOR* FuzzyCreateRule_OR2(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2);
-	class UFuzzyAND* FuzzyCreateRule_AND4(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3, class UFuzzyTerm* Term4);
-	class UFuzzyAND* FuzzyCreateRule_AND3(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3);
-	class UFuzzyAND* FuzzyCreateRule_AND2(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2);
-	class UFuzzyVery* FuzzyCreateHedges_Very(class UObject* Outer, class UFuzzyMembershipFunction* FMF);
-	class UFuzzyFairly* FuzzyCreateHedges_Fairly(class UObject* Outer, class UFuzzyMembershipFunction* FMF);
-};
-
-
-// Class FuzzySystem.FuzzyVariable
-// 0x0058 (0x0080 - 0x0028)
-class UFuzzyVariable : public UObject
-{
-public:
-	TMap<struct FName, class UFuzzyMembershipFunction*> MemberSets;                                               // 0x0028(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0078(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyVariable");
-		return ptr;
-	}
-
-
-	void AddMembershipFunction(const struct FName& Key, class UCurveFloat* MembershipCurve, class UFuzzyVariable** OutFLV, class UFuzzyMembershipFunction** AddFMF);
-};
-
-
-// Class FuzzySystem.FuzzyVery
-// 0x0008 (0x0030 - 0x0028)
-class UFuzzyVery : public UFuzzyTerm
-{
-public:
-	class UFuzzyMembershipFunction*                    FMF;                                                      // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyVery");
 		return ptr;
 	}
 
@@ -178,17 +136,59 @@ public:
 };
 
 
-// Class FuzzySystem.FuzzyMembershipFunction
-// 0x0010 (0x0038 - 0x0028)
-class UFuzzyMembershipFunction : public UFuzzyTerm
+// Class FuzzySystem.FuzzySystemFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UFuzzySystemFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	class UCurveFloat*                                 MembershipCurve;                                          // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0030(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyMembershipFunction");
+		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzySystemFunctionLibrary");
+		return ptr;
+	}
+
+
+	class UFuzzyOR* STATIC_FuzzyCreateRule_OR4(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3, class UFuzzyTerm* Term4);
+	class UFuzzyOR* STATIC_FuzzyCreateRule_OR3(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3);
+	class UFuzzyOR* STATIC_FuzzyCreateRule_OR2(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2);
+	class UFuzzyAND* STATIC_FuzzyCreateRule_AND4(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3, class UFuzzyTerm* Term4);
+	class UFuzzyAND* STATIC_FuzzyCreateRule_AND3(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2, class UFuzzyTerm* Term3);
+	class UFuzzyAND* STATIC_FuzzyCreateRule_AND2(class UObject* Outer, class UFuzzyTerm* Term1, class UFuzzyTerm* Term2);
+	class UFuzzyVery* STATIC_FuzzyCreateHedges_Very(class UObject* Outer, class UFuzzyMembershipFunction* FMF);
+	class UFuzzyFairly* STATIC_FuzzyCreateHedges_Fairly(class UObject* Outer, class UFuzzyMembershipFunction* FMF);
+};
+
+
+// Class FuzzySystem.FuzzyVariable
+// 0x0058 (0x0080 - 0x0028)
+class UFuzzyVariable : public UObject
+{
+public:
+	TMap<struct FName, class UFuzzyMembershipFunction*> MemberSets;                                               // 0x0028(0x0050) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0078(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyVariable");
+		return ptr;
+	}
+
+
+	void AddMembershipFunction(const struct FName& Key, class UCurveFloat* MembershipCurve, class UFuzzyVariable** OutFLV, class UFuzzyMembershipFunction** AddFMF);
+};
+
+
+// Class FuzzySystem.FuzzyVery
+// 0x0008 (0x0030 - 0x0028)
+class UFuzzyVery : public UFuzzyTerm
+{
+public:
+	class UFuzzyMembershipFunction*                    FMF;                                                      // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class FuzzySystem.FuzzyVery");
 		return ptr;
 	}
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,14 +14,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function FootprintTypeBase.FootprintTypeBase_C.OnFootFall
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Delegate, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 FootLocation                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                FootRotation                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // TEnumAsByte<ENEFootType>       FootType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UFootprintComponent_C*   FootprintComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UFootprintTypeBase_C::STATIC_OnFootFall(const struct FVector& FootLocation, const struct FRotator& FootRotation, TEnumAsByte<ENEFootType> FootType, class UFootprintComponent_C* FootprintComponent)
+void UFootprintTypeBase_C::OnFootFall(const struct FVector& FootLocation, const struct FRotator& FootRotation, TEnumAsByte<ENEFootType> FootType, class UFootprintComponent_C* FootprintComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FootprintTypeBase.FootprintTypeBase_C.OnFootFall");
 
@@ -32,7 +32,6 @@ void UFootprintTypeBase_C::STATIC_OnFootFall(const struct FVector& FootLocation,
 	params.FootprintComponent = FootprintComponent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

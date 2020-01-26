@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,13 +32,13 @@ public:
 	}
 
 
-	void STATIC_ChopActionFromRot(const struct FRotator& Rot);
+	void ChopActionFromRot(const struct FRotator& Rot);
 	void MakeRandomVector(float x_max, float x_min, float y_max, float y_min, float Z_Max, float Z_min, struct FVector* RandomtVector);
-	void STATIC_UserConstructionScript();
-	void STATIC_ChopAction();
-	void STATIC_ReceiveBeginPlay();
+	void UserConstructionScript();
+	void ChopAction();
+	void ReceiveBeginPlay();
 	void DelayDestroy(float DelayTime);
-	void STATIC_ExecuteUbergraph_BP_ChopableWood2(int EntryPoint);
+	void ExecuteUbergraph_BP_ChopableWood2(int EntryPoint);
 };
 
 

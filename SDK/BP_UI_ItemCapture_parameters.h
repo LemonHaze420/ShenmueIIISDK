@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,7 +40,7 @@ struct ABP_UI_ItemCapture_C_InputAxis_Left_Params
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.UpdateCamera
 struct ABP_UI_ItemCapture_C_UpdateCamera_Params
 {
-	float                                              DeltaSecond;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaSEcond;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.InputAxis_Right

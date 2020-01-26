@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,16 +51,16 @@ public:
 	}
 
 
-	void STATIC_ChangeFontType();
-	void STATIC_CheckHiddenMirror();
+	void ChangeFontType();
+	void CheckHiddenMirror();
 	bool SetLoadingType(ES3LoadingType Type);
 	void SetDebugIndex(int Index);
 	class US3LoadingProgressImage* GetProgressBarImage();
 	void SetCharaData(int Index, class UImage* Image, class UTextBlock* Description, class UTextBlock* Name);
-	void STATIC_SetTexture();
+	void SetTexture();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_BPW_UI_Loading_Long(int EntryPoint);
-	void STATIC_MirrorRotation__DelegateSignature();
+	void MirrorRotation__DelegateSignature();
 };
 
 

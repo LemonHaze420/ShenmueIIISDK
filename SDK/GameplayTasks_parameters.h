@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,30 +29,18 @@ struct UGameplayTask_EndTask_Params
 {
 };
 
-// Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor
-struct UGameplayTask_SpawnActor_SpawnActor_Params
+// Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
+struct UGameplayTask_WaitDelay_TaskWaitDelay_Params
 {
 	TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SpawnLocation;                                            // (Parm, IsPlainOldData)
-	struct FRotator                                    SpawnRotation;                                            // (Parm, IsPlainOldData)
-	class UClass*                                      Class;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bSpawnOnlyOnAuthority;                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	class UGameplayTask_SpawnActor*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      Priority;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class UGameplayTask_WaitDelay*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor
-struct UGameplayTask_SpawnActor_FinishSpawningActor_Params
+// DelegateFunction GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature
+struct UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature_Params
 {
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      SpawnedActor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor
-struct UGameplayTask_SpawnActor_BeginSpawningActor_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      SpawnedActor;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function GameplayTasks.GameplayTask_ClaimResource.ClaimResources
@@ -91,18 +79,30 @@ struct UGameplayTasksComponent_K2_RunGameplayTask_Params
 	EGameplayTaskRunResult                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
-struct UGameplayTask_WaitDelay_TaskWaitDelay_Params
+// Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor
+struct UGameplayTask_SpawnActor_SpawnActor_Params
 {
 	TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      Priority;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	class UGameplayTask_WaitDelay*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FVector                                     SpawnLocation;                                            // (Parm, IsPlainOldData)
+	struct FRotator                                    SpawnRotation;                                            // (Parm, IsPlainOldData)
+	class UClass*                                      Class;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bSpawnOnlyOnAuthority;                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class UGameplayTask_SpawnActor*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// DelegateFunction GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature
-struct UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature_Params
+// Function GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor
+struct UGameplayTask_SpawnActor_FinishSpawningActor_Params
 {
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      SpawnedActor;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor
+struct UGameplayTask_SpawnActor_BeginSpawningActor_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      SpawnedActor;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,10 +39,10 @@ public:
 	}
 
 
-	float STATIC_GetLoopStartPoint(class UAnimMontage* Montage, TEnumAsByte<EM_LeftOrRight> Foot);
+	float GetLoopStartPoint(class UAnimMontage* Montage, TEnumAsByte<EM_LeftOrRight> Foot);
 	class UAnimMontage* GetStopMotion(bool DirUp, bool Right);
-	class UAnimMontage* STATIC_GetStartMotion(bool DirUp, bool Right);
-	void STATIC_GetLoopMotion(bool DirUp, bool Run, class UAnimMontage** Montage);
+	class UAnimMontage* GetStartMotion(bool DirUp, bool Right);
+	void GetLoopMotion(bool DirUp, bool Run, class UAnimMontage** Montage);
 };
 
 

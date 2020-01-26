@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_EventIcon.BPF_EventIcon_C.GetEventIconManager
-// (Net, NetReliable, Exec, Event, NetResponse, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_EventIconDispRangeManager_C* newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_EventIcon_C::GetEventIconManager(class UObject* __WorldContext, class ABP_EventIconDispRangeManager_C** newParam)
+void UBPF_EventIcon_C::STATIC_GetEventIconManager(class UObject* __WorldContext, class ABP_EventIconDispRangeManager_C** newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_EventIcon.BPF_EventIcon_C.GetEventIconManager");
 

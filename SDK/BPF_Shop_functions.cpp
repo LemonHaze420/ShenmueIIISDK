@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Shop.BPF_Shop_C.SellMagnification_SkillBook
-// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, Public, Delegate)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Magnification_Skillbook        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Shop_C::SellMagnification_SkillBook(class UObject* __WorldContext, float* Magnification_Skillbook)
+void UBPF_Shop_C::STATIC_SellMagnification_SkillBook(class UObject* __WorldContext, float* Magnification_Skillbook)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Shop.BPF_Shop_C.SellMagnification_SkillBook");
 
@@ -27,7 +27,6 @@ void UBPF_Shop_C::SellMagnification_SkillBook(class UObject* __WorldContext, flo
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,12 +38,12 @@ void UBPF_Shop_C::SellMagnification_SkillBook(class UObject* __WorldContext, flo
 
 
 // Function BPF_Shop.BPF_Shop_C.SellMagnification
-// (Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          SellMagnification              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Shop_C::SellMagnification(class UObject* __WorldContext, float* SellMagnification)
+void UBPF_Shop_C::STATIC_SellMagnification(class UObject* __WorldContext, float* SellMagnification)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Shop.BPF_Shop_C.SellMagnification");
 
@@ -52,7 +51,6 @@ void UBPF_Shop_C::SellMagnification(class UObject* __WorldContext, float* SellMa
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,12 +62,12 @@ void UBPF_Shop_C::SellMagnification(class UObject* __WorldContext, float* SellMa
 
 
 // Function BPF_Shop.BPF_Shop_C.GetS3ShopDataManager
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_ShopDataManager_C*   BP_ShopDataManager             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Shop_C::GetS3ShopDataManager(class UObject* __WorldContext, class ABP_ShopDataManager_C** BP_ShopDataManager)
+void UBPF_Shop_C::STATIC_GetS3ShopDataManager(class UObject* __WorldContext, class ABP_ShopDataManager_C** BP_ShopDataManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Shop.BPF_Shop_C.GetS3ShopDataManager");
 
@@ -77,7 +75,6 @@ void UBPF_Shop_C::GetS3ShopDataManager(class UObject* __WorldContext, class ABP_
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

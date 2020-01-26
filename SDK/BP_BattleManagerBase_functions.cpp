@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.EnableHUD
-// (NetReliable, Event, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleManagerBase_C::STATIC_EnableHUD(bool Visible)
+void ABP_BattleManagerBase_C::EnableHUD(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleManagerBase.BP_BattleManagerBase_C.EnableHUD");
 
@@ -34,11 +34,11 @@ void ABP_BattleManagerBase_C::STATIC_EnableHUD(bool Visible)
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.IsResultDecided
-// (NetReliable, Exec, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_BattleManagerBase_C::STATIC_IsResultDecided()
+bool ABP_BattleManagerBase_C::IsResultDecided()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleManagerBase.BP_BattleManagerBase_C.IsResultDecided");
 
@@ -55,11 +55,11 @@ bool ABP_BattleManagerBase_C::STATIC_IsResultDecided()
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.TryPlayerQuit
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleManagerBase_C::STATIC_TryPlayerQuit(bool* dummy)
+void ABP_BattleManagerBase_C::TryPlayerQuit(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleManagerBase.BP_BattleManagerBase_C.TryPlayerQuit");
 
@@ -77,9 +77,9 @@ void ABP_BattleManagerBase_C::STATIC_TryPlayerQuit(bool* dummy)
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.StartBattle
-// (Net, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_BattleManagerBase_C::STATIC_StartBattle()
+void ABP_BattleManagerBase_C::StartBattle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleManagerBase.BP_BattleManagerBase_C.StartBattle");
 
@@ -94,11 +94,11 @@ void ABP_BattleManagerBase_C::STATIC_StartBattle()
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.ExecuteDebugCommand
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Argument                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_BattleManagerBase_C::STATIC_ExecuteDebugCommand(const struct FString& Argument)
+void ABP_BattleManagerBase_C::ExecuteDebugCommand(const struct FString& Argument)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleManagerBase.BP_BattleManagerBase_C.ExecuteDebugCommand");
 
@@ -106,7 +106,6 @@ void ABP_BattleManagerBase_C::STATIC_ExecuteDebugCommand(const struct FString& A
 	params.Argument = Argument;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,12 +114,12 @@ void ABP_BattleManagerBase_C::STATIC_ExecuteDebugCommand(const struct FString& A
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.StartEndingBattle
-// (NetRequest, Event, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleManagerBase_C::STATIC_StartEndingBattle(TEnumAsByte<EBattleWinLoseResult> Result, bool* dummy)
+void ABP_BattleManagerBase_C::StartEndingBattle(TEnumAsByte<EBattleWinLoseResult> Result, bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleManagerBase.BP_BattleManagerBase_C.StartEndingBattle");
 
@@ -139,18 +138,17 @@ void ABP_BattleManagerBase_C::STATIC_StartEndingBattle(TEnumAsByte<EBattleWinLos
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.CloseBattle
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleManagerBase_C::STATIC_CloseBattle(bool* dummy)
+void ABP_BattleManagerBase_C::CloseBattle(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleManagerBase.BP_BattleManagerBase_C.CloseBattle");
 
 	ABP_BattleManagerBase_C_CloseBattle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -162,12 +160,12 @@ void ABP_BattleManagerBase_C::STATIC_CloseBattle(bool* dummy)
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.LaunchBattle
-// (Net, NetReliable, Event, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_LaunchParameters_C* LaunchParams                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleManagerBase_C::STATIC_LaunchBattle(class UBTL_LaunchParameters_C* LaunchParams, bool* dummy)
+void ABP_BattleManagerBase_C::LaunchBattle(class UBTL_LaunchParameters_C* LaunchParams, bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleManagerBase.BP_BattleManagerBase_C.LaunchBattle");
 
@@ -186,7 +184,7 @@ void ABP_BattleManagerBase_C::STATIC_LaunchBattle(class UBTL_LaunchParameters_C*
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.UserConstructionScript
-// (Net, NetReliable, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BattleManagerBase_C::UserConstructionScript()
 {
@@ -195,7 +193,6 @@ void ABP_BattleManagerBase_C::UserConstructionScript()
 	ABP_BattleManagerBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,7 +201,7 @@ void ABP_BattleManagerBase_C::UserConstructionScript()
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.OnBattleClose__DelegateSignature
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_BattleManagerBase_C::OnBattleClose__DelegateSignature()
 {
@@ -213,7 +210,6 @@ void ABP_BattleManagerBase_C::OnBattleClose__DelegateSignature()
 	ABP_BattleManagerBase_C_OnBattleClose__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,7 +218,7 @@ void ABP_BattleManagerBase_C::OnBattleClose__DelegateSignature()
 
 
 // Function BP_BattleManagerBase.BP_BattleManagerBase_C.OnBattleEnd__DelegateSignature
-// (Net, NetReliable, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

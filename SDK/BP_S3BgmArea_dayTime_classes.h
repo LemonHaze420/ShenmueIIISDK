@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,9 +28,9 @@ public:
 	}
 
 
-	void STATIC_JudgeBGM(ES3DayTimeEvent NewEvent);
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
+	void JudgeBgm(ES3DayTimeEvent NewEvent);
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
 	void ChangeGameTimeEvent(ES3DayTimeEvent EventType);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_S3BgmArea_dayTime(int EntryPoint);

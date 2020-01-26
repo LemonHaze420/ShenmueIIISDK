@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_DoorClose.BP_AnimNotify_DoorClose_C.SetDoorFlag
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Public, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_AnimNotify_DoorClose_C::STATIC_SetDoorFlag(class AS3GimmickOpenDoor* Door)
+void UBP_AnimNotify_DoorClose_C::SetDoorFlag(class AS3GimmickOpenDoor* Door)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_DoorClose.BP_AnimNotify_DoorClose_C.SetDoorFlag");
 
@@ -26,7 +26,6 @@ void UBP_AnimNotify_DoorClose_C::STATIC_SetDoorFlag(class AS3GimmickOpenDoor* Do
 	params.Door = Door;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void UBP_AnimNotify_DoorClose_C::STATIC_SetDoorFlag(class AS3GimmickOpenDoor* Do
 
 
 // Function BP_AnimNotify_DoorClose.BP_AnimNotify_DoorClose_C.GetNotifyName
-// (NetRequest, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBP_AnimNotify_DoorClose_C::STATIC_GetNotifyName()
+struct FString UBP_AnimNotify_DoorClose_C::GetNotifyName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_DoorClose.BP_AnimNotify_DoorClose_C.GetNotifyName");
 
@@ -56,12 +55,12 @@ struct FString UBP_AnimNotify_DoorClose_C::STATIC_GetNotifyName()
 
 
 // Function BP_AnimNotify_DoorClose.BP_AnimNotify_DoorClose_C.GetSound
-// (Net, NetReliable, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           Sound                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_AnimNotify_DoorClose_C::STATIC_GetSound(class AS3GimmickOpenDoor* Door, class USoundAtomCue** Sound)
+void UBP_AnimNotify_DoorClose_C::GetSound(class AS3GimmickOpenDoor* Door, class USoundAtomCue** Sound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_DoorClose.BP_AnimNotify_DoorClose_C.GetSound");
 

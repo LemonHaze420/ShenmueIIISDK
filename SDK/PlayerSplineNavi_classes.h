@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,13 +31,13 @@ public:
 
 
 	void FindClosestForwardDirection(const struct FVector& InLocation, struct FVector* OutDirToSpline, struct FVector* OutDirectionOFSpline, float* OutKey, bool* OutSuccess);
-	void STATIC_CheckLOS(const struct FVector& InSplineLocation, const struct FVector& InPlayerLocation, bool* OutIsClear);
-	void STATIC_RailGetClosestDirection(const struct FVector& InLocation, const struct FVector& InDirection, int InPreviousDirection, float AngleHysteresis, struct FVector* OutDirection, float* OutAngleAbs, int* OutRailDir);
+	void CheckLOS(const struct FVector& InSplineLocation, const struct FVector& InPlayerLocation, bool* OutIsClear);
+	void RailGetClosestDirection(const struct FVector& InLocation, const struct FVector& InDirection, int InPreviousDirection, float AngleHysteresis, struct FVector* OutDirection, float* OutAngleAbs, int* OutRailDir);
 	void FindSplineDistanceAndForward(const struct FVector& WorldLocation, struct FVector* Direction, float* DistanceAlongSpline);
 	void GetWidth(const struct FVector& Point, float* Width);
-	void STATIC_CalculateStrength(const struct FVector& Location, const struct FVector& InputDir, const struct FVector& TargetLocation, const struct FVector& TargetDir, float NoInputN, float Distance, bool bForceFollowDebug, float* Strength);
+	void CalculateStrength(const struct FVector& Location, const struct FVector& InputDir, const struct FVector& TargetLocation, const struct FVector& TargetDir, float NoInputN, float Distance, bool bForceFollowDebug, float* Strength);
 	void CalculateSteer(const struct FVector& Location, const struct FVector& InputDir, float NoInputN, bool bDebugFollow, struct FVector* OutDir, float* Strength, float* Priority);
-	void STATIC_SplineInit(class APlayer_SplineMoveActor_C* SplineMoveActorRef);
+	void SplineInit(class APlayer_SplineMoveActor_C* SplineMoveActorRef);
 	void UserConstructionScript();
 };
 

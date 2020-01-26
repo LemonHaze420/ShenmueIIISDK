@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FString                 Match                          (Parm, ZeroConstructor)
 // bool                           bDidBecomeActive               (Parm, ZeroConstructor, IsPlainOldData)
@@ -36,7 +36,7 @@ void UTurnBasedMatchInterface::OnMatchReceivedTurn(const struct FString& Match, 
 
 
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
-// ()
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FString                 Match                          (Parm, ZeroConstructor)
 

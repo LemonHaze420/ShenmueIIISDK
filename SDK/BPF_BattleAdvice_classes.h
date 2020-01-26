@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,10 +25,10 @@ public:
 	}
 
 
-	void BPF_FilterOutBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* TargetList, TArray<TEnumAsByte<EBattleAdvice>>* Remove);
+	void STATIC_BPF_FilterOutBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* TargetList, TArray<TEnumAsByte<EBattleAdvice>>* Remove);
 	bool STATIC_BPF_IsBattleAdviceRelevant(TEnumAsByte<EBattleAdvice> Advice, class UObject* __WorldContext);
-	void BPF_GetRelevantBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* SortedAdvice);
-	void BPF_GetMostRelevantBattleAdvice(class UObject* __WorldContext, TEnumAsByte<EBattleAdvice>* newParam);
+	void STATIC_BPF_GetRelevantBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* SortedAdvice);
+	void STATIC_BPF_GetMostRelevantBattleAdvice(class UObject* __WorldContext, TEnumAsByte<EBattleAdvice>* newParam);
 };
 
 

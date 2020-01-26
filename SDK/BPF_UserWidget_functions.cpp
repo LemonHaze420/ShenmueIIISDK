@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_UserWidget.BPF_UserWidget_C.BPF_SafeRemoveWidget
-// (NetReliable, NetRequest, Native, Event, NetResponse, Public, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidget*                 Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_UserWidget_C::BPF_SafeRemoveWidget(class UObject* __WorldContext, class UWidget** Widget)
+void UBPF_UserWidget_C::STATIC_BPF_SafeRemoveWidget(class UObject* __WorldContext, class UWidget** Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_UserWidget.BPF_UserWidget_C.BPF_SafeRemoveWidget");
 
@@ -27,7 +27,6 @@ void UBPF_UserWidget_C::BPF_SafeRemoveWidget(class UObject* __WorldContext, clas
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,7 +38,7 @@ void UBPF_UserWidget_C::BPF_SafeRemoveWidget(class UObject* __WorldContext, clas
 
 
 // Function BPF_UserWidget.BPF_UserWidget_C.BPF_ReaddWidgetToHorizontalBox
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UHorizontalBox*          Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UWidget*                 Content                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -55,7 +54,6 @@ void UBPF_UserWidget_C::STATIC_BPF_ReaddWidgetToHorizontalBox(class UHorizontalB
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

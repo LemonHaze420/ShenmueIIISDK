@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.UpdateGradation
-// (NetReliable, Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          SafeRamge                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KeihoUI_C::STATIC_UpdateGradation(float Value, float SafeRamge)
+void ABP_MiniGame_KeihoUI_C::UpdateGradation(float Value, float SafeRamge)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.UpdateGradation");
 
@@ -36,11 +36,11 @@ void ABP_MiniGame_KeihoUI_C::STATIC_UpdateGradation(float Value, float SafeRamge
 
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.UpdateSafeLineRootRotate
-// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          New_Rotation_X__Roll_          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KeihoUI_C::STATIC_UpdateSafeLineRootRotate(float New_Rotation_X__Roll_)
+void ABP_MiniGame_KeihoUI_C::UpdateSafeLineRootRotate(float New_Rotation_X__Roll_)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.UpdateSafeLineRootRotate");
 
@@ -56,7 +56,7 @@ void ABP_MiniGame_KeihoUI_C::STATIC_UpdateSafeLineRootRotate(float New_Rotation_
 
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.InitializeSafeRange
-// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Range                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Alpha                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -70,7 +70,6 @@ void ABP_MiniGame_KeihoUI_C::InitializeSafeRange(float Range, float Alpha)
 	params.Alpha = Alpha;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,7 +78,7 @@ void ABP_MiniGame_KeihoUI_C::InitializeSafeRange(float Range, float Alpha)
 
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.UpdateStickRotate
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          New_Rotation_X__Roll_          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -91,7 +90,6 @@ void ABP_MiniGame_KeihoUI_C::UpdateStickRotate(float New_Rotation_X__Roll_)
 	params.New_Rotation_X__Roll_ = New_Rotation_X__Roll_;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -100,7 +98,7 @@ void ABP_MiniGame_KeihoUI_C::UpdateStickRotate(float New_Rotation_X__Roll_)
 
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.UserConstructionScript
-// (Net, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_KeihoUI_C::UserConstructionScript()
 {
@@ -117,7 +115,7 @@ void ABP_MiniGame_KeihoUI_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.Timeline_LineVisiblefade__FinishedFunc
-// (Net, NetReliable, Exec, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_KeihoUI_C::Timeline_LineVisiblefade__FinishedFunc()
 {
@@ -126,7 +124,6 @@ void ABP_MiniGame_KeihoUI_C::Timeline_LineVisiblefade__FinishedFunc()
 	ABP_MiniGame_KeihoUI_C_Timeline_LineVisiblefade__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -135,7 +132,7 @@ void ABP_MiniGame_KeihoUI_C::Timeline_LineVisiblefade__FinishedFunc()
 
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.Timeline_LineVisiblefade__UpdateFunc
-// (NetReliable, Exec, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_KeihoUI_C::Timeline_LineVisiblefade__UpdateFunc()
 {
@@ -144,7 +141,6 @@ void ABP_MiniGame_KeihoUI_C::Timeline_LineVisiblefade__UpdateFunc()
 	ABP_MiniGame_KeihoUI_C_Timeline_LineVisiblefade__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,7 +149,7 @@ void ABP_MiniGame_KeihoUI_C::Timeline_LineVisiblefade__UpdateFunc()
 
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.ReceiveBeginPlay
-// (NetReliable, Exec, Native, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_KeihoUI_C::ReceiveBeginPlay()
 {
@@ -162,7 +158,6 @@ void ABP_MiniGame_KeihoUI_C::ReceiveBeginPlay()
 	ABP_MiniGame_KeihoUI_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,11 +166,11 @@ void ABP_MiniGame_KeihoUI_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.SetEnabledLine
-// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KeihoUI_C::STATIC_SetEnabledLine(bool Enabled)
+void ABP_MiniGame_KeihoUI_C::SetEnabledLine(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.SetEnabledLine");
 
@@ -191,11 +186,11 @@ void ABP_MiniGame_KeihoUI_C::STATIC_SetEnabledLine(bool Enabled)
 
 
 // Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.ExecuteUbergraph_BP_MiniGame_KeihoUI
-// (Net, NetReliable, NetResponse, Static, MulticastDelegate, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KeihoUI_C::STATIC_ExecuteUbergraph_BP_MiniGame_KeihoUI(int EntryPoint)
+void ABP_MiniGame_KeihoUI_C::ExecuteUbergraph_BP_MiniGame_KeihoUI(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KeihoUI.BP_MiniGame_KeihoUI_C.ExecuteUbergraph_BP_MiniGame_KeihoUI");
 

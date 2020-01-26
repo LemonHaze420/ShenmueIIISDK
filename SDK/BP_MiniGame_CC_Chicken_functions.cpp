@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.CheckNeedRun
-// (NetRequest, Native, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           NeedRun                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_CheckNeedRun(bool* NeedRun)
+void ABP_MiniGame_CC_Chicken_C::CheckNeedRun(bool* NeedRun)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.CheckNeedRun");
 
 	ABP_MiniGame_CC_Chicken_C_CheckNeedRun_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,11 +36,11 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_CheckNeedRun(bool* NeedRun)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.SetMiniGameMode
-// (Exec, Native, Event, Static, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_SetMiniGameMode(bool Enabled)
+void ABP_MiniGame_CC_Chicken_C::SetMiniGameMode(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.SetMiniGameMode");
 
@@ -49,7 +48,6 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_SetMiniGameMode(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +56,7 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_SetMiniGameMode(bool Enabled)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.IsReSpawnable
-// (Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -79,7 +77,7 @@ bool ABP_MiniGame_CC_Chicken_C::IsReSpawnable()
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.UpdateRunningSE
-// (Net, Exec, Native, NetMulticast, MulticastDelegate, NetServer, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_CC_Chicken_C::UpdateRunningSE()
 {
@@ -88,7 +86,6 @@ void ABP_MiniGame_CC_Chicken_C::UpdateRunningSE()
 	ABP_MiniGame_CC_Chicken_C_UpdateRunningSE_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,16 +94,15 @@ void ABP_MiniGame_CC_Chicken_C::UpdateRunningSE()
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.EnableUpdateSerchCatch
-// (NetReliable, Native, Event, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_EnableUpdateSerchCatch()
+void ABP_MiniGame_CC_Chicken_C::EnableUpdateSerchCatch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.EnableUpdateSerchCatch");
 
 	ABP_MiniGame_CC_Chicken_C_EnableUpdateSerchCatch_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,7 +111,7 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_EnableUpdateSerchCatch()
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.UpdateEnableSearchCatch
-// (Net, NetReliable, NetRequest, Native, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -127,7 +123,6 @@ void ABP_MiniGame_CC_Chicken_C::UpdateEnableSearchCatch(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,7 +131,7 @@ void ABP_MiniGame_CC_Chicken_C::UpdateEnableSearchCatch(float DeltaSeconds)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.UnEnableChicken
-// (NetReliable, NetRequest, Native, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_CC_Chicken_C::UnEnableChicken()
 {
@@ -145,7 +140,6 @@ void ABP_MiniGame_CC_Chicken_C::UnEnableChicken()
 	ABP_MiniGame_CC_Chicken_C_UnEnableChicken_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,11 +148,11 @@ void ABP_MiniGame_CC_Chicken_C::UnEnableChicken()
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.EnableChicken
-// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           RunStart                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_EnableChicken(bool RunStart)
+void ABP_MiniGame_CC_Chicken_C::EnableChicken(bool RunStart)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.EnableChicken");
 
@@ -174,12 +168,12 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_EnableChicken(bool RunStart)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.GetPlayRate
-// (Net, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Rate                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_GetPlayRate(int ID, float* Rate)
+void ABP_MiniGame_CC_Chicken_C::GetPlayRate(int ID, float* Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.GetPlayRate");
 
@@ -198,7 +192,7 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_GetPlayRate(int ID, float* Rate)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.GetFarMoveIdFromPlayer
-// (Exec, Native, Event, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            MoveId                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -209,7 +203,6 @@ void ABP_MiniGame_CC_Chicken_C::GetFarMoveIdFromPlayer(int* MoveId)
 	ABP_MiniGame_CC_Chicken_C_GetFarMoveIdFromPlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,7 +214,7 @@ void ABP_MiniGame_CC_Chicken_C::GetFarMoveIdFromPlayer(int* MoveId)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.GetCurrentState
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGame_CC_ChickenState> State                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -232,7 +225,6 @@ void ABP_MiniGame_CC_Chicken_C::GetCurrentState(TEnumAsByte<E_MiniGame_CC_Chicke
 	ABP_MiniGame_CC_Chicken_C_GetCurrentState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -244,9 +236,9 @@ void ABP_MiniGame_CC_Chicken_C::GetCurrentState(TEnumAsByte<E_MiniGame_CC_Chicke
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.InitializeWalk
-// (NetReliable, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_InitializeWalk()
+void ABP_MiniGame_CC_Chicken_C::InitializeWalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.InitializeWalk");
 
@@ -261,16 +253,15 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_InitializeWalk()
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.InitializeRun
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_InitializeRun()
+void ABP_MiniGame_CC_Chicken_C::InitializeRun()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.InitializeRun");
 
 	ABP_MiniGame_CC_Chicken_C_InitializeRun_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -279,7 +270,7 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_InitializeRun()
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.GetNearMoveId
-// (Exec, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            MoveId                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -301,11 +292,11 @@ void ABP_MiniGame_CC_Chicken_C::GetNearMoveId(int* MoveId)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.UpdateDebug
-// (NetRequest, NetResponse, Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_UpdateDebug(float DeltaSeconds)
+void ABP_MiniGame_CC_Chicken_C::UpdateDebug(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.UpdateDebug");
 
@@ -321,7 +312,7 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_UpdateDebug(float DeltaSeconds)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.GetEnableMoveId
-// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<int>                    IdList                         (Parm, OutParm, ZeroConstructor)
 
@@ -332,7 +323,6 @@ void ABP_MiniGame_CC_Chicken_C::GetEnableMoveId(TArray<int>* IdList)
 	ABP_MiniGame_CC_Chicken_C_GetEnableMoveId_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -344,7 +334,7 @@ void ABP_MiniGame_CC_Chicken_C::GetEnableMoveId(TArray<int>* IdList)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.InitializeMove
-// (NetReliable, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_CC_Chicken_C::InitializeMove()
 {
@@ -353,7 +343,6 @@ void ABP_MiniGame_CC_Chicken_C::InitializeMove()
 	ABP_MiniGame_CC_Chicken_C_InitializeMove_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -362,9 +351,9 @@ void ABP_MiniGame_CC_Chicken_C::InitializeMove()
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_UserConstructionScript()
+void ABP_MiniGame_CC_Chicken_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.UserConstructionScript");
 
@@ -379,7 +368,7 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.BndEvt__SearchPlayerCollision_K2Node_ComponentBoundEvent_42_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -409,7 +398,7 @@ void ABP_MiniGame_CC_Chicken_C::BndEvt__SearchPlayerCollision_K2Node_ComponentBo
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.BndEvt__SearchCatchCollision_K2Node_ComponentBoundEvent_43_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, Exec, Native, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -431,7 +420,6 @@ void ABP_MiniGame_CC_Chicken_C::BndEvt__SearchCatchCollision_K2Node_ComponentBou
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -440,11 +428,11 @@ void ABP_MiniGame_CC_Chicken_C::BndEvt__SearchCatchCollision_K2Node_ComponentBou
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.ReceiveTick
-// (NetReliable, Exec, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_CC_Chicken_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.ReceiveTick");
 
@@ -460,7 +448,7 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.ReceiveBeginPlay
-// (NetReliable, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_CC_Chicken_C::ReceiveBeginPlay()
 {
@@ -477,11 +465,11 @@ void ABP_MiniGame_CC_Chicken_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.ReceiveEndPlay
-// (Net, Exec, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_MiniGame_CC_Chicken_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.ReceiveEndPlay");
 
@@ -497,11 +485,11 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.ChangeGameTimeEvent
-// (Net, Exec, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3DayTimeEvent                EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_ChangeGameTimeEvent(ES3DayTimeEvent EventType)
+void ABP_MiniGame_CC_Chicken_C::ChangeGameTimeEvent(ES3DayTimeEvent EventType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.ChangeGameTimeEvent");
 
@@ -517,11 +505,11 @@ void ABP_MiniGame_CC_Chicken_C::STATIC_ChangeGameTimeEvent(ES3DayTimeEvent Event
 
 
 // Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.ExecuteUbergraph_BP_MiniGame_CC_Chicken
-// (Exec, Static, Public, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Chicken_C::STATIC_ExecuteUbergraph_BP_MiniGame_CC_Chicken(int EntryPoint)
+void ABP_MiniGame_CC_Chicken_C::ExecuteUbergraph_BP_MiniGame_CC_Chicken(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Chicken.BP_MiniGame_CC_Chicken_C.ExecuteUbergraph_BP_MiniGame_CC_Chicken");
 

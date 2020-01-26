@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,16 +32,16 @@ public:
 	}
 
 
-	bool STATIC_DoesPlayerHaveFood();
+	bool DoesPlayerHaveFood();
 	bool StillRunning();
-	void STATIC_TickTransitions(float DeltaTime);
+	void TickTransitions(float DeltaTime);
 	bool IsLowHP();
 	void SetGlobalHPResultFlag(bool bIsFull);
 	void UpdateGlobalHPResultFlag();
-	void STATIC_CollectDependencies();
+	void CollectDependencies();
 	void DestroyUI();
-	bool STATIC_SpawnUI(class UClass* Class);
-	bool STATIC_ShouldShowMeter();
+	bool SpawnUI(class UClass* Class);
+	bool ShouldShowMeter();
 	void OnLoaded_6A9A1405492543F002206D8B74ACA2FA(class UClass* Loaded);
 	void Activate();
 	void Finalize();

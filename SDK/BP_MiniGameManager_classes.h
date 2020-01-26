@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MiniGameManager.BP_MiniGameManager_C
-// 0x05E8 (0x09C8 - 0x03E0)
+// 0x05EC (0x09CC - 0x03E0)
 class ABP_MiniGameManager_C : public AS3MiniGameManager
 {
 public:
@@ -69,6 +69,7 @@ public:
 	int                                                FortuneCountFlagIndex;                                    // 0x0970(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                OtoshidamaForceEndFlagIndex;                              // 0x0974(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TMap<TEnumAsByte<E_MiniGameGambleWinRate>, float>  KachoFortuneHardestWinRateList;                           // 0x0978(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                MAHO_LEVEL_MAX_FLAG_INDEX;                                // 0x09C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -78,83 +79,83 @@ public:
 
 
 	void AddFortuneCount();
-	void STATIC_DisableCheckFishingSuspendTime();
-	void STATIC_SetEnabledPlayFishing(bool bEnabled);
-	void STATIC_GetEnabledPlayFishing(bool* bEnabled);
+	void DisableCheckFishingSuspendTime();
+	void SetEnabledPlayFishing(bool bEnabled);
+	void GetEnabledPlayFishing(bool* bEnabled);
 	void DestroyChooseActor();
-	void STATIC_InitializeMiniGameProgress();
+	void InitializeMiniGameProgress();
 	void SetCurrentMiniGame(class ABP_MiniGameBase_C* MiniGame);
-	void STATIC_GetForkMovePlaceFlag(int* OutValue);
+	void GetForkMovePlaceFlag(int* OutValue);
 	void ToggleForkCCBMovePlace();
 	void GetForkNextProgress(TEnumAsByte<E_MiniGame_ForkJobResult> Job, int* OutValue);
 	void GetDailyAppearCCBNum(int* OutValue);
-	void STATIC_AddDailyAppearCCBNum(int AddNum);
-	void STATIC_GetCCBGameData(TEnumAsByte<E_MiniGame_ForkJobResult> Job, TArray<int>* Data);
+	void AddDailyAppearCCBNum(int AddNum);
+	void GetCCBGameData(TEnumAsByte<E_MiniGame_ForkJobResult> Job, TArray<int>* Data);
 	void GetAvailableCCBGameDataNum(TEnumAsByte<E_MiniGame_ForkJobResult> Job, int IgnoreNum, bool* IsAvailable, int* Num);
 	void GetCCBGameDataNum(TEnumAsByte<E_MiniGameCCBattlePlace> Place, int CabinetNumber, int* DataNum);
-	void STATIC_SetCCBGameDataNum(TEnumAsByte<E_MiniGame_ForkJobResult> Job, int GameDataNum, int SetIndex, TArray<int>* DataList);
+	void SetCCBGameDataNum(TEnumAsByte<E_MiniGame_ForkJobResult> Job, int GameDataNum, int SetIndex, TArray<int>* DataList);
 	void GetWinCount(ES3MiniGameCategory Category, TEnumAsByte<EMiniGamePurpose> Purpose, int* Count);
 	void GetSpecialPlayerMesh(class USkeletalMesh** Mesh);
 	void SetSpecialPlayerMesh(class USkeletalMesh* SpecialPlayerMesh, class USkeletalMesh** Mesh);
-	void STATIC_StopBGM();
-	bool STATIC_GetCCBTargetNumList(TEnumAsByte<E_MiniGameCCBattlePlace> Place, TArray<int>* OutValues);
-	void STATIC_GetDayCount(int* Count);
+	void StopBGM();
+	bool GetCCBTargetNumList(TEnumAsByte<E_MiniGameCCBattlePlace> Place, TArray<int>* OutValues);
+	void GetDayCount(int* Count);
 	void UpdateDayCount(bool* Change);
-	void STATIC_UpdateCCBattleResult(TEnumAsByte<E_MiniGameCCBattlePlace> CheckPlace, int ClearNumber, bool* Clear);
+	void UpdateCCBattleResult(TEnumAsByte<E_MiniGameCCBattlePlace> CheckPlace, int ClearNumber, bool* Clear);
 	void UpdateCCBattleSettings(TEnumAsByte<E_MiniGameCCBattlePlace> Place);
-	void STATIC_AddMiniGameProgress(const struct FName& Key, int AddValue, ES3MiniGameCategory Category, int* Value);
+	void AddMiniGameProgress(const struct FName& Key, int AddValue, ES3MiniGameCategory Category, int* Value);
 	void AddForkNextProgress(TEnumAsByte<E_MiniGame_ForkJobResult> JobType, int AddValue);
-	void STATIC_UpdateForkLiftResult();
+	void UpdateForkLiftResult();
 	void UpdateWinRate();
 	void GetMiniGameAllWinRate(TEnumAsByte<E_MiniGameGambleType> Type, bool Fortune, float* Min, float* Max, float* Current);
-	int STATIC_GetGambleKifudaAccumulate();
+	int GetGambleKifudaAccumulate();
 	void AddGambleKifudaAccumulate(int AddValue);
-	void STATIC_GetMiniGameWinRate(TEnumAsByte<E_MiniGameGambleType> Type, bool Fortune, TEnumAsByte<E_MiniGameGambleWinRate> RateType, float* Rate);
+	void GetMiniGameWinRate(TEnumAsByte<E_MiniGameGambleType> Type, bool Fortune, TEnumAsByte<E_MiniGameGambleWinRate> RateType, float* Rate);
 	void SetMiniGameWinRate(TEnumAsByte<E_MiniGameGambleType> Type, float Rate, bool Fotune, TEnumAsByte<E_MiniGameGambleWinRate> RateType);
-	void STATIC_UpdateMiniGameGlobalFlag();
-	void STATIC_UpdateFortuneProgress(bool IsNumberFortune, bool* IsEnabledFortune, int* FortuneNum);
-	void STATIC_IsEnabledFortune(bool IsNumberFortune, bool* IsEnabled, int* FlagIndex, int* FortuneNum);
-	void STATIC_PlayBGM(const struct FName& BGMID, bool* Play);
-	void STATIC_StartFishingShopResult(TArray<struct FST_Fishing_ResultFishData>* result_fish_array);
+	void UpdateMiniGameGlobalFlag();
+	void UpdateFortuneProgress(bool IsNumberFortune, bool* IsEnabledFortune, int* FortuneNum);
+	void IsEnabledFortune(bool IsNumberFortune, bool* IsEnabled, int* FlagIndex, int* FortuneNum);
+	void PlayBGM(const struct FName& BGMID, bool* Play);
+	void StartFishingShopResult(TArray<struct FST_Fishing_ResultFishData>* result_fish_array);
 	void InitializeFishing();
-	void STATIC_FinalizeFishing();
+	void FinalizeFishing();
 	void CreateFishingManager(TArray<int>* RentalItemID);
-	void STATIC_CheckBGM();
-	void STATIC_GetMiniGameActorID(struct FName* ID);
-	void STATIC_CheckFishing(bool Jump);
+	void CheckBGM();
+	void GetMiniGameActorID(struct FName* ID);
+	void CheckFishing(bool Jump);
 	void UpdateFortuneTellingFlag();
-	void STATIC_GetMiniGameGachaID(struct FName* PlayGachaID);
+	void GetMiniGameGachaID(struct FName* PlayGachaID);
 	void GetCurrentMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
-	void STATIC_ExecuteMiniGameResultEvent(TEnumAsByte<E_MiniGameResult> Result);
-	void STATIC_CanvertMiniGameCategory(int Index, ES3MiniGameCategory* Category);
-	void STATIC_FinalizeTalkMiniGame();
+	void ExecuteMiniGameResultEvent(TEnumAsByte<E_MiniGameResult> Result);
+	void CanvertMiniGameCategory(int Index, ES3MiniGameCategory* Category);
+	void FinalizeTalkMiniGame();
 	void GetMiniGameControlledByMiniGame(class ABP_MiniGameBase_C** MiniGameBase, bool* bSuccess);
 	void GetMiniGameControlledByActor(class AActor** Actor);
 	void GetMinGamePrice(int* MinPrice, class ABP_MiniGameBase_C** Actor);
 	void ResetValue();
-	void STATIC_IsProcessingMiniGame(bool* bProcessing);
+	void IsProcessingMiniGame(bool* bProcessing);
 	void InitializeTalkMiniGame();
-	void STATIC_SpawnMiniGameChooseActor(bool ManualCamera, class ABP_MiniGameChoose_C** ChooseActor);
+	void SpawnMiniGameChooseActor(bool ManualCamera, class ABP_MiniGameChoose_C** ChooseActor);
 	void UserConstructionScript();
-	void STATIC_OnDestroyedChooseActor(class AActor* DestroyedActor);
-	void STATIC_BindChooseActor(class ABP_MiniGameChoose_C* MiniGameChoose);
-	void STATIC_OnChangedFlag(int ArrayIndex, int SetFlags);
+	void OnDestroyedChooseActor(class AActor* DestroyedActor);
+	void BindChooseActor(class ABP_MiniGameChoose_C* MiniGameChoose);
+	void OnChangedFlag(int ArrayIndex, int SetFlags);
 	void BindGameInstanceFlagEvent();
 	void UnbindGameInstanceFlagEvent();
 	void OnCancelChooseMiniGame();
-	void STATIC_OnChooseMiniGame(class AActor* ChooseActor);
+	void OnChooseMiniGame(class AActor* ChooseActor);
 	void ReceiveBeginPlay();
 	void OnTalkStartEvent();
 	void OnTalkEndEvent();
-	void STATIC_OnScriptResumeMiniGame(const struct FString& ResumeKeydword);
-	void STATIC_OnStartMiniGame(int MiniGameRuleIndex);
-	void STATIC_TimeJump(float jumpTime);
-	void STATIC_PlayFishingShopAC(int ResultRank);
+	void OnScriptResumeMiniGame(const struct FString& ResumeKeydword);
+	void OnStartMiniGame(int MiniGameRuleIndex);
+	void TimeJump(float jumpTime);
+	void PlayFishingShopAC(int ResultRank);
 	void ResetFishingTimeLimit();
 	void FinishLoad();
 	void OnEndMiniGame();
 	void LoadedCueSheet();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void UpdateMiniGameWinRate();
 	void ExecuteUbergraph_BP_MiniGameManager(int EntryPoint);
 	void OnChangeDay__DelegateSignature();

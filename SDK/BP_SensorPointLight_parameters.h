@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,12 +22,6 @@ struct ABP_SensorPointLight_C_UserConstructionScript_Params
 // Function BP_SensorPointLight.BP_SensorPointLight_C.ReceiveBeginPlay
 struct ABP_SensorPointLight_C_ReceiveBeginPlay_Params
 {
-};
-
-// Function BP_SensorPointLight.BP_SensorPointLight_C.ExecuteUbergraph_BP_SensorPointLight
-struct ABP_SensorPointLight_C_ExecuteUbergraph_BP_SensorPointLight_Params
-{
-	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,26 +42,26 @@ public:
 
 
 	void UpdateAnimationState();
-	void STATIC_DebugQTEForceSetResultSuccess();
+	void DebugQTEForceSetResultSuccess();
 	void PlayStartForceFeedback();
-	struct FName STATIC_GetQTEForceFeedbackTag();
+	struct FName GetQTEForceFeedbackTag();
 	void SetQTEForceFeedbackTag(const struct FName& InTag);
 	void PlayInputFailedForceFeedback();
 	void PlayInputSuccessForceFeedback();
-	float STATIC_GetCurrentInputTime();
+	float GetCurrentInputTime();
 	void DebugQTEForceSuccessUpdateInternal();
-	void STATIC_DebugQTEForceSuccessUpdate();
+	void DebugQTEForceSuccessUpdate();
 	void StartCountInputLimitTime();
 	bool CanStartCountInputLimitTime();
-	float STATIC_GetLengthBeforeCountInputLimitTime();
+	float GetLengthBeforeCountInputLimitTime();
 	bool IsPlayingInAnimation();
 	void PlayTimeUpFailedAnimation();
 	void PlayInAnimation();
-	void STATIC_StopTimeCountSE();
-	void STATIC_PlayTimeCountSE();
-	void STATIC_PlayInputFailedSE();
-	void STATIC_PlayInputSuccessSE();
-	void STATIC_PlayStartSE();
+	void StopTimeCountSE();
+	void PlayTimeCountSE();
+	void PlayInputFailedSE();
+	void PlayInputSuccessSE();
+	void PlayStartSE();
 	void SetTimeGaugeRate(float InGaugeRate);
 	float GetCurrentInputTimeRate();
 	void SetInputLimitTime(float InLimitTime);
@@ -73,13 +73,13 @@ public:
 	bool IsInQTE();
 	bool IsQTEStarted();
 	void Update();
-	void STATIC_Reset();
-	void STATIC_FinishQTE();
+	void Reset();
+	void FinishQTE();
 	void StartQTE();
 	void Finalize();
 	void Initialize();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BPC_QTEBaseComponent(int EntryPoint);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ExecuteUbergraph_BPC_QTEBaseComponent(int EntryPoint);
 };
 
 

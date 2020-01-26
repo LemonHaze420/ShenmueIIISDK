@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_MemoPage_EN_1.wgt_MemoPage_EN_0_C.Construct
-// (Net, NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_MemoPage_EN_0_C::Construct()
 {
@@ -23,7 +23,6 @@ void Uwgt_MemoPage_EN_0_C::Construct()
 	Uwgt_MemoPage_EN_0_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void Uwgt_MemoPage_EN_0_C::Construct()
 
 
 // Function wgt_MemoPage_EN_1.wgt_MemoPage_EN_0_C.PushButton
-// (Net, NetReliable, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               positiopn                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -52,11 +51,11 @@ void Uwgt_MemoPage_EN_0_C::PushButton(const struct FVector2D& positiopn)
 
 
 // Function wgt_MemoPage_EN_1.wgt_MemoPage_EN_0_C.SetPageIndex
-// (NetRequest, Exec, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_MemoPage_EN_0_C::STATIC_SetPageIndex(int PageIndex)
+void Uwgt_MemoPage_EN_0_C::SetPageIndex(int PageIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MemoPage_EN_1.wgt_MemoPage_EN_0_C.SetPageIndex");
 
@@ -72,11 +71,11 @@ void Uwgt_MemoPage_EN_0_C::STATIC_SetPageIndex(int PageIndex)
 
 
 // Function wgt_MemoPage_EN_1.wgt_MemoPage_EN_0_C.ExecuteUbergraph_wgt_MemoPage_EN_1
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_MemoPage_EN_0_C::STATIC_ExecuteUbergraph_wgt_MemoPage_EN_1(int EntryPoint)
+void Uwgt_MemoPage_EN_0_C::ExecuteUbergraph_wgt_MemoPage_EN_1(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MemoPage_EN_1.wgt_MemoPage_EN_0_C.ExecuteUbergraph_wgt_MemoPage_EN_1");
 
@@ -84,7 +83,6 @@ void Uwgt_MemoPage_EN_0_C::STATIC_ExecuteUbergraph_wgt_MemoPage_EN_1(int EntryPo
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

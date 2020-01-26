@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.AddAcquiredMoney
-// (NetRequest, Event, MulticastDelegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Acquired                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,18 +34,17 @@ void UBPC_MiniGameTalkTemporaryStorage_C::AddAcquiredMoney(int Acquired)
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.GetTotalMoney
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Money                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_GetTotalMoney(int* Money)
+void UBPC_MiniGameTalkTemporaryStorage_C::GetTotalMoney(int* Money)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.GetTotalMoney");
 
 	UBPC_MiniGameTalkTemporaryStorage_C_GetTotalMoney_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,7 +56,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_GetTotalMoney(int* Money)
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.GetPreGameResult
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<E_MiniGameResult>  Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -69,7 +68,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::GetPreGameResult(bool* bSuccess, TEnum
 	UBPC_MiniGameTalkTemporaryStorage_C_GetPreGameResult_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,12 +81,12 @@ void UBPC_MiniGameTalkTemporaryStorage_C::GetPreGameResult(bool* bSuccess, TEnum
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.GetTotalNumberOfResult
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGameResult>  Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            TotalCount                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_GetTotalNumberOfResult(TEnumAsByte<E_MiniGameResult> Result, int* TotalCount)
+void UBPC_MiniGameTalkTemporaryStorage_C::GetTotalNumberOfResult(TEnumAsByte<E_MiniGameResult> Result, int* TotalCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.GetTotalNumberOfResult");
 
@@ -107,12 +105,12 @@ void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_GetTotalNumberOfResult(TEnumAsB
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.GetContinuousResultNumber
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGameResult>  Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Count                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_GetContinuousResultNumber(TEnumAsByte<E_MiniGameResult> Result, int* Count)
+void UBPC_MiniGameTalkTemporaryStorage_C::GetContinuousResultNumber(TEnumAsByte<E_MiniGameResult> Result, int* Count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.GetContinuousResultNumber");
 
@@ -120,7 +118,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_GetContinuousResultNumber(TEnum
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,18 +129,17 @@ void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_GetContinuousResultNumber(TEnum
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.GetContinuousPlayCount
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            PlayCount                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_GetContinuousPlayCount(int* PlayCount)
+void UBPC_MiniGameTalkTemporaryStorage_C::GetContinuousPlayCount(int* PlayCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.GetContinuousPlayCount");
 
 	UBPC_MiniGameTalkTemporaryStorage_C_GetContinuousPlayCount_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,16 +151,15 @@ void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_GetContinuousPlayCount(int* Pla
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.Finalize
-// (Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_Finalize()
+void UBPC_MiniGameTalkTemporaryStorage_C::Finalize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.Finalize");
 
 	UBPC_MiniGameTalkTemporaryStorage_C_Finalize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,7 +168,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_Finalize()
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.Initialize
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameTalkTemporaryStorage_C::Initialize()
 {
@@ -182,7 +177,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::Initialize()
 	UBPC_MiniGameTalkTemporaryStorage_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,7 +185,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::Initialize()
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.BindMiniGameEvents
-// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameBase_C*      MiniGame                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -203,7 +197,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::BindMiniGameEvents(class ABP_MiniGameB
 	params.MiniGame = MiniGame;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,7 +205,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::BindMiniGameEvents(class ABP_MiniGameB
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.UnbindMiniGameEvents
-// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameBase_C*      MiniGame                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -224,7 +217,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::UnbindMiniGameEvents(class ABP_MiniGam
 	params.MiniGame = MiniGame;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,7 +225,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::UnbindMiniGameEvents(class ABP_MiniGam
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.OnEndMiniGame
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameBase_C*      SelfMiniGame                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -245,7 +237,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnEndMiniGame(class ABP_MiniGameBase_C
 	params.SelfMiniGame = SelfMiniGame;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,7 +245,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnEndMiniGame(class ABP_MiniGameBase_C
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.OnWinMiniGame
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameBase_C*      SelfMiniGame                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -266,7 +257,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnWinMiniGame(class ABP_MiniGameBase_C
 	params.SelfMiniGame = SelfMiniGame;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -275,7 +265,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnWinMiniGame(class ABP_MiniGameBase_C
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.OnLoseMiniGame
-// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameBase_C*      SelfMiniGame                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -287,7 +277,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnLoseMiniGame(class ABP_MiniGameBase_
 	params.SelfMiniGame = SelfMiniGame;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -296,7 +285,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnLoseMiniGame(class ABP_MiniGameBase_
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.OnDrawMiniGame
-// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameBase_C*      SelfMiniGame                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -308,7 +297,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnDrawMiniGame(class ABP_MiniGameBase_
 	params.SelfMiniGame = SelfMiniGame;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -317,7 +305,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnDrawMiniGame(class ABP_MiniGameBase_
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.OnStartMiniGame
-// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameBase_C*      SelfMiniGame                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -329,7 +317,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnStartMiniGame(class ABP_MiniGameBase
 	params.SelfMiniGame = SelfMiniGame;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -338,7 +325,7 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnStartMiniGame(class ABP_MiniGameBase
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.OnRestartMiniGame
-// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameBase_C*      SelfMiniGame                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -350,7 +337,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnRestartMiniGame(class ABP_MiniGameBa
 	params.SelfMiniGame = SelfMiniGame;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -359,11 +345,11 @@ void UBPC_MiniGameTalkTemporaryStorage_C::OnRestartMiniGame(class ABP_MiniGameBa
 
 
 // Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.ExecuteUbergraph_BPC_MiniGameTalkTemporaryStorage
-// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, DLLImport, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_ExecuteUbergraph_BPC_MiniGameTalkTemporaryStorage(int EntryPoint)
+void UBPC_MiniGameTalkTemporaryStorage_C::ExecuteUbergraph_BPC_MiniGameTalkTemporaryStorage(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameTalkTemporaryStorage.BPC_MiniGameTalkTemporaryStorage_C.ExecuteUbergraph_BPC_MiniGameTalkTemporaryStorage");
 
@@ -371,7 +357,6 @@ void UBPC_MiniGameTalkTemporaryStorage_C::STATIC_ExecuteUbergraph_BPC_MiniGameTa
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

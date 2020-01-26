@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_GetPlayerStat_Vitality
-// (NetReliable, Exec, Native, Event, NetResponse, Public, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3DerivedPlayerLevel*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class US3DerivedPlayerLevel* UBPF_KunfuExp_C::BPF_GetPlayerStat_Vitality(class UObject* __WorldContext)
+class US3DerivedPlayerLevel* UBPF_KunfuExp_C::STATIC_BPF_GetPlayerStat_Vitality(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_GetPlayerStat_Vitality");
 
@@ -27,7 +27,6 @@ class US3DerivedPlayerLevel* UBPF_KunfuExp_C::BPF_GetPlayerStat_Vitality(class U
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,12 +37,12 @@ class US3DerivedPlayerLevel* UBPF_KunfuExp_C::BPF_GetPlayerStat_Vitality(class U
 
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_GetPlayerStats_Kunfu
-// (Exec, Native, Event, NetResponse, Public, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3PlayerExpCollection*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class US3PlayerExpCollection* UBPF_KunfuExp_C::BPF_GetPlayerStats_Kunfu(class UObject* __WorldContext)
+class US3PlayerExpCollection* UBPF_KunfuExp_C::STATIC_BPF_GetPlayerStats_Kunfu(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_GetPlayerStats_Kunfu");
 
@@ -51,7 +50,6 @@ class US3PlayerExpCollection* UBPF_KunfuExp_C::BPF_GetPlayerStats_Kunfu(class UO
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,13 +60,13 @@ class US3PlayerExpCollection* UBPF_KunfuExp_C::BPF_GetPlayerStats_Kunfu(class UO
 
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_AddKunFuLevel
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            AddLPevel                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_KunfuExp_C::BPF_AddKunFuLevel(const struct FName& Key, int AddLPevel, class UObject* __WorldContext)
+void UBPF_KunfuExp_C::STATIC_BPF_AddKunFuLevel(const struct FName& Key, int AddLPevel, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_AddKunFuLevel");
 
@@ -78,7 +76,6 @@ void UBPF_KunfuExp_C::BPF_AddKunFuLevel(const struct FName& Key, int AddLPevel, 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,14 +84,14 @@ void UBPF_KunfuExp_C::BPF_AddKunFuLevel(const struct FName& Key, int AddLPevel, 
 
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_GetKunFuLevel
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OutLevel                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          OutNextRatio                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_KunfuExp_C::BPF_GetKunFuLevel(const struct FName& Key, class UObject* __WorldContext, int* OutLevel, float* OutNextRatio)
+void UBPF_KunfuExp_C::STATIC_BPF_GetKunFuLevel(const struct FName& Key, class UObject* __WorldContext, int* OutLevel, float* OutNextRatio)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_GetKunFuLevel");
 
@@ -103,7 +100,6 @@ void UBPF_KunfuExp_C::BPF_GetKunFuLevel(const struct FName& Key, class UObject* 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +113,7 @@ void UBPF_KunfuExp_C::BPF_GetKunFuLevel(const struct FName& Key, class UObject* 
 
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_GetKunFuLevelRange
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -133,7 +129,6 @@ void UBPF_KunfuExp_C::STATIC_BPF_GetKunFuLevelRange(const struct FName& Key, cla
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,7 +142,7 @@ void UBPF_KunfuExp_C::STATIC_BPF_GetKunFuLevelRange(const struct FName& Key, cla
 
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_SetKunFuLevel
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -171,7 +166,7 @@ void UBPF_KunfuExp_C::STATIC_BPF_SetKunFuLevel(const struct FName& Key, int Leve
 
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_SetKunfuRatio
-// (NetRequest, Exec, Event, Static, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Ratio                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -195,7 +190,7 @@ void UBPF_KunfuExp_C::STATIC_BPF_SetKunfuRatio(const struct FName& Type, float R
 
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_AddKunfuRatio
-// (Exec, NetResponse, Static, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Ratio                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -219,13 +214,13 @@ void UBPF_KunfuExp_C::STATIC_BPF_AddKunfuRatio(const struct FName& Type, float R
 
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_SetKunfuPoints
-// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_KunfuExp_C::BPF_SetKunfuPoints(const struct FName& Type, float Value, class UObject* __WorldContext)
+void UBPF_KunfuExp_C::STATIC_BPF_SetKunfuPoints(const struct FName& Type, float Value, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_SetKunfuPoints");
 
@@ -235,7 +230,6 @@ void UBPF_KunfuExp_C::BPF_SetKunfuPoints(const struct FName& Type, float Value, 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -244,7 +238,7 @@ void UBPF_KunfuExp_C::BPF_SetKunfuPoints(const struct FName& Type, float Value, 
 
 
 // Function BPF_KunfuExp.BPF_KunfuExp_C.BPF_AddKunfuPoints
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Amt                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

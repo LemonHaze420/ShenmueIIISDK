@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SkillEditor_PageList.wgt_SkillEditor_PageList_C.Construct
-// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_SkillEditor_PageList_C::Construct()
 {
@@ -23,7 +23,6 @@ void Uwgt_SkillEditor_PageList_C::Construct()
 	Uwgt_SkillEditor_PageList_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,11 +31,11 @@ void Uwgt_SkillEditor_PageList_C::Construct()
 
 
 // Function wgt_SkillEditor_PageList.wgt_SkillEditor_PageList_C.InitializePageCount
-// (Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            PageMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_PageList_C::STATIC_InitializePageCount(int PageMax)
+void Uwgt_SkillEditor_PageList_C::InitializePageCount(int PageMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_PageList.wgt_SkillEditor_PageList_C.InitializePageCount");
 
@@ -44,7 +43,6 @@ void Uwgt_SkillEditor_PageList_C::STATIC_InitializePageCount(int PageMax)
 	params.PageMax = PageMax;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +51,11 @@ void Uwgt_SkillEditor_PageList_C::STATIC_InitializePageCount(int PageMax)
 
 
 // Function wgt_SkillEditor_PageList.wgt_SkillEditor_PageList_C.SetCurrentPage
-// (Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_PageList_C::STATIC_SetCurrentPage(int page)
+void Uwgt_SkillEditor_PageList_C::SetCurrentPage(int page)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_PageList.wgt_SkillEditor_PageList_C.SetCurrentPage");
 
@@ -65,7 +63,6 @@ void Uwgt_SkillEditor_PageList_C::STATIC_SetCurrentPage(int page)
 	params.page = page;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +71,11 @@ void Uwgt_SkillEditor_PageList_C::STATIC_SetCurrentPage(int page)
 
 
 // Function wgt_SkillEditor_PageList.wgt_SkillEditor_PageList_C.EnableAnimation
-// (Net, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_PageList_C::STATIC_EnableAnimation(bool Enable)
+void Uwgt_SkillEditor_PageList_C::EnableAnimation(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_PageList.wgt_SkillEditor_PageList_C.EnableAnimation");
 
@@ -86,7 +83,6 @@ void Uwgt_SkillEditor_PageList_C::STATIC_EnableAnimation(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,11 +91,11 @@ void Uwgt_SkillEditor_PageList_C::STATIC_EnableAnimation(bool Enable)
 
 
 // Function wgt_SkillEditor_PageList.wgt_SkillEditor_PageList_C.ExecuteUbergraph_wgt_SkillEditor_PageList
-// (Net, NetReliable, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_PageList_C::STATIC_ExecuteUbergraph_wgt_SkillEditor_PageList(int EntryPoint)
+void Uwgt_SkillEditor_PageList_C::ExecuteUbergraph_wgt_SkillEditor_PageList(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_PageList.wgt_SkillEditor_PageList_C.ExecuteUbergraph_wgt_SkillEditor_PageList");
 

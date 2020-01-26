@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_MenuTimer.BW_MenuTimer_C.Construct
-// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBW_MenuTimer_C::Construct()
 {
@@ -31,7 +31,7 @@ void UBW_MenuTimer_C::Construct()
 
 
 // Function BW_MenuTimer.BW_MenuTimer_C.Tick
-// (NetReliable, NetRequest, Event, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -53,7 +53,7 @@ void UBW_MenuTimer_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime
 
 
 // Function BW_MenuTimer.BW_MenuTimer_C.ExecuteUbergraph_BW_MenuTimer
-// (NetReliable, Exec, NetResponse, Private, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

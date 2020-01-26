@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,9 +35,9 @@ public:
 	}
 
 
-	void STATIC_GetDataFromAsset(class UBTL_NPCDataAsset* Asset);
+	void GetDataFromAsset(class UBTL_NPCDataAsset* Asset);
 	void SetDefaultAsNeccessary(class UBTL_NPCDataAsset* DefaultDataAsset);
-	void STATIC_SetHardDataAsset(class UBTL_NPCDataAsset* Asset);
+	void SetHardDataAsset(class UBTL_NPCDataAsset* Asset);
 	void FinishedLoading__DelegateSignature();
 };
 

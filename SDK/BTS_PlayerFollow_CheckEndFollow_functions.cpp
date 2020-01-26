@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_PlayerFollow_CheckEndFollow.BTS_PlayerFollow_CheckEndFollow_C.ReceiveTickAI
-// (Net, NetRequest, Static, MulticastDelegate, Private, NetServer, HasOutParms, Const)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_PlayerFollow_CheckEndFollow_C::STATIC_ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
+void UBTS_PlayerFollow_CheckEndFollow_C::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_PlayerFollow_CheckEndFollow.BTS_PlayerFollow_CheckEndFollow_C.ReceiveTickAI");
 
@@ -38,7 +38,7 @@ void UBTS_PlayerFollow_CheckEndFollow_C::STATIC_ReceiveTickAI(class AAIControlle
 
 
 // Function BTS_PlayerFollow_CheckEndFollow.BTS_PlayerFollow_CheckEndFollow_C.ReceiveSearchStartAI
-// (Net, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -60,11 +60,11 @@ void UBTS_PlayerFollow_CheckEndFollow_C::ReceiveSearchStartAI(class AAIControlle
 
 
 // Function BTS_PlayerFollow_CheckEndFollow.BTS_PlayerFollow_CheckEndFollow_C.ExecuteUbergraph_BTS_PlayerFollow_CheckEndFollow
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_PlayerFollow_CheckEndFollow_C::STATIC_ExecuteUbergraph_BTS_PlayerFollow_CheckEndFollow(int EntryPoint)
+void UBTS_PlayerFollow_CheckEndFollow_C::ExecuteUbergraph_BTS_PlayerFollow_CheckEndFollow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_PlayerFollow_CheckEndFollow.BTS_PlayerFollow_CheckEndFollow_C.ExecuteUbergraph_BTS_PlayerFollow_CheckEndFollow");
 

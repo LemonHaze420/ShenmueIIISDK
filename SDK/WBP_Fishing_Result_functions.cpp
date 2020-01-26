@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetFishNameText
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 FishName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 LocalizeFishName               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -28,7 +28,6 @@ void UWBP_Fishing_Result_C::SetFishNameText(const struct FString& FishName, cons
 	params.LocalizeFishName = LocalizeFishName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void UWBP_Fishing_Result_C::SetFishNameText(const struct FString& FishName, cons
 
 
 // Function WBP_Fishing_Result.WBP_Fishing_Result_C.GetLocalizeFishNameText
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Public, NetServer)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -48,7 +47,6 @@ struct FText UWBP_Fishing_Result_C::GetLocalizeFishNameText()
 	UWBP_Fishing_Result_C_GetLocalizeFishNameText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,7 +57,7 @@ struct FText UWBP_Fishing_Result_C::GetLocalizeFishNameText()
 
 
 // Function WBP_Fishing_Result.WBP_Fishing_Result_C.GetFishGramText
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -70,7 +68,6 @@ struct FText UWBP_Fishing_Result_C::GetFishGramText()
 	UWBP_Fishing_Result_C_GetFishGramText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,7 +78,7 @@ struct FText UWBP_Fishing_Result_C::GetFishGramText()
 
 
 // Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetImagePositionY
-// (NetRequest, NetResponse, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UImage*                  ArgImage                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          ArgPosY                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -103,7 +100,7 @@ void UWBP_Fishing_Result_C::SetImagePositionY(class UImage* ArgImage, float ArgP
 
 
 // Function WBP_Fishing_Result.WBP_Fishing_Result_C.GetFishScaleText
-// (Net, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -114,7 +111,6 @@ struct FText UWBP_Fishing_Result_C::GetFishScaleText()
 	UWBP_Fishing_Result_C_GetFishScaleText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,7 +121,7 @@ struct FText UWBP_Fishing_Result_C::GetFishScaleText()
 
 
 // Function WBP_Fishing_Result.WBP_Fishing_Result_C.GetFishNameText
-// (Net, Exec, Native, Event, NetResponse, Public, NetServer)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -136,7 +132,6 @@ struct FText UWBP_Fishing_Result_C::GetFishNameText()
 	UWBP_Fishing_Result_C_GetFishNameText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,22 +141,21 @@ struct FText UWBP_Fishing_Result_C::GetFishNameText()
 }
 
 
-// Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetResultVIsible
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetResultVisible
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsException                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_Result_C::SetResultVIsible(ESlateVisibility InVisibility, bool IsException)
+void UWBP_Fishing_Result_C::SetResultVisible(ESlateVisibility InVisibility, bool IsException)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetResultVIsible");
+	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetResultVisible");
 
-	UWBP_Fishing_Result_C_SetResultVIsible_Params params;
+	UWBP_Fishing_Result_C_SetResultVisible_Params params;
 	params.InVisibility = InVisibility;
 	params.IsException = IsException;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,7 +164,7 @@ void UWBP_Fishing_Result_C::SetResultVIsible(ESlateVisibility InVisibility, bool
 
 
 // Function WBP_Fishing_Result.WBP_Fishing_Result_C.Construct
-// (NetRequest, Exec, Public, Delegate)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Fishing_Result_C::Construct()
 {
@@ -187,11 +181,11 @@ void UWBP_Fishing_Result_C::Construct()
 
 
 // Function WBP_Fishing_Result.WBP_Fishing_Result_C.ExecuteUbergraph_WBP_Fishing_Result
-// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_Result_C::STATIC_ExecuteUbergraph_WBP_Fishing_Result(int EntryPoint)
+void UWBP_Fishing_Result_C::ExecuteUbergraph_WBP_Fishing_Result(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_Result.WBP_Fishing_Result_C.ExecuteUbergraph_WBP_Fishing_Result");
 

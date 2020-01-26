@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TextDataManager.BP_TextDataManager_C.FindClipperOnlyData
-// (Exec, NetResponse, Private, Protected, NetServer, DLLImport, BlueprintEvent)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Clipper                        (Parm, OutParm, ZeroConstructor)
@@ -38,7 +38,7 @@ void UBP_TextDataManager_C::FindClipperOnlyData(const struct FName& Label, struc
 
 
 // Function BP_TextDataManager.BP_TextDataManager_C.GetTalkTextData
-// (NetMulticast, MulticastDelegate, Public, BlueprintCallable)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                FirstType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -67,14 +67,14 @@ void UBP_TextDataManager_C::GetTalkTextData(const struct FName& Label, ES3TextPa
 
 
 // Function BP_TextDataManager.BP_TextDataManager_C.GetTextDataStringAbridged 
-// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 OutString                      (Parm, OutParm, ZeroConstructor)
 // struct FString                 ClipperString                  (Parm, OutParm, ZeroConstructor)
 
-void UBP_TextDataManager_C::STATIC_GetTextDataStringAbridged_(const struct FName& Label, ES3TextPathType Type, struct FString* OutString, struct FString* ClipperString)
+void UBP_TextDataManager_C::GetTextDataStringAbridged_(const struct FName& Label, ES3TextPathType Type, struct FString* OutString, struct FString* ClipperString)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TextDataManager.BP_TextDataManager_C.GetTextDataStringAbridged ");
 
@@ -83,7 +83,6 @@ void UBP_TextDataManager_C::STATIC_GetTextDataStringAbridged_(const struct FName
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,13 +96,13 @@ void UBP_TextDataManager_C::STATIC_GetTextDataStringAbridged_(const struct FName
 
 
 // Function BP_TextDataManager.BP_TextDataManager_C.GetItemDataString
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, BlueprintCallable)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Name                           (Parm, OutParm, ZeroConstructor)
 // struct FString                 Description                    (Parm, OutParm, ZeroConstructor)
 
-void UBP_TextDataManager_C::STATIC_GetItemDataString(const struct FName& Label, struct FString* Name, struct FString* Description)
+void UBP_TextDataManager_C::GetItemDataString(const struct FName& Label, struct FString* Name, struct FString* Description)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TextDataManager.BP_TextDataManager_C.GetItemDataString");
 
@@ -111,7 +110,6 @@ void UBP_TextDataManager_C::STATIC_GetItemDataString(const struct FName& Label, 
 	params.Label = Label;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,12 +123,12 @@ void UBP_TextDataManager_C::STATIC_GetItemDataString(const struct FName& Label, 
 
 
 // Function BP_TextDataManager.BP_TextDataManager_C.CreateRubyInfo
-// (Net, NetReliable, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FST_RubyInfo            OutInfo                        (Parm, OutParm)
 
-void UBP_TextDataManager_C::STATIC_CreateRubyInfo(const struct FString& Text, struct FST_RubyInfo* OutInfo)
+void UBP_TextDataManager_C::CreateRubyInfo(const struct FString& Text, struct FST_RubyInfo* OutInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TextDataManager.BP_TextDataManager_C.CreateRubyInfo");
 
@@ -149,14 +147,14 @@ void UBP_TextDataManager_C::STATIC_CreateRubyInfo(const struct FString& Text, st
 
 
 // Function BP_TextDataManager.BP_TextDataManager_C.GetVoiceData
-// (NetReliable, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 Voice                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TextDataManager_C::STATIC_GetVoiceData(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, class UObject** Voice)
+void UBP_TextDataManager_C::GetVoiceData(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, class UObject** Voice)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TextDataManager.BP_TextDataManager_C.GetVoiceData");
 
@@ -177,7 +175,7 @@ void UBP_TextDataManager_C::STATIC_GetVoiceData(const struct FName& Label, ES3Te
 
 
 // Function BP_TextDataManager.BP_TextDataManager_C.GetTextDataString
-// (NetReliable, NetRequest, Event, Public, Private, HasDefaults, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -215,13 +213,13 @@ void UBP_TextDataManager_C::GetTextDataString(const struct FName& Label, ES3Text
 
 
 // Function BP_TextDataManager.BP_TextDataManager_C.Reimport
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 RootAssetPath                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_TextDataManager_C::STATIC_Reimport(const struct FName& Label, const struct FString& RootAssetPath)
+bool UBP_TextDataManager_C::Reimport(const struct FName& Label, const struct FString& RootAssetPath)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TextDataManager.BP_TextDataManager_C.Reimport");
 
@@ -230,7 +228,6 @@ bool UBP_TextDataManager_C::STATIC_Reimport(const struct FName& Label, const str
 	params.RootAssetPath = RootAssetPath;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,7 +238,7 @@ bool UBP_TextDataManager_C::STATIC_Reimport(const struct FName& Label, const str
 
 
 // Function BP_TextDataManager.BP_TextDataManager_C.UserConstructionScript
-// (NetReliable, NetRequest, NetResponse, Public, Delegate, HasOutParms, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TextDataManager_C::UserConstructionScript()
 {

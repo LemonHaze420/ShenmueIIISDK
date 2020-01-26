@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_DebugCutscenePlayAreaID.WBP_DebugCutscenePlayAreaID_C.UpdateText
-// (NetRequest, Exec, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWBP_DebugCutscenePlayAreaID_C::UpdateText()
 {
@@ -31,11 +31,11 @@ void UWBP_DebugCutscenePlayAreaID_C::UpdateText()
 
 
 // Function WBP_DebugCutscenePlayAreaID.WBP_DebugCutscenePlayAreaID_C.SetCutsceneID
-// (Net, NetRequest, Native, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   InCutsceneID                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_DebugCutscenePlayAreaID_C::STATIC_SetCutsceneID(const struct FName& InCutsceneID)
+void UWBP_DebugCutscenePlayAreaID_C::SetCutsceneID(const struct FName& InCutsceneID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugCutscenePlayAreaID.WBP_DebugCutscenePlayAreaID_C.SetCutsceneID");
 
@@ -43,7 +43,6 @@ void UWBP_DebugCutscenePlayAreaID_C::STATIC_SetCutsceneID(const struct FName& In
 	params.InCutsceneID = InCutsceneID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

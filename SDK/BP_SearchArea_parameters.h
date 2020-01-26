@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,6 +56,18 @@ struct ABP_SearchArea_C_GetPriority_Params
 struct ABP_SearchArea_C_GetDetectAction_Params
 {
 	TArray<struct FS3DetectActionParam>                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function BP_SearchArea.BP_SearchArea_C.SetEventBehavior
+struct ABP_SearchArea_C_SetEventBehavior_Params
+{
+	bool                                               bEnabled;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_SearchArea.BP_SearchArea_C.SetSearchBehavior
+struct ABP_SearchArea_C_SetSearchBehavior_Params
+{
+	bool                                               bEnabled;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_SearchArea.BP_SearchArea_C.ForceUpdateSearchCollisionOverlap
@@ -357,7 +369,7 @@ struct ABP_SearchArea_C_TestLockOnChange_Params
 // Function BP_SearchArea.BP_SearchArea_C.CrouchAction
 struct ABP_SearchArea_C_CrouchAction_Params
 {
-	float                                              axis_value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Axis_Value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_SearchArea.BP_SearchArea_C.SetForbiddenAction

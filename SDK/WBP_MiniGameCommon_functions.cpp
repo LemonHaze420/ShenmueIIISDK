@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.SetIconImageSize
-// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               DesiredSize                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UWBP_MiniGameCommon_C::SetIconImageSize(const struct FVector2D& DesiredSize
 	params.DesiredSize = DesiredSize;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UWBP_MiniGameCommon_C::SetIconImageSize(const struct FVector2D& DesiredSize
 
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.SetVisibleButtonIcon
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,7 +46,6 @@ void UWBP_MiniGameCommon_C::SetVisibleButtonIcon(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +54,7 @@ void UWBP_MiniGameCommon_C::SetVisibleButtonIcon(bool Visible)
 
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.Tick
-// (Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -70,7 +68,6 @@ void UWBP_MiniGameCommon_C::Tick(const struct FGeometry& MyGeometry, float InDel
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,16 +76,15 @@ void UWBP_MiniGameCommon_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.Construct
-// (Native, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_MiniGameCommon_C::STATIC_Construct()
+void UWBP_MiniGameCommon_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.Construct");
 
 	UWBP_MiniGameCommon_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,11 +93,11 @@ void UWBP_MiniGameCommon_C::STATIC_Construct()
 
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.ExecuteUbergraph_WBP_MiniGameCommon
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGameCommon_C::STATIC_ExecuteUbergraph_WBP_MiniGameCommon(int EntryPoint)
+void UWBP_MiniGameCommon_C::ExecuteUbergraph_WBP_MiniGameCommon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.ExecuteUbergraph_WBP_MiniGameCommon");
 
@@ -109,7 +105,6 @@ void UWBP_MiniGameCommon_C::STATIC_ExecuteUbergraph_WBP_MiniGameCommon(int Entry
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

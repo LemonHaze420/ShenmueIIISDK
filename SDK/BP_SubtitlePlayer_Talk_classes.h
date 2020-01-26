@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,12 +35,12 @@ public:
 
 	void GetVoiceDuration(bool* Result, float* Duration);
 	void Play_HintTalk(bool IsAutoStop, struct FName* Label, struct FName* CharaName);
-	void STATIC_UserConstructionScript();
-	void STATIC_PlayVoice(class UObject* VoiceData);
-	void STATIC_OnPlaySound();
-	void STATIC_Stop();
+	void UserConstructionScript();
+	void PlayVoice(class UObject* VoiceData);
+	void OnPlaySound();
+	void Stop();
 	void ClearSubtitle();
-	void STATIC_Skip(class UTalkTask* SkippedTask);
+	void Skip(class UTalkTask* SkippedTask);
 	void ExecuteUbergraph_BP_SubtitlePlayer_Talk(int EntryPoint);
 };
 

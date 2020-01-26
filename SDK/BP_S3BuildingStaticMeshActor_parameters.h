@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,8 +53,8 @@ struct ABP_S3BuildingStaticMeshActor_C_PlaySE_Params
 {
 };
 
-// Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.JudgeBGM
-struct ABP_S3BuildingStaticMeshActor_C_JudgeBGM_Params
+// Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.JudgeBgm
+struct ABP_S3BuildingStaticMeshActor_C_JudgeBgm_Params
 {
 	bool                                               Play;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SearchArea.BP_SearchArea_C.GetHelpName
-// (NetRequest, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName ABP_SearchArea_C::STATIC_GetHelpName()
+struct FName ABP_SearchArea_C::GetHelpName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.GetHelpName");
 
@@ -35,18 +35,17 @@ struct FName ABP_SearchArea_C::STATIC_GetHelpName()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetHelpPriority
-// (Net, NetReliable, Exec, Native, Static, NetMulticast, NetServer)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpPriority                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ES3HelpPriority ABP_SearchArea_C::STATIC_GetHelpPriority()
+ES3HelpPriority ABP_SearchArea_C::GetHelpPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.GetHelpPriority");
 
 	ABP_SearchArea_C_GetHelpPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,18 +56,17 @@ ES3HelpPriority ABP_SearchArea_C::STATIC_GetHelpPriority()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.IsActivateHelp
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, NetServer)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SearchArea_C::STATIC_IsActivateHelp()
+bool ABP_SearchArea_C::IsActivateHelp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.IsActivateHelp");
 
 	ABP_SearchArea_C_IsActivateHelp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,12 +77,12 @@ bool ABP_SearchArea_C::STATIC_IsActivateHelp()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.RegisterHelp
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, NetServer)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpRegisterTiming          Timing                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SearchArea_C::STATIC_RegisterHelp(ES3HelpRegisterTiming Timing)
+bool ABP_SearchArea_C::RegisterHelp(ES3HelpRegisterTiming Timing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.RegisterHelp");
 
@@ -92,7 +90,6 @@ bool ABP_SearchArea_C::STATIC_RegisterHelp(ES3HelpRegisterTiming Timing)
 	params.Timing = Timing;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,12 +100,12 @@ bool ABP_SearchArea_C::STATIC_RegisterHelp(ES3HelpRegisterTiming Timing)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UnregisterHelp
-// (NetRequest, Exec, Native, Static, NetMulticast, NetServer)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3HelpRegisterTiming          Timing                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SearchArea_C::STATIC_UnregisterHelp(ES3HelpRegisterTiming Timing)
+bool ABP_SearchArea_C::UnregisterHelp(ES3HelpRegisterTiming Timing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.UnregisterHelp");
 
@@ -116,7 +113,6 @@ bool ABP_SearchArea_C::STATIC_UnregisterHelp(ES3HelpRegisterTiming Timing)
 	params.Timing = Timing;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,11 +123,11 @@ bool ABP_SearchArea_C::STATIC_UnregisterHelp(ES3HelpRegisterTiming Timing)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetPriority
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_SearchArea_C::STATIC_GetPriority()
+int ABP_SearchArea_C::GetPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.GetPriority");
 
@@ -148,7 +144,7 @@ int ABP_SearchArea_C::STATIC_GetPriority()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetDetectAction
-// (NetReliable, Event, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -168,8 +164,48 @@ TArray<struct FS3DetectActionParam> ABP_SearchArea_C::GetDetectAction()
 }
 
 
+// Function BP_SearchArea.BP_SearchArea_C.SetEventBehavior
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_SearchArea_C::SetEventBehavior(bool bEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.SetEventBehavior");
+
+	ABP_SearchArea_C_SetEventBehavior_Params params;
+	params.bEnabled = bEnabled;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_SearchArea.BP_SearchArea_C.SetSearchBehavior
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_SearchArea_C::SetSearchBehavior(bool bEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.SetSearchBehavior");
+
+	ABP_SearchArea_C_SetSearchBehavior_Params params;
+	params.bEnabled = bEnabled;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_SearchArea.BP_SearchArea_C.ForceUpdateSearchCollisionOverlap
-// (Net, NetReliable, NetRequest, Native, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::ForceUpdateSearchCollisionOverlap()
 {
@@ -178,7 +214,6 @@ void ABP_SearchArea_C::ForceUpdateSearchCollisionOverlap()
 	ABP_SearchArea_C_ForceUpdateSearchCollisionOverlap_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,7 +222,7 @@ void ABP_SearchArea_C::ForceUpdateSearchCollisionOverlap()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.IsEnabledSearchCollisionCheck
-// (NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -209,12 +244,12 @@ void ABP_SearchArea_C::IsEnabledSearchCollisionCheck(bool* Enabled)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetPathTypeFromLabel
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 Str                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // ES3TextPathType                LabelType                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_GetPathTypeFromLabel(const struct FString& Str, ES3TextPathType* LabelType)
+void ABP_SearchArea_C::GetPathTypeFromLabel(const struct FString& Str, ES3TextPathType* LabelType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.GetPathTypeFromLabel");
 
@@ -233,11 +268,11 @@ void ABP_SearchArea_C::STATIC_GetPathTypeFromLabel(const struct FString& Str, ES
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetDisabledInputOnPlayingLabel
-// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Disabled                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_GetDisabledInputOnPlayingLabel(bool* Disabled)
+void ABP_SearchArea_C::GetDisabledInputOnPlayingLabel(bool* Disabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.GetDisabledInputOnPlayingLabel");
 
@@ -255,18 +290,17 @@ void ABP_SearchArea_C::STATIC_GetDisabledInputOnPlayingLabel(bool* Disabled)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.IsSubtitleVoicePlaying
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SearchArea_C::STATIC_IsSubtitleVoicePlaying()
+bool ABP_SearchArea_C::IsSubtitleVoicePlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.IsSubtitleVoicePlaying");
 
 	ABP_SearchArea_C_IsSubtitleVoicePlaying_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -277,7 +311,7 @@ bool ABP_SearchArea_C::STATIC_IsSubtitleVoicePlaying()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InitializeLimitItem
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::InitializeLimitItem()
 {
@@ -294,7 +328,7 @@ void ABP_SearchArea_C::InitializeLimitItem()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.IsLookingSeachComponent
-// (Net, NetReliable, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3SearchComponent*      SearchComp                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Look                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -318,7 +352,7 @@ void ABP_SearchArea_C::IsLookingSeachComponent(class US3SearchComponent* SearchC
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SetBottomTransparent
-// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::SetBottomTransparent()
 {
@@ -327,7 +361,6 @@ void ABP_SearchArea_C::SetBottomTransparent()
 	ABP_SearchArea_C_SetBottomTransparent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -336,7 +369,7 @@ void ABP_SearchArea_C::SetBottomTransparent()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.CheckCollisionCondition
-// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::CheckCollisionCondition()
 {
@@ -353,11 +386,11 @@ void ABP_SearchArea_C::CheckCollisionCondition()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SetUseActorVisibleControl
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bUse                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_SetUseActorVisibleControl(bool bUse)
+void ABP_SearchArea_C::SetUseActorVisibleControl(bool bUse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.SetUseActorVisibleControl");
 
@@ -365,7 +398,6 @@ void ABP_SearchArea_C::STATIC_SetUseActorVisibleControl(bool bUse)
 	params.bUse = bUse;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -374,7 +406,7 @@ void ABP_SearchArea_C::STATIC_SetUseActorVisibleControl(bool bUse)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SetActorVisibleControl
-// (Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -394,9 +426,9 @@ void ABP_SearchArea_C::SetActorVisibleControl(bool Enabled)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.FinalizeItemSpawnerSetting
-// (NetRequest, Event, Static, NetMulticast, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_FinalizeItemSpawnerSetting()
+void ABP_SearchArea_C::FinalizeItemSpawnerSetting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.FinalizeItemSpawnerSetting");
 
@@ -411,11 +443,11 @@ void ABP_SearchArea_C::STATIC_FinalizeItemSpawnerSetting()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InitializeItemSpawnerSetting
-// (Net, NetReliable, Event, Static, NetMulticast, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           PlayOnlyLookScript             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_InitializeItemSpawnerSetting(bool PlayOnlyLookScript)
+void ABP_SearchArea_C::InitializeItemSpawnerSetting(bool PlayOnlyLookScript)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.InitializeItemSpawnerSetting");
 
@@ -431,11 +463,11 @@ void ABP_SearchArea_C::STATIC_InitializeItemSpawnerSetting(bool PlayOnlyLookScri
 
 
 // Function BP_SearchArea.BP_SearchArea_C.CheckEndForActor
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OtherComponent                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_CheckEndForActor(class UPrimitiveComponent* OtherComponent)
+void ABP_SearchArea_C::CheckEndForActor(class UPrimitiveComponent* OtherComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.CheckEndForActor");
 
@@ -443,7 +475,6 @@ void ABP_SearchArea_C::STATIC_CheckEndForActor(class UPrimitiveComponent* OtherC
 	params.OtherComponent = OtherComponent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -452,11 +483,11 @@ void ABP_SearchArea_C::STATIC_CheckEndForActor(class UPrimitiveComponent* OtherC
 
 
 // Function BP_SearchArea.BP_SearchArea_C.CheckStartForActor
-// (Exec, Native, Event, Static, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_CheckStartForActor(class UPrimitiveComponent* OtherComp)
+void ABP_SearchArea_C::CheckStartForActor(class UPrimitiveComponent* OtherComp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.CheckStartForActor");
 
@@ -464,7 +495,6 @@ void ABP_SearchArea_C::STATIC_CheckStartForActor(class UPrimitiveComponent* Othe
 	params.OtherComp = OtherComp;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -473,11 +503,11 @@ void ABP_SearchArea_C::STATIC_CheckStartForActor(class UPrimitiveComponent* Othe
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SetSearchThisArea
-// (NetReliable, Event, Static, NetMulticast, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Search                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_SetSearchThisArea(bool Search)
+void ABP_SearchArea_C::SetSearchThisArea(bool Search)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.SetSearchThisArea");
 
@@ -493,9 +523,9 @@ void ABP_SearchArea_C::STATIC_SetSearchThisArea(bool Search)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InitAsyncLoad
-// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_InitAsyncLoad()
+void ABP_SearchArea_C::InitAsyncLoad()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.InitAsyncLoad");
 
@@ -510,9 +540,9 @@ void ABP_SearchArea_C::STATIC_InitAsyncLoad()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InitializeMoveSuspendTime
-// (Net, Event, Static, NetMulticast, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_InitializeMoveSuspendTime()
+void ABP_SearchArea_C::InitializeMoveSuspendTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.InitializeMoveSuspendTime");
 
@@ -527,7 +557,7 @@ void ABP_SearchArea_C::STATIC_InitializeMoveSuspendTime()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SyncMoveMotionTime
-// (Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::SyncMoveMotionTime()
 {
@@ -536,7 +566,6 @@ void ABP_SearchArea_C::SyncMoveMotionTime()
 	ABP_SearchArea_C_SyncMoveMotionTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -545,11 +574,11 @@ void ABP_SearchArea_C::SyncMoveMotionTime()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.AddMoveMotionValue
-// (Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AddTime                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_AddMoveMotionValue(float AddTime)
+void ABP_SearchArea_C::AddMoveMotionValue(float AddTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.AddMoveMotionValue");
 
@@ -565,16 +594,15 @@ void ABP_SearchArea_C::STATIC_AddMoveMotionValue(float AddTime)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ActivateMoveMotionFlag
-// (Net, NetRequest, Native, Static, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_ActivateMoveMotionFlag()
+void ABP_SearchArea_C::ActivateMoveMotionFlag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ActivateMoveMotionFlag");
 
 	ABP_SearchArea_C_ActivateMoveMotionFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -583,7 +611,7 @@ void ABP_SearchArea_C::STATIC_ActivateMoveMotionFlag()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UpdateMoveMotionTime
-// (Net, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, NetServer, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::UpdateMoveMotionTime()
 {
@@ -592,7 +620,6 @@ void ABP_SearchArea_C::UpdateMoveMotionTime()
 	ABP_SearchArea_C_UpdateMoveMotionTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -601,7 +628,7 @@ void ABP_SearchArea_C::UpdateMoveMotionTime()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetMoveMotionValue
-// (Net, NetReliable, Event, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bReturnMode                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -624,7 +651,7 @@ float ABP_SearchArea_C::GetMoveMotionValue(bool bReturnMode)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.StopBGM
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::StopBGM()
 {
@@ -641,7 +668,7 @@ void ABP_SearchArea_C::StopBGM()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InitializeTargetVector
-// (NetRequest, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::InitializeTargetVector()
 {
@@ -658,7 +685,7 @@ void ABP_SearchArea_C::InitializeTargetVector()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UpdateCameraMode
-// (Exec, Native, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::UpdateCameraMode()
 {
@@ -667,7 +694,6 @@ void ABP_SearchArea_C::UpdateCameraMode()
 	ABP_SearchArea_C_UpdateCameraMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -676,11 +702,11 @@ void ABP_SearchArea_C::UpdateCameraMode()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SetForceActionLocked
-// (Net, NetRequest, Event, Static, NetMulticast, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bForceActionLocked             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_SetForceActionLocked(bool bForceActionLocked)
+void ABP_SearchArea_C::SetForceActionLocked(bool bForceActionLocked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.SetForceActionLocked");
 
@@ -696,11 +722,11 @@ void ABP_SearchArea_C::STATIC_SetForceActionLocked(bool bForceActionLocked)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.IsUpdateForceExitSearch
-// (NetReliable, Exec, NetResponse, Static, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SearchArea_C::STATIC_IsUpdateForceExitSearch()
+bool ABP_SearchArea_C::IsUpdateForceExitSearch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.IsUpdateForceExitSearch");
 
@@ -717,11 +743,11 @@ bool ABP_SearchArea_C::STATIC_IsUpdateForceExitSearch()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UpdateAttachGrabActor
-// (Net, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Input                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_UpdateAttachGrabActor(bool Input)
+void ABP_SearchArea_C::UpdateAttachGrabActor(bool Input)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.UpdateAttachGrabActor");
 
@@ -729,7 +755,6 @@ void ABP_SearchArea_C::STATIC_UpdateAttachGrabActor(bool Input)
 	params.Input = Input;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -738,9 +763,9 @@ void ABP_SearchArea_C::STATIC_UpdateAttachGrabActor(bool Input)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InitializeGrab
-// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_InitializeGrab()
+void ABP_SearchArea_C::InitializeGrab()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.InitializeGrab");
 
@@ -755,7 +780,7 @@ void ABP_SearchArea_C::STATIC_InitializeGrab()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetFingerColliders
-// (NetReliable, Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UPrimitiveComponent*> Colliders                      (Parm, OutParm, ZeroConstructor)
 
@@ -766,7 +791,6 @@ void ABP_SearchArea_C::GetFingerColliders(TArray<class UPrimitiveComponent*>* Co
 	ABP_SearchArea_C_GetFingerColliders_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -778,16 +802,15 @@ void ABP_SearchArea_C::GetFingerColliders(TArray<class UPrimitiveComponent*>* Co
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InitializeGatherObject
-// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_InitializeGatherObject()
+void ABP_SearchArea_C::InitializeGatherObject()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.InitializeGatherObject");
 
 	ABP_SearchArea_C_InitializeGatherObject_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -796,11 +819,11 @@ void ABP_SearchArea_C::STATIC_InitializeGatherObject()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.StopGameTime
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           StopTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_StopGameTime(bool StopTime)
+void ABP_SearchArea_C::StopGameTime(bool StopTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.StopGameTime");
 
@@ -816,7 +839,7 @@ void ABP_SearchArea_C::STATIC_StopGameTime(bool StopTime)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.CheckBGM
-// (Net, NetRequest, Native, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::CheckBGM()
 {
@@ -825,7 +848,6 @@ void ABP_SearchArea_C::CheckBGM()
 	ABP_SearchArea_C_CheckBGM_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -834,7 +856,7 @@ void ABP_SearchArea_C::CheckBGM()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.DestroySubTitlePlayer
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::DestroySubTitlePlayer()
 {
@@ -851,7 +873,7 @@ void ABP_SearchArea_C::DestroySubTitlePlayer()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetCharacterAdventure
-// (NetRequest, Native, NetResponse, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_S3_Character_Adventure_C* AsBP_S3_Character_Adventure    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -863,7 +885,6 @@ void ABP_SearchArea_C::GetCharacterAdventure(class ABP_S3_Character_Adventure_C*
 	ABP_SearchArea_C_GetCharacterAdventure_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -877,11 +898,11 @@ void ABP_SearchArea_C::GetCharacterAdventure(class ABP_S3_Character_Adventure_C*
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetLockOnBasePosition
-// (Net, NetReliable, NetRequest, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector2D ABP_SearchArea_C::STATIC_GetLockOnBasePosition()
+struct FVector2D ABP_SearchArea_C::GetLockOnBasePosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.GetLockOnBasePosition");
 
@@ -898,11 +919,11 @@ struct FVector2D ABP_SearchArea_C::STATIC_GetLockOnBasePosition()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.CalcCenterPosition
-// (NetRequest, Event, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D               CenterPosition                 (Parm, OutParm, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_CalcCenterPosition(struct FVector2D* CenterPosition)
+void ABP_SearchArea_C::CalcCenterPosition(struct FVector2D* CenterPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.CalcCenterPosition");
 
@@ -920,7 +941,7 @@ void ABP_SearchArea_C::STATIC_CalcCenterPosition(struct FVector2D* CenterPositio
 
 
 // Function BP_SearchArea.BP_SearchArea_C.CalcScreenLocation
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 WorldLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               CenterPosition                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -936,7 +957,6 @@ bool ABP_SearchArea_C::CalcScreenLocation(const struct FVector& WorldLocation, c
 	params.CenterPosition = CenterPosition;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -950,7 +970,7 @@ bool ABP_SearchArea_C::CalcScreenLocation(const struct FVector& WorldLocation, c
 
 
 // Function BP_SearchArea.BP_SearchArea_C.LockOnChange
-// (NetResponse, NetMulticast, MulticastDelegate, NetServer)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Vertical_Axis                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Horizontal_Axis                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -972,13 +992,13 @@ void ABP_SearchArea_C::LockOnChange(float Vertical_Axis, float Horizontal_Axis)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetNextDirection
-// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          V                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          H                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ESearchAreaDirection> Direction                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_GetNextDirection(float V, float H, TEnumAsByte<ESearchAreaDirection>* Direction)
+void ABP_SearchArea_C::GetNextDirection(float V, float H, TEnumAsByte<ESearchAreaDirection>* Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.GetNextDirection");
 
@@ -998,12 +1018,12 @@ void ABP_SearchArea_C::STATIC_GetNextDirection(float V, float H, TEnumAsByte<ESe
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SearchLockOnChangeTarget
-// (Net, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ESearchAreaDirection> Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3SearchComponent*      NewTarget                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_SearchLockOnChangeTarget(TEnumAsByte<ESearchAreaDirection> Direction, class US3SearchComponent** NewTarget)
+void ABP_SearchArea_C::SearchLockOnChangeTarget(TEnumAsByte<ESearchAreaDirection> Direction, class US3SearchComponent** NewTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.SearchLockOnChangeTarget");
 
@@ -1022,9 +1042,9 @@ void ABP_SearchArea_C::STATIC_SearchLockOnChangeTarget(TEnumAsByte<ESearchAreaDi
 
 
 // Function BP_SearchArea.BP_SearchArea_C.TestNewSearchExit
-// (Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_TestNewSearchExit()
+void ABP_SearchArea_C::TestNewSearchExit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.TestNewSearchExit");
 
@@ -1039,7 +1059,7 @@ void ABP_SearchArea_C::STATIC_TestNewSearchExit()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.TestNewSearchMode
-// (Net, NetReliable, NetRequest, Event, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::TestNewSearchMode()
 {
@@ -1056,7 +1076,7 @@ void ABP_SearchArea_C::TestNewSearchMode()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.StartNewSearchMode
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::StartNewSearchMode()
 {
@@ -1065,7 +1085,6 @@ void ABP_SearchArea_C::StartNewSearchMode()
 	ABP_SearchArea_C_StartNewSearchMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1074,11 +1093,11 @@ void ABP_SearchArea_C::StartNewSearchMode()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UpdateLockOnChange
-// (Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta_Seconds                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_UpdateLockOnChange(float Delta_Seconds)
+void ABP_SearchArea_C::UpdateLockOnChange(float Delta_Seconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.UpdateLockOnChange");
 
@@ -1086,7 +1105,6 @@ void ABP_SearchArea_C::STATIC_UpdateLockOnChange(float Delta_Seconds)
 	params.Delta_Seconds = Delta_Seconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1095,7 +1113,7 @@ void ABP_SearchArea_C::STATIC_UpdateLockOnChange(float Delta_Seconds)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetCurrentTarget
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3SearchComponent*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 // bool                           IsCurrentFocus                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1120,7 +1138,7 @@ class US3SearchComponent* ABP_SearchArea_C::GetCurrentTarget(bool* IsCurrentFocu
 
 
 // Function BP_SearchArea.BP_SearchArea_C.OverlappingCheck
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::OverlappingCheck()
 {
@@ -1129,7 +1147,6 @@ void ABP_SearchArea_C::OverlappingCheck()
 	ABP_SearchArea_C_OverlappingCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1138,9 +1155,9 @@ void ABP_SearchArea_C::OverlappingCheck()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ContinueSearch
-// (Net, NetReliable, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_ContinueSearch()
+void ABP_SearchArea_C::ContinueSearch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ContinueSearch");
 
@@ -1155,7 +1172,7 @@ void ABP_SearchArea_C::STATIC_ContinueSearch()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InterruptSearch
-// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::InterruptSearch()
 {
@@ -1164,7 +1181,6 @@ void ABP_SearchArea_C::InterruptSearch()
 	ABP_SearchArea_C_InterruptSearch_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1173,7 +1189,7 @@ void ABP_SearchArea_C::InterruptSearch()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.TestLockOnChange
-// (Net, NetMulticast, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Vertical_Axis                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Horizontal_Axis                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1195,19 +1211,18 @@ void ABP_SearchArea_C::TestLockOnChange(float Vertical_Axis, float Horizontal_Ax
 
 
 // Function BP_SearchArea.BP_SearchArea_C.CrouchAction
-// (Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          axis_value                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Axis_Value                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::CrouchAction(float axis_value)
+void ABP_SearchArea_C::CrouchAction(float Axis_Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.CrouchAction");
 
 	ABP_SearchArea_C_CrouchAction_Params params;
-	params.axis_value = axis_value;
+	params.Axis_Value = Axis_Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1216,11 +1231,11 @@ void ABP_SearchArea_C::CrouchAction(float axis_value)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SetForbiddenAction
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Forbidden                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_SetForbiddenAction(bool Forbidden)
+void ABP_SearchArea_C::SetForbiddenAction(bool Forbidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.SetForbiddenAction");
 
@@ -1228,7 +1243,6 @@ void ABP_SearchArea_C::STATIC_SetForbiddenAction(bool Forbidden)
 	params.Forbidden = Forbidden;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1237,7 +1251,7 @@ void ABP_SearchArea_C::STATIC_SetForbiddenAction(bool Forbidden)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SetFreeLockMode
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Mode                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1257,7 +1271,7 @@ void ABP_SearchArea_C::SetFreeLockMode(bool Mode)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ForceFind
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3SearchComponent*      SearchComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ChangeTarget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1281,9 +1295,9 @@ void ABP_SearchArea_C::ForceFind(class US3SearchComponent* SearchComponent, bool
 
 
 // Function BP_SearchArea.BP_SearchArea_C.EndForActor
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_EndForActor()
+void ABP_SearchArea_C::EndForActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.EndForActor");
 
@@ -1298,7 +1312,7 @@ void ABP_SearchArea_C::STATIC_EndForActor()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.StartForActor
-// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::StartForActor()
 {
@@ -1307,7 +1321,6 @@ void ABP_SearchArea_C::StartForActor()
 	ABP_SearchArea_C_StartForActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1316,7 +1329,7 @@ void ABP_SearchArea_C::StartForActor()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetDoor
-// (NetRequest, Exec, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 DoorName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class ABP_Gimmick_OpenDoor_Template_C* Door                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1340,7 +1353,7 @@ void ABP_SearchArea_C::GetDoor(const struct FString& DoorName, class ABP_Gimmick
 
 
 // Function BP_SearchArea.BP_SearchArea_C.Initialize
-// (Net, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::Initialize()
 {
@@ -1357,16 +1370,15 @@ void ABP_SearchArea_C::Initialize()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ShowMessage
-// (Net, NetRequest, Exec, Native, NetResponse, Static, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_ShowMessage()
+void ABP_SearchArea_C::ShowMessage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ShowMessage");
 
 	ABP_SearchArea_C_ShowMessage_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1375,9 +1387,9 @@ void ABP_SearchArea_C::STATIC_ShowMessage()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.PlayGetSE
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_PlayGetSE()
+void ABP_SearchArea_C::PlayGetSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.PlayGetSE");
 
@@ -1392,7 +1404,7 @@ void ABP_SearchArea_C::STATIC_PlayGetSE()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.LookAtTarget
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3SearchComponent*      Search                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            StartPointType                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1414,7 +1426,7 @@ void ABP_SearchArea_C::LookAtTarget(class US3SearchComponent* Search, int StartP
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ExecBackButton
-// (NetRequest, Exec, Native, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              IconType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1426,7 +1438,6 @@ void ABP_SearchArea_C::ExecBackButton(ES3ActionIconType IconType)
 	params.IconType = IconType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1435,11 +1446,11 @@ void ABP_SearchArea_C::ExecBackButton(ES3ActionIconType IconType)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ExecActionButton
-// (Net, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              IconType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_ExecActionButton(ES3ActionIconType IconType)
+void ABP_SearchArea_C::ExecActionButton(ES3ActionIconType IconType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ExecActionButton");
 
@@ -1455,7 +1466,7 @@ void ABP_SearchArea_C::STATIC_ExecActionButton(ES3ActionIconType IconType)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UpdateButton
-// (Net, Exec, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::UpdateButton()
 {
@@ -1472,7 +1483,7 @@ void ABP_SearchArea_C::UpdateButton()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.BeginDetectAction
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1492,7 +1503,7 @@ void ABP_SearchArea_C::BeginDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.DestroyEffect
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3SearchComponent*      SearchComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -1504,7 +1515,6 @@ void ABP_SearchArea_C::DestroyEffect(class US3SearchComponent* SearchComponent)
 	params.SearchComponent = SearchComponent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1513,7 +1523,7 @@ void ABP_SearchArea_C::DestroyEffect(class US3SearchComponent* SearchComponent)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SpawnEffect
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3SearchComponent*      SearchComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -1533,7 +1543,7 @@ void ABP_SearchArea_C::SpawnEffect(class US3SearchComponent* SearchComponent)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UpdateEffect
-// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::UpdateEffect()
 {
@@ -1542,7 +1552,6 @@ void ABP_SearchArea_C::UpdateEffect()
 	ABP_SearchArea_C_UpdateEffect_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1551,7 +1560,7 @@ void ABP_SearchArea_C::UpdateEffect()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UserConstructionScript
-// (NetReliable, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_SearchArea_C::UserConstructionScript()
 {
@@ -1568,16 +1577,15 @@ void ABP_SearchArea_C::UserConstructionScript()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.BindChangeTimeEvent
-// (Native, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_BindChangeTimeEvent()
+void ABP_SearchArea_C::BindChangeTimeEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.BindChangeTimeEvent");
 
 	ABP_SearchArea_C_BindChangeTimeEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1586,11 +1594,11 @@ void ABP_SearchArea_C::STATIC_BindChangeTimeEvent()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ChangeGameTimeEvent
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3DayTimeEvent                EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_ChangeGameTimeEvent(ES3DayTimeEvent EventType)
+void ABP_SearchArea_C::ChangeGameTimeEvent(ES3DayTimeEvent EventType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ChangeGameTimeEvent");
 
@@ -1606,9 +1614,9 @@ void ABP_SearchArea_C::STATIC_ChangeGameTimeEvent(ES3DayTimeEvent EventType)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UnbindChangeTimeEvent
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_UnbindChangeTimeEvent()
+void ABP_SearchArea_C::UnbindChangeTimeEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.UnbindChangeTimeEvent");
 
@@ -1623,11 +1631,11 @@ void ABP_SearchArea_C::STATIC_UnbindChangeTimeEvent()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ReceiveTick
-// (Net, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_SearchArea_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ReceiveTick");
 
@@ -1643,9 +1651,9 @@ void ABP_SearchArea_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.OnStartSearch
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_OnStartSearch()
+void ABP_SearchArea_C::OnStartSearch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.OnStartSearch");
 
@@ -1660,9 +1668,9 @@ void ABP_SearchArea_C::STATIC_OnStartSearch()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.OnStopSearch
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_OnStopSearch()
+void ABP_SearchArea_C::OnStopSearch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.OnStopSearch");
 
@@ -1677,9 +1685,9 @@ void ABP_SearchArea_C::STATIC_OnStopSearch()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ReceiveDestroyed
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_ReceiveDestroyed()
+void ABP_SearchArea_C::ReceiveDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ReceiveDestroyed");
 
@@ -1694,9 +1702,9 @@ void ABP_SearchArea_C::STATIC_ReceiveDestroyed()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ReceiveBeginPlay
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, NetServer)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_ReceiveBeginPlay()
+void ABP_SearchArea_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ReceiveBeginPlay");
 
@@ -1711,9 +1719,9 @@ void ABP_SearchArea_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.DestroyEffectAll
-// (NetRequest, Exec, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_DestroyEffectAll()
+void ABP_SearchArea_C::DestroyEffectAll()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.DestroyEffectAll");
 
@@ -1728,9 +1736,9 @@ void ABP_SearchArea_C::STATIC_DestroyEffectAll()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UnbindDetect
-// (NetRequest, Exec, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_UnbindDetect()
+void ABP_SearchArea_C::UnbindDetect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.UnbindDetect");
 
@@ -1745,9 +1753,9 @@ void ABP_SearchArea_C::STATIC_UnbindDetect()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.PlayGetSound
-// (Net, NetReliable, Exec, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_PlayGetSound()
+void ABP_SearchArea_C::PlayGetSound()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.PlayGetSound");
 
@@ -1762,11 +1770,11 @@ void ABP_SearchArea_C::STATIC_PlayGetSound()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.PlayCutscene
-// (Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_PlayCutscene(const struct FName& CutsceneId)
+void ABP_SearchArea_C::PlayCutscene(const struct FName& CutsceneId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.PlayCutscene");
 
@@ -1782,9 +1790,9 @@ void ABP_SearchArea_C::STATIC_PlayCutscene(const struct FName& CutsceneId)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.EndCutscene
-// (NetReliable, Exec, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_EndCutscene()
+void ABP_SearchArea_C::EndCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.EndCutscene");
 
@@ -1799,9 +1807,9 @@ void ABP_SearchArea_C::STATIC_EndCutscene()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ForceEnd
-// (NetReliable, Exec, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_ForceEnd()
+void ABP_SearchArea_C::ForceEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ForceEnd");
 
@@ -1816,7 +1824,7 @@ void ABP_SearchArea_C::STATIC_ForceEnd()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.DoorComplete
-// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_Gimmick_OpenDoor_Template_C* Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Front                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1838,9 +1846,9 @@ void ABP_SearchArea_C::DoorComplete(class ABP_Gimmick_OpenDoor_Template_C* Door,
 
 
 // Function BP_SearchArea.BP_SearchArea_C.FinishedSearchPoint
-// (Net, Exec, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_FinishedSearchPoint()
+void ABP_SearchArea_C::FinishedSearchPoint()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.FinishedSearchPoint");
 
@@ -1855,9 +1863,9 @@ void ABP_SearchArea_C::STATIC_FinishedSearchPoint()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.FreeSearchLock
-// (Exec, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_FreeSearchLock()
+void ABP_SearchArea_C::FreeSearchLock()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.FreeSearchLock");
 
@@ -1872,11 +1880,11 @@ void ABP_SearchArea_C::STATIC_FreeSearchLock()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InpAxisEvt_ZoomPanVertical_K2Node_InputAxisEvent_1
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_InpAxisEvt_ZoomPanVertical_K2Node_InputAxisEvent_1(float AxisValue)
+void ABP_SearchArea_C::InpAxisEvt_ZoomPanVertical_K2Node_InputAxisEvent_1(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.InpAxisEvt_ZoomPanVertical_K2Node_InputAxisEvent_1");
 
@@ -1892,11 +1900,11 @@ void ABP_SearchArea_C::STATIC_InpAxisEvt_ZoomPanVertical_K2Node_InputAxisEvent_1
 
 
 // Function BP_SearchArea.BP_SearchArea_C.GetItem
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_GetItem(const struct FName& ItemId)
+void ABP_SearchArea_C::GetItem(const struct FName& ItemId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.GetItem");
 
@@ -1912,11 +1920,11 @@ void ABP_SearchArea_C::STATIC_GetItem(const struct FName& ItemId)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.DecideDetectAction
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
+void ABP_SearchArea_C::DecideDetectAction(ES3ActionIconType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.DecideDetectAction");
 
@@ -1932,11 +1940,11 @@ void ABP_SearchArea_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.InpAxisEvt_ZoomPanHorizontal_K2Node_InputAxisEvent_27
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_InpAxisEvt_ZoomPanHorizontal_K2Node_InputAxisEvent_27(float AxisValue)
+void ABP_SearchArea_C::InpAxisEvt_ZoomPanHorizontal_K2Node_InputAxisEvent_27(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.InpAxisEvt_ZoomPanHorizontal_K2Node_InputAxisEvent_27");
 
@@ -1952,11 +1960,11 @@ void ABP_SearchArea_C::STATIC_InpAxisEvt_ZoomPanHorizontal_K2Node_InputAxisEvent
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ReceiveEndPlay
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_SearchArea_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ReceiveEndPlay");
 
@@ -1972,16 +1980,15 @@ void ABP_SearchArea_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 
 
 // Function BP_SearchArea.BP_SearchArea_C.onCutsceneEnd
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_onCutsceneEnd()
+void ABP_SearchArea_C::onCutsceneEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.onCutsceneEnd");
 
 	ABP_SearchArea_C_onCutsceneEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1990,16 +1997,15 @@ void ABP_SearchArea_C::STATIC_onCutsceneEnd()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.onCutsceneStart
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_onCutsceneStart()
+void ABP_SearchArea_C::onCutsceneStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.onCutsceneStart");
 
 	ABP_SearchArea_C_onCutsceneStart_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2008,16 +2014,15 @@ void ABP_SearchArea_C::STATIC_onCutsceneStart()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ExitSearchMode
-// (Net, NetRequest, Native, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_ExitSearchMode()
+void ABP_SearchArea_C::ExitSearchMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ExitSearchMode");
 
 	ABP_SearchArea_C_ExitSearchMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2026,11 +2031,11 @@ void ABP_SearchArea_C::STATIC_ExitSearchMode()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.StartACEvent
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // class UTalkScript*             ACEventScript                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_StartACEvent(class UTalkScript* ACEventScript)
+void ABP_SearchArea_C::StartACEvent(class UTalkScript* ACEventScript)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.StartACEvent");
 
@@ -2046,11 +2051,11 @@ void ABP_SearchArea_C::STATIC_StartACEvent(class UTalkScript* ACEventScript)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.Event_DestroyGrabActor
-// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3SearchComponent*      SearchComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_Event_DestroyGrabActor(class US3SearchComponent* SearchComponent)
+void ABP_SearchArea_C::Event_DestroyGrabActor(class US3SearchComponent* SearchComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.Event_DestroyGrabActor");
 
@@ -2066,16 +2071,15 @@ void ABP_SearchArea_C::STATIC_Event_DestroyGrabActor(class US3SearchComponent* S
 
 
 // Function BP_SearchArea.BP_SearchArea_C.StartGrabSubAnim
-// (NetRequest, Native, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_StartGrabSubAnim()
+void ABP_SearchArea_C::StartGrabSubAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.StartGrabSubAnim");
 
 	ABP_SearchArea_C_StartGrabSubAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2084,16 +2088,15 @@ void ABP_SearchArea_C::STATIC_StartGrabSubAnim()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.EndGrabSubAnim
-// (Net, NetReliable, Native, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_EndGrabSubAnim()
+void ABP_SearchArea_C::EndGrabSubAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.EndGrabSubAnim");
 
 	ABP_SearchArea_C_EndGrabSubAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2102,16 +2105,15 @@ void ABP_SearchArea_C::STATIC_EndGrabSubAnim()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ExitSearch
-// (Net, NetReliable, Native, Event, Static, NetMulticast, NetServer)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_ExitSearch()
+void ABP_SearchArea_C::ExitSearch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ExitSearch");
 
 	ABP_SearchArea_C_ExitSearch_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2120,16 +2122,15 @@ void ABP_SearchArea_C::STATIC_ExitSearch()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ChangeToFreeState
-// (NetReliable, Native, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_ChangeToFreeState()
+void ABP_SearchArea_C::ChangeToFreeState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.ChangeToFreeState");
 
 	ABP_SearchArea_C_ChangeToFreeState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2138,16 +2139,15 @@ void ABP_SearchArea_C::STATIC_ChangeToFreeState()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.UpdateForceExitSearch
-// (NetReliable, Native, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_UpdateForceExitSearch()
+void ABP_SearchArea_C::UpdateForceExitSearch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.UpdateForceExitSearch");
 
 	ABP_SearchArea_C_UpdateForceExitSearch_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2156,16 +2156,15 @@ void ABP_SearchArea_C::STATIC_UpdateForceExitSearch()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.OnFinishedFadeCutScene
-// (Net, Native, Event, Static, NetMulticast, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_OnFinishedFadeCutScene()
+void ABP_SearchArea_C::OnFinishedFadeCutScene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.OnFinishedFadeCutScene");
 
 	ABP_SearchArea_C_OnFinishedFadeCutScene_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2174,11 +2173,11 @@ void ABP_SearchArea_C::STATIC_OnFinishedFadeCutScene()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.Event_SetPlayerVisibleEnabled
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_Event_SetPlayerVisibleEnabled(bool Enabled)
+void ABP_SearchArea_C::Event_SetPlayerVisibleEnabled(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.Event_SetPlayerVisibleEnabled");
 
@@ -2194,7 +2193,7 @@ void ABP_SearchArea_C::STATIC_Event_SetPlayerVisibleEnabled(bool Enabled)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.OnChangeClothes
-// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TScriptInterface<class US3ClothInterface> Interface                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -2208,7 +2207,6 @@ void ABP_SearchArea_C::OnChangeClothes(const TScriptInterface<class US3ClothInte
 	params.CharaName = CharaName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2217,7 +2215,7 @@ void ABP_SearchArea_C::OnChangeClothes(const TScriptInterface<class US3ClothInte
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SearchCollisionBeginOverlap
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -2247,7 +2245,7 @@ void ABP_SearchArea_C::SearchCollisionBeginOverlap(class UPrimitiveComponent* Ov
 
 
 // Function BP_SearchArea.BP_SearchArea_C.SeachCollisionEndOverlap
-// (NetRequest, Exec, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -2273,7 +2271,7 @@ void ABP_SearchArea_C::SeachCollisionEndOverlap(class UPrimitiveComponent* Overl
 
 
 // Function BP_SearchArea.BP_SearchArea_C.ExecuteUbergraph_BP_SearchArea
-// (Net, NetReliable, Native, Event, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2285,7 +2283,6 @@ void ABP_SearchArea_C::ExecuteUbergraph_BP_SearchArea(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2294,9 +2291,9 @@ void ABP_SearchArea_C::ExecuteUbergraph_BP_SearchArea(int EntryPoint)
 
 
 // Function BP_SearchArea.BP_SearchArea_C.OnActionDispacher__DelegateSignature
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_OnActionDispacher__DelegateSignature()
+void ABP_SearchArea_C::OnActionDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.OnActionDispacher__DelegateSignature");
 
@@ -2311,9 +2308,9 @@ void ABP_SearchArea_C::STATIC_OnActionDispacher__DelegateSignature()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.OnChangeToFreeStateDispacher__DelegateSignature
-// (NetReliable, NetRequest, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_OnChangeToFreeStateDispacher__DelegateSignature()
+void ABP_SearchArea_C::OnChangeToFreeStateDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.OnChangeToFreeStateDispacher__DelegateSignature");
 
@@ -2328,11 +2325,11 @@ void ABP_SearchArea_C::STATIC_OnChangeToFreeStateDispacher__DelegateSignature()
 
 
 // Function BP_SearchArea.BP_SearchArea_C.OnEndCutscene__DelegateSignature
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SearchArea_C::STATIC_OnEndCutscene__DelegateSignature(const struct FName& CutsceneId)
+void ABP_SearchArea_C::OnEndCutscene__DelegateSignature(const struct FName& CutsceneId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.OnEndCutscene__DelegateSignature");
 
@@ -2348,9 +2345,9 @@ void ABP_SearchArea_C::STATIC_OnEndCutscene__DelegateSignature(const struct FNam
 
 
 // Function BP_SearchArea.BP_SearchArea_C.OnFinishedInitialize__DelegateSignature
-// (NetReliable, NetRequest, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_SearchArea_C::STATIC_OnFinishedInitialize__DelegateSignature()
+void ABP_SearchArea_C::OnFinishedInitialize__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SearchArea.BP_SearchArea_C.OnFinishedInitialize__DelegateSignature");
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CutsceneForceTimeOfDayHolder.BP_CutsceneForceTimeOfDayHolder_C.IsEnabledForceTimeOfDay
-// (Net, NetRequest, Exec, NetMulticast, Public, Protected, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,11 +35,11 @@ bool ABP_CutsceneForceTimeOfDayHolder_C::IsEnabledForceTimeOfDay()
 
 
 // Function BP_CutsceneForceTimeOfDayHolder.BP_CutsceneForceTimeOfDayHolder_C.GetForceTimeOfDayValue
-// (Net, NetReliable, NetRequest, NetResponse, Static, Delegate, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_CutsceneForceTimeOfDayHolder_C::STATIC_GetForceTimeOfDayValue()
+float ABP_CutsceneForceTimeOfDayHolder_C::GetForceTimeOfDayValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneForceTimeOfDayHolder.BP_CutsceneForceTimeOfDayHolder_C.GetForceTimeOfDayValue");
 
@@ -56,7 +56,7 @@ float ABP_CutsceneForceTimeOfDayHolder_C::STATIC_GetForceTimeOfDayValue()
 
 
 // Function BP_CutsceneForceTimeOfDayHolder.BP_CutsceneForceTimeOfDayHolder_C.UserConstructionScript
-// (NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_CutsceneForceTimeOfDayHolder_C::UserConstructionScript()
 {

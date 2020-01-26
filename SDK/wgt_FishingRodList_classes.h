@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,18 +59,18 @@ public:
 	}
 
 
-	void STATIC_DestroyCaptureItem();
-	void STATIC_SetItemCapture(const struct FString& RodId, const struct FString& LureID);
+	void DestroyCaptureItem();
+	void SetItemCapture(const struct FString& RodId, const struct FString& LureID);
 	void SetPayButtonVisible(bool Visible);
 	void PagePrev();
 	void PageNext();
-	void STATIC_ResetDialog();
-	void STATIC_PushDialogLeft();
-	void STATIC_PushDialogRight();
+	void ResetDialog();
+	void PushDialogLeft();
+	void PushDialogRight();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void FinishMeshLoad();
-	void STATIC_ExecuteUbergraph_wgt_FishingRodList(int EntryPoint);
+	void ExecuteUbergraph_wgt_FishingRodList(int EntryPoint);
 };
 
 

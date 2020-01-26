@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetPriority
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_AppointSystemManager_C::STATIC_GetPriority()
+int ABP_AppointSystemManager_C::GetPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetPriority");
 
@@ -35,7 +35,7 @@ int ABP_AppointSystemManager_C::STATIC_GetPriority()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetDetectAction
-// (NetResponse, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -56,7 +56,7 @@ TArray<struct FS3DetectActionParam> ABP_AppointSystemManager_C::GetDetectAction(
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.PauseAps
-// (NetRequest, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Pause                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -76,7 +76,7 @@ void ABP_AppointSystemManager_C::PauseAps(bool Pause)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ClucSpawnLocationSHE
-// (NetReliable, NetRequest, Exec, Event, Static, Public, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          BackOffset                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Side_Offset                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -84,7 +84,7 @@ void ABP_AppointSystemManager_C::PauseAps(bool Pause)
 // struct FVector                 SHE_vector                     (Parm, OutParm, IsPlainOldData)
 // struct FRotator                SHE_rot                        (Parm, OutParm, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_ClucSpawnLocationSHE(float BackOffset, float Side_Offset, float Hight_Offset, struct FVector* SHE_vector, struct FRotator* SHE_rot)
+void ABP_AppointSystemManager_C::ClucSpawnLocationSHE(float BackOffset, float Side_Offset, float Hight_Offset, struct FVector* SHE_vector, struct FRotator* SHE_rot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.ClucSpawnLocationSHE");
 
@@ -107,7 +107,7 @@ void ABP_AppointSystemManager_C::STATIC_ClucSpawnLocationSHE(float BackOffset, f
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.WarpShe
-// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::WarpShe()
 {
@@ -116,7 +116,6 @@ void ABP_AppointSystemManager_C::WarpShe()
 	ABP_AppointSystemManager_C_WarpShe_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,12 +124,12 @@ void ABP_AppointSystemManager_C::WarpShe()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.AddDays
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // int                            Days                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FDateTime               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FDateTime ABP_AppointSystemManager_C::STATIC_AddDays(int Days)
+struct FDateTime ABP_AppointSystemManager_C::AddDays(int Days)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.AddDays");
 
@@ -138,7 +137,6 @@ struct FDateTime ABP_AppointSystemManager_C::STATIC_AddDays(int Days)
 	params.Days = Days;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +147,7 @@ struct FDateTime ABP_AppointSystemManager_C::STATIC_AddDays(int Days)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.CheckEnableTime
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            in_index                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            out_index                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -162,7 +160,6 @@ void ABP_AppointSystemManager_C::CheckEnableTime(int in_index, int* out_index)
 	params.in_index = in_index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -174,11 +171,11 @@ void ABP_AppointSystemManager_C::CheckEnableTime(int in_index, int* out_index)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.DetectEnable_Help
-// (Net, NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_DetectEnable_Help(bool Enable)
+void ABP_AppointSystemManager_C::DetectEnable_Help(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.DetectEnable_Help");
 
@@ -186,7 +183,6 @@ void ABP_AppointSystemManager_C::STATIC_DetectEnable_Help(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,11 +191,11 @@ void ABP_AppointSystemManager_C::STATIC_DetectEnable_Help(bool Enable)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.SetExspFlag
-// (Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_AppointKStype>  ks_type                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_SetExspFlag(TEnumAsByte<EN_AppointKStype> ks_type)
+void ABP_AppointSystemManager_C::SetExspFlag(TEnumAsByte<EN_AppointKStype> ks_type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.SetExspFlag");
 
@@ -215,16 +211,15 @@ void ABP_AppointSystemManager_C::STATIC_SetExspFlag(TEnumAsByte<EN_AppointKStype
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.CancelAPS
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetServer, NetClient)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AppointSystemManager_C::STATIC_CancelAPS()
+void ABP_AppointSystemManager_C::CancelAPS()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.CancelAPS");
 
 	ABP_AppointSystemManager_C_CancelAPS_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,7 +228,7 @@ void ABP_AppointSystemManager_C::STATIC_CancelAPS()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetJumpRot
-// (NetReliable, NetRequest, Exec, NetResponse, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_AppointKStype>  ks_type                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          jumprot                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -260,7 +255,7 @@ void ABP_AppointSystemManager_C::GetJumpRot(TEnumAsByte<EN_AppointKStype> ks_typ
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.KillKSchild
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::KillKSchild()
 {
@@ -269,7 +264,6 @@ void ABP_AppointSystemManager_C::KillKSchild()
 	ABP_AppointSystemManager_C_KillKSchild_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -278,12 +272,12 @@ void ABP_AppointSystemManager_C::KillKSchild()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetJumpTime
-// (NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_AppointKStype>  ks_type                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_AppointDate         time_data                      (Parm, OutParm)
 
-void ABP_AppointSystemManager_C::STATIC_GetJumpTime(TEnumAsByte<EN_AppointKStype> ks_type, struct FST_AppointDate* time_data)
+void ABP_AppointSystemManager_C::GetJumpTime(TEnumAsByte<EN_AppointKStype> ks_type, struct FST_AppointDate* time_data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetJumpTime");
 
@@ -291,7 +285,6 @@ void ABP_AppointSystemManager_C::STATIC_GetJumpTime(TEnumAsByte<EN_AppointKStype
 	params.ks_type = ks_type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -303,13 +296,13 @@ void ABP_AppointSystemManager_C::STATIC_GetJumpTime(TEnumAsByte<EN_AppointKStype
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetEyecatch
-// (Native, Static, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_AppointKStype>  ks_type                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Eyecatch                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           eyecatch_enable                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_GetEyecatch(TEnumAsByte<EN_AppointKStype> ks_type, struct FName* Eyecatch, bool* eyecatch_enable)
+void ABP_AppointSystemManager_C::GetEyecatch(TEnumAsByte<EN_AppointKStype> ks_type, struct FName* Eyecatch, bool* eyecatch_enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetEyecatch");
 
@@ -317,7 +310,6 @@ void ABP_AppointSystemManager_C::STATIC_GetEyecatch(TEnumAsByte<EN_AppointKStype
 	params.ks_type = ks_type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -331,13 +323,13 @@ void ABP_AppointSystemManager_C::STATIC_GetEyecatch(TEnumAsByte<EN_AppointKStype
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetJumpPoint
-// (Net, NetRequest, Static, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_AppointKStype>  ks_type                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 jumppos                        (Parm, OutParm, IsPlainOldData)
 // bool                           jump_enable                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_GetJumpPoint(TEnumAsByte<EN_AppointKStype> ks_type, struct FVector* jumppos, bool* jump_enable)
+void ABP_AppointSystemManager_C::GetJumpPoint(TEnumAsByte<EN_AppointKStype> ks_type, struct FVector* jumppos, bool* jump_enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetJumpPoint");
 
@@ -358,9 +350,9 @@ void ABP_AppointSystemManager_C::STATIC_GetJumpPoint(TEnumAsByte<EN_AppointKStyp
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ExecAddKs
-// (NetRequest, Exec, Static, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AppointSystemManager_C::STATIC_ExecAddKs()
+void ABP_AppointSystemManager_C::ExecAddKs()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.ExecAddKs");
 
@@ -375,7 +367,7 @@ void ABP_AppointSystemManager_C::STATIC_ExecAddKs()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetSelectTexts
-// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   INameID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   GetName                        (Parm, OutParm)
@@ -388,7 +380,6 @@ void ABP_AppointSystemManager_C::GetSelectTexts(const struct FName& INameID, str
 	params.INameID = INameID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -400,9 +391,9 @@ void ABP_AppointSystemManager_C::GetSelectTexts(const struct FName& INameID, str
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ChangeKSFilter
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_AppointSystemManager_C::STATIC_ChangeKSFilter()
+void ABP_AppointSystemManager_C::ChangeKSFilter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.ChangeKSFilter");
 
@@ -417,7 +408,7 @@ void ABP_AppointSystemManager_C::STATIC_ChangeKSFilter()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.AddKSitem
-// (NetReliable, Native, Event, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            KS_pos                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            EnableTimeMin                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -450,7 +441,6 @@ void ABP_AppointSystemManager_C::AddKSitem(int KS_pos, int EnableTimeMin, int En
 	params.ExspCheck = ExspCheck;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -462,7 +452,7 @@ void ABP_AppointSystemManager_C::AddKSitem(int KS_pos, int EnableTimeMin, int En
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.SetPlayEyecatchFlag
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Play                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -482,7 +472,7 @@ void ABP_AppointSystemManager_C::SetPlayEyecatchFlag(bool Play)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ChangeSkipEndFade
-// (Exec, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           EndFadeFlag                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -502,7 +492,7 @@ void ABP_AppointSystemManager_C::ChangeSkipEndFade(bool EndFadeFlag)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.IsEnableButtonTime
-// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsEnable                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -524,7 +514,7 @@ void ABP_AppointSystemManager_C::IsEnableButtonTime(bool* IsEnable)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ReleaseAppointData
-// (Net, NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::ReleaseAppointData()
 {
@@ -541,11 +531,11 @@ void ABP_AppointSystemManager_C::ReleaseAppointData()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.IsPassAppoint
-// (NetReliable, NetRequest, Static, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsFuture                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_IsPassAppoint(bool* IsFuture)
+void ABP_AppointSystemManager_C::IsPassAppoint(bool* IsFuture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.IsPassAppoint");
 
@@ -563,7 +553,7 @@ void ABP_AppointSystemManager_C::STATIC_IsPassAppoint(bool* IsFuture)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetData
-// (Native, NetResponse, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            AddDay                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Year                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -578,7 +568,6 @@ void ABP_AppointSystemManager_C::GetData(int AddDay, int* Year, int* Month, int*
 	params.AddDay = AddDay;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -594,7 +583,7 @@ void ABP_AppointSystemManager_C::GetData(int AddDay, int* Year, int* Month, int*
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.IsAppointFuture
-// (Net, NetReliable, NetRequest, Exec, Event, Protected, Delegate, HasDefaults, NetClient)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Pass                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -616,7 +605,7 @@ void ABP_AppointSystemManager_C::IsAppointFuture(bool* Pass)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetAppointData
-// (Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 JumpPoint                      (Parm, OutParm, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, OutParm, IsPlainOldData)
@@ -624,7 +613,7 @@ void ABP_AppointSystemManager_C::IsAppointFuture(bool* Pass)
 // struct FText                   MainText                       (Parm, OutParm)
 // struct FText                   SubText                        (Parm, OutParm)
 
-void ABP_AppointSystemManager_C::STATIC_GetAppointData(struct FVector* JumpPoint, struct FRotator* Rotation, struct FST_AppointDate* Date, struct FText* MainText, struct FText* SubText)
+void ABP_AppointSystemManager_C::GetAppointData(struct FVector* JumpPoint, struct FRotator* Rotation, struct FST_AppointDate* Date, struct FText* MainText, struct FText* SubText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.GetAppointData");
 
@@ -650,11 +639,11 @@ void ABP_AppointSystemManager_C::STATIC_GetAppointData(struct FVector* JumpPoint
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.SetAppointButtonFlag
-// (Net, NetRequest, NetResponse, Static, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Deny                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_SetAppointButtonFlag(bool Deny)
+void ABP_AppointSystemManager_C::SetAppointButtonFlag(bool Deny)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.SetAppointButtonFlag");
 
@@ -670,7 +659,7 @@ void ABP_AppointSystemManager_C::STATIC_SetAppointButtonFlag(bool Deny)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.Finalize
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::Finalize()
 {
@@ -679,7 +668,6 @@ void ABP_AppointSystemManager_C::Finalize()
 	ABP_AppointSystemManager_C_Finalize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -688,11 +676,11 @@ void ABP_AppointSystemManager_C::Finalize()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.DetectActionUnregist
-// (Event, NetResponse, Static, NetServer, NetClient)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Unregist                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_DetectActionUnregist(bool Unregist)
+void ABP_AppointSystemManager_C::DetectActionUnregist(bool Unregist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.DetectActionUnregist");
 
@@ -708,7 +696,7 @@ void ABP_AppointSystemManager_C::STATIC_DetectActionUnregist(bool Unregist)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.SetAppointData
-// (Net, NetReliable, Event, NetResponse, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 JumpPoint                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Rotation                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -748,7 +736,7 @@ void ABP_AppointSystemManager_C::SetAppointData(const struct FVector& JumpPoint,
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::UserConstructionScript()
 {
@@ -757,7 +745,6 @@ void ABP_AppointSystemManager_C::UserConstructionScript()
 	ABP_AppointSystemManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -766,7 +753,7 @@ void ABP_AppointSystemManager_C::UserConstructionScript()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.EyecatchFinish
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::EyecatchFinish()
 {
@@ -783,11 +770,11 @@ void ABP_AppointSystemManager_C::EyecatchFinish()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ReceiveTick
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_AppointSystemManager_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.ReceiveTick");
 
@@ -795,7 +782,6 @@ void ABP_AppointSystemManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -804,7 +790,7 @@ void ABP_AppointSystemManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ReceiveBeginPlay
-// (Net, NetRequest, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::ReceiveBeginPlay()
 {
@@ -821,11 +807,11 @@ void ABP_AppointSystemManager_C::ReceiveBeginPlay()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.DecideDetectAction
-// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
+void ABP_AppointSystemManager_C::DecideDetectAction(ES3ActionIconType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.DecideDetectAction");
 
@@ -833,7 +819,6 @@ void ABP_AppointSystemManager_C::STATIC_DecideDetectAction(ES3ActionIconType Typ
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -842,12 +827,12 @@ void ABP_AppointSystemManager_C::STATIC_DecideDetectAction(ES3ActionIconType Typ
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.EndJump
-// (Net, NetRequest, Exec, Event, NetResponse, Static, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_EndJump(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_AppointSystemManager_C::EndJump(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.EndJump");
 
@@ -864,7 +849,7 @@ void ABP_AppointSystemManager_C::STATIC_EndJump(class AActor* Actor, TEnumAsByte
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ApsChild_TimeOver_Actor1
-// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::ApsChild_TimeOver_Actor1()
 {
@@ -881,7 +866,7 @@ void ABP_AppointSystemManager_C::ApsChild_TimeOver_Actor1()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ApsChild_TimeOver_Actor2
-// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::ApsChild_TimeOver_Actor2()
 {
@@ -898,11 +883,11 @@ void ABP_AppointSystemManager_C::ApsChild_TimeOver_Actor2()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ChangePlayerController
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController*       PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_ChangePlayerController(class APlayerController* PlayerController)
+void ABP_AppointSystemManager_C::ChangePlayerController(class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.ChangePlayerController");
 
@@ -910,7 +895,6 @@ void ABP_AppointSystemManager_C::STATIC_ChangePlayerController(class APlayerCont
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -919,7 +903,7 @@ void ABP_AppointSystemManager_C::STATIC_ChangePlayerController(class APlayerCont
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.HelpEnd
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::HelpEnd()
 {
@@ -936,7 +920,7 @@ void ABP_AppointSystemManager_C::HelpEnd()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.InHelpEnd
-// (Net, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::InHelpEnd()
 {
@@ -953,11 +937,11 @@ void ABP_AppointSystemManager_C::InHelpEnd()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.catch_onSelected
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointSystemManager_C::STATIC_catch_onSelected(int Index)
+void ABP_AppointSystemManager_C::catch_onSelected(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointSystemManager.BP_AppointSystemManager_C.catch_onSelected");
 
@@ -965,7 +949,6 @@ void ABP_AppointSystemManager_C::STATIC_catch_onSelected(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -974,7 +957,7 @@ void ABP_AppointSystemManager_C::STATIC_catch_onSelected(int Index)
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.ExecuteUbergraph_BP_AppointSystemManager
-// (Net, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -994,7 +977,7 @@ void ABP_AppointSystemManager_C::ExecuteUbergraph_BP_AppointSystemManager(int En
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.EndAppointJump__DelegateSignature
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::EndAppointJump__DelegateSignature()
 {
@@ -1003,7 +986,6 @@ void ABP_AppointSystemManager_C::EndAppointJump__DelegateSignature()
 	ABP_AppointSystemManager_C_EndAppointJump__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1012,7 +994,7 @@ void ABP_AppointSystemManager_C::EndAppointJump__DelegateSignature()
 
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.StartAppointJump__DelegateSignature
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_AppointSystemManager_C::StartAppointJump__DelegateSignature()
 {
@@ -1021,7 +1003,6 @@ void ABP_AppointSystemManager_C::StartAppointJump__DelegateSignature()
 	ABP_AppointSystemManager_C_StartAppointJump__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

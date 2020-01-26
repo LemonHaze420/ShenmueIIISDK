@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,17 +37,17 @@ public:
 
 	void UpdateSpline(float Delta, bool* bArrived);
 	void GetSplineCurrentLocationAndRotation(float Length, bool Loop, struct FVector* Location, struct FVector* Direction, struct FRotator* Rotation);
-	void STATIC_ForceMoveSpline();
+	void ForceMoveSpline();
 	void SetSpline(class USplineComponent* RefSpline, float Speed, bool StartForceMove);
 	void PauseSpline(bool IsPause);
 	void SplineMovingProcess(bool* Result);
 	void AddSplineMoveDistance(float AddDistance);
-	void STATIC_SetSplineMoveDistance(float NewDistance);
+	void SetSplineMoveDistance(float NewDistance);
 	void GetSplineLength(float* Length);
-	void STATIC_IsArrivedSpline(bool* IsArrived);
+	void IsArrivedSpline(bool* IsArrived);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_SplineMovement(int EntryPoint);
-	void STATIC_ArrivedEvent__DelegateSignature();
+	void ArrivedEvent__DelegateSignature();
 };
 
 

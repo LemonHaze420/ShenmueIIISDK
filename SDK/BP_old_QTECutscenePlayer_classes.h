@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,23 +43,23 @@ public:
 
 
 	bool DebugIsEnabledToSkip();
-	void STATIC_SetQTEInputLimitTime(float limitTime);
-	void STATIC_IsUseEndFadeIn(bool* IsUseFade);
+	void SetQTEInputLimitTime(float limitTime);
+	void IsUseEndFadeIn(bool* IsUseFade);
 	bool GetQTEResult();
-	void STATIC_SetCurrentRestartPoint(class AActor* RestartPoint);
+	void SetCurrentRestartPoint(class AActor* RestartPoint);
 	void Restart();
 	void DebugSkipToEnd();
 	void ExitCutscene();
-	void STATIC_SetupSequence(int QTESequenceIndex);
-	void STATIC_Retry();
+	void SetupSequence(int QTESequenceIndex);
+	void Retry();
 	void UpdatePlayingSequenceToRetry();
-	bool STATIC_IsExistQTEInCurrent();
-	void STATIC_UpdatePlayingIntervalSequence();
+	bool IsExistQTEInCurrent();
+	void UpdatePlayingIntervalSequence();
 	bool IsExistNextLevelSequence();
 	void EndIntervalSequence();
-	void STATIC_InitQTESequence();
+	void InitQTESequence();
 	void PlaySequence();
-	void STATIC_InitCutscene();
+	void InitCutscene();
 	void UserConstructionScript();
 	void InpActEvt_QTE_ButtonTop_K2Node_InputActionEvent_16(const struct FKey& Key);
 	void InpActEvt_QTE_ButtonBottom_K2Node_InputActionEvent_15(const struct FKey& Key);
@@ -69,9 +69,9 @@ public:
 	void InpActEvt_QTE_Bottom_K2Node_InputActionEvent_11(const struct FKey& Key);
 	void InpActEvt_QTE_Left_K2Node_InputActionEvent_10(const struct FKey& Key);
 	void InpActEvt_QTE_Right_K2Node_InputActionEvent_9(const struct FKey& Key);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_Event_InputStart();
-	void STATIC_Event_InputEnd();
+	void ReceiveTick(float DeltaSeconds);
+	void Event_InputStart();
+	void Event_InputEnd();
 	void ExecuteUbergraph_BP_old_QTECutscenePlayer(int EntryPoint);
 };
 

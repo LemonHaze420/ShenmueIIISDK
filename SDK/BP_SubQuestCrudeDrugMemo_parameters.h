@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.TryGetItemData
+struct ABP_SubQuestCrudeDrugMemo_C_TryGetItemData_Params
+{
+	struct FName                                       InName;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FST_SUBQCrudeDrugMemo                       OutData;                                                  // (Parm, OutParm)
+};
 
 // Function BP_SubQuestCrudeDrugMemo.BP_SubQuestCrudeDrugMemo_C.CheckItemGetNum
 struct ABP_SubQuestCrudeDrugMemo_C_CheckItemGetNum_Params

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -26,7 +26,7 @@ public:
 
 
 	void STATIC_GetNPCLeadCharacter(class UObject* __WorldContext, class ABP_NPC_Lead_C** newParam);
-	void DestroyNPCLeadActor(class UObject* __WorldContext);
+	void STATIC_DestroyNPCLeadActor(class UObject* __WorldContext);
 	void STATIC_SpawnNPCLeadActor(const struct FVector& SpawnPos, float SpawnRot, class ANPC_SplineMoveActor_C* SplineActor, class UObject* __WorldContext);
 	void STATIC_GetNPCLeadManager(class UObject* __WorldContext, class ABP_NPCLeadManager_C** newParam);
 };

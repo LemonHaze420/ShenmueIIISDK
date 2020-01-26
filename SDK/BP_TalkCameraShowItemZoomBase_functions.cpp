@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCameraShowItemZoomBase.BP_TalkCameraShowItemZoomBase_C.GetLookTargetSocketLocation
-// (Net, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InSocketName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -27,7 +27,6 @@ struct FVector ABP_TalkCameraShowItemZoomBase_C::GetLookTargetSocketLocation(con
 	params.InSocketName = InSocketName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,9 +37,9 @@ struct FVector ABP_TalkCameraShowItemZoomBase_C::GetLookTargetSocketLocation(con
 
 
 // Function BP_TalkCameraShowItemZoomBase.BP_TalkCameraShowItemZoomBase_C.UserConstructionScript
-// (Net, Event, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_TalkCameraShowItemZoomBase_C::STATIC_UserConstructionScript()
+void ABP_TalkCameraShowItemZoomBase_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraShowItemZoomBase.BP_TalkCameraShowItemZoomBase_C.UserConstructionScript");
 
@@ -55,9 +54,9 @@ void ABP_TalkCameraShowItemZoomBase_C::STATIC_UserConstructionScript()
 
 
 // Function BP_TalkCameraShowItemZoomBase.BP_TalkCameraShowItemZoomBase_C.ReceiveBeginPlay
-// (Net, NetReliable, Exec, NetResponse, Static, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_TalkCameraShowItemZoomBase_C::STATIC_ReceiveBeginPlay()
+void ABP_TalkCameraShowItemZoomBase_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraShowItemZoomBase.BP_TalkCameraShowItemZoomBase_C.ReceiveBeginPlay");
 
@@ -72,7 +71,7 @@ void ABP_TalkCameraShowItemZoomBase_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_TalkCameraShowItemZoomBase.BP_TalkCameraShowItemZoomBase_C.ReceiveTick
-// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,7 +83,6 @@ void ABP_TalkCameraShowItemZoomBase_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,11 +91,11 @@ void ABP_TalkCameraShowItemZoomBase_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCameraShowItemZoomBase.BP_TalkCameraShowItemZoomBase_C.ExecuteUbergraph_BP_TalkCameraShowItemZoomBase
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraShowItemZoomBase_C::STATIC_ExecuteUbergraph_BP_TalkCameraShowItemZoomBase(int EntryPoint)
+void ABP_TalkCameraShowItemZoomBase_C::ExecuteUbergraph_BP_TalkCameraShowItemZoomBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraShowItemZoomBase.BP_TalkCameraShowItemZoomBase_C.ExecuteUbergraph_BP_TalkCameraShowItemZoomBase");
 
@@ -105,7 +103,6 @@ void ABP_TalkCameraShowItemZoomBase_C::STATIC_ExecuteUbergraph_BP_TalkCameraShow
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

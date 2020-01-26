@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,12 +55,12 @@ public:
 	int GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void CalcPrice(int Price);
-	void STATIC_PressButton();
+	void PressButton();
 	void UpdCurrentNum();
-	void STATIC_AllDestroy();
-	void STATIC_ReturnStatus();
+	void AllDestroy();
+	void ReturnStatus();
 	void ChangeStatus();
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(const struct FKey& Key);
 	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(const struct FKey& Key);
 	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14(const struct FKey& Key);

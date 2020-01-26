@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,48 +52,48 @@ public:
 
 
 	void SetEnableLightCollision(bool Enable);
-	void STATIC_GetLightingColorParameter(struct FS3CharaLightingCurveColorParamater* Paramater);
-	bool STATIC_UpdateAllLightupActors();
+	void GetLightingColorParameter(struct FS3CharaLightingCurveColorParamater* Paramater);
+	bool UpdateAllLightupActors();
 	bool SetupCalculationMeshAndCameraVariable(class AActor* Actor);
-	class USkeletalMeshComponent* STATIC_GetTalkTargetActorMesh(class AActor* Actor);
-	bool STATIC_IsConditionsCheck(class AActor* Actor, class US3TagCharaComponent* TagCharaComponent, struct FS3CharaLightingContainer* Container);
-	struct FS3CharaLightingContainer STATIC_Evaluation(class AActor* TargetLightupActor, const struct FName& LightGroupId);
+	class USkeletalMeshComponent* GetTalkTargetActorMesh(class AActor* Actor);
+	bool IsConditionsCheck(class AActor* Actor, class US3TagCharaComponent* TagCharaComponent, struct FS3CharaLightingContainer* Container);
+	struct FS3CharaLightingContainer Evaluation(class AActor* TargetLightupActor, const struct FName& LightGroupId);
 	struct FVector GetLightupTargetLocation(class AActor* InTargetActor);
-	void STATIC_GetAllCharaLightingActors(TArray<class AS3CharaLightingActor*>* Values);
-	void STATIC_GetAllTargetCharaActors(TArray<class AActor*>* CharaActors);
-	void STATIC_ClearLightupActors(bool CutsceneOnly);
-	void STATIC_SetupCutsceneLightingActors(class AS3CharaLightingSequencerActor* SeqLightingActor);
-	class USkeletalMeshComponent* STATIC_TryGetActorMeshComponent(class AActor* Actor);
-	void STATIC_IsUsableLight(class ALight* Light, bool* bUse, float* SpotDeviatedConeAngle);
-	void STATIC_GetMainSpotLightDesirabilityScore(float Distance, float Intensity, float DeviatedConeAngle, class UFuzzySystemComponent* SpotFuzzySystem, float* DesirabilityScore);
+	void GetAllCharaLightingActors(TArray<class AS3CharaLightingActor*>* Values);
+	void GetAllTargetCharaActors(TArray<class AActor*>* CharaActors);
+	void ClearLightupActors(bool CutsceneOnly);
+	void SetupCutsceneLightingActors(class AS3CharaLightingSequencerActor* SeqLightingActor);
+	class USkeletalMeshComponent* TryGetActorMeshComponent(class AActor* Actor);
+	void IsUsableLight(class ALight* Light, bool* bUse, float* SpotDeviatedConeAngle);
+	void GetMainSpotLightDesirabilityScore(float Distance, float Intensity, float DeviatedConeAngle, class UFuzzySystemComponent* SpotFuzzySystem, float* DesirabilityScore);
 	void SetupEnvironmentLightParamater(class AActor* TargetActor, bool* bDummy);
-	void STATIC_GetMainPointLightDesirabilityScore(float Distance, float Intensity, class UFuzzySystemComponent* PointFuzzySystem, float* DesirabilityScore);
+	void GetMainPointLightDesirabilityScore(float Distance, float Intensity, class UFuzzySystemComponent* PointFuzzySystem, float* DesirabilityScore);
 	void InitializeFuzzySystems();
-	void STATIC_UpdateAllCutsceneLightingActors();
-	void STATIC_ResetValues(bool FromCutscene);
-	void STATIC_SpawnCharaLightingActor(class AActor* Target);
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_DebugDrawLightLineToggle();
-	void STATIC_DebugCharaLightOnOffToggle();
-	void STATIC_Editor_UpdateAllCutsceneLightingActors(class ACameraActor* Camera, class UObject* LevelSequence);
-	void STATIC_Editor_ResetVariable();
-	void STATIC_SetupTestLevel(class AS3CharaLightingActor* Target);
-	void STATIC_BindManagerEvents();
-	void STATIC_OnBeginTalk();
-	void STATIC_OnEndTalk();
-	void STATIC_OnCameraChanged();
-	void STATIC_onCutsceneStart();
-	void STATIC_onCutsceneEnd();
-	void STATIC_OnCameraChangedSequencer(class UObject* CameraObject);
-	void STATIC_UnbindCutscene();
-	void STATIC_OnChangedJoinActor(EJoinActorChangeEvent ChangeEvent, class AActor* Actor);
-	void STATIC_OnStartAcCameraSequence(class ALevelSequenceActor* PlaySequenceActor);
-	void STATIC_OnFinishedAcCameraSequence(class ULevelSequencePlayer* LevelSequencePlayer);
-	void STATIC_OnStopAcCameraSequence();
-	void STATIC_UnbindAcCameraSequence();
-	void STATIC_OnChangedACCameraCut(class UCameraComponent* CameraComponent);
-	void STATIC_ReceiveBeginPlay();
+	void UpdateAllCutsceneLightingActors();
+	void ResetValues(bool FromCutscene);
+	void SpawnCharaLightingActor(class AActor* Target);
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds);
+	void DebugDrawLightLineToggle();
+	void DebugCharaLightOnOffToggle();
+	void Editor_UpdateAllCutsceneLightingActors(class ACameraActor* Camera, class UObject* LevelSequence);
+	void Editor_ResetVariable();
+	void SetupTestLevel(class AS3CharaLightingActor* Target);
+	void BindManagerEvents();
+	void OnBeginTalk();
+	void OnEndTalk();
+	void OnCameraChanged();
+	void onCutsceneStart();
+	void onCutsceneEnd();
+	void OnCameraChangedSequencer(class UObject* CameraObject);
+	void UnbindCutscene();
+	void OnChangedJoinActor(EJoinActorChangeEvent ChangeEvent, class AActor* Actor);
+	void OnStartAcCameraSequence(class ALevelSequenceActor* PlaySequenceActor);
+	void OnFinishedAcCameraSequence(class ULevelSequencePlayer* LevelSequencePlayer);
+	void OnStopAcCameraSequence();
+	void UnbindAcCameraSequence();
+	void OnChangedACCameraCut(class UCameraComponent* CameraComponent);
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_CharaLightingManager(int EntryPoint);
 };
 

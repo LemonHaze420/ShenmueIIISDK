@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,9 +32,9 @@ public:
 	void STATIC_BPF_SpawnFollowSHE(float Back, float Side, bool Rotate_to_players, class UObject* __WorldContext);
 	void STATIC_BPF_QueryTagCharaName2NpcActorNew(const struct FName& CharaName, class UObject* __WorldContext, class AS3Character** Character);
 	void STATIC_BPF_QueryPlayerNearNpcNew(class UObject* __WorldContext, class AActor** NpcActorRef, float* Length);
-	void BPF_NPC_GetMiniGameIdsTable(int RowIndex, class UObject* __WorldContext, bool* bSuccess, struct FNPCMiniGameManagerIds* Out_Row);
-	void BPF_NPC_ConvertScriptStateIDFromName(int ID, class UObject* __WorldContext, struct FName* Name);
-	void BPF_NPC_GetVisibleTalkIconStates(class UObject* __WorldContext, TArray<TEnumAsByte<ELocomotionState>>* States);
+	void STATIC_BPF_NPC_GetMiniGameIdsTable(int RowIndex, class UObject* __WorldContext, bool* bSuccess, struct FNPCMiniGameManagerIds* Out_Row);
+	void STATIC_BPF_NPC_ConvertScriptStateIDFromName(int ID, class UObject* __WorldContext, struct FName* Name);
+	void STATIC_BPF_NPC_GetVisibleTalkIconStates(class UObject* __WorldContext, TArray<TEnumAsByte<ELocomotionState>>* States);
 	void STATIC_BPF_NPC_GetCanNotTalkTurnAcoundStates(class UObject* __WorldContext, TArray<TEnumAsByte<ELocomotionState>>* States);
 };
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_GameModeBase.BPF_GameModeBase_C.getS3GamemodeBase
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3GamemodeBase_C*    BP_S3GamemodeBase              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_GameModeBase_C::getS3GamemodeBase(class UObject* __WorldContext, class ABP_S3GamemodeBase_C** BP_S3GamemodeBase)
+void UBPF_GameModeBase_C::STATIC_getS3GamemodeBase(class UObject* __WorldContext, class ABP_S3GamemodeBase_C** BP_S3GamemodeBase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_GameModeBase.BPF_GameModeBase_C.getS3GamemodeBase");
 

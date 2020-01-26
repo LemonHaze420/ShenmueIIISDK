@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,7 +49,7 @@ public:
 	void PushLeftRightCursor(int Index, int Add);
 	void InitChoiceList(int Index, TArray<struct FString>* ChoiceList);
 	void SetConfigName(TArray<struct FString>* NameList);
-	void STATIC_FocusButtonIndex(int Index);
+	void FocusButtonIndex(int Index);
 	void Construct();
 	void ExecuteUbergraph_BPW_UI_Config_Window(int EntryPoint);
 };

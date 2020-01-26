@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DoorManager.BP_DoorManager_C.LazyFindDoors
-// (NetReliable, NetRequest, Event, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_DoorManager_C::LazyFindDoors()
 {
@@ -31,7 +31,7 @@ void ABP_DoorManager_C::LazyFindDoors()
 
 
 // Function BP_DoorManager.BP_DoorManager_C.ForbidPCDoorInteraction
-// (NetReliable, Exec, Native, Event, NetResponse, Delegate, NetServer, NetClient, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_DoorManager_C::ForbidPCDoorInteraction()
 {
@@ -40,7 +40,6 @@ void ABP_DoorManager_C::ForbidPCDoorInteraction()
 	ABP_DoorManager_C_ForbidPCDoorInteraction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,18 +48,17 @@ void ABP_DoorManager_C::ForbidPCDoorInteraction()
 
 
 // Function BP_DoorManager.BP_DoorManager_C.GetDoors
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<class ABP_Gimmick_OpenDoor_Template_C*> Doors                          (Parm, OutParm, ZeroConstructor)
 
-void ABP_DoorManager_C::STATIC_GetDoors(TArray<class ABP_Gimmick_OpenDoor_Template_C*>* Doors)
+void ABP_DoorManager_C::GetDoors(TArray<class ABP_Gimmick_OpenDoor_Template_C*>* Doors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DoorManager.BP_DoorManager_C.GetDoors");
 
 	ABP_DoorManager_C_GetDoors_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,7 +70,7 @@ void ABP_DoorManager_C::STATIC_GetDoors(TArray<class ABP_Gimmick_OpenDoor_Templa
 
 
 // Function BP_DoorManager.BP_DoorManager_C.ChangeDoorType
-// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 DoorName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TEnumAsByte<EN_DoorType>       DoorType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -86,7 +84,6 @@ void ABP_DoorManager_C::ChangeDoorType(const struct FString& DoorName, TEnumAsBy
 	params.DoorType = DoorType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +92,7 @@ void ABP_DoorManager_C::ChangeDoorType(const struct FString& DoorName, TEnumAsBy
 
 
 // Function BP_DoorManager.BP_DoorManager_C.SetDoors
-// (NetRequest, Exec, Event, Private, Protected, Delegate, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_DoorManager_C::SetDoors()
 {
@@ -112,7 +109,7 @@ void ABP_DoorManager_C::SetDoors()
 
 
 // Function BP_DoorManager.BP_DoorManager_C.GetDoorByName
-// (Net, NetRequest, Native, Event, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 DoorName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class ABP_Gimmick_OpenDoor_Template_C* DoorActor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -125,7 +122,6 @@ void ABP_DoorManager_C::GetDoorByName(const struct FString& DoorName, class ABP_
 	params.DoorName = DoorName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,16 +133,15 @@ void ABP_DoorManager_C::GetDoorByName(const struct FString& DoorName, class ABP_
 
 
 // Function BP_DoorManager.BP_DoorManager_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_DoorManager_C::STATIC_UserConstructionScript()
+void ABP_DoorManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DoorManager.BP_DoorManager_C.UserConstructionScript");
 
 	ABP_DoorManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

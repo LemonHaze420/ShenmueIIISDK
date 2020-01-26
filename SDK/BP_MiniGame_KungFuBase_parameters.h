@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -215,6 +215,11 @@ struct ABP_MiniGame_KungFuBase_C_OnResultEnd_Params
 
 // Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.TimeUpEvent
 struct ABP_MiniGame_KungFuBase_C_TimeUpEvent_Params
+{
+};
+
+// Function BP_MiniGame_KungFuBase.BP_MiniGame_KungFuBase_C.ReachedMaxKungFuLevel
+struct ABP_MiniGame_KungFuBase_C_ReachedMaxKungFuLevel_Params
 {
 };
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.UpdateWidgetText
-// (Net, NetReliable, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWidgetComponent*        InWidget                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_DebugCutscenePlayAreaDisp_C::STATIC_UpdateWidgetText(class UWidgetComponent* InWidget)
+void ABP_DebugCutscenePlayAreaDisp_C::UpdateWidgetText(class UWidgetComponent* InWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.UpdateWidgetText");
 
@@ -34,7 +34,7 @@ void ABP_DebugCutscenePlayAreaDisp_C::STATIC_UpdateWidgetText(class UWidgetCompo
 
 
 // Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.UpdateAllWidgetText
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_DebugCutscenePlayAreaDisp_C::UpdateAllWidgetText()
 {
@@ -51,7 +51,7 @@ void ABP_DebugCutscenePlayAreaDisp_C::UpdateAllWidgetText()
 
 
 // Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.UpdateSphereScale
-// (Net, NetReliable, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_DebugCutscenePlayAreaDisp_C::UpdateSphereScale()
 {
@@ -68,16 +68,15 @@ void ABP_DebugCutscenePlayAreaDisp_C::UpdateSphereScale()
 
 
 // Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.UserConstructionScript
-// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_DebugCutscenePlayAreaDisp_C::STATIC_UserConstructionScript()
+void ABP_DebugCutscenePlayAreaDisp_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.UserConstructionScript");
 
 	ABP_DebugCutscenePlayAreaDisp_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,16 +85,15 @@ void ABP_DebugCutscenePlayAreaDisp_C::STATIC_UserConstructionScript()
 
 
 // Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.ReceiveBeginPlay
-// (Net, Exec, Native, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_DebugCutscenePlayAreaDisp_C::STATIC_ReceiveBeginPlay()
+void ABP_DebugCutscenePlayAreaDisp_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.ReceiveBeginPlay");
 
 	ABP_DebugCutscenePlayAreaDisp_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,11 +102,11 @@ void ABP_DebugCutscenePlayAreaDisp_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.ExecuteUbergraph_BP_DebugCutscenePlayAreaDisp
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DebugCutscenePlayAreaDisp_C::STATIC_ExecuteUbergraph_BP_DebugCutscenePlayAreaDisp(int EntryPoint)
+void ABP_DebugCutscenePlayAreaDisp_C::ExecuteUbergraph_BP_DebugCutscenePlayAreaDisp(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCutscenePlayAreaDisp.BP_DebugCutscenePlayAreaDisp_C.ExecuteUbergraph_BP_DebugCutscenePlayAreaDisp");
 
@@ -116,7 +114,6 @@ void ABP_DebugCutscenePlayAreaDisp_C::STATIC_ExecuteUbergraph_BP_DebugCutscenePl
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

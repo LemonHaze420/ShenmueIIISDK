@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,11 +35,11 @@ public:
 
 
 	void CheckNpcAlpha(bool* NPCVisible);
-	void STATIC_InitSet(const struct FGameplayTag& NPCID, float ChangeSpawnFadeTime, bool CheckNpcAlpha);
+	void InitSet(const struct FGameplayTag& NPCID, float ChangeSpawnFadeTime, bool CheckNpcAlpha);
 	void UserConstructionScript();
 	void EndNpcSpawnWait();
-	void STATIC_NPCSpawn(const struct FGameplayTag& NPCID);
-	void STATIC_ExecuteUbergraph_BP_NpcSpawnWait(int EntryPoint);
+	void NPCSpawn(const struct FGameplayTag& NPCID);
+	void ExecuteUbergraph_BP_NpcSpawnWait(int EntryPoint);
 };
 
 

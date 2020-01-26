@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,19 +35,19 @@ public:
 	}
 
 
-	void STATIC_ButtonSelect(bool Select);
-	void STATIC_SetButtonImage(bool Auto);
-	void STATIC_GetSelectedSkillItem_Int_(int* ItemIntID);
-	void STATIC_SetFocus(bool Focus);
+	void ButtonSelect(bool Select);
+	void SetButtonImage(bool auto);
+	void GetSelectedSkillItem_Int_(int* ItemIntID);
+	void SetFocus(bool Focus);
 	void GetSelectedSkillItem_Name_(struct FName* ItemLabel);
-	void STATIC_GetSelectedIndex(int* Index);
+	void GetSelectedIndex(int* Index);
 	void SetItemDisplayNames(TArray<struct FName>* Skills);
-	void STATIC_ClearSelection();
-	void STATIC_MoveSelection(bool Add);
+	void ClearSelection();
+	void MoveSelection(bool Add);
 	void SelectSlot(int SelectedSlotIndex);
-	void STATIC_PreConstruct(bool IsDesignTime);
-	void STATIC_Construct();
-	void STATIC_ExecuteUbergraph_wgt_SkillEditor_SetPanel(int EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void Construct();
+	void ExecuteUbergraph_wgt_SkillEditor_SetPanel(int EntryPoint);
 };
 
 

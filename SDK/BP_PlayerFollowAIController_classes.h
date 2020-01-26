@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,16 +31,16 @@ public:
 	}
 
 
-	void STATIC_SkipCurrentAutoMove();
+	void SkipCurrentAutoMove();
 	void StopAutoMove();
-	void STATIC_UnPause();
-	void STATIC_Pause();
+	void UnPause();
+	void Pause();
 	void RequestAutoMove();
 	void UserConstructionScript();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void Initialize(class ABP_NPCLeadManager_C* LeadNPCAI, class ABP_S3_Character_Adventure_C* PlayerPawn);
 	void UnpossessAndDestroy();
-	void STATIC_ExecuteUbergraph_BP_PlayerFollowAIController(int EntryPoint);
+	void ExecuteUbergraph_BP_PlayerFollowAIController(int EntryPoint);
 };
 
 

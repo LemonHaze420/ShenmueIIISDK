@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_TalkReaction.BPC_TalkReaction_C.GetSubAnimCharacterBase
-// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USubABP_CharacterBase_C* AsSub_ABP_Character_Base       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,9 +36,9 @@ void UBPC_TalkReaction_C::GetSubAnimCharacterBase(class USubABP_CharacterBase_C*
 
 
 // Function BPC_TalkReaction.BPC_TalkReaction_C.OwnerStopAnimation
-// (Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UBPC_TalkReaction_C::STATIC_OwnerStopAnimation()
+void UBPC_TalkReaction_C::OwnerStopAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TalkReaction.BPC_TalkReaction_C.OwnerStopAnimation");
 
@@ -53,11 +53,11 @@ void UBPC_TalkReaction_C::STATIC_OwnerStopAnimation()
 
 
 // Function BPC_TalkReaction.BPC_TalkReaction_C.OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1
-// (Net, NetReliable, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TalkReaction_C::STATIC_OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1(class UObject* Loaded)
+void UBPC_TalkReaction_C::OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1(class UObject* Loaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TalkReaction.BPC_TalkReaction_C.OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1");
 
@@ -65,7 +65,6 @@ void UBPC_TalkReaction_C::STATIC_OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1(class
 	params.Loaded = Loaded;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,16 +73,15 @@ void UBPC_TalkReaction_C::STATIC_OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1(class
 
 
 // Function BPC_TalkReaction.BPC_TalkReaction_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Protected, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_TalkReaction_C::STATIC_ReceiveBeginPlay()
+void UBPC_TalkReaction_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TalkReaction.BPC_TalkReaction_C.ReceiveBeginPlay");
 
 	UBPC_TalkReaction_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +90,7 @@ void UBPC_TalkReaction_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_TalkReaction.BPC_TalkReaction_C.PlayReactionAnimation
-// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReactionId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          PlayRate                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -110,7 +108,6 @@ void UBPC_TalkReaction_C::PlayReactionAnimation(int ReactionId, float PlayRate, 
 	params.ReturnFlag = ReturnFlag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,7 +116,7 @@ void UBPC_TalkReaction_C::PlayReactionAnimation(int ReactionId, float PlayRate, 
 
 
 // Function BPC_TalkReaction.BPC_TalkReaction_C.ReceiveEndPlay
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -131,7 +128,6 @@ void UBPC_TalkReaction_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReas
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,7 +136,7 @@ void UBPC_TalkReaction_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReas
 
 
 // Function BPC_TalkReaction.BPC_TalkReaction_C.ExecuteUbergraph_BPC_TalkReaction
-// (Exec, Native, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -152,7 +148,6 @@ void UBPC_TalkReaction_C::ExecuteUbergraph_BPC_TalkReaction(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

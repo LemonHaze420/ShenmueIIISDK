@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.SetLocalizeInfoText
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ExploitsText                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 EarningsText                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UWBP_Fishing_ShopResult_C::STATIC_SetLocalizeInfoText(const struct FString& ExploitsText, const struct FString& EarningsText)
+void UWBP_Fishing_ShopResult_C::SetLocalizeInfoText(const struct FString& ExploitsText, const struct FString& EarningsText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.SetLocalizeInfoText");
 
@@ -28,7 +28,6 @@ void UWBP_Fishing_ShopResult_C::STATIC_SetLocalizeInfoText(const struct FString&
 	params.EarningsText = EarningsText;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,9 +36,9 @@ void UWBP_Fishing_ShopResult_C::STATIC_SetLocalizeInfoText(const struct FString&
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.DeleteAllFishData
-// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Fishing_ShopResult_C::STATIC_DeleteAllFishData()
+void UWBP_Fishing_ShopResult_C::DeleteAllFishData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.DeleteAllFishData");
 
@@ -54,14 +53,14 @@ void UWBP_Fishing_ShopResult_C::STATIC_DeleteAllFishData()
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.AddFishData
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ArgMainName                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 ArgSubName                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            ArgCm                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ArgGram0                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_ShopResult_C::STATIC_AddFishData(const struct FString& ArgMainName, const struct FString& ArgSubName, int ArgCm, int ArgGram0)
+void UWBP_Fishing_ShopResult_C::AddFishData(const struct FString& ArgMainName, const struct FString& ArgSubName, int ArgCm, int ArgGram0)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.AddFishData");
 
@@ -72,7 +71,6 @@ void UWBP_Fishing_ShopResult_C::STATIC_AddFishData(const struct FString& ArgMain
 	params.ArgGram0 = ArgGram0;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,7 +79,7 @@ void UWBP_Fishing_ShopResult_C::STATIC_AddFishData(const struct FString& ArgMain
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.GetLocalizeFishNameText
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -102,7 +100,7 @@ struct FText UWBP_Fishing_ShopResult_C::GetLocalizeFishNameText()
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.GetFishGramText
-// (Native, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -113,7 +111,6 @@ struct FText UWBP_Fishing_ShopResult_C::GetFishGramText()
 	UWBP_Fishing_ShopResult_C_GetFishGramText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,12 +121,12 @@ struct FText UWBP_Fishing_ShopResult_C::GetFishGramText()
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.SetImagePositionY
-// (Exec, Native, Static, NetMulticast, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UImage*                  ArgImage                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          ArgPosY                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_ShopResult_C::STATIC_SetImagePositionY(class UImage* ArgImage, float ArgPosY)
+void UWBP_Fishing_ShopResult_C::SetImagePositionY(class UImage* ArgImage, float ArgPosY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.SetImagePositionY");
 
@@ -138,7 +135,6 @@ void UWBP_Fishing_ShopResult_C::STATIC_SetImagePositionY(class UImage* ArgImage,
 	params.ArgPosY = ArgPosY;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,7 +143,7 @@ void UWBP_Fishing_ShopResult_C::STATIC_SetImagePositionY(class UImage* ArgImage,
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.GetFishScaleText
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -168,7 +164,7 @@ struct FText UWBP_Fishing_ShopResult_C::GetFishScaleText()
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.GetFishNameText
-// (NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -189,7 +185,7 @@ struct FText UWBP_Fishing_ShopResult_C::GetFishNameText()
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.Construct
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_Fishing_ShopResult_C::Construct()
 {
@@ -198,7 +194,6 @@ void UWBP_Fishing_ShopResult_C::Construct()
 	UWBP_Fishing_ShopResult_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -207,12 +202,12 @@ void UWBP_Fishing_ShopResult_C::Construct()
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.Tick
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_ShopResult_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_Fishing_ShopResult_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.Tick");
 
@@ -229,11 +224,11 @@ void UWBP_Fishing_ShopResult_C::STATIC_Tick(const struct FGeometry& MyGeometry, 
 
 
 // Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.ExecuteUbergraph_WBP_Fishing_ShopResult
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_ShopResult_C::STATIC_ExecuteUbergraph_WBP_Fishing_ShopResult(int EntryPoint)
+void UWBP_Fishing_ShopResult_C::ExecuteUbergraph_WBP_Fishing_ShopResult(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_ShopResult.WBP_Fishing_ShopResult_C.ExecuteUbergraph_WBP_Fishing_ShopResult");
 
@@ -241,7 +236,6 @@ void UWBP_Fishing_ShopResult_C::STATIC_ExecuteUbergraph_WBP_Fishing_ShopResult(i
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

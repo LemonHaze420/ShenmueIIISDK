@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ struct ABP_S3actionSelect_C_doCmd_TimeOver_Params
 // Function BP_S3actionSelect.BP_S3actionSelect_C.degreeToPadinput
 struct ABP_S3actionSelect_C_degreeToPadinput_Params
 {
-	float                                              Degree;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              degree;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EN_padSwitch>                          Input;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               isInput;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -58,7 +58,7 @@ struct ABP_S3actionSelect_C_doCmd_startTimer_Params
 struct ABP_S3actionSelect_C_doCmd_sendInput_Params
 {
 	TEnumAsByte<EN_padSwitch>                          Button;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               press;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Press;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_setText

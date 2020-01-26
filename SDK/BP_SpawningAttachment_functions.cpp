@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SpawningAttachment.BP_SpawningAttachment_C.GetStaticMeshComp
-// (Net, Exec, Native, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMeshComponent*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -25,7 +25,6 @@ class UStaticMeshComponent* ABP_SpawningAttachment_C::GetStaticMeshComp()
 	ABP_SpawningAttachment_C_GetStaticMeshComp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,11 +35,11 @@ class UStaticMeshComponent* ABP_SpawningAttachment_C::GetStaticMeshComp()
 
 
 // Function BP_SpawningAttachment.BP_SpawningAttachment_C.IsMeshVisibility
-// (NetReliable, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SpawningAttachment_C::STATIC_IsMeshVisibility()
+bool ABP_SpawningAttachment_C::IsMeshVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpawningAttachment.BP_SpawningAttachment_C.IsMeshVisibility");
 
@@ -57,7 +56,7 @@ bool ABP_SpawningAttachment_C::STATIC_IsMeshVisibility()
 
 
 // Function BP_SpawningAttachment.BP_SpawningAttachment_C.UserConstructionScript
-// (NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SpawningAttachment_C::UserConstructionScript()
 {
@@ -74,11 +73,11 @@ void ABP_SpawningAttachment_C::UserConstructionScript()
 
 
 // Function BP_SpawningAttachment.BP_SpawningAttachment_C.SetMeshVisibility
-// (Net, NetRequest, Native, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnable                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpawningAttachment_C::STATIC_SetMeshVisibility(bool bEnable)
+void ABP_SpawningAttachment_C::SetMeshVisibility(bool bEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpawningAttachment.BP_SpawningAttachment_C.SetMeshVisibility");
 
@@ -86,7 +85,6 @@ void ABP_SpawningAttachment_C::STATIC_SetMeshVisibility(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +93,7 @@ void ABP_SpawningAttachment_C::STATIC_SetMeshVisibility(bool bEnable)
 
 
 // Function BP_SpawningAttachment.BP_SpawningAttachment_C.ExecuteUbergraph_BP_SpawningAttachment
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,42 +28,6 @@ public:
 
 	bool Validate();
 	struct FString GetUrl();
-};
-
-
-// Class MediaAssets.BaseMediaSource
-// 0x0008 (0x0038 - 0x0030)
-class UBaseMediaSource : public UMediaSource
-{
-public:
-	struct FName                                       PlayerName;                                               // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MediaAssets.BaseMediaSource");
-		return ptr;
-	}
-
-};
-
-
-// Class MediaAssets.FileMediaSource
-// 0x0018 (0x0050 - 0x0038)
-class UFileMediaSource : public UBaseMediaSource
-{
-public:
-	struct FString                                     FilePath;                                                 // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               PrecacheFile;                                             // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MediaAssets.FileMediaSource");
-		return ptr;
-	}
-
-
-	void SetFilePath(const struct FString& Path);
 };
 
 
@@ -176,22 +140,19 @@ public:
 };
 
 
-// Class MediaAssets.MediaBlueprintFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UMediaBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+// Class MediaAssets.BaseMediaSource
+// 0x0008 (0x0038 - 0x0030)
+class UBaseMediaSource : public UMediaSource
 {
 public:
+	struct FName                                       PlayerName;                                               // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MediaAssets.MediaBlueprintFunctionLibrary");
+		static auto ptr = UObject::FindClass("Class MediaAssets.BaseMediaSource");
 		return ptr;
 	}
 
-
-	void EnumerateWebcamCaptureDevices(int Filter, TArray<struct FMediaCaptureDevice>* OutDevices);
-	void EnumerateVideoCaptureDevices(int Filter, TArray<struct FMediaCaptureDevice>* OutDevices);
-	void EnumerateAudioCaptureDevices(int Filter, TArray<struct FMediaCaptureDevice>* OutDevices);
 };
 
 
@@ -221,6 +182,34 @@ public:
 	bool AddUrl(const struct FString& URL);
 	bool AddFile(const struct FString& FilePath);
 	bool Add(class UMediaSource* MediaSource);
+};
+
+
+// Class MediaAssets.MediaSoundComponent
+// 0x00A0 (0x0660 - 0x05C0)
+class UMediaSoundComponent : public USynthComponent
+{
+public:
+	EMediaSoundChannels                                Channels;                                                 // 0x05C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x05C0(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	bool                                               DynamicRateAdjustment;                                    // 0x05C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x05C5(0x0003) MISSED OFFSET
+	float                                              RateAdjustmentFactor;                                     // 0x05C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FFloatRange                                 RateAdjustmentRange;                                      // 0x05CC(0x0010) (Edit)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x05DC(0x0004) MISSED OFFSET
+	class UMediaPlayer*                                MediaPlayer;                                              // 0x05E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x78];                                      // 0x05E8(0x0078) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MediaAssets.MediaSoundComponent");
+		return ptr;
+	}
+
+
+	void SetMediaPlayer(class UMediaPlayer* NewMediaPlayer);
+	class UMediaPlayer* GetMediaPlayer();
+	bool BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings);
 };
 
 
@@ -269,31 +258,19 @@ public:
 };
 
 
-// Class MediaAssets.MediaSoundComponent
-// 0x00A0 (0x0660 - 0x05C0)
-class UMediaSoundComponent : public USynthComponent
+// Class MediaAssets.StreamMediaSource
+// 0x0010 (0x0048 - 0x0038)
+class UStreamMediaSource : public UBaseMediaSource
 {
 public:
-	EMediaSoundChannels                                Channels;                                                 // 0x05C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x05C0(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	bool                                               DynamicRateAdjustment;                                    // 0x05C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x05C5(0x0003) MISSED OFFSET
-	float                                              RateAdjustmentFactor;                                     // 0x05C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FFloatRange                                 RateAdjustmentRange;                                      // 0x05CC(0x0010) (Edit)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x05DC(0x0004) MISSED OFFSET
-	class UMediaPlayer*                                MediaPlayer;                                              // 0x05E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x78];                                      // 0x05E8(0x0078) MISSED OFFSET
+	struct FString                                     StreamUrl;                                                // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MediaAssets.MediaSoundComponent");
+		static auto ptr = UObject::FindClass("Class MediaAssets.StreamMediaSource");
 		return ptr;
 	}
 
-
-	void SetMediaPlayer(class UMediaPlayer* NewMediaPlayer);
-	class UMediaPlayer* GetMediaPlayer();
-	bool BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings);
 };
 
 
@@ -314,19 +291,42 @@ public:
 };
 
 
-// Class MediaAssets.StreamMediaSource
-// 0x0010 (0x0048 - 0x0038)
-class UStreamMediaSource : public UBaseMediaSource
+// Class MediaAssets.MediaBlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UMediaBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	struct FString                                     StreamUrl;                                                // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MediaAssets.StreamMediaSource");
+		static auto ptr = UObject::FindClass("Class MediaAssets.MediaBlueprintFunctionLibrary");
 		return ptr;
 	}
 
+
+	void STATIC_EnumerateWebcamCaptureDevices(int Filter, TArray<struct FMediaCaptureDevice>* OutDevices);
+	void STATIC_EnumerateVideoCaptureDevices(int Filter, TArray<struct FMediaCaptureDevice>* OutDevices);
+	void STATIC_EnumerateAudioCaptureDevices(int Filter, TArray<struct FMediaCaptureDevice>* OutDevices);
+};
+
+
+// Class MediaAssets.FileMediaSource
+// 0x0018 (0x0050 - 0x0038)
+class UFileMediaSource : public UBaseMediaSource
+{
+public:
+	struct FString                                     FilePath;                                                 // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               PrecacheFile;                                             // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MediaAssets.FileMediaSource");
+		return ptr;
+	}
+
+
+	void SetFilePath(const struct FString& Path);
 };
 
 

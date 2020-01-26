@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SubtitlePlayer_DebugTextData.BP_SubtitlePlayer_DebugTextData_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SubtitlePlayer_DebugTextData_C::STATIC_UserConstructionScript()
+void ABP_SubtitlePlayer_DebugTextData_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer_DebugTextData.BP_SubtitlePlayer_DebugTextData_C.UserConstructionScript");
 
 	ABP_SubtitlePlayer_DebugTextData_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,14 +31,14 @@ void ABP_SubtitlePlayer_DebugTextData_C::STATIC_UserConstructionScript()
 
 
 // Function BP_SubtitlePlayer_DebugTextData.BP_SubtitlePlayer_DebugTextData_C.Play
-// (Static, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsAutoStop                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_DebugTextData_C::STATIC_Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop)
+void ABP_SubtitlePlayer_DebugTextData_C::Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer_DebugTextData.BP_SubtitlePlayer_DebugTextData_C.Play");
 
@@ -58,7 +57,7 @@ void ABP_SubtitlePlayer_DebugTextData_C::STATIC_Play(const struct FName& Label, 
 
 
 // Function BP_SubtitlePlayer_DebugTextData.BP_SubtitlePlayer_DebugTextData_C.ExecuteUbergraph_BP_SubtitlePlayer_DebugTextData
-// (NetReliable, NetResponse, NetMulticast, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

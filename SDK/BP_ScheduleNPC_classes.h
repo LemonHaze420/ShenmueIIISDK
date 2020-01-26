@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,67 +51,67 @@ public:
 	}
 
 
-	ES3HelpPriority STATIC_GetHelpPriority();
-	struct FName STATIC_GetHelpName();
+	ES3HelpPriority GetHelpPriority();
+	struct FName GetHelpName();
 	bool IsActivateHelp();
 	bool RegisterHelp(ES3HelpRegisterTiming Timing);
-	bool STATIC_UnregisterHelp(ES3HelpRegisterTiming Timing);
-	int STATIC_GetPriority();
+	bool UnregisterHelp(ES3HelpRegisterTiming Timing);
+	int GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
-	void STATIC_CheckRewardNotice();
+	void CheckRewardNotice();
 	void IsDisableFootIK(bool* bDisable);
-	void STATIC_DestroyCameraCollisionSub();
-	void STATIC_CreateCameraCollisionSub(float Radius, float HalfHeight);
-	void STATIC_IsLookAtBody(bool* Enable);
-	void STATIC_SetLookAtBody(bool Enable);
-	void STATIC_ResetCloseEye();
-	void STATIC_SetCloseEye(bool Enable);
-	bool STATIC_IsTalking();
-	void STATIC_StairsIgnoreCollision(bool bIgnore);
-	void STATIC_GetEnableIK(bool* bIKEnabled);
+	void DestroyCameraCollisionSub();
+	void CreateCameraCollisionSub(float Radius, float HalfHeight);
+	void IsLookAtBody(bool* Enable);
+	void SetLookAtBody(bool Enable);
+	void ResetCloseEye();
+	void SetCloseEye(bool Enable);
+	bool IsTalking();
+	void StairsIgnoreCollision(bool bIgnore);
+	void GetEnableIK(bool* bIKEnabled);
 	void CalcCharaHeight();
-	void STATIC_StairsSetting(bool bIsEnable);
+	void StairsSetting(bool bIsEnable);
 	void UpdateStairs();
-	void STATIC_SetupHaveItem();
-	void STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy);
+	void SetupHaveItem();
+	void SetEnableIK(bool bInIKEnabled, bool* dummy);
 	bool ReturnOutOfWorld();
-	void STATIC_RemoveDebugTraceComponent();
+	void RemoveDebugTraceComponent();
 	void AddDebugTraceComponent();
 	void UpdateDoor();
 	void UpdateFootIK(float DeltaSeconds);
-	void STATIC_CheckNamePlate();
+	void CheckNamePlate();
 	void UpdateDebug();
-	void STATIC_CheckCanUseDoor(bool* IsUseDoor);
+	void CheckCanUseDoor(bool* IsUseDoor);
 	void GetS3PathFollowingComponent(class US3PathFollowingComponent** AsS3Path_Following_Component);
-	void STATIC_AddTurnAroundComponent(class UBPC_TurnAround_C** Component);
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_OpenDoor();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_OnFinishedTurn(class UBPC_TurnAround_C* SelfTurnAroundComponent);
-	void STATIC_OnNPCInitialized();
-	void STATIC_OnDoorAreaOutsideBeginOverlap(class AS3GimmickOpenDoor* Door);
-	void STATIC_OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Door);
-	void STATIC_OnDoorAreaBeginOverlap(class AS3GimmickOpenDoor* Door);
-	void STATIC_OnFriendStop(class AS3Character* Me, class AS3Character* MyFriend, float Friendliness);
-	void STATIC_StartCharaFadeOut(class AActor* Executor, float FadeTime);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_StartCharaFadeIn(class AActor* Executor, float FadeTime);
-	void STATIC_OnBeginOverlapStairs(class ABP_S3StaircaseBase_C* Staircase);
-	void STATIC_OnEndOverlapStairs(class ABP_S3StaircaseBase_C* Staircase);
-	void STATIC_DecideDetectAction(ES3ActionIconType Type);
-	void STATIC_OnNPCUninitialized();
-	void STATIC_OnBeginStairs(class ABP_S3StaircaseBase_C* Staircase);
-	void STATIC_StairsPreSetting(class AActor* StairActor);
-	void STATIC_OnEndStairs();
-	void STATIC_OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
-	void STATIC_OnTalkStart(class US3TalkComponent* TalkComponent);
-	void STATIC_OnStartStairs();
-	void STATIC_Screen_Player();
-	void STATIC_Screen_NPC();
-	void STATIC_SetAttachObjectHiddenInGame(bool bNewHidden);
-	void STATIC_CreateCameraCollision(float Radius, float HalfHeight);
-	void STATIC_DestroyCameraCollision();
+	void AddTurnAroundComponent(class UBPC_TurnAround_C** Component);
+	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds);
+	void OpenDoor();
+	void ReceiveBeginPlay();
+	void OnFinishedTurn(class UBPC_TurnAround_C* SelfTurnAroundComponent);
+	void OnNPCInitialized();
+	void OnDoorAreaOutsideBeginOverlap(class AS3GimmickOpenDoor* Door);
+	void OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Door);
+	void OnDoorAreaBeginOverlap(class AS3GimmickOpenDoor* Door);
+	void OnFriendStop(class AS3Character* Me, class AS3Character* MyFriend, float Friendliness);
+	void StartCharaFadeOut(class AActor* Executor, float FadeTime);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void StartCharaFadeIn(class AActor* Executor, float FadeTime);
+	void OnBeginOverlapStairs(class ABP_S3StaircaseBase_C* Staircase);
+	void OnEndOverlapStairs(class ABP_S3StaircaseBase_C* Staircase);
+	void DecideDetectAction(ES3ActionIconType Type);
+	void OnNPCUninitialized();
+	void OnBeginStairs(class ABP_S3StaircaseBase_C* Staircase);
+	void StairsPreSetting(class AActor* StairActor);
+	void OnEndStairs();
+	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
+	void OnTalkStart(class US3TalkComponent* TalkComponent);
+	void OnStartStairs();
+	void Screen_Player();
+	void Screen_NPC();
+	void SetAttachObjectHiddenInGame(bool bNewHidden);
+	void CreateCameraCollision(float Radius, float HalfHeight);
+	void DestroyCameraCollision();
 	void ExecuteUbergraph_BP_ScheduleNPC(int EntryPoint);
 };
 

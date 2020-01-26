@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.AllReset
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3HelpWindow_C::STATIC_AllReset()
+void Uwgt_S3HelpWindow_C::AllReset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.AllReset");
 
@@ -31,7 +31,7 @@ void Uwgt_S3HelpWindow_C::STATIC_AllReset()
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.AddPage
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Private, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -53,11 +53,11 @@ void Uwgt_S3HelpWindow_C::AddPage(int Index, int Add)
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.AddImg
-// (NetReliable, Native, Event, Static, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void Uwgt_S3HelpWindow_C::STATIC_AddImg(const struct FString& ID)
+void Uwgt_S3HelpWindow_C::AddImg(const struct FString& ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.AddImg");
 
@@ -65,7 +65,6 @@ void Uwgt_S3HelpWindow_C::STATIC_AddImg(const struct FString& ID)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +73,7 @@ void Uwgt_S3HelpWindow_C::STATIC_AddImg(const struct FString& ID)
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.AddCategory
-// (NetRequest, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -98,11 +97,11 @@ void Uwgt_S3HelpWindow_C::AddCategory(const struct FString& Name, const struct F
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.SetScroll
-// (Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SelectCategoryIndex            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3HelpWindow_C::STATIC_SetScroll(int SelectCategoryIndex)
+void Uwgt_S3HelpWindow_C::SetScroll(int SelectCategoryIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.SetScroll");
 
@@ -110,7 +109,6 @@ void Uwgt_S3HelpWindow_C::STATIC_SetScroll(int SelectCategoryIndex)
 	params.SelectCategoryIndex = SelectCategoryIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,11 +117,11 @@ void Uwgt_S3HelpWindow_C::STATIC_SetScroll(int SelectCategoryIndex)
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.ChgHelpImage
-// (NetRequest, Event, Static, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3HelpWindow_C::STATIC_ChgHelpImage(int Index)
+void Uwgt_S3HelpWindow_C::ChgHelpImage(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.ChgHelpImage");
 
@@ -139,12 +137,12 @@ void Uwgt_S3HelpWindow_C::STATIC_ChgHelpImage(int Index)
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.PrevScroll
-// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          NextScrollVal                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SelectCategoryIndex            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3HelpWindow_C::STATIC_PrevScroll(float NextScrollVal, int SelectCategoryIndex)
+void Uwgt_S3HelpWindow_C::PrevScroll(float NextScrollVal, int SelectCategoryIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.PrevScroll");
 
@@ -161,12 +159,12 @@ void Uwgt_S3HelpWindow_C::STATIC_PrevScroll(float NextScrollVal, int SelectCateg
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.NextScroll
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          NextScrollVal                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SelectCategoryIndex            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3HelpWindow_C::STATIC_NextScroll(float NextScrollVal, int SelectCategoryIndex)
+void Uwgt_S3HelpWindow_C::NextScroll(float NextScrollVal, int SelectCategoryIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.NextScroll");
 
@@ -175,7 +173,6 @@ void Uwgt_S3HelpWindow_C::STATIC_NextScroll(float NextScrollVal, int SelectCateg
 	params.SelectCategoryIndex = SelectCategoryIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -184,9 +181,9 @@ void Uwgt_S3HelpWindow_C::STATIC_NextScroll(float NextScrollVal, int SelectCateg
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.PlayCloseAnime
-// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3HelpWindow_C::STATIC_PlayCloseAnime()
+void Uwgt_S3HelpWindow_C::PlayCloseAnime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.PlayCloseAnime");
 
@@ -201,9 +198,9 @@ void Uwgt_S3HelpWindow_C::STATIC_PlayCloseAnime()
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.PlayOpenAnime
-// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3HelpWindow_C::STATIC_PlayOpenAnime()
+void Uwgt_S3HelpWindow_C::PlayOpenAnime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.PlayOpenAnime");
 
@@ -218,11 +215,11 @@ void Uwgt_S3HelpWindow_C::STATIC_PlayOpenAnime()
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.OnLoaded_6E1564824F630812B0409FA66A36D2DC
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3HelpWindow_C::STATIC_OnLoaded_6E1564824F630812B0409FA66A36D2DC(class UObject* Loaded)
+void Uwgt_S3HelpWindow_C::OnLoaded_6E1564824F630812B0409FA66A36D2DC(class UObject* Loaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.OnLoaded_6E1564824F630812B0409FA66A36D2DC");
 
@@ -230,7 +227,6 @@ void Uwgt_S3HelpWindow_C::STATIC_OnLoaded_6E1564824F630812B0409FA66A36D2DC(class
 	params.Loaded = Loaded;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -239,9 +235,9 @@ void Uwgt_S3HelpWindow_C::STATIC_OnLoaded_6E1564824F630812B0409FA66A36D2DC(class
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.Construct
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_S3HelpWindow_C::STATIC_Construct()
+void Uwgt_S3HelpWindow_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.Construct");
 
@@ -256,7 +252,7 @@ void Uwgt_S3HelpWindow_C::STATIC_Construct()
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.Tick
-// (Net, Exec, Native, NetResponse, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -270,7 +266,6 @@ void Uwgt_S3HelpWindow_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -279,9 +274,9 @@ void Uwgt_S3HelpWindow_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
-void Uwgt_S3HelpWindow_C::STATIC_BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3HelpWindow_C::BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -296,9 +291,9 @@ void Uwgt_S3HelpWindow_C::STATIC_BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWid
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintEvent)
 
-void Uwgt_S3HelpWindow_C::STATIC_BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3HelpWindow_C::BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -313,16 +308,15 @@ void Uwgt_S3HelpWindow_C::STATIC_BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWi
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.SetTexture
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3HelpWindow_C::STATIC_SetTexture()
+void Uwgt_S3HelpWindow_C::SetTexture()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.SetTexture");
 
 	Uwgt_S3HelpWindow_C_SetTexture_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -331,11 +325,11 @@ void Uwgt_S3HelpWindow_C::STATIC_SetTexture()
 
 
 // Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.ExecuteUbergraph_wgt_S3HelpWindow
-// (NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3HelpWindow_C::STATIC_ExecuteUbergraph_wgt_S3HelpWindow(int EntryPoint)
+void Uwgt_S3HelpWindow_C::ExecuteUbergraph_wgt_S3HelpWindow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpWindow.wgt_S3HelpWindow_C.ExecuteUbergraph_wgt_S3HelpWindow");
 

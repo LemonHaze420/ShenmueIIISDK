@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,22 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
-
-// Class MediaCompositing.MovieSceneMediaTrack
-// 0x0010 (0x0068 - 0x0058)
-class UMovieSceneMediaTrack : public UMovieSceneNameableTrack
-{
-public:
-	TArray<class UMovieSceneSection*>                  MediaSections;                                            // 0x0058(0x0010) (ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaTrack");
-		return ptr;
-	}
-
-};
-
 
 // Class MediaCompositing.MovieSceneMediaSection
 // 0x0028 (0x0108 - 0x00E0)
@@ -41,6 +25,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaSection");
+		return ptr;
+	}
+
+};
+
+
+// Class MediaCompositing.MovieSceneMediaTrack
+// 0x0010 (0x0068 - 0x0058)
+class UMovieSceneMediaTrack : public UMovieSceneNameableTrack
+{
+public:
+	TArray<class UMovieSceneSection*>                  MediaSections;                                            // 0x0058(0x0010) (ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaTrack");
 		return ptr;
 	}
 

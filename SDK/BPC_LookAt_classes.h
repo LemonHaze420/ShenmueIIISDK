@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -78,18 +78,18 @@ public:
 	}
 
 
-	void STATIC_GetRandomAnimEyesTarget(float* Target);
-	void STATIC_UpdateAnimEyeRotation();
-	bool STATIC_IsDebugLog();
+	void GetRandomAnimEyesTarget(float* Target);
+	void UpdateAnimEyeRotation();
+	bool IsDebugLog();
 	bool IsWasRecentlyRenderedOwner();
-	void STATIC_IsProcessingLookAt(bool* IsProcessing);
-	void STATIC_GetLookAtEyesLocation(struct FVector* R, struct FVector* L);
+	void IsProcessingLookAt(bool* IsProcessing);
+	void GetLookAtEyesLocation(struct FVector* R, struct FVector* L);
 	void GetTargetLocation(bool* bSuccess, struct FVector* TargetLocation);
 	void Update();
-	void STATIC_GetTarget(class AActor** TargetActor);
+	void GetTarget(class AActor** TargetActor);
 	void SetTarget(class AActor* Actor);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_Init();
+	void ReceiveBeginPlay();
+	void Init();
 	void ExecuteUbergraph_BPC_LookAt(int EntryPoint);
 };
 

@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,7 @@ struct Uwgt_SkillEditorSetSelector_C_PlayArrowAnim_Params
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.SetButtonImage
 struct Uwgt_SkillEditorSetSelector_C_SetButtonImage_Params
 {
-	bool                                               Auto;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               auto;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.SetSkillSetIndex

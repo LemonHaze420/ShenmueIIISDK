@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameDebugStandaloneTalkScript.BPC_MiniGameDebugStandaloneTalkScript_C.EnableDebugTalkScript
-// (Exec, Native, Static, MulticastDelegate, Public, Private, Delegate, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameDebugStandaloneTalkScript_C::STATIC_EnableDebugTalkScript()
+void UBPC_MiniGameDebugStandaloneTalkScript_C::EnableDebugTalkScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameDebugStandaloneTalkScript.BPC_MiniGameDebugStandaloneTalkScript_C.EnableDebugTalkScript");
 
 	UBPC_MiniGameDebugStandaloneTalkScript_C_EnableDebugTalkScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,16 +31,15 @@ void UBPC_MiniGameDebugStandaloneTalkScript_C::STATIC_EnableDebugTalkScript()
 
 
 // Function BPC_MiniGameDebugStandaloneTalkScript.BPC_MiniGameDebugStandaloneTalkScript_C.ReceiveBeginPlay
-// (Exec, Native, NetResponse, Static, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_MiniGameDebugStandaloneTalkScript_C::STATIC_ReceiveBeginPlay()
+void UBPC_MiniGameDebugStandaloneTalkScript_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameDebugStandaloneTalkScript.BPC_MiniGameDebugStandaloneTalkScript_C.ReceiveBeginPlay");
 
 	UBPC_MiniGameDebugStandaloneTalkScript_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,11 +48,11 @@ void UBPC_MiniGameDebugStandaloneTalkScript_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_MiniGameDebugStandaloneTalkScript.BPC_MiniGameDebugStandaloneTalkScript_C.ExecuteUbergraph_BPC_MiniGameDebugStandaloneTalkScript
-// (Event, Static, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameDebugStandaloneTalkScript_C::STATIC_ExecuteUbergraph_BPC_MiniGameDebugStandaloneTalkScript(int EntryPoint)
+void UBPC_MiniGameDebugStandaloneTalkScript_C::ExecuteUbergraph_BPC_MiniGameDebugStandaloneTalkScript(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameDebugStandaloneTalkScript.BPC_MiniGameDebugStandaloneTalkScript_C.ExecuteUbergraph_BPC_MiniGameDebugStandaloneTalkScript");
 

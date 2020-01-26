@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,12 +52,12 @@ public:
 
 	bool IsLowEnergy();
 	void SelectLowEnergyMessageList(TArray<struct FName>* Array);
-	void STATIC_TryStartEatEvent(bool* Starting);
+	void TryStartEatEvent(bool* Starting);
 	void TryMessageLowEnergyStatus();
 	void DrainEnergyByRunningTick(float DeltaSeconds);
-	void STATIC_RegerateEnergy(float DeltaSeconds);
+	void RegerateEnergy(float DeltaSeconds);
 	void DrainEnergyByRunning();
-	void STATIC_Setup(class AS3GameTimeManager* TimeMan);
+	void Setup(class AS3GameTimeManager* TimeMan);
 	void DrainEnergyByTime();
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
@@ -69,7 +69,7 @@ public:
 	void ReenableLowEnergyMessage();
 	void StartMessageReenableTimer();
 	void DrainRunEnergy();
-	void STATIC_ExecuteUbergraph_BP_S3EnergyManager(int EntryPoint);
+	void ExecuteUbergraph_BP_S3EnergyManager(int EntryPoint);
 };
 
 

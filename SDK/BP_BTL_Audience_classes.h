@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,17 +38,17 @@ public:
 	}
 
 
-	struct FVector STATIC_CalcCenter();
-	void STATIC_PlayRandomCenterReaction(TArray<class USoundAtomCue*>* Sounds);
-	void STATIC_PlayReaction(TArray<class USoundAtomCue*>* Sounds);
-	bool STATIC_IsActive();
-	void STATIC_PlaySurroundSoundReactions(TArray<class USoundAtomCue*>* Sounds);
+	struct FVector CalcCenter();
+	void PlayRandomCenterReaction(TArray<class USoundAtomCue*>* Sounds);
+	void PlayReaction(TArray<class USoundAtomCue*>* Sounds);
+	bool IsActive();
+	void PlaySurroundSoundReactions(TArray<class USoundAtomCue*>* Sounds);
 	void SetActive(bool Active);
-	void STATIC_ReactToHit();
-	void STATIC_ReactToKO();
+	void ReactToHit();
+	void ReactToKO();
 	void UserConstructionScript();
-	void STATIC_StartCooldownHit();
-	void STATIC_StartCooldownKO();
+	void StartCooldownHit();
+	void StartCooldownKO();
 	void ExecuteUbergraph_BP_BTL_Audience(int EntryPoint);
 };
 

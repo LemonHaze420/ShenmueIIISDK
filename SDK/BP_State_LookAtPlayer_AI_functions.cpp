@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtPlayer_AI.BP_State_LookAtPlayer_AI_C.SetupRandomParam
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBP_State_LookAtPlayer_AI_C::SetupRandomParam()
 {
@@ -23,7 +23,6 @@ void UBP_State_LookAtPlayer_AI_C::SetupRandomParam()
 	UBP_State_LookAtPlayer_AI_C_SetupRandomParam_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,12 +31,12 @@ void UBP_State_LookAtPlayer_AI_C::SetupRandomParam()
 
 
 // Function BP_State_LookAtPlayer_AI.BP_State_LookAtPlayer_AI_C.StateExit
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtPlayer_AI_C::STATIC_StateExit(float Delta, bool* bProcessing)
+void UBP_State_LookAtPlayer_AI_C::StateExit(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtPlayer_AI.BP_State_LookAtPlayer_AI_C.StateExit");
 
@@ -56,7 +55,7 @@ void UBP_State_LookAtPlayer_AI_C::STATIC_StateExit(float Delta, bool* bProcessin
 
 
 // Function BP_State_LookAtPlayer_AI.BP_State_LookAtPlayer_AI_C.StateUpdate
-// (Event, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -80,12 +79,12 @@ void UBP_State_LookAtPlayer_AI_C::StateUpdate(float Delta, bool* bDummy)
 
 
 // Function BP_State_LookAtPlayer_AI.BP_State_LookAtPlayer_AI_C.StateEnter
-// (Net, NetReliable, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtPlayer_AI_C::STATIC_StateEnter(float Delta, bool* bProcessing)
+void UBP_State_LookAtPlayer_AI_C::StateEnter(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtPlayer_AI.BP_State_LookAtPlayer_AI_C.StateEnter");
 

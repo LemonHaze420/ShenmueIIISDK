@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -59,9 +59,9 @@ public:
 	void CollectActors();
 	void SetSetting(class AActor* Actor);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_PlayBGMFromCue();
-	void STATIC_Event_OnChangePlayerCtrl(class APlayerController* PlayerController);
+	void ReceiveBeginPlay();
+	void PlayBGMFromCue();
+	void Event_OnChangePlayerCtrl(class APlayerController* PlayerController);
 	void ExecuteUbergraph_BP_S3AttentionManager(int EntryPoint);
 };
 

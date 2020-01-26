@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.ModPlayerForTeleport
-// (Net, NetReliable, NetMulticast, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ToTeleport                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBP_Gimmick_warpPortalComp_C::ModPlayerForTeleport(bool ToTeleport)
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.FadePlayer
-// (NetReliable, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Fade                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,11 +54,11 @@ void UBP_Gimmick_warpPortalComp_C::FadePlayer(bool Fade)
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.SetPortalTransform
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform              Transform                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBP_Gimmick_warpPortalComp_C::STATIC_SetPortalTransform(const struct FTransform& Transform)
+void UBP_Gimmick_warpPortalComp_C::SetPortalTransform(const struct FTransform& Transform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.SetPortalTransform");
 
@@ -66,7 +66,6 @@ void UBP_Gimmick_warpPortalComp_C::STATIC_SetPortalTransform(const struct FTrans
 	params.Transform = Transform;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,18 +74,17 @@ void UBP_Gimmick_warpPortalComp_C::STATIC_SetPortalTransform(const struct FTrans
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.GetPortalTransform
-// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FTransform              Transform                      (Parm, OutParm, IsPlainOldData)
 
-void UBP_Gimmick_warpPortalComp_C::STATIC_GetPortalTransform(struct FTransform* Transform)
+void UBP_Gimmick_warpPortalComp_C::GetPortalTransform(struct FTransform* Transform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.GetPortalTransform");
 
 	UBP_Gimmick_warpPortalComp_C_GetPortalTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,12 +96,12 @@ void UBP_Gimmick_warpPortalComp_C::STATIC_GetPortalTransform(struct FTransform* 
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.isAvailable(player)
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Gimmick_warpPortalComp_C::STATIC_isAvailable_player_(class AActor* OtherActor, bool* Result)
+void UBP_Gimmick_warpPortalComp_C::isAvailable_player_(class AActor* OtherActor, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.isAvailable(player)");
 
@@ -111,7 +109,6 @@ void UBP_Gimmick_warpPortalComp_C::STATIC_isAvailable_player_(class AActor* Othe
 	params.OtherActor = OtherActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,16 +120,15 @@ void UBP_Gimmick_warpPortalComp_C::STATIC_isAvailable_player_(class AActor* Othe
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.ReceiveBeginPlay
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void UBP_Gimmick_warpPortalComp_C::STATIC_ReceiveBeginPlay()
+void UBP_Gimmick_warpPortalComp_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.ReceiveBeginPlay");
 
 	UBP_Gimmick_warpPortalComp_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,16 +137,15 @@ void UBP_Gimmick_warpPortalComp_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.ReturnPlayerState
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_Gimmick_warpPortalComp_C::STATIC_ReturnPlayerState()
+void UBP_Gimmick_warpPortalComp_C::ReturnPlayerState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.ReturnPlayerState");
 
 	UBP_Gimmick_warpPortalComp_C_ReturnPlayerState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -159,7 +154,7 @@ void UBP_Gimmick_warpPortalComp_C::STATIC_ReturnPlayerState()
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.onTeleport
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -171,7 +166,6 @@ void UBP_Gimmick_warpPortalComp_C::onTeleport(class AActor* OtherActor)
 	params.OtherActor = OtherActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,7 +174,7 @@ void UBP_Gimmick_warpPortalComp_C::onTeleport(class AActor* OtherActor)
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.ReceiveEndPlay
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -192,7 +186,6 @@ void UBP_Gimmick_warpPortalComp_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -201,11 +194,11 @@ void UBP_Gimmick_warpPortalComp_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.ExecuteUbergraph_BP_Gimmick_warpPortalComp
-// (Net, NetReliable, Native, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Gimmick_warpPortalComp_C::STATIC_ExecuteUbergraph_BP_Gimmick_warpPortalComp(int EntryPoint)
+void UBP_Gimmick_warpPortalComp_C::ExecuteUbergraph_BP_Gimmick_warpPortalComp(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.ExecuteUbergraph_BP_Gimmick_warpPortalComp");
 
@@ -213,7 +206,6 @@ void UBP_Gimmick_warpPortalComp_C::STATIC_ExecuteUbergraph_BP_Gimmick_warpPortal
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,11 +214,11 @@ void UBP_Gimmick_warpPortalComp_C::STATIC_ExecuteUbergraph_BP_Gimmick_warpPortal
 
 
 // Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.teleport__DelegateSignature
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Gimmick_warpPortalComp_C::STATIC_teleport__DelegateSignature(class AActor* OtherActor)
+void UBP_Gimmick_warpPortalComp_C::teleport__DelegateSignature(class AActor* OtherActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gimmick_warpPortalComp.BP_Gimmick_warpPortalComp_C.teleport__DelegateSignature");
 

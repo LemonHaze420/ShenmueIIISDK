@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_GetPlayerBattleDifficultyParams
-// (Net, Exec, NetMulticast, Delegate, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_BattleDifficultyParams Out_Row                        (Parm, OutParm)
 
-void UBPF_BattleDifficulty_C::BPF_GetPlayerBattleDifficultyParams(class UObject* __WorldContext, struct FST_BattleDifficultyParams* Out_Row)
+void UBPF_BattleDifficulty_C::STATIC_BPF_GetPlayerBattleDifficultyParams(class UObject* __WorldContext, struct FST_BattleDifficultyParams* Out_Row)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_GetPlayerBattleDifficultyParams");
 
@@ -38,7 +38,7 @@ void UBPF_BattleDifficulty_C::BPF_GetPlayerBattleDifficultyParams(class UObject*
 
 
 // Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_StepPlayerBattleDifficulty
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, NetClient, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EUpOrDown>         Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,7 +52,6 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_StepPlayerBattleDifficulty(TEnumAsByte<
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +60,7 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_StepPlayerBattleDifficulty(TEnumAsByte<
 
 
 // Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_SetPlayerBattleDifficulty
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EBattleDifficulty> Difficulty                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -75,7 +74,6 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_SetPlayerBattleDifficulty(TEnumAsByte<E
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,12 +82,12 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_SetPlayerBattleDifficulty(TEnumAsByte<E
 
 
 // Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_GetPlayerBattleDifficulty
-// (Net, Exec, Native, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EBattleDifficulty> Difficulty                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_BattleDifficulty_C::BPF_GetPlayerBattleDifficulty(class UObject* __WorldContext, TEnumAsByte<EBattleDifficulty>* Difficulty)
+void UBPF_BattleDifficulty_C::STATIC_BPF_GetPlayerBattleDifficulty(class UObject* __WorldContext, TEnumAsByte<EBattleDifficulty>* Difficulty)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_GetPlayerBattleDifficulty");
 
@@ -97,7 +95,6 @@ void UBPF_BattleDifficulty_C::BPF_GetPlayerBattleDifficulty(class UObject* __Wor
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

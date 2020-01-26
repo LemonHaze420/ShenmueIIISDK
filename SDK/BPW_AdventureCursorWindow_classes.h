@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,19 +35,19 @@ public:
 	}
 
 
-	void STATIC_DisableSoftwareCursor();
-	void STATIC_OnMouseUp();
-	void STATIC_OnMouseDown();
+	void DisableSoftwareCursor();
+	void OnMouseUp();
+	void OnMouseDown();
 	void UpdateSoftwareCursor(struct FVector2D* MouseScreenSpace, struct FVector2D* VirtualAxii, bool* JoystickOn, bool* SetMousePosition);
-	bool STATIC_CanTrapMouse();
+	bool CanTrapMouse();
 	struct FVector2D ConstrainViewportMousePosition(const struct FVector2D& Location);
-	void STATIC_EnableVirtualJoystick(bool Enable);
-	void STATIC_SetMouseCursorProperties(bool EnableWalkMode);
-	void STATIC_GetConstrainRect(struct FVector2D* Min, struct FVector2D* Max);
+	void EnableVirtualJoystick(bool Enable);
+	void SetMouseCursorProperties(bool EnableWalkMode);
+	void GetConstrainRect(struct FVector2D* Min, struct FVector2D* Max);
 	struct FEventReply ConstrainAbsoluteMousePosition(const struct FVector2D& Location, struct FEventReply* EventReply);
-	void STATIC_Construct();
+	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_ExecuteUbergraph_BPW_AdventureCursorWindow(int EntryPoint);
+	void ExecuteUbergraph_BPW_AdventureCursorWindow(int EntryPoint);
 };
 
 

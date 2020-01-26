@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,21 +39,21 @@ public:
 
 
 	void GetTalkComponent(class UBPC_S3_TalkComponent_C** BPC_S3_TalkComponent);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void TelStart();
 	void TelEnd();
 	void TalkStart();
 	void CallStart();
 	void CallEnd();
 	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
-	void STATIC_ExecuteUbergraph_BP_Chara_WorldTel2(int EntryPoint);
-	void STATIC_ED_ButtonPush__DelegateSignature();
-	void STATIC_ED_CallEnd__DelegateSignature();
-	void STATIC_ED_CallStart__DelegateSignature();
-	void STATIC_ED_TalkFinish__DelegateSignature();
-	void STATIC_ED_TalkStart__DelegateSignature();
-	void STATIC_ED_TelEnd__DelegateSignature();
-	void STATIC_ED_TelStart__DelegateSignature();
+	void ExecuteUbergraph_BP_Chara_WorldTel2(int EntryPoint);
+	void ED_ButtonPush__DelegateSignature();
+	void ED_CallEnd__DelegateSignature();
+	void ED_CallStart__DelegateSignature();
+	void ED_TalkFinish__DelegateSignature();
+	void ED_TalkStart__DelegateSignature();
+	void ED_TelEnd__DelegateSignature();
+	void ED_TelStart__DelegateSignature();
 };
 
 

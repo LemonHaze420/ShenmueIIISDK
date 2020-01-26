@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C._dbgPrint
-// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_timer_C::STATIC__dbgPrint()
+void Uwgt_S3actionSelect_timer_C::_dbgPrint()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C._dbgPrint");
 
 	Uwgt_S3actionSelect_timer_C__dbgPrint_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void Uwgt_S3actionSelect_timer_C::STATIC__dbgPrint()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.registTimerEvent
-// (Net, Exec, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_timer_C::registTimerEvent()
 {
@@ -49,7 +48,7 @@ void Uwgt_S3actionSelect_timer_C::registTimerEvent()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.doCmd_startTimer
-// (Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_timer_C::doCmd_startTimer()
 {
@@ -58,7 +57,6 @@ void Uwgt_S3actionSelect_timer_C::doCmd_startTimer()
 	Uwgt_S3actionSelect_timer_C_doCmd_startTimer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -67,7 +65,7 @@ void Uwgt_S3actionSelect_timer_C::doCmd_startTimer()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.updateProgress
-// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_timer_C::updateProgress()
 {
@@ -84,7 +82,7 @@ void Uwgt_S3actionSelect_timer_C::updateProgress()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.doCmd_resetTimer
-// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -96,7 +94,6 @@ void Uwgt_S3actionSelect_timer_C::doCmd_resetTimer(float Time)
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,7 +102,7 @@ void Uwgt_S3actionSelect_timer_C::doCmd_resetTimer(float Time)
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.doCmd_pauseTimer
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -125,7 +122,7 @@ void Uwgt_S3actionSelect_timer_C::doCmd_pauseTimer(bool Enable)
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.getProgress(percent)
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Progress                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -147,18 +144,17 @@ void Uwgt_S3actionSelect_timer_C::getProgress_percent_(float* Progress)
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.getProgress(second)
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Second                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_getProgress_second_(float* Second)
+void Uwgt_S3actionSelect_timer_C::getProgress_second_(float* Second)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.getProgress(second)");
 
 	Uwgt_S3actionSelect_timer_C_getProgress_second__Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,16 +166,15 @@ void Uwgt_S3actionSelect_timer_C::STATIC_getProgress_second_(float* Second)
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.doCmd_cancel
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_doCmd_cancel()
+void Uwgt_S3actionSelect_timer_C::doCmd_cancel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.doCmd_cancel");
 
 	Uwgt_S3actionSelect_timer_C_doCmd_cancel_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -188,9 +183,9 @@ void Uwgt_S3actionSelect_timer_C::STATIC_doCmd_cancel()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.doCmd_fadeOut
-// (NetReliable, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_doCmd_fadeOut()
+void Uwgt_S3actionSelect_timer_C::doCmd_fadeOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.doCmd_fadeOut");
 
@@ -205,16 +200,15 @@ void Uwgt_S3actionSelect_timer_C::STATIC_doCmd_fadeOut()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.doCmd_fadeIn
-// (Net, NetRequest, Exec, Native, Event, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_doCmd_fadeIn()
+void Uwgt_S3actionSelect_timer_C::doCmd_fadeIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.doCmd_fadeIn");
 
 	Uwgt_S3actionSelect_timer_C_doCmd_fadeIn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -223,11 +217,11 @@ void Uwgt_S3actionSelect_timer_C::STATIC_doCmd_fadeIn()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.updateOpacity(imageTimer)
-// (Net, Exec, Event, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Opacity                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_updateOpacity_imageTimer_(float Opacity)
+void Uwgt_S3actionSelect_timer_C::updateOpacity_imageTimer_(float Opacity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.updateOpacity(imageTimer)");
 
@@ -243,7 +237,7 @@ void Uwgt_S3actionSelect_timer_C::STATIC_updateOpacity_imageTimer_(float Opacity
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.Construct
-// (Net, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_S3actionSelect_timer_C::Construct()
 {
@@ -260,7 +254,7 @@ void Uwgt_S3actionSelect_timer_C::Construct()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.OnAnimationFinished
-// (Net, NetReliable, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // class UWidgetAnimation*        Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -280,7 +274,7 @@ void Uwgt_S3actionSelect_timer_C::OnAnimationFinished(class UWidgetAnimation* An
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.PauseTimer
-// (NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_timer_C::PauseTimer()
 {
@@ -297,7 +291,7 @@ void Uwgt_S3actionSelect_timer_C::PauseTimer()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.UnpauseTimer
-// (NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_timer_C::UnpauseTimer()
 {
@@ -314,12 +308,12 @@ void Uwgt_S3actionSelect_timer_C::UnpauseTimer()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.Tick
-// (NetResponse, Static, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void Uwgt_S3actionSelect_timer_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.Tick");
 
@@ -336,16 +330,15 @@ void Uwgt_S3actionSelect_timer_C::STATIC_Tick(const struct FGeometry& MyGeometry
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.endFadeIn(hiddenParent)
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_endFadeIn_hiddenParent_()
+void Uwgt_S3actionSelect_timer_C::endFadeIn_hiddenParent_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.endFadeIn(hiddenParent)");
 
 	Uwgt_S3actionSelect_timer_C_endFadeIn_hiddenParent__Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,16 +347,15 @@ void Uwgt_S3actionSelect_timer_C::STATIC_endFadeIn_hiddenParent_()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.endFadeOut(hiddenParent)
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_endFadeOut_hiddenParent_()
+void Uwgt_S3actionSelect_timer_C::endFadeOut_hiddenParent_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.endFadeOut(hiddenParent)");
 
 	Uwgt_S3actionSelect_timer_C_endFadeOut_hiddenParent__Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -372,11 +364,11 @@ void Uwgt_S3actionSelect_timer_C::STATIC_endFadeOut_hiddenParent_()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.ExecuteUbergraph_wgt_S3actionSelect_timer
-// (Exec, Native, Event, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_ExecuteUbergraph_wgt_S3actionSelect_timer(int EntryPoint)
+void Uwgt_S3actionSelect_timer_C::ExecuteUbergraph_wgt_S3actionSelect_timer(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.ExecuteUbergraph_wgt_S3actionSelect_timer");
 
@@ -384,7 +376,6 @@ void Uwgt_S3actionSelect_timer_C::STATIC_ExecuteUbergraph_wgt_S3actionSelect_tim
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -393,16 +384,15 @@ void Uwgt_S3actionSelect_timer_C::STATIC_ExecuteUbergraph_wgt_S3actionSelect_tim
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.onTimeover__DelegateSignature
-// (Net, Exec, Native, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_onTimeover__DelegateSignature()
+void Uwgt_S3actionSelect_timer_C::onTimeover__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.onTimeover__DelegateSignature");
 
 	Uwgt_S3actionSelect_timer_C_onTimeover__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -411,16 +401,15 @@ void Uwgt_S3actionSelect_timer_C::STATIC_onTimeover__DelegateSignature()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.onEndFadeOut__DelegateSignature
-// (Net, Exec, Native, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_onEndFadeOut__DelegateSignature()
+void Uwgt_S3actionSelect_timer_C::onEndFadeOut__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.onEndFadeOut__DelegateSignature");
 
 	Uwgt_S3actionSelect_timer_C_onEndFadeOut__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -429,16 +418,15 @@ void Uwgt_S3actionSelect_timer_C::STATIC_onEndFadeOut__DelegateSignature()
 
 
 // Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.onEndFadeIn__DelegateSignature
-// (Net, Exec, Native, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_timer_C::STATIC_onEndFadeIn__DelegateSignature()
+void Uwgt_S3actionSelect_timer_C::onEndFadeIn__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_timer.wgt_S3actionSelect_timer_C.onEndFadeIn__DelegateSignature");
 
 	Uwgt_S3actionSelect_timer_C_onEndFadeIn__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

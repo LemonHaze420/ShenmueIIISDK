@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.SetMoneyText
-// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SetValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ValueMin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -30,7 +30,6 @@ void Uwgt_HaveMoney_C::SetMoneyText(int SetValue, int ValueMin, int ValueMax)
 	params.ValueMax = ValueMax;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,9 +38,9 @@ void Uwgt_HaveMoney_C::SetMoneyText(int SetValue, int ValueMin, int ValueMax)
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.SetPos
-// (Exec, Event, Static, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_HaveMoney_C::STATIC_SetPos()
+void Uwgt_HaveMoney_C::SetPos()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HaveMoney.wgt_HaveMoney_C.SetPos");
 
@@ -56,11 +55,11 @@ void Uwgt_HaveMoney_C::STATIC_SetPos()
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.SetValueType
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_ValueType>      Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HaveMoney_C::STATIC_SetValueType(TEnumAsByte<EN_ValueType> Index)
+void Uwgt_HaveMoney_C::SetValueType(TEnumAsByte<EN_ValueType> Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HaveMoney.wgt_HaveMoney_C.SetValueType");
 
@@ -76,11 +75,11 @@ void Uwgt_HaveMoney_C::STATIC_SetValueType(TEnumAsByte<EN_ValueType> Index)
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.GetHaveMoney
-// (Static, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            HaveMoney                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HaveMoney_C::STATIC_GetHaveMoney(int* HaveMoney)
+void Uwgt_HaveMoney_C::GetHaveMoney(int* HaveMoney)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HaveMoney.wgt_HaveMoney_C.GetHaveMoney");
 
@@ -98,7 +97,7 @@ void Uwgt_HaveMoney_C::STATIC_GetHaveMoney(int* HaveMoney)
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.SetAddMoney
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            AddMoney                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -110,7 +109,6 @@ void Uwgt_HaveMoney_C::SetAddMoney(int AddMoney)
 	params.AddMoney = AddMoney;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,11 +117,11 @@ void Uwgt_HaveMoney_C::SetAddMoney(int AddMoney)
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.SetSubtractMoney
-// (NetReliable, Exec, Event, Static, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SubMoney                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HaveMoney_C::STATIC_SetSubtractMoney(int SubMoney)
+void Uwgt_HaveMoney_C::SetSubtractMoney(int SubMoney)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HaveMoney.wgt_HaveMoney_C.SetSubtractMoney");
 
@@ -139,7 +137,7 @@ void Uwgt_HaveMoney_C::STATIC_SetSubtractMoney(int SubMoney)
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.AddHaveMoney
-// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            AddMoney                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -151,7 +149,6 @@ void Uwgt_HaveMoney_C::AddHaveMoney(int AddMoney)
 	params.AddMoney = AddMoney;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,11 +157,11 @@ void Uwgt_HaveMoney_C::AddHaveMoney(int AddMoney)
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.SubtractHaveMoney
-// (NetRequest, NetResponse, Static, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SubMoney                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HaveMoney_C::STATIC_SubtractHaveMoney(int SubMoney)
+void Uwgt_HaveMoney_C::SubtractHaveMoney(int SubMoney)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HaveMoney.wgt_HaveMoney_C.SubtractHaveMoney");
 
@@ -180,7 +177,7 @@ void Uwgt_HaveMoney_C::STATIC_SubtractHaveMoney(int SubMoney)
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.SetHaveMoney
-// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            HaveMoney                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           NotAnim                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -194,7 +191,6 @@ void Uwgt_HaveMoney_C::SetHaveMoney(int HaveMoney, bool NotAnim)
 	params.NotAnim = NotAnim;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,12 +199,12 @@ void Uwgt_HaveMoney_C::SetHaveMoney(int HaveMoney, bool NotAnim)
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.Tick
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HaveMoney_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void Uwgt_HaveMoney_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HaveMoney.wgt_HaveMoney_C.Tick");
 
@@ -225,9 +221,9 @@ void Uwgt_HaveMoney_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InD
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.Construct
-// (Net, Static, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_HaveMoney_C::STATIC_Construct()
+void Uwgt_HaveMoney_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HaveMoney.wgt_HaveMoney_C.Construct");
 
@@ -242,9 +238,9 @@ void Uwgt_HaveMoney_C::STATIC_Construct()
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.Reset
-// (Net, Static, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void Uwgt_HaveMoney_C::STATIC_Reset()
+void Uwgt_HaveMoney_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HaveMoney.wgt_HaveMoney_C.Reset");
 
@@ -259,11 +255,11 @@ void Uwgt_HaveMoney_C::STATIC_Reset()
 
 
 // Function wgt_HaveMoney.wgt_HaveMoney_C.ExecuteUbergraph_wgt_HaveMoney
-// (Net, NetReliable, NetRequest, Native, Event, Static, Public, HasOutParms, DLLImport, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HaveMoney_C::STATIC_ExecuteUbergraph_wgt_HaveMoney(int EntryPoint)
+void Uwgt_HaveMoney_C::ExecuteUbergraph_wgt_HaveMoney(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HaveMoney.wgt_HaveMoney_C.ExecuteUbergraph_wgt_HaveMoney");
 
@@ -271,7 +267,6 @@ void Uwgt_HaveMoney_C::STATIC_ExecuteUbergraph_wgt_HaveMoney(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

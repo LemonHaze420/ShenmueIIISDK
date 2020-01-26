@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,7 @@ public:
 	int                                                EventFlagNumber;                                          // 0x0338(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                EventFlagMin;                                             // 0x033C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                EventFlagMax;                                             // 0x0340(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bItemCheckEnable;                                         // 0x0344(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bItemCheckEnable;                                         // 0x0344(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0345(0x0003) MISSED OFFSET
 	TMap<struct FString, struct FST_SUBQCrudeDrugMemo> DataTable;                                                // 0x0348(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
 	class UTalkScript*                                 TalkScript;                                               // 0x0398(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -34,18 +34,19 @@ public:
 	}
 
 
-	void STATIC_CheckItemGetNum(const struct FString& ItemId, bool* PlayAc);
-	void STATIC_CheckPlayAc(bool* enable_play);
+	bool TryGetItemData(const struct FName& InName, struct FST_SUBQCrudeDrugMemo* OutData);
+	void CheckItemGetNum(const struct FString& ItemId, bool* PlayAc);
+	void CheckPlayAc(bool* enable_play);
 	void CheckAllGetItem(bool* AllGet);
 	void GetItemNum(int ID, int* Count);
-	void STATIC_SetCrudeDrugGlobalFlag(int FlagID, int FlagValue, bool* set_is_done);
-	void STATIC_isEnableEvent(bool* Enable);
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_StartEvent(int ArrayIndex, int SetFlags);
-	void STATIC_LoadStartIn();
-	void STATIC_ItemChange(const struct FName& ItemId, int NewNum, int OldItem);
-	void STATIC_ExecuteUbergraph_BP_SubQuestCrudeDrugMemo(int EntryPoint);
+	void SetCrudeDrugGlobalFlag(int FlagID, int FlagValue, bool* set_is_done);
+	void isEnableEvent(bool* Enable);
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void StartEvent(int ArrayIndex, int SetFlags);
+	void LoadStartIn();
+	void ItemChange(const struct FName& ItemId, int NewNum, int OldItem);
+	void ExecuteUbergraph_BP_SubQuestCrudeDrugMemo(int EntryPoint);
 };
 
 

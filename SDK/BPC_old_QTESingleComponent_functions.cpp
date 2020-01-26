@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.StopTimeCountSE
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_old_QTESingleComponent_C::StopTimeCountSE()
 {
@@ -23,7 +23,6 @@ void UBPC_old_QTESingleComponent_C::StopTimeCountSE()
 	UBPC_old_QTESingleComponent_C_StopTimeCountSE_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void UBPC_old_QTESingleComponent_C::StopTimeCountSE()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.PlayTimeCountSE
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_old_QTESingleComponent_C::PlayTimeCountSE()
 {
@@ -41,7 +40,6 @@ void UBPC_old_QTESingleComponent_C::PlayTimeCountSE()
 	UBPC_old_QTESingleComponent_C_PlayTimeCountSE_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,7 +48,7 @@ void UBPC_old_QTESingleComponent_C::PlayTimeCountSE()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.UpdateAnimationState
-// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UBPC_old_QTESingleComponent_C::UpdateAnimationState()
 {
@@ -59,7 +57,6 @@ void UBPC_old_QTESingleComponent_C::UpdateAnimationState()
 	UBPC_old_QTESingleComponent_C_UpdateAnimationState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,11 +65,11 @@ void UBPC_old_QTESingleComponent_C::UpdateAnimationState()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.IsInQTE
-// (Net, Exec, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_old_QTESingleComponent_C::STATIC_IsInQTE()
+bool UBPC_old_QTESingleComponent_C::IsInQTE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.IsInQTE");
 
@@ -89,7 +86,7 @@ bool UBPC_old_QTESingleComponent_C::STATIC_IsInQTE()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.GetInAnimationLength
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -110,11 +107,11 @@ float UBPC_old_QTESingleComponent_C::GetInAnimationLength()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.IsPlayingIn
-// (NetRequest, Exec, NetResponse, Static, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_old_QTESingleComponent_C::STATIC_IsPlayingIn()
+bool UBPC_old_QTESingleComponent_C::IsPlayingIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.IsPlayingIn");
 
@@ -131,7 +128,7 @@ bool UBPC_old_QTESingleComponent_C::STATIC_IsPlayingIn()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.SetTimeGaugeRate
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -151,7 +148,7 @@ void UBPC_old_QTESingleComponent_C::SetTimeGaugeRate(float Rate)
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.UpdateTime
-// (Net, NetReliable, NetMulticast, Private, Delegate, NetServer)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TickDeltaSeconds               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          CurrentDeltaSeconds            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -175,7 +172,7 @@ void UBPC_old_QTESingleComponent_C::UpdateTime(float TickDeltaSeconds, float* Cu
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.SetUseRealTime
-// (NetRequest, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           UseRealTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -195,7 +192,7 @@ void UBPC_old_QTESingleComponent_C::SetUseRealTime(bool UseRealTime)
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.ClearResult
-// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_old_QTESingleComponent_C::ClearResult()
 {
@@ -212,11 +209,11 @@ void UBPC_old_QTESingleComponent_C::ClearResult()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.InputFunction
-// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FKey                    InKey                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPC_old_QTESingleComponent_C::STATIC_InputFunction(const struct FKey& InKey)
+void UBPC_old_QTESingleComponent_C::InputFunction(const struct FKey& InKey)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.InputFunction");
 
@@ -224,7 +221,6 @@ void UBPC_old_QTESingleComponent_C::STATIC_InputFunction(const struct FKey& InKe
 	params.InKey = InKey;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,7 +229,7 @@ void UBPC_old_QTESingleComponent_C::STATIC_InputFunction(const struct FKey& InKe
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.InputEndFunction
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPC_old_QTESingleComponent_C::InputEndFunction()
 {
@@ -242,7 +238,6 @@ void UBPC_old_QTESingleComponent_C::InputEndFunction()
 	UBPC_old_QTESingleComponent_C_InputEndFunction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,7 +246,7 @@ void UBPC_old_QTESingleComponent_C::InputEndFunction()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.InputStartFunction
-// (Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   SuccessAction                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -263,7 +258,6 @@ void UBPC_old_QTESingleComponent_C::InputStartFunction(const struct FName& Succe
 	params.SuccessAction = SuccessAction;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -272,9 +266,9 @@ void UBPC_old_QTESingleComponent_C::InputStartFunction(const struct FName& Succe
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.EndFunction
-// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_old_QTESingleComponent_C::STATIC_EndFunction()
+void UBPC_old_QTESingleComponent_C::EndFunction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.EndFunction");
 
@@ -289,16 +283,15 @@ void UBPC_old_QTESingleComponent_C::STATIC_EndFunction()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.Prepare
-// (Net, Native, Event, Static, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_old_QTESingleComponent_C::STATIC_Prepare()
+void UBPC_old_QTESingleComponent_C::Prepare()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.Prepare");
 
 	UBPC_old_QTESingleComponent_C_Prepare_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -307,7 +300,7 @@ void UBPC_old_QTESingleComponent_C::STATIC_Prepare()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.GetButtonImage
-// (Net, NetReliable, NetRequest, Native, NetResponse, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   InputName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Texture2D                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -320,7 +313,6 @@ void UBPC_old_QTESingleComponent_C::GetButtonImage(const struct FName& InputName
 	params.InputName = InputName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -332,7 +324,7 @@ void UBPC_old_QTESingleComponent_C::GetButtonImage(const struct FName& InputName
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.ReceiveTick
-// (Net, NetReliable, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -352,7 +344,7 @@ void UBPC_old_QTESingleComponent_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.ReceiveEndPlay
-// (NetReliable, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -372,7 +364,7 @@ void UBPC_old_QTESingleComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> E
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.ExecuteUbergraph_BPC_old_QTESingleComponent
-// (Net, NetRequest, Event, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -392,7 +384,7 @@ void UBPC_old_QTESingleComponent_C::ExecuteUbergraph_BPC_old_QTESingleComponent(
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.ButtonDown__DelegateSignature
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Succeed                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -412,7 +404,7 @@ void UBPC_old_QTESingleComponent_C::ButtonDown__DelegateSignature(bool Succeed)
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.End__DelegateSignature
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPC_old_QTESingleComponent_C::End__DelegateSignature()
 {
@@ -429,7 +421,7 @@ void UBPC_old_QTESingleComponent_C::End__DelegateSignature()
 
 
 // Function BPC_old_QTESingleComponent.BPC_old_QTESingleComponent_C.Success__DelegateSignature
-// (Net, NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPC_old_QTESingleComponent_C::Success__DelegateSignature()
 {
@@ -438,7 +430,6 @@ void UBPC_old_QTESingleComponent_C::Success__DelegateSignature()
 	UBPC_old_QTESingleComponent_C_Success__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

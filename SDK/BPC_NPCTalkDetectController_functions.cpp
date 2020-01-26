@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.IsActiveMiniGameScript
-// (NetRequest, Exec, Native, Event, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           MiniGame                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UBPC_NPCTalkDetectController_C::IsActiveMiniGameScript(bool* MiniGame)
 	UBPC_NPCTalkDetectController_C_IsActiveMiniGameScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,18 +36,17 @@ void UBPC_NPCTalkDetectController_C::IsActiveMiniGameScript(bool* MiniGame)
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.GetActiveComponents
-// (NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UBPC_S3_TalkComponent_C*> TalkComponents                 (Parm, OutParm, ZeroConstructor)
 
-void UBPC_NPCTalkDetectController_C::STATIC_GetActiveComponents(TArray<class UBPC_S3_TalkComponent_C*>* TalkComponents)
+void UBPC_NPCTalkDetectController_C::GetActiveComponents(TArray<class UBPC_S3_TalkComponent_C*>* TalkComponents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.GetActiveComponents");
 
 	UBPC_NPCTalkDetectController_C_GetActiveComponents_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +58,7 @@ void UBPC_NPCTalkDetectController_C::STATIC_GetActiveComponents(TArray<class UBP
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.ParseSubQuestControl
-// (NetReliable, Exec, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,7 +78,7 @@ void UBPC_NPCTalkDetectController_C::ParseSubQuestControl(const struct FName& Ch
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.IsEnabledDetectIcon
-// (Net, Exec, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3TalkType                    Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bEnabled                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -104,7 +102,7 @@ void UBPC_NPCTalkDetectController_C::IsEnabledDetectIcon(ES3TalkType Type, bool*
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.GetCurrentTalkComponent
-// (Net, NetRequest, Event, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class US3TalkComponentBase*    OutComponent                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -126,7 +124,7 @@ void UBPC_NPCTalkDetectController_C::GetCurrentTalkComponent(class US3TalkCompon
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.FindComponent
-// (NetMulticast, NetServer, HasOutParms, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // ES3TalkType                    Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3TalkComponentBase*    Value                          (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -153,7 +151,7 @@ bool UBPC_NPCTalkDetectController_C::FindComponent(ES3TalkType Type, class US3Ta
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.CanNPCTalk
-// (NetReliable, NetRequest, NetMulticast, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bCan                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -175,11 +173,11 @@ void UBPC_NPCTalkDetectController_C::CanNPCTalk(bool* bCan)
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.IsTalking
-// (Event, Static, NetMulticast, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bTalking                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_NPCTalkDetectController_C::STATIC_IsTalking(bool* bTalking)
+void UBPC_NPCTalkDetectController_C::IsTalking(bool* bTalking)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.IsTalking");
 
@@ -196,16 +194,16 @@ void UBPC_NPCTalkDetectController_C::STATIC_IsTalking(bool* bTalking)
 }
 
 
-// Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.GetActionType
-// (NetReliable, NetRequest, Event, NetResponse, Static, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.getActionType
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> Params                         (Parm, OutParm, ZeroConstructor)
 
-void UBPC_NPCTalkDetectController_C::STATIC_GetActionType(TArray<struct FS3DetectActionParam>* Params)
+void UBPC_NPCTalkDetectController_C::getActionType(TArray<struct FS3DetectActionParam>* Params)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.GetActionType");
+	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.getActionType");
 
-	UBPC_NPCTalkDetectController_C_GetActionType_Params params;
+	UBPC_NPCTalkDetectController_C_getActionType_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -219,12 +217,12 @@ void UBPC_NPCTalkDetectController_C::STATIC_GetActionType(TArray<struct FS3Detec
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.RegisterTalkComponent
-// (Net, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3TalkType                    TalkType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3TalkComponentBase*    Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBPC_NPCTalkDetectController_C::STATIC_RegisterTalkComponent(ES3TalkType TalkType, class US3TalkComponentBase* Component)
+void UBPC_NPCTalkDetectController_C::RegisterTalkComponent(ES3TalkType TalkType, class US3TalkComponentBase* Component)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.RegisterTalkComponent");
 
@@ -241,9 +239,9 @@ void UBPC_NPCTalkDetectController_C::STATIC_RegisterTalkComponent(ES3TalkType Ta
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.OnStart
-// (NetReliable, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_NPCTalkDetectController_C::STATIC_OnStart()
+void UBPC_NPCTalkDetectController_C::OnStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.OnStart");
 
@@ -258,9 +256,9 @@ void UBPC_NPCTalkDetectController_C::STATIC_OnStart()
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.OnFinished
-// (Net, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_NPCTalkDetectController_C::STATIC_OnFinished()
+void UBPC_NPCTalkDetectController_C::OnFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.OnFinished");
 
@@ -275,9 +273,9 @@ void UBPC_NPCTalkDetectController_C::STATIC_OnFinished()
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.ReceiveBeginPlay
-// (Net, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_NPCTalkDetectController_C::STATIC_ReceiveBeginPlay()
+void UBPC_NPCTalkDetectController_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.ReceiveBeginPlay");
 
@@ -292,11 +290,11 @@ void UBPC_NPCTalkDetectController_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.DecideDetectAction
-// (Exec, Native, Event, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              ActionType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_NPCTalkDetectController_C::STATIC_DecideDetectAction(ES3ActionIconType ActionType)
+void UBPC_NPCTalkDetectController_C::DecideDetectAction(ES3ActionIconType ActionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.DecideDetectAction");
 
@@ -304,7 +302,6 @@ void UBPC_NPCTalkDetectController_C::STATIC_DecideDetectAction(ES3ActionIconType
 	params.ActionType = ActionType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -313,7 +310,7 @@ void UBPC_NPCTalkDetectController_C::STATIC_DecideDetectAction(ES3ActionIconType
 
 
 // Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.ExecuteUbergraph_BPC_NPCTalkDetectController
-// (NetReliable, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

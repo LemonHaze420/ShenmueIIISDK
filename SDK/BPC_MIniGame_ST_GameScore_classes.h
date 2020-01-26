@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,10 +28,10 @@ public:
 	}
 
 
-	void STATIC_Reset();
+	void Reset();
 	void IncrementSuccessCount();
-	void STATIC_AddPoint(int Add, int* Total);
-	void STATIC_ExecuteUbergraph_BPC_MIniGame_ST_GameScore(int EntryPoint);
+	void AddPoint(int Add, int* Total);
+	void ExecuteUbergraph_BPC_MIniGame_ST_GameScore(int EntryPoint);
 };
 
 

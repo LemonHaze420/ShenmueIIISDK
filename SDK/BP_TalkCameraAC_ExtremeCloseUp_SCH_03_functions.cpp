@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCameraAC_ExtremeCloseUp_SCH_03.BP_TalkCameraAC_ExtremeCloseUp_SCH_03_C.UserConstructionScript
-// (Net, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::STATIC_UserConstructionScript()
+void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraAC_ExtremeCloseUp_SCH_03.BP_TalkCameraAC_ExtremeCloseUp_SCH_03_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::STATIC_UserConstructionScript()
 
 
 // Function BP_TalkCameraAC_ExtremeCloseUp_SCH_03.BP_TalkCameraAC_ExtremeCloseUp_SCH_03_C.ReceiveBeginPlay
-// (Net, Exec, Native, Event, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::ReceiveBeginPlay()
 {
@@ -40,7 +40,6 @@ void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::ReceiveBeginPlay()
 	ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,11 +48,11 @@ void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCameraAC_ExtremeCloseUp_SCH_03.BP_TalkCameraAC_ExtremeCloseUp_SCH_03_C.ReceiveTick
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraAC_ExtremeCloseUp_SCH_03.BP_TalkCameraAC_ExtremeCloseUp_SCH_03_C.ReceiveTick");
 
@@ -69,11 +68,11 @@ void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::STATIC_ReceiveTick(float DeltaSec
 
 
 // Function BP_TalkCameraAC_ExtremeCloseUp_SCH_03.BP_TalkCameraAC_ExtremeCloseUp_SCH_03_C.ExecuteUbergraph_BP_TalkCameraAC_ExtremeCloseUp_SCH_03
-// (Net, Exec, NetResponse, Static, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::STATIC_ExecuteUbergraph_BP_TalkCameraAC_ExtremeCloseUp_SCH_03(int EntryPoint)
+void ABP_TalkCameraAC_ExtremeCloseUp_SCH_03_C::ExecuteUbergraph_BP_TalkCameraAC_ExtremeCloseUp_SCH_03(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraAC_ExtremeCloseUp_SCH_03.BP_TalkCameraAC_ExtremeCloseUp_SCH_03_C.ExecuteUbergraph_BP_TalkCameraAC_ExtremeCloseUp_SCH_03");
 

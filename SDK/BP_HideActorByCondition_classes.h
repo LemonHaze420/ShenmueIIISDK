@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,13 +39,13 @@ public:
 	void UpdateCondition(TEnumAsByte<EHideActorConditions> ConditionsType, const struct FString& IdMin, const struct FString& IdMax, int Option, bool Visible);
 	void SetupEventStep();
 	void HideMyOwner(bool Mode);
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ChangeStep(int SetSteps);
-	void STATIC_ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum);
-	void STATIC_ChangeFlag(int ArrayIndex, int SetFlags);
+	void ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum);
+	void ChangeFlag(int ArrayIndex, int SetFlags);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_UnbindEvent();
+	void UnbindEvent();
 	void SetUpEvent();
 	void ExecuteUbergraph_BP_HideActorByCondition(int EntryPoint);
 };

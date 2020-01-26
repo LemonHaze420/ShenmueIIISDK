@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.PrintLog
-// (NetReliable, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_S3DetectDebug_C::PrintLog()
 {
@@ -31,16 +31,15 @@ void UBPC_S3DetectDebug_C::PrintLog()
 
 
 // Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ReceiveBeginPlay
-// (Native, Event, NetResponse, Static, NetServer)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_S3DetectDebug_C::STATIC_ReceiveBeginPlay()
+void UBPC_S3DetectDebug_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ReceiveBeginPlay");
 
 	UBPC_S3DetectDebug_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,11 +48,11 @@ void UBPC_S3DetectDebug_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ReceiveTick
-// (Net, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3DetectDebug_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UBPC_S3DetectDebug_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ReceiveTick");
 
@@ -61,7 +60,6 @@ void UBPC_S3DetectDebug_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,7 +68,7 @@ void UBPC_S3DetectDebug_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ExecuteUbergraph_BPC_S3DetectDebug
-// (Net, NetReliable, Exec, NetResponse, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

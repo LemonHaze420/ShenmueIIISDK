@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_GetAutoCameraSequence.TalkCam_GetAutoCameraSequence_C.ReceiveTickAI
-// (Net, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UTalkCam_GetAutoCameraSequence_C::STATIC_ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
+void UTalkCam_GetAutoCameraSequence_C::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TalkCam_GetAutoCameraSequence.TalkCam_GetAutoCameraSequence_C.ReceiveTickAI");
 
@@ -38,7 +38,7 @@ void UTalkCam_GetAutoCameraSequence_C::STATIC_ReceiveTickAI(class AAIController*
 
 
 // Function TalkCam_GetAutoCameraSequence.TalkCam_GetAutoCameraSequence_C.ExecuteUbergraph_TalkCam_GetAutoCameraSequence
-// (Net, Exec, Public, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

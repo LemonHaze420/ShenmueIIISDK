@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_analyze.BPF_analyze_C.EstimateGroundHeight
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class ACharacter*              Pawn                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -37,7 +37,6 @@ float UBPF_analyze_C::STATIC_EstimateGroundHeight(class ACharacter* Pawn, const 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,13 +47,13 @@ float UBPF_analyze_C::STATIC_EstimateGroundHeight(class ACharacter* Pawn, const 
 
 
 // Function BPF_analyze.BPF_analyze_C.isCharacterHidden
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3Character*            S3Character                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_analyze_C::isCharacterHidden(class AS3Character* S3Character, class UObject* __WorldContext)
+bool UBPF_analyze_C::STATIC_isCharacterHidden(class AS3Character* S3Character, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_analyze.BPF_analyze_C.isCharacterHidden");
 
@@ -63,7 +62,6 @@ bool UBPF_analyze_C::isCharacterHidden(class AS3Character* S3Character, class UO
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,12 +72,12 @@ bool UBPF_analyze_C::isCharacterHidden(class AS3Character* S3Character, class UO
 
 
 // Function BPF_analyze.BPF_analyze_C.isAnyNPCFadeInProgress
-// (Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_analyze_C::isAnyNPCFadeInProgress(class UObject* __WorldContext)
+bool UBPF_analyze_C::STATIC_isAnyNPCFadeInProgress(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_analyze.BPF_analyze_C.isAnyNPCFadeInProgress");
 
@@ -87,7 +85,6 @@ bool UBPF_analyze_C::isAnyNPCFadeInProgress(class UObject* __WorldContext)
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,7 +95,7 @@ bool UBPF_analyze_C::isAnyNPCFadeInProgress(class UObject* __WorldContext)
 
 
 // Function BPF_analyze.BPF_analyze_C.isCharacterFadeInProgress
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3Character*            S3Character                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -123,7 +120,7 @@ bool UBPF_analyze_C::STATIC_isCharacterFadeInProgress(class AS3Character* S3Char
 
 
 // Function BPF_analyze.BPF_analyze_C.isCharacterFullyVisible
-// (Net, NetRequest, Event, NetResponse, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3Character*            S3Character                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -148,7 +145,7 @@ bool UBPF_analyze_C::STATIC_isCharacterFullyVisible(class AS3Character* S3Charac
 
 
 // Function BPF_analyze.BPF_analyze_C.isCharacterFadeInComplete
-// (Net, NetRequest, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3Character*            S3Character                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -173,14 +170,14 @@ bool UBPF_analyze_C::STATIC_isCharacterFadeInComplete(class AS3Character* S3Char
 
 
 // Function BPF_analyze.BPF_analyze_C.IsOverlappingAdventurePlayer
-// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     Trigger                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // class UCapsuleComponent*       PlayerCapsule                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-bool UBPF_analyze_C::IsOverlappingAdventurePlayer(class UPrimitiveComponent* Trigger, class UObject* __WorldContext, class UCapsuleComponent** PlayerCapsule)
+bool UBPF_analyze_C::STATIC_IsOverlappingAdventurePlayer(class UPrimitiveComponent* Trigger, class UObject* __WorldContext, class UCapsuleComponent** PlayerCapsule)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_analyze.BPF_analyze_C.IsOverlappingAdventurePlayer");
 
@@ -189,7 +186,6 @@ bool UBPF_analyze_C::IsOverlappingAdventurePlayer(class UPrimitiveComponent* Tri
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,14 +199,14 @@ bool UBPF_analyze_C::IsOverlappingAdventurePlayer(class UPrimitiveComponent* Tri
 
 
 // Function BPF_analyze.BPF_analyze_C.IsOverlappingPlayer
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     Trigger                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // class UCapsuleComponent*       PlayerCapsule                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-bool UBPF_analyze_C::IsOverlappingPlayer(class UPrimitiveComponent* Trigger, class UObject* __WorldContext, class UCapsuleComponent** PlayerCapsule)
+bool UBPF_analyze_C::STATIC_IsOverlappingPlayer(class UPrimitiveComponent* Trigger, class UObject* __WorldContext, class UCapsuleComponent** PlayerCapsule)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_analyze.BPF_analyze_C.IsOverlappingPlayer");
 
@@ -219,7 +215,6 @@ bool UBPF_analyze_C::IsOverlappingPlayer(class UPrimitiveComponent* Trigger, cla
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,7 +228,7 @@ bool UBPF_analyze_C::IsOverlappingPlayer(class UPrimitiveComponent* Trigger, cla
 
 
 // Function BPF_analyze.BPF_analyze_C.IsAdventurePlayer
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -248,7 +243,6 @@ bool UBPF_analyze_C::STATIC_IsAdventurePlayer(class AActor* OtherActor, class UO
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,7 +253,7 @@ bool UBPF_analyze_C::STATIC_IsAdventurePlayer(class AActor* OtherActor, class UO
 
 
 // Function BPF_analyze.BPF_analyze_C.IsAdventurePlayerCollision
-// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UActorComponent*         Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -274,7 +268,6 @@ bool UBPF_analyze_C::STATIC_IsAdventurePlayerCollision(class UActorComponent* Co
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,14 +278,14 @@ bool UBPF_analyze_C::STATIC_IsAdventurePlayerCollision(class UActorComponent* Co
 
 
 // Function BPF_analyze.BPF_analyze_C.getCharacterFromCollision
-// (NetRequest, Native, NetResponse, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UActorComponent*         Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AS3Character*            Character                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_analyze_C::getCharacterFromCollision(class UActorComponent* Component, class UObject* __WorldContext, class AS3Character** Character, bool* IsValid)
+void UBPF_analyze_C::STATIC_getCharacterFromCollision(class UActorComponent* Component, class UObject* __WorldContext, class AS3Character** Character, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_analyze.BPF_analyze_C.getCharacterFromCollision");
 
@@ -301,7 +294,6 @@ void UBPF_analyze_C::getCharacterFromCollision(class UActorComponent* Component,
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -315,13 +307,13 @@ void UBPF_analyze_C::getCharacterFromCollision(class UActorComponent* Component,
 
 
 // Function BPF_analyze.BPF_analyze_C.IsPlayerCollision
-// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UActorComponent*         Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_analyze_C::IsPlayerCollision(class UActorComponent* Component, class UObject* __WorldContext)
+bool UBPF_analyze_C::STATIC_IsPlayerCollision(class UActorComponent* Component, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_analyze.BPF_analyze_C.IsPlayerCollision");
 
@@ -330,7 +322,6 @@ bool UBPF_analyze_C::IsPlayerCollision(class UActorComponent* Component, class U
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -341,13 +332,13 @@ bool UBPF_analyze_C::IsPlayerCollision(class UActorComponent* Component, class U
 
 
 // Function BPF_analyze.BPF_analyze_C.isPlayer
-// (NetRequest, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_analyze_C::isPlayer(class AActor* OtherActor, class UObject* __WorldContext)
+bool UBPF_analyze_C::STATIC_isPlayer(class AActor* OtherActor, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_analyze.BPF_analyze_C.isPlayer");
 
@@ -366,12 +357,12 @@ bool UBPF_analyze_C::isPlayer(class AActor* OtherActor, class UObject* __WorldCo
 
 
 // Function BPF_analyze.BPF_analyze_C.isPawnCamera
-// (NetReliable, Event, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_analyze_C::isPawnCamera(class UObject* __WorldContext, bool* Result)
+void UBPF_analyze_C::STATIC_isPawnCamera(class UObject* __WorldContext, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_analyze.BPF_analyze_C.isPawnCamera");
 
@@ -390,14 +381,14 @@ void UBPF_analyze_C::isPawnCamera(class UObject* __WorldContext, bool* Result)
 
 
 // Function BPF_analyze.BPF_analyze_C.castActor2primitiveMesh
-// (Exec, Native, Event, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     Mesh                           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // TArray<class UMaterialInterface*> Materials                      (Parm, OutParm, ZeroConstructor)
 
-void UBPF_analyze_C::castActor2primitiveMesh(class AActor* Actor, class UObject* __WorldContext, class UPrimitiveComponent** Mesh, TArray<class UMaterialInterface*>* Materials)
+void UBPF_analyze_C::STATIC_castActor2primitiveMesh(class AActor* Actor, class UObject* __WorldContext, class UPrimitiveComponent** Mesh, TArray<class UMaterialInterface*>* Materials)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_analyze.BPF_analyze_C.castActor2primitiveMesh");
 
@@ -406,7 +397,6 @@ void UBPF_analyze_C::castActor2primitiveMesh(class AActor* Actor, class UObject*
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

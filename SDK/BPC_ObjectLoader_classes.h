@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,12 +32,12 @@ public:
 
 	void AssetLoadObject(struct FST_ObjectLoadInfo* LoadInfo);
 	void RemoveLoadingList(const struct FString& LoadId);
-	void STATIC_AddLoadingList(const struct FString& LoadId);
+	void AddLoadingList(const struct FString& LoadId);
 	void OnLoaded_066D0130431550B75D2FBDB198B97FBC(class UObject* Loaded);
 	void RequestLoadObject(const struct FString& LoadId);
 	void StartLoadObject(const struct FST_ObjectLoadInfo& LoadObjInfo);
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_BPC_ObjectLoader(int EntryPoint);
+	void ExecuteUbergraph_BPC_ObjectLoader(int EntryPoint);
 	void OnLoadedObjectDispatcher__DelegateSignature(const struct FString& LoadId, class UObject* LoadedObject);
 };
 

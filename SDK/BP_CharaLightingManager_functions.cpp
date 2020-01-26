@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.SetEnableLightCollision
-// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,11 +34,11 @@ void ABP_CharaLightingManager_C::SetEnableLightCollision(bool Enable)
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetLightingColorParameter
-// (Net, NetReliable, NetRequest, Exec, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FS3CharaLightingCurveColorParamater Paramater                      (Parm, OutParm, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_GetLightingColorParameter(struct FS3CharaLightingCurveColorParamater* Paramater)
+void ABP_CharaLightingManager_C::GetLightingColorParameter(struct FS3CharaLightingCurveColorParamater* Paramater)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetLightingColorParameter");
 
@@ -56,18 +56,17 @@ void ABP_CharaLightingManager_C::STATIC_GetLightingColorParameter(struct FS3Char
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.UpdateAllLightupActors
-// (NetReliable, NetRequest, Exec, Native, Static, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CharaLightingManager_C::STATIC_UpdateAllLightupActors()
+bool ABP_CharaLightingManager_C::UpdateAllLightupActors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.UpdateAllLightupActors");
 
 	ABP_CharaLightingManager_C_UpdateAllLightupActors_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +77,7 @@ bool ABP_CharaLightingManager_C::STATIC_UpdateAllLightupActors()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.SetupCalculationMeshAndCameraVariable
-// (NetReliable, NetRequest, Native, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -91,7 +90,6 @@ bool ABP_CharaLightingManager_C::SetupCalculationMeshAndCameraVariable(class AAc
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,12 +100,12 @@ bool ABP_CharaLightingManager_C::SetupCalculationMeshAndCameraVariable(class AAc
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetTalkTargetActorMesh
-// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class USkeletalMeshComponent* ABP_CharaLightingManager_C::STATIC_GetTalkTargetActorMesh(class AActor* Actor)
+class USkeletalMeshComponent* ABP_CharaLightingManager_C::GetTalkTargetActorMesh(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetTalkTargetActorMesh");
 
@@ -125,14 +123,14 @@ class USkeletalMeshComponent* ABP_CharaLightingManager_C::STATIC_GetTalkTargetAc
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.IsConditionsCheck
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FS3CharaLightingContainer Container                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3TagCharaComponent*    TagCharaComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CharaLightingManager_C::STATIC_IsConditionsCheck(class AActor* Actor, class US3TagCharaComponent* TagCharaComponent, struct FS3CharaLightingContainer* Container)
+bool ABP_CharaLightingManager_C::IsConditionsCheck(class AActor* Actor, class US3TagCharaComponent* TagCharaComponent, struct FS3CharaLightingContainer* Container)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.IsConditionsCheck");
 
@@ -141,7 +139,6 @@ bool ABP_CharaLightingManager_C::STATIC_IsConditionsCheck(class AActor* Actor, c
 	params.TagCharaComponent = TagCharaComponent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,13 +152,13 @@ bool ABP_CharaLightingManager_C::STATIC_IsConditionsCheck(class AActor* Actor, c
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.Evaluation
-// (Net, NetReliable, NetRequest, Event, Static, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  TargetLightupActor             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   LightGroupId                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FS3CharaLightingContainer ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FS3CharaLightingContainer ABP_CharaLightingManager_C::STATIC_Evaluation(class AActor* TargetLightupActor, const struct FName& LightGroupId)
+struct FS3CharaLightingContainer ABP_CharaLightingManager_C::Evaluation(class AActor* TargetLightupActor, const struct FName& LightGroupId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.Evaluation");
 
@@ -180,7 +177,7 @@ struct FS3CharaLightingContainer ABP_CharaLightingManager_C::STATIC_Evaluation(c
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetLightupTargetLocation
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  InTargetActor                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -193,7 +190,6 @@ struct FVector ABP_CharaLightingManager_C::GetLightupTargetLocation(class AActor
 	params.InTargetActor = InTargetActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,11 +200,11 @@ struct FVector ABP_CharaLightingManager_C::GetLightupTargetLocation(class AActor
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetAllCharaLightingActors
-// (Event, Static, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AS3CharaLightingActor*> Values                         (Parm, OutParm, ZeroConstructor)
 
-void ABP_CharaLightingManager_C::STATIC_GetAllCharaLightingActors(TArray<class AS3CharaLightingActor*>* Values)
+void ABP_CharaLightingManager_C::GetAllCharaLightingActors(TArray<class AS3CharaLightingActor*>* Values)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetAllCharaLightingActors");
 
@@ -226,11 +222,11 @@ void ABP_CharaLightingManager_C::STATIC_GetAllCharaLightingActors(TArray<class A
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetAllTargetCharaActors
-// (NetReliable, NetRequest, Event, Static, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AActor*>          CharaActors                    (Parm, OutParm, ZeroConstructor)
 
-void ABP_CharaLightingManager_C::STATIC_GetAllTargetCharaActors(TArray<class AActor*>* CharaActors)
+void ABP_CharaLightingManager_C::GetAllTargetCharaActors(TArray<class AActor*>* CharaActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetAllTargetCharaActors");
 
@@ -248,11 +244,11 @@ void ABP_CharaLightingManager_C::STATIC_GetAllTargetCharaActors(TArray<class AAc
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.ClearLightupActors
-// (Net, NetReliable, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           CutsceneOnly                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_ClearLightupActors(bool CutsceneOnly)
+void ABP_CharaLightingManager_C::ClearLightupActors(bool CutsceneOnly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.ClearLightupActors");
 
@@ -268,11 +264,11 @@ void ABP_CharaLightingManager_C::STATIC_ClearLightupActors(bool CutsceneOnly)
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.SetupCutsceneLightingActors
-// (Exec, Static, NetMulticast, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3CharaLightingSequencerActor* SeqLightingActor               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_SetupCutsceneLightingActors(class AS3CharaLightingSequencerActor* SeqLightingActor)
+void ABP_CharaLightingManager_C::SetupCutsceneLightingActors(class AS3CharaLightingSequencerActor* SeqLightingActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.SetupCutsceneLightingActors");
 
@@ -288,12 +284,12 @@ void ABP_CharaLightingManager_C::STATIC_SetupCutsceneLightingActors(class AS3Cha
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.TryGetActorMeshComponent
-// (NetReliable, NetRequest, Static, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class USkeletalMeshComponent* ABP_CharaLightingManager_C::STATIC_TryGetActorMeshComponent(class AActor* Actor)
+class USkeletalMeshComponent* ABP_CharaLightingManager_C::TryGetActorMeshComponent(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.TryGetActorMeshComponent");
 
@@ -311,13 +307,13 @@ class USkeletalMeshComponent* ABP_CharaLightingManager_C::STATIC_TryGetActorMesh
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.IsUsableLight
-// (NetReliable, Exec, NetResponse, Static, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ALight*                  Light                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bUse                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          SpotDeviatedConeAngle          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_IsUsableLight(class ALight* Light, bool* bUse, float* SpotDeviatedConeAngle)
+void ABP_CharaLightingManager_C::IsUsableLight(class ALight* Light, bool* bUse, float* SpotDeviatedConeAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.IsUsableLight");
 
@@ -338,7 +334,7 @@ void ABP_CharaLightingManager_C::STATIC_IsUsableLight(class ALight* Light, bool*
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetMainSpotLightDesirabilityScore
-// (Net, Static, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Intensity                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -346,7 +342,7 @@ void ABP_CharaLightingManager_C::STATIC_IsUsableLight(class ALight* Light, bool*
 // class UFuzzySystemComponent*   SpotFuzzySystem                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          DesirabilityScore              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_GetMainSpotLightDesirabilityScore(float Distance, float Intensity, float DeviatedConeAngle, class UFuzzySystemComponent* SpotFuzzySystem, float* DesirabilityScore)
+void ABP_CharaLightingManager_C::GetMainSpotLightDesirabilityScore(float Distance, float Intensity, float DeviatedConeAngle, class UFuzzySystemComponent* SpotFuzzySystem, float* DesirabilityScore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetMainSpotLightDesirabilityScore");
 
@@ -368,7 +364,7 @@ void ABP_CharaLightingManager_C::STATIC_GetMainSpotLightDesirabilityScore(float 
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.SetupEnvironmentLightParamater
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -392,14 +388,14 @@ void ABP_CharaLightingManager_C::SetupEnvironmentLightParamater(class AActor* Ta
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetMainPointLightDesirabilityScore
-// (NetRequest, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Intensity                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UFuzzySystemComponent*   PointFuzzySystem               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          DesirabilityScore              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_GetMainPointLightDesirabilityScore(float Distance, float Intensity, class UFuzzySystemComponent* PointFuzzySystem, float* DesirabilityScore)
+void ABP_CharaLightingManager_C::GetMainPointLightDesirabilityScore(float Distance, float Intensity, class UFuzzySystemComponent* PointFuzzySystem, float* DesirabilityScore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.GetMainPointLightDesirabilityScore");
 
@@ -420,7 +416,7 @@ void ABP_CharaLightingManager_C::STATIC_GetMainPointLightDesirabilityScore(float
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.InitializeFuzzySystems
-// (Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_CharaLightingManager_C::InitializeFuzzySystems()
 {
@@ -437,16 +433,15 @@ void ABP_CharaLightingManager_C::InitializeFuzzySystems()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.UpdateAllCutsceneLightingActors
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_UpdateAllCutsceneLightingActors()
+void ABP_CharaLightingManager_C::UpdateAllCutsceneLightingActors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.UpdateAllCutsceneLightingActors");
 
 	ABP_CharaLightingManager_C_UpdateAllCutsceneLightingActors_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -455,11 +450,11 @@ void ABP_CharaLightingManager_C::STATIC_UpdateAllCutsceneLightingActors()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.ResetValues
-// (Native, Static, NetMulticast, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           FromCutscene                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_ResetValues(bool FromCutscene)
+void ABP_CharaLightingManager_C::ResetValues(bool FromCutscene)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.ResetValues");
 
@@ -467,7 +462,6 @@ void ABP_CharaLightingManager_C::STATIC_ResetValues(bool FromCutscene)
 	params.FromCutscene = FromCutscene;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -476,11 +470,11 @@ void ABP_CharaLightingManager_C::STATIC_ResetValues(bool FromCutscene)
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.SpawnCharaLightingActor
-// (Net, NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_SpawnCharaLightingActor(class AActor* Target)
+void ABP_CharaLightingManager_C::SpawnCharaLightingActor(class AActor* Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.SpawnCharaLightingActor");
 
@@ -488,7 +482,6 @@ void ABP_CharaLightingManager_C::STATIC_SpawnCharaLightingActor(class AActor* Ta
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -497,9 +490,9 @@ void ABP_CharaLightingManager_C::STATIC_SpawnCharaLightingActor(class AActor* Ta
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_UserConstructionScript()
+void ABP_CharaLightingManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.UserConstructionScript");
 
@@ -514,11 +507,11 @@ void ABP_CharaLightingManager_C::STATIC_UserConstructionScript()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.ReceiveTick
-// (NetRequest, Exec, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_CharaLightingManager_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.ReceiveTick");
 
@@ -534,16 +527,15 @@ void ABP_CharaLightingManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.DebugDrawLightLineToggle
-// (NetReliable, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_DebugDrawLightLineToggle()
+void ABP_CharaLightingManager_C::DebugDrawLightLineToggle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.DebugDrawLightLineToggle");
 
 	ABP_CharaLightingManager_C_DebugDrawLightLineToggle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -552,16 +544,15 @@ void ABP_CharaLightingManager_C::STATIC_DebugDrawLightLineToggle()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.DebugCharaLightOnOffToggle
-// (Net, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_DebugCharaLightOnOffToggle()
+void ABP_CharaLightingManager_C::DebugCharaLightOnOffToggle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.DebugCharaLightOnOffToggle");
 
 	ABP_CharaLightingManager_C_DebugCharaLightOnOffToggle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -570,12 +561,12 @@ void ABP_CharaLightingManager_C::STATIC_DebugCharaLightOnOffToggle()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.Editor_UpdateAllCutsceneLightingActors
-// (Net, Native, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ACameraActor*            Camera                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 LevelSequence                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_Editor_UpdateAllCutsceneLightingActors(class ACameraActor* Camera, class UObject* LevelSequence)
+void ABP_CharaLightingManager_C::Editor_UpdateAllCutsceneLightingActors(class ACameraActor* Camera, class UObject* LevelSequence)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.Editor_UpdateAllCutsceneLightingActors");
 
@@ -584,7 +575,6 @@ void ABP_CharaLightingManager_C::STATIC_Editor_UpdateAllCutsceneLightingActors(c
 	params.LevelSequence = LevelSequence;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -593,16 +583,15 @@ void ABP_CharaLightingManager_C::STATIC_Editor_UpdateAllCutsceneLightingActors(c
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.Editor_ResetVariable
-// (Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_Editor_ResetVariable()
+void ABP_CharaLightingManager_C::Editor_ResetVariable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.Editor_ResetVariable");
 
 	ABP_CharaLightingManager_C_Editor_ResetVariable_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -611,11 +600,11 @@ void ABP_CharaLightingManager_C::STATIC_Editor_ResetVariable()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.SetupTestLevel
-// (Net, NetReliable, Exec, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3CharaLightingActor*   Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_SetupTestLevel(class AS3CharaLightingActor* Target)
+void ABP_CharaLightingManager_C::SetupTestLevel(class AS3CharaLightingActor* Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.SetupTestLevel");
 
@@ -631,9 +620,9 @@ void ABP_CharaLightingManager_C::STATIC_SetupTestLevel(class AS3CharaLightingAct
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.BindManagerEvents
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_BindManagerEvents()
+void ABP_CharaLightingManager_C::BindManagerEvents()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.BindManagerEvents");
 
@@ -648,9 +637,9 @@ void ABP_CharaLightingManager_C::STATIC_BindManagerEvents()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnBeginTalk
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_OnBeginTalk()
+void ABP_CharaLightingManager_C::OnBeginTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnBeginTalk");
 
@@ -665,16 +654,15 @@ void ABP_CharaLightingManager_C::STATIC_OnBeginTalk()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnEndTalk
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_OnEndTalk()
+void ABP_CharaLightingManager_C::OnEndTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnEndTalk");
 
 	ABP_CharaLightingManager_C_OnEndTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -683,16 +671,15 @@ void ABP_CharaLightingManager_C::STATIC_OnEndTalk()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnCameraChanged
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_OnCameraChanged()
+void ABP_CharaLightingManager_C::OnCameraChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnCameraChanged");
 
 	ABP_CharaLightingManager_C_OnCameraChanged_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -701,16 +688,15 @@ void ABP_CharaLightingManager_C::STATIC_OnCameraChanged()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.onCutsceneStart
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_onCutsceneStart()
+void ABP_CharaLightingManager_C::onCutsceneStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.onCutsceneStart");
 
 	ABP_CharaLightingManager_C_onCutsceneStart_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -719,16 +705,15 @@ void ABP_CharaLightingManager_C::STATIC_onCutsceneStart()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.onCutsceneEnd
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_onCutsceneEnd()
+void ABP_CharaLightingManager_C::onCutsceneEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.onCutsceneEnd");
 
 	ABP_CharaLightingManager_C_onCutsceneEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -737,11 +722,11 @@ void ABP_CharaLightingManager_C::STATIC_onCutsceneEnd()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnCameraChangedSequencer
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 CameraObject                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_OnCameraChangedSequencer(class UObject* CameraObject)
+void ABP_CharaLightingManager_C::OnCameraChangedSequencer(class UObject* CameraObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnCameraChangedSequencer");
 
@@ -757,16 +742,15 @@ void ABP_CharaLightingManager_C::STATIC_OnCameraChangedSequencer(class UObject* 
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.UnbindCutscene
-// (Exec, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_UnbindCutscene()
+void ABP_CharaLightingManager_C::UnbindCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.UnbindCutscene");
 
 	ABP_CharaLightingManager_C_UnbindCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -775,12 +759,12 @@ void ABP_CharaLightingManager_C::STATIC_UnbindCutscene()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnChangedJoinActor
-// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EJoinActorChangeEvent          ChangeEvent                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_OnChangedJoinActor(EJoinActorChangeEvent ChangeEvent, class AActor* Actor)
+void ABP_CharaLightingManager_C::OnChangedJoinActor(EJoinActorChangeEvent ChangeEvent, class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnChangedJoinActor");
 
@@ -797,11 +781,11 @@ void ABP_CharaLightingManager_C::STATIC_OnChangedJoinActor(EJoinActorChangeEvent
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnStartAcCameraSequence
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ALevelSequenceActor*     PlaySequenceActor              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_OnStartAcCameraSequence(class ALevelSequenceActor* PlaySequenceActor)
+void ABP_CharaLightingManager_C::OnStartAcCameraSequence(class ALevelSequenceActor* PlaySequenceActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnStartAcCameraSequence");
 
@@ -817,11 +801,11 @@ void ABP_CharaLightingManager_C::STATIC_OnStartAcCameraSequence(class ALevelSequ
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnFinishedAcCameraSequence
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULevelSequencePlayer*    LevelSequencePlayer            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_OnFinishedAcCameraSequence(class ULevelSequencePlayer* LevelSequencePlayer)
+void ABP_CharaLightingManager_C::OnFinishedAcCameraSequence(class ULevelSequencePlayer* LevelSequencePlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnFinishedAcCameraSequence");
 
@@ -837,16 +821,15 @@ void ABP_CharaLightingManager_C::STATIC_OnFinishedAcCameraSequence(class ULevelS
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnStopAcCameraSequence
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_OnStopAcCameraSequence()
+void ABP_CharaLightingManager_C::OnStopAcCameraSequence()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnStopAcCameraSequence");
 
 	ABP_CharaLightingManager_C_OnStopAcCameraSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -855,16 +838,15 @@ void ABP_CharaLightingManager_C::STATIC_OnStopAcCameraSequence()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.UnbindAcCameraSequence
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_UnbindAcCameraSequence()
+void ABP_CharaLightingManager_C::UnbindAcCameraSequence()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.UnbindAcCameraSequence");
 
 	ABP_CharaLightingManager_C_UnbindAcCameraSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -873,11 +855,11 @@ void ABP_CharaLightingManager_C::STATIC_UnbindAcCameraSequence()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnChangedACCameraCut
-// (Net, NetRequest, Exec, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UCameraComponent*        CameraComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_CharaLightingManager_C::STATIC_OnChangedACCameraCut(class UCameraComponent* CameraComponent)
+void ABP_CharaLightingManager_C::OnChangedACCameraCut(class UCameraComponent* CameraComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.OnChangedACCameraCut");
 
@@ -893,16 +875,15 @@ void ABP_CharaLightingManager_C::STATIC_OnChangedACCameraCut(class UCameraCompon
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.ReceiveBeginPlay
-// (NetRequest, Native, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_CharaLightingManager_C::STATIC_ReceiveBeginPlay()
+void ABP_CharaLightingManager_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CharaLightingManager.BP_CharaLightingManager_C.ReceiveBeginPlay");
 
 	ABP_CharaLightingManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -911,7 +892,7 @@ void ABP_CharaLightingManager_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_CharaLightingManager.BP_CharaLightingManager_C.ExecuteUbergraph_BP_CharaLightingManager
-// (Private, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

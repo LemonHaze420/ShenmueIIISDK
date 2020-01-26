@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,100 +13,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
-// Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath
-struct UAssetRegistryHelpers_ToSoftObjectPath_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FSoftObjectPath                             ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues
-struct UAssetRegistryHelpers_SetFilterTagsAndValues_Params
-{
-	struct FARFilter                                   InFilter;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	TArray<struct FTagAndValue>                        InTagsAndValues;                                          // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	struct FARFilter                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.IsValid
-struct UAssetRegistryHelpers_IsValid_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.IsUAsset
-struct UAssetRegistryHelpers_IsUAsset_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.IsRedirector
-struct UAssetRegistryHelpers_IsRedirector_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded
-struct UAssetRegistryHelpers_IsAssetLoaded_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetTagValue
-struct UAssetRegistryHelpers_GetTagValue_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FName                                       InTagName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FString                                     OutTagValue;                                              // (Parm, OutParm, ZeroConstructor)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetFullName
-struct UAssetRegistryHelpers_GetFullName_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetExportTextName
-struct UAssetRegistryHelpers_GetExportTextName_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetClass
-struct UAssetRegistryHelpers_GetClass_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry
-struct UAssetRegistryHelpers_GetAssetRegistry_Params
-{
-	TScriptInterface<class UAssetRegistry>             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.GetAsset
-struct UAssetRegistryHelpers_GetAsset_Params
-{
-	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
-	class UObject*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function AssetRegistry.AssetRegistryHelpers.CreateAssetData
-struct UAssetRegistryHelpers_CreateAssetData_Params
-{
-	class UObject*                                     InAsset;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bAllowBlueprintClass;                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FAssetData                                  ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
 
 // Function AssetRegistry.AssetRegistry.SearchAllAssets
 struct UAssetRegistry_SearchAllAssets_Params
@@ -225,6 +131,100 @@ struct UAssetRegistry_GetAllAssets_Params
 	TArray<struct FAssetData>                          OutAssetData;                                             // (Parm, OutParm, ZeroConstructor)
 	bool                                               bIncludeOnlyOnDiskAssets;                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath
+struct UAssetRegistryHelpers_ToSoftObjectPath_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FSoftObjectPath                             ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues
+struct UAssetRegistryHelpers_SetFilterTagsAndValues_Params
+{
+	struct FARFilter                                   InFilter;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	TArray<struct FTagAndValue>                        InTagsAndValues;                                          // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	struct FARFilter                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.IsValid
+struct UAssetRegistryHelpers_IsValid_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.IsUAsset
+struct UAssetRegistryHelpers_IsUAsset_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.IsRedirector
+struct UAssetRegistryHelpers_IsRedirector_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded
+struct UAssetRegistryHelpers_IsAssetLoaded_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetTagValue
+struct UAssetRegistryHelpers_GetTagValue_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FName                                       InTagName;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FString                                     OutTagValue;                                              // (Parm, OutParm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetFullName
+struct UAssetRegistryHelpers_GetFullName_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetExportTextName
+struct UAssetRegistryHelpers_GetExportTextName_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetClass
+struct UAssetRegistryHelpers_GetClass_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	class UClass*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry
+struct UAssetRegistryHelpers_GetAssetRegistry_Params
+{
+	TScriptInterface<class UAssetRegistry>             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.GetAsset
+struct UAssetRegistryHelpers_GetAsset_Params
+{
+	struct FAssetData                                  InAssetData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	class UObject*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function AssetRegistry.AssetRegistryHelpers.CreateAssetData
+struct UAssetRegistryHelpers_CreateAssetData_Params
+{
+	class UObject*                                     InAsset;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bAllowBlueprintClass;                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FAssetData                                  ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 }

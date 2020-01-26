@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.isTimerOverStop
-// (Net, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Stop                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_TimeOverControl_C::STATIC_isTimerOverStop(bool* Stop)
+void ABP_Hakkason_TimeOverControl_C::isTimerOverStop(bool* Stop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.isTimerOverStop");
 
@@ -36,12 +36,12 @@ void ABP_Hakkason_TimeOverControl_C::STATIC_isTimerOverStop(bool* Stop)
 
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.StepRangeSet
-// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            StepMin                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            StepMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_TimeOverControl_C::STATIC_StepRangeSet(int StepMin, int StepMax)
+void ABP_Hakkason_TimeOverControl_C::StepRangeSet(int StepMin, int StepMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.StepRangeSet");
 
@@ -50,7 +50,6 @@ void ABP_Hakkason_TimeOverControl_C::STATIC_StepRangeSet(int StepMin, int StepMa
 	params.StepMax = StepMax;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,18 +58,17 @@ void ABP_Hakkason_TimeOverControl_C::STATIC_StepRangeSet(int StepMin, int StepMa
 
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.CheckStepOver
-// (Net, Exec, Native, Static, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           StepOver                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_TimeOverControl_C::STATIC_CheckStepOver(bool* StepOver)
+void ABP_Hakkason_TimeOverControl_C::CheckStepOver(bool* StepOver)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.CheckStepOver");
 
 	ABP_Hakkason_TimeOverControl_C_CheckStepOver_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,7 +80,7 @@ void ABP_Hakkason_TimeOverControl_C::STATIC_CheckStepOver(bool* StepOver)
 
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.CheckGameTimerange
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Min                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Max                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -97,7 +95,6 @@ void ABP_Hakkason_TimeOverControl_C::CheckGameTimerange(float Min, float Max, bo
 	params.Max = Max;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,11 +106,11 @@ void ABP_Hakkason_TimeOverControl_C::CheckGameTimerange(float Min, float Max, bo
 
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.InitSet
-// (Net, Event, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          LmitTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_TimeOverControl_C::STATIC_InitSet(float LmitTime)
+void ABP_Hakkason_TimeOverControl_C::InitSet(float LmitTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.InitSet");
 
@@ -129,7 +126,7 @@ void ABP_Hakkason_TimeOverControl_C::STATIC_InitSet(float LmitTime)
 
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.UserConstructionScript
-// (Net, Event, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Hakkason_TimeOverControl_C::UserConstructionScript()
 {
@@ -146,9 +143,9 @@ void ABP_Hakkason_TimeOverControl_C::UserConstructionScript()
 
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.TickChangeCheckKill
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Hakkason_TimeOverControl_C::STATIC_TickChangeCheckKill()
+void ABP_Hakkason_TimeOverControl_C::TickChangeCheckKill()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.TickChangeCheckKill");
 
@@ -163,12 +160,12 @@ void ABP_Hakkason_TimeOverControl_C::STATIC_TickChangeCheckKill()
 
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.RenewalActorCount
-// (Net, NetReliable, Native, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_MainFlowActorID> ActorId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  RenewalCounter                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_TimeOverControl_C::STATIC_RenewalActorCount(TEnumAsByte<EN_MainFlowActorID> ActorId, unsigned char RenewalCounter)
+void ABP_Hakkason_TimeOverControl_C::RenewalActorCount(TEnumAsByte<EN_MainFlowActorID> ActorId, unsigned char RenewalCounter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.RenewalActorCount");
 
@@ -177,7 +174,6 @@ void ABP_Hakkason_TimeOverControl_C::STATIC_RenewalActorCount(TEnumAsByte<EN_Mai
 	params.RenewalCounter = RenewalCounter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -186,11 +182,11 @@ void ABP_Hakkason_TimeOverControl_C::STATIC_RenewalActorCount(TEnumAsByte<EN_Mai
 
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.ReceiveTick
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_TimeOverControl_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_Hakkason_TimeOverControl_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.ReceiveTick");
 
@@ -206,11 +202,11 @@ void ABP_Hakkason_TimeOverControl_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.ExecuteUbergraph_BP_Hakkason_TimeOverControl
-// (Static, NetMulticast, Public, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_TimeOverControl_C::STATIC_ExecuteUbergraph_BP_Hakkason_TimeOverControl(int EntryPoint)
+void ABP_Hakkason_TimeOverControl_C::ExecuteUbergraph_BP_Hakkason_TimeOverControl(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_TimeOverControl.BP_Hakkason_TimeOverControl_C.ExecuteUbergraph_BP_Hakkason_TimeOverControl");
 

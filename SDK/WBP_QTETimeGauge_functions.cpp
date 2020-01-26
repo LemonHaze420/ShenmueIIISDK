@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QTETimeGauge.WBP_QTETimeGauge_C.SetCircleRate
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          GaugeRate                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UWBP_QTETimeGauge_C::SetCircleRate(float GaugeRate)
 
 
 // Function WBP_QTETimeGauge.WBP_QTETimeGauge_C.Construct
-// (Net, Exec, Event, NetResponse, Public, Delegate, NetServer)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_QTETimeGauge_C::Construct()
 {
@@ -51,11 +51,11 @@ void UWBP_QTETimeGauge_C::Construct()
 
 
 // Function WBP_QTETimeGauge.WBP_QTETimeGauge_C.ExecuteUbergraph_WBP_QTETimeGauge
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_QTETimeGauge_C::STATIC_ExecuteUbergraph_WBP_QTETimeGauge(int EntryPoint)
+void UWBP_QTETimeGauge_C::ExecuteUbergraph_WBP_QTETimeGauge(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTETimeGauge.WBP_QTETimeGauge_C.ExecuteUbergraph_WBP_QTETimeGauge");
 

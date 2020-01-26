@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugMenu.BW_DebugMenu_C.GetCurrentSubMenu
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UWidget* UBW_DebugMenu_C::STATIC_GetCurrentSubMenu()
+class UWidget* UBW_DebugMenu_C::GetCurrentSubMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.GetCurrentSubMenu");
 
 	UBW_DebugMenu_C_GetCurrentSubMenu_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,16 +35,15 @@ class UWidget* UBW_DebugMenu_C::STATIC_GetCurrentSubMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BuildAchievementMenu
-// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_BuildAchievementMenu()
+void UBW_DebugMenu_C::BuildAchievementMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.BuildAchievementMenu");
 
 	UBW_DebugMenu_C_BuildAchievementMenu_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +52,11 @@ void UBW_DebugMenu_C::STATIC_BuildAchievementMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BuildMenu
-// (NetRequest, Event, Static, NetMulticast, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugMenu_C::STATIC_BuildMenu(class UObject* Widget)
+void UBW_DebugMenu_C::BuildMenu(class UObject* Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.BuildMenu");
 
@@ -74,7 +72,7 @@ void UBW_DebugMenu_C::STATIC_BuildMenu(class UObject* Widget)
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.IsInputPage
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Input                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -96,7 +94,7 @@ void UBW_DebugMenu_C::IsInputPage(bool* Input)
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BuildBattleMenu
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugMenu_C::BuildBattleMenu()
 {
@@ -113,16 +111,15 @@ void UBW_DebugMenu_C::BuildBattleMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BuildAutoConversationMenu
-// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_BuildAutoConversationMenu()
+void UBW_DebugMenu_C::BuildAutoConversationMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.BuildAutoConversationMenu");
 
 	UBW_DebugMenu_C_BuildAutoConversationMenu_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,9 +128,9 @@ void UBW_DebugMenu_C::STATIC_BuildAutoConversationMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.UpdCategoryCursor
-// (Net, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_UpdCategoryCursor()
+void UBW_DebugMenu_C::UpdCategoryCursor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.UpdCategoryCursor");
 
@@ -148,11 +145,11 @@ void UBW_DebugMenu_C::STATIC_UpdCategoryCursor()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.SetMode
-// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Mode                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugMenu_C::STATIC_SetMode(int Mode)
+void UBW_DebugMenu_C::SetMode(int Mode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.SetMode");
 
@@ -160,7 +157,6 @@ void UBW_DebugMenu_C::STATIC_SetMode(int Mode)
 	params.Mode = Mode;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,16 +165,15 @@ void UBW_DebugMenu_C::STATIC_SetMode(int Mode)
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BuildTeleportToNPCMenu
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_BuildTeleportToNPCMenu()
+void UBW_DebugMenu_C::BuildTeleportToNPCMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.BuildTeleportToNPCMenu");
 
 	UBW_DebugMenu_C_BuildTeleportToNPCMenu_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,16 +182,15 @@ void UBW_DebugMenu_C::STATIC_BuildTeleportToNPCMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BuildCutsceneMenu
-// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_BuildCutsceneMenu()
+void UBW_DebugMenu_C::BuildCutsceneMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.BuildCutsceneMenu");
 
 	UBW_DebugMenu_C_BuildCutsceneMenu_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,16 +199,15 @@ void UBW_DebugMenu_C::STATIC_BuildCutsceneMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.SetDbgSubFlags
-// (Exec, Native, Event, NetResponse, Static, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_SetDbgSubFlags()
+void UBW_DebugMenu_C::SetDbgSubFlags()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.SetDbgSubFlags");
 
 	UBW_DebugMenu_C_SetDbgSubFlags_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -223,9 +216,9 @@ void UBW_DebugMenu_C::STATIC_SetDbgSubFlags()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BuildWatchMenu
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_BuildWatchMenu()
+void UBW_DebugMenu_C::BuildWatchMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.BuildWatchMenu");
 
@@ -240,11 +233,11 @@ void UBW_DebugMenu_C::STATIC_BuildWatchMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.OnTeleportClick
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 ContextObject                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugMenu_C::STATIC_OnTeleportClick(class UObject* ContextObject)
+void UBW_DebugMenu_C::OnTeleportClick(class UObject* ContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.OnTeleportClick");
 
@@ -252,7 +245,6 @@ void UBW_DebugMenu_C::STATIC_OnTeleportClick(class UObject* ContextObject)
 	params.ContextObject = ContextObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -261,9 +253,9 @@ void UBW_DebugMenu_C::STATIC_OnTeleportClick(class UObject* ContextObject)
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BuildTeleportMenu
-// (NetReliable, NetRequest, Event, Static, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_BuildTeleportMenu()
+void UBW_DebugMenu_C::BuildTeleportMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.BuildTeleportMenu");
 
@@ -278,7 +270,7 @@ void UBW_DebugMenu_C::STATIC_BuildTeleportMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.SetFocus
-// (NetRequest, NetResponse, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugMenu_C::SetFocus()
 {
@@ -295,13 +287,13 @@ void UBW_DebugMenu_C::SetFocus()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.OnKeyDown
-// (Net, Exec, Native, Static, NetMulticast, Private, Protected, Delegate, Const)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UBW_DebugMenu_C::STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply UBW_DebugMenu_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.OnKeyDown");
 
@@ -310,7 +302,6 @@ struct FEventReply UBW_DebugMenu_C::STATIC_OnKeyDown(const struct FGeometry& MyG
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -321,16 +312,15 @@ struct FEventReply UBW_DebugMenu_C::STATIC_OnKeyDown(const struct FGeometry& MyG
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BuildDebugInputMenu
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_BuildDebugInputMenu()
+void UBW_DebugMenu_C::BuildDebugInputMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.BuildDebugInputMenu");
 
 	UBW_DebugMenu_C_BuildDebugInputMenu_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -339,13 +329,13 @@ void UBW_DebugMenu_C::STATIC_BuildDebugInputMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.OnPreviewKeyDown
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UBW_DebugMenu_C::STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply UBW_DebugMenu_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.OnPreviewKeyDown");
 
@@ -354,7 +344,6 @@ struct FEventReply UBW_DebugMenu_C::STATIC_OnPreviewKeyDown(const struct FGeomet
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -365,16 +354,15 @@ struct FEventReply UBW_DebugMenu_C::STATIC_OnPreviewKeyDown(const struct FGeomet
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.UpdateMode
-// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_UpdateMode()
+void UBW_DebugMenu_C::UpdateMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.UpdateMode");
 
 	UBW_DebugMenu_C_UpdateMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -383,7 +371,7 @@ void UBW_DebugMenu_C::STATIC_UpdateMode()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.NextMode
-// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugMenu_C::NextMode()
 {
@@ -392,7 +380,6 @@ void UBW_DebugMenu_C::NextMode()
 	UBW_DebugMenu_C_NextMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -401,9 +388,9 @@ void UBW_DebugMenu_C::NextMode()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.PrevMode
-// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugMenu_C::STATIC_PrevMode()
+void UBW_DebugMenu_C::PrevMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.PrevMode");
 
@@ -418,18 +405,17 @@ void UBW_DebugMenu_C::STATIC_PrevMode()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.GetModeLabel
-// (NetRequest, Native, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_DebugMenu_C::STATIC_GetModeLabel()
+struct FText UBW_DebugMenu_C::GetModeLabel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.GetModeLabel");
 
 	UBW_DebugMenu_C_GetModeLabel_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -440,7 +426,7 @@ struct FText UBW_DebugMenu_C::STATIC_GetModeLabel()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.Construct
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBW_DebugMenu_C::Construct()
 {
@@ -449,7 +435,6 @@ void UBW_DebugMenu_C::Construct()
 	UBW_DebugMenu_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -458,7 +443,7 @@ void UBW_DebugMenu_C::Construct()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.Tick
-// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -472,7 +457,6 @@ void UBW_DebugMenu_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -481,7 +465,7 @@ void UBW_DebugMenu_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BndEvt__PrevModeButton_K2Node_ComponentBoundEvent_139_OnButtonClickedEvent__DelegateSignature
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void UBW_DebugMenu_C::BndEvt__PrevModeButton_K2Node_ComponentBoundEvent_139_OnButtonClickedEvent__DelegateSignature()
 {
@@ -490,7 +474,6 @@ void UBW_DebugMenu_C::BndEvt__PrevModeButton_K2Node_ComponentBoundEvent_139_OnBu
 	UBW_DebugMenu_C_BndEvt__PrevModeButton_K2Node_ComponentBoundEvent_139_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -499,7 +482,7 @@ void UBW_DebugMenu_C::BndEvt__PrevModeButton_K2Node_ComponentBoundEvent_139_OnBu
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BndEvt__NextModeButton_K2Node_ComponentBoundEvent_148_OnButtonClickedEvent__DelegateSignature
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void UBW_DebugMenu_C::BndEvt__NextModeButton_K2Node_ComponentBoundEvent_148_OnButtonClickedEvent__DelegateSignature()
 {
@@ -508,7 +491,6 @@ void UBW_DebugMenu_C::BndEvt__NextModeButton_K2Node_ComponentBoundEvent_148_OnBu
 	UBW_DebugMenu_C_BndEvt__NextModeButton_K2Node_ComponentBoundEvent_148_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -517,7 +499,7 @@ void UBW_DebugMenu_C::BndEvt__NextModeButton_K2Node_ComponentBoundEvent_148_OnBu
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.Destruct
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBW_DebugMenu_C::Destruct()
 {
@@ -526,7 +508,6 @@ void UBW_DebugMenu_C::Destruct()
 	UBW_DebugMenu_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -535,7 +516,7 @@ void UBW_DebugMenu_C::Destruct()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.CloseDebugMenu
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugMenu_C::CloseDebugMenu()
 {
@@ -544,7 +525,6 @@ void UBW_DebugMenu_C::CloseDebugMenu()
 	UBW_DebugMenu_C_CloseDebugMenu_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -553,7 +533,7 @@ void UBW_DebugMenu_C::CloseDebugMenu()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.BndEvt__BW_DebugItemViewer_K2Node_ComponentBoundEvent_0_OnClickedDispatcher__DelegateSignature
-// (NetReliable, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void UBW_DebugMenu_C::BndEvt__BW_DebugItemViewer_K2Node_ComponentBoundEvent_0_OnClickedDispatcher__DelegateSignature()
 {
@@ -562,7 +542,6 @@ void UBW_DebugMenu_C::BndEvt__BW_DebugItemViewer_K2Node_ComponentBoundEvent_0_On
 	UBW_DebugMenu_C_BndEvt__BW_DebugItemViewer_K2Node_ComponentBoundEvent_0_OnClickedDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -571,11 +550,11 @@ void UBW_DebugMenu_C::BndEvt__BW_DebugItemViewer_K2Node_ComponentBoundEvent_0_On
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.OnCategoryClick
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBW_DebugMenuCategoryButton_C* Clicked                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_DebugMenu_C::STATIC_OnCategoryClick(class UBW_DebugMenuCategoryButton_C* Clicked)
+void UBW_DebugMenu_C::OnCategoryClick(class UBW_DebugMenuCategoryButton_C* Clicked)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMenu.BW_DebugMenu_C.OnCategoryClick");
 
@@ -583,7 +562,6 @@ void UBW_DebugMenu_C::STATIC_OnCategoryClick(class UBW_DebugMenuCategoryButton_C
 	params.Clicked = Clicked;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -592,7 +570,7 @@ void UBW_DebugMenu_C::STATIC_OnCategoryClick(class UBW_DebugMenuCategoryButton_C
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.RemoveAllWidgets
-// (Net, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugMenu_C::RemoveAllWidgets()
 {
@@ -601,7 +579,6 @@ void UBW_DebugMenu_C::RemoveAllWidgets()
 	UBW_DebugMenu_C_RemoveAllWidgets_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -610,7 +587,7 @@ void UBW_DebugMenu_C::RemoveAllWidgets()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.ToggleFPS
-// (Net, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugMenu_C::ToggleFPS()
 {
@@ -619,7 +596,6 @@ void UBW_DebugMenu_C::ToggleFPS()
 	UBW_DebugMenu_C_ToggleFPS_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -628,7 +604,7 @@ void UBW_DebugMenu_C::ToggleFPS()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.StartDebugCamera
-// (Exec, Native, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBW_DebugMenu_C::StartDebugCamera()
 {
@@ -637,7 +613,6 @@ void UBW_DebugMenu_C::StartDebugCamera()
 	UBW_DebugMenu_C_StartDebugCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -646,7 +621,7 @@ void UBW_DebugMenu_C::StartDebugCamera()
 
 
 // Function BW_DebugMenu.BW_DebugMenu_C.ExecuteUbergraph_BW_DebugMenu
-// (Net, NetResponse, MulticastDelegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

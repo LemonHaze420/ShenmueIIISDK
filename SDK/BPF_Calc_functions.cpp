@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,14 +14,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Calc.BPF_Calc_C.CalculateVerticalFOV
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          HFOV                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          AspectRatio                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          VFOV                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Calc_C::CalculateVerticalFOV(float HFOV, float AspectRatio, class UObject* __WorldContext, float* VFOV)
+void UBPF_Calc_C::STATIC_CalculateVerticalFOV(float HFOV, float AspectRatio, class UObject* __WorldContext, float* VFOV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Calc.BPF_Calc_C.CalculateVerticalFOV");
 
@@ -31,7 +31,6 @@ void UBPF_Calc_C::CalculateVerticalFOV(float HFOV, float AspectRatio, class UObj
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -43,7 +42,7 @@ void UBPF_Calc_C::CalculateVerticalFOV(float HFOV, float AspectRatio, class UObj
 
 
 // Function BPF_Calc.BPF_Calc_C.distanceVector
-// (NetRequest, Native, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 A                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 B                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -62,7 +61,6 @@ void UBPF_Calc_C::STATIC_distanceVector(const struct FVector& A, const struct FV
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

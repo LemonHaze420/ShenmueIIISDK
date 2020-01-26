@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,21 +48,21 @@ public:
 	void PlayTimeCountSE();
 	bool IsEarlyFailed();
 	void UpdateAnimationState();
-	bool STATIC_IsInQTE();
+	bool IsInQTE();
 	float GetInAnimationLength();
-	bool STATIC_IsPlayingIn();
-	void STATIC_SetTimeGaugeRate(float Rate);
-	void STATIC_UpdateTime(float TickDeltaSeconds, float* CurrentDeltaSeconds);
+	bool IsPlayingIn();
+	void SetTimeGaugeRate(float Rate);
+	void UpdateTime(float TickDeltaSeconds, float* CurrentDeltaSeconds);
 	void SetUseRealTime(bool UseRealTime);
 	void ClearResult();
 	void InputFunction(const struct FKey& InKey);
 	void InputEndFunction();
 	void InputStartFunction(const struct FName& SuccessAction, float InJustTimingStartRate, float InJustTimingEndRate, float InInputLimitTime);
-	void STATIC_EndFunction();
-	void STATIC_Prepare();
+	void EndFunction();
+	void Prepare();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BPC_old_QTETimingComponent(int EntryPoint);
+	void ExecuteUbergraph_BPC_old_QTETimingComponent(int EntryPoint);
 	void ButtonDown__DelegateSignature(bool Succeed);
 	void End__DelegateSignature();
 	void Success__DelegateSignature();

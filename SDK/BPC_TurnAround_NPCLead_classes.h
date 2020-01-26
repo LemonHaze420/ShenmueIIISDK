@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,16 +32,16 @@ public:
 	}
 
 
-	void STATIC_SetEnableBodyLookAt(bool Enable);
-	void STATIC_CanTurnAround(bool* bCan);
-	void STATIC_IsPlayingSitAnimation(bool* bPlaying);
+	void SetEnableBodyLookAt(bool Enable);
+	void CanTurnAround(bool* bCan);
+	void IsPlayingSitAnimation(bool* bPlaying);
 	void OnLoaded_F7D60CF146905F4918060D8140E96419(class UObject* Loaded);
-	void STATIC_ReturnPreTalkRotationActor();
-	void STATIC_ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
-	void STATIC_TrySitMotation();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_TurnAroundTickFinish();
-	void STATIC_ExecuteUbergraph_BPC_TurnAround_NPCLead(int EntryPoint);
+	void ReturnPreTalkRotationActor();
+	void ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
+	void TrySitMotation();
+	void ReceiveBeginPlay();
+	void TurnAroundTickFinish();
+	void ExecuteUbergraph_BPC_TurnAround_NPCLead(int EntryPoint);
 };
 
 

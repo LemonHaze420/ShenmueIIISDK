@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,20 +36,20 @@ public:
 	}
 
 
-	void STATIC_GetCurentRate(float* Rate);
+	void GetCurentRate(float* Rate);
 	void SetGenericCall(int z_order);
 	void CheckVisible(ES3PlayerBehavior ID);
 	void DisableSkipScene();
 	void EnableSkipScene();
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_4(const struct FKey& Key);
 	void InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_3(const struct FKey& Key);
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
+	void ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_SkipController(int EntryPoint);
-	void STATIC_OnSkip__DelegateSignature();
+	void OnSkip__DelegateSignature();
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,11 +29,11 @@ public:
 
 	void LazyFindDoors();
 	void ForbidPCDoorInteraction();
-	void STATIC_GetDoors(TArray<class ABP_Gimmick_OpenDoor_Template_C*>* Doors);
+	void GetDoors(TArray<class ABP_Gimmick_OpenDoor_Template_C*>* Doors);
 	void ChangeDoorType(const struct FString& DoorName, TEnumAsByte<EN_DoorType> DoorType);
 	void SetDoors();
 	void GetDoorByName(const struct FString& DoorName, class ABP_Gimmick_OpenDoor_Template_C** DoorActor);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 };
 
 

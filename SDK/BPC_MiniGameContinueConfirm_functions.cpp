@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.CleanUp
-// (Event, NetResponse, Static, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameContinueConfirm_C::STATIC_CleanUp()
+void UBPC_MiniGameContinueConfirm_C::CleanUp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.CleanUp");
 
@@ -31,7 +31,7 @@ void UBPC_MiniGameContinueConfirm_C::STATIC_CleanUp()
 
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.StartGameContinueConfirmCheck
-// (NetRequest, Exec, Native, NetMulticast, Delegate, NetServer, HasOutParms, NetClient)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameContinueConfirm_C::StartGameContinueConfirmCheck()
 {
@@ -40,7 +40,6 @@ void UBPC_MiniGameContinueConfirm_C::StartGameContinueConfirmCheck()
 	UBPC_MiniGameContinueConfirm_C_StartGameContinueConfirmCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,7 +48,7 @@ void UBPC_MiniGameContinueConfirm_C::StartGameContinueConfirmCheck()
 
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.BindActionSelectEvents
-// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3actionSelect_C*    Action                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -69,11 +68,11 @@ void UBPC_MiniGameContinueConfirm_C::BindActionSelectEvents(class ABP_S3actionSe
 
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.onSelected
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameContinueConfirm_C::STATIC_onSelected(int Index)
+void UBPC_MiniGameContinueConfirm_C::onSelected(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.onSelected");
 
@@ -81,7 +80,6 @@ void UBPC_MiniGameContinueConfirm_C::STATIC_onSelected(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,9 +88,9 @@ void UBPC_MiniGameContinueConfirm_C::STATIC_onSelected(int Index)
 
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.UnbindActionSelectEvents
-// (Net, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameContinueConfirm_C::STATIC_UnbindActionSelectEvents()
+void UBPC_MiniGameContinueConfirm_C::UnbindActionSelectEvents()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.UnbindActionSelectEvents");
 
@@ -107,11 +105,11 @@ void UBPC_MiniGameContinueConfirm_C::STATIC_UnbindActionSelectEvents()
 
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.RepayMiniGame
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          WaitTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameContinueConfirm_C::STATIC_RepayMiniGame(float WaitTime)
+void UBPC_MiniGameContinueConfirm_C::RepayMiniGame(float WaitTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.RepayMiniGame");
 
@@ -119,7 +117,6 @@ void UBPC_MiniGameContinueConfirm_C::STATIC_RepayMiniGame(float WaitTime)
 	params.WaitTime = WaitTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -128,16 +125,15 @@ void UBPC_MiniGameContinueConfirm_C::STATIC_RepayMiniGame(float WaitTime)
 
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.ReceiveBeginPlay
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_MiniGameContinueConfirm_C::STATIC_ReceiveBeginPlay()
+void UBPC_MiniGameContinueConfirm_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.ReceiveBeginPlay");
 
 	UBPC_MiniGameContinueConfirm_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,7 +142,7 @@ void UBPC_MiniGameContinueConfirm_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.ExecuteUbergraph_BPC_MiniGameContinueConfirm
-// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Public, HasOutParms, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -166,9 +162,9 @@ void UBPC_MiniGameContinueConfirm_C::ExecuteUbergraph_BPC_MiniGameContinueConfir
 
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.OnGameFinishedDispatcher__DelegateSignature
-// (NetRequest, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameContinueConfirm_C::STATIC_OnGameFinishedDispatcher__DelegateSignature()
+void UBPC_MiniGameContinueConfirm_C::OnGameFinishedDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.OnGameFinishedDispatcher__DelegateSignature");
 
@@ -183,7 +179,7 @@ void UBPC_MiniGameContinueConfirm_C::STATIC_OnGameFinishedDispatcher__DelegateSi
 
 
 // Function BPC_MiniGameContinueConfirm.BPC_MiniGameContinueConfirm_C.OnGameContinueDispatcher__DelegateSignature
-// (NetRequest, Native, NetResponse, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameContinueConfirm_C::OnGameContinueDispatcher__DelegateSignature()
 {
@@ -192,7 +188,6 @@ void UBPC_MiniGameContinueConfirm_C::OnGameContinueDispatcher__DelegateSignature
 	UBPC_MiniGameContinueConfirm_C_OnGameContinueDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

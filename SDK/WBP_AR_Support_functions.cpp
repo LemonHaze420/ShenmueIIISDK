@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_AR_Support.WBP_AR_Support_C.GetPushCountRate
-// (Net, Exec, Event, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_AR_Support_C::STATIC_GetPushCountRate(int Index, float* Output)
+void UWBP_AR_Support_C::GetPushCountRate(int Index, float* Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_AR_Support.WBP_AR_Support_C.GetPushCountRate");
 
@@ -38,16 +38,15 @@ void UWBP_AR_Support_C::STATIC_GetPushCountRate(int Index, float* Output)
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.UpdateFillRatio
-// (Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_AR_Support_C::STATIC_UpdateFillRatio()
+void UWBP_AR_Support_C::UpdateFillRatio()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_AR_Support.WBP_AR_Support_C.UpdateFillRatio");
 
 	UWBP_AR_Support_C_UpdateFillRatio_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +55,7 @@ void UWBP_AR_Support_C::STATIC_UpdateFillRatio()
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.ChangeButtonIcon
-// (Net, NetReliable, Native, Event, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_padSwitch>      ButtonType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +67,6 @@ void UWBP_AR_Support_C::ChangeButtonIcon(TEnumAsByte<EN_padSwitch> ButtonType)
 	params.ButtonType = ButtonType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,7 +75,7 @@ void UWBP_AR_Support_C::ChangeButtonIcon(TEnumAsByte<EN_padSwitch> ButtonType)
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.Count Check
-// (Net, NetRequest, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_AR_Support_C::Count_Check()
 {
@@ -94,11 +92,11 @@ void UWBP_AR_Support_C::Count_Check()
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.AddPushCount
-// (Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_AR_Support_C::STATIC_AddPushCount(bool Add)
+void UWBP_AR_Support_C::AddPushCount(bool Add)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_AR_Support.WBP_AR_Support_C.AddPushCount");
 
@@ -114,7 +112,7 @@ void UWBP_AR_Support_C::STATIC_AddPushCount(bool Add)
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.Construct
-// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_AR_Support_C::Construct()
 {
@@ -123,7 +121,6 @@ void UWBP_AR_Support_C::Construct()
 	UWBP_AR_Support_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +129,7 @@ void UWBP_AR_Support_C::Construct()
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.Tick
-// (Net, NetReliable, Exec, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -154,7 +151,7 @@ void UWBP_AR_Support_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTi
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.Reset
-// (Net, Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UWBP_AR_Support_C::Reset()
 {
@@ -163,7 +160,6 @@ void UWBP_AR_Support_C::Reset()
 	UWBP_AR_Support_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -172,11 +168,11 @@ void UWBP_AR_Support_C::Reset()
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.SetEnabledSupportUI
-// (NetReliable, Exec, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_AR_Support_C::STATIC_SetEnabledSupportUI(bool Visible)
+void UWBP_AR_Support_C::SetEnabledSupportUI(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_AR_Support.WBP_AR_Support_C.SetEnabledSupportUI");
 
@@ -192,7 +188,7 @@ void UWBP_AR_Support_C::STATIC_SetEnabledSupportUI(bool Visible)
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.ExecuteUbergraph_WBP_AR_Support
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -204,7 +200,6 @@ void UWBP_AR_Support_C::ExecuteUbergraph_WBP_AR_Support(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -213,7 +208,7 @@ void UWBP_AR_Support_C::ExecuteUbergraph_WBP_AR_Support(int EntryPoint)
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.CountChange__DelegateSignature
-// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Count                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -225,7 +220,6 @@ void UWBP_AR_Support_C::CountChange__DelegateSignature(int Count)
 	params.Count = Count;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,7 +228,7 @@ void UWBP_AR_Support_C::CountChange__DelegateSignature(int Count)
 
 
 // Function WBP_AR_Support.WBP_AR_Support_C.CountMAX__DelegateSignature
-// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UWBP_AR_Support_C::CountMAX__DelegateSignature()
 {
@@ -243,7 +237,6 @@ void UWBP_AR_Support_C::CountMAX__DelegateSignature()
 	UWBP_AR_Support_C_CountMAX__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

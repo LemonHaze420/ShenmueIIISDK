@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,17 +29,17 @@ public:
 
 
 	void InitDefaultLevelProgression();
-	void STATIC_ReinitFixedLevel();
-	void STATIC_Debug_TestSkillProgression();
-	bool STATIC_IsSkillEquipable(const struct FName& SkillId);
+	void ReinitFixedLevel();
+	void Debug_TestSkillProgression();
+	bool IsSkillEquipable(const struct FName& SkillId);
 	bool IsSkillLevelable(const struct FName& SkillItem);
-	void STATIC_GetDojoRankMax(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank* Rank);
+	void GetDojoRankMax(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank* Rank);
 	bool InitBlueprint();
 	void SetLastAdviceData(class UBattleAdviceData_C* AdviceData);
 	void GetLastAdviceData(class UBattleAdviceData_C** AdviceData);
-	int STATIC_GetDojoRankIndex(const struct FName& Dojo);
-	void STATIC_DojoRankNameToEnum(const struct FName& Name, ES3DojoRank* Rank);
-	void STATIC_DojoRankEnumToName(ES3DojoRank InRank, struct FName* OutRank);
+	int GetDojoRankIndex(const struct FName& Dojo);
+	void DojoRankNameToEnum(const struct FName& Name, ES3DojoRank* Rank);
+	void DojoRankEnumToName(ES3DojoRank InRank, struct FName* OutRank);
 	void GetDojoRankAsEnum(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank* Rank);
 	void SetDojoRankAsEnum(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank Rank);
 };

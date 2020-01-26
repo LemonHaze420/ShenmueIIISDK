@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OD_Fence.BP_OD_Fence_C.SetFenceMaterial
-// (Net, Exec, Native, NetResponse, Static, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInterface*      Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Fence_C::STATIC_SetFenceMaterial(class UMaterialInterface* Material)
+void ABP_OD_Fence_C::SetFenceMaterial(class UMaterialInterface* Material)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Fence.BP_OD_Fence_C.SetFenceMaterial");
 
@@ -26,7 +26,6 @@ void ABP_OD_Fence_C::STATIC_SetFenceMaterial(class UMaterialInterface* Material)
 	params.Material = Material;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void ABP_OD_Fence_C::STATIC_SetFenceMaterial(class UMaterialInterface* Material)
 
 
 // Function BP_OD_Fence.BP_OD_Fence_C.SetCollisionEnabled
-// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Fence_C::STATIC_SetCollisionEnabled(bool Enabled)
+void ABP_OD_Fence_C::SetCollisionEnabled(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Fence.BP_OD_Fence_C.SetCollisionEnabled");
 
@@ -47,7 +46,6 @@ void ABP_OD_Fence_C::STATIC_SetCollisionEnabled(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,12 +54,12 @@ void ABP_OD_Fence_C::STATIC_SetCollisionEnabled(bool Enabled)
 
 
 // Function BP_OD_Fence.BP_OD_Fence_C.GetItemName
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Param                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString ABP_OD_Fence_C::STATIC_GetItemName(int Param)
+struct FString ABP_OD_Fence_C::GetItemName(int Param)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Fence.BP_OD_Fence_C.GetItemName");
 
@@ -79,14 +77,14 @@ struct FString ABP_OD_Fence_C::STATIC_GetItemName(int Param)
 
 
 // Function BP_OD_Fence.BP_OD_Fence_C.SetCollisionScale
-// (Net, Static, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            pocket_check                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInterface*      Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstance*       ForceOverrideMaterial          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Fence_C::STATIC_SetCollisionScale(float Scale, int pocket_check, class UMaterialInterface* Material, class UMaterialInstance* ForceOverrideMaterial)
+void ABP_OD_Fence_C::SetCollisionScale(float Scale, int pocket_check, class UMaterialInterface* Material, class UMaterialInstance* ForceOverrideMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Fence.BP_OD_Fence_C.SetCollisionScale");
 
@@ -105,7 +103,7 @@ void ABP_OD_Fence_C::STATIC_SetCollisionScale(float Scale, int pocket_check, cla
 
 
 // Function BP_OD_Fence.BP_OD_Fence_C.UserConstructionScript
-// (NetReliable, NetRequest, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_OD_Fence_C::UserConstructionScript()
 {
@@ -114,7 +112,6 @@ void ABP_OD_Fence_C::UserConstructionScript()
 	ABP_OD_Fence_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,7 +120,7 @@ void ABP_OD_Fence_C::UserConstructionScript()
 
 
 // Function BP_OD_Fence.BP_OD_Fence_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -145,7 +142,6 @@ void ABP_OD_Fence_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOver
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,7 +150,7 @@ void ABP_OD_Fence_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOver
 
 
 // Function BP_OD_Fence.BP_OD_Fence_C.BndEvt__WallHitSound_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -163,7 +159,7 @@ void ABP_OD_Fence_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOver
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_OD_Fence_C::STATIC_BndEvt__WallHitSound_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_OD_Fence_C::BndEvt__WallHitSound_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Fence.BP_OD_Fence_C.BndEvt__WallHitSound_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -184,14 +180,14 @@ void ABP_OD_Fence_C::STATIC_BndEvt__WallHitSound_K2Node_ComponentBoundEvent_5_Co
 
 
 // Function BP_OD_Fence.BP_OD_Fence_C.BndEvt__WallHitSound_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature
-// (Net, Exec, Event, NetResponse, Static, Public, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Fence_C::STATIC_BndEvt__WallHitSound_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_OD_Fence_C::BndEvt__WallHitSound_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Fence.BP_OD_Fence_C.BndEvt__WallHitSound_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -210,7 +206,7 @@ void ABP_OD_Fence_C::STATIC_BndEvt__WallHitSound_K2Node_ComponentBoundEvent_6_Co
 
 
 // Function BP_OD_Fence.BP_OD_Fence_C.ExecuteUbergraph_BP_OD_Fence
-// (NetReliable, Exec, Native, Event, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -222,7 +218,6 @@ void ABP_OD_Fence_C::ExecuteUbergraph_BP_OD_Fence(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -231,7 +226,7 @@ void ABP_OD_Fence_C::ExecuteUbergraph_BP_OD_Fence(int EntryPoint)
 
 
 // Function BP_OD_Fence.BP_OD_Fence_C.BeginHitEvent__DelegateSignature
-// (NetReliable, NetRequest, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            hit_index                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -243,7 +238,6 @@ void ABP_OD_Fence_C::BeginHitEvent__DelegateSignature(int hit_index)
 	params.hit_index = hit_index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

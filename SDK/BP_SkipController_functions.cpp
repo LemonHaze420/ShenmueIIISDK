@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SkipController.BP_SkipController_C.GetCurentRate
-// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Rate                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SkipController_C::STATIC_GetCurentRate(float* Rate)
+void ABP_SkipController_C::GetCurentRate(float* Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SkipController.BP_SkipController_C.GetCurentRate");
 
@@ -36,7 +36,7 @@ void ABP_SkipController_C::STATIC_GetCurentRate(float* Rate)
 
 
 // Function BP_SkipController.BP_SkipController_C.SetGenericCall
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            z_order                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -56,7 +56,7 @@ void ABP_SkipController_C::SetGenericCall(int z_order)
 
 
 // Function BP_SkipController.BP_SkipController_C.CheckVisible
-// (Net, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3PlayerBehavior              ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +68,6 @@ void ABP_SkipController_C::CheckVisible(ES3PlayerBehavior ID)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,7 +76,7 @@ void ABP_SkipController_C::CheckVisible(ES3PlayerBehavior ID)
 
 
 // Function BP_SkipController.BP_SkipController_C.DisableSkipScene
-// (NetRequest, Event, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SkipController_C::DisableSkipScene()
 {
@@ -94,7 +93,7 @@ void ABP_SkipController_C::DisableSkipScene()
 
 
 // Function BP_SkipController.BP_SkipController_C.EnableSkipScene
-// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SkipController_C::EnableSkipScene()
 {
@@ -103,7 +102,6 @@ void ABP_SkipController_C::EnableSkipScene()
 	ABP_SkipController_C_EnableSkipScene_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,16 +110,15 @@ void ABP_SkipController_C::EnableSkipScene()
 
 
 // Function BP_SkipController.BP_SkipController_C.UserConstructionScript
-// (Net, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_SkipController_C::STATIC_UserConstructionScript()
+void ABP_SkipController_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SkipController.BP_SkipController_C.UserConstructionScript");
 
 	ABP_SkipController_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -130,7 +127,7 @@ void ABP_SkipController_C::STATIC_UserConstructionScript()
 
 
 // Function BP_SkipController.BP_SkipController_C.InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_4
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -142,7 +139,6 @@ void ABP_SkipController_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,7 +147,7 @@ void ABP_SkipController_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEv
 
 
 // Function BP_SkipController.BP_SkipController_C.InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_3
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -163,7 +159,6 @@ void ABP_SkipController_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -172,9 +167,9 @@ void ABP_SkipController_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEv
 
 
 // Function BP_SkipController.BP_SkipController_C.ReceiveBeginPlay
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_SkipController_C::STATIC_ReceiveBeginPlay()
+void ABP_SkipController_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SkipController.BP_SkipController_C.ReceiveBeginPlay");
 
@@ -189,7 +184,7 @@ void ABP_SkipController_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_SkipController.BP_SkipController_C.ReceiveEndPlay
-// (Net, Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -201,7 +196,6 @@ void ABP_SkipController_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -210,12 +204,12 @@ void ABP_SkipController_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 
 
 // Function BP_SkipController.BP_SkipController_C.ChangePlayerBehavior
-// (Net, NetReliable, NetRequest, Static, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3PlayerBehavior              NewId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PlayerBehavior              OldId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SkipController_C::STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
+void ABP_SkipController_C::ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SkipController.BP_SkipController_C.ChangePlayerBehavior");
 
@@ -232,7 +226,7 @@ void ABP_SkipController_C::STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, 
 
 
 // Function BP_SkipController.BP_SkipController_C.ReceiveTick
-// (Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -244,7 +238,6 @@ void ABP_SkipController_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -253,7 +246,7 @@ void ABP_SkipController_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_SkipController.BP_SkipController_C.ExecuteUbergraph_BP_SkipController
-// (NetRequest, Public, Private, NetServer, HasOutParms, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -273,16 +266,15 @@ void ABP_SkipController_C::ExecuteUbergraph_BP_SkipController(int EntryPoint)
 
 
 // Function BP_SkipController.BP_SkipController_C.OnSkip__DelegateSignature
-// (Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_SkipController_C::STATIC_OnSkip__DelegateSignature()
+void ABP_SkipController_C::OnSkip__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SkipController.BP_SkipController_C.OnSkip__DelegateSignature");
 
 	ABP_SkipController_C_OnSkip__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,18 +35,18 @@ public:
 
 
 	bool SetCharaName(const struct FName& NewName);
-	bool STATIC_SetTalkClipperInternal(const struct FString& TalkClipperString, const struct FName& CharaName, bool bVoice, class AS3SoundPlayer* VoicePlayer);
-	void STATIC_UpdateElapsedTime(float DeltaSeconds);
+	bool SetTalkClipperInternal(const struct FString& TalkClipperString, const struct FName& CharaName, bool bVoice, class AS3SoundPlayer* VoicePlayer);
+	void UpdateElapsedTime(float DeltaSeconds);
 	void DebugLogMultiSample();
-	void STATIC_CalcDeltaTime();
-	void STATIC_TalkClipperStop();
-	void STATIC_Init();
-	void STATIC_UserConstructionScript();
-	void STATIC_ClearFaceId();
+	void CalcDeltaTime();
+	void TalkClipperStop();
+	void Init();
+	void UserConstructionScript();
+	void ClearFaceId();
 	void SetPlayRate(float NewRate);
-	void STATIC_EndPause();
+	void EndPause();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_Clipper(int EntryPoint);
 };
 

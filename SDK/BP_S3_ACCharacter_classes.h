@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,10 +34,10 @@ public:
 
 
 	void LoadSkeletalMesh(class USkeletalMesh** Mesh);
-	void STATIC_GetNPCMesh(const struct FName& CharacterName, class US3NPCDefinition* Definition, bool* Success, class USkeletalMesh** Mesh);
+	void GetNPCMesh(const struct FName& CharacterName, class US3NPCDefinition* Definition, bool* Success, class USkeletalMesh** Mesh);
 	void Detach();
-	void STATIC_AttachSetting(class US3NPCDefinition** Definition);
-	bool STATIC_IsTalking();
+	void AttachSetting(class US3NPCDefinition** Definition);
+	bool IsTalking();
 	void InitCharacter(const struct FName& CharaName, bool* Success);
 	void UserConstructionScript();
 	void Init(const struct FName& Name);
@@ -45,10 +45,10 @@ public:
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void OnTalkStart(class US3TalkComponent* TalkComponent);
-	void STATIC_OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
+	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
 	void Screen_Player();
 	void Screen_NPC();
-	void STATIC_ExecuteUbergraph_BP_S3_ACCharacter(int EntryPoint);
+	void ExecuteUbergraph_BP_S3_ACCharacter(int EntryPoint);
 };
 
 

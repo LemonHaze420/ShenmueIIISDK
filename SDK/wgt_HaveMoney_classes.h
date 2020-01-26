@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,18 +61,18 @@ public:
 
 
 	void SetMoneyText(int SetValue, int ValueMin, int ValueMax);
-	void STATIC_SetPos();
-	void STATIC_SetValueType(TEnumAsByte<EN_ValueType> Index);
-	void STATIC_GetHaveMoney(int* HaveMoney);
+	void SetPos();
+	void SetValueType(TEnumAsByte<EN_ValueType> Index);
+	void GetHaveMoney(int* HaveMoney);
 	void SetAddMoney(int AddMoney);
-	void STATIC_SetSubtractMoney(int SubMoney);
+	void SetSubtractMoney(int SubMoney);
 	void AddHaveMoney(int AddMoney);
-	void STATIC_SubtractHaveMoney(int SubMoney);
+	void SubtractHaveMoney(int SubMoney);
 	void SetHaveMoney(int HaveMoney, bool NotAnim);
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_Construct();
-	void STATIC_Reset();
-	void STATIC_ExecuteUbergraph_wgt_HaveMoney(int EntryPoint);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Construct();
+	void Reset();
+	void ExecuteUbergraph_wgt_HaveMoney(int EntryPoint);
 };
 
 

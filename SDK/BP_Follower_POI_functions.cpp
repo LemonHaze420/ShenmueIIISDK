@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Follower_POI.BP_Follower_POI_C.GetInInteractArea
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AS3Character*            Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bInRange                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,7 +27,6 @@ void ABP_Follower_POI_C::GetInInteractArea(class AS3Character* Character, bool* 
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,12 +38,12 @@ void ABP_Follower_POI_C::GetInInteractArea(class AS3Character* Character, bool* 
 
 
 // Function BP_Follower_POI.BP_Follower_POI_C.GetPointOnInteractArea
-// (Net, NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Closest                        (Parm, OutParm, IsPlainOldData)
 
-void ABP_Follower_POI_C::STATIC_GetPointOnInteractArea(const struct FVector& Location, struct FVector* Closest)
+void ABP_Follower_POI_C::GetPointOnInteractArea(const struct FVector& Location, struct FVector* Closest)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Follower_POI.BP_Follower_POI_C.GetPointOnInteractArea");
 
@@ -52,7 +51,6 @@ void ABP_Follower_POI_C::STATIC_GetPointOnInteractArea(const struct FVector& Loc
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,9 +62,9 @@ void ABP_Follower_POI_C::STATIC_GetPointOnInteractArea(const struct FVector& Loc
 
 
 // Function BP_Follower_POI.BP_Follower_POI_C.UserConstructionScript
-// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_Follower_POI_C::STATIC_UserConstructionScript()
+void ABP_Follower_POI_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Follower_POI.BP_Follower_POI_C.UserConstructionScript");
 
@@ -81,7 +79,7 @@ void ABP_Follower_POI_C::STATIC_UserConstructionScript()
 
 
 // Function BP_Follower_POI.BP_Follower_POI_C.BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -90,7 +88,7 @@ void ABP_Follower_POI_C::STATIC_UserConstructionScript()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_Follower_POI_C::STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_Follower_POI_C::BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Follower_POI.BP_Follower_POI_C.BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -111,7 +109,7 @@ void ABP_Follower_POI_C::STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_0_Compo
 
 
 // Function BP_Follower_POI.BP_Follower_POI_C.BndEvt__Range_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (Event, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -137,7 +135,7 @@ void ABP_Follower_POI_C::BndEvt__Range_K2Node_ComponentBoundEvent_1_ComponentEnd
 
 
 // Function BP_Follower_POI.BP_Follower_POI_C.ExecuteUbergraph_BP_Follower_POI
-// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -149,7 +147,6 @@ void ABP_Follower_POI_C::ExecuteUbergraph_BP_Follower_POI(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

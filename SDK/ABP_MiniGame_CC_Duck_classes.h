@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,8 +35,8 @@ public:
 
 
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Duck_AnimGraphNode_BlendListByEnum_3F97BCD44582ACD8DB7DA8BC89A37FCD();
-	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
-	void STATIC_ExecuteUbergraph_ABP_MiniGame_CC_Duck(int EntryPoint);
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void ExecuteUbergraph_ABP_MiniGame_CC_Duck(int EntryPoint);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -78,16 +78,16 @@ public:
 	}
 
 
-	void STATIC_CheckFade();
+	void CheckFade();
 	void UpdateEnergyText();
 	void StartFade(bool In);
 	void PriceAnim(bool Add);
 	void SetPriceAnimData(int Price, TEnumAsByte<EN_ValueType> ValueType);
-	void STATIC_SetVisible(ESlateVisibility InVisibility);
-	void STATIC_Construct();
+	void SetVisible(ESlateVisibility InVisibility);
+	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_Destruct();
-	void STATIC_BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void Destruct();
+	void BndEvt__FadeOut_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
 	void ExecuteUbergraph_wgt_item_list_status(int EntryPoint);
 	void OnFadeOutFinished__DelegateSignature();
 	void ED_StartAnim__DelegateSignature();

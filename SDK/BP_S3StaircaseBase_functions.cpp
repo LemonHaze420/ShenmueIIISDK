@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.CheckInitialOverlaps
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3StaircaseBase_C::CheckInitialOverlaps()
 {
@@ -23,7 +23,6 @@ void ABP_S3StaircaseBase_C::CheckInitialOverlaps()
 	ABP_S3StaircaseBase_C_CheckInitialOverlaps_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,13 +31,13 @@ void ABP_S3StaircaseBase_C::CheckInitialOverlaps()
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetRelativeStairOnX
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          FudgeDistanceIn                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EVerticalDirection> Relative                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_GetRelativeStairOnX(const struct FVector& Location, float FudgeDistanceIn, TEnumAsByte<EVerticalDirection>* Relative)
+void ABP_S3StaircaseBase_C::GetRelativeStairOnX(const struct FVector& Location, float FudgeDistanceIn, TEnumAsByte<EVerticalDirection>* Relative)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetRelativeStairOnX");
 
@@ -47,7 +46,6 @@ void ABP_S3StaircaseBase_C::STATIC_GetRelativeStairOnX(const struct FVector& Loc
 	params.FudgeDistanceIn = FudgeDistanceIn;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,18 +57,17 @@ void ABP_S3StaircaseBase_C::STATIC_GetRelativeStairOnX(const struct FVector& Loc
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetStepsBaseTransform
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FTransform              OutTransform                   (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_GetStepsBaseTransform(struct FTransform* OutTransform)
+void ABP_S3StaircaseBase_C::GetStepsBaseTransform(struct FTransform* OutTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetStepsBaseTransform");
 
 	ABP_S3StaircaseBase_C_GetStepsBaseTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,7 +79,7 @@ void ABP_S3StaircaseBase_C::STATIC_GetStepsBaseTransform(struct FTransform* OutT
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetClimbEndPoints_LS
-// (NetReliable, Exec, NetResponse, Public, Private, NetServer, NetClient, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Bottom                         (Parm, OutParm, IsPlainOldData)
 // struct FVector                 top                            (Parm, OutParm, IsPlainOldData)
@@ -107,16 +104,15 @@ void ABP_S3StaircaseBase_C::GetClimbEndPoints_LS(struct FVector* Bottom, struct 
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.Editor_UpdateVisualization
-// (Native, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3StaircaseBase_C::STATIC_Editor_UpdateVisualization()
+void ABP_S3StaircaseBase_C::Editor_UpdateVisualization()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.Editor_UpdateVisualization");
 
 	ABP_S3StaircaseBase_C_Editor_UpdateVisualization_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,7 +121,7 @@ void ABP_S3StaircaseBase_C::STATIC_Editor_UpdateVisualization()
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.SetupDebugStepVisual
-// (NetResponse, Public, Private, NetServer, NetClient, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMeshComponent*    Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 StepEnd                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -147,7 +143,7 @@ void ABP_S3StaircaseBase_C::SetupDebugStepVisual(class UStaticMeshComponent* Mes
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.PairToMultiMeshActor
-// (NetReliable, Event, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 StepDimension                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -171,7 +167,7 @@ void ABP_S3StaircaseBase_C::PairToMultiMeshActor(class AActor* Actor, const stru
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetBestSnapCandidate
-// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          CloseTo                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Candidate1                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -203,16 +199,15 @@ void ABP_S3StaircaseBase_C::GetBestSnapCandidate(float CloseTo, float Candidate1
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.CalculateTriggerBounds
-// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3StaircaseBase_C::STATIC_CalculateTriggerBounds()
+void ABP_S3StaircaseBase_C::CalculateTriggerBounds()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.CalculateTriggerBounds");
 
 	ABP_S3StaircaseBase_C_CalculateTriggerBounds_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,7 +216,7 @@ void ABP_S3StaircaseBase_C::STATIC_CalculateTriggerBounds()
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.PairToAndConfigureMesh
-// (NetReliable, NetResponse, NetMulticast, Private, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMeshComponent*    MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -241,7 +236,7 @@ void ABP_S3StaircaseBase_C::PairToAndConfigureMesh(class UStaticMeshComponent* M
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetClosestStopLocation
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
@@ -265,7 +260,7 @@ void ABP_S3StaircaseBase_C::GetClosestStopLocation(const struct FVector& InLocat
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.AnimPositionToStepProgress
-// (Net, Native, Event, NetResponse, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          AnimPosition                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DirUp                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -280,7 +275,6 @@ void ABP_S3StaircaseBase_C::AnimPositionToStepProgress(float AnimPosition, bool 
 	params.DirUp = DirUp;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -292,14 +286,14 @@ void ABP_S3StaircaseBase_C::AnimPositionToStepProgress(float AnimPosition, bool 
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.StepProgressToAnimPosition
-// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          StepProgress                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DirUp                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RPosition                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          LPosition                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_StepProgressToAnimPosition(float StepProgress, bool DirUp, float* RPosition, float* LPosition)
+void ABP_S3StaircaseBase_C::StepProgressToAnimPosition(float StepProgress, bool DirUp, float* RPosition, float* LPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.StepProgressToAnimPosition");
 
@@ -308,7 +302,6 @@ void ABP_S3StaircaseBase_C::STATIC_StepProgressToAnimPosition(float StepProgress
 	params.DirUp = DirUp;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -322,12 +315,12 @@ void ABP_S3StaircaseBase_C::STATIC_StepProgressToAnimPosition(float StepProgress
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetStepsClimbedForLocation
-// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Progress                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_GetStepsClimbedForLocation(const struct FVector& Location, float* Progress)
+void ABP_S3StaircaseBase_C::GetStepsClimbedForLocation(const struct FVector& Location, float* Progress)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetStepsClimbedForLocation");
 
@@ -335,7 +328,6 @@ void ABP_S3StaircaseBase_C::STATIC_GetStepsClimbedForLocation(const struct FVect
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -347,7 +339,7 @@ void ABP_S3StaircaseBase_C::STATIC_GetStepsClimbedForLocation(const struct FVect
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetNextStepStopLocation
-// (Net, NetRequest, Exec, Event, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           InDirUp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -373,19 +365,19 @@ void ABP_S3StaircaseBase_C::GetNextStepStopLocation(const struct FVector& InLoca
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetAngleInClimbDirection
-// (Net, Exec, Event, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 InDirection                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-// bool                           isUp                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsUp                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OutAngle                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_GetAngleInClimbDirection(const struct FVector& InDirection, bool isUp, float* OutAngle)
+void ABP_S3StaircaseBase_C::GetAngleInClimbDirection(const struct FVector& InDirection, bool IsUp, float* OutAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetAngleInClimbDirection");
 
 	ABP_S3StaircaseBase_C_GetAngleInClimbDirection_Params params;
 	params.InDirection = InDirection;
-	params.isUp = isUp;
+	params.IsUp = IsUp;
 
 	auto flags = fn->FunctionFlags;
 
@@ -399,18 +391,17 @@ void ABP_S3StaircaseBase_C::STATIC_GetAngleInClimbDirection(const struct FVector
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetClimbCycleRefTransform
-// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FTransform              OutTransform                   (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_GetClimbCycleRefTransform(struct FTransform* OutTransform)
+void ABP_S3StaircaseBase_C::GetClimbCycleRefTransform(struct FTransform* OutTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetClimbCycleRefTransform");
 
 	ABP_S3StaircaseBase_C_GetClimbCycleRefTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -422,7 +413,7 @@ void ABP_S3StaircaseBase_C::STATIC_GetClimbCycleRefTransform(struct FTransform* 
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetCollisionActor
-// (NetReliable, Exec, Native, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  CollisionActor                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -433,7 +424,6 @@ void ABP_S3StaircaseBase_C::GetCollisionActor(class AActor** CollisionActor)
 	ABP_S3StaircaseBase_C_GetCollisionActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -445,7 +435,7 @@ void ABP_S3StaircaseBase_C::GetCollisionActor(class AActor** CollisionActor)
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetIdOfClosestStep
-// (Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // int                            OutID                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -458,7 +448,6 @@ void ABP_S3StaircaseBase_C::GetIdOfClosestStep(const struct FVector& InLocation,
 	params.InLocation = InLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -470,12 +459,12 @@ void ABP_S3StaircaseBase_C::GetIdOfClosestStep(const struct FVector& InLocation,
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetStepCycleForLocation
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // int                            OutClimbCycle                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_GetStepCycleForLocation(const struct FVector& InLocation, int* OutClimbCycle)
+void ABP_S3StaircaseBase_C::GetStepCycleForLocation(const struct FVector& InLocation, int* OutClimbCycle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetStepCycleForLocation");
 
@@ -483,7 +472,6 @@ void ABP_S3StaircaseBase_C::STATIC_GetStepCycleForLocation(const struct FVector&
 	params.InLocation = InLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -495,18 +483,17 @@ void ABP_S3StaircaseBase_C::STATIC_GetStepCycleForLocation(const struct FVector&
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetSlopeAngle
-// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          AngleDegrees                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_GetSlopeAngle(float* AngleDegrees)
+void ABP_S3StaircaseBase_C::GetSlopeAngle(float* AngleDegrees)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetSlopeAngle");
 
 	ABP_S3StaircaseBase_C_GetSlopeAngle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -518,7 +505,7 @@ void ABP_S3StaircaseBase_C::STATIC_GetSlopeAngle(float* AngleDegrees)
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.DistanceToClosestStopLocation
-// (Exec, Native, NetResponse, NetMulticast, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -531,7 +518,6 @@ void ABP_S3StaircaseBase_C::DistanceToClosestStopLocation(const struct FVector& 
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -543,12 +529,12 @@ void ABP_S3StaircaseBase_C::DistanceToClosestStopLocation(const struct FVector& 
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.RelXToRelZ
-// (NetRequest, Event, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          RelX                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RelZ                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_RelXToRelZ(float RelX, float* RelZ)
+void ABP_S3StaircaseBase_C::RelXToRelZ(float RelX, float* RelZ)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.RelXToRelZ");
 
@@ -567,12 +553,12 @@ void ABP_S3StaircaseBase_C::STATIC_RelXToRelZ(float RelX, float* RelZ)
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.ClimbCycleRefToWorldSpace
-// (NetRequest, Exec, Static, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Relative                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 World                          (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_ClimbCycleRefToWorldSpace(const struct FVector& Relative, struct FVector* World)
+void ABP_S3StaircaseBase_C::ClimbCycleRefToWorldSpace(const struct FVector& Relative, struct FVector* World)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.ClimbCycleRefToWorldSpace");
 
@@ -591,12 +577,12 @@ void ABP_S3StaircaseBase_C::STATIC_ClimbCycleRefToWorldSpace(const struct FVecto
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.WorldToClimbCycleRefSpace
-// (Net, NetReliable, NetRequest, Exec, Static, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Relative                       (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_WorldToClimbCycleRefSpace(const struct FVector& Location, struct FVector* Relative)
+void ABP_S3StaircaseBase_C::WorldToClimbCycleRefSpace(const struct FVector& Location, struct FVector* Relative)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.WorldToClimbCycleRefSpace");
 
@@ -615,7 +601,7 @@ void ABP_S3StaircaseBase_C::STATIC_WorldToClimbCycleRefSpace(const struct FVecto
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.CorrectLocationForStepProgress
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Position                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          StepProgress                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -643,13 +629,13 @@ void ABP_S3StaircaseBase_C::CorrectLocationForStepProgress(const struct FVector&
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.InBounds2D
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 SizeAdjustment                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           In                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_InBounds2D(const struct FVector& Location, const struct FVector& SizeAdjustment, bool* In)
+void ABP_S3StaircaseBase_C::InBounds2D(const struct FVector& Location, const struct FVector& SizeAdjustment, bool* In)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.InBounds2D");
 
@@ -658,7 +644,6 @@ void ABP_S3StaircaseBase_C::STATIC_InBounds2D(const struct FVector& Location, co
 	params.SizeAdjustment = SizeAdjustment;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -670,7 +655,7 @@ void ABP_S3StaircaseBase_C::STATIC_InBounds2D(const struct FVector& Location, co
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetSlopeDirection
-// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 SlopeDIrection                 (Parm, OutParm, IsPlainOldData)
 
@@ -681,7 +666,6 @@ void ABP_S3StaircaseBase_C::GetSlopeDirection(struct FVector* SlopeDIrection)
 	ABP_S3StaircaseBase_C_GetSlopeDirection_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -693,11 +677,11 @@ void ABP_S3StaircaseBase_C::GetSlopeDirection(struct FVector* SlopeDIrection)
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetClimbCycleRefLocation
-// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 BaseLocation                   (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_GetClimbCycleRefLocation(struct FVector* BaseLocation)
+void ABP_S3StaircaseBase_C::GetClimbCycleRefLocation(struct FVector* BaseLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetClimbCycleRefLocation");
 
@@ -715,7 +699,7 @@ void ABP_S3StaircaseBase_C::STATIC_GetClimbCycleRefLocation(struct FVector* Base
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.CorrectLocationHeight
-// (NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Height                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -739,12 +723,12 @@ void ABP_S3StaircaseBase_C::CorrectLocationHeight(const struct FVector& Location
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetStepProgressForLocation
-// (NetReliable, NetRequest, Exec, Static, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Progress                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_GetStepProgressForLocation(const struct FVector& Location, float* Progress)
+void ABP_S3StaircaseBase_C::GetStepProgressForLocation(const struct FVector& Location, float* Progress)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.GetStepProgressForLocation");
 
@@ -763,7 +747,7 @@ void ABP_S3StaircaseBase_C::STATIC_GetStepProgressForLocation(const struct FVect
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.UserConstructionScript
-// (Native, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3StaircaseBase_C::UserConstructionScript()
 {
@@ -772,7 +756,6 @@ void ABP_S3StaircaseBase_C::UserConstructionScript()
 	ABP_S3StaircaseBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -781,7 +764,7 @@ void ABP_S3StaircaseBase_C::UserConstructionScript()
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.BndEvt__TriggerBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -790,7 +773,7 @@ void ABP_S3StaircaseBase_C::UserConstructionScript()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_BndEvt__TriggerBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_S3StaircaseBase_C::BndEvt__TriggerBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.BndEvt__TriggerBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -811,7 +794,7 @@ void ABP_S3StaircaseBase_C::STATIC_BndEvt__TriggerBox_K2Node_ComponentBoundEvent
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.BndEvt__TriggerBox_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (Net, NetRequest, Event, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -837,7 +820,7 @@ void ABP_S3StaircaseBase_C::BndEvt__TriggerBox_K2Node_ComponentBoundEvent_1_Comp
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.ReceiveBeginPlay
-// (NetRequest, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_S3StaircaseBase_C::ReceiveBeginPlay()
 {
@@ -854,11 +837,11 @@ void ABP_S3StaircaseBase_C::ReceiveBeginPlay()
 
 
 // Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.ExecuteUbergraph_BP_S3StaircaseBase
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3StaircaseBase_C::STATIC_ExecuteUbergraph_BP_S3StaircaseBase(int EntryPoint)
+void ABP_S3StaircaseBase_C::ExecuteUbergraph_BP_S3StaircaseBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3StaircaseBase.BP_S3StaircaseBase_C.ExecuteUbergraph_BP_S3StaircaseBase");
 
@@ -866,7 +849,6 @@ void ABP_S3StaircaseBase_C::STATIC_ExecuteUbergraph_BP_S3StaircaseBase(int Entry
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

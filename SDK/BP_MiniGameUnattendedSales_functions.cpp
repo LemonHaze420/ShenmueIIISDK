@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameUnattendedSales.BP_MiniGameUnattendedSales_C.GetHelpName
-// (Net, NetReliable, Exec, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,11 +35,11 @@ struct FName ABP_MiniGameUnattendedSales_C::GetHelpName()
 
 
 // Function BP_MiniGameUnattendedSales.BP_MiniGameUnattendedSales_C.GetSightCheckLocation
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_MiniGameUnattendedSales_C::STATIC_GetSightCheckLocation()
+struct FVector ABP_MiniGameUnattendedSales_C::GetSightCheckLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameUnattendedSales.BP_MiniGameUnattendedSales_C.GetSightCheckLocation");
 
@@ -56,9 +56,9 @@ struct FVector ABP_MiniGameUnattendedSales_C::STATIC_GetSightCheckLocation()
 
 
 // Function BP_MiniGameUnattendedSales.BP_MiniGameUnattendedSales_C.UserConstructionScript
-// (Net, NetRequest, Exec, Event, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameUnattendedSales_C::STATIC_UserConstructionScript()
+void ABP_MiniGameUnattendedSales_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameUnattendedSales.BP_MiniGameUnattendedSales_C.UserConstructionScript");
 
@@ -73,7 +73,7 @@ void ABP_MiniGameUnattendedSales_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGameUnattendedSales.BP_MiniGameUnattendedSales_C.ReceiveBeginPlay
-// (NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGameUnattendedSales_C::ReceiveBeginPlay()
 {
@@ -90,11 +90,11 @@ void ABP_MiniGameUnattendedSales_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGameUnattendedSales.BP_MiniGameUnattendedSales_C.ExecuteUbergraph_BP_MiniGameUnattendedSales
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameUnattendedSales_C::STATIC_ExecuteUbergraph_BP_MiniGameUnattendedSales(int EntryPoint)
+void ABP_MiniGameUnattendedSales_C::ExecuteUbergraph_BP_MiniGameUnattendedSales(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameUnattendedSales.BP_MiniGameUnattendedSales_C.ExecuteUbergraph_BP_MiniGameUnattendedSales");
 
@@ -102,7 +102,6 @@ void ABP_MiniGameUnattendedSales_C::STATIC_ExecuteUbergraph_BP_MiniGameUnattende
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

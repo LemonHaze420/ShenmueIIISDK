@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -86,69 +86,69 @@ public:
 	}
 
 
-	void STATIC_UpdateEffectsAroundPlayer();
-	void STATIC_SetSunAndMoonMovement(bool Enable);
-	void STATIC_SetForceGameTime(float NewTime);
+	void UpdateEffectsAroundPlayer();
+	void SetSunAndMoonMovement(bool Enable);
+	void SetForceGameTime(float NewTime);
 	void GetGameTime(float* Time);
-	void STATIC_CalcGradualWeather(EWeatherType* Next);
-	void STATIC_SetSunCastShadow(bool Enable);
+	void CalcGradualWeather(EWeatherType* Next);
+	void SetSunCastShadow(bool Enable);
 	void GetSunShadowDistance(float* Distance);
 	void SetSunShadowDistance(float Distance);
-	void STATIC_SetMoonCastShadow(bool Enable);
-	void STATIC_NotifyIgnoreChangeWeather();
-	void STATIC_ResetMoonPosition();
+	void SetMoonCastShadow(bool Enable);
+	void NotifyIgnoreChangeWeather();
+	void ResetMoonPosition();
 	void ForceMoonPosition(float Yaw, float Orbit, float Height, bool Release);
 	void ForceCloudDensity(float Density, bool Release);
 	void CalcMoonPhase_Impl();
-	void STATIC_SetWindMaterialParam(const struct FVector& NewDirection);
-	void STATIC_CheckWeather();
-	void STATIC_IsRainy(bool System, bool* Rainy);
+	void SetWindMaterialParam(const struct FVector& NewDirection);
+	void CheckWeather();
+	void IsRainy(bool System, bool* Rainy);
 	void CalcRainParam(float Blend, float* Strength1, float* Strength2, float* Strength3, float* Speed, float* OpacityMultiplier);
 	void GetStepPreset(bool* Appoint, struct FName* Preset);
-	void STATIC_ChooseWeather(bool* Appoint, EWeatherType* Weather);
-	void STATIC_SetWindSpeed(float Speed);
+	void ChooseWeather(bool* Appoint, EWeatherType* Weather);
+	void SetWindSpeed(float Speed);
 	void ChangeWind(bool Drastic, float ForceAngle);
-	void STATIC_UpdateRainMaterial(float DeltaSeconds);
+	void UpdateRainMaterial(float DeltaSeconds);
 	void GetTransitionInterval(float* Interval);
 	void InitTransition();
-	void STATIC_ProgressTransition(float DeltaSeconds);
+	void ProgressTransition(float DeltaSeconds);
 	void KeepCurrentFogIntensityMin();
-	void STATIC_SetRainMaterial();
-	void STATIC_UpdateFogDensity(bool Force);
+	void SetRainMaterial();
+	void UpdateFogDensity(bool Force);
 	void ResetWeatherInterval(float jumpTime);
-	void STATIC_ToggleCloudy(bool Force);
+	void ToggleCloudy(bool Force);
 	void UpdateWeather();
 	void ChangeWeather(bool* IsChange);
-	void STATIC_UpdateGameTime(float DeltaSeconds);
-	void STATIC_UserConstructionScript();
-	void STATIC_RainValueTimeline__FinishedFunc();
-	void STATIC_RainValueTimeline__UpdateFunc();
-	void STATIC_RainSplashValue__FinishedFunc();
-	void STATIC_RainSplashValue__UpdateFunc();
-	void STATIC_jumpTime(float jumpTime);
-	void STATIC_TimeGoesBy();
-	void STATIC_ManualChangeWeather();
-	void STATIC_UnbindEvent();
-	void STATIC_ChangedStep(int SetSteps);
-	void STATIC_ReadyCloud();
-	void STATIC_SwitchController(class APlayerController* PlayerController);
-	void STATIC_FinishedLevelLoad();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_DbgSetCloudDensity();
-	void STATIC_DbgSetMoonPhase();
-	void STATIC_RainControl();
-	void STATIC_WaitCloudDensity();
-	void STATIC_ForceChangeWeather();
-	void STATIC_ChangeDate();
-	void STATIC_ToggleCloudShaow();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_UpdateRainValue(bool Reverse);
-	void STATIC_WaitDry();
-	void STATIC_BindEvent();
-	void STATIC_CalcMoonPhase();
-	void STATIC_DelayChangeWeatherProperty(EWeatherType NewWeather);
-	void STATIC_ExecuteUbergraph_BP_S3SkyManager(int EntryPoint);
+	void UpdateGameTime(float DeltaSeconds);
+	void UserConstructionScript();
+	void RainValueTimeline__FinishedFunc();
+	void RainValueTimeline__UpdateFunc();
+	void RainSplashValue__FinishedFunc();
+	void RainSplashValue__UpdateFunc();
+	void jumpTime(float jumpTime);
+	void TimeGoesBy();
+	void ManualChangeWeather();
+	void UnbindEvent();
+	void ChangedStep(int SetSteps);
+	void ReadyCloud();
+	void SwitchController(class APlayerController* PlayerController);
+	void FinishedLevelLoad();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void DbgSetCloudDensity();
+	void DbgSetMoonPhase();
+	void RainControl();
+	void WaitCloudDensity();
+	void ForceChangeWeather();
+	void ChangeDate();
+	void ToggleCloudShaow();
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void UpdateRainValue(bool Reverse);
+	void WaitDry();
+	void BindEvent();
+	void CalcMoonPhase();
+	void DelayChangeWeatherProperty(EWeatherType NewWeather);
+	void ExecuteUbergraph_BP_S3SkyManager(int EntryPoint);
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpdateSuddenDeathMole
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_WhackMoleMiniGame_C::STATIC_UpdateSuddenDeathMole()
+void ABP_WhackMoleMiniGame_C::UpdateSuddenDeathMole()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpdateSuddenDeathMole");
 
 	ABP_WhackMoleMiniGame_C_UpdateSuddenDeathMole_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,18 +31,17 @@ void ABP_WhackMoleMiniGame_C::STATIC_UpdateSuddenDeathMole()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.GetMoleAppearWaitTime
-// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Time                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_GetMoleAppearWaitTime(float* Time)
+void ABP_WhackMoleMiniGame_C::GetMoleAppearWaitTime(float* Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.GetMoleAppearWaitTime");
 
 	ABP_WhackMoleMiniGame_C_GetMoleAppearWaitTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,9 +53,9 @@ void ABP_WhackMoleMiniGame_C::STATIC_GetMoleAppearWaitTime(float* Time)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetDummyHammerRandomRot
-// (NetReliable, NetRequest, Static, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_WhackMoleMiniGame_C::STATIC_SetDummyHammerRandomRot()
+void ABP_WhackMoleMiniGame_C::SetDummyHammerRandomRot()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetDummyHammerRandomRot");
 
@@ -72,7 +70,7 @@ void ABP_WhackMoleMiniGame_C::STATIC_SetDummyHammerRandomRot()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetLastScore
-// (Net, Native, Event, NetResponse, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::SetLastScore()
 {
@@ -81,7 +79,6 @@ void ABP_WhackMoleMiniGame_C::SetLastScore()
 	ABP_WhackMoleMiniGame_C_SetLastScore_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,7 +87,7 @@ void ABP_WhackMoleMiniGame_C::SetLastScore()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.GetClothMeshComponent
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -111,13 +108,13 @@ class UMeshComponent* ABP_WhackMoleMiniGame_C::GetClothMeshComponent()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetRenderScore
-// (Exec, Static, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UChildActorComponent*    ScoreChildActor                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            Score                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsStage                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_SetRenderScore(class UChildActorComponent* ScoreChildActor, int Score, bool IsStage)
+void ABP_WhackMoleMiniGame_C::SetRenderScore(class UChildActorComponent* ScoreChildActor, int Score, bool IsStage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetRenderScore");
 
@@ -135,11 +132,11 @@ void ABP_WhackMoleMiniGame_C::STATIC_SetRenderScore(class UChildActorComponent* 
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetRenderScoreEnabled
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_SetRenderScoreEnabled(bool bEnabled)
+void ABP_WhackMoleMiniGame_C::SetRenderScoreEnabled(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetRenderScoreEnabled");
 
@@ -155,11 +152,11 @@ void ABP_WhackMoleMiniGame_C::STATIC_SetRenderScoreEnabled(bool bEnabled)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetMoleTickEnabled
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_SetMoleTickEnabled(bool bEnabled)
+void ABP_WhackMoleMiniGame_C::SetMoleTickEnabled(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetMoleTickEnabled");
 
@@ -167,7 +164,6 @@ void ABP_WhackMoleMiniGame_C::STATIC_SetMoleTickEnabled(bool bEnabled)
 	params.bEnabled = bEnabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,9 +172,9 @@ void ABP_WhackMoleMiniGame_C::STATIC_SetMoleTickEnabled(bool bEnabled)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.StopRoundBGM
-// (Net, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_WhackMoleMiniGame_C::STATIC_StopRoundBGM()
+void ABP_WhackMoleMiniGame_C::StopRoundBGM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.StopRoundBGM");
 
@@ -193,9 +189,9 @@ void ABP_WhackMoleMiniGame_C::STATIC_StopRoundBGM()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetHighScore
-// (Net, NetRequest, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_WhackMoleMiniGame_C::STATIC_SetHighScore()
+void ABP_WhackMoleMiniGame_C::SetHighScore()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetHighScore");
 
@@ -210,7 +206,7 @@ void ABP_WhackMoleMiniGame_C::STATIC_SetHighScore()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.PlayRoundBGM
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::PlayRoundBGM()
 {
@@ -219,7 +215,6 @@ void ABP_WhackMoleMiniGame_C::PlayRoundBGM()
 	ABP_WhackMoleMiniGame_C_PlayRoundBGM_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -228,18 +223,17 @@ void ABP_WhackMoleMiniGame_C::PlayRoundBGM()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.CheckHighScore
-// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           HighScore                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_CheckHighScore(bool* HighScore)
+void ABP_WhackMoleMiniGame_C::CheckHighScore(bool* HighScore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.CheckHighScore");
 
 	ABP_WhackMoleMiniGame_C_CheckHighScore_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,16 +245,15 @@ void ABP_WhackMoleMiniGame_C::STATIC_CheckHighScore(bool* HighScore)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.LoadScore
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_WhackMoleMiniGame_C::STATIC_LoadScore()
+void ABP_WhackMoleMiniGame_C::LoadScore()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.LoadScore");
 
 	ABP_WhackMoleMiniGame_C_LoadScore_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -269,7 +262,7 @@ void ABP_WhackMoleMiniGame_C::STATIC_LoadScore()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SaveHighScore
-// (Net, NetReliable, NetRequest, Event, NetResponse, Public, Private, Delegate, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::SaveHighScore()
 {
@@ -286,7 +279,7 @@ void ABP_WhackMoleMiniGame_C::SaveHighScore()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SpawnInputControlActor
-// (NetReliable, Event, NetResponse, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -307,7 +300,7 @@ class ABP_MiniGameInputBase_C* ABP_WhackMoleMiniGame_C::SpawnInputControlActor()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpdateInputCommand
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::UpdateInputCommand()
 {
@@ -316,7 +309,6 @@ void ABP_WhackMoleMiniGame_C::UpdateInputCommand()
 	ABP_WhackMoleMiniGame_C_UpdateInputCommand_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -325,7 +317,7 @@ void ABP_WhackMoleMiniGame_C::UpdateInputCommand()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpdateInputInterval
-// (NetRequest, Event, NetResponse, Public, Private, Delegate, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -345,13 +337,13 @@ void ABP_WhackMoleMiniGame_C::UpdateInputInterval(float DeltaSeconds)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpdateMoleAppearFromData
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMG_WMData*              MoleData                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            RoundNum                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           End                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_UpdateMoleAppearFromData(class UMG_WMData* MoleData, int RoundNum, bool* End)
+void ABP_WhackMoleMiniGame_C::UpdateMoleAppearFromData(class UMG_WMData* MoleData, int RoundNum, bool* End)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpdateMoleAppearFromData");
 
@@ -371,18 +363,17 @@ void ABP_WhackMoleMiniGame_C::STATIC_UpdateMoleAppearFromData(class UMG_WMData* 
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.IsCameraPosMove
-// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Move                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_IsCameraPosMove(bool* Move)
+void ABP_WhackMoleMiniGame_C::IsCameraPosMove(bool* Move)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.IsCameraPosMove");
 
 	ABP_WhackMoleMiniGame_C_IsCameraPosMove_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -394,11 +385,11 @@ void ABP_WhackMoleMiniGame_C::STATIC_IsCameraPosMove(bool* Move)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpdateCamera
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_UpdateCamera(float DeltaSeconds)
+void ABP_WhackMoleMiniGame_C::UpdateCamera(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpdateCamera");
 
@@ -406,7 +397,6 @@ void ABP_WhackMoleMiniGame_C::STATIC_UpdateCamera(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -415,7 +405,7 @@ void ABP_WhackMoleMiniGame_C::STATIC_UpdateCamera(float DeltaSeconds)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InitializeValue
-// (Exec, Native, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::InitializeValue()
 {
@@ -424,7 +414,6 @@ void ABP_WhackMoleMiniGame_C::InitializeValue()
 	ABP_WhackMoleMiniGame_C_InitializeValue_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -433,7 +422,7 @@ void ABP_WhackMoleMiniGame_C::InitializeValue()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.CanNextRound
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Next                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -455,7 +444,7 @@ void ABP_WhackMoleMiniGame_C::CanNextRound(bool* Next)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.GetMaxTime
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UMG_WMData*              Data                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            RoundNum                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -470,7 +459,6 @@ void ABP_WhackMoleMiniGame_C::GetMaxTime(class UMG_WMData* Data, int RoundNum, f
 	params.RoundNum = RoundNum;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -482,7 +470,7 @@ void ABP_WhackMoleMiniGame_C::GetMaxTime(class UMG_WMData* Data, int RoundNum, f
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpdateWhackAnim
-// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -502,12 +490,12 @@ void ABP_WhackMoleMiniGame_C::UpdateWhackAnim(float DeltaSeconds)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.GetUnAdjustedPos
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Input                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 pos                            (Parm, OutParm, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_GetUnAdjustedPos(const struct FVector& Input, struct FVector* pos)
+void ABP_WhackMoleMiniGame_C::GetUnAdjustedPos(const struct FVector& Input, struct FVector* pos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.GetUnAdjustedPos");
 
@@ -515,7 +503,6 @@ void ABP_WhackMoleMiniGame_C::STATIC_GetUnAdjustedPos(const struct FVector& Inpu
 	params.Input = Input;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -527,12 +514,12 @@ void ABP_WhackMoleMiniGame_C::STATIC_GetUnAdjustedPos(const struct FVector& Inpu
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.GetAdjustedPos
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Input                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 pos                            (Parm, OutParm, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_GetAdjustedPos(const struct FVector& Input, struct FVector* pos)
+void ABP_WhackMoleMiniGame_C::GetAdjustedPos(const struct FVector& Input, struct FVector* pos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.GetAdjustedPos");
 
@@ -540,7 +527,6 @@ void ABP_WhackMoleMiniGame_C::STATIC_GetAdjustedPos(const struct FVector& Input,
 	params.Input = Input;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -552,7 +538,7 @@ void ABP_WhackMoleMiniGame_C::STATIC_GetAdjustedPos(const struct FVector& Input,
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.IsAppearMole
-// (NetReliable, Public, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<class ABP_MiniGameMole_C*> MoleList                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -577,16 +563,15 @@ void ABP_WhackMoleMiniGame_C::IsAppearMole(TArray<class ABP_MiniGameMole_C*>* Mo
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.CheckMoleWhack
-// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_WhackMoleMiniGame_C::STATIC_CheckMoleWhack()
+void ABP_WhackMoleMiniGame_C::CheckMoleWhack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.CheckMoleWhack");
 
 	ABP_WhackMoleMiniGame_C_CheckMoleWhack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -595,11 +580,11 @@ void ABP_WhackMoleMiniGame_C::STATIC_CheckMoleWhack()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InterpPlayerMeshPos
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_InterpPlayerMeshPos(float DeltaSeconds)
+void ABP_WhackMoleMiniGame_C::InterpPlayerMeshPos(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InterpPlayerMeshPos");
 
@@ -615,7 +600,7 @@ void ABP_WhackMoleMiniGame_C::STATIC_InterpPlayerMeshPos(float DeltaSeconds)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.SetPlayerMeshPos
-// (Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 NewPos                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -635,7 +620,7 @@ void ABP_WhackMoleMiniGame_C::SetPlayerMeshPos(const struct FVector& NewPos)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.AddScorePoint
-// (NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            AddScore                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -655,11 +640,11 @@ void ABP_WhackMoleMiniGame_C::AddScorePoint(int AddScore)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.EndCheck
-// (Net, NetReliable, Exec, Static, Private, Protected, NetServer, HasOutParms, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           EndGame                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_EndCheck(bool* EndGame)
+void ABP_WhackMoleMiniGame_C::EndCheck(bool* EndGame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.EndCheck");
 
@@ -677,11 +662,11 @@ void ABP_WhackMoleMiniGame_C::STATIC_EndCheck(bool* EndGame)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputAction
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_InputAction(bool* Enable)
+void ABP_WhackMoleMiniGame_C::InputAction(bool* Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputAction");
 
@@ -699,16 +684,15 @@ void ABP_WhackMoleMiniGame_C::STATIC_InputAction(bool* Enable)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UserConstructionScript
-// (Net, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_WhackMoleMiniGame_C::STATIC_UserConstructionScript()
+void ABP_WhackMoleMiniGame_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UserConstructionScript");
 
 	ABP_WhackMoleMiniGame_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -717,7 +701,7 @@ void ABP_WhackMoleMiniGame_C::STATIC_UserConstructionScript()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.FieldOfViewTimeLine__FinishedFunc
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::FieldOfViewTimeLine__FinishedFunc()
 {
@@ -726,7 +710,6 @@ void ABP_WhackMoleMiniGame_C::FieldOfViewTimeLine__FinishedFunc()
 	ABP_WhackMoleMiniGame_C_FieldOfViewTimeLine__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -735,7 +718,7 @@ void ABP_WhackMoleMiniGame_C::FieldOfViewTimeLine__FinishedFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.FieldOfViewTimeLine__UpdateFunc
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::FieldOfViewTimeLine__UpdateFunc()
 {
@@ -744,7 +727,6 @@ void ABP_WhackMoleMiniGame_C::FieldOfViewTimeLine__UpdateFunc()
 	ABP_WhackMoleMiniGame_C_FieldOfViewTimeLine__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -753,7 +735,7 @@ void ABP_WhackMoleMiniGame_C::FieldOfViewTimeLine__UpdateFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.TL_FlashScore1__FinishedFunc
-// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::TL_FlashScore1__FinishedFunc()
 {
@@ -770,7 +752,7 @@ void ABP_WhackMoleMiniGame_C::TL_FlashScore1__FinishedFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.TL_FlashScore1__UpdateFunc
-// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::TL_FlashScore1__UpdateFunc()
 {
@@ -787,7 +769,7 @@ void ABP_WhackMoleMiniGame_C::TL_FlashScore1__UpdateFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.TL_FlashScore1__FlashOff__EventFunc
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::TL_FlashScore1__FlashOff__EventFunc()
 {
@@ -804,7 +786,7 @@ void ABP_WhackMoleMiniGame_C::TL_FlashScore1__FlashOff__EventFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.TL_FlashScore1__FlashOn__EventFunc
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::TL_FlashScore1__FlashOn__EventFunc()
 {
@@ -821,7 +803,7 @@ void ABP_WhackMoleMiniGame_C::TL_FlashScore1__FlashOn__EventFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.TL_FlashHighScore__FinishedFunc
-// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::TL_FlashHighScore__FinishedFunc()
 {
@@ -838,7 +820,7 @@ void ABP_WhackMoleMiniGame_C::TL_FlashHighScore__FinishedFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.TL_FlashHighScore__UpdateFunc
-// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::TL_FlashHighScore__UpdateFunc()
 {
@@ -855,7 +837,7 @@ void ABP_WhackMoleMiniGame_C::TL_FlashHighScore__UpdateFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.TL_FlashHighScore__FlashOff__EventFunc
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::TL_FlashHighScore__FlashOff__EventFunc()
 {
@@ -872,7 +854,7 @@ void ABP_WhackMoleMiniGame_C::TL_FlashHighScore__FlashOff__EventFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.TL_FlashHighScore__FlashOn__EventFunc
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::TL_FlashHighScore__FlashOn__EventFunc()
 {
@@ -889,7 +871,7 @@ void ABP_WhackMoleMiniGame_C::TL_FlashHighScore__FlashOn__EventFunc()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputAButton
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::InputAButton()
 {
@@ -906,7 +888,7 @@ void ABP_WhackMoleMiniGame_C::InputAButton()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputBButton
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::InputBButton()
 {
@@ -923,7 +905,7 @@ void ABP_WhackMoleMiniGame_C::InputBButton()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputXButton
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::InputXButton()
 {
@@ -940,7 +922,7 @@ void ABP_WhackMoleMiniGame_C::InputXButton()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputYButton
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::InputYButton()
 {
@@ -957,7 +939,7 @@ void ABP_WhackMoleMiniGame_C::InputYButton()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputLeftStick
-// (Net, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -977,7 +959,7 @@ void ABP_WhackMoleMiniGame_C::InputLeftStick(float Value)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.UpInterpSpeed
-// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::UpInterpSpeed()
 {
@@ -994,7 +976,7 @@ void ABP_WhackMoleMiniGame_C::UpInterpSpeed()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.DownInterpSpeed
-// (Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::DownInterpSpeed()
 {
@@ -1011,7 +993,7 @@ void ABP_WhackMoleMiniGame_C::DownInterpSpeed()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputRightStick
-// (NetRequest, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1031,7 +1013,7 @@ void ABP_WhackMoleMiniGame_C::InputRightStick(float Value)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputLeftUp
-// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::InputLeftUp()
 {
@@ -1040,7 +1022,6 @@ void ABP_WhackMoleMiniGame_C::InputLeftUp()
 	ABP_WhackMoleMiniGame_C_InputLeftUp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1049,7 +1030,7 @@ void ABP_WhackMoleMiniGame_C::InputLeftUp()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.InputRightDown
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::InputRightDown()
 {
@@ -1058,7 +1039,6 @@ void ABP_WhackMoleMiniGame_C::InputRightDown()
 	ABP_WhackMoleMiniGame_C_InputRightDown_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1067,7 +1047,7 @@ void ABP_WhackMoleMiniGame_C::InputRightDown()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.OnFinishedFade
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::OnFinishedFade()
 {
@@ -1076,7 +1056,6 @@ void ABP_WhackMoleMiniGame_C::OnFinishedFade()
 	ABP_WhackMoleMiniGame_C_OnFinishedFade_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1085,7 +1064,7 @@ void ABP_WhackMoleMiniGame_C::OnFinishedFade()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.EndMiniGame
-// (NetReliable, NetRequest, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::EndMiniGame()
 {
@@ -1094,7 +1073,6 @@ void ABP_WhackMoleMiniGame_C::EndMiniGame()
 	ABP_WhackMoleMiniGame_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1103,7 +1081,7 @@ void ABP_WhackMoleMiniGame_C::EndMiniGame()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.StartMiniGame
-// (NetReliable, NetRequest, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::StartMiniGame()
 {
@@ -1112,7 +1090,6 @@ void ABP_WhackMoleMiniGame_C::StartMiniGame()
 	ABP_WhackMoleMiniGame_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1121,7 +1098,7 @@ void ABP_WhackMoleMiniGame_C::StartMiniGame()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.WinMiniGame
-// (Net, NetRequest, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::WinMiniGame()
 {
@@ -1130,7 +1107,6 @@ void ABP_WhackMoleMiniGame_C::WinMiniGame()
 	ABP_WhackMoleMiniGame_C_WinMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1139,7 +1115,7 @@ void ABP_WhackMoleMiniGame_C::WinMiniGame()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.LoseMiniGame
-// (Net, NetReliable, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::LoseMiniGame()
 {
@@ -1148,7 +1124,6 @@ void ABP_WhackMoleMiniGame_C::LoseMiniGame()
 	ABP_WhackMoleMiniGame_C_LoseMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1157,7 +1132,7 @@ void ABP_WhackMoleMiniGame_C::LoseMiniGame()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.DrawMiniGame
-// (Net, NetReliable, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::DrawMiniGame()
 {
@@ -1166,7 +1141,6 @@ void ABP_WhackMoleMiniGame_C::DrawMiniGame()
 	ABP_WhackMoleMiniGame_C_DrawMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1175,7 +1149,7 @@ void ABP_WhackMoleMiniGame_C::DrawMiniGame()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.FinalizeTalk
-// (NetReliable, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::FinalizeTalk()
 {
@@ -1184,7 +1158,6 @@ void ABP_WhackMoleMiniGame_C::FinalizeTalk()
 	ABP_WhackMoleMiniGame_C_FinalizeTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1193,7 +1166,7 @@ void ABP_WhackMoleMiniGame_C::FinalizeTalk()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.CustomEvent
-// (Net, NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::CustomEvent()
 {
@@ -1202,7 +1175,6 @@ void ABP_WhackMoleMiniGame_C::CustomEvent()
 	ABP_WhackMoleMiniGame_C_CustomEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1211,7 +1183,7 @@ void ABP_WhackMoleMiniGame_C::CustomEvent()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.CustomEvent_2
-// (Net, NetReliable, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -1231,7 +1203,7 @@ void ABP_WhackMoleMiniGame_C::CustomEvent_2(const struct FString& ResumeKeyword)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.CustomEvent_3
-// (Net, NetReliable, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1251,7 +1223,7 @@ void ABP_WhackMoleMiniGame_C::CustomEvent_3(int EventNumber)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.RestartMiniGame
-// (NetReliable, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::RestartMiniGame()
 {
@@ -1260,7 +1232,6 @@ void ABP_WhackMoleMiniGame_C::RestartMiniGame()
 	ABP_WhackMoleMiniGame_C_RestartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1269,7 +1240,7 @@ void ABP_WhackMoleMiniGame_C::RestartMiniGame()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.OnFinishedCoinSequence
-// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::OnFinishedCoinSequence()
 {
@@ -1278,7 +1249,6 @@ void ABP_WhackMoleMiniGame_C::OnFinishedCoinSequence()
 	ABP_WhackMoleMiniGame_C_OnFinishedCoinSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1287,7 +1257,7 @@ void ABP_WhackMoleMiniGame_C::OnFinishedCoinSequence()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.OnFinishedStart
-// (Net, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::OnFinishedStart()
 {
@@ -1296,7 +1266,6 @@ void ABP_WhackMoleMiniGame_C::OnFinishedStart()
 	ABP_WhackMoleMiniGame_C_OnFinishedStart_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1305,7 +1274,7 @@ void ABP_WhackMoleMiniGame_C::OnFinishedStart()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.Event_EndMiniGame
-// (Net, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::Event_EndMiniGame()
 {
@@ -1314,7 +1283,6 @@ void ABP_WhackMoleMiniGame_C::Event_EndMiniGame()
 	ABP_WhackMoleMiniGame_C_Event_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1323,7 +1291,7 @@ void ABP_WhackMoleMiniGame_C::Event_EndMiniGame()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.ReceiveBeginPlay
-// (Net, NetRequest, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::ReceiveBeginPlay()
 {
@@ -1332,7 +1300,6 @@ void ABP_WhackMoleMiniGame_C::ReceiveBeginPlay()
 	ABP_WhackMoleMiniGame_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1341,7 +1308,7 @@ void ABP_WhackMoleMiniGame_C::ReceiveBeginPlay()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.ReceiveTick
-// (NetReliable, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1361,7 +1328,7 @@ void ABP_WhackMoleMiniGame_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.WhackMole
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::WhackMole()
 {
@@ -1370,7 +1337,6 @@ void ABP_WhackMoleMiniGame_C::WhackMole()
 	ABP_WhackMoleMiniGame_C_WhackMole_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1379,7 +1345,7 @@ void ABP_WhackMoleMiniGame_C::WhackMole()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.FlashScore1
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::FlashScore1()
 {
@@ -1388,7 +1354,6 @@ void ABP_WhackMoleMiniGame_C::FlashScore1()
 	ABP_WhackMoleMiniGame_C_FlashScore1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1397,7 +1362,7 @@ void ABP_WhackMoleMiniGame_C::FlashScore1()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.StartRound
-// (Net, NetRequest, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            RoundNum                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1417,7 +1382,7 @@ void ABP_WhackMoleMiniGame_C::StartRound(int RoundNum)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.EnableScore1
-// (Net, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::EnableScore1()
 {
@@ -1426,7 +1391,6 @@ void ABP_WhackMoleMiniGame_C::EnableScore1()
 	ABP_WhackMoleMiniGame_C_EnableScore1_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1435,7 +1399,7 @@ void ABP_WhackMoleMiniGame_C::EnableScore1()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_42_OnGameContinueDispatcher__DelegateSignature
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_42_OnGameContinueDispatcher__DelegateSignature()
 {
@@ -1444,7 +1408,6 @@ void ABP_WhackMoleMiniGame_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Compone
 	ABP_WhackMoleMiniGame_C_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_42_OnGameContinueDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1453,7 +1416,7 @@ void ABP_WhackMoleMiniGame_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Compone
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_43_OnGameFinishedDispatcher__DelegateSignature
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_43_OnGameFinishedDispatcher__DelegateSignature()
 {
@@ -1462,7 +1425,6 @@ void ABP_WhackMoleMiniGame_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Compone
 	ABP_WhackMoleMiniGame_C_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_43_OnGameFinishedDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1471,11 +1433,11 @@ void ABP_WhackMoleMiniGame_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Compone
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.ResumeMiniGame
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_WhackMoleMiniGame_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword)
+void ABP_WhackMoleMiniGame_C::ResumeMiniGame(const struct FString& ResumeKeyword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.ResumeMiniGame");
 
@@ -1483,7 +1445,6 @@ void ABP_WhackMoleMiniGame_C::STATIC_ResumeMiniGame(const struct FString& Resume
 	params.ResumeKeyword = ResumeKeyword;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1492,11 +1453,11 @@ void ABP_WhackMoleMiniGame_C::STATIC_ResumeMiniGame(const struct FString& Resume
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.OnTalkScriptEvent
-// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WhackMoleMiniGame_C::STATIC_OnTalkScriptEvent(int EventNumber)
+void ABP_WhackMoleMiniGame_C::OnTalkScriptEvent(int EventNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.OnTalkScriptEvent");
 
@@ -1504,7 +1465,6 @@ void ABP_WhackMoleMiniGame_C::STATIC_OnTalkScriptEvent(int EventNumber)
 	params.EventNumber = EventNumber;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1513,7 +1473,7 @@ void ABP_WhackMoleMiniGame_C::STATIC_OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.EndGame
-// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::EndGame()
 {
@@ -1522,7 +1482,6 @@ void ABP_WhackMoleMiniGame_C::EndGame()
 	ABP_WhackMoleMiniGame_C_EndGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1531,7 +1490,7 @@ void ABP_WhackMoleMiniGame_C::EndGame()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.OnEndKihudaFlow
-// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::OnEndKihudaFlow()
 {
@@ -1540,7 +1499,6 @@ void ABP_WhackMoleMiniGame_C::OnEndKihudaFlow()
 	ABP_WhackMoleMiniGame_C_OnEndKihudaFlow_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1549,7 +1507,7 @@ void ABP_WhackMoleMiniGame_C::OnEndKihudaFlow()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.ChangedClothes
-// (Net, NetReliable, Native, Event, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TScriptInterface<class US3ClothInterface> Interface                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1563,7 +1521,6 @@ void ABP_WhackMoleMiniGame_C::ChangedClothes(const TScriptInterface<class US3Clo
 	params.CharaName = CharaName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1572,7 +1529,7 @@ void ABP_WhackMoleMiniGame_C::ChangedClothes(const TScriptInterface<class US3Clo
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.PlayFlashHighScore
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::PlayFlashHighScore()
 {
@@ -1581,7 +1538,6 @@ void ABP_WhackMoleMiniGame_C::PlayFlashHighScore()
 	ABP_WhackMoleMiniGame_C_PlayFlashHighScore_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1590,7 +1546,7 @@ void ABP_WhackMoleMiniGame_C::PlayFlashHighScore()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.WhackMoleMiss
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_WhackMoleMiniGame_C::WhackMoleMiss()
 {
@@ -1599,7 +1555,6 @@ void ABP_WhackMoleMiniGame_C::WhackMoleMiss()
 	ABP_WhackMoleMiniGame_C_WhackMoleMiss_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1608,7 +1563,7 @@ void ABP_WhackMoleMiniGame_C::WhackMoleMiss()
 
 
 // Function BP_WhackMoleMiniGame.BP_WhackMoleMiniGame_C.ExecuteUbergraph_BP_WhackMoleMiniGame
-// (Net, NetReliable, Native, Event, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1620,7 +1575,6 @@ void ABP_WhackMoleMiniGame_C::ExecuteUbergraph_BP_WhackMoleMiniGame(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

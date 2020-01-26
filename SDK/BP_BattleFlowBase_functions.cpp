@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BattleFlowBase.BP_BattleFlowBase_C.EnableDefaultEndConditions
-// (Net, Event, Static, Public, Delegate)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_BattleFlowBase_C::STATIC_EnableDefaultEndConditions()
+bool ABP_BattleFlowBase_C::EnableDefaultEndConditions()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleFlowBase.BP_BattleFlowBase_C.EnableDefaultEndConditions");
 
@@ -35,7 +35,7 @@ bool ABP_BattleFlowBase_C::STATIC_EnableDefaultEndConditions()
 
 
 // Function BP_BattleFlowBase.BP_BattleFlowBase_C.SetBattleManager
-// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_BattleManagerBase_C* Manager                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,7 +47,6 @@ void ABP_BattleFlowBase_C::SetBattleManager(class ABP_BattleManagerBase_C* Manag
 	params.Manager = Manager;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +55,7 @@ void ABP_BattleFlowBase_C::SetBattleManager(class ABP_BattleManagerBase_C* Manag
 
 
 // Function BP_BattleFlowBase.BP_BattleFlowBase_C.Update
-// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +67,6 @@ void ABP_BattleFlowBase_C::Update(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,7 +75,7 @@ void ABP_BattleFlowBase_C::Update(float DeltaTime)
 
 
 // Function BP_BattleFlowBase.BP_BattleFlowBase_C.StartBattle
-// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BattleFlowBase_C::StartBattle()
 {
@@ -86,7 +84,6 @@ void ABP_BattleFlowBase_C::StartBattle()
 	ABP_BattleFlowBase_C_StartBattle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +92,7 @@ void ABP_BattleFlowBase_C::StartBattle()
 
 
 // Function BP_BattleFlowBase.BP_BattleFlowBase_C.UserConstructionScript
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BattleFlowBase_C::UserConstructionScript()
 {
@@ -104,7 +101,6 @@ void ABP_BattleFlowBase_C::UserConstructionScript()
 	ABP_BattleFlowBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

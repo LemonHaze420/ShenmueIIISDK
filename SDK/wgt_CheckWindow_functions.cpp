@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_CheckWindow.wgt_CheckWindow_C.Tick
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -28,7 +28,6 @@ void Uwgt_CheckWindow_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,16 +36,15 @@ void Uwgt_CheckWindow_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 
 
 // Function wgt_CheckWindow.wgt_CheckWindow_C.Construct
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Delegate)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_CheckWindow_C::STATIC_Construct()
+void Uwgt_CheckWindow_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_CheckWindow.wgt_CheckWindow_C.Construct");
 
 	Uwgt_CheckWindow_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,16 +53,15 @@ void Uwgt_CheckWindow_C::STATIC_Construct()
 
 
 // Function wgt_CheckWindow.wgt_CheckWindow_C.Push_Left
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, Public, Delegate)
+// (BlueprintCallable, BlueprintEvent)
 
-void Uwgt_CheckWindow_C::STATIC_Push_Left()
+void Uwgt_CheckWindow_C::Push_Left()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_CheckWindow.wgt_CheckWindow_C.Push_Left");
 
 	Uwgt_CheckWindow_C_Push_Left_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,16 +70,15 @@ void Uwgt_CheckWindow_C::STATIC_Push_Left()
 
 
 // Function wgt_CheckWindow.wgt_CheckWindow_C.Push_Right
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, Public, Delegate)
+// (BlueprintCallable, BlueprintEvent)
 
-void Uwgt_CheckWindow_C::STATIC_Push_Right()
+void Uwgt_CheckWindow_C::Push_Right()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_CheckWindow.wgt_CheckWindow_C.Push_Right");
 
 	Uwgt_CheckWindow_C_Push_Right_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +87,7 @@ void Uwgt_CheckWindow_C::STATIC_Push_Right()
 
 
 // Function wgt_CheckWindow.wgt_CheckWindow_C.ExecuteUbergraph_wgt_CheckWindow
-// (Net, Exec, Event, NetResponse, NetMulticast, Public, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -111,9 +107,9 @@ void Uwgt_CheckWindow_C::ExecuteUbergraph_wgt_CheckWindow(int EntryPoint)
 
 
 // Function wgt_CheckWindow.wgt_CheckWindow_C.ED_PushRight__DelegateSignature
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_CheckWindow_C::STATIC_ED_PushRight__DelegateSignature()
+void Uwgt_CheckWindow_C::ED_PushRight__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_CheckWindow.wgt_CheckWindow_C.ED_PushRight__DelegateSignature");
 
@@ -128,9 +124,9 @@ void Uwgt_CheckWindow_C::STATIC_ED_PushRight__DelegateSignature()
 
 
 // Function wgt_CheckWindow.wgt_CheckWindow_C.ED_PushLeft__DelegateSignature
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_CheckWindow_C::STATIC_ED_PushLeft__DelegateSignature()
+void Uwgt_CheckWindow_C::ED_PushLeft__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_CheckWindow.wgt_CheckWindow_C.ED_PushLeft__DelegateSignature");
 

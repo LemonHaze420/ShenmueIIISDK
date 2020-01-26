@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCameraShowItemZoom_SCU_02.BP_TalkCameraShowItemZoom_SCU_02_C.UserConstructionScript
-// (Net, NetRequest, Exec, Native, Event, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_TalkCameraShowItemZoom_SCU_02_C::UserConstructionScript()
 {
@@ -23,7 +23,6 @@ void ABP_TalkCameraShowItemZoom_SCU_02_C::UserConstructionScript()
 	ABP_TalkCameraShowItemZoom_SCU_02_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,16 +31,15 @@ void ABP_TalkCameraShowItemZoom_SCU_02_C::UserConstructionScript()
 
 
 // Function BP_TalkCameraShowItemZoom_SCU_02.BP_TalkCameraShowItemZoom_SCU_02_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_TalkCameraShowItemZoom_SCU_02_C::STATIC_ReceiveBeginPlay()
+void ABP_TalkCameraShowItemZoom_SCU_02_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraShowItemZoom_SCU_02.BP_TalkCameraShowItemZoom_SCU_02_C.ReceiveBeginPlay");
 
 	ABP_TalkCameraShowItemZoom_SCU_02_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,7 +48,7 @@ void ABP_TalkCameraShowItemZoom_SCU_02_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_TalkCameraShowItemZoom_SCU_02.BP_TalkCameraShowItemZoom_SCU_02_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -70,11 +68,11 @@ void ABP_TalkCameraShowItemZoom_SCU_02_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCameraShowItemZoom_SCU_02.BP_TalkCameraShowItemZoom_SCU_02_C.ExecuteUbergraph_BP_TalkCameraShowItemZoom_SCU_02
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraShowItemZoom_SCU_02_C::STATIC_ExecuteUbergraph_BP_TalkCameraShowItemZoom_SCU_02(int EntryPoint)
+void ABP_TalkCameraShowItemZoom_SCU_02_C::ExecuteUbergraph_BP_TalkCameraShowItemZoom_SCU_02(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraShowItemZoom_SCU_02.BP_TalkCameraShowItemZoom_SCU_02_C.ExecuteUbergraph_BP_TalkCameraShowItemZoom_SCU_02");
 
@@ -82,7 +80,6 @@ void ABP_TalkCameraShowItemZoom_SCU_02_C::STATIC_ExecuteUbergraph_BP_TalkCameraS
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

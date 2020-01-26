@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGame_JobResult.WBP_MiniGame_JobResult_C.InitializeData
-// (Net, NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   JobTargetOriginalText          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   JobTargetLocalize              (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -42,7 +42,6 @@ void UWBP_MiniGame_JobResult_C::InitializeData(const struct FText& JobTargetOrig
 	params.ResultSE = ResultSE;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +50,7 @@ void UWBP_MiniGame_JobResult_C::InitializeData(const struct FText& JobTargetOrig
 
 
 // Function WBP_MiniGame_JobResult.WBP_MiniGame_JobResult_C.Event_PlayAppearJob
-// (NetRequest, Exec, Native, Event, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UWBP_MiniGame_JobResult_C::Event_PlayAppearJob()
 {
@@ -60,7 +59,6 @@ void UWBP_MiniGame_JobResult_C::Event_PlayAppearJob()
 	UWBP_MiniGame_JobResult_C_Event_PlayAppearJob_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,7 +67,7 @@ void UWBP_MiniGame_JobResult_C::Event_PlayAppearJob()
 
 
 // Function WBP_MiniGame_JobResult.WBP_MiniGame_JobResult_C.Event_PlayAppearResult
-// (NetRequest, Exec, Native, Event, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UWBP_MiniGame_JobResult_C::Event_PlayAppearResult()
 {
@@ -78,7 +76,6 @@ void UWBP_MiniGame_JobResult_C::Event_PlayAppearResult()
 	UWBP_MiniGame_JobResult_C_Event_PlayAppearResult_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +84,7 @@ void UWBP_MiniGame_JobResult_C::Event_PlayAppearResult()
 
 
 // Function WBP_MiniGame_JobResult.WBP_MiniGame_JobResult_C.Event_PlayToneDown
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UWBP_MiniGame_JobResult_C::Event_PlayToneDown()
 {
@@ -96,7 +93,6 @@ void UWBP_MiniGame_JobResult_C::Event_PlayToneDown()
 	UWBP_MiniGame_JobResult_C_Event_PlayToneDown_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,7 +101,7 @@ void UWBP_MiniGame_JobResult_C::Event_PlayToneDown()
 
 
 // Function WBP_MiniGame_JobResult.WBP_MiniGame_JobResult_C.ExecuteUbergraph_WBP_MiniGame_JobResult
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,10 +48,10 @@ public:
 
 
 	void SpawnRailsAndPoles(bool SpawnRight, bool SpawnLeft, bool PoleOnly, struct FBox* StepBounds);
-	void STATIC_SpawnRailAndPole(bool RightSide, bool PoleOnly, struct FBox* StepBounds);
+	void SpawnRailAndPole(bool RightSide, bool PoleOnly, struct FBox* StepBounds);
 	void GetScaledMeshBoundingBox(class UStaticMesh* Mesh, struct FBox* OutBounds);
-	void STATIC_GenerateRandomMeshRotation(struct FRotator* Random);
-	void STATIC_UserConstructionScript();
+	void GenerateRandomMeshRotation(struct FRotator* Random);
+	void UserConstructionScript();
 };
 
 

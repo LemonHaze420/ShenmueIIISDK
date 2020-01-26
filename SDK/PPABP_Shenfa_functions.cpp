@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.IsNeedSupportHem
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPPABP_Shenfa_C::STATIC_IsNeedSupportHem()
+bool UPPABP_Shenfa_C::IsNeedSupportHem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.IsNeedSupportHem");
 
 	UPPABP_Shenfa_C_IsNeedSupportHem_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,9 +35,9 @@ bool UPPABP_Shenfa_C::STATIC_IsNeedSupportHem()
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_9BC360C84C87CE7066DCE8AB76A0B6DD
-// (NetReliable, NetRequest, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_9BC360C84C87CE7066DCE8AB76A0B6DD()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_9BC360C84C87CE7066DCE8AB76A0B6DD()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_9BC360C84C87CE7066DCE8AB76A0B6DD");
 
@@ -53,9 +52,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_ModifyBone_4224F0974AA0F17B4DCBF3BF4310D6BC
-// (Net, NetRequest, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_ModifyBone_4224F0974AA0F17B4DCBF3BF4310D6BC()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_ModifyBone_4224F0974AA0F17B4DCBF3BF4310D6BC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_ModifyBone_4224F0974AA0F17B4DCBF3BF4310D6BC");
 
@@ -70,9 +69,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_ModifyBone_C3E03EDD47D7A8A7143B1CA454DB8B75
-// (Net, NetRequest, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_ModifyBone_C3E03EDD47D7A8A7143B1CA454DB8B75()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_ModifyBone_C3E03EDD47D7A8A7143B1CA454DB8B75()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_ModifyBone_C3E03EDD47D7A8A7143B1CA454DB8B75");
 
@@ -87,9 +86,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_52A2C03148D49DD285FC259F630C76EC
-// (NetRequest, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_52A2C03148D49DD285FC259F630C76EC()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_52A2C03148D49DD285FC259F630C76EC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_52A2C03148D49DD285FC259F630C76EC");
 
@@ -104,9 +103,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_136A2D9F462C05059206588678931D38
-// (NetRequest, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_136A2D9F462C05059206588678931D38()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_136A2D9F462C05059206588678931D38()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_136A2D9F462C05059206588678931D38");
 
@@ -121,9 +120,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_0014920D40ED2211051EC79914DC76EB
-// (Net, NetReliable, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_0014920D40ED2211051EC79914DC76EB()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_0014920D40ED2211051EC79914DC76EB()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_0014920D40ED2211051EC79914DC76EB");
 
@@ -138,9 +137,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_8DDABD804DE5A219601DB48A02E06853
-// (Net, NetReliable, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_8DDABD804DE5A219601DB48A02E06853()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_8DDABD804DE5A219601DB48A02E06853()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_8DDABD804DE5A219601DB48A02E06853");
 
@@ -155,9 +154,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_4C0EDD2442F469AFD8D2BEB80B31F913
-// (NetReliable, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_4C0EDD2442F469AFD8D2BEB80B31F913()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_4C0EDD2442F469AFD8D2BEB80B31F913()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_4C0EDD2442F469AFD8D2BEB80B31F913");
 
@@ -172,9 +171,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_137010DA47B7BBD3B9642195873FC5EB
-// (NetReliable, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_137010DA47B7BBD3B9642195873FC5EB()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_137010DA47B7BBD3B9642195873FC5EB()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_137010DA47B7BBD3B9642195873FC5EB");
 
@@ -189,9 +188,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_16E5C33A4C72500790AEFA981A9FDEEC
-// (Net, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_16E5C33A4C72500790AEFA981A9FDEEC()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_16E5C33A4C72500790AEFA981A9FDEEC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_16E5C33A4C72500790AEFA981A9FDEEC");
 
@@ -206,9 +205,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_CE56836D4D8D731F3F2264B504FB11F0
-// (Net, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_CE56836D4D8D731F3F2264B504FB11F0()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_CE56836D4D8D731F3F2264B504FB11F0()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_CE56836D4D8D731F3F2264B504FB11F0");
 
@@ -223,9 +222,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_2F54512F4E7969C94A58549959F565D7
-// (Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_2F54512F4E7969C94A58549959F565D7()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_2F54512F4E7969C94A58549959F565D7()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_2F54512F4E7969C94A58549959F565D7");
 
@@ -240,16 +239,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_F6A614A94412372794FA469B5D47D575
-// (NetReliable, NetRequest, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_F6A614A94412372794FA469B5D47D575()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_F6A614A94412372794FA469B5D47D575()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_F6A614A94412372794FA469B5D47D575");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_F6A614A94412372794FA469B5D47D575_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -258,16 +256,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_8F4D27EC4AAF6979421654854DCA680B
-// (Net, NetRequest, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_8F4D27EC4AAF6979421654854DCA680B()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_8F4D27EC4AAF6979421654854DCA680B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_8F4D27EC4AAF6979421654854DCA680B");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_8F4D27EC4AAF6979421654854DCA680B_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -276,16 +273,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E3EB017E4EF282B05E69F2AB94BB63D7
-// (Net, NetRequest, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E3EB017E4EF282B05E69F2AB94BB63D7()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E3EB017E4EF282B05E69F2AB94BB63D7()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E3EB017E4EF282B05E69F2AB94BB63D7");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E3EB017E4EF282B05E69F2AB94BB63D7_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -294,16 +290,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_BB847E07431C63F313E517B072494608
-// (NetRequest, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_BB847E07431C63F313E517B072494608()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_BB847E07431C63F313E517B072494608()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_BB847E07431C63F313E517B072494608");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_BB847E07431C63F313E517B072494608_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -312,9 +307,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_F0D854B24B3AC3C230FCBEA11CEC116D
-// (NetReliable, NetRequest, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_F0D854B24B3AC3C230FCBEA11CEC116D()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_F0D854B24B3AC3C230FCBEA11CEC116D()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_F0D854B24B3AC3C230FCBEA11CEC116D");
 
@@ -329,16 +324,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_3CC86CD849A503B99723A1B27257872C
-// (NetRequest, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_3CC86CD849A503B99723A1B27257872C()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_3CC86CD849A503B99723A1B27257872C()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_3CC86CD849A503B99723A1B27257872C");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_3CC86CD849A503B99723A1B27257872C_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -347,16 +341,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E9CBB9E74015B97665457996C7CFC3E9
-// (Net, NetReliable, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E9CBB9E74015B97665457996C7CFC3E9()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E9CBB9E74015B97665457996C7CFC3E9()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E9CBB9E74015B97665457996C7CFC3E9");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_E9CBB9E74015B97665457996C7CFC3E9_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -365,16 +358,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_DC3E32D3490DD25B6608B1B9290B0A20
-// (Net, NetReliable, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_DC3E32D3490DD25B6608B1B9290B0A20()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_DC3E32D3490DD25B6608B1B9290B0A20()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_DC3E32D3490DD25B6608B1B9290B0A20");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_DC3E32D3490DD25B6608B1B9290B0A20_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -383,16 +375,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_A49E9A10415255801D38E285F902532E
-// (NetReliable, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_A49E9A10415255801D38E285F902532E()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_A49E9A10415255801D38E285F902532E()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_A49E9A10415255801D38E285F902532E");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_AnimDynamics_A49E9A10415255801D38E285F902532E_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -401,16 +392,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_61874DDF4B4C2461900AB0B4707F7F71
-// (NetReliable, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_61874DDF4B4C2461900AB0B4707F7F71()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_61874DDF4B4C2461900AB0B4707F7F71()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_61874DDF4B4C2461900AB0B4707F7F71");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_61874DDF4B4C2461900AB0B4707F7F71_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -419,16 +409,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_E95A821443EFBBC57B512CAF04A2F029
-// (Net, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_E95A821443EFBBC57B512CAF04A2F029()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_E95A821443EFBBC57B512CAF04A2F029()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_E95A821443EFBBC57B512CAF04A2F029");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_E95A821443EFBBC57B512CAF04A2F029_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -437,16 +426,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_0C5FEF4C4A65791D986F8A9D7C5FA19D
-// (Net, Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_0C5FEF4C4A65791D986F8A9D7C5FA19D()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_0C5FEF4C4A65791D986F8A9D7C5FA19D()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_0C5FEF4C4A65791D986F8A9D7C5FA19D");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_0C5FEF4C4A65791D986F8A9D7C5FA19D_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -455,16 +443,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_A3C736AF4E22C567E515C1BC211E7BC9
-// (Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_A3C736AF4E22C567E515C1BC211E7BC9()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_A3C736AF4E22C567E515C1BC211E7BC9()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_A3C736AF4E22C567E515C1BC211E7BC9");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_A3C736AF4E22C567E515C1BC211E7BC9_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -473,16 +460,15 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_RigidBody_C7BBE3A942AD5A8E4242A782865BA377
-// (Native, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_RigidBody_C7BBE3A942AD5A8E4242A782865BA377()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_RigidBody_C7BBE3A942AD5A8E4242A782865BA377()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_RigidBody_C7BBE3A942AD5A8E4242A782865BA377");
 
 	UPPABP_Shenfa_C_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_RigidBody_C7BBE3A942AD5A8E4242A782865BA377_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -491,9 +477,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_E08F9B994D97718A7F0FFC858ECDD7F1
-// (Net, NetReliable, NetRequest, Exec, Static, Public, Delegate)
+// (BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_E08F9B994D97718A7F0FFC858ECDD7F1()
+void UPPABP_Shenfa_C::EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_E08F9B994D97718A7F0FFC858ECDD7F1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_Shenfa_AnimGraphNode_BlendListByBool_E08F9B994D97718A7F0FFC858ECDD7F1");
 
@@ -508,9 +494,9 @@ void UPPABP_Shenfa_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_PPABP_S
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.BlueprintInitializeAnimation
-// (Net, NetReliable, NetRequest, Exec, Static, Public, Delegate)
+// (Event, Public, BlueprintEvent)
 
-void UPPABP_Shenfa_C::STATIC_BlueprintInitializeAnimation()
+void UPPABP_Shenfa_C::BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PPABP_Shenfa.PPABP_Shenfa_C.BlueprintInitializeAnimation");
 
@@ -525,7 +511,7 @@ void UPPABP_Shenfa_C::STATIC_BlueprintInitializeAnimation()
 
 
 // Function PPABP_Shenfa.PPABP_Shenfa_C.ExecuteUbergraph_PPABP_Shenfa
-// (Net, NetReliable, NetResponse, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

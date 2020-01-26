@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetAnimInRaceFlag
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           InRace                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_SetAnimInRaceFlag(bool InRace)
+void ABP_AR_Animal_Base_C::SetAnimInRaceFlag(bool InRace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetAnimInRaceFlag");
 
@@ -26,7 +26,6 @@ void ABP_AR_Animal_Base_C::STATIC_SetAnimInRaceFlag(bool InRace)
 	params.InRace = InRace;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void ABP_AR_Animal_Base_C::STATIC_SetAnimInRaceFlag(bool InRace)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetAnimNotRaceStartPos
-// (Net, NetReliable, NetRequest, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Start                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_SetAnimNotRaceStartPos(float Start)
+void ABP_AR_Animal_Base_C::SetAnimNotRaceStartPos(float Start)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetAnimNotRaceStartPos");
 
@@ -55,11 +54,11 @@ void ABP_AR_Animal_Base_C::STATIC_SetAnimNotRaceStartPos(float Start)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetAnimDelayUpdateTime
-// (NetReliable, NetRequest, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_SetAnimDelayUpdateTime(float Time)
+void ABP_AR_Animal_Base_C::SetAnimDelayUpdateTime(float Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetAnimDelayUpdateTime");
 
@@ -75,9 +74,9 @@ void ABP_AR_Animal_Base_C::STATIC_SetAnimDelayUpdateTime(float Time)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ChangeStateOnFree
-// (Net, NetRequest, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_ChangeStateOnFree()
+void ABP_AR_Animal_Base_C::ChangeStateOnFree()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ChangeStateOnFree");
 
@@ -92,9 +91,9 @@ void ABP_AR_Animal_Base_C::STATIC_ChangeStateOnFree()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Finalize
-// (NetRequest, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_Finalize()
+void ABP_AR_Animal_Base_C::Finalize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Finalize");
 
@@ -109,7 +108,7 @@ void ABP_AR_Animal_Base_C::STATIC_Finalize()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.TestSumFuncTurtle
-// (NetReliable, NetRequest, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -130,7 +129,7 @@ bool ABP_AR_Animal_Base_C::TestSumFuncTurtle()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.GetMoveSpeed
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -151,7 +150,7 @@ float ABP_AR_Animal_Base_C::GetMoveSpeed()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.TestSumFuncToad
-// (NetResponse, NetMulticast, Public, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -172,7 +171,7 @@ bool ABP_AR_Animal_Base_C::TestSumFuncToad()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.IsUsingSpecialData
-// (Net, NetReliable, Native, NetResponse, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           UseSpecial                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -183,7 +182,6 @@ void ABP_AR_Animal_Base_C::IsUsingSpecialData(bool* UseSpecial)
 	ABP_AR_Animal_Base_C_IsUsingSpecialData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +193,7 @@ void ABP_AR_Animal_Base_C::IsUsingSpecialData(bool* UseSpecial)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.CanCancelDelay
-// (Net, NetReliable, NetRequest, Native, NetMulticast, Public, Delegate, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bComplete                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -208,7 +206,6 @@ void ABP_AR_Animal_Base_C::CanCancelDelay(float Duration, bool* bComplete)
 	params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,11 +217,11 @@ void ABP_AR_Animal_Base_C::CanCancelDelay(float Duration, bool* bComplete)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetResultControl
-// (Net, NetReliable, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsWin                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_SetResultControl(bool IsWin)
+void ABP_AR_Animal_Base_C::SetResultControl(bool IsWin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetResultControl");
 
@@ -232,7 +229,6 @@ void ABP_AR_Animal_Base_C::STATIC_SetResultControl(bool IsWin)
 	params.IsWin = IsWin;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,7 +237,7 @@ void ABP_AR_Animal_Base_C::STATIC_SetResultControl(bool IsWin)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.GetCourseMaterial
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ShapeType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInterface*      Material                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -254,7 +250,6 @@ void ABP_AR_Animal_Base_C::GetCourseMaterial(int ShapeType, class UMaterialInter
 	params.ShapeType = ShapeType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -266,7 +261,7 @@ void ABP_AR_Animal_Base_C::GetCourseMaterial(int ShapeType, class UMaterialInter
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.PlayerBetAction
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -277,7 +272,6 @@ void ABP_AR_Animal_Base_C::PlayerBetAction(bool* dummy)
 	ABP_AR_Animal_Base_C_PlayerBetAction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -289,7 +283,7 @@ void ABP_AR_Animal_Base_C::PlayerBetAction(bool* dummy)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetWalkRate
-// (Net, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -301,7 +295,6 @@ void ABP_AR_Animal_Base_C::SetWalkRate(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -310,7 +303,7 @@ void ABP_AR_Animal_Base_C::SetWalkRate(float Rate)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetSpeedListFromTableIndex
-// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsSpecialSpeed                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -324,7 +317,6 @@ void ABP_AR_Animal_Base_C::SetSpeedListFromTableIndex(int Index, bool IsSpecialS
 	params.IsSpecialSpeed = IsSpecialSpeed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -333,9 +325,9 @@ void ABP_AR_Animal_Base_C::SetSpeedListFromTableIndex(int Index, bool IsSpecialS
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SettingSelectAnimal
-// (NetRequest, Exec, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_SettingSelectAnimal()
+void ABP_AR_Animal_Base_C::SettingSelectAnimal()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SettingSelectAnimal");
 
@@ -350,9 +342,9 @@ void ABP_AR_Animal_Base_C::STATIC_SettingSelectAnimal()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Initialize
-// (NetRequest, Exec, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_Initialize()
+void ABP_AR_Animal_Base_C::Initialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Initialize");
 
@@ -367,11 +359,11 @@ void ABP_AR_Animal_Base_C::STATIC_Initialize()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetFortuneEnabled
-// (Net, NetReliable, Exec, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_SetFortuneEnabled(bool bEnabled)
+void ABP_AR_Animal_Base_C::SetFortuneEnabled(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetFortuneEnabled");
 
@@ -387,9 +379,9 @@ void ABP_AR_Animal_Base_C::STATIC_SetFortuneEnabled(bool bEnabled)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.CheerAnimalBoost
-// (NetReliable, Exec, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_CheerAnimalBoost()
+void ABP_AR_Animal_Base_C::CheerAnimalBoost()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.CheerAnimalBoost");
 
@@ -404,11 +396,11 @@ void ABP_AR_Animal_Base_C::STATIC_CheerAnimalBoost()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetWalkSE
-// (Net, Exec, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           RefWalkCue                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_SetWalkSE(class USoundAtomCue* RefWalkCue)
+void ABP_AR_Animal_Base_C::SetWalkSE(class USoundAtomCue* RefWalkCue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetWalkSE");
 
@@ -424,11 +416,11 @@ void ABP_AR_Animal_Base_C::STATIC_SetWalkSE(class USoundAtomCue* RefWalkCue)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.PlayCrySE
-// (Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_PlayCrySE(float Volume)
+void ABP_AR_Animal_Base_C::PlayCrySE(float Volume)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.PlayCrySE");
 
@@ -444,11 +436,11 @@ void ABP_AR_Animal_Base_C::STATIC_PlayCrySE(float Volume)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetCrySE
-// (Net, NetReliable, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_SetCrySE(class USoundAtomCue* Sound)
+void ABP_AR_Animal_Base_C::SetCrySE(class USoundAtomCue* Sound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetCrySE");
 
@@ -456,7 +448,6 @@ void ABP_AR_Animal_Base_C::STATIC_SetCrySE(class USoundAtomCue* Sound)
 	params.Sound = Sound;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -465,11 +456,11 @@ void ABP_AR_Animal_Base_C::STATIC_SetCrySE(class USoundAtomCue* Sound)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetUseSpline
-// (NetReliable, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bUseSpline                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_SetUseSpline(bool bUseSpline)
+void ABP_AR_Animal_Base_C::SetUseSpline(bool bUseSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetUseSpline");
 
@@ -477,7 +468,6 @@ void ABP_AR_Animal_Base_C::STATIC_SetUseSpline(bool bUseSpline)
 	params.bUseSpline = bUseSpline;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -486,18 +476,17 @@ void ABP_AR_Animal_Base_C::STATIC_SetUseSpline(bool bUseSpline)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.GetMoveSpline
-// (Net, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USplineComponent*        MoveSpline                     (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_GetMoveSpline(class USplineComponent** MoveSpline)
+void ABP_AR_Animal_Base_C::GetMoveSpline(class USplineComponent** MoveSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.GetMoveSpline");
 
 	ABP_AR_Animal_Base_C_GetMoveSpline_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -509,11 +498,11 @@ void ABP_AR_Animal_Base_C::STATIC_GetMoveSpline(class USplineComponent** MoveSpl
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetMoveSpline
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USplineComponent*        MoveSpline                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_SetMoveSpline(class USplineComponent* MoveSpline)
+void ABP_AR_Animal_Base_C::SetMoveSpline(class USplineComponent* MoveSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetMoveSpline");
 
@@ -529,7 +518,7 @@ void ABP_AR_Animal_Base_C::STATIC_SetMoveSpline(class USplineComponent* MoveSpli
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.GetSplineLocationAndRotation
-// (NetReliable, Native, NetMulticast, Public, Delegate, BlueprintCallable)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
@@ -543,7 +532,6 @@ void ABP_AR_Animal_Base_C::GetSplineLocationAndRotation(float Distance, struct F
 	params.Distance = Distance;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -557,7 +545,7 @@ void ABP_AR_Animal_Base_C::GetSplineLocationAndRotation(float Distance, struct F
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.UpdateRotate
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_AR_Animal_Base_C::UpdateRotate()
 {
@@ -566,7 +554,6 @@ void ABP_AR_Animal_Base_C::UpdateRotate()
 	ABP_AR_Animal_Base_C_UpdateRotate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -575,7 +562,7 @@ void ABP_AR_Animal_Base_C::UpdateRotate()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ChangeShape
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -587,7 +574,6 @@ void ABP_AR_Animal_Base_C::ChangeShape(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -596,7 +582,7 @@ void ABP_AR_Animal_Base_C::ChangeShape(int Index)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.InitializeInfo
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_AR_AnimalInfo       table_offset                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -618,7 +604,7 @@ void ABP_AR_Animal_Base_C::InitializeInfo(const struct FST_AR_AnimalInfo& table_
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetMotion
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<E_AR_Motion_Type>  mot_type                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -630,7 +616,6 @@ void ABP_AR_Animal_Base_C::SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
 	params.mot_type = mot_type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -639,11 +624,11 @@ void ABP_AR_Animal_Base_C::SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.GetDeathTime
-// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          death_time                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_GetDeathTime(float* death_time)
+void ABP_AR_Animal_Base_C::GetDeathTime(float* death_time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.GetDeathTime");
 
@@ -661,7 +646,7 @@ void ABP_AR_Animal_Base_C::STATIC_GetDeathTime(float* death_time)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetDeath
-// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           is_death                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -673,7 +658,6 @@ void ABP_AR_Animal_Base_C::SetDeath(bool is_death)
 	params.is_death = is_death;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -682,7 +666,7 @@ void ABP_AR_Animal_Base_C::SetDeath(bool is_death)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.UpdateWalkRate
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_AR_Animal_Base_C::UpdateWalkRate()
 {
@@ -691,7 +675,6 @@ void ABP_AR_Animal_Base_C::UpdateWalkRate()
 	ABP_AR_Animal_Base_C_UpdateWalkRate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -700,7 +683,7 @@ void ABP_AR_Animal_Base_C::UpdateWalkRate()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SelectMotion
-// (NetReliable, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Speed                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -720,7 +703,7 @@ void ABP_AR_Animal_Base_C::SelectMotion(float Speed)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetStop
-// (Net, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           is_stop                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -740,7 +723,7 @@ void ABP_AR_Animal_Base_C::SetStop(bool is_stop)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Reset
-// (Net, NetRequest, Exec, NetResponse, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_AR_Animal_Base_C::Reset()
 {
@@ -757,7 +740,7 @@ void ABP_AR_Animal_Base_C::Reset()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.GetRandomSpeedFromTable
-// (Exec, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Speed                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -779,7 +762,7 @@ void ABP_AR_Animal_Base_C::GetRandomSpeedFromTable(float* Speed)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.UserConstructionScript
-// (Net, NetRequest, Native, Event, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_AR_Animal_Base_C::UserConstructionScript()
 {
@@ -788,7 +771,6 @@ void ABP_AR_Animal_Base_C::UserConstructionScript()
 	ABP_AR_Animal_Base_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -797,16 +779,15 @@ void ABP_AR_Animal_Base_C::UserConstructionScript()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ReceiveBeginPlay
-// (Exec, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_ReceiveBeginPlay()
+void ABP_AR_Animal_Base_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ReceiveBeginPlay");
 
 	ABP_AR_Animal_Base_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -815,11 +796,11 @@ void ABP_AR_Animal_Base_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_AR_Animal_Base_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ReceiveTick");
 
@@ -827,7 +808,6 @@ void ABP_AR_Animal_Base_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -836,16 +816,15 @@ void ABP_AR_Animal_Base_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.AnimStop
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_AnimStop()
+void ABP_AR_Animal_Base_C::AnimStop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.AnimStop");
 
 	ABP_AR_Animal_Base_C_AnimStop_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -854,11 +833,11 @@ void ABP_AR_Animal_Base_C::STATIC_AnimStop()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Right Hit Begin
-// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_Right_Hit_Begin(class UObject* A)
+void ABP_AR_Animal_Base_C::Right_Hit_Begin(class UObject* A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Right Hit Begin");
 
@@ -866,7 +845,6 @@ void ABP_AR_Animal_Base_C::STATIC_Right_Hit_Begin(class UObject* A)
 	params.A = A;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -875,11 +853,11 @@ void ABP_AR_Animal_Base_C::STATIC_Right_Hit_Begin(class UObject* A)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Left Hit Begin
-// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_Left_Hit_Begin(class UObject* A)
+void ABP_AR_Animal_Base_C::Left_Hit_Begin(class UObject* A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Left Hit Begin");
 
@@ -887,7 +865,6 @@ void ABP_AR_Animal_Base_C::STATIC_Left_Hit_Begin(class UObject* A)
 	params.A = A;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -896,11 +873,11 @@ void ABP_AR_Animal_Base_C::STATIC_Left_Hit_Begin(class UObject* A)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Right Hit End
-// (Net, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_Right_Hit_End(class UObject* A)
+void ABP_AR_Animal_Base_C::Right_Hit_End(class UObject* A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Right Hit End");
 
@@ -908,7 +885,6 @@ void ABP_AR_Animal_Base_C::STATIC_Right_Hit_End(class UObject* A)
 	params.A = A;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -917,11 +893,11 @@ void ABP_AR_Animal_Base_C::STATIC_Right_Hit_End(class UObject* A)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Left Hit End
-// (NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_Left_Hit_End(class UObject* A)
+void ABP_AR_Animal_Base_C::Left_Hit_End(class UObject* A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Left Hit End");
 
@@ -929,7 +905,6 @@ void ABP_AR_Animal_Base_C::STATIC_Left_Hit_End(class UObject* A)
 	params.A = A;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -938,16 +913,15 @@ void ABP_AR_Animal_Base_C::STATIC_Left_Hit_End(class UObject* A)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.MoveUpdate
-// (NetRequest, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_MoveUpdate()
+void ABP_AR_Animal_Base_C::MoveUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.MoveUpdate");
 
 	ABP_AR_Animal_Base_C_MoveUpdate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -956,9 +930,9 @@ void ABP_AR_Animal_Base_C::STATIC_MoveUpdate()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Idle Reset
-// (NetReliable, Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_Idle_Reset()
+void ABP_AR_Animal_Base_C::Idle_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Idle Reset");
 
@@ -973,12 +947,12 @@ void ABP_AR_Animal_Base_C::STATIC_Idle_Reset()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Set Tick Enable
-// (NetReliable, Native, Event, Static, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DelayTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_Set_Tick_Enable(bool bEnabled, float DelayTime)
+void ABP_AR_Animal_Base_C::Set_Tick_Enable(bool bEnabled, float DelayTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Set Tick Enable");
 
@@ -987,7 +961,6 @@ void ABP_AR_Animal_Base_C::STATIC_Set_Tick_Enable(bool bEnabled, float DelayTime
 	params.DelayTime = DelayTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -996,9 +969,9 @@ void ABP_AR_Animal_Base_C::STATIC_Set_Tick_Enable(bool bEnabled, float DelayTime
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetCurrentMoveSpeedTimingFromUpdate
-// (Net, Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_SetCurrentMoveSpeedTimingFromUpdate()
+void ABP_AR_Animal_Base_C::SetCurrentMoveSpeedTimingFromUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetCurrentMoveSpeedTimingFromUpdate");
 
@@ -1013,9 +986,9 @@ void ABP_AR_Animal_Base_C::STATIC_SetCurrentMoveSpeedTimingFromUpdate()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Event_PlaySECry
-// (Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_Event_PlaySECry()
+void ABP_AR_Animal_Base_C::Event_PlaySECry()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Event_PlaySECry");
 
@@ -1030,9 +1003,9 @@ void ABP_AR_Animal_Base_C::STATIC_Event_PlaySECry()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Event_PlaySEWalk
-// (Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_Event_PlaySEWalk()
+void ABP_AR_Animal_Base_C::Event_PlaySEWalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Event_PlaySEWalk");
 
@@ -1047,11 +1020,11 @@ void ABP_AR_Animal_Base_C::STATIC_Event_PlaySEWalk()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Event_EnabledCheer
-// (NetReliable, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_Event_EnabledCheer(bool Condition)
+void ABP_AR_Animal_Base_C::Event_EnabledCheer(bool Condition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.Event_EnabledCheer");
 
@@ -1059,7 +1032,6 @@ void ABP_AR_Animal_Base_C::STATIC_Event_EnabledCheer(bool Condition)
 	params.Condition = Condition;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1068,16 +1040,15 @@ void ABP_AR_Animal_Base_C::STATIC_Event_EnabledCheer(bool Condition)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ResetDelayTime
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_ResetDelayTime()
+void ABP_AR_Animal_Base_C::ResetDelayTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ResetDelayTime");
 
 	ABP_AR_Animal_Base_C_ResetDelayTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1086,16 +1057,15 @@ void ABP_AR_Animal_Base_C::STATIC_ResetDelayTime()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ResetIdleTime
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_ResetIdleTime()
+void ABP_AR_Animal_Base_C::ResetIdleTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ResetIdleTime");
 
 	ABP_AR_Animal_Base_C_ResetIdleTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1104,7 +1074,7 @@ void ABP_AR_Animal_Base_C::STATIC_ResetIdleTime()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.SetAnimUpdateEnabled
-// (Net, NetReliable, Native, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DelayTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1118,7 +1088,6 @@ void ABP_AR_Animal_Base_C::SetAnimUpdateEnabled(bool Enabled, float DelayTime)
 	params.DelayTime = DelayTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1127,16 +1096,15 @@ void ABP_AR_Animal_Base_C::SetAnimUpdateEnabled(bool Enabled, float DelayTime)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.DelayedChangeStateOnFree
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_DelayedChangeStateOnFree()
+void ABP_AR_Animal_Base_C::DelayedChangeStateOnFree()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.DelayedChangeStateOnFree");
 
 	ABP_AR_Animal_Base_C_DelayedChangeStateOnFree_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1145,16 +1113,15 @@ void ABP_AR_Animal_Base_C::STATIC_DelayedChangeStateOnFree()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.DelayedChangeStateToWait
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Animal_Base_C::STATIC_DelayedChangeStateToWait()
+void ABP_AR_Animal_Base_C::DelayedChangeStateToWait()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.DelayedChangeStateToWait");
 
 	ABP_AR_Animal_Base_C_DelayedChangeStateToWait_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1163,11 +1130,11 @@ void ABP_AR_Animal_Base_C::STATIC_DelayedChangeStateToWait()
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.DelayedInitialize
-// (Net, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DelayTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_DelayedInitialize(float DelayTime)
+void ABP_AR_Animal_Base_C::DelayedInitialize(float DelayTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.DelayedInitialize");
 
@@ -1175,7 +1142,6 @@ void ABP_AR_Animal_Base_C::STATIC_DelayedInitialize(float DelayTime)
 	params.DelayTime = DelayTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1184,11 +1150,11 @@ void ABP_AR_Animal_Base_C::STATIC_DelayedInitialize(float DelayTime)
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ExecuteUbergraph_BP_AR_Animal_Base
-// (NetReliable, Exec, Event, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Animal_Base_C::STATIC_ExecuteUbergraph_BP_AR_Animal_Base(int EntryPoint)
+void ABP_AR_Animal_Base_C::ExecuteUbergraph_BP_AR_Animal_Base(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.ExecuteUbergraph_BP_AR_Animal_Base");
 
@@ -1204,7 +1170,7 @@ void ABP_AR_Animal_Base_C::STATIC_ExecuteUbergraph_BP_AR_Animal_Base(int EntryPo
 
 
 // Function BP_AR_Animal_Base.BP_AR_Animal_Base_C.OnEndCheerBoostDispacher__DelegateSignature
-// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_AR_Animal_Base_C::OnEndCheerBoostDispacher__DelegateSignature()
 {
@@ -1213,7 +1179,6 @@ void ABP_AR_Animal_Base_C::OnEndCheerBoostDispacher__DelegateSignature()
 	ABP_AR_Animal_Base_C_OnEndCheerBoostDispacher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

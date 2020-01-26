@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,12 +43,12 @@ public:
 
 	void SetTextures(class UTexture2D* Flower, class UTexture2D* Bird, class UTexture2D* Wind, class UTexture2D* Moon, class UTexture2D* Back);
 	void SetVisibleImage(bool Visible);
-	void STATIC_SetVisibleViewText(ESlateVisibility InVisibility);
+	void SetVisibleViewText(ESlateVisibility InVisibility);
 	void SetViewText(const struct FString& Text);
-	void STATIC_SetVisibleButton(bool Visible);
-	void STATIC_Construct();
-	void STATIC_PlayStartFadeAnim();
-	void STATIC_PlayEndFadeAnim();
+	void SetVisibleButton(bool Visible);
+	void Construct();
+	void PlayStartFadeAnim();
+	void PlayEndFadeAnim();
 	void PlayAppearAnim(float PlayRate, TEnumAsByte<EMiniGameKFTypeEnum> AppearType);
 	void ExecuteUbergraph_WBP_MiniGame_Kachofugetsu(int EntryPoint);
 };

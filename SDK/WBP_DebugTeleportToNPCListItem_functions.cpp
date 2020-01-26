@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.SetFocusToButton
-// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UWBP_DebugTeleportToNPCListItem_C::SetFocusToButton()
 {
@@ -31,7 +31,7 @@ void UWBP_DebugTeleportToNPCListItem_C::SetFocusToButton()
 
 
 // Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.Construct
-// (Net, NetRequest, Exec, Event, Public, Delegate)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_DebugTeleportToNPCListItem_C::Construct()
 {
@@ -48,7 +48,7 @@ void UWBP_DebugTeleportToNPCListItem_C::Construct()
 
 
 // Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Event, Public, Delegate)
+// (BlueprintEvent)
 
 void UWBP_DebugTeleportToNPCListItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature()
 {
@@ -65,11 +65,11 @@ void UWBP_DebugTeleportToNPCListItem_C::BndEvt__Button_K2Node_ComponentBoundEven
 
 
 // Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.ExecuteUbergraph_WBP_DebugTeleportToNPCListItem
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_DebugTeleportToNPCListItem_C::STATIC_ExecuteUbergraph_WBP_DebugTeleportToNPCListItem(int EntryPoint)
+void UWBP_DebugTeleportToNPCListItem_C::ExecuteUbergraph_WBP_DebugTeleportToNPCListItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.ExecuteUbergraph_WBP_DebugTeleportToNPCListItem");
 
@@ -77,7 +77,6 @@ void UWBP_DebugTeleportToNPCListItem_C::STATIC_ExecuteUbergraph_WBP_DebugTelepor
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

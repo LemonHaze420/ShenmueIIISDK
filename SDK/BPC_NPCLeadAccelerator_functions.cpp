@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.SetSpeedInstant
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Speed                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UBPC_NPCLeadAccelerator_C::SetSpeedInstant(float Speed)
 	params.Speed = Speed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,18 +34,17 @@ void UBPC_NPCLeadAccelerator_C::SetSpeedInstant(float Speed)
 
 
 // Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.GetTargetSpeed
-// (Net, NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          TargetSpeed                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_NPCLeadAccelerator_C::STATIC_GetTargetSpeed(float* TargetSpeed)
+void UBPC_NPCLeadAccelerator_C::GetTargetSpeed(float* TargetSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.GetTargetSpeed");
 
 	UBPC_NPCLeadAccelerator_C_GetTargetSpeed_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,12 +56,12 @@ void UBPC_NPCLeadAccelerator_C::STATIC_GetTargetSpeed(float* TargetSpeed)
 
 
 // Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.ClampSpeed
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBPC_NPCLeadAccelerator_C::STATIC_ClampSpeed(float Value)
+float UBPC_NPCLeadAccelerator_C::ClampSpeed(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.ClampSpeed");
 
@@ -81,14 +79,14 @@ float UBPC_NPCLeadAccelerator_C::STATIC_ClampSpeed(float Value)
 
 
 // Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.MapToSpeedRange
-// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InRangeA                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InRangeB                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBPC_NPCLeadAccelerator_C::STATIC_MapToSpeedRange(float Value, float InRangeA, float InRangeB)
+float UBPC_NPCLeadAccelerator_C::MapToSpeedRange(float Value, float InRangeA, float InRangeB)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.MapToSpeedRange");
 
@@ -98,7 +96,6 @@ float UBPC_NPCLeadAccelerator_C::STATIC_MapToSpeedRange(float Value, float InRan
 	params.InRangeB = InRangeB;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,11 +106,11 @@ float UBPC_NPCLeadAccelerator_C::STATIC_MapToSpeedRange(float Value, float InRan
 
 
 // Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.SetTargetSpeed
-// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TargetSpeed                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_NPCLeadAccelerator_C::STATIC_SetTargetSpeed(float TargetSpeed)
+void UBPC_NPCLeadAccelerator_C::SetTargetSpeed(float TargetSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.SetTargetSpeed");
 
@@ -121,7 +118,6 @@ void UBPC_NPCLeadAccelerator_C::STATIC_SetTargetSpeed(float TargetSpeed)
 	params.TargetSpeed = TargetSpeed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -130,11 +126,11 @@ void UBPC_NPCLeadAccelerator_C::STATIC_SetTargetSpeed(float TargetSpeed)
 
 
 // Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.ReceiveTick
-// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_NPCLeadAccelerator_C::STATIC_ReceiveTick(float DeltaSeconds)
+void UBPC_NPCLeadAccelerator_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.ReceiveTick");
 
@@ -142,7 +138,6 @@ void UBPC_NPCLeadAccelerator_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,16 +146,15 @@ void UBPC_NPCLeadAccelerator_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.ReceiveBeginPlay
-// (Net, NetRequest, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
-void UBPC_NPCLeadAccelerator_C::STATIC_ReceiveBeginPlay()
+void UBPC_NPCLeadAccelerator_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.ReceiveBeginPlay");
 
 	UBPC_NPCLeadAccelerator_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,16 +163,15 @@ void UBPC_NPCLeadAccelerator_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.Reset
-// (NetRequest, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_NPCLeadAccelerator_C::STATIC_Reset()
+void UBPC_NPCLeadAccelerator_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.Reset");
 
 	UBPC_NPCLeadAccelerator_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,7 +180,7 @@ void UBPC_NPCLeadAccelerator_C::STATIC_Reset()
 
 
 // Function BPC_NPCLeadAccelerator.BPC_NPCLeadAccelerator_C.ExecuteUbergraph_BPC_NPCLeadAccelerator
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -199,7 +192,6 @@ void UBPC_NPCLeadAccelerator_C::ExecuteUbergraph_BPC_NPCLeadAccelerator(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

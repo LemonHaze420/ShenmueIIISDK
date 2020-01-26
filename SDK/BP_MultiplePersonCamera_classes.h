@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -67,24 +67,24 @@ public:
 
 	void GetCamera(class UCameraComponent** Camera);
 	void SortFloat(TArray<float>* inArray, TArray<int>* SortedIndex);
-	void STATIC_SetTargetByActorIds();
-	void STATIC_SortByAngle(TArray<class AActor*>* TargetArray, TArray<class AActor*>* SortedArray);
+	void SetTargetByActorIds();
+	void SortByAngle(TArray<class AActor*>* TargetArray, TArray<class AActor*>* SortedArray);
 	void UpdateDistance();
 	void UpdateFOV();
-	void STATIC_UpdateAlpha();
-	void STATIC_CalcYawAndPitch();
+	void UpdateAlpha();
+	void CalcYawAndPitch();
 	void SortTargetsClockwise();
-	void STATIC_CreateSprine();
-	void STATIC_DrawDebugNorm();
+	void CreateSprine();
+	void DrawDebugNorm();
 	void UpdateCameraTransform();
-	void STATIC_FindTargetfromID();
-	void STATIC_CulcTargetPos(TArray<class AS3Character*>* TargetActors, struct FVector* AverageVector);
+	void FindTargetfromID();
+	void CulcTargetPos(TArray<class AS3Character*>* TargetActors, struct FVector* AverageVector);
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void Update();
 	void Init();
 	void ReceiveBeginPlay();
-	void STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
+	void ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
 	void ExecuteUbergraph_BP_MultiplePersonCamera(int EntryPoint);
 };
 

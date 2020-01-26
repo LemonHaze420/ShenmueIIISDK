@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,12 +32,12 @@ public:
 	}
 
 
-	void STATIC_SetDateTime(const struct FDateTime& DateTime);
+	void SetDateTime(const struct FDateTime& DateTime);
 	void SetOptionText(const struct FString& Text);
 	void SetStep(int Step);
-	void STATIC_Construct();
-	void STATIC_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_ExecuteUbergraph_BP_S3SaveLoadTestButton(int EntryPoint);
+	void Construct();
+	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void ExecuteUbergraph_BP_S3SaveLoadTestButton(int EntryPoint);
 	void OnClicked__DelegateSignature();
 };
 

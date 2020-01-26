@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.AttachActor
-// (NetReliable, NetRequest, Exec, Native, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  AttachTarget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void ABP_MoveCutsceneRoot_C::AttachActor(class AActor* AttachTarget)
 	params.AttachTarget = AttachTarget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void ABP_MoveCutsceneRoot_C::AttachActor(class AActor* AttachTarget)
 
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.StopCutScenePlayerByTag
-// (Exec, NetResponse, Static, NetMulticast, Private, Delegate, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Tag                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MoveCutsceneRoot_C::STATIC_StopCutScenePlayerByTag(const struct FName& Tag)
+void ABP_MoveCutsceneRoot_C::StopCutScenePlayerByTag(const struct FName& Tag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.StopCutScenePlayerByTag");
 
@@ -55,7 +54,7 @@ void ABP_MoveCutsceneRoot_C::STATIC_StopCutScenePlayerByTag(const struct FName& 
 
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.StopCutScenePlayer
-// (NetReliable, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MoveCutsceneRoot_C::StopCutScenePlayer()
 {
@@ -72,12 +71,12 @@ void ABP_MoveCutsceneRoot_C::StopCutScenePlayer()
 
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.FindCutScenePlayerByTag
-// (NetResponse, Static, NetMulticast, Private, Delegate, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Tag                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_CutscenePlayer_C*    CutscenePlayer                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MoveCutsceneRoot_C::STATIC_FindCutScenePlayerByTag(const struct FName& Tag, class ABP_CutscenePlayer_C** CutscenePlayer)
+void ABP_MoveCutsceneRoot_C::FindCutScenePlayerByTag(const struct FName& Tag, class ABP_CutscenePlayer_C** CutscenePlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.FindCutScenePlayerByTag");
 
@@ -96,7 +95,7 @@ void ABP_MoveCutsceneRoot_C::STATIC_FindCutScenePlayerByTag(const struct FName& 
 
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.UserConstructionScript
-// (Exec, Native, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MoveCutsceneRoot_C::UserConstructionScript()
 {
@@ -105,7 +104,6 @@ void ABP_MoveCutsceneRoot_C::UserConstructionScript()
 	ABP_MoveCutsceneRoot_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,16 +112,15 @@ void ABP_MoveCutsceneRoot_C::UserConstructionScript()
 
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_MoveCutsceneRoot_C::STATIC_ReceiveBeginPlay()
+void ABP_MoveCutsceneRoot_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.ReceiveBeginPlay");
 
 	ABP_MoveCutsceneRoot_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,16 +129,15 @@ void ABP_MoveCutsceneRoot_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.ResetTransform
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_MoveCutsceneRoot_C::STATIC_ResetTransform()
+void ABP_MoveCutsceneRoot_C::ResetTransform()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.ResetTransform");
 
 	ABP_MoveCutsceneRoot_C_ResetTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,11 +146,11 @@ void ABP_MoveCutsceneRoot_C::STATIC_ResetTransform()
 
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.SetVisibleAllCutsceneActors
-// (Net, NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bNewHidden                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MoveCutsceneRoot_C::STATIC_SetVisibleAllCutsceneActors(bool bNewHidden)
+void ABP_MoveCutsceneRoot_C::SetVisibleAllCutsceneActors(bool bNewHidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.SetVisibleAllCutsceneActors");
 
@@ -170,16 +166,15 @@ void ABP_MoveCutsceneRoot_C::STATIC_SetVisibleAllCutsceneActors(bool bNewHidden)
 
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.SetInfiniteTransform
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_MoveCutsceneRoot_C::STATIC_SetInfiniteTransform()
+void ABP_MoveCutsceneRoot_C::SetInfiniteTransform()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.SetInfiniteTransform");
 
 	ABP_MoveCutsceneRoot_C_SetInfiniteTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -188,7 +183,7 @@ void ABP_MoveCutsceneRoot_C::STATIC_SetInfiniteTransform()
 
 
 // Function BP_MoveCutsceneRoot.BP_MoveCutsceneRoot_C.ExecuteUbergraph_BP_MoveCutsceneRoot
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,10 +52,10 @@ public:
 	int GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void IsHaveVipCard(bool* IsHaveVipCard);
-	void STATIC_CheckPayButton();
-	void STATIC_EndFlow();
-	void STATIC_UpdNowSelSet();
-	void STATIC_PlaySE(TEnumAsByte<EN_ShopSE_List> SE);
+	void CheckPayButton();
+	void EndFlow();
+	void UpdNowSelSet();
+	void PlaySE(TEnumAsByte<EN_ShopSE_List> SE);
 	void GetItemID(int item_no, struct FText* ret);
 	void UserConstructionScript();
 	void InpActEvt_SearchBottomButton_K2Node_InputActionEvent_12(const struct FKey& Key);
@@ -64,13 +64,13 @@ public:
 	void InpActEvt_SearchTopButton_K2Node_InputActionEvent_9(const struct FKey& Key);
 	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
 	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void DecideDetectAction(ES3ActionIconType Type);
-	void STATIC_ExecuteUbergraph_BP_TuriguRentalManager(int EntryPoint);
-	void STATIC_onNoBuyEnd__DelegateSignature();
-	void STATIC_onBuyEnd__DelegateSignature();
+	void ExecuteUbergraph_BP_TuriguRentalManager(int EntryPoint);
+	void onNoBuyEnd__DelegateSignature();
+	void onBuyEnd__DelegateSignature();
 };
 
 

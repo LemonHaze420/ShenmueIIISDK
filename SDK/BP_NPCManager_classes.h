@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,8 +18,7 @@ class ABP_NPCManager_C : public AS3NPCManager
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x06D0(0x0008) (Transient, DuplicateTransient)
-	bool                                               bSGNWarp;                                                 // 0x06D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bAddedDebugTrace;                                         // 0x06D9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x06D8(0x0002) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -29,14 +28,6 @@ public:
 
 
 	bool IsDebugDisableNPC();
-	void InitializeNPC(class AS3Character* Character, class US3NPCDefinition* NPCDef);
-	void SetUpTagCharaComponent(class ABP_ScheduleNPC_C* TargetNPC, class US3NPCDefinition* NPCDef);
-	void SetUpTalkComponents(class ABP_ScheduleNPC_C* TargetNPC, class US3NPCDefinition* NPCDef);
-	void UserConstructionScript();
-	void BlueprintInitializeNPC(class AS3Character* NewNPC, class AS3NPCController* NewAI, class US3NPCDefinition* NPCDef);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BP_NPCManager(int EntryPoint);
 };
 
 

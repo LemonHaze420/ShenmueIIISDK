@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Lead_MotionDatabase.BP_Lead_MotionDatabase_C.GetTurnMotion
-// (Native, Static, NetMulticast, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          InAngle                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            OutMontage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Lead_MotionDatabase_C::STATIC_GetTurnMotion(float InAngle, class UAnimMontage** OutMontage)
+void UBP_Lead_MotionDatabase_C::GetTurnMotion(float InAngle, class UAnimMontage** OutMontage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lead_MotionDatabase.BP_Lead_MotionDatabase_C.GetTurnMotion");
 
@@ -27,7 +27,6 @@ void UBP_Lead_MotionDatabase_C::STATIC_GetTurnMotion(float InAngle, class UAnimM
 	params.InAngle = InAngle;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,13 +38,13 @@ void UBP_Lead_MotionDatabase_C::STATIC_GetTurnMotion(float InAngle, class UAnimM
 
 
 // Function BP_Lead_MotionDatabase.BP_Lead_MotionDatabase_C.GetWaveMotion
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          InAngle                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InDistanceSqr                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            OutMontage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Lead_MotionDatabase_C::STATIC_GetWaveMotion(float InAngle, float InDistanceSqr, class UAnimMontage** OutMontage)
+void UBP_Lead_MotionDatabase_C::GetWaveMotion(float InAngle, float InDistanceSqr, class UAnimMontage** OutMontage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Lead_MotionDatabase.BP_Lead_MotionDatabase_C.GetWaveMotion");
 

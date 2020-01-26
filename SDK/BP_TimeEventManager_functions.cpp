@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.IsTimeHasComeFlag
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void ABP_TimeEventManager_C::IsTimeHasComeFlag(bool* flag)
 	ABP_TimeEventManager_C_IsTimeHasComeFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,16 +36,15 @@ void ABP_TimeEventManager_C::IsTimeHasComeFlag(bool* flag)
 
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeInit
-// (Net, Exec, Native, Event, Static, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_TimeEventManager_C::STATIC_MiniGameTimeInit()
+void ABP_TimeEventManager_C::MiniGameTimeInit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeInit");
 
 	ABP_TimeEventManager_C_MiniGameTimeInit_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,11 +53,11 @@ void ABP_TimeEventManager_C::STATIC_MiniGameTimeInit()
 
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeCalcFlagOn
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TimeMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TimeEventManager_C::STATIC_MiniGameTimeCalcFlagOn(float TimeMax)
+void ABP_TimeEventManager_C::MiniGameTimeCalcFlagOn(float TimeMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeCalcFlagOn");
 
@@ -67,7 +65,6 @@ void ABP_TimeEventManager_C::STATIC_MiniGameTimeCalcFlagOn(float TimeMax)
 	params.TimeMax = TimeMax;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,9 +73,9 @@ void ABP_TimeEventManager_C::STATIC_MiniGameTimeCalcFlagOn(float TimeMax)
 
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeCalc
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_TimeEventManager_C::STATIC_MiniGameTimeCalc()
+void ABP_TimeEventManager_C::MiniGameTimeCalc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeCalc");
 
@@ -93,7 +90,7 @@ void ABP_TimeEventManager_C::STATIC_MiniGameTimeCalc()
 
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.UserConstructionScript
-// (Net, Event, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_TimeEventManager_C::UserConstructionScript()
 {

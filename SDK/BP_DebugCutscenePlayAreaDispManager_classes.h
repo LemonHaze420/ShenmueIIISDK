@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,21 +42,21 @@ public:
 	}
 
 
-	bool STATIC_IsRequestedEndDisp();
-	bool STATIC_IsDisp();
-	void STATIC_RequestEndDisp();
-	void STATIC_EndDisp();
+	bool IsRequestedEndDisp();
+	bool IsDisp();
+	void RequestEndDisp();
+	void EndDisp();
 	void DispCutsceneArea();
-	bool STATIC_IsCurrentLevelUnloadable();
+	bool IsCurrentLevelUnloadable();
 	void AddCutsceneDispInfo(const struct FST_DbgCutscenePlayInfo& InInfo);
-	void STATIC_GetLoadLevelName(const struct FST_DbgCutscenePlayInfo& InPlayInfo, struct FName* LevelName);
-	bool STATIC_IsAddedDispInfo(const struct FST_DbgCutscenePlayInfo& InPlayInfo);
+	void GetLoadLevelName(const struct FST_DbgCutscenePlayInfo& InPlayInfo, struct FName* LevelName);
+	bool IsAddedDispInfo(const struct FST_DbgCutscenePlayInfo& InPlayInfo);
 	void GetDebugPlayInfoList();
-	void STATIC_StartDisp();
+	void StartDisp();
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_InitializeDispInfo();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void InitializeDispInfo();
 	void ExecuteUbergraph_BP_DebugCutscenePlayAreaDispManager(int EntryPoint);
 };
 

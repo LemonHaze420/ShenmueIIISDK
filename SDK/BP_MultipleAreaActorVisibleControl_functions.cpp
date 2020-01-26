@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.CheckOverlappingActor
-// (NetReliable, NetRequest, Native, MulticastDelegate, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  InActor                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -27,7 +27,6 @@ bool ABP_MultipleAreaActorVisibleControl_C::CheckOverlappingActor(class AActor* 
 	params.InActor = InActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,14 +37,14 @@ bool ABP_MultipleAreaActorVisibleControl_C::CheckOverlappingActor(class AActor* 
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.OnVisibleControlAreaEndOverlap
-// (Exec, NetResponse, Static, Private, Delegate, NetServer)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     InOverlappedComponent          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  InOtherActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     InOtherComp                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            InOtherBodyIndex               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MultipleAreaActorVisibleControl_C::STATIC_OnVisibleControlAreaEndOverlap(class UPrimitiveComponent* InOverlappedComponent, class AActor* InOtherActor, class UPrimitiveComponent* InOtherComp, int InOtherBodyIndex)
+void ABP_MultipleAreaActorVisibleControl_C::OnVisibleControlAreaEndOverlap(class UPrimitiveComponent* InOverlappedComponent, class AActor* InOtherActor, class UPrimitiveComponent* InOtherComp, int InOtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.OnVisibleControlAreaEndOverlap");
 
@@ -64,7 +63,7 @@ void ABP_MultipleAreaActorVisibleControl_C::STATIC_OnVisibleControlAreaEndOverla
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.OnVisibleControlAreaBeginOverlap
-// (Net, NetRequest, Native, Static, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     InOverlappedComponent          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  InOtherActor                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -73,7 +72,7 @@ void ABP_MultipleAreaActorVisibleControl_C::STATIC_OnVisibleControlAreaEndOverla
 // bool                           InFromSweep                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              InHitResult                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_MultipleAreaActorVisibleControl_C::STATIC_OnVisibleControlAreaBeginOverlap(class UPrimitiveComponent* InOverlappedComponent, class AActor* InOtherActor, class UPrimitiveComponent* InOtherComp, int InOtherBodyIndex, bool InFromSweep, struct FHitResult* InHitResult)
+void ABP_MultipleAreaActorVisibleControl_C::OnVisibleControlAreaBeginOverlap(class UPrimitiveComponent* InOverlappedComponent, class AActor* InOtherActor, class UPrimitiveComponent* InOtherComp, int InOtherBodyIndex, bool InFromSweep, struct FHitResult* InHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.OnVisibleControlAreaBeginOverlap");
 
@@ -85,7 +84,6 @@ void ABP_MultipleAreaActorVisibleControl_C::STATIC_OnVisibleControlAreaBeginOver
 	params.InFromSweep = InFromSweep;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,7 +95,7 @@ void ABP_MultipleAreaActorVisibleControl_C::STATIC_OnVisibleControlAreaBeginOver
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.FinalizeAdditionalVisibleControlArea
-// (Net, NetReliable, NetRequest, NetResponse, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_MultipleAreaActorVisibleControl_C::FinalizeAdditionalVisibleControlArea()
 {
@@ -114,7 +112,7 @@ void ABP_MultipleAreaActorVisibleControl_C::FinalizeAdditionalVisibleControlArea
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.InitializeAdditionalVisibleControlArea
-// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MultipleAreaActorVisibleControl_C::InitializeAdditionalVisibleControlArea()
 {
@@ -123,7 +121,6 @@ void ABP_MultipleAreaActorVisibleControl_C::InitializeAdditionalVisibleControlAr
 	ABP_MultipleAreaActorVisibleControl_C_InitializeAdditionalVisibleControlArea_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +129,7 @@ void ABP_MultipleAreaActorVisibleControl_C::InitializeAdditionalVisibleControlAr
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.UserConstructionScript
-// (Net, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MultipleAreaActorVisibleControl_C::UserConstructionScript()
 {
@@ -149,7 +146,7 @@ void ABP_MultipleAreaActorVisibleControl_C::UserConstructionScript()
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.ReceiveBeginPlay
-// (Net, NetReliable, NetMulticast, Public, Protected, NetServer)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MultipleAreaActorVisibleControl_C::ReceiveBeginPlay()
 {
@@ -166,11 +163,11 @@ void ABP_MultipleAreaActorVisibleControl_C::ReceiveBeginPlay()
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.ReceiveEndPlay
-// (Net, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MultipleAreaActorVisibleControl_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_MultipleAreaActorVisibleControl_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.ReceiveEndPlay");
 
@@ -178,7 +175,6 @@ void ABP_MultipleAreaActorVisibleControl_C::STATIC_ReceiveEndPlay(TEnumAsByte<EE
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,7 +183,7 @@ void ABP_MultipleAreaActorVisibleControl_C::STATIC_ReceiveEndPlay(TEnumAsByte<EE
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -217,7 +213,7 @@ void ABP_MultipleAreaActorVisibleControl_C::BndEvt__VisibleControlArea_K2Node_Co
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Private, Protected, Delegate, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -235,7 +231,6 @@ void ABP_MultipleAreaActorVisibleControl_C::BndEvt__VisibleControlArea_K2Node_Co
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -244,11 +239,11 @@ void ABP_MultipleAreaActorVisibleControl_C::BndEvt__VisibleControlArea_K2Node_Co
 
 
 // Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.ExecuteUbergraph_BP_MultipleAreaActorVisibleControl
-// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MultipleAreaActorVisibleControl_C::STATIC_ExecuteUbergraph_BP_MultipleAreaActorVisibleControl(int EntryPoint)
+void ABP_MultipleAreaActorVisibleControl_C::ExecuteUbergraph_BP_MultipleAreaActorVisibleControl(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultipleAreaActorVisibleControl.BP_MultipleAreaActorVisibleControl_C.ExecuteUbergraph_BP_MultipleAreaActorVisibleControl");
 

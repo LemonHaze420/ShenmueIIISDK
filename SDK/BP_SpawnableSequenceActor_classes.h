@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,11 +28,11 @@ public:
 
 
 	void UserConstructionScript();
-	void STATIC_PlaySequenece(bool bRestart);
+	void PlaySequenece(bool bRestart);
 	void PlayLoopingSequenece(bool bRestart, int NumLoops);
-	void STATIC_StopSequenece();
+	void StopSequenece();
 	void PauseSequence();
-	void STATIC_ExecuteUbergraph_BP_SpawnableSequenceActor(int EntryPoint);
+	void ExecuteUbergraph_BP_SpawnableSequenceActor(int EntryPoint);
 };
 
 

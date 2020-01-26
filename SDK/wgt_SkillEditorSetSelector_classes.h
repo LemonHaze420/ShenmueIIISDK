@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,10 +35,10 @@ public:
 	}
 
 
-	void STATIC_AlertSet();
-	void STATIC_SetTitleText(const struct FText& InText);
+	void AlertSet();
+	void SetTitleText(const struct FText& InText);
 	void PlayArrowAnim(bool Play);
-	void SetButtonImage(bool Auto);
+	void SetButtonImage(bool auto);
 	void SetSkillSetIndex(const struct FText& SkillSetText, int Index);
 	void Construct();
 	void ExecuteUbergraph_wgt_SkillEditorSetSelector(int EntryPoint);

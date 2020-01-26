@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_Fishing_SubQuestInfo.WBP_Fishing_SubQuestInfo_C.SetNumValue
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextBlock*              Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_SubQuestInfo_C::STATIC_SetNumValue(class UTextBlock* Text, int Value)
+void UWBP_Fishing_SubQuestInfo_C::SetNumValue(class UTextBlock* Text, int Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_SubQuestInfo.WBP_Fishing_SubQuestInfo_C.SetNumValue");
 
@@ -28,7 +28,6 @@ void UWBP_Fishing_SubQuestInfo_C::STATIC_SetNumValue(class UTextBlock* Text, int
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void UWBP_Fishing_SubQuestInfo_C::STATIC_SetNumValue(class UTextBlock* Text, int
 
 
 // Function WBP_Fishing_SubQuestInfo.WBP_Fishing_SubQuestInfo_C.UpdateInfo
-// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UWBP_Fishing_SubQuestInfo_C::UpdateInfo()
 {
@@ -46,7 +45,6 @@ void UWBP_Fishing_SubQuestInfo_C::UpdateInfo()
 	UWBP_Fishing_SubQuestInfo_C_UpdateInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +53,7 @@ void UWBP_Fishing_SubQuestInfo_C::UpdateInfo()
 
 
 // Function WBP_Fishing_SubQuestInfo.WBP_Fishing_SubQuestInfo_C.SetCurrentInfo
-// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 CurrentTopText                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            RivalFlagIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -83,9 +81,9 @@ void UWBP_Fishing_SubQuestInfo_C::SetCurrentInfo(const struct FString& CurrentTo
 
 
 // Function WBP_Fishing_SubQuestInfo.WBP_Fishing_SubQuestInfo_C.Construct
-// (Exec, Event, NetResponse, Static, NetMulticast, Public, Delegate)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_Fishing_SubQuestInfo_C::STATIC_Construct()
+void UWBP_Fishing_SubQuestInfo_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_SubQuestInfo.WBP_Fishing_SubQuestInfo_C.Construct");
 
@@ -100,7 +98,7 @@ void UWBP_Fishing_SubQuestInfo_C::STATIC_Construct()
 
 
 // Function WBP_Fishing_SubQuestInfo.WBP_Fishing_SubQuestInfo_C.OnRivalFlagChanged
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -122,7 +120,7 @@ void UWBP_Fishing_SubQuestInfo_C::OnRivalFlagChanged(int ArrayIndex, int SetFlag
 
 
 // Function WBP_Fishing_SubQuestInfo.WBP_Fishing_SubQuestInfo_C.ExecuteUbergraph_WBP_Fishing_SubQuestInfo
-// (Net, NetRequest, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

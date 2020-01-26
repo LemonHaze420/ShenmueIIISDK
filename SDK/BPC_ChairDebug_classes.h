@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,8 +18,7 @@ class UBPC_ChairDebug_C : public UActorComponent
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x00F0(0x0008) (Transient, DuplicateTransient)
-	class ABP_GimmickChair_C*                          Chair;                                                    // 0x00F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	float                                              DRAW_DISTANCE;                                            // 0x0100(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x00F8(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27,12 +26,6 @@ public:
 		return ptr;
 	}
 
-
-	struct FString STATIC_AppendBaseText(const struct FString& String);
-	void STATIC_DrawDebugText();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_BPC_ChairDebug(int EntryPoint);
 };
 
 

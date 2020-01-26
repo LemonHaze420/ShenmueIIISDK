@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.AddItem
-// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DLCDialogManager_C::STATIC_AddItem(int ItemId)
+void ABP_DLCDialogManager_C::AddItem(int ItemId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DLCDialogManager.BP_DLCDialogManager_C.AddItem");
 
@@ -26,7 +26,6 @@ void ABP_DLCDialogManager_C::STATIC_AddItem(int ItemId)
 	params.ItemId = ItemId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void ABP_DLCDialogManager_C::STATIC_AddItem(int ItemId)
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.CheckBattleRallyItem
-// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_DLCDialogManager_C::CheckBattleRallyItem()
 {
@@ -52,7 +51,7 @@ void ABP_DLCDialogManager_C::CheckBattleRallyItem()
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.CheckDLCDialog
-// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_DLCDialogManager_C::CheckDLCDialog()
 {
@@ -61,7 +60,6 @@ void ABP_DLCDialogManager_C::CheckDLCDialog()
 	ABP_DLCDialogManager_C_CheckDLCDialog_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,9 +68,9 @@ void ABP_DLCDialogManager_C::CheckDLCDialog()
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.UserConstructionScript
-// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_DLCDialogManager_C::STATIC_UserConstructionScript()
+void ABP_DLCDialogManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DLCDialogManager.BP_DLCDialogManager_C.UserConstructionScript");
 
@@ -87,7 +85,7 @@ void ABP_DLCDialogManager_C::STATIC_UserConstructionScript()
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.CheckFreerun
-// (Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_DLCDialogManager_C::CheckFreerun()
 {
@@ -104,11 +102,11 @@ void ABP_DLCDialogManager_C::CheckFreerun()
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.DecideDialog
-// (NetReliable, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DLCDialogManager_C::STATIC_DecideDialog(class AActor* Actor)
+void ABP_DLCDialogManager_C::DecideDialog(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DLCDialogManager.BP_DLCDialogManager_C.DecideDialog");
 
@@ -124,12 +122,12 @@ void ABP_DLCDialogManager_C::STATIC_DecideDialog(class AActor* Actor)
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.ChangePlayerBehavior
-// (Net, NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Protected, NetServer, BlueprintCallable)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3PlayerBehavior              NewId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PlayerBehavior              OldId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DLCDialogManager_C::STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
+void ABP_DLCDialogManager_C::ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DLCDialogManager.BP_DLCDialogManager_C.ChangePlayerBehavior");
 
@@ -138,7 +136,6 @@ void ABP_DLCDialogManager_C::STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId
 	params.OldId = OldId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,7 +144,7 @@ void ABP_DLCDialogManager_C::STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.ExecCheck
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_DLCDialogManager_C::ExecCheck()
 {
@@ -156,7 +153,6 @@ void ABP_DLCDialogManager_C::ExecCheck()
 	ABP_DLCDialogManager_C_ExecCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -165,7 +161,7 @@ void ABP_DLCDialogManager_C::ExecCheck()
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.ShowDLCDialog
-// (Net, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_DLCDialogManager_C::ShowDLCDialog()
 {
@@ -182,7 +178,7 @@ void ABP_DLCDialogManager_C::ShowDLCDialog()
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.FinishedDLC
-// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_DLCDialogManager_C::FinishedDLC()
 {
@@ -199,7 +195,7 @@ void ABP_DLCDialogManager_C::FinishedDLC()
 
 
 // Function BP_DLCDialogManager.BP_DLCDialogManager_C.ExecuteUbergraph_BP_DLCDialogManager
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

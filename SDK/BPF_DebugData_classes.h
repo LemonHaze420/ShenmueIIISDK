@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,12 +25,12 @@ public:
 	}
 
 
-	void GetSubmissionConfig(class UObject* __WorldContext, class US3SubmissionConfig** Config);
+	void STATIC_GetSubmissionConfig(class UObject* __WorldContext, class US3SubmissionConfig** Config);
 	void STATIC_IsDebugStepInRange(class UObject* __WorldContext, bool* InRange);
 	void STATIC_IsDebugDisableCutscene(class UObject* __WorldContext, bool* Disable);
-	void IsDebugDisableMainFlow(class UObject* __WorldContext, bool* Disable);
+	void STATIC_IsDebugDisableMainFlow(class UObject* __WorldContext, bool* Disable);
 	void STATIC_IsDebugDisableNPC(class UObject* __WorldContext, bool* Disable);
-	void GetDebugData(class UObject* __WorldContext, class US3DebugDataAsset** Debug_Data_Asset);
+	void STATIC_GetDebugData(class UObject* __WorldContext, class US3DebugDataAsset** Debug_Data_Asset);
 };
 
 

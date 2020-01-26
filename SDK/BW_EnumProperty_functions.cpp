@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_EnumProperty.BW_EnumProperty_C.SetPropertyValue
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // unsigned char                  Byte                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CallDispatcher                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_EnumProperty_C::STATIC_SetPropertyValue(unsigned char Byte, bool CallDispatcher)
+void UBW_EnumProperty_C::SetPropertyValue(unsigned char Byte, bool CallDispatcher)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_EnumProperty.BW_EnumProperty_C.SetPropertyValue");
 
@@ -28,7 +28,6 @@ void UBW_EnumProperty_C::STATIC_SetPropertyValue(unsigned char Byte, bool CallDi
 	params.CallDispatcher = CallDispatcher;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void UBW_EnumProperty_C::STATIC_SetPropertyValue(unsigned char Byte, bool CallDi
 
 
 // Function BW_EnumProperty.BW_EnumProperty_C.GetPropertyValue
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // unsigned char                  Byte                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -48,7 +47,6 @@ void UBW_EnumProperty_C::GetPropertyValue(unsigned char* Byte)
 	UBW_EnumProperty_C_GetPropertyValue_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +58,7 @@ void UBW_EnumProperty_C::GetPropertyValue(unsigned char* Byte)
 
 
 // Function BW_EnumProperty.BW_EnumProperty_C.OnKeyDown
-// (Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -85,18 +83,17 @@ struct FEventReply UBW_EnumProperty_C::OnKeyDown(const struct FGeometry& MyGeome
 
 
 // Function BW_EnumProperty.BW_EnumProperty_C.GetParameterName
-// (Net, NetReliable, Exec, Native, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_EnumProperty_C::STATIC_GetParameterName()
+struct FText UBW_EnumProperty_C::GetParameterName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_EnumProperty.BW_EnumProperty_C.GetParameterName");
 
 	UBW_EnumProperty_C_GetParameterName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,7 +104,7 @@ struct FText UBW_EnumProperty_C::STATIC_GetParameterName()
 
 
 // Function BW_EnumProperty.BW_EnumProperty_C.Construct
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBW_EnumProperty_C::Construct()
 {
@@ -124,12 +121,12 @@ void UBW_EnumProperty_C::Construct()
 
 
 // Function BW_EnumProperty.BW_EnumProperty_C.BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_294_OnSelectionChangedEvent__DelegateSignature
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FString                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_EnumProperty_C::STATIC_BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_294_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+void UBW_EnumProperty_C::BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_294_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_EnumProperty.BW_EnumProperty_C.BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_294_OnSelectionChangedEvent__DelegateSignature");
 
@@ -138,7 +135,6 @@ void UBW_EnumProperty_C::STATIC_BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_
 	params.SelectionType = SelectionType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,7 +143,7 @@ void UBW_EnumProperty_C::STATIC_BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_
 
 
 // Function BW_EnumProperty.BW_EnumProperty_C.SetStartingValue
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBW_EnumProperty_C::SetStartingValue()
 {
@@ -164,7 +160,7 @@ void UBW_EnumProperty_C::SetStartingValue()
 
 
 // Function BW_EnumProperty.BW_EnumProperty_C.PropertyChanged
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBW_EnumProperty_C::PropertyChanged()
 {
@@ -181,11 +177,11 @@ void UBW_EnumProperty_C::PropertyChanged()
 
 
 // Function BW_EnumProperty.BW_EnumProperty_C.ExecuteUbergraph_BW_EnumProperty
-// (Exec, Native, Event, Static, MulticastDelegate, Public, Private, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_EnumProperty_C::STATIC_ExecuteUbergraph_BW_EnumProperty(int EntryPoint)
+void UBW_EnumProperty_C::ExecuteUbergraph_BW_EnumProperty(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_EnumProperty.BW_EnumProperty_C.ExecuteUbergraph_BW_EnumProperty");
 
@@ -193,7 +189,6 @@ void UBW_EnumProperty_C::STATIC_ExecuteUbergraph_BW_EnumProperty(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,9 +197,9 @@ void UBW_EnumProperty_C::STATIC_ExecuteUbergraph_BW_EnumProperty(int EntryPoint)
 
 
 // Function BW_EnumProperty.BW_EnumProperty_C.EnumPropertyChanged__DelegateSignature
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBW_EnumProperty_C::STATIC_EnumPropertyChanged__DelegateSignature()
+void UBW_EnumProperty_C::EnumPropertyChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_EnumProperty.BW_EnumProperty_C.EnumPropertyChanged__DelegateSignature");
 

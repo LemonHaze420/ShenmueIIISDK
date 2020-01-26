@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_ChangeClothes.BP_TalkProcess_ChangeClothes_C.GetTargetCharacters
-// (Net, NetRequest, Exec, Event, NetResponse, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class AS3Character*>    Characters                     (Parm, OutParm, ZeroConstructor)
 
-void UBP_TalkProcess_ChangeClothes_C::STATIC_GetTargetCharacters(const struct FName& CharaName, TArray<class AS3Character*>* Characters)
+void UBP_TalkProcess_ChangeClothes_C::GetTargetCharacters(const struct FName& CharaName, TArray<class AS3Character*>* Characters)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_ChangeClothes.BP_TalkProcess_ChangeClothes_C.GetTargetCharacters");
 
@@ -38,7 +38,7 @@ void UBP_TalkProcess_ChangeClothes_C::STATIC_GetTargetCharacters(const struct FN
 
 
 // Function BP_TalkProcess_ChangeClothes.BP_TalkProcess_ChangeClothes_C.Activate
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
 void UBP_TalkProcess_ChangeClothes_C::Activate()
 {
@@ -55,12 +55,12 @@ void UBP_TalkProcess_ChangeClothes_C::Activate()
 
 
 // Function BP_TalkProcess_ChangeClothes.BP_TalkProcess_ChangeClothes_C.Finish
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TScriptInterface<class US3ClothInterface> Interface                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_ChangeClothes_C::STATIC_Finish(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName)
+void UBP_TalkProcess_ChangeClothes_C::Finish(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_ChangeClothes.BP_TalkProcess_ChangeClothes_C.Finish");
 
@@ -77,11 +77,11 @@ void UBP_TalkProcess_ChangeClothes_C::STATIC_Finish(const TScriptInterface<class
 
 
 // Function BP_TalkProcess_ChangeClothes.BP_TalkProcess_ChangeClothes_C.ExecuteUbergraph_BP_TalkProcess_ChangeClothes
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_ChangeClothes_C::STATIC_ExecuteUbergraph_BP_TalkProcess_ChangeClothes(int EntryPoint)
+void UBP_TalkProcess_ChangeClothes_C::ExecuteUbergraph_BP_TalkProcess_ChangeClothes(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_ChangeClothes.BP_TalkProcess_ChangeClothes_C.ExecuteUbergraph_BP_TalkProcess_ChangeClothes");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -95,50 +95,50 @@ public:
 
 
 	void PrepareCommonSelectionData();
-	void STATIC_ExecuteCharacterAvoidance();
+	void ExecuteCharacterAvoidance();
 	void AdjustImaginaryLineCameraPositionFromSpace(class AActor* InTalkedActor, class AActor* InPlayer);
-	class USkeletalMeshComponent* STATIC_GetNonCharaCameraTargetSkeletalMesh(class AActor* InActor);
-	void STATIC_CalcAndSetAvailableCameraForShowItem(class UPrimitiveComponent* SpeakingSkeletalMesh, class UPrimitiveComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, int DivNum, float Radius, bool isDrawDebug, EAutoCameraType AutoCameraType, bool CheckTwoSide, bool _printCollisionMessage, bool isAcEvent, TArray<TEnumAsByte<EObjectTypeQuery>>* CheckHitObjectTypes, bool* Result);
-	void STATIC_ResolveTalkTransitionError();
-	void STATIC_CheckFilter(int* mask, struct FST_TalkCameraPairOrSingleFilter* Param, struct FST_TalkCameraShoulderFilter* Param2, struct FST_TalkCameraAngleFilter* Param3, struct FST_TalkCameraDistanceFilter* Param4, struct FST_TalkCameraLookTargetFilter* Param5, struct FST_TalkCameraKindFilter* Param6, bool* Result);
+	class USkeletalMeshComponent* GetNonCharaCameraTargetSkeletalMesh(class AActor* InActor);
+	void CalcAndSetAvailableCameraForShowItem(class UPrimitiveComponent* SpeakingSkeletalMesh, class UPrimitiveComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, int DivNum, float Radius, bool isDrawDebug, EAutoCameraType AutoCameraType, bool CheckTwoSide, bool _printCollisionMessage, bool isAcEvent, TArray<TEnumAsByte<EObjectTypeQuery>>* CheckHitObjectTypes, bool* Result);
+	void ResolveTalkTransitionError();
+	void CheckFilter(int* mask, struct FST_TalkCameraPairOrSingleFilter* Param, struct FST_TalkCameraShoulderFilter* Param2, struct FST_TalkCameraAngleFilter* Param3, struct FST_TalkCameraDistanceFilter* Param4, struct FST_TalkCameraLookTargetFilter* Param5, struct FST_TalkCameraKindFilter* Param6, bool* Result);
 	void CheckCameraKind(int mask, const struct FST_TalkCameraKindFilter& Param, bool* Result);
 	void CheckLookAtSocket(int mask, const struct FST_TalkCameraLookTargetFilter& Param, bool* Result);
 	void CheckDistance(int mask, const struct FST_TalkCameraDistanceFilter& Param, bool* Result);
-	void STATIC_CheckAngle(int mask, const struct FST_TalkCameraAngleFilter& Param, bool* Result);
+	void CheckAngle(int mask, const struct FST_TalkCameraAngleFilter& Param, bool* Result);
 	void CheckShoulderOrNot(int mask, const struct FST_TalkCameraShoulderFilter& Param, bool* Result);
-	void STATIC_CheckPairOrSingle(int mask, const struct FST_TalkCameraPairOrSingleFilter& Param, bool* Result);
-	void STATIC_GetFilteredCamera(const struct FST_TalkCameraPairOrSingleFilter& PairOrSingle, const struct FST_TalkCameraShoulderFilter& ShoulderCut, const struct FST_TalkCameraAngleFilter& Angle, const struct FST_TalkCameraDistanceFilter& Distance, const struct FST_TalkCameraLookTargetFilter& LookTarget, const struct FST_TalkCameraKindFilter& CameraKind, TArray<struct FST_AutoCameraAnalizedInfo>* Cameras);
-	void STATIC_AutoCameraCutChageInit(class AActor* Player, class AActor* Talked, bool* Result);
-	void STATIC_DestroyPrevCamera();
+	void CheckPairOrSingle(int mask, const struct FST_TalkCameraPairOrSingleFilter& Param, bool* Result);
+	void GetFilteredCamera(const struct FST_TalkCameraPairOrSingleFilter& PairOrSingle, const struct FST_TalkCameraShoulderFilter& ShoulderCut, const struct FST_TalkCameraAngleFilter& Angle, const struct FST_TalkCameraDistanceFilter& Distance, const struct FST_TalkCameraLookTargetFilter& LookTarget, const struct FST_TalkCameraKindFilter& CameraKind, TArray<struct FST_AutoCameraAnalizedInfo>* Cameras);
+	void AutoCameraCutChageInit(class AActor* Player, class AActor* Talked, bool* Result);
+	void DestroyPrevCamera();
 	void IsOrderSpecificCamera(bool* Result);
 	void CanChangeCut(bool* Result);
-	void STATIC_GetRandomAvailableCamera(TArray<class UClass*>* AvailableCameras, class UClass** Camera);
+	void GetRandomAvailableCamera(TArray<class UClass*>* AvailableCameras, class UClass** Camera);
 	void DestroyDummyMeshComponent(TArray<class AActor*>* Actor);
 	void TryCreateDummyMesh(class AActor* TargetActor, class AActor* LookAtActor, bool bForceDummy, class USkeletalMeshComponent** MeshComponet);
-	void STATIC_Init(struct FString* LockTargetCharacterId);
-	void STATIC_SpawnLookAtCamera(class UClass* LookAtCameraClass);
+	void Init(struct FString* LockTargetCharacterId);
+	void SpawnLookAtCamera(class UClass* LookAtCameraClass);
 	void GetOtherActorFromTargets(class AActor* InActor, TArray<class AActor*>* Array, class AActor** Other);
-	void STATIC_GetCameraGroupFromName(const struct FString& CameraGroup, TArray<class UClass*>* GroupCameras, bool* Result);
-	void STATIC_GetCameraClassFromName(const struct FString& CameraName, class UClass** cameraClass);
+	void GetCameraGroupFromName(const struct FString& CameraGroup, TArray<class UClass*>* GroupCameras, bool* Result);
+	void GetCameraClassFromName(const struct FString& CameraName, class UClass** cameraClass);
 	void GetSpeakingCharacterName(TEnumAsByte<EM_Charactor> CharacterType, struct FName* Name);
 	void GetAvailableCameraNum(int DivNum, class USkeletalMeshComponent* SpeakingSkeletalMesh, class USkeletalMeshComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, float Radius, bool isDebugDraw, TArray<class UClass*>* Cameras, TArray<TEnumAsByte<EObjectTypeQuery>>* CheckHitObjectTypes, int* Num);
-	void STATIC_CalcCameraPositionFromImaginaryLine(class AActor* NPC, class AActor* Player);
-	void STATIC_TryGetDifferentCamera(class UClass* PrevCamera, TArray<class UClass*>* List, class UClass** Camera, bool* Result);
-	void STATIC_CalcAndSetAvailableCamera(class UPrimitiveComponent* SpeakingSkeletalMesh, class UPrimitiveComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, int DivNum, float Radius, bool isDrawDebug, EAutoCameraType AutoCameraType, bool CheckTwoSide, bool _printCollisionMessage, bool isAcEvent, TArray<TEnumAsByte<EObjectTypeQuery>>* CheckHitObjectTypes, bool* Result);
+	void CalcCameraPositionFromImaginaryLine(class AActor* NPC, class AActor* Player);
+	void TryGetDifferentCamera(class UClass* PrevCamera, TArray<class UClass*>* List, class UClass** Camera, bool* Result);
+	void CalcAndSetAvailableCamera(class UPrimitiveComponent* SpeakingSkeletalMesh, class UPrimitiveComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, int DivNum, float Radius, bool isDrawDebug, EAutoCameraType AutoCameraType, bool CheckTwoSide, bool _printCollisionMessage, bool isAcEvent, TArray<TEnumAsByte<EObjectTypeQuery>>* CheckHitObjectTypes, bool* Result);
 	void SetNextCameraFromRandom();
 	void SpawnDefalutTalkCamera(class UClass* cameraClass);
-	void STATIC_SetCameraPositionFromImaginaryLine();
+	void SetCameraPositionFromImaginaryLine();
 	void UserConstructionScript();
 	void ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
 	void ChangeToLookAtCamera(class AActor* Player, class AActor* MotionActor, class AActor* TargetActor);
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ChangeCameraByAutoCameraDirector(class AActor* Player, class AActor* TalkedActor);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ChangeToStartShowItemCamera();
 	void ChangeToShowItemZoomCamera();
-	void STATIC_ChangeCamera(const struct FString& LookTargetCharacterID, EAutoCameraType AutoCameraType, bool isSameTarget, const struct FString& UseCameraName, const struct FString& UseCameraGroup, class AActor* PlayerActor, class AActor* TalkedActor);
+	void ChangeCamera(const struct FString& LookTargetCharacterID, EAutoCameraType AutoCameraType, bool isSameTarget, const struct FString& UseCameraName, const struct FString& UseCameraGroup, class AActor* PlayerActor, class AActor* TalkedActor);
 	void SpawnNextCamera();
-	void STATIC_ExecuteUbergraph_BP_TalkCameraManager(int EntryPoint);
+	void ExecuteUbergraph_BP_TalkCameraManager(int EntryPoint);
 	void OnSelectedAutoCamera__DelegateSignature();
 };
 

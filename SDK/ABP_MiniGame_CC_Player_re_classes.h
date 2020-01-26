@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -128,14 +128,14 @@ public:
 
 	void IsPlayCatchAnim(bool* isPlay);
 	void PlayCatchAnim();
-	void STATIC_UpdatePA();
-	void STATIC_RInterpToQ(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed, struct FRotator* RetRot);
+	void UpdatePA();
+	void RInterpToQ(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed, struct FRotator* RetRot);
 	void InitFunc();
-	void STATIC_MakeTargetRotation(struct FRotator* ReturnRot);
-	void STATIC_GOMA8_OtherFunc();
-	void STATIC_StopMontageWrapper();
+	void MakeTargetRotation(struct FRotator* ReturnRot);
+	void GOMA8_OtherFunc();
+	void StopMontageWrapper();
 	void TurnInPlaceCheck(float TurnThreshold, float TurnAngle, struct FRotator* TargetRotation, bool* ShouldRotate, bool* TurnRight);
-	void STATIC_SetCharacterRotation(const struct FRotator& TargetRotation, float RotationRate);
+	void SetCharacterRotation(const struct FRotator& TargetRotation, float RotationRate);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_1072A9C2421FEC08965D54A159409CA0();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_6F4D1FD141704E98769B6AA1B6AE6186();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_45F2B9AB47E730ED2E576EA6B34048D2();
@@ -146,7 +146,7 @@ public:
 	void AnimNotify_QTE_InputStart();
 	void AnimNotify_QTE_InputEnd();
 	void AnimNotify_QTE_End();
-	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
+	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void AnimNotify_CanRotate();
 	void OnJump();
 	void PauseMotion();
@@ -155,9 +155,9 @@ public:
 	void SetForceIdle(bool bForceIdle);
 	void AnimNotify_GroundingFootL();
 	void AnimNotify_GroundingFootR();
-	void STATIC_ExecuteUbergraph_ABP_MiniGame_CC_Player_re(int EntryPoint);
-	void STATIC_QTE_End__DelegateSignature();
-	void STATIC_QTE_Input__DelegateSignature(bool StartFlag);
+	void ExecuteUbergraph_ABP_MiniGame_CC_Player_re(int EntryPoint);
+	void QTE_End__DelegateSignature();
+	void QTE_Input__DelegateSignature(bool StartFlag);
 };
 
 

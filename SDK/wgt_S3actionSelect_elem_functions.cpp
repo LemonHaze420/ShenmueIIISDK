@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.setMaxLength
-// (NetReliable, Exec, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void Uwgt_S3actionSelect_elem_C::setMaxLength(float Length)
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.SetFont
-// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FSlateFontInfo          font_info                      (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -46,7 +46,6 @@ void Uwgt_S3actionSelect_elem_C::SetFont(const struct FSlateFontInfo& font_info)
 	params.font_info = font_info;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,11 +54,11 @@ void Uwgt_S3actionSelect_elem_C::SetFont(const struct FSlateFontInfo& font_info)
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.SetText
-// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   txt                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void Uwgt_S3actionSelect_elem_C::STATIC_SetText(const struct FText& txt)
+void Uwgt_S3actionSelect_elem_C::SetText(const struct FText& txt)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.SetText");
 
@@ -67,7 +66,6 @@ void Uwgt_S3actionSelect_elem_C::STATIC_SetText(const struct FText& txt)
 	params.txt = txt;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,11 +74,11 @@ void Uwgt_S3actionSelect_elem_C::STATIC_SetText(const struct FText& txt)
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.CalcTextBoxSize
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float Uwgt_S3actionSelect_elem_C::STATIC_CalcTextBoxSize()
+float Uwgt_S3actionSelect_elem_C::CalcTextBoxSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.CalcTextBoxSize");
 
@@ -97,16 +95,15 @@ float Uwgt_S3actionSelect_elem_C::STATIC_CalcTextBoxSize()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.SetCalcText
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3actionSelect_elem_C::STATIC_SetCalcText()
+void Uwgt_S3actionSelect_elem_C::SetCalcText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.SetCalcText");
 
 	Uwgt_S3actionSelect_elem_C_SetCalcText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,7 +112,7 @@ void Uwgt_S3actionSelect_elem_C::STATIC_SetCalcText()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.UpdateDecorationSize
-// (Net, NetRequest, Native, Event, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::UpdateDecorationSize()
 {
@@ -124,7 +121,6 @@ void Uwgt_S3actionSelect_elem_C::UpdateDecorationSize()
 	Uwgt_S3actionSelect_elem_C_UpdateDecorationSize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,7 +129,7 @@ void Uwgt_S3actionSelect_elem_C::UpdateDecorationSize()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.setFrameBase
-// (Net, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_S3ActionSelect_frameType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -153,7 +149,7 @@ void Uwgt_S3actionSelect_elem_C::setFrameBase(TEnumAsByte<EN_S3ActionSelect_fram
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.setVisibility(bar)
-// (NetResponse, NetMulticast, Private, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -173,7 +169,7 @@ void Uwgt_S3actionSelect_elem_C::setVisibility_bar_(bool Visible)
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.doCmd_fadeTx
-// (Net, NetRequest, Exec, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::doCmd_fadeTx()
 {
@@ -190,7 +186,7 @@ void Uwgt_S3actionSelect_elem_C::doCmd_fadeTx()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.updateOpacity(tit)
-// (NetRequest, Exec, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Opacity                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -210,11 +206,11 @@ void Uwgt_S3actionSelect_elem_C::updateOpacity_tit_(float Opacity)
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.updateOpacity(bar)
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Opacity                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_elem_C::STATIC_updateOpacity_bar_(float Opacity)
+void Uwgt_S3actionSelect_elem_C::updateOpacity_bar_(float Opacity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.updateOpacity(bar)");
 
@@ -230,7 +226,7 @@ void Uwgt_S3actionSelect_elem_C::STATIC_updateOpacity_bar_(float Opacity)
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.doCmd_decide
-// (Net, NetReliable, Exec, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::doCmd_decide()
 {
@@ -247,7 +243,7 @@ void Uwgt_S3actionSelect_elem_C::doCmd_decide()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.doCmd_fadeOut
-// (Net, NetReliable, NetRequest, Exec, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::doCmd_fadeOut()
 {
@@ -264,7 +260,7 @@ void Uwgt_S3actionSelect_elem_C::doCmd_fadeOut()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.doCmd_fadeIn
-// (NetReliable, NetRequest, Exec, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::doCmd_fadeIn()
 {
@@ -281,7 +277,7 @@ void Uwgt_S3actionSelect_elem_C::doCmd_fadeIn()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.Construct
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::Construct()
 {
@@ -298,7 +294,7 @@ void Uwgt_S3actionSelect_elem_C::Construct()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.OnAnimationFinished
-// (NetReliable, NetRequest, Exec, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // class UWidgetAnimation*        Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -318,7 +314,7 @@ void Uwgt_S3actionSelect_elem_C::OnAnimationFinished(class UWidgetAnimation* Ani
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.ResizeAroundText
-// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::ResizeAroundText()
 {
@@ -335,11 +331,11 @@ void Uwgt_S3actionSelect_elem_C::ResizeAroundText()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.ExecuteUbergraph_wgt_S3actionSelect_elem
-// (Exec, Native, Static, NetMulticast, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_elem_C::STATIC_ExecuteUbergraph_wgt_S3actionSelect_elem(int EntryPoint)
+void Uwgt_S3actionSelect_elem_C::ExecuteUbergraph_wgt_S3actionSelect_elem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.ExecuteUbergraph_wgt_S3actionSelect_elem");
 
@@ -347,7 +343,6 @@ void Uwgt_S3actionSelect_elem_C::STATIC_ExecuteUbergraph_wgt_S3actionSelect_elem
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -356,7 +351,7 @@ void Uwgt_S3actionSelect_elem_C::STATIC_ExecuteUbergraph_wgt_S3actionSelect_elem
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.command_fadeTx__DelegateSignature
-// (Exec, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::command_fadeTx__DelegateSignature()
 {
@@ -373,7 +368,7 @@ void Uwgt_S3actionSelect_elem_C::command_fadeTx__DelegateSignature()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.onEndFadeIn__DelegateSignature
-// (Net, Exec, Native, Event, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class Uwgt_S3actionSelect_elem_C* Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UWidgetAnimation*        Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -387,7 +382,6 @@ void Uwgt_S3actionSelect_elem_C::onEndFadeIn__DelegateSignature(class Uwgt_S3act
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -396,12 +390,12 @@ void Uwgt_S3actionSelect_elem_C::onEndFadeIn__DelegateSignature(class Uwgt_S3act
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.onEndFadeOut__DelegateSignature
-// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class Uwgt_S3actionSelect_elem_C* Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UWidgetAnimation*        Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void Uwgt_S3actionSelect_elem_C::STATIC_onEndFadeOut__DelegateSignature(class Uwgt_S3actionSelect_elem_C* Widget, class UWidgetAnimation* Animation)
+void Uwgt_S3actionSelect_elem_C::onEndFadeOut__DelegateSignature(class Uwgt_S3actionSelect_elem_C* Widget, class UWidgetAnimation* Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.onEndFadeOut__DelegateSignature");
 
@@ -410,7 +404,6 @@ void Uwgt_S3actionSelect_elem_C::STATIC_onEndFadeOut__DelegateSignature(class Uw
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -419,7 +412,7 @@ void Uwgt_S3actionSelect_elem_C::STATIC_onEndFadeOut__DelegateSignature(class Uw
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.command_decide__DelegateSignature
-// (Exec, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::command_decide__DelegateSignature()
 {
@@ -436,7 +429,7 @@ void Uwgt_S3actionSelect_elem_C::command_decide__DelegateSignature()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.command_fadeOut__DelegateSignature
-// (Net, NetReliable, NetRequest, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::command_fadeOut__DelegateSignature()
 {
@@ -453,7 +446,7 @@ void Uwgt_S3actionSelect_elem_C::command_fadeOut__DelegateSignature()
 
 
 // Function wgt_S3actionSelect_elem.wgt_S3actionSelect_elem_C.command_fadeIn__DelegateSignature
-// (Net, NetReliable, NetRequest, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3actionSelect_elem_C::command_fadeIn__DelegateSignature()
 {

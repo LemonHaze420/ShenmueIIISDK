@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,11 +36,11 @@ public:
 
 	void SetInputEnabled(bool bValue);
 	void DelayInput(float Delay, class UBPW_UI_GeneralWindow_Button_C* Button);
-	void STATIC_NotifyAnimationComplete();
+	void NotifyAnimationComplete();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ExecuteUbergraph_BPC_ResultScreenInputDelayer(int EntryPoint);
+	void ExecuteUbergraph_BPC_ResultScreenInputDelayer(int EntryPoint);
 	void OnDisableInput__DelegateSignature();
-	void STATIC_OnEnableInput__DelegateSignature();
+	void OnEnableInput__DelegateSignature();
 };
 
 

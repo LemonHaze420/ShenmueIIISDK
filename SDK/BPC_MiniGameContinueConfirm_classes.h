@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,15 +36,15 @@ public:
 	}
 
 
-	void STATIC_CleanUp();
+	void CleanUp();
 	void StartGameContinueConfirmCheck();
 	void BindActionSelectEvents(class ABP_S3actionSelect_C* Action);
-	void STATIC_onSelected(int Index);
-	void STATIC_UnbindActionSelectEvents();
-	void STATIC_RepayMiniGame(float WaitTime);
-	void STATIC_ReceiveBeginPlay();
+	void onSelected(int Index);
+	void UnbindActionSelectEvents();
+	void RepayMiniGame(float WaitTime);
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_MiniGameContinueConfirm(int EntryPoint);
-	void STATIC_OnGameFinishedDispatcher__DelegateSignature();
+	void OnGameFinishedDispatcher__DelegateSignature();
 	void OnGameContinueDispatcher__DelegateSignature();
 };
 

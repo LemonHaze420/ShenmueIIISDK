@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Clipper.BPF_Clipper_C.getS3ClipperManager
-// (Net, NetReliable, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_Clipper_C*           AsBP_Clipper                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Clipper_C::getS3ClipperManager(class UObject* __WorldContext, class ABP_Clipper_C** AsBP_Clipper)
+void UBPF_Clipper_C::STATIC_getS3ClipperManager(class UObject* __WorldContext, class ABP_Clipper_C** AsBP_Clipper)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Clipper.BPF_Clipper_C.getS3ClipperManager");
 

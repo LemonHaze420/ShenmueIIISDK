@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.doCmd_fade
-// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           FadeIn                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_iconBase_C::STATIC_doCmd_fade(bool FadeIn)
+void Uwgt_S3actionSelect_iconBase_C::doCmd_fade(bool FadeIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.doCmd_fade");
 
@@ -33,20 +33,19 @@ void Uwgt_S3actionSelect_iconBase_C::STATIC_doCmd_fade(bool FadeIn)
 }
 
 
-// Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.UpdateOpacity
-// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.updateOpacity
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Opacity                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_iconBase_C::UpdateOpacity(float Opacity)
+void Uwgt_S3actionSelect_iconBase_C::updateOpacity(float Opacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.UpdateOpacity");
+	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.updateOpacity");
 
-	Uwgt_S3actionSelect_iconBase_C_UpdateOpacity_Params params;
+	Uwgt_S3actionSelect_iconBase_C_updateOpacity_Params params;
 	params.Opacity = Opacity;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,9 +54,9 @@ void Uwgt_S3actionSelect_iconBase_C::UpdateOpacity(float Opacity)
 
 
 // Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.Construct
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_S3actionSelect_iconBase_C::STATIC_Construct()
+void Uwgt_S3actionSelect_iconBase_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.Construct");
 
@@ -72,7 +71,7 @@ void Uwgt_S3actionSelect_iconBase_C::STATIC_Construct()
 
 
 // Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.OnAnimationFinished
-// (NetRequest, Exec, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // class UWidgetAnimation*        Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -92,11 +91,11 @@ void Uwgt_S3actionSelect_iconBase_C::OnAnimationFinished(class UWidgetAnimation*
 
 
 // Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.ExecuteUbergraph_wgt_S3actionSelect_iconBase
-// (Net, Exec, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_iconBase_C::STATIC_ExecuteUbergraph_wgt_S3actionSelect_iconBase(int EntryPoint)
+void Uwgt_S3actionSelect_iconBase_C::ExecuteUbergraph_wgt_S3actionSelect_iconBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.ExecuteUbergraph_wgt_S3actionSelect_iconBase");
 
@@ -112,11 +111,11 @@ void Uwgt_S3actionSelect_iconBase_C::STATIC_ExecuteUbergraph_wgt_S3actionSelect_
 
 
 // Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.onEndFade__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           FadeIn                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3actionSelect_iconBase_C::STATIC_onEndFade__DelegateSignature(bool FadeIn)
+void Uwgt_S3actionSelect_iconBase_C::onEndFade__DelegateSignature(bool FadeIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.onEndFade__DelegateSignature");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -84,11 +84,11 @@ public:
 
 	bool IsValidTalkTargetNPC(class AS3Character* NPC);
 	void GetCurrentFloor(class AActor** HitActor);
-	void STATIC_UpdateSurroundTraces();
+	void UpdateSurroundTraces();
 	bool IsValidObstacle(class AActor* Actor);
-	bool STATIC_IsNPCObstacle(class UObject* NPC);
-	void STATIC_ClassifyObstacle(TEnumAsByte<EN_PC_ObstacleType>* ObstacleType);
-	void STATIC_SenseNPCs();
+	bool IsNPCObstacle(class UObject* NPC);
+	void ClassifyObstacle(TEnumAsByte<EN_PC_ObstacleType>* ObstacleType);
+	void SenseNPCs();
 	void CapsuleTrace(const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, struct FHitResult* Hit, bool* return_value);
 	void UpdateAI(float DeltaSeconds);
 	void UpdatePlayerState(class AS3Character* InCharacter, const struct FVector& InInputDirectionWS);

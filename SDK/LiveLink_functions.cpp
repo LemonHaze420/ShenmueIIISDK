@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function LiveLink.LiveLinkBlueprintLibrary.TransformNames
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSubjectFrameHandle     SubjectFrameHandle             (Parm, OutParm, ReferenceParm)
 // TArray<struct FName>           TransformNames                 (Parm, OutParm, ZeroConstructor)
 
-void ULiveLinkBlueprintLibrary::TransformNames(struct FSubjectFrameHandle* SubjectFrameHandle, TArray<struct FName>* TransformNames)
+void ULiveLinkBlueprintLibrary::STATIC_TransformNames(struct FSubjectFrameHandle* SubjectFrameHandle, TArray<struct FName>* TransformNames)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.TransformNames");
 
 	ULiveLinkBlueprintLibrary_TransformNames_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,18 +40,19 @@ void ULiveLinkBlueprintLibrary::TransformNames(struct FSubjectFrameHandle* Subje
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.TransformName
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm, ReferenceParm)
 // struct FName                   Name                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ULiveLinkBlueprintLibrary::TransformName(struct FLiveLinkTransform* LiveLinkTransform, struct FName* Name)
+void ULiveLinkBlueprintLibrary::STATIC_TransformName(struct FLiveLinkTransform* LiveLinkTransform, struct FName* Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.TransformName");
 
 	ULiveLinkBlueprintLibrary_TransformName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,18 +66,19 @@ void ULiveLinkBlueprintLibrary::TransformName(struct FLiveLinkTransform* LiveLin
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.RequestShutdown
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FLiveLinkSourceHandle   SourceHandle                   (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULiveLinkBlueprintLibrary::RequestShutdown(struct FLiveLinkSourceHandle* SourceHandle)
+bool ULiveLinkBlueprintLibrary::STATIC_RequestShutdown(struct FLiveLinkSourceHandle* SourceHandle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.RequestShutdown");
 
 	ULiveLinkBlueprintLibrary_RequestShutdown_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,18 +92,19 @@ bool ULiveLinkBlueprintLibrary::RequestShutdown(struct FLiveLinkSourceHandle* So
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.ParentBoneSpaceTransform
-// ()
+// (Final, Native, Static, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm, ReferenceParm)
 // struct FTransform              Transform                      (Parm, OutParm, IsPlainOldData)
 
-void ULiveLinkBlueprintLibrary::ParentBoneSpaceTransform(struct FLiveLinkTransform* LiveLinkTransform, struct FTransform* Transform)
+void ULiveLinkBlueprintLibrary::STATIC_ParentBoneSpaceTransform(struct FLiveLinkTransform* LiveLinkTransform, struct FTransform* Transform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.ParentBoneSpaceTransform");
 
 	ULiveLinkBlueprintLibrary_ParentBoneSpaceTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,18 +118,19 @@ void ULiveLinkBlueprintLibrary::ParentBoneSpaceTransform(struct FLiveLinkTransfo
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.NumberOfTransforms
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSubjectFrameHandle     SubjectFrameHandle             (Parm, OutParm, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ULiveLinkBlueprintLibrary::NumberOfTransforms(struct FSubjectFrameHandle* SubjectFrameHandle)
+int ULiveLinkBlueprintLibrary::STATIC_NumberOfTransforms(struct FSubjectFrameHandle* SubjectFrameHandle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.NumberOfTransforms");
 
 	ULiveLinkBlueprintLibrary_NumberOfTransforms_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -139,18 +144,19 @@ int ULiveLinkBlueprintLibrary::NumberOfTransforms(struct FSubjectFrameHandle* Su
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.IsSourceStillValid
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FLiveLinkSourceHandle   SourceHandle                   (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULiveLinkBlueprintLibrary::IsSourceStillValid(struct FLiveLinkSourceHandle* SourceHandle)
+bool ULiveLinkBlueprintLibrary::STATIC_IsSourceStillValid(struct FLiveLinkSourceHandle* SourceHandle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.IsSourceStillValid");
 
 	ULiveLinkBlueprintLibrary_IsSourceStillValid_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,18 +170,19 @@ bool ULiveLinkBlueprintLibrary::IsSourceStillValid(struct FLiveLinkSourceHandle*
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.HasParent
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULiveLinkBlueprintLibrary::HasParent(struct FLiveLinkTransform* LiveLinkTransform)
+bool ULiveLinkBlueprintLibrary::STATIC_HasParent(struct FLiveLinkTransform* LiveLinkTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.HasParent");
 
 	ULiveLinkBlueprintLibrary_HasParent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -189,13 +196,13 @@ bool ULiveLinkBlueprintLibrary::HasParent(struct FLiveLinkTransform* LiveLinkTra
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetTransformByName
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSubjectFrameHandle     SubjectFrameHandle             (Parm, OutParm, ReferenceParm)
 // struct FName                   TransformName                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm)
 
-void ULiveLinkBlueprintLibrary::GetTransformByName(const struct FName& TransformName, struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform)
+void ULiveLinkBlueprintLibrary::STATIC_GetTransformByName(const struct FName& TransformName, struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetTransformByName");
 
@@ -203,6 +210,7 @@ void ULiveLinkBlueprintLibrary::GetTransformByName(const struct FName& Transform
 	params.TransformName = TransformName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -216,13 +224,13 @@ void ULiveLinkBlueprintLibrary::GetTransformByName(const struct FName& Transform
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetTransformByIndex
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSubjectFrameHandle     SubjectFrameHandle             (Parm, OutParm, ReferenceParm)
 // int                            TransformIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm)
 
-void ULiveLinkBlueprintLibrary::GetTransformByIndex(int TransformIndex, struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform)
+void ULiveLinkBlueprintLibrary::STATIC_GetTransformByIndex(int TransformIndex, struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetTransformByIndex");
 
@@ -230,6 +238,7 @@ void ULiveLinkBlueprintLibrary::GetTransformByIndex(int TransformIndex, struct F
 	params.TransformIndex = TransformIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,18 +252,19 @@ void ULiveLinkBlueprintLibrary::GetTransformByIndex(int TransformIndex, struct F
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetSourceType
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FLiveLinkSourceHandle   SourceHandle                   (Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ULiveLinkBlueprintLibrary::GetSourceType(struct FLiveLinkSourceHandle* SourceHandle)
+struct FText ULiveLinkBlueprintLibrary::STATIC_GetSourceType(struct FLiveLinkSourceHandle* SourceHandle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetSourceType");
 
 	ULiveLinkBlueprintLibrary_GetSourceType_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,18 +278,19 @@ struct FText ULiveLinkBlueprintLibrary::GetSourceType(struct FLiveLinkSourceHand
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetSourceStatus
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FLiveLinkSourceHandle   SourceHandle                   (Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ULiveLinkBlueprintLibrary::GetSourceStatus(struct FLiveLinkSourceHandle* SourceHandle)
+struct FText ULiveLinkBlueprintLibrary::STATIC_GetSourceStatus(struct FLiveLinkSourceHandle* SourceHandle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetSourceStatus");
 
 	ULiveLinkBlueprintLibrary_GetSourceStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -293,18 +304,19 @@ struct FText ULiveLinkBlueprintLibrary::GetSourceStatus(struct FLiveLinkSourceHa
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetSourceMachineName
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FLiveLinkSourceHandle   SourceHandle                   (Parm, OutParm, ReferenceParm)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText ULiveLinkBlueprintLibrary::GetSourceMachineName(struct FLiveLinkSourceHandle* SourceHandle)
+struct FText ULiveLinkBlueprintLibrary::STATIC_GetSourceMachineName(struct FLiveLinkSourceHandle* SourceHandle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetSourceMachineName");
 
 	ULiveLinkBlueprintLibrary_GetSourceMachineName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -318,18 +330,19 @@ struct FText ULiveLinkBlueprintLibrary::GetSourceMachineName(struct FLiveLinkSou
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetRootTransform
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSubjectFrameHandle     SubjectFrameHandle             (Parm, OutParm, ReferenceParm)
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm)
 
-void ULiveLinkBlueprintLibrary::GetRootTransform(struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform)
+void ULiveLinkBlueprintLibrary::STATIC_GetRootTransform(struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetRootTransform");
 
 	ULiveLinkBlueprintLibrary_GetRootTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -343,18 +356,19 @@ void ULiveLinkBlueprintLibrary::GetRootTransform(struct FSubjectFrameHandle* Sub
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetParent
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm, ReferenceParm)
 // struct FLiveLinkTransform      Parent                         (Parm, OutParm)
 
-void ULiveLinkBlueprintLibrary::GetParent(struct FLiveLinkTransform* LiveLinkTransform, struct FLiveLinkTransform* Parent)
+void ULiveLinkBlueprintLibrary::STATIC_GetParent(struct FLiveLinkTransform* LiveLinkTransform, struct FLiveLinkTransform* Parent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetParent");
 
 	ULiveLinkBlueprintLibrary_GetParent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -368,18 +382,19 @@ void ULiveLinkBlueprintLibrary::GetParent(struct FLiveLinkTransform* LiveLinkTra
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetMetadata
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSubjectFrameHandle     SubjectFrameHandle             (Parm, OutParm, ReferenceParm)
 // struct FSubjectMetadata        MetaData                       (Parm, OutParm)
 
-void ULiveLinkBlueprintLibrary::GetMetadata(struct FSubjectFrameHandle* SubjectFrameHandle, struct FSubjectMetadata* MetaData)
+void ULiveLinkBlueprintLibrary::STATIC_GetMetadata(struct FSubjectFrameHandle* SubjectFrameHandle, struct FSubjectMetadata* MetaData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetMetadata");
 
 	ULiveLinkBlueprintLibrary_GetMetadata_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -393,18 +408,19 @@ void ULiveLinkBlueprintLibrary::GetMetadata(struct FSubjectFrameHandle* SubjectF
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetCurves
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSubjectFrameHandle     SubjectFrameHandle             (Parm, OutParm, ReferenceParm)
 // TMap<struct FName, float>      Curves                         (Parm, OutParm, ZeroConstructor)
 
-void ULiveLinkBlueprintLibrary::GetCurves(struct FSubjectFrameHandle* SubjectFrameHandle, TMap<struct FName, float>* Curves)
+void ULiveLinkBlueprintLibrary::STATIC_GetCurves(struct FSubjectFrameHandle* SubjectFrameHandle, TMap<struct FName, float>* Curves)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetCurves");
 
 	ULiveLinkBlueprintLibrary_GetCurves_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -418,18 +434,19 @@ void ULiveLinkBlueprintLibrary::GetCurves(struct FSubjectFrameHandle* SubjectFra
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetChildren
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm, ReferenceParm)
 // TArray<struct FLiveLinkTransform> Children                       (Parm, OutParm, ZeroConstructor)
 
-void ULiveLinkBlueprintLibrary::GetChildren(struct FLiveLinkTransform* LiveLinkTransform, TArray<struct FLiveLinkTransform>* Children)
+void ULiveLinkBlueprintLibrary::STATIC_GetChildren(struct FLiveLinkTransform* LiveLinkTransform, TArray<struct FLiveLinkTransform>* Children)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.GetChildren");
 
 	ULiveLinkBlueprintLibrary_GetChildren_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -443,18 +460,19 @@ void ULiveLinkBlueprintLibrary::GetChildren(struct FLiveLinkTransform* LiveLinkT
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.ComponentSpaceTransform
-// ()
+// (Final, Native, Static, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm, ReferenceParm)
 // struct FTransform              Transform                      (Parm, OutParm, IsPlainOldData)
 
-void ULiveLinkBlueprintLibrary::ComponentSpaceTransform(struct FLiveLinkTransform* LiveLinkTransform, struct FTransform* Transform)
+void ULiveLinkBlueprintLibrary::STATIC_ComponentSpaceTransform(struct FLiveLinkTransform* LiveLinkTransform, struct FTransform* Transform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.ComponentSpaceTransform");
 
 	ULiveLinkBlueprintLibrary_ComponentSpaceTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -468,18 +486,19 @@ void ULiveLinkBlueprintLibrary::ComponentSpaceTransform(struct FLiveLinkTransfor
 
 
 // Function LiveLink.LiveLinkBlueprintLibrary.ChildCount
-// ()
+// (Final, Native, Static, Private, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLiveLinkTransform      LiveLinkTransform              (Parm, OutParm, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ULiveLinkBlueprintLibrary::ChildCount(struct FLiveLinkTransform* LiveLinkTransform)
+int ULiveLinkBlueprintLibrary::STATIC_ChildCount(struct FLiveLinkTransform* LiveLinkTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkBlueprintLibrary.ChildCount");
 
 	ULiveLinkBlueprintLibrary_ChildCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -492,8 +511,59 @@ int ULiveLinkBlueprintLibrary::ChildCount(struct FLiveLinkTransform* LiveLinkTra
 }
 
 
+// Function LiveLink.LiveLinkComponent.GetSubjectData
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FName                   SubjectName                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FSubjectFrameHandle     SubjectFrameHandle             (Parm, OutParm)
+
+void ULiveLinkComponent::GetSubjectData(const struct FName& SubjectName, bool* bSuccess, struct FSubjectFrameHandle* SubjectFrameHandle)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkComponent.GetSubjectData");
+
+	ULiveLinkComponent_GetSubjectData_Params params;
+	params.SubjectName = SubjectName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bSuccess != nullptr)
+		*bSuccess = params.bSuccess;
+	if (SubjectFrameHandle != nullptr)
+		*SubjectFrameHandle = params.SubjectFrameHandle;
+}
+
+
+// Function LiveLink.LiveLinkComponent.GetAvailableSubjectNames
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<struct FName>           SubjectNames                   (Parm, OutParm, ZeroConstructor)
+
+void ULiveLinkComponent::GetAvailableSubjectNames(TArray<struct FName>* SubjectNames)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkComponent.GetAvailableSubjectNames");
+
+	ULiveLinkComponent_GetAvailableSubjectNames_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (SubjectNames != nullptr)
+		*SubjectNames = params.SubjectNames;
+}
+
+
 // Function LiveLink.LiveLinkMessageBusFinder.GetAvailableProviders
-// ()
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLatentActionInfo       LatentInfo                     (Parm)
@@ -510,6 +580,7 @@ void ULiveLinkMessageBusFinder::GetAvailableProviders(class UObject* WorldContex
 	params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -521,17 +592,18 @@ void ULiveLinkMessageBusFinder::GetAvailableProviders(class UObject* WorldContex
 
 
 // Function LiveLink.LiveLinkMessageBusFinder.ConstructMessageBusFinder
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class ULiveLinkMessageBusFinder* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ULiveLinkMessageBusFinder* ULiveLinkMessageBusFinder::ConstructMessageBusFinder()
+class ULiveLinkMessageBusFinder* ULiveLinkMessageBusFinder::STATIC_ConstructMessageBusFinder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkMessageBusFinder.ConstructMessageBusFinder");
 
 	ULiveLinkMessageBusFinder_ConstructMessageBusFinder_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,18 +614,19 @@ class ULiveLinkMessageBusFinder* ULiveLinkMessageBusFinder::ConstructMessageBusF
 
 
 // Function LiveLink.LiveLinkMessageBusFinder.ConnectToProvider
-// ()
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FProviderPollResult     Provider                       (Parm, OutParm, ReferenceParm)
 // struct FLiveLinkSourceHandle   SourceHandle                   (Parm, OutParm)
 
-void ULiveLinkMessageBusFinder::ConnectToProvider(struct FProviderPollResult* Provider, struct FLiveLinkSourceHandle* SourceHandle)
+void ULiveLinkMessageBusFinder::STATIC_ConnectToProvider(struct FProviderPollResult* Provider, struct FLiveLinkSourceHandle* SourceHandle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkMessageBusFinder.ConnectToProvider");
 
 	ULiveLinkMessageBusFinder_ConnectToProvider_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -567,7 +640,7 @@ void ULiveLinkMessageBusFinder::ConnectToProvider(struct FProviderPollResult* Pr
 
 
 // Function LiveLink.LiveLinkRemapAsset.RemapCurveElements
-// ()
+// (Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
 // TMap<struct FName, float>      CurveItems                     (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -578,6 +651,7 @@ void ULiveLinkRemapAsset::RemapCurveElements(TMap<struct FName, float>* CurveIte
 	ULiveLinkRemapAsset_RemapCurveElements_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -589,7 +663,7 @@ void ULiveLinkRemapAsset::RemapCurveElements(TMap<struct FName, float>* CurveIte
 
 
 // Function LiveLink.LiveLinkRemapAsset.GetRemappedCurveName
-// ()
+// (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // struct FName                   CurveName                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -602,6 +676,7 @@ struct FName ULiveLinkRemapAsset::GetRemappedCurveName(const struct FName& Curve
 	params.CurveName = CurveName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -612,7 +687,7 @@ struct FName ULiveLinkRemapAsset::GetRemappedCurveName(const struct FName& Curve
 
 
 // Function LiveLink.LiveLinkRemapAsset.GetRemappedBoneName
-// ()
+// (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
 // struct FName                   BoneName                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -625,61 +700,13 @@ struct FName ULiveLinkRemapAsset::GetRemappedBoneName(const struct FName& BoneNa
 	params.BoneName = BoneName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function LiveLink.LiveLinkComponent.GetSubjectData
-// ()
-// Parameters:
-// struct FName                   SubjectName                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FSubjectFrameHandle     SubjectFrameHandle             (Parm, OutParm)
-
-void ULiveLinkComponent::GetSubjectData(const struct FName& SubjectName, bool* bSuccess, struct FSubjectFrameHandle* SubjectFrameHandle)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkComponent.GetSubjectData");
-
-	ULiveLinkComponent_GetSubjectData_Params params;
-	params.SubjectName = SubjectName;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (bSuccess != nullptr)
-		*bSuccess = params.bSuccess;
-	if (SubjectFrameHandle != nullptr)
-		*SubjectFrameHandle = params.SubjectFrameHandle;
-}
-
-
-// Function LiveLink.LiveLinkComponent.GetAvailableSubjectNames
-// ()
-// Parameters:
-// TArray<struct FName>           SubjectNames                   (Parm, OutParm, ZeroConstructor)
-
-void ULiveLinkComponent::GetAvailableSubjectNames(TArray<struct FName>* SubjectNames)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function LiveLink.LiveLinkComponent.GetAvailableSubjectNames");
-
-	ULiveLinkComponent_GetAvailableSubjectNames_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (SubjectNames != nullptr)
-		*SubjectNames = params.SubjectNames;
 }
 
 

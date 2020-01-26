@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.ConvertBacklashN
+struct UBPW_UI_SetExchangeIcon_C_ConvertBacklashN_Params
+{
+	struct FString                                     SourceString;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	bool                                               bSpace;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.ResetScroll
 struct UBPW_UI_SetExchangeIcon_C_ResetScroll_Params

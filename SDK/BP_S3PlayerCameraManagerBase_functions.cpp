@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InputRotateY
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AmountY                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void ABP_S3PlayerCameraManagerBase_C::InputRotateY(float AmountY)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InputRotateX
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AmountX                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,11 +54,11 @@ void ABP_S3PlayerCameraManagerBase_C::InputRotateX(float AmountX)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetControlRotationYaw
-// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Yaw                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_SetControlRotationYaw(float Yaw)
+void ABP_S3PlayerCameraManagerBase_C::SetControlRotationYaw(float Yaw)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetControlRotationYaw");
 
@@ -74,7 +74,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_SetControlRotationYaw(float Yaw)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.GetControlRotation
-// (Exec, Native, NetResponse, NetMulticast, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -85,7 +85,6 @@ struct FRotator ABP_S3PlayerCameraManagerBase_C::GetControlRotation()
 	ABP_S3PlayerCameraManagerBase_C_GetControlRotation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,7 +95,7 @@ struct FRotator ABP_S3PlayerCameraManagerBase_C::GetControlRotation()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.StandardGateMouseLook
-// (NetRequest, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -119,11 +118,11 @@ float ABP_S3PlayerCameraManagerBase_C::StandardGateMouseLook(float In)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetActiveFocusSign
-// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Active                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_SetActiveFocusSign(bool Active)
+void ABP_S3PlayerCameraManagerBase_C::SetActiveFocusSign(bool Active)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetActiveFocusSign");
 
@@ -131,7 +130,6 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_SetActiveFocusSign(bool Active)
 	params.Active = Active;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,7 +138,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_SetActiveFocusSign(bool Active)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.GetIsZoomingInFOV
-// (NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -161,11 +159,11 @@ bool ABP_S3PlayerCameraManagerBase_C::GetIsZoomingInFOV()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetEnabledAttentionSearch
-// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_SetEnabledAttentionSearch(bool Enabled)
+void ABP_S3PlayerCameraManagerBase_C::SetEnabledAttentionSearch(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetEnabledAttentionSearch");
 
@@ -181,7 +179,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_SetEnabledAttentionSearch(bool Enab
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ResetCameraPitchLimit
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Immediately                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -193,7 +191,6 @@ void ABP_S3PlayerCameraManagerBase_C::ResetCameraPitchLimit(bool Immediately)
 	params.Immediately = Immediately;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,7 +199,7 @@ void ABP_S3PlayerCameraManagerBase_C::ResetCameraPitchLimit(bool Immediately)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.PanInterp
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Current                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Max                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -210,7 +207,7 @@ void ABP_S3PlayerCameraManagerBase_C::ResetCameraPitchLimit(bool Immediately)
 // float                          InputStr                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_S3PlayerCameraManagerBase_C::STATIC_PanInterp(float Current, float Max, float Speed, float InputStr)
+float ABP_S3PlayerCameraManagerBase_C::PanInterp(float Current, float Max, float Speed, float InputStr)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.PanInterp");
 
@@ -221,7 +218,6 @@ float ABP_S3PlayerCameraManagerBase_C::STATIC_PanInterp(float Current, float Max
 	params.InputStr = InputStr;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -232,11 +228,11 @@ float ABP_S3PlayerCameraManagerBase_C::STATIC_PanInterp(float Current, float Max
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetControlRotation
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                NewRotation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_SetControlRotation(const struct FRotator& NewRotation)
+void ABP_S3PlayerCameraManagerBase_C::SetControlRotation(const struct FRotator& NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetControlRotation");
 
@@ -252,11 +248,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_SetControlRotation(const struct FRo
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.EnableFaceFocusMode
-// (Net, NetReliable, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bSetEnabled                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_EnableFaceFocusMode(bool bSetEnabled)
+void ABP_S3PlayerCameraManagerBase_C::EnableFaceFocusMode(bool bSetEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.EnableFaceFocusMode");
 
@@ -272,11 +268,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_EnableFaceFocusMode(bool bSetEnable
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.Debug_EnableFaceFocusMode
-// (NetReliable, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bSetEnabled                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_Debug_EnableFaceFocusMode(bool bSetEnabled)
+void ABP_S3PlayerCameraManagerBase_C::Debug_EnableFaceFocusMode(bool bSetEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.Debug_EnableFaceFocusMode");
 
@@ -292,11 +288,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_Debug_EnableFaceFocusMode(bool bSet
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsFaceFocusModeEnabled
-// (Net, NetReliable, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bIsEnabled                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_IsFaceFocusModeEnabled(bool* bIsEnabled)
+void ABP_S3PlayerCameraManagerBase_C::IsFaceFocusModeEnabled(bool* bIsEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsFaceFocusModeEnabled");
 
@@ -314,7 +310,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_IsFaceFocusModeEnabled(bool* bIsEna
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ZoomLookAtChar
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3Character*            InCharacter                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bValid                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -338,11 +334,11 @@ void ABP_S3PlayerCameraManagerBase_C::ZoomLookAtChar(class AS3Character* InChara
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ZoomLookAtTalkChar
-// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bValidChar                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_ZoomLookAtTalkChar(bool* bValidChar)
+void ABP_S3PlayerCameraManagerBase_C::ZoomLookAtTalkChar(bool* bValidChar)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ZoomLookAtTalkChar");
 
@@ -360,9 +356,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_ZoomLookAtTalkChar(bool* bValidChar
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InitZoomRotation
-// (Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InitZoomRotation()
+void ABP_S3PlayerCameraManagerBase_C::InitZoomRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InitZoomRotation");
 
@@ -377,7 +373,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InitZoomRotation()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.GetZoomTargetCharacter
-// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3Character*            OutCharacter                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -388,7 +384,6 @@ void ABP_S3PlayerCameraManagerBase_C::GetZoomTargetCharacter(class AS3Character*
 	ABP_S3PlayerCameraManagerBase_C_GetZoomTargetCharacter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -400,12 +395,12 @@ void ABP_S3PlayerCameraManagerBase_C::GetZoomTargetCharacter(class AS3Character*
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.GetLookAtRotation
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FRotator                FallbackRotation               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                OutRotation                    (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_GetLookAtRotation(const struct FRotator& FallbackRotation, struct FRotator* OutRotation)
+void ABP_S3PlayerCameraManagerBase_C::GetLookAtRotation(const struct FRotator& FallbackRotation, struct FRotator* OutRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.GetLookAtRotation");
 
@@ -424,9 +419,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_GetLookAtRotation(const struct FRot
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.StopLookAtLocation
-// (Net, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_StopLookAtLocation()
+void ABP_S3PlayerCameraManagerBase_C::StopLookAtLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.StopLookAtLocation");
 
@@ -441,7 +436,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_StopLookAtLocation()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.StandardGateFloatInput
-// (Net, NetRequest, Native, NetResponse, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          InFloat                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OutFloat                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -454,7 +449,6 @@ void ABP_S3PlayerCameraManagerBase_C::StandardGateFloatInput(float InFloat, floa
 	params.InFloat = InFloat;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -466,7 +460,7 @@ void ABP_S3PlayerCameraManagerBase_C::StandardGateFloatInput(float InFloat, floa
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.BeginLookAtLocation
-// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Private, Protected, Delegate, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           bImmediate                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -480,7 +474,6 @@ void ABP_S3PlayerCameraManagerBase_C::BeginLookAtLocation(const struct FVector& 
 	params.bImmediate = bImmediate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -489,11 +482,11 @@ void ABP_S3PlayerCameraManagerBase_C::BeginLookAtLocation(const struct FVector& 
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetRotationOffset
-// (Net, NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                Offset                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_SetRotationOffset(const struct FRotator& Offset)
+void ABP_S3PlayerCameraManagerBase_C::SetRotationOffset(const struct FRotator& Offset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetRotationOffset");
 
@@ -509,7 +502,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_SetRotationOffset(const struct FRot
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetPlayerBehindSmooth
-// (Net, Exec, Native, Event, NetResponse, NetMulticast, Private, Protected, Delegate, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Smooth                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -521,7 +514,6 @@ void ABP_S3PlayerCameraManagerBase_C::SetPlayerBehindSmooth(bool Smooth)
 	params.Smooth = Smooth;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -530,16 +522,15 @@ void ABP_S3PlayerCameraManagerBase_C::SetPlayerBehindSmooth(bool Smooth)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.UpdateSpringArmLagFlag
-// (Exec, Native, Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_UpdateSpringArmLagFlag()
+void ABP_S3PlayerCameraManagerBase_C::UpdateSpringArmLagFlag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.UpdateSpringArmLagFlag");
 
 	ABP_S3PlayerCameraManagerBase_C_UpdateSpringArmLagFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -548,14 +539,14 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_UpdateSpringArmLagFlag()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.PhotographyCameraModify
-// (Exec, Native, Static, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 NewCameraLocation              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 PreviousCameraLocation         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 OriginalCameraLocation         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 ResultCameraLocation           (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_PhotographyCameraModify(const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* ResultCameraLocation)
+void ABP_S3PlayerCameraManagerBase_C::PhotographyCameraModify(const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* ResultCameraLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.PhotographyCameraModify");
 
@@ -565,7 +556,6 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_PhotographyCameraModify(const struc
 	params.OriginalCameraLocation = OriginalCameraLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -577,7 +567,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_PhotographyCameraModify(const struc
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.GetCameraSpaceYaw
-// (Exec, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Yaw                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -601,7 +591,7 @@ void ABP_S3PlayerCameraManagerBase_C::GetCameraSpaceYaw(const struct FVector& Di
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CanScreenShot
-// (Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -612,7 +602,6 @@ void ABP_S3PlayerCameraManagerBase_C::CanScreenShot(bool* CAN)
 	ABP_S3PlayerCameraManagerBase_C_CanScreenShot_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -624,16 +613,15 @@ void ABP_S3PlayerCameraManagerBase_C::CanScreenShot(bool* CAN)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.UpdateSpringArmSocket
-// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_UpdateSpringArmSocket()
+void ABP_S3PlayerCameraManagerBase_C::UpdateSpringArmSocket()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.UpdateSpringArmSocket");
 
 	ABP_S3PlayerCameraManagerBase_C_UpdateSpringArmSocket_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -642,7 +630,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_UpdateSpringArmSocket()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.UpdateZoomState
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ZoomInputAxis                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -654,7 +642,6 @@ void ABP_S3PlayerCameraManagerBase_C::UpdateZoomState(float ZoomInputAxis)
 	params.ZoomInputAxis = ZoomInputAxis;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -663,7 +650,7 @@ void ABP_S3PlayerCameraManagerBase_C::UpdateZoomState(float ZoomInputAxis)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InterpolateAngleNear
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          SrcAngle                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DstAngle                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -691,7 +678,7 @@ void ABP_S3PlayerCameraManagerBase_C::InterpolateAngleNear(float SrcAngle, float
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InterpolateAngle
-// (Event, Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          SrcAngle                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DstAngle                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -699,7 +686,7 @@ void ABP_S3PlayerCameraManagerBase_C::InterpolateAngleNear(float SrcAngle, float
 // bool                           Positive                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InterpolateAngle(float SrcAngle, float DstAngle, float Ratio, bool Positive, float* Result)
+void ABP_S3PlayerCameraManagerBase_C::InterpolateAngle(float SrcAngle, float DstAngle, float Ratio, bool Positive, float* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InterpolateAngle");
 
@@ -721,12 +708,12 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InterpolateAngle(float SrcAngle, fl
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.GetAngleNormal
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          SrcAngleDeg                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DstAngleDeg                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_GetAngleNormal(float SrcAngleDeg, float* DstAngleDeg)
+void ABP_S3PlayerCameraManagerBase_C::GetAngleNormal(float SrcAngleDeg, float* DstAngleDeg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.GetAngleNormal");
 
@@ -734,7 +721,6 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_GetAngleNormal(float SrcAngleDeg, f
 	params.SrcAngleDeg = SrcAngleDeg;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -746,13 +732,13 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_GetAngleNormal(float SrcAngleDeg, f
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsReversedSignIfAdd
-// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          BaseParam                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          AddParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Reversed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_IsReversedSignIfAdd(float BaseParam, float AddParam, bool* Reversed)
+void ABP_S3PlayerCameraManagerBase_C::IsReversedSignIfAdd(float BaseParam, float AddParam, bool* Reversed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsReversedSignIfAdd");
 
@@ -761,7 +747,6 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_IsReversedSignIfAdd(float BaseParam
 	params.AddParam = AddParam;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -773,9 +758,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_IsReversedSignIfAdd(float BaseParam
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetPlayerBehind
-// (NetReliable, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_SetPlayerBehind()
+void ABP_S3PlayerCameraManagerBase_C::SetPlayerBehind()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SetPlayerBehind");
 
@@ -790,11 +775,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_SetPlayerBehind()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsZoomEnable
-// (Net, Static, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Enable                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_IsZoomEnable(bool* Enable)
+void ABP_S3PlayerCameraManagerBase_C::IsZoomEnable(bool* Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsZoomEnable");
 
@@ -812,7 +797,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_IsZoomEnable(bool* Enable)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ResetZoom
-// (NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           WithState                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -824,7 +809,6 @@ void ABP_S3PlayerCameraManagerBase_C::ResetZoom(bool WithState)
 	params.WithState = WithState;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -833,7 +817,7 @@ void ABP_S3PlayerCameraManagerBase_C::ResetZoom(bool WithState)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsFirstPersonView
-// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           FirstPerson                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -844,7 +828,6 @@ void ABP_S3PlayerCameraManagerBase_C::IsFirstPersonView(bool* FirstPerson)
 	ABP_S3PlayerCameraManagerBase_C_IsFirstPersonView_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -856,11 +839,11 @@ void ABP_S3PlayerCameraManagerBase_C::IsFirstPersonView(bool* FirstPerson)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SwitchZoomState
-// (NetRequest, Exec, Event, Static, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_SwitchZoomState(float AxisValue)
+void ABP_S3PlayerCameraManagerBase_C::SwitchZoomState(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.SwitchZoomState");
 
@@ -876,7 +859,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_SwitchZoomState(float AxisValue)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CalcThirdPersonCamera
-// (Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3PlayerCameraManagerBase_C::CalcThirdPersonCamera()
 {
@@ -893,7 +876,7 @@ void ABP_S3PlayerCameraManagerBase_C::CalcThirdPersonCamera()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsAttention
-// (Net, NetRequest, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Attention                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -915,16 +898,15 @@ void ABP_S3PlayerCameraManagerBase_C::IsAttention(bool* Attention)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.TickZoomCameraRotation
-// (Native, NetResponse, Static, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_TickZoomCameraRotation()
+void ABP_S3PlayerCameraManagerBase_C::TickZoomCameraRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.TickZoomCameraRotation");
 
 	ABP_S3PlayerCameraManagerBase_C_TickZoomCameraRotation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -933,7 +915,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_TickZoomCameraRotation()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsZooming
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Private, Protected, Delegate, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Zooming                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -944,7 +926,6 @@ void ABP_S3PlayerCameraManagerBase_C::IsZooming(bool* Zooming)
 	ABP_S3PlayerCameraManagerBase_C_IsZooming_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -956,7 +937,7 @@ void ABP_S3PlayerCameraManagerBase_C::IsZooming(bool* Zooming)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.UpdateSpringArmParams
-// (NetReliable, MulticastDelegate, Private, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3PlayerCameraManagerBase_C::UpdateSpringArmParams()
 {
@@ -973,7 +954,7 @@ void ABP_S3PlayerCameraManagerBase_C::UpdateSpringArmParams()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.GetDesiredZoomFOV
-// (NetRequest, Native, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -984,7 +965,6 @@ float ABP_S3PlayerCameraManagerBase_C::GetDesiredZoomFOV()
 	ABP_S3PlayerCameraManagerBase_C_GetDesiredZoomFOV_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -995,7 +975,7 @@ float ABP_S3PlayerCameraManagerBase_C::GetDesiredZoomFOV()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.BlueprintUpdateCamera
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  CameraTarget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 NewCameraLocation              (Parm, OutParm, IsPlainOldData)
@@ -1003,7 +983,7 @@ float ABP_S3PlayerCameraManagerBase_C::GetDesiredZoomFOV()
 // float                          NewCameraFOV                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3PlayerCameraManagerBase_C::STATIC_BlueprintUpdateCamera(class AActor* CameraTarget, struct FVector* NewCameraLocation, struct FRotator* NewCameraRotation, float* NewCameraFOV)
+bool ABP_S3PlayerCameraManagerBase_C::BlueprintUpdateCamera(class AActor* CameraTarget, struct FVector* NewCameraLocation, struct FRotator* NewCameraRotation, float* NewCameraFOV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.BlueprintUpdateCamera");
 
@@ -1011,7 +991,6 @@ bool ABP_S3PlayerCameraManagerBase_C::STATIC_BlueprintUpdateCamera(class AActor*
 	params.CameraTarget = CameraTarget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1029,11 +1008,11 @@ bool ABP_S3PlayerCameraManagerBase_C::STATIC_BlueprintUpdateCamera(class AActor*
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraSpringArmLagSet
-// (Net, NetReliable, NetRequest, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraSpringArmLagSet(bool flag)
+void ABP_S3PlayerCameraManagerBase_C::CameraSpringArmLagSet(bool flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraSpringArmLagSet");
 
@@ -1049,11 +1028,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraSpringArmLagSet(bool flag)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsCameraCollision
-// (Net, NetReliable, NetRequest, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           CollisionFlag                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_IsCameraCollision(bool* CollisionFlag)
+void ABP_S3PlayerCameraManagerBase_C::IsCameraCollision(bool* CollisionFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.IsCameraCollision");
 
@@ -1071,9 +1050,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_IsCameraCollision(bool* CollisionFl
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraCollisionOff
-// (NetReliable, NetRequest, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraCollisionOff()
+void ABP_S3PlayerCameraManagerBase_C::CameraCollisionOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraCollisionOff");
 
@@ -1088,9 +1067,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraCollisionOff()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraCollisionOn
-// (Net, NetRequest, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraCollisionOn()
+void ABP_S3PlayerCameraManagerBase_C::CameraCollisionOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraCollisionOn");
 
@@ -1105,9 +1084,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraCollisionOn()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraCalcOff
-// (NetReliable, Exec, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraCalcOff()
+void ABP_S3PlayerCameraManagerBase_C::CameraCalcOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraCalcOff");
 
@@ -1122,9 +1101,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraCalcOff()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraCalcOn
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraCalcOn()
+void ABP_S3PlayerCameraManagerBase_C::CameraCalcOn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraCalcOn");
 
@@ -1139,7 +1118,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraCalcOn()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraRotInitParam
-// (Net, NetRequest, Exec, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3PlayerCameraManagerBase_C::CameraRotInitParam()
 {
@@ -1156,9 +1135,9 @@ void ABP_S3PlayerCameraManagerBase_C::CameraRotInitParam()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraRotInit
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraRotInit()
+void ABP_S3PlayerCameraManagerBase_C::CameraRotInit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CameraRotInit");
 
@@ -1173,7 +1152,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_CameraRotInit()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.UserConstructionScript
-// (NetRequest, Native, Event, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3PlayerCameraManagerBase_C::UserConstructionScript()
 {
@@ -1182,7 +1161,6 @@ void ABP_S3PlayerCameraManagerBase_C::UserConstructionScript()
 	ABP_S3PlayerCameraManagerBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1191,11 +1169,11 @@ void ABP_S3PlayerCameraManagerBase_C::UserConstructionScript()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpActEvt_Screenshot_K2Node_InputActionEvent_8
-// (NetRequest, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InpActEvt_Screenshot_K2Node_InputActionEvent_8(const struct FKey& Key)
+void ABP_S3PlayerCameraManagerBase_C::InpActEvt_Screenshot_K2Node_InputActionEvent_8(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpActEvt_Screenshot_K2Node_InputActionEvent_8");
 
@@ -1211,11 +1189,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InpActEvt_Screenshot_K2Node_InputAc
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpActEvt_ScreenshotCine_K2Node_InputActionEvent_7
-// (NetRequest, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InpActEvt_ScreenshotCine_K2Node_InputActionEvent_7(const struct FKey& Key)
+void ABP_S3PlayerCameraManagerBase_C::InpActEvt_ScreenshotCine_K2Node_InputActionEvent_7(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpActEvt_ScreenshotCine_K2Node_InputActionEvent_7");
 
@@ -1231,11 +1209,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InpActEvt_ScreenshotCine_K2Node_Inp
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpActEvt_ResetCamera_K2Node_InputActionEvent_6
-// (Net, NetReliable, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InpActEvt_ResetCamera_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_S3PlayerCameraManagerBase_C::InpActEvt_ResetCamera_K2Node_InputActionEvent_6(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpActEvt_ResetCamera_K2Node_InputActionEvent_6");
 
@@ -1251,11 +1229,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InpActEvt_ResetCamera_K2Node_InputA
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpActEvt_ResetCamera_K2Node_InputActionEvent_5
-// (Net, NetRequest, Exec, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InpActEvt_ResetCamera_K2Node_InputActionEvent_5(const struct FKey& Key)
+void ABP_S3PlayerCameraManagerBase_C::InpActEvt_ResetCamera_K2Node_InputActionEvent_5(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpActEvt_ResetCamera_K2Node_InputActionEvent_5");
 
@@ -1271,11 +1249,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InpActEvt_ResetCamera_K2Node_InputA
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ReceiveTick
-// (NetRequest, Exec, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_S3PlayerCameraManagerBase_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ReceiveTick");
 
@@ -1291,9 +1269,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_ReceiveBeginPlay()
+void ABP_S3PlayerCameraManagerBase_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ReceiveBeginPlay");
 
@@ -1308,9 +1286,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.OnPhotographySessionStart
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_OnPhotographySessionStart()
+void ABP_S3PlayerCameraManagerBase_C::OnPhotographySessionStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.OnPhotographySessionStart");
 
@@ -1325,9 +1303,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_OnPhotographySessionStart()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.OnPhotographySessionEnd
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_OnPhotographySessionEnd()
+void ABP_S3PlayerCameraManagerBase_C::OnPhotographySessionEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.OnPhotographySessionEnd");
 
@@ -1342,9 +1320,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_OnPhotographySessionEnd()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InputHeldResetCamera
-// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InputHeldResetCamera()
+void ABP_S3PlayerCameraManagerBase_C::InputHeldResetCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InputHeldResetCamera");
 
@@ -1359,11 +1337,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InputHeldResetCamera()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpAxisEvt_LookUp_K2Node_InputAxisEvent_7
-// (Net, NetReliable, Exec, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InpAxisEvt_LookUp_K2Node_InputAxisEvent_7(float AxisValue)
+void ABP_S3PlayerCameraManagerBase_C::InpAxisEvt_LookUp_K2Node_InputAxisEvent_7(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpAxisEvt_LookUp_K2Node_InputAxisEvent_7");
 
@@ -1379,11 +1357,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InpAxisEvt_LookUp_K2Node_InputAxisE
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpAxisEvt_Turn_K2Node_InputAxisEvent_18
-// (NetReliable, Exec, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InpAxisEvt_Turn_K2Node_InputAxisEvent_18(float AxisValue)
+void ABP_S3PlayerCameraManagerBase_C::InpAxisEvt_Turn_K2Node_InputAxisEvent_18(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpAxisEvt_Turn_K2Node_InputAxisEvent_18");
 
@@ -1399,11 +1377,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InpAxisEvt_Turn_K2Node_InputAxisEve
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ReceiveEndPlay
-// (NetReliable, Exec, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3PlayerCameraManagerBase_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ReceiveEndPlay");
 
@@ -1419,9 +1397,9 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlay
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CleanupNullReferences
-// (Net, NetReliable, Exec, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_CleanupNullReferences()
+void ABP_S3PlayerCameraManagerBase_C::CleanupNullReferences()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.CleanupNullReferences");
 
@@ -1436,12 +1414,12 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_CleanupNullReferences()
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ChangedCameraState
-// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // ECameraState                   OldState                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ECameraState                   NewState                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_ChangedCameraState(ECameraState OldState, ECameraState NewState)
+void ABP_S3PlayerCameraManagerBase_C::ChangedCameraState(ECameraState OldState, ECameraState NewState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ChangedCameraState");
 
@@ -1458,11 +1436,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_ChangedCameraState(ECameraState Old
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpAxisEvt_MouseLook_X_K2Node_InputAxisEvent_3
-// (Net, Exec, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InpAxisEvt_MouseLook_X_K2Node_InputAxisEvent_3(float AxisValue)
+void ABP_S3PlayerCameraManagerBase_C::InpAxisEvt_MouseLook_X_K2Node_InputAxisEvent_3(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpAxisEvt_MouseLook_X_K2Node_InputAxisEvent_3");
 
@@ -1478,11 +1456,11 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InpAxisEvt_MouseLook_X_K2Node_Input
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpAxisEvt_MouseLook_Y_K2Node_InputAxisEvent_4
-// (Exec, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManagerBase_C::STATIC_InpAxisEvt_MouseLook_Y_K2Node_InputAxisEvent_4(float AxisValue)
+void ABP_S3PlayerCameraManagerBase_C::InpAxisEvt_MouseLook_Y_K2Node_InputAxisEvent_4(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.InpAxisEvt_MouseLook_Y_K2Node_InputAxisEvent_4");
 
@@ -1498,7 +1476,7 @@ void ABP_S3PlayerCameraManagerBase_C::STATIC_InpAxisEvt_MouseLook_Y_K2Node_Input
 
 
 // Function BP_S3PlayerCameraManagerBase.BP_S3PlayerCameraManagerBase_C.ExecuteUbergraph_BP_S3PlayerCameraManagerBase
-// (NetMulticast, Public, Protected, NetClient, DLLImport)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

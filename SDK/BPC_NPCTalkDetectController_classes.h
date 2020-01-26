@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,19 +33,19 @@ public:
 
 
 	void IsActiveMiniGameScript(bool* MiniGame);
-	void STATIC_GetActiveComponents(TArray<class UBPC_S3_TalkComponent_C*>* TalkComponents);
+	void GetActiveComponents(TArray<class UBPC_S3_TalkComponent_C*>* TalkComponents);
 	void ParseSubQuestControl(const struct FName& CharaName);
 	void IsEnabledDetectIcon(ES3TalkType Type, bool* bEnabled);
 	void GetCurrentTalkComponent(class US3TalkComponentBase** OutComponent);
 	bool FindComponent(ES3TalkType Type, class US3TalkComponentBase** Value);
 	void CanNPCTalk(bool* bCan);
-	void STATIC_IsTalking(bool* bTalking);
-	void STATIC_GetActionType(TArray<struct FS3DetectActionParam>* Params);
-	void STATIC_RegisterTalkComponent(ES3TalkType TalkType, class US3TalkComponentBase* Component);
-	void STATIC_OnStart();
-	void STATIC_OnFinished();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_DecideDetectAction(ES3ActionIconType ActionType);
+	void IsTalking(bool* bTalking);
+	void getActionType(TArray<struct FS3DetectActionParam>* Params);
+	void RegisterTalkComponent(ES3TalkType TalkType, class US3TalkComponentBase* Component);
+	void OnStart();
+	void OnFinished();
+	void ReceiveBeginPlay();
+	void DecideDetectAction(ES3ActionIconType ActionType);
 	void ExecuteUbergraph_BPC_NPCTalkDetectController(int EntryPoint);
 };
 

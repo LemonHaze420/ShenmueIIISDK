@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,26 +53,26 @@ public:
 	}
 
 
-	bool STATIC_IsInteracting();
-	bool STATIC_IsAbleToMove();
-	void STATIC_IsHeightFixEnabled(bool* bEnabled);
+	bool IsInteracting();
+	bool IsAbleToMove();
+	void IsHeightFixEnabled(bool* bEnabled);
 	void BottomToCenterLocationWithOffset(const struct FVector& Bottom, struct FVector* Center);
 	bool ShouldStartInteracting();
-	bool STATIC_CheckLeaving(float FudgeDist, float FudgeAngle);
-	bool STATIC_ShouldKeepInteracting();
-	void STATIC_AlignToStairInstant();
+	bool CheckLeaving(float FudgeDist, float FudgeAngle);
+	bool ShouldKeepInteracting();
+	void AlignToStairInstant();
 	float CalcStopMontageTime();
-	struct FVector STATIC_GetStairAlignmentForward();
+	struct FVector GetStairAlignmentForward();
 	void PlayMontageFrom(class UAnimMontage* Montage, float Position);
 	void CalcWalkCycleFromMontageRatio(float A, bool DirUp, float* Cycle);
 	void PlayMontage(class UAnimMontage* Montage);
-	void ConsumeOutput(bool* turning, struct FVector* TurnDirection);
+	void ConsumeOutput(bool* Turning, struct FVector* TurnDirection);
 	void SetState(TEnumAsByte<EN_PC_Stair> State);
 	void rotate(const struct FVector& TargetDirection);
 	void MoveToLocation(const struct FVector& Location);
 	void GetRegularWalkCycle(float* Cycle);
-	void STATIC_EnterFSMState(TEnumAsByte<EN_PC_Stair> State);
-	class UAnimInstance* STATIC_GetABP();
+	void EnterFSMState(TEnumAsByte<EN_PC_Stair> State);
+	class UAnimInstance* GetABP();
 	void GetStairWalkCycle(class UAnimMontage* WalkLoopMontage, float* Cycle);
 	void TickFSMTransitions();
 	void TickFSMBehavior(float DeltaSeconds);

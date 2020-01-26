@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,7 @@ public:
 	class UStaticMeshComponent*                        SunkenMesh;                                               // 0x0630(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USceneComponent*                             LookAtPos;                                                // 0x0638(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBPC_MiniGameInputWaitTimer_C*               BPC_MiniGameInputWaitTimer;                               // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        _3DUI;                                                     // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        _3DUI;                                                    // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBPC_MiniGameText_C*                         BPC_MiniGameText;                                         // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBPC_MiniGame_KungFuProgress_C*              BPC_MiniGame_KungFuProgress;                              // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UChildActorComponent*                        SequenceTrans;                                            // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -147,25 +147,25 @@ public:
 	}
 
 
-	void STATIC_CheckEnabledFlagState(bool* UseFlag, bool* Enabled);
-	void STATIC_CheckFirstDetection(bool* IsFirst);
-	void STATIC_CheckBarTiming(bool* IsJust, bool* IsEx);
-	void STATIC_SetIdleMotionPlayRate();
-	ES3HelpPriority STATIC_GetHelpPriority();
+	void CheckEnabledFlagState(bool* UseFlag, bool* Enabled);
+	void CheckFirstDetection(bool* IsFirst);
+	void CheckBarTiming(bool* IsJust, bool* IsEx);
+	void SetIdleMotionPlayRate();
+	ES3HelpPriority GetHelpPriority();
 	void WaitBarUpdate(float WaitMax, bool* WaitEnd);
 	void AppendPreloadLabels(TArray<struct FName>* Labels, TArray<struct FST_MG_SupportNPCAction>* Actions);
 	void SetPreloadLabels();
 	class UMeshComponent* GetClothMeshComponent();
-	void STATIC_InitAsyncLoad(bool* dummy);
+	void InitAsyncLoad(bool* dummy);
 	void CalcDifficulty(bool* Change);
-	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void Enabled3DUISideBar(bool Enabled);
 	void Update3DUI();
-	void STATIC_SetDifficultyData();
+	void SetDifficultyData();
 	void DecideWoodId();
 	void UpdateChopCount();
 	bool IsGameFinished();
-	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
+	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
 	void UserConstructionScript();
 	void Timeline_UpdatFieldOfView__FinishedFunc();
 	void Timeline_UpdatFieldOfView__UpdateFunc();
@@ -188,7 +188,7 @@ public:
 	void ReceiveBeginPlay();
 	void GameStart();
 	void AxAction();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ResetResultMenuEvent();
 	void GameStartEvent();
 	void InputAction_ButtonRight();
@@ -200,8 +200,8 @@ public:
 	void PlayEyeCloseTimeline();
 	void EndEyeCloseTimeline();
 	void BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void STATIC_BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_ExecuteUbergraph_BP_MiniGame_Sunken2(int EntryPoint);
+	void BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void ExecuteUbergraph_BP_MiniGame_Sunken2(int EntryPoint);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,23 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
-
-// Class S3Sequencer.CineLookAtActor
-// 0x0010 (0x0338 - 0x0328)
-class ACineLookAtActor : public AActor
-{
-public:
-	class UCineLookAtComponent*                        CineLookAtComponent;                                      // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	struct FName                                       LookAtSocketName;                                         // 0x0330(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class S3Sequencer.CineLookAtActor");
-		return ptr;
-	}
-
-};
-
 
 // Class S3Sequencer.CineAnimInstance
 // 0x0060 (0x03C0 - 0x0360)
@@ -48,6 +31,23 @@ public:
 };
 
 
+// Class S3Sequencer.CineLookAtActor
+// 0x0010 (0x0338 - 0x0328)
+class ACineLookAtActor : public AActor
+{
+public:
+	class UCineLookAtComponent*                        CineLookAtComponent;                                      // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	struct FName                                       LookAtSocketName;                                         // 0x0330(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class S3Sequencer.CineLookAtActor");
+		return ptr;
+	}
+
+};
+
+
 // Class S3Sequencer.CineLookAtComponent
 // 0x0040 (0x0130 - 0x00F0)
 class UCineLookAtComponent : public UActorComponent
@@ -59,6 +59,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class S3Sequencer.CineLookAtComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class S3Sequencer.CineLookAtEyeActor
+// 0x0000 (0x0338 - 0x0338)
+class ACineLookAtEyeActor : public ACineLookAtActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class S3Sequencer.CineLookAtEyeActor");
 		return ptr;
 	}
 
@@ -97,7 +112,7 @@ public:
 
 
 	void RefreshRootMovieSceneInstance();
-	class US3LevelSequencePlayer* CreateS3LevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* InLevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings);
+	class US3LevelSequencePlayer* STATIC_CreateS3LevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* InLevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings);
 	void AttachSpawnActorToActor(class AActor* ParentActor, const struct FName& SocketName);
 	void AssignActorByTag(const struct FName& Tag, class AActor* Actor);
 };
@@ -235,21 +250,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class S3Sequencer.S3SequencerGameMode");
-		return ptr;
-	}
-
-};
-
-
-// Class S3Sequencer.CineLookAtEyeActor
-// 0x0000 (0x0338 - 0x0338)
-class ACineLookAtEyeActor : public ACineLookAtActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class S3Sequencer.CineLookAtEyeActor");
 		return ptr;
 	}
 

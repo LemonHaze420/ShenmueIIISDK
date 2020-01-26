@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,15 +25,15 @@ public:
 	}
 
 
-	void STATIC_EnabledPlayerOnDecide();
-	void STATIC_SetChooseCameraTransform();
-	void STATIC_GetRewardFeed(ES3RewardType* Type);
-	void STATIC_SetEnabledPlayerEvent(bool Enabled);
-	void STATIC_GetCamera(class UCameraComponent** newParam);
-	void STATIC_GetBetZoomTarget(class USceneComponent** newParam);
-	void STATIC_GetZoomTarget(class USceneComponent** newParam);
-	void STATIC_BindTalkEndEvent();
-	void STATIC_CreateNailEvent();
+	void EnabledPlayerOnDecide();
+	void SetChooseCameraTransform();
+	void GetRewardFeed(ES3RewardType* Type);
+	void SetEnabledPlayerEvent(bool Enabled);
+	void GetCamera(class UCameraComponent** newParam);
+	void GetBetZoomTarget(class USceneComponent** newParam);
+	void GetZoomTarget(class USceneComponent** newParam);
+	void BindTalkEndEvent();
+	void CreateNailEvent();
 };
 
 

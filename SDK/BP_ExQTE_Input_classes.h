@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,16 +27,16 @@ public:
 	}
 
 
-	void STATIC_UserConstructionScript();
-	void STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_16(const struct FKey& Key);
-	void STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_15(const struct FKey& Key);
-	void STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_14(const struct FKey& Key);
-	void STATIC_InpActEvt_MG_Right_K2Node_InputActionEvent_13(const struct FKey& Key);
-	void STATIC_InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12(const struct FKey& Key);
-	void STATIC_InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_11(const struct FKey& Key);
-	void STATIC_InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_10(const struct FKey& Key);
-	void STATIC_InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_9(const struct FKey& Key);
-	void STATIC_ExecuteUbergraph_BP_ExQTE_Input(int EntryPoint);
+	void UserConstructionScript();
+	void InpActEvt_MG_Top_K2Node_InputActionEvent_16(const struct FKey& Key);
+	void InpActEvt_MG_Bottom_K2Node_InputActionEvent_15(const struct FKey& Key);
+	void InpActEvt_MG_Left_K2Node_InputActionEvent_14(const struct FKey& Key);
+	void InpActEvt_MG_Right_K2Node_InputActionEvent_13(const struct FKey& Key);
+	void InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12(const struct FKey& Key);
+	void InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_11(const struct FKey& Key);
+	void InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_10(const struct FKey& Key);
+	void InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_9(const struct FKey& Key);
+	void ExecuteUbergraph_BP_ExQTE_Input(int EntryPoint);
 };
 
 

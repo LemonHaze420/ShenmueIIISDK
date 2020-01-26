@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,12 +39,12 @@ public:
 
 
 	void Init(int ItemNumber, class UBP_SaveData_ViewItem_C* GameData);
-	void STATIC_GameDataUpdate();
+	void GameDataUpdate();
 	void UpdateLightPosAndRot(float PosX, float PosY, float posZ, int LightNumber);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_Update(int ItemNo);
-	void STATIC_ExecuteUbergraph_BP_CaptureCameraAndLight(int EntryPoint);
+	void Update(int ItemNo);
+	void ExecuteUbergraph_BP_CaptureCameraAndLight(int EntryPoint);
 };
 
 

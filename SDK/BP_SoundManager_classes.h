@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,47 +34,47 @@ public:
 	}
 
 
-	void STATIC_EndSystemPause();
+	void EndSystemPause();
 	void BeginSystemPause();
 	void ForbidStopAll();
 	void SetTalkVolume_Impl(bool Reset);
-	void STATIC_StopWithDestroy(const struct FName& ID, bool* Destroy);
+	void StopWithDestroy(const struct FName& ID, bool* Destroy);
 	void EndCutscene_Impl();
-	void STATIC_InitCutsceneSetting(class ABP_S3SoundPlayer_C* Player, class USoundAtomCue* Cue, const struct FName& ID, ESequenceSelectorType Type);
-	void STATIC_ForceGC();
+	void InitCutsceneSetting(class ABP_S3SoundPlayer_C* Player, class USoundAtomCue* Cue, const struct FName& ID, ESequenceSelectorType Type);
+	void ForceGC();
 	void SetSelector(class ABP_S3SoundPlayer_C* Player, ESequenceSelectorType Selector);
-	void STATIC_CreateNewPlayer(class USoundAtomCue* Sound, bool AutoDestroy, bool AutoPlay, class ABP_S3SoundPlayer_C** Player);
-	void STATIC_DebugPrint();
+	void CreateNewPlayer(class USoundAtomCue* Sound, bool AutoDestroy, bool AutoPlay, class ABP_S3SoundPlayer_C** Player);
+	void DebugPrint();
 	void SetSystemVolume(ES3SoundVolume Type);
 	void CreatePlayerWithTransform(class USoundAtomCue* Sound, class USoundAttenuation* Attenuation, bool AutoDestroy, bool AutoPlay, const struct FTransform& Location, class ABP_S3SoundPlayer_C** Player);
 	void StopAll();
-	void STATIC_PlayFromSequencer_Impl(class USoundAtomCue* Cue, const struct FName& SoundId, ESequenceSelectorType Selector, float StartTime, bool OneShot, float Volume, float Pitch);
-	void STATIC_PermitPlayAll();
+	void PlayFromSequencer_Impl(class USoundAtomCue* Cue, const struct FName& SoundId, ESequenceSelectorType Selector, float StartTime, bool OneShot, float Volume, float Pitch);
+	void PermitPlayAll();
 	void GarbageCollection();
 	void SetAtomSound(class ABP_S3AtomSound_C* Atom, bool Register);
-	void STATIC_StopTimerSound(const struct FName& ID);
-	void STATIC_SetTimerSound(class ABP_S3AtomSoundTimer_C* Timer, bool Register);
-	void STATIC_CreatePlayer(class USoundAtomCue* Sound, bool AutoDestroy, bool AutoPlay, class ABP_S3SoundPlayer_C** Player);
-	void STATIC_SetPlayer(class AS3SoundPlayer* Player, bool Register);
-	void STATIC_PlayTimerSound(const struct FName& ID, const struct FS3SoundTimerParam& Param);
+	void StopTimerSound(const struct FName& ID);
+	void SetTimerSound(class ABP_S3AtomSoundTimer_C* Timer, bool Register);
+	void CreatePlayer(class USoundAtomCue* Sound, bool AutoDestroy, bool AutoPlay, class ABP_S3SoundPlayer_C** Player);
+	void SetPlayer(class AS3SoundPlayer* Player, bool Register);
+	void PlayTimerSound(const struct FName& ID, const struct FS3SoundTimerParam& Param);
 	void GetAvailableComponent(class UAtomComponent** Component);
 	void Play_Impl(class USoundAtomCue* Cue);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_Play(class USoundAtomCue* Cue);
-	void STATIC_PlayFromSequencer(class USoundAtomCue* Cue, const struct FName& SoundId, ESequenceSelectorType Selector, bool bOneShot, float StartTime, float Volume, float Pitch);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_ChangeVolume(ES3SoundVolume Type);
+	void ReceiveTick(float DeltaSeconds);
+	void Play(class USoundAtomCue* Cue);
+	void PlayFromSequencer(class USoundAtomCue* Cue, const struct FName& SoundId, ESequenceSelectorType Selector, bool bOneShot, float StartTime, float Volume, float Pitch);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ChangeVolume(ES3SoundVolume Type);
 	void StartFadeIn();
 	void EndSequenser();
-	void STATIC_SetTalkVolume(bool bReset);
+	void SetTalkVolume(bool bReset);
 	void BindFade();
-	void STATIC_ChangePlayer(class APlayerController* PlayerController);
+	void ChangePlayer(class APlayerController* PlayerController);
 	void FinishFadeOut();
 	void BeginPause();
 	void EndPause();
-	void STATIC_SetEnableFadePause(bool bEnable);
+	void SetEnableFadePause(bool bEnable);
 	void ExecuteUbergraph_BP_SoundManager(int EntryPoint);
 };
 

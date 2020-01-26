@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.SpawnInputControlActor
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_MiniGameInputBase_C* ABP_OD_Perfect_C::STATIC_SpawnInputControlActor()
+class ABP_MiniGameInputBase_C* ABP_OD_Perfect_C::SpawnInputControlActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Perfect.BP_OD_Perfect_C.SpawnInputControlActor");
 
 	ABP_OD_Perfect_C_SpawnInputControlActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,11 +35,11 @@ class ABP_MiniGameInputBase_C* ABP_OD_Perfect_C::STATIC_SpawnInputControlActor()
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.GetRewardMoney
-// (NetReliable, NetRequest, Exec, Static, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_OD_Perfect_C::STATIC_GetRewardMoney()
+int ABP_OD_Perfect_C::GetRewardMoney()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Perfect.BP_OD_Perfect_C.GetRewardMoney");
 
@@ -57,16 +56,15 @@ int ABP_OD_Perfect_C::STATIC_GetRewardMoney()
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.UserConstructionScript
-// (NetRequest, Exec, Native, Event, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_OD_Perfect_C::STATIC_UserConstructionScript()
+void ABP_OD_Perfect_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Perfect.BP_OD_Perfect_C.UserConstructionScript");
 
 	ABP_OD_Perfect_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,9 +73,9 @@ void ABP_OD_Perfect_C::STATIC_UserConstructionScript()
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.HitCheck
-// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_OD_Perfect_C::STATIC_HitCheck()
+void ABP_OD_Perfect_C::HitCheck()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Perfect.BP_OD_Perfect_C.HitCheck");
 
@@ -92,7 +90,7 @@ void ABP_OD_Perfect_C::STATIC_HitCheck()
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.ReceiveTick
-// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -104,7 +102,6 @@ void ABP_OD_Perfect_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -113,7 +110,7 @@ void ABP_OD_Perfect_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.ReceiveBeginPlay
-// (NetReliable, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_OD_Perfect_C::ReceiveBeginPlay()
 {
@@ -122,7 +119,6 @@ void ABP_OD_Perfect_C::ReceiveBeginPlay()
 	ABP_OD_Perfect_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,7 +127,7 @@ void ABP_OD_Perfect_C::ReceiveBeginPlay()
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.RestartMiniGame
-// (Net, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_OD_Perfect_C::RestartMiniGame()
 {
@@ -140,7 +136,6 @@ void ABP_OD_Perfect_C::RestartMiniGame()
 	ABP_OD_Perfect_C_RestartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,16 +144,15 @@ void ABP_OD_Perfect_C::RestartMiniGame()
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature
-// (Exec, Native, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_OD_Perfect_C::STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
+void ABP_OD_Perfect_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Perfect.BP_OD_Perfect_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature");
 
 	ABP_OD_Perfect_C_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,16 +161,15 @@ void ABP_OD_Perfect_C::STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_Compone
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_OD_Perfect_C::STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
+void ABP_OD_Perfect_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Perfect.BP_OD_Perfect_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature");
 
 	ABP_OD_Perfect_C_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -185,11 +178,11 @@ void ABP_OD_Perfect_C::STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_Compone
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.ResumeMiniGame
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_OD_Perfect_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword)
+void ABP_OD_Perfect_C::ResumeMiniGame(const struct FString& ResumeKeyword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Perfect.BP_OD_Perfect_C.ResumeMiniGame");
 
@@ -205,11 +198,11 @@ void ABP_OD_Perfect_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.OnTalkScriptEvent
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Perfect_C::STATIC_OnTalkScriptEvent(int EventNumber)
+void ABP_OD_Perfect_C::OnTalkScriptEvent(int EventNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Perfect.BP_OD_Perfect_C.OnTalkScriptEvent");
 
@@ -225,7 +218,7 @@ void ABP_OD_Perfect_C::STATIC_OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.EndMiniGame
-// (Net, NetReliable, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_OD_Perfect_C::EndMiniGame()
 {
@@ -234,7 +227,6 @@ void ABP_OD_Perfect_C::EndMiniGame()
 	ABP_OD_Perfect_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,9 +235,9 @@ void ABP_OD_Perfect_C::EndMiniGame()
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.Finalize_Check
-// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_OD_Perfect_C::STATIC_Finalize_Check()
+void ABP_OD_Perfect_C::Finalize_Check()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Perfect.BP_OD_Perfect_C.Finalize_Check");
 
@@ -260,7 +252,7 @@ void ABP_OD_Perfect_C::STATIC_Finalize_Check()
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.StartMiniGame
-// (Net, NetReliable, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_OD_Perfect_C::StartMiniGame()
 {
@@ -269,7 +261,6 @@ void ABP_OD_Perfect_C::StartMiniGame()
 	ABP_OD_Perfect_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -278,7 +269,7 @@ void ABP_OD_Perfect_C::StartMiniGame()
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.Otoshidama End
-// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           is_success                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -290,7 +281,6 @@ void ABP_OD_Perfect_C::Otoshidama_End(bool is_success)
 	params.is_success = is_success;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,7 +289,7 @@ void ABP_OD_Perfect_C::Otoshidama_End(bool is_success)
 
 
 // Function BP_OD_Perfect.BP_OD_Perfect_C.ExecuteUbergraph_BP_OD_Perfect
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

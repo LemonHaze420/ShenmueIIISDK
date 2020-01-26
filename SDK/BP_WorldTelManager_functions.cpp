@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.CheckCursorMove
-// (Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               BeforPos                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -37,11 +37,11 @@ bool ABP_WorldTelManager_C::CheckCursorMove(const struct FVector2D& BeforPos)
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.SetAddressBook
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_AddressBook_C*       AddressBook                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_SetAddressBook(class ABP_AddressBook_C* AddressBook)
+void ABP_WorldTelManager_C::SetAddressBook(class ABP_AddressBook_C* AddressBook)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.SetAddressBook");
 
@@ -49,7 +49,6 @@ void ABP_WorldTelManager_C::STATIC_SetAddressBook(class ABP_AddressBook_C* Addre
 	params.AddressBook = AddressBook;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,11 +57,11 @@ void ABP_WorldTelManager_C::STATIC_SetAddressBook(class ABP_AddressBook_C* Addre
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.SetData
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_CreateMemoTexture_C* newParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_SetData(class ABP_CreateMemoTexture_C* newParam)
+void ABP_WorldTelManager_C::SetData(class ABP_CreateMemoTexture_C* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.SetData");
 
@@ -78,11 +77,11 @@ void ABP_WorldTelManager_C::STATIC_SetData(class ABP_CreateMemoTexture_C* newPar
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.GetUseManager
-// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           UseManager                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_GetUseManager(bool* UseManager)
+void ABP_WorldTelManager_C::GetUseManager(bool* UseManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.GetUseManager");
 
@@ -100,11 +99,11 @@ void ABP_WorldTelManager_C::STATIC_GetUseManager(bool* UseManager)
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.SetUseManager
-// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           UseManager                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_SetUseManager(bool UseManager)
+void ABP_WorldTelManager_C::SetUseManager(bool UseManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.SetUseManager");
 
@@ -112,7 +111,6 @@ void ABP_WorldTelManager_C::STATIC_SetUseManager(bool UseManager)
 	params.UseManager = UseManager;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,11 +119,11 @@ void ABP_WorldTelManager_C::STATIC_SetUseManager(bool UseManager)
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.SetAddressBookPageWidgetR
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class Uwgt_AddressPage_1_C*    AddressBookPageWidgetR         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_SetAddressBookPageWidgetR(class Uwgt_AddressPage_1_C* AddressBookPageWidgetR)
+void ABP_WorldTelManager_C::SetAddressBookPageWidgetR(class Uwgt_AddressPage_1_C* AddressBookPageWidgetR)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.SetAddressBookPageWidgetR");
 
@@ -141,11 +139,11 @@ void ABP_WorldTelManager_C::STATIC_SetAddressBookPageWidgetR(class Uwgt_AddressP
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.SetEnableInput
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnableInput                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_SetEnableInput(bool bEnableInput)
+void ABP_WorldTelManager_C::SetEnableInput(bool bEnableInput)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.SetEnableInput");
 
@@ -161,7 +159,7 @@ void ABP_WorldTelManager_C::STATIC_SetEnableInput(bool bEnableInput)
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.SetAddressBookPageWidgetF
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class Uwgt_AddressPage_0_C*    AddressBookPageWidgetF         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -181,7 +179,7 @@ void ABP_WorldTelManager_C::SetAddressBookPageWidgetF(class Uwgt_AddressPage_0_C
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.UserConstructionScript
-// (Net, Exec, Native, Event, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_WorldTelManager_C::UserConstructionScript()
 {
@@ -190,7 +188,6 @@ void ABP_WorldTelManager_C::UserConstructionScript()
 	ABP_WorldTelManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -199,11 +196,11 @@ void ABP_WorldTelManager_C::UserConstructionScript()
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WorldTelManager_C::STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key)
+void ABP_WorldTelManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8");
 
@@ -219,11 +216,11 @@ void ABP_WorldTelManager_C::STATIC_InpActEvt_SearchLeftSelect_K2Node_InputAction
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7
-// (Net, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WorldTelManager_C::STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7(const struct FKey& Key)
+void ABP_WorldTelManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7");
 
@@ -239,11 +236,11 @@ void ABP_WorldTelManager_C::STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEv
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_6
-// (Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WorldTelManager_C::STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_WorldTelManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_6(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_6");
 
@@ -259,7 +256,7 @@ void ABP_WorldTelManager_C::STATIC_InpActEvt_SearchDownSelect_K2Node_InputAction
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -271,7 +268,6 @@ void ABP_WorldTelManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -280,11 +276,11 @@ void ABP_WorldTelManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.ReceiveTick
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_WorldTelManager_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.ReceiveTick");
 
@@ -300,11 +296,11 @@ void ABP_WorldTelManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.ChangeSelection
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_ChangeSelection(const struct FVector2D& Delta)
+void ABP_WorldTelManager_C::ChangeSelection(const struct FVector2D& Delta)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.ChangeSelection");
 
@@ -320,11 +316,11 @@ void ABP_WorldTelManager_C::STATIC_ChangeSelection(const struct FVector2D& Delta
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.ReceiveEndPlay
-// (Net, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_WorldTelManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.ReceiveEndPlay");
 
@@ -340,11 +336,11 @@ void ABP_WorldTelManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.SetSelectionWithSound
-// (Net, NetReliable, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               NewPos                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_SetSelectionWithSound(const struct FVector2D& NewPos)
+void ABP_WorldTelManager_C::SetSelectionWithSound(const struct FVector2D& NewPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.SetSelectionWithSound");
 
@@ -360,11 +356,11 @@ void ABP_WorldTelManager_C::STATIC_SetSelectionWithSound(const struct FVector2D&
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_1
-// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue)
+void ABP_WorldTelManager_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_1");
 
@@ -380,11 +376,11 @@ void ABP_WorldTelManager_C::STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_Inpu
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_2
-// (Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_2(float AxisValue)
+void ABP_WorldTelManager_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_2(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_2");
 
@@ -400,11 +396,11 @@ void ABP_WorldTelManager_C::STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputA
 
 
 // Function BP_WorldTelManager.BP_WorldTelManager_C.ExecuteUbergraph_BP_WorldTelManager
-// (Net, NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_WorldTelManager_C::STATIC_ExecuteUbergraph_BP_WorldTelManager(int EntryPoint)
+void ABP_WorldTelManager_C::ExecuteUbergraph_BP_WorldTelManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WorldTelManager.BP_WorldTelManager_C.ExecuteUbergraph_BP_WorldTelManager");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,19 +38,19 @@ public:
 	}
 
 
-	void STATIC_PlayMeterSound();
-	void STATIC_SetBarHighlight(class UUserWidget* bar, bool Highlight);
-	void STATIC_LerpLevelUpDisplay(float N);
+	void PlayMeterSound();
+	void SetBarHighlight(class UUserWidget* bar, bool Highlight);
+	void LerpLevelUpDisplay(float N);
 	void SetLevelUpData(const struct FST_SparringResultLevelUpData& Attack, const struct FST_SparringResultLevelUpData& Vitality, const struct FST_SparringResultLevelUpData& Player);
-	void STATIC_UpdateLevelData(class UBPW_SkillBar_C* BarWidget, class US3DerivedPlayerLevel* Stat);
+	void UpdateLevelData(class UBPW_SkillBar_C* BarWidget, class US3DerivedPlayerLevel* Stat);
 	void Update();
 	void Construct();
-	void STATIC_PreConstruct(bool IsDesignTime);
+	void PreConstruct(bool IsDesignTime);
 	void BndEvt__Bar_Attack_K2Node_ComponentBoundEvent_0_OnAnimLevelUp__DelegateSignature();
 	void BndEvt__Bar_Level_K2Node_ComponentBoundEvent_1_OnAnimLevelUp__DelegateSignature();
 	void BndEvt__Bar_Vitality_K2Node_ComponentBoundEvent_2_OnAnimLevelUp__DelegateSignature();
 	void StartLevelUpAnim();
-	void STATIC_ExecuteUbergraph_wgt_SkillTotals(int EntryPoint);
+	void ExecuteUbergraph_wgt_SkillTotals(int EntryPoint);
 	void OnLevelUpAnimationDone__DelegateSignature();
 };
 

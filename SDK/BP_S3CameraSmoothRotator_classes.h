@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,13 +37,13 @@ public:
 	}
 
 
-	void STATIC_GetYawVelocity(float* YawVelocity);
-	void STATIC_UpdateYaw(float CurrentAngle, float TargetAngle, bool AllowAcceleration, bool ForceDeaccel, float* ResultAngle);
+	void GetYawVelocity(float* YawVelocity);
+	void UpdateYaw(float CurrentAngle, float TargetAngle, bool AllowAcceleration, bool ForceDeaccel, float* ResultAngle);
 	void UpdateAxis(float CurrentAngle, float TargetAngle, float Velocity, class UCurveFloat* VelocityCurve, class UCurveFloat* AccelerationCurve, float Deaccleration, bool AllowAcceleration, bool ForceDeaccel, float* ResultAngle, float* ResultVelocity);
-	void STATIC_UpdatePitch(float CurrentAngle, float TargetAngle, bool AllowAcceleration, bool ForceDeaccel, float* ResultAngle);
-	void STATIC_Reset();
-	void STATIC_GetRealVelocity(float SourceAngle, float DestinationAngle, float IntendedVelocity, float* RealVelocity);
-	float STATIC_UpdateAngularVelocity(float CurrentAngle, float TargetAngle, float CurrentVel, class UCurveFloat* VelCurve, class UCurveFloat* AccelCurve, float Deaccel, bool EnableAccel, bool ForceDeaccel);
+	void UpdatePitch(float CurrentAngle, float TargetAngle, bool AllowAcceleration, bool ForceDeaccel, float* ResultAngle);
+	void Reset();
+	void GetRealVelocity(float SourceAngle, float DestinationAngle, float IntendedVelocity, float* RealVelocity);
+	float UpdateAngularVelocity(float CurrentAngle, float TargetAngle, float CurrentVel, class UCurveFloat* VelCurve, class UCurveFloat* AccelCurve, float Deaccel, bool EnableAccel, bool ForceDeaccel);
 	void Update(float TargetPitch, float TargetYaw, const struct FRotator& CurrentRotation, bool AllowAccel, struct FRotator* NewRotation);
 };
 

@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,8 +38,8 @@ struct UWBP_FocusSign_C_CalcOpacity_Params
 	float                                              Opacity;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function WBP_FocusSign.WBP_FocusSign_C.UpdateOpacity
-struct UWBP_FocusSign_C_UpdateOpacity_Params
+// Function WBP_FocusSign.WBP_FocusSign_C.updateOpacity
+struct UWBP_FocusSign_C_updateOpacity_Params
 {
 };
 

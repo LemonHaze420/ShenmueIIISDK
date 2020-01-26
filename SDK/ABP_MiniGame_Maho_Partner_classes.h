@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,13 +49,13 @@ public:
 
 
 	void SetAnimState(TEnumAsByte<E_MiniGame_MahoPartnerState> State);
-	void STATIC_Initialize();
+	void Initialize();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Maho_Partner_AnimGraphNode_BlendListByEnum_8D85DCA8407CB992FD18FB8DDDD876DF();
-	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
-	void STATIC_ExecuteUbergraph_ABP_MiniGame_Maho_Partner(int EntryPoint);
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void ExecuteUbergraph_ABP_MiniGame_Maho_Partner(int EntryPoint);
 	void ChangeAnimState__DelegateSignature(TEnumAsByte<E_MiniGame_MahoPartnerState> State);
-	void STATIC_TransEndFallDownDispacher__DelegateSignature();
-	void STATIC_ReStartPlayingDispacher__DelegateSignature();
+	void TransEndFallDownDispacher__DelegateSignature();
+	void ReStartPlayingDispacher__DelegateSignature();
 };
 
 

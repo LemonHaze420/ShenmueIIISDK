@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,17 +39,17 @@ public:
 	}
 
 
-	void STATIC_AddTicketItem();
+	void AddTicketItem();
 	void GetTicketItemID(TEnumAsByte<E_MiniGameBigWheelType> Type, struct FName* Name);
-	void STATIC_GetMaterial(TEnumAsByte<E_MiniGameBigWheelType> Type, class UMaterial** Value);
+	void GetMaterial(TEnumAsByte<E_MiniGameBigWheelType> Type, class UMaterial** Value);
 	void UpdateTicketFlag();
 	void SpawnSecuencePlayer(class ULevelSequence* InSequence, class AActor* AttachActor, class ABP_SpawnableSequenceActor_C** SpawnObj);
 	void UserConstructionScript();
 	void StartGetKihudaFlow(const struct FTransform& OffsetRelativeTrans);
-	void STATIC_OnFinishedGetKihuda(class ULevelSequencePlayer* LevelSequencePlayer);
+	void OnFinishedGetKihuda(class ULevelSequencePlayer* LevelSequencePlayer);
 	void OnStoppedPlayer();
-	void STATIC_ExecuteUbergraph_BP_MiniGameGetKihudaFlow(int EntryPoint);
-	void STATIC_OnEndActorFlow__DelegateSignature();
+	void ExecuteUbergraph_BP_MiniGameGetKihudaFlow(int EntryPoint);
+	void OnEndActorFlow__DelegateSignature();
 };
 
 

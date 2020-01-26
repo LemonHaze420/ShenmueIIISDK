@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetFaceButtonImageSetNoDefault
-// (NetRequest, Native, NetMulticast, Protected, NetServer, BlueprintCallable)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadFaceButtonSetAsset_C* SET                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,7 +27,6 @@ void UBP_GamePadImageSetAsset_C::GetFaceButtonImageSetNoDefault(TEnumAsByte<EFac
 	params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,7 +38,7 @@ void UBP_GamePadImageSetAsset_C::GetFaceButtonImageSetNoDefault(TEnumAsByte<EFac
 
 
 // Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetShoulderImageSet
-// (NetRequest, Exec, Native, Event, NetResponse, Public, Protected, NetServer, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TEnumAsByte<EShoulderButtonStyle> Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadShoulderSetAsset_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -52,7 +51,6 @@ class UBP_GamePadShoulderSetAsset_C* UBP_GamePadImageSetAsset_C::GetShoulderImag
 	params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,7 +61,7 @@ class UBP_GamePadShoulderSetAsset_C* UBP_GamePadImageSetAsset_C::GetShoulderImag
 
 
 // Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetDPadImageSet
-// (Net, NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EDpadButtonImageStyle> Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadFaceButtonSetAsset_C* SET                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -76,7 +74,6 @@ void UBP_GamePadImageSetAsset_C::GetDPadImageSet(TEnumAsByte<EDpadButtonImageSty
 	params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,12 +85,12 @@ void UBP_GamePadImageSetAsset_C::GetDPadImageSet(TEnumAsByte<EDpadButtonImageSty
 
 
 // Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetFaceButtonImageSet
-// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadFaceButtonSetAsset_C* SET                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GamePadImageSetAsset_C::STATIC_GetFaceButtonImageSet(TEnumAsByte<EFaceButtonImageStyle> Selection, class UBP_GamePadFaceButtonSetAsset_C** SET)
+void UBP_GamePadImageSetAsset_C::GetFaceButtonImageSet(TEnumAsByte<EFaceButtonImageStyle> Selection, class UBP_GamePadFaceButtonSetAsset_C** SET)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetFaceButtonImageSet");
 
@@ -101,7 +98,6 @@ void UBP_GamePadImageSetAsset_C::STATIC_GetFaceButtonImageSet(TEnumAsByte<EFaceB
 	params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

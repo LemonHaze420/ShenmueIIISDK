@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -39,10 +39,10 @@ public:
 	}
 
 
-	void STATIC_SetNumValue(class UTextBlock* Text, int Value);
+	void SetNumValue(class UTextBlock* Text, int Value);
 	void UpdateInfo();
 	void SetCurrentInfo(const struct FString& CurrentTopText, int RivalFlagIndex, const struct FString& CurrentTopUnit, const struct FString& RyoLocalizeName, int RyoNum);
-	void STATIC_Construct();
+	void Construct();
 	void OnRivalFlagChanged(int ArrayIndex, int SetFlags);
 	void ExecuteUbergraph_WBP_Fishing_SubQuestInfo(int EntryPoint);
 };

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_FocusSignManager.BP_FocusSignManager_C.IsEnabledPlayerState
-// (Net, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_FocusSignManager_C::STATIC_IsEnabledPlayerState()
+bool ABP_FocusSignManager_C::IsEnabledPlayerState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FocusSignManager.BP_FocusSignManager_C.IsEnabledPlayerState");
 
@@ -35,7 +35,7 @@ bool ABP_FocusSignManager_C::STATIC_IsEnabledPlayerState()
 
 
 // Function BP_FocusSignManager.BP_FocusSignManager_C.CheckMoveCamera
-// (Net, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Move                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -57,18 +57,17 @@ void ABP_FocusSignManager_C::CheckMoveCamera(bool* Move)
 
 
 // Function BP_FocusSignManager.BP_FocusSignManager_C.IsSearchSightEnabled
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsEnabled                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FocusSignManager_C::STATIC_IsSearchSightEnabled(bool* IsEnabled)
+void ABP_FocusSignManager_C::IsSearchSightEnabled(bool* IsEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FocusSignManager.BP_FocusSignManager_C.IsSearchSightEnabled");
 
 	ABP_FocusSignManager_C_IsSearchSightEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +79,7 @@ void ABP_FocusSignManager_C::STATIC_IsSearchSightEnabled(bool* IsEnabled)
 
 
 // Function BP_FocusSignManager.BP_FocusSignManager_C.UpdateWidget
-// (Exec, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_FocusSignManager_C::UpdateWidget()
 {
@@ -97,7 +96,7 @@ void ABP_FocusSignManager_C::UpdateWidget()
 
 
 // Function BP_FocusSignManager.BP_FocusSignManager_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_FocusSignManager_C::UserConstructionScript()
 {
@@ -114,7 +113,7 @@ void ABP_FocusSignManager_C::UserConstructionScript()
 
 
 // Function BP_FocusSignManager.BP_FocusSignManager_C.ReceiveBeginPlay
-// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_FocusSignManager_C::ReceiveBeginPlay()
 {
@@ -123,7 +122,6 @@ void ABP_FocusSignManager_C::ReceiveBeginPlay()
 	ABP_FocusSignManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +130,7 @@ void ABP_FocusSignManager_C::ReceiveBeginPlay()
 
 
 // Function BP_FocusSignManager.BP_FocusSignManager_C.ReceiveTick
-// (Net, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -152,7 +150,7 @@ void ABP_FocusSignManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_FocusSignManager.BP_FocusSignManager_C.ReceiveEndPlay
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -172,11 +170,11 @@ void ABP_FocusSignManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 
 
 // Function BP_FocusSignManager.BP_FocusSignManager_C.ExecuteUbergraph_BP_FocusSignManager
-// (Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FocusSignManager_C::STATIC_ExecuteUbergraph_BP_FocusSignManager(int EntryPoint)
+void ABP_FocusSignManager_C::ExecuteUbergraph_BP_FocusSignManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FocusSignManager.BP_FocusSignManager_C.ExecuteUbergraph_BP_FocusSignManager");
 
@@ -184,7 +182,6 @@ void ABP_FocusSignManager_C::STATIC_ExecuteUbergraph_BP_FocusSignManager(int Ent
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -117,6 +117,21 @@ enum class EJoinActorChangeEvent : uint8_t
 };
 
 
+// Enum Shenmue3.EComparisonKind
+enum class EComparisonKind : uint8_t
+{
+	LessThan                       = 0,
+	LessThanOrEqualTo              = 1,
+	GreaterThan                    = 2,
+	GreaterThanOrEqualTo           = 3,
+	EqualTo                        = 4,
+	NotEqualTo                     = 5,
+	And                            = 6,
+	Or                             = 7,
+	EComparisonKind_MAX            = 8
+};
+
+
 // Enum Shenmue3.EHintTarget
 enum class EHintTarget : uint8_t
 {
@@ -125,6 +140,16 @@ enum class EHintTarget : uint8_t
 	EHintTarget__Place             = 2,
 	EHintTarget__None              = 3,
 	EHintTarget__EHintTarget_MAX   = 4
+};
+
+
+// Enum Shenmue3.ES3AchievementCountType
+enum class ES3AchievementCountType : uint8_t
+{
+	ES3AchievementCountType__Shopping = 0,
+	ES3AchievementCountType__Fishing = 1,
+	ES3AchievementCountType__WoodChop = 2,
+	ES3AchievementCountType__MAX   = 3
 };
 
 
@@ -199,18 +224,13 @@ enum class ES3AchievementType : uint8_t
 };
 
 
-// Enum Shenmue3.EComparisonKind
-enum class EComparisonKind : uint8_t
+// Enum Shenmue3.ETriggerAction
+enum class ETriggerAction : uint8_t
 {
-	LessThan                       = 0,
-	LessThanOrEqualTo              = 1,
-	GreaterThan                    = 2,
-	GreaterThanOrEqualTo           = 3,
-	EqualTo                        = 4,
-	NotEqualTo                     = 5,
-	And                            = 6,
-	Or                             = 7,
-	EComparisonKind_MAX            = 8
+	ETriggerAction__None           = 0,
+	ETriggerAction__Cutscene       = 1,
+	ETriggerAction__LogBridge      = 2,
+	ETriggerAction__ETriggerAction_MAX = 3
 };
 
 
@@ -232,23 +252,26 @@ enum class ES3Where : uint8_t
 };
 
 
-// Enum Shenmue3.ES3AchievementCountType
-enum class ES3AchievementCountType : uint8_t
+// Enum Shenmue3.ES3AssetChunkId
+enum class ES3AssetChunkId : uint8_t
 {
-	ES3AchievementCountType__Shopping = 0,
-	ES3AchievementCountType__Fishing = 1,
-	ES3AchievementCountType__WoodChop = 2,
-	ES3AchievementCountType__MAX   = 3
+	ES3AssetChunkId__Title         = 0,
+	ES3AssetChunkId__Loading       = 1,
+	ES3AssetChunkId__Hakkason      = 2,
+	ES3AssetChunkId__DigestMovie   = 3,
+	ES3AssetChunkId__Chobu         = 4,
+	ES3AssetChunkId__Tourinji      = 5,
+	ES3AssetChunkId__ES3AssetChunkId_MAX = 6
 };
 
 
-// Enum Shenmue3.ETriggerAction
-enum class ETriggerAction : uint8_t
+// Enum Shenmue3.EAttentionLookScriptPlayCondition
+enum class EAttentionLookScriptPlayCondition : uint8_t
 {
-	ETriggerAction__None           = 0,
-	ETriggerAction__Cutscene       = 1,
-	ETriggerAction__LogBridge      = 2,
-	ETriggerAction__ETriggerAction_MAX = 3
+	EAttentionLookScriptPlayCondition__None = 0,
+	EAttentionLookScriptPlayCondition__Once = 1,
+	EAttentionLookScriptPlayCondition__Repeat = 2,
+	EAttentionLookScriptPlayCondition__EAttentionLookScriptPlayCondition_MAX = 3
 };
 
 
@@ -274,6 +297,21 @@ enum class EAttentionCameraDirection : uint8_t
 };
 
 
+// Enum Shenmue3.EAttentionCondition
+enum class EAttentionCondition : uint8_t
+{
+	EAttentionCondition__None      = 0,
+	EAttentionCondition__Force     = 1,
+	EAttentionCondition__Backer    = 2,
+	EAttentionCondition__Backer_IamShenmue = 3,
+	EAttentionCondition__Backer_DreamsComeTrue = 4,
+	EAttentionCondition__Backer_Senjafuda = 5,
+	EAttentionCondition__Backer_Flower = 6,
+	EAttentionCondition__EventStep = 7,
+	EAttentionCondition__EAttentionCondition_MAX = 8
+};
+
+
 // Enum Shenmue3.EBgmPriority
 enum class EBgmPriority : uint8_t
 {
@@ -288,44 +326,6 @@ enum class EBgmPriority : uint8_t
 	EBgmPriority__UI               = 8,
 	EBgmPriority__Force            = 9,
 	EBgmPriority__EBgmPriority_MAX = 10
-};
-
-
-// Enum Shenmue3.ES3AssetChunkId
-enum class ES3AssetChunkId : uint8_t
-{
-	ES3AssetChunkId__Title         = 0,
-	ES3AssetChunkId__Loading       = 1,
-	ES3AssetChunkId__Hakkason      = 2,
-	ES3AssetChunkId__DigestMovie   = 3,
-	ES3AssetChunkId__Chobu         = 4,
-	ES3AssetChunkId__Tourinji      = 5,
-	ES3AssetChunkId__ES3AssetChunkId_MAX = 6
-};
-
-
-// Enum Shenmue3.ES3BootState
-enum class ES3BootState : uint8_t
-{
-	ES3BootState__Init             = 0,
-	ES3BootState__Login            = 1,
-	ES3BootState__Finish           = 2,
-	ES3BootState__ES3BootState_MAX = 3
-};
-
-
-// Enum Shenmue3.EAttentionCondition
-enum class EAttentionCondition : uint8_t
-{
-	EAttentionCondition__None      = 0,
-	EAttentionCondition__Force     = 1,
-	EAttentionCondition__Backer    = 2,
-	EAttentionCondition__Backer_IamShenmue = 3,
-	EAttentionCondition__Backer_DreamsComeTrue = 4,
-	EAttentionCondition__Backer_Senjafuda = 5,
-	EAttentionCondition__Backer_Flower = 6,
-	EAttentionCondition__EventStep = 7,
-	EAttentionCondition__EAttentionCondition_MAX = 8
 };
 
 
@@ -350,13 +350,15 @@ enum class ES3NPCStreamingState : uint8_t
 };
 
 
-// Enum Shenmue3.ES3NPCMeshState
-enum class ES3NPCMeshState : uint8_t
+// Enum Shenmue3.ECharaSensorFlag
+enum class ECharaSensorFlag : uint8_t
 {
-	ES3NPCMeshState__Near          = 0,
-	ES3NPCMeshState__FarInterval   = 1,
-	ES3NPCMeshState__FarDisable    = 2,
-	ES3NPCMeshState__ES3NPCMeshState_MAX = 3
+	ECharaSensorFlag__General      = 0,
+	ECharaSensorFlag__Input        = 1,
+	ECharaSensorFlag__Ground       = 2,
+	ECharaSensorFlag__Obstacle     = 3,
+	ECharaSensorFlag__Num          = 4,
+	ECharaSensorFlag__ECharaSensorFlag_MAX = 5
 };
 
 
@@ -383,13 +385,13 @@ enum class ES3CharaLightingMode : uint8_t
 };
 
 
-// Enum Shenmue3.ES3CharaLightRequestType
-enum class ES3CharaLightRequestType : uint8_t
+// Enum Shenmue3.ES3NPCMeshState
+enum class ES3NPCMeshState : uint8_t
 {
-	ES3CharaLightRequestType__None = 0,
-	ES3CharaLightRequestType__OnlyOnce = 1,
-	ES3CharaLightRequestType__ContinueToUse = 2,
-	ES3CharaLightRequestType__ES3CharaLightRequestType_MAX = 3
+	ES3NPCMeshState__Near          = 0,
+	ES3NPCMeshState__FarInterval   = 1,
+	ES3NPCMeshState__FarDisable    = 2,
+	ES3NPCMeshState__ES3NPCMeshState_MAX = 3
 };
 
 
@@ -399,39 +401,6 @@ enum class ES3CharaLightRoom : uint8_t
 	ES3CharaLightRoom__Indoor      = 0,
 	ES3CharaLightRoom__Outdoor     = 1,
 	ES3CharaLightRoom__ES3CharaLightRoom_MAX = 2
-};
-
-
-// Enum Shenmue3.ES3CharaMainLightType
-enum class ES3CharaMainLightType : uint8_t
-{
-	ES3CharaMainLightType__None    = 0,
-	ES3CharaMainLightType__BacklightingRight = 1,
-	ES3CharaMainLightType__BacklightingLeft = 2,
-	ES3CharaMainLightType__ForwardlightingRight = 3,
-	ES3CharaMainLightType__ForwardlightingLeft = 4,
-	ES3CharaMainLightType__ES3CharaMainLightType_MAX = 5
-};
-
-
-// Enum Shenmue3.EClipperSourceType
-enum class EClipperSourceType : uint8_t
-{
-	EClipperSourceType__Automation = 0,
-	EClipperSourceType__Other      = 1,
-	EClipperSourceType__EClipperSourceType_MAX = 2
-};
-
-
-// Enum Shenmue3.ECharaSensorFlag
-enum class ECharaSensorFlag : uint8_t
-{
-	ECharaSensorFlag__General      = 0,
-	ECharaSensorFlag__Input        = 1,
-	ECharaSensorFlag__Ground       = 2,
-	ECharaSensorFlag__Obstacle     = 3,
-	ECharaSensorFlag__Num          = 4,
-	ECharaSensorFlag__ECharaSensorFlag_MAX = 5
 };
 
 
@@ -448,12 +417,34 @@ enum class ES3CharaLightOrientation : uint8_t
 };
 
 
-// Enum Shenmue3.ES3CutSceneTimeSchduleType
-enum class ES3CutSceneTimeSchduleType : uint8_t
+// Enum Shenmue3.EClipperSourceType
+enum class EClipperSourceType : uint8_t
 {
-	ES3CutSceneTimeSchduleType__Resident = 0,
-	ES3CutSceneTimeSchduleType__OnTime = 1,
-	ES3CutSceneTimeSchduleType__ES3CutSceneTimeSchduleType_MAX = 2
+	EClipperSourceType__Automation = 0,
+	EClipperSourceType__Other      = 1,
+	EClipperSourceType__EClipperSourceType_MAX = 2
+};
+
+
+// Enum Shenmue3.ES3CharaLightRequestType
+enum class ES3CharaLightRequestType : uint8_t
+{
+	ES3CharaLightRequestType__None = 0,
+	ES3CharaLightRequestType__OnlyOnce = 1,
+	ES3CharaLightRequestType__ContinueToUse = 2,
+	ES3CharaLightRequestType__ES3CharaLightRequestType_MAX = 3
+};
+
+
+// Enum Shenmue3.ES3CharaMainLightType
+enum class ES3CharaMainLightType : uint8_t
+{
+	ES3CharaMainLightType__None    = 0,
+	ES3CharaMainLightType__BacklightingRight = 1,
+	ES3CharaMainLightType__BacklightingLeft = 2,
+	ES3CharaMainLightType__ForwardlightingRight = 3,
+	ES3CharaMainLightType__ForwardlightingLeft = 4,
+	ES3CharaMainLightType__ES3CharaMainLightType_MAX = 5
 };
 
 
@@ -497,16 +488,12 @@ enum class ES3ActionIconType : uint8_t
 };
 
 
-// Enum Shenmue3.ES3CharaMeshType
-enum class ES3CharaMeshType : uint8_t
+// Enum Shenmue3.ES3Platform
+enum class ES3Platform : uint8_t
 {
-	ES3CharaMeshType__Adventure    = 0,
-	ES3CharaMeshType__Indoor       = 1,
-	ES3CharaMeshType__Search       = 2,
-	ES3CharaMeshType__Battle       = 3,
-	ES3CharaMeshType__NoSwayBone   = 4,
-	ES3CharaMeshType__None         = 5,
-	ES3CharaMeshType__ES3CharaMeshType_MAX = 6
+	ES3Platform__Windows           = 0,
+	ES3Platform__PS4               = 1,
+	ES3Platform__ES3Platform_MAX   = 2
 };
 
 
@@ -525,6 +512,15 @@ enum class ES3DojoRank : uint8_t
 	ES3DojoRank__Rank9             = 9,
 	ES3DojoRank__Rank10            = 10,
 	ES3DojoRank__ES3DojoRank_MAX   = 11
+};
+
+
+// Enum Shenmue3.ES3CutSceneTimeSchduleType
+enum class ES3CutSceneTimeSchduleType : uint8_t
+{
+	ES3CutSceneTimeSchduleType__Resident = 0,
+	ES3CutSceneTimeSchduleType__OnTime = 1,
+	ES3CutSceneTimeSchduleType__ES3CutSceneTimeSchduleType_MAX = 2
 };
 
 
@@ -555,29 +551,6 @@ enum class ES3DownloadableContentId : uint8_t
 	ES3DownloadableContentId__DLC_CasinoShip = 21,
 	ES3DownloadableContentId__DLC_BattleRally = 22,
 	ES3DownloadableContentId__MAX  = 23
-};
-
-
-// Enum Shenmue3.ES3Platform
-enum class ES3Platform : uint8_t
-{
-	ES3Platform__Windows           = 0,
-	ES3Platform__PS4               = 1,
-	ES3Platform__ES3Platform_MAX   = 2
-};
-
-
-// Enum Shenmue3.EMouseShape
-enum class EMouseShape : uint8_t
-{
-	EMouseShape__None              = 0,
-	EMouseShape__A                 = 1,
-	EMouseShape__I                 = 2,
-	EMouseShape__U                 = 3,
-	EMouseShape__E                 = 4,
-	EMouseShape__O                 = 5,
-	EMouseShape__Silent            = 6,
-	EMouseShape__EMouseShape_MAX   = 7
 };
 
 
@@ -616,6 +589,30 @@ enum class EPausePriority : uint8_t
 };
 
 
+// Enum Shenmue3.EMouseShape
+enum class EMouseShape : uint8_t
+{
+	EMouseShape__None              = 0,
+	EMouseShape__A                 = 1,
+	EMouseShape__I                 = 2,
+	EMouseShape__U                 = 3,
+	EMouseShape__E                 = 4,
+	EMouseShape__O                 = 5,
+	EMouseShape__Silent            = 6,
+	EMouseShape__EMouseShape_MAX   = 7
+};
+
+
+// Enum Shenmue3.ES3GameTimeMode
+enum class ES3GameTimeMode : uint8_t
+{
+	ES3GameTimeMode__None          = 0,
+	ES3GameTimeMode__DayTime       = 1,
+	ES3GameTimeMode__ShopTime      = 2,
+	ES3GameTimeMode__ES3GameTimeMode_MAX = 3
+};
+
+
 // Enum Shenmue3.ELeaveDirection
 enum class ELeaveDirection : uint8_t
 {
@@ -628,17 +625,6 @@ enum class ELeaveDirection : uint8_t
 	ELeaveDirection__RBACKWARD     = 6,
 	ELeaveDirection__REAR          = 7,
 	ELeaveDirection__ELeaveDirection_MAX = 8
-};
-
-
-// Enum Shenmue3.EChairDirection
-enum class EChairDirection : uint8_t
-{
-	EChairDirection__XPLUS         = 0,
-	EChairDirection__YPLUS         = 1,
-	EChairDirection__XMINUS        = 2,
-	EChairDirection__YMINUS        = 3,
-	EChairDirection__EChairDirection_MAX = 4
 };
 
 
@@ -678,6 +664,17 @@ enum class ES3GraphicPreset : uint8_t
 };
 
 
+// Enum Shenmue3.EChairDirection
+enum class EChairDirection : uint8_t
+{
+	EChairDirection__XPLUS         = 0,
+	EChairDirection__YPLUS         = 1,
+	EChairDirection__XMINUS        = 2,
+	EChairDirection__YMINUS        = 3,
+	EChairDirection__EChairDirection_MAX = 4
+};
+
+
 // Enum Shenmue3.ES3HelpPriority
 enum class ES3HelpPriority : uint8_t
 {
@@ -687,15 +684,6 @@ enum class ES3HelpPriority : uint8_t
 	ES3HelpPriority__Low           = 3,
 	ES3HelpPriority__VeryLow       = 4,
 	ES3HelpPriority__ES3HelpPriority_MAX = 5
-};
-
-
-// Enum Shenmue3.ES3HelpRegisterTiming
-enum class ES3HelpRegisterTiming : uint8_t
-{
-	ES3HelpRegisterTiming__None    = 0,
-	ES3HelpRegisterTiming__AddDetect = 1,
-	ES3HelpRegisterTiming__ES3HelpRegisterTiming_MAX = 2
 };
 
 
@@ -709,53 +697,22 @@ enum class ES3DialogType : uint8_t
 };
 
 
-// Enum Shenmue3.ES3GameTimeMode
-enum class ES3GameTimeMode : uint8_t
+// Enum Shenmue3.ES3BootState
+enum class ES3BootState : uint8_t
 {
-	ES3GameTimeMode__None          = 0,
-	ES3GameTimeMode__DayTime       = 1,
-	ES3GameTimeMode__ShopTime      = 2,
-	ES3GameTimeMode__ES3GameTimeMode_MAX = 3
+	ES3BootState__Init             = 0,
+	ES3BootState__Login            = 1,
+	ES3BootState__Finish           = 2,
+	ES3BootState__ES3BootState_MAX = 3
 };
 
 
-// Enum Shenmue3.ES3InputDeviceModel
-enum class ES3InputDeviceModel : uint8_t
+// Enum Shenmue3.ES3HelpRegisterTiming
+enum class ES3HelpRegisterTiming : uint8_t
 {
-	ES3InputDeviceModel__None      = 0,
-	ES3InputDeviceModel__Gamepad_DS4 = 1,
-	ES3InputDeviceModel__Gamepad_XBox = 2,
-	ES3InputDeviceModel__Keyboard_Generic = 3,
-	ES3InputDeviceModel__ES3InputDeviceModel_MAX = 4
-};
-
-
-// Enum Shenmue3.EAttentionLookScriptPlayCondition
-enum class EAttentionLookScriptPlayCondition : uint8_t
-{
-	EAttentionLookScriptPlayCondition__None = 0,
-	EAttentionLookScriptPlayCondition__Once = 1,
-	EAttentionLookScriptPlayCondition__Repeat = 2,
-	EAttentionLookScriptPlayCondition__EAttentionLookScriptPlayCondition_MAX = 3
-};
-
-
-// Enum Shenmue3.ES3ItemEffectTarget
-enum class ES3ItemEffectTarget : uint8_t
-{
-	ES3ItemEffectTarget__None      = 0,
-	ES3ItemEffectTarget__Stamina   = 1,
-	ES3ItemEffectTarget__HP        = 2,
-	ES3ItemEffectTarget__ES3ItemEffectTarget_MAX = 3
-};
-
-
-// Enum Shenmue3.ES3ItemDataRarity
-enum class ES3ItemDataRarity : uint8_t
-{
-	ES3ItemDataRarity__Valuable    = 0,
-	ES3ItemDataRarity__General     = 1,
-	ES3ItemDataRarity__ES3ItemDataRarity_MAX = 2
+	ES3HelpRegisterTiming__None    = 0,
+	ES3HelpRegisterTiming__AddDetect = 1,
+	ES3HelpRegisterTiming__ES3HelpRegisterTiming_MAX = 2
 };
 
 
@@ -770,38 +727,6 @@ enum class ES3InteractionFacing : uint8_t
 };
 
 
-// Enum Shenmue3.ES3ItemDataKind
-enum class ES3ItemDataKind : uint8_t
-{
-	ES3ItemDataKind__Small         = 0,
-	ES3ItemDataKind__Big           = 1,
-	ES3ItemDataKind__Paper         = 2,
-	ES3ItemDataKind__Book          = 3,
-	ES3ItemDataKind__ES3ItemDataKind_MAX = 4
-};
-
-
-// Enum Shenmue3.ES3ItemDataGroup
-enum class ES3ItemDataGroup : uint8_t
-{
-	ES3ItemDataGroup__General      = 0,
-	ES3ItemDataGroup__Gacha        = 1,
-	ES3ItemDataGroup__Food         = 2,
-	ES3ItemDataGroup__SkillBook    = 3,
-	ES3ItemDataGroup__Prize        = 4,
-	ES3ItemDataGroup__GachaSet     = 5,
-	ES3ItemDataGroup__FishingSet   = 6,
-	ES3ItemDataGroup__CrudeDrugSet = 7,
-	ES3ItemDataGroup__CrudeDrug    = 8,
-	ES3ItemDataGroup__ChangeSet    = 9,
-	ES3ItemDataGroup__ShopCard     = 10,
-	ES3ItemDataGroup__CangeCloth   = 11,
-	ES3ItemDataGroup__RewardGacha  = 12,
-	ES3ItemDataGroup__Cloth        = 13,
-	ES3ItemDataGroup__ES3ItemDataGroup_MAX = 14
-};
-
-
 // Enum Shenmue3.ES3InteractionShape
 enum class ES3InteractionShape : uint8_t
 {
@@ -812,19 +737,34 @@ enum class ES3InteractionShape : uint8_t
 };
 
 
-// Enum Shenmue3.ES3LoadingType
-enum class ES3LoadingType : uint8_t
+// Enum Shenmue3.ES3InputDeviceModel
+enum class ES3InputDeviceModel : uint8_t
 {
-	ES3LoadingType__Cave           = 0,
-	ES3LoadingType__Hakkason1      = 1,
-	ES3LoadingType__Hakkason2      = 2,
-	ES3LoadingType__Chobu          = 3,
-	ES3LoadingType__ChobuRyosya    = 4,
-	ES3LoadingType__Bushindo       = 5,
-	ES3LoadingType__En             = 6,
-	ES3LoadingType__Common         = 7,
-	ES3LoadingType__None           = 8,
-	ES3LoadingType__ES3LoadingType_MAX = 9
+	ES3InputDeviceModel__None      = 0,
+	ES3InputDeviceModel__Gamepad_DS4 = 1,
+	ES3InputDeviceModel__Gamepad_XBox = 2,
+	ES3InputDeviceModel__Keyboard_Generic = 3,
+	ES3InputDeviceModel__ES3InputDeviceModel_MAX = 4
+};
+
+
+// Enum Shenmue3.ES3ItemDataRarity
+enum class ES3ItemDataRarity : uint8_t
+{
+	ES3ItemDataRarity__Valuable    = 0,
+	ES3ItemDataRarity__General     = 1,
+	ES3ItemDataRarity__ES3ItemDataRarity_MAX = 2
+};
+
+
+// Enum Shenmue3.ES3ItemDataKind
+enum class ES3ItemDataKind : uint8_t
+{
+	ES3ItemDataKind__Small         = 0,
+	ES3ItemDataKind__Big           = 1,
+	ES3ItemDataKind__Paper         = 2,
+	ES3ItemDataKind__Book          = 3,
+	ES3ItemDataKind__ES3ItemDataKind_MAX = 4
 };
 
 
@@ -851,6 +791,57 @@ enum class ES3ItemListMenuType : uint8_t
 };
 
 
+// Enum Shenmue3.ES3LightChannelType
+enum class ES3LightChannelType : uint8_t
+{
+	ES3LightChannelType__Default   = 0,
+	ES3LightChannelType__CharaOnly = 1,
+	ES3LightChannelType__BackgroundOnly = 2,
+	ES3LightChannelType__DefaultAndChara = 3,
+	ES3LightChannelType__DefaultAndBackground = 4,
+	ES3LightChannelType__CharaAndBackground = 5,
+	ES3LightChannelType__All       = 6,
+	ES3LightChannelType__Max       = 7
+};
+
+
+// Enum Shenmue3.ES3ItemDataGroup
+enum class ES3ItemDataGroup : uint8_t
+{
+	ES3ItemDataGroup__General      = 0,
+	ES3ItemDataGroup__Gacha        = 1,
+	ES3ItemDataGroup__Food         = 2,
+	ES3ItemDataGroup__SkillBook    = 3,
+	ES3ItemDataGroup__Prize        = 4,
+	ES3ItemDataGroup__GachaSet     = 5,
+	ES3ItemDataGroup__FishingSet   = 6,
+	ES3ItemDataGroup__CrudeDrugSet = 7,
+	ES3ItemDataGroup__CrudeDrug    = 8,
+	ES3ItemDataGroup__ChangeSet    = 9,
+	ES3ItemDataGroup__ShopCard     = 10,
+	ES3ItemDataGroup__CangeCloth   = 11,
+	ES3ItemDataGroup__RewardGacha  = 12,
+	ES3ItemDataGroup__Cloth        = 13,
+	ES3ItemDataGroup__ES3ItemDataGroup_MAX = 14
+};
+
+
+// Enum Shenmue3.ES3LoadingType
+enum class ES3LoadingType : uint8_t
+{
+	ES3LoadingType__Cave           = 0,
+	ES3LoadingType__Hakkason1      = 1,
+	ES3LoadingType__Hakkason2      = 2,
+	ES3LoadingType__Chobu          = 3,
+	ES3LoadingType__ChobuRyosya    = 4,
+	ES3LoadingType__Bushindo       = 5,
+	ES3LoadingType__En             = 6,
+	ES3LoadingType__Common         = 7,
+	ES3LoadingType__None           = 8,
+	ES3LoadingType__ES3LoadingType_MAX = 9
+};
+
+
 // Enum Shenmue3.TabList
 enum class ETabList : uint8_t
 {
@@ -861,6 +852,29 @@ enum class ETabList : uint8_t
 	Map                            = 4,
 	TEL                            = 5,
 	TabList_MAX                    = 6
+};
+
+
+// Enum Shenmue3.TabMaxPage
+enum class ETabMaxPage : uint8_t
+{
+	HAKKASONMAX                    = 0,
+	CHOBUMAX                       = 1,
+	REQUESTMAX                     = 2,
+	INFOMAX                        = 3,
+	MAPMAX                         = 4,
+	TELMAX                         = 5,
+	TabMaxPage_MAX                 = 6
+};
+
+
+// Enum Shenmue3.ES3ItemEffectTarget
+enum class ES3ItemEffectTarget : uint8_t
+{
+	ES3ItemEffectTarget__None      = 0,
+	ES3ItemEffectTarget__Stamina   = 1,
+	ES3ItemEffectTarget__HP        = 2,
+	ES3ItemEffectTarget__ES3ItemEffectTarget_MAX = 3
 };
 
 
@@ -878,16 +892,38 @@ enum class ES3StaticMeshMergeMode : uint8_t
 };
 
 
-// Enum Shenmue3.TabMaxPage
-enum class ETabMaxPage : uint8_t
+// Enum Shenmue3.Enum_QTETitleCommand
+enum class Enum_QTETitleCommand : uint8_t
 {
-	HAKKASONMAX                    = 0,
-	CHOBUMAX                       = 1,
-	REQUESTMAX                     = 2,
-	INFOMAX                        = 3,
-	MAPMAX                         = 4,
-	TELMAX                         = 5,
-	TabMaxPage_MAX                 = 6
+	Enum_QTETitleCommand__VE_Left  = 0,
+	Enum_QTETitleCommand__VE_Middle = 1,
+	Enum_QTETitleCommand__VE_Right = 2,
+	Enum_QTETitleCommand__VE_LeftMiddle = 3,
+	Enum_QTETitleCommand__VE_LeftRight = 4,
+	Enum_QTETitleCommand__VE_MiddleRight = 5,
+	Enum_QTETitleCommand__VE_LeftMiddleRight = 6,
+	Enum_QTETitleCommand__VE_LeftRightMiddle = 7,
+	Enum_QTETitleCommand__VE_RightMiddle = 8,
+	Enum_QTETitleCommand__VE_MiddleLeft = 9,
+	Enum_QTETitleCommand__VE_RightLeft = 10,
+	Enum_QTETitleCommand__VE_RightMiddleLeft = 11,
+	Enum_QTETitleCommand__VE_RightLeftMiddle = 12,
+	Enum_QTETitleCommand__VE_MiddleRightLeft = 13,
+	Enum_QTETitleCommand__VE_MiddleLeftRight = 14,
+	Enum_QTETitleCommand__VE_LeftAndMiddle = 15,
+	Enum_QTETitleCommand__VE_LeftAndRight = 16,
+	Enum_QTETitleCommand__VE_MiddleAndRight = 17,
+	Enum_QTETitleCommand__VE_LeftAndMiddleAndRight = 18,
+	Enum_QTETitleCommand__VE_MAX   = 19
+};
+
+
+// Enum Shenmue3.EStairDirection
+enum class EStairDirection : uint8_t
+{
+	STAIRS_UP                      = 0,
+	STAIRS_DOWN                    = 1,
+	STAIRS_MAX                     = 2
 };
 
 
@@ -902,63 +938,12 @@ enum class Enum_QTETitlePlayList : uint8_t
 };
 
 
-// Enum Shenmue3.EStairDirection
-enum class EStairDirection : uint8_t
-{
-	STAIRS_UP                      = 0,
-	STAIRS_DOWN                    = 1,
-	STAIRS_MAX                     = 2
-};
-
-
-// Enum Shenmue3.ES3LightChannelType
-enum class ES3LightChannelType : uint8_t
-{
-	ES3LightChannelType__Default   = 0,
-	ES3LightChannelType__CharaOnly = 1,
-	ES3LightChannelType__BackgroundOnly = 2,
-	ES3LightChannelType__DefaultAndChara = 3,
-	ES3LightChannelType__DefaultAndBackground = 4,
-	ES3LightChannelType__CharaAndBackground = 5,
-	ES3LightChannelType__All       = 6,
-	ES3LightChannelType__Max       = 7
-};
-
-
 // Enum Shenmue3.ENpcDebugAction
 enum class ENpcDebugAction : uint8_t
 {
 	ENpcDebugAction__None          = 0,
 	ENpcDebugAction__FadeTeleport  = 1,
 	ENpcDebugAction__ENpcDebugAction_MAX = 2
-};
-
-
-// Enum Shenmue3.ENpcDebug
-enum class ENpcDebug : uint8_t
-{
-	ENpcDebug__None                = 0,
-	ENpcDebug__ShowName            = 1,
-	ENpcDebug__ShowText            = 2,
-	ENpcDebug__ShowLog             = 3,
-	ENpcDebug__ShowErrorCheck      = 4,
-	ENpcDebug__ShowTalk            = 5,
-	ENpcDebug__ShowLine            = 6,
-	ENpcDebug__ShowStairs          = 7,
-	ENpcDebug__ShowFar             = 8,
-	ENpcDebug__ShowPosCorrection   = 9,
-	ENpcDebug__ShowPOI             = 10,
-	ENpcDebug__ShowFadeTeleport    = 11,
-	ENpcDebug__ShowTurn            = 12,
-	ENpcDebug__ShowFurimuki        = 13,
-	ENpcDebug__ShowLoad            = 14,
-	ENpcDebug__ShowRoot            = 15,
-	ENpcDebug__ShowAnimation       = 16,
-	ENpcDebug__ShowDoor            = 17,
-	ENpcDebug__ShowFriendship      = 18,
-	ENpcDebug__ShowPreload         = 19,
-	ENpcDebug__ShowCoupleBench     = 20,
-	ENpcDebug__ENpcDebug_MAX       = 21
 };
 
 
@@ -988,6 +973,19 @@ enum class EScriptState : uint8_t
 	EScriptState__SitGround        = 6,
 	EScriptState__CanNotTalk       = 7,
 	EScriptState__EScriptState_MAX = 8
+};
+
+
+// Enum Shenmue3.ES3CharaMeshType
+enum class ES3CharaMeshType : uint8_t
+{
+	ES3CharaMeshType__Adventure    = 0,
+	ES3CharaMeshType__Indoor       = 1,
+	ES3CharaMeshType__Search       = 2,
+	ES3CharaMeshType__Battle       = 3,
+	ES3CharaMeshType__NoSwayBone   = 4,
+	ES3CharaMeshType__None         = 5,
+	ES3CharaMeshType__ES3CharaMeshType_MAX = 6
 };
 
 
@@ -1022,26 +1020,31 @@ enum class EFurimukiOnTalk : uint8_t
 };
 
 
-// Enum Shenmue3.EPendingIdle
-enum class EPendingIdle : uint8_t
+// Enum Shenmue3.ENpcDebug
+enum class ENpcDebug : uint8_t
 {
-	EPendingIdle__Standing         = 0,
-	EPendingIdle__Sit              = 1,
-	EPendingIdle__ForceSitForward  = 2,
-	EPendingIdle__ForceSitLeft     = 3,
-	EPendingIdle__ForceSitRight    = 4,
-	EPendingIdle__EPendingIdle_MAX = 5
-};
-
-
-// Enum Shenmue3.EPositionCorrectionMode
-enum class EPositionCorrectionMode : uint8_t
-{
-	EPositionCorrectionMode__Mode_None = 0,
-	EPositionCorrectionMode__Mode_Location = 1,
-	EPositionCorrectionMode__Mode_Yaw = 2,
-	EPositionCorrectionMode__Mode_LocationAndYaw = 3,
-	EPositionCorrectionMode__Mode_MAX = 4
+	ENpcDebug__None                = 0,
+	ENpcDebug__ShowName            = 1,
+	ENpcDebug__ShowText            = 2,
+	ENpcDebug__ShowLog             = 3,
+	ENpcDebug__ShowErrorCheck      = 4,
+	ENpcDebug__ShowTalk            = 5,
+	ENpcDebug__ShowLine            = 6,
+	ENpcDebug__ShowStairs          = 7,
+	ENpcDebug__ShowFar             = 8,
+	ENpcDebug__ShowPosCorrection   = 9,
+	ENpcDebug__ShowPOI             = 10,
+	ENpcDebug__ShowFadeTeleport    = 11,
+	ENpcDebug__ShowTurn            = 12,
+	ENpcDebug__ShowFurimuki        = 13,
+	ENpcDebug__ShowLoad            = 14,
+	ENpcDebug__ShowRoot            = 15,
+	ENpcDebug__ShowAnimation       = 16,
+	ENpcDebug__ShowDoor            = 17,
+	ENpcDebug__ShowFriendship      = 18,
+	ENpcDebug__ShowPreload         = 19,
+	ENpcDebug__ShowCoupleBench     = 20,
+	ENpcDebug__ENpcDebug_MAX       = 21
 };
 
 
@@ -1106,15 +1109,18 @@ enum class ELocomotionState : uint8_t
 	ELocomotionState__ELocomotionState_MAX = 22
 };
 
-enum class EBattleAttackInput : uint8_t
+
+// Enum Shenmue3.EPositionCorrectionMode
+enum class EPositionCorrectionMode : uint8_t
 {
-	EBattleAttackInput__NewEnumerator6 = 0,
-	EBattleAttackInput__NewEnumerator0 = 1,
-	EBattleAttackInput__NewEnumerator1 = 2,
-	EBattleAttackInput__NewEnumerator7 = 3,
-	EBattleAttackInput__NewEnumerator8 = 4,
-	EBattleAttackInput__EBattleAttackInput_MAX = 5
+	EPositionCorrectionMode__Mode_None = 0,
+	EPositionCorrectionMode__Mode_Location = 1,
+	EPositionCorrectionMode__Mode_Yaw = 2,
+	EPositionCorrectionMode__Mode_LocationAndYaw = 3,
+	EPositionCorrectionMode__Mode_MAX = 4
 };
+
+
 // Enum Shenmue3.ENPCAttachSettingType
 enum class ENPCAttachSettingType : uint8_t
 {
@@ -1137,15 +1143,6 @@ enum class EHaveItemCharType : uint8_t
 };
 
 
-// Enum Shenmue3.ENPCAttachFrom
-enum class ENPCAttachFrom : uint8_t
-{
-	ENPCAttachFrom__FromAnimation  = 0,
-	ENPCAttachFrom__FromDefinition = 1,
-	ENPCAttachFrom__ENPCAttachFrom_MAX = 2
-};
-
-
 // Enum Shenmue3.EHaveItem
 enum class EHaveItem : uint8_t
 {
@@ -1159,15 +1156,6 @@ enum class EHaveItem : uint8_t
 };
 
 
-// Enum Shenmue3.ENpcCheckState
-enum class ENpcCheckState : uint8_t
-{
-	ENpcCheckState__None           = 0,
-	ENpcCheckState__InTheIrori     = 1,
-	ENpcCheckState__ENpcCheckState_MAX = 2
-};
-
-
 // Enum Shenmue3.EChangeBody
 enum class EChangeBody : uint8_t
 {
@@ -1178,29 +1166,24 @@ enum class EChangeBody : uint8_t
 };
 
 
-// Enum Shenmue3.Enum_QTETitleCommand
-enum class Enum_QTETitleCommand : uint8_t
+// Enum Shenmue3.ENpcCheckState
+enum class ENpcCheckState : uint8_t
 {
-	Enum_QTETitleCommand__VE_Left  = 0,
-	Enum_QTETitleCommand__VE_Middle = 1,
-	Enum_QTETitleCommand__VE_Right = 2,
-	Enum_QTETitleCommand__VE_LeftMiddle = 3,
-	Enum_QTETitleCommand__VE_LeftRight = 4,
-	Enum_QTETitleCommand__VE_MiddleRight = 5,
-	Enum_QTETitleCommand__VE_LeftMiddleRight = 6,
-	Enum_QTETitleCommand__VE_LeftRightMiddle = 7,
-	Enum_QTETitleCommand__VE_RightMiddle = 8,
-	Enum_QTETitleCommand__VE_MiddleLeft = 9,
-	Enum_QTETitleCommand__VE_RightLeft = 10,
-	Enum_QTETitleCommand__VE_RightMiddleLeft = 11,
-	Enum_QTETitleCommand__VE_RightLeftMiddle = 12,
-	Enum_QTETitleCommand__VE_MiddleRightLeft = 13,
-	Enum_QTETitleCommand__VE_MiddleLeftRight = 14,
-	Enum_QTETitleCommand__VE_LeftAndMiddle = 15,
-	Enum_QTETitleCommand__VE_LeftAndRight = 16,
-	Enum_QTETitleCommand__VE_MiddleAndRight = 17,
-	Enum_QTETitleCommand__VE_LeftAndMiddleAndRight = 18,
-	Enum_QTETitleCommand__VE_MAX   = 19
+	ENpcCheckState__None           = 0,
+	ENpcCheckState__InTheIrori     = 1,
+	ENpcCheckState__ENpcCheckState_MAX = 2
+};
+
+
+// Enum Shenmue3.EPendingIdle
+enum class EPendingIdle : uint8_t
+{
+	EPendingIdle__Standing         = 0,
+	EPendingIdle__Sit              = 1,
+	EPendingIdle__ForceSitForward  = 2,
+	EPendingIdle__ForceSitLeft     = 3,
+	EPendingIdle__ForceSitRight    = 4,
+	EPendingIdle__EPendingIdle_MAX = 5
 };
 
 
@@ -1214,6 +1197,35 @@ enum class ENpcManagerEventMessage : uint8_t
 	ENpcManagerEventMessage__AllStop = 4,
 	ENpcManagerEventMessage__AllRestart = 5,
 	ENpcManagerEventMessage__ENpcManagerEventMessage_MAX = 6
+};
+
+
+// Enum Shenmue3.EFingerPointingType
+enum class EFingerPointingType : uint8_t
+{
+	EFingerPointingType__Common    = 0,
+	EFingerPointingType__Woman     = 1,
+	EFingerPointingType__EFingerPointingType_MAX = 2
+};
+
+
+// Enum Shenmue3.ENPCAttachFrom
+enum class ENPCAttachFrom : uint8_t
+{
+	ENPCAttachFrom__FromAnimation  = 0,
+	ENPCAttachFrom__FromDefinition = 1,
+	ENPCAttachFrom__ENPCAttachFrom_MAX = 2
+};
+
+
+// Enum Shenmue3.ENPCPOIAnimationCategory
+enum class ENPCPOIAnimationCategory : uint8_t
+{
+	ENPCPOIAnimationCategory__Category_Idle = 0,
+	ENPCPOIAnimationCategory__Category_Talk = 1,
+	ENPCPOIAnimationCategory__Category_LookAround = 2,
+	ENPCPOIAnimationCategory__Category_Unique = 3,
+	ENPCPOIAnimationCategory__Category_MAX = 4
 };
 
 
@@ -1231,33 +1243,12 @@ enum class EConditionChangeType : uint8_t
 };
 
 
-// Enum Shenmue3.EAnimBaseChara
-enum class EAnimBaseChara : uint8_t
+// Enum Shenmue3.ENPCPOICommandType
+enum class ENPCPOICommandType : uint8_t
 {
-	EAnimBaseChara__RYO            = 0,
-	EAnimBaseChara__CMB            = 1,
-	EAnimBaseChara__MFB            = 2,
-	EAnimBaseChara__EAnimBaseChara_MAX = 3
-};
-
-
-// Enum Shenmue3.ENPCPOIAnimationCategory
-enum class ENPCPOIAnimationCategory : uint8_t
-{
-	ENPCPOIAnimationCategory__Category_Idle = 0,
-	ENPCPOIAnimationCategory__Category_Talk = 1,
-	ENPCPOIAnimationCategory__Category_LookAround = 2,
-	ENPCPOIAnimationCategory__Category_Unique = 3,
-	ENPCPOIAnimationCategory__Category_MAX = 4
-};
-
-
-// Enum Shenmue3.EFingerPointingType
-enum class EFingerPointingType : uint8_t
-{
-	EFingerPointingType__Common    = 0,
-	EFingerPointingType__Woman     = 1,
-	EFingerPointingType__EFingerPointingType_MAX = 2
+	ENPCPOICommandType__Type_Animation = 0,
+	ENPCPOICommandType__Type_Move  = 1,
+	ENPCPOICommandType__Type_MAX   = 2
 };
 
 
@@ -1279,17 +1270,6 @@ enum class EFNPCTaskFinishCommandType : uint8_t
 };
 
 
-// Enum Shenmue3.FNPCTaskInstruction
-enum class EFNPCTaskInstruction : uint8_t
-{
-	FNPCTaskInstruction__Inst_None = 0,
-	FNPCTaskInstruction__Inst_Appear_DisableUpdatePosition = 1,
-	FNPCTaskInstruction__Inst_Animation_ABBlendTimeZero = 2,
-	FNPCTaskInstruction__Inst_Animation_NotSingleLoop = 3,
-	FNPCTaskInstruction__Inst_MAX  = 4
-};
-
-
 // Enum Shenmue3.ENPCCommand
 enum class ENPCCommand : uint8_t
 {
@@ -1302,12 +1282,14 @@ enum class ENPCCommand : uint8_t
 };
 
 
-// Enum Shenmue3.ENPCPOICommandType
-enum class ENPCPOICommandType : uint8_t
+// Enum Shenmue3.ECameraState
+enum class ECameraState : uint8_t
 {
-	ENPCPOICommandType__Type_Animation = 0,
-	ENPCPOICommandType__Type_Move  = 1,
-	ENPCPOICommandType__Type_MAX   = 2
+	ECameraState__Free             = 0,
+	ECameraState__Zoom             = 1,
+	ECameraState__Door             = 2,
+	ECameraState__Search           = 3,
+	ECameraState__ECameraState_MAX = 4
 };
 
 
@@ -1334,6 +1316,17 @@ enum class ES3WatchPropertyTypes : uint8_t
 };
 
 
+// Enum Shenmue3.FNPCTaskInstruction
+enum class EFNPCTaskInstruction : uint8_t
+{
+	FNPCTaskInstruction__Inst_None = 0,
+	FNPCTaskInstruction__Inst_Appear_DisableUpdatePosition = 1,
+	FNPCTaskInstruction__Inst_Animation_ABBlendTimeZero = 2,
+	FNPCTaskInstruction__Inst_Animation_NotSingleLoop = 3,
+	FNPCTaskInstruction__Inst_MAX  = 4
+};
+
+
 // Enum Shenmue3.ES3ConfirmCancelType
 enum class ES3ConfirmCancelType : uint8_t
 {
@@ -1353,6 +1346,17 @@ enum class ES3CustomMovement : uint8_t
 };
 
 
+// Enum Shenmue3.ENPCAnimRotateMode
+enum class ENPCAnimRotateMode : uint8_t
+{
+	ENPCAnimRotateMode__NotApplicable = 0,
+	ENPCAnimRotateMode__RootMotion = 1,
+	ENPCAnimRotateMode__Path       = 2,
+	ENPCAnimRotateMode__None       = 3,
+	ENPCAnimRotateMode__ENPCAnimRotateMode_MAX = 4
+};
+
+
 // Enum Shenmue3.ENPCAnimMoveMode
 enum class ENPCAnimMoveMode : uint8_t
 {
@@ -1365,14 +1369,12 @@ enum class ENPCAnimMoveMode : uint8_t
 };
 
 
-// Enum Shenmue3.ENPCAnimRotateMode
-enum class ENPCAnimRotateMode : uint8_t
+// Enum Shenmue3.EEarringParttern
+enum class EEarringParttern : uint8_t
 {
-	ENPCAnimRotateMode__NotApplicable = 0,
-	ENPCAnimRotateMode__RootMotion = 1,
-	ENPCAnimRotateMode__Path       = 2,
-	ENPCAnimRotateMode__None       = 3,
-	ENPCAnimRotateMode__ENPCAnimRotateMode_MAX = 4
+	EEarringParttern__Cone         = 0,
+	EEarringParttern__Angular      = 1,
+	EEarringParttern__EEarringParttern_MAX = 2
 };
 
 
@@ -1417,50 +1419,6 @@ enum class ES3RewardType : uint8_t
 };
 
 
-// Enum Shenmue3.EEarringParttern
-enum class EEarringParttern : uint8_t
-{
-	EEarringParttern__Cone         = 0,
-	EEarringParttern__Angular      = 1,
-	EEarringParttern__EEarringParttern_MAX = 2
-};
-
-
-// Enum Shenmue3.ESearchMode
-enum class ESearchMode : uint8_t
-{
-	Search                         = 0,
-	Look                           = 1,
-	Grab                           = 2,
-	Max                            = 3
-};
-
-
-// Enum Shenmue3.EDetailModeStep
-enum class EDetailModeStep : uint8_t
-{
-	EDetailModeStep__None          = 0,
-	EDetailModeStep__Start         = 1,
-	EDetailModeStep__Exec          = 2,
-	EDetailModeStep__Back          = 3,
-	EDetailModeStep__RestoreCamera = 4,
-	EDetailModeStep__Close         = 5,
-	EDetailModeStep__EDetailModeStep_MAX = 6
-};
-
-
-// Enum Shenmue3.ESearchTiming
-enum class ESearchTiming : uint8_t
-{
-	ESearchTiming__None            = 0,
-	ESearchTiming__Search          = 1,
-	ESearchTiming__Grabbed         = 2,
-	ESearchTiming__Get             = 3,
-	ESearchTiming__Complete        = 4,
-	ESearchTiming__ESearchTiming_MAX = 5
-};
-
-
 // Enum Shenmue3.ES3RewardCategory
 enum class ES3RewardCategory : uint8_t
 {
@@ -1494,6 +1452,39 @@ enum class ES3RewardCategory : uint8_t
 	ES3RewardCategory__SB_06       = 27,
 	ES3RewardCategory__SB_07       = 28,
 	ES3RewardCategory__ES3RewardCategory_MAX = 29
+};
+
+
+// Enum Shenmue3.EDetailModeStep
+enum class EDetailModeStep : uint8_t
+{
+	EDetailModeStep__None          = 0,
+	EDetailModeStep__Start         = 1,
+	EDetailModeStep__Exec          = 2,
+	EDetailModeStep__Back          = 3,
+	EDetailModeStep__RestoreCamera = 4,
+	EDetailModeStep__Close         = 5,
+	EDetailModeStep__EDetailModeStep_MAX = 6
+};
+
+
+// Enum Shenmue3.EAnimBaseChara
+enum class EAnimBaseChara : uint8_t
+{
+	EAnimBaseChara__RYO            = 0,
+	EAnimBaseChara__CMB            = 1,
+	EAnimBaseChara__MFB            = 2,
+	EAnimBaseChara__EAnimBaseChara_MAX = 3
+};
+
+
+// Enum Shenmue3.ESearchMode
+enum class ESearchMode : uint8_t
+{
+	Search                         = 0,
+	Look                           = 1,
+	Grab                           = 2,
+	Max                            = 3
 };
 
 
@@ -1542,6 +1533,18 @@ enum class ESearchGrabMotionSoundType : uint8_t
 	ESearchGrabMotionSoundType__StoneStatue = 13,
 	ESearchGrabMotionSoundType__Lanthanum = 14,
 	ESearchGrabMotionSoundType__ESearchGrabMotionSoundType_MAX = 15
+};
+
+
+// Enum Shenmue3.ESearchActionIcon
+enum class ESearchActionIcon : uint8_t
+{
+	ESearchActionIcon__None        = 0,
+	ESearchActionIcon__Look        = 1,
+	ESearchActionIcon__Grab        = 2,
+	ESearchActionIcon__Get         = 3,
+	ESearchActionIcon__General     = 4,
+	ESearchActionIcon__ESearchActionIcon_MAX = 5
 };
 
 
@@ -1601,16 +1604,6 @@ enum class ES3DemoType : uint8_t
 };
 
 
-// Enum Shenmue3.ES3WindowType
-enum class ES3WindowType : uint8_t
-{
-	ES3WindowType__FullScreen      = 0,
-	ES3WindowType__Borderless      = 1,
-	ES3WindowType__Window          = 2,
-	ES3WindowType__ES3WindowType_MAX = 3
-};
-
-
 // Enum Shenmue3.ES3KeyConfigType
 enum class ES3KeyConfigType : uint8_t
 {
@@ -1622,6 +1615,16 @@ enum class ES3KeyConfigType : uint8_t
 };
 
 
+// Enum Shenmue3.ES3WindowType
+enum class ES3WindowType : uint8_t
+{
+	ES3WindowType__FullScreen      = 0,
+	ES3WindowType__Borderless      = 1,
+	ES3WindowType__Window          = 2,
+	ES3WindowType__ES3WindowType_MAX = 3
+};
+
+
 // Enum Shenmue3.ES3VoiceLanguage
 enum class ES3VoiceLanguage : uint8_t
 {
@@ -1629,6 +1632,22 @@ enum class ES3VoiceLanguage : uint8_t
 	ES3VoiceLanguage__English      = 1,
 	ES3VoiceLanguage__Chinese      = 2,
 	ES3VoiceLanguage__MAX          = 3
+};
+
+
+// Enum Shenmue3.ES3Locale
+enum class ES3Locale : uint8_t
+{
+	ES3Locale__Japanese            = 0,
+	ES3Locale__US_English          = 1,
+	ES3Locale__French              = 2,
+	ES3Locale__Italian             = 3,
+	ES3Locale__German              = 4,
+	ES3Locale__Spanish             = 5,
+	ES3Locale__Portuguese          = 6,
+	ES3Locale__CN_Chinese          = 7,
+	ES3Locale__TW_Chinese          = 8,
+	ES3Locale__MAX                 = 9
 };
 
 
@@ -1651,15 +1670,15 @@ enum class ES3CharacterGender : uint8_t
 };
 
 
-// Enum Shenmue3.ES3CharacterType
-enum class ES3CharacterType : uint8_t
+// Enum Shenmue3.ESearchTiming
+enum class ESearchTiming : uint8_t
 {
-	ES3CharacterType__None         = 0,
-	ES3CharacterType__Player       = 1,
-	ES3CharacterType__NPC          = 2,
-	ES3CharacterType__NPC_Lead     = 3,
-	ES3CharacterType__AC           = 4,
-	ES3CharacterType__ES3CharacterType_MAX = 5
+	ESearchTiming__None            = 0,
+	ESearchTiming__Search          = 1,
+	ESearchTiming__Grabbed         = 2,
+	ESearchTiming__Get             = 3,
+	ESearchTiming__Complete        = 4,
+	ESearchTiming__ESearchTiming_MAX = 5
 };
 
 
@@ -1733,12 +1752,15 @@ enum class ES3TextDataType : uint8_t
 };
 
 
-// Enum Shenmue3.ETriggerPosition
-enum class ETriggerPosition : uint8_t
+// Enum Shenmue3.ES3CharacterType
+enum class ES3CharacterType : uint8_t
 {
-	ETriggerPosition__Center       = 0,
-	ETriggerPosition__BothEnds     = 1,
-	ETriggerPosition__ETriggerPosition_MAX = 2
+	ES3CharacterType__None         = 0,
+	ES3CharacterType__Player       = 1,
+	ES3CharacterType__NPC          = 2,
+	ES3CharacterType__NPC_Lead     = 3,
+	ES3CharacterType__AC           = 4,
+	ES3CharacterType__ES3CharacterType_MAX = 5
 };
 
 
@@ -1764,17 +1786,12 @@ enum class ES3TextPathType : uint8_t
 };
 
 
-// Enum Shenmue3.EWeatherType
-enum class EWeatherType : uint8_t
+// Enum Shenmue3.ETriggerPosition
+enum class ETriggerPosition : uint8_t
 {
-	EWeatherType__Sunny            = 0,
-	EWeatherType__Cloudy           = 1,
-	EWeatherType__LightRainy       = 2,
-	EWeatherType__Rainy            = 3,
-	EWeatherType__HeavyRainy       = 4,
-	EWeatherType__Snowy            = 5,
-	EWeatherType__None             = 6,
-	EWeatherType__EWeatherType_MAX = 7
+	ETriggerPosition__Center       = 0,
+	ETriggerPosition__BothEnds     = 1,
+	ETriggerPosition__ETriggerPosition_MAX = 2
 };
 
 
@@ -1791,6 +1808,20 @@ enum class EWeatherPrestType : uint8_t
 };
 
 
+// Enum Shenmue3.EWeatherType
+enum class EWeatherType : uint8_t
+{
+	EWeatherType__Sunny            = 0,
+	EWeatherType__Cloudy           = 1,
+	EWeatherType__LightRainy       = 2,
+	EWeatherType__Rainy            = 3,
+	EWeatherType__HeavyRainy       = 4,
+	EWeatherType__Snowy            = 5,
+	EWeatherType__None             = 6,
+	EWeatherType__EWeatherType_MAX = 7
+};
+
+
 // Enum Shenmue3.EImageFormatType
 enum class EImageFormatType : uint8_t
 {
@@ -1798,45 +1829,6 @@ enum class EImageFormatType : uint8_t
 	jpg                            = 1,
 	bmp                            = 2,
 	EImageFormatType_MAX           = 3
-};
-
-
-// Enum Shenmue3.ESearchActionIcon
-enum class ESearchActionIcon : uint8_t
-{
-	ESearchActionIcon__None        = 0,
-	ESearchActionIcon__Look        = 1,
-	ESearchActionIcon__Grab        = 2,
-	ESearchActionIcon__Get         = 3,
-	ESearchActionIcon__General     = 4,
-	ESearchActionIcon__ESearchActionIcon_MAX = 5
-};
-
-
-// Enum Shenmue3.ES3Locale
-enum class ES3Locale : uint8_t
-{
-	ES3Locale__Japanese            = 0,
-	ES3Locale__US_English          = 1,
-	ES3Locale__French              = 2,
-	ES3Locale__Italian             = 3,
-	ES3Locale__German              = 4,
-	ES3Locale__Spanish             = 5,
-	ES3Locale__Portuguese          = 6,
-	ES3Locale__CN_Chinese          = 7,
-	ES3Locale__TW_Chinese          = 8,
-	ES3Locale__MAX                 = 9
-};
-
-
-// Enum Shenmue3.ECameraState
-enum class ECameraState : uint8_t
-{
-	ECameraState__Free             = 0,
-	ECameraState__Zoom             = 1,
-	ECameraState__Door             = 2,
-	ECameraState__Search           = 3,
-	ECameraState__ECameraState_MAX = 4
 };
 
 
@@ -1891,6 +1883,22 @@ struct FMG_CC_MoveData
 	float                                              Speed;                                                    // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              MoveValue;                                                // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                MaxMoveCount;                                             // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Shenmue3.MG_CC_AnimalData
+// 0x00A8
+struct FMG_CC_AnimalData
+{
+	class UClass*                                      AnimalClass;                                              // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0008(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.MG_CC_AnimalData.StartSequence
+	unsigned char                                      UnknownData01[0x28];                                      // 0x0030(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.MG_CC_AnimalData.SuccessSequence
+	unsigned char                                      UnknownData02[0x28];                                      // 0x0058(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.MG_CC_AnimalData.FailedSequence
+	struct FMG_CC_MoveData                             m_WalkMoveData;                                           // 0x0080(0x000C) (Edit, BlueprintVisible)
+	struct FMG_CC_MoveData                             m_RunMoveData;                                            // 0x008C(0x000C) (Edit, BlueprintVisible)
+	float                                              m_MoveDistanceFromCenter;                                 // 0x0098(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              m_WaitTime;                                               // 0x009C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              m_MaxNotCatchTime;                                        // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.MG_RCForkData
@@ -2002,6 +2010,13 @@ struct FS3BRallyAwardAnnouncement
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Shenmue3.S3_ExclamationCueList
+// 0x0010
+struct FS3_ExclamationCueList
+{
+	TArray<class USoundAtomCue*>                       Cues;                                                     // 0x0000(0x0010) (ZeroConstructor)
+};
+
 // ScriptStruct Shenmue3.S3RetryRecoveryInfo
 // 0x0060
 struct FS3RetryRecoveryInfo
@@ -2084,27 +2099,12 @@ struct FS3AchievementUnlockInfo
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
 };
 
-// ScriptStruct Shenmue3.S3_ExclamationCueList
-// 0x0010
-struct FS3_ExclamationCueList
-{
-	TArray<class USoundAtomCue*>                       Cues;                                                     // 0x0000(0x0010) (ZeroConstructor)
-};
-
 // ScriptStruct Shenmue3.S3AngleRange
 // 0x0008
 struct FS3AngleRange
 {
 	float                                              Center;                                                   // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              PlusMinus;                                                // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Shenmue3.S3LevelStreamInfo
-// 0x0020
-struct FS3LevelStreamInfo
-{
-	struct FName                                       ID;                                                       // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.AreaSpotLightList
@@ -2119,6 +2119,14 @@ struct FAreaSpotLightList
 struct FAreaPointLightList
 {
 	TArray<class AS3PointLight*>                       List;                                                     // 0x0000(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+};
+
+// ScriptStruct Shenmue3.S3LevelStreamInfo
+// 0x0020
+struct FS3LevelStreamInfo
+{
+	struct FName                                       ID;                                                       // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.S3AttentionEventChangeFlagInfo
@@ -2179,6 +2187,17 @@ struct FS3LevelDebugData
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
 };
 
+// ScriptStruct Shenmue3.S3BRallyTrophyUnlockData
+// 0x0020
+struct FS3BRallyTrophyUnlockData
+{
+	ES3AchievementType                                 Achievement;                                              // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0001(0x0010) UNKNOWN PROPERTY: ArrayProperty Shenmue3.S3BRallyTrophyUnlockData.Courses
+	bool                                               bRequireAll;                                              // 0x0018(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
+};
+
 // ScriptStruct Shenmue3.TalkScriptContainer
 // 0x0058
 struct FTalkScriptContainer
@@ -2218,17 +2237,6 @@ struct FTalkScriptState
 	class UTalkScript*                                 TalkScript;                                               // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	ENPCTalkState                                      TalkState;                                                // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Shenmue3.S3BRallyTrophyUnlockData
-// 0x0020
-struct FS3BRallyTrophyUnlockData
-{
-	ES3AchievementType                                 Achievement;                                              // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0001(0x0010) UNKNOWN PROPERTY: ArrayProperty Shenmue3.S3BRallyTrophyUnlockData.Courses
-	bool                                               bRequireAll;                                              // 0x0018(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.BSSetEnableScheduleData
@@ -2291,22 +2299,6 @@ struct FCharaAttachParam
 	struct FRotator                                    PropRotate;                                               // 0x0024(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
 	struct FVector                                     PropScale;                                                // 0x0030(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Shenmue3.MG_CC_AnimalData
-// 0x00A8
-struct FMG_CC_AnimalData
-{
-	class UClass*                                      AnimalClass;                                              // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0008(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.MG_CC_AnimalData.StartSequence
-	unsigned char                                      UnknownData01[0x28];                                      // 0x0030(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.MG_CC_AnimalData.SuccessSequence
-	unsigned char                                      UnknownData02[0x28];                                      // 0x0058(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.MG_CC_AnimalData.FailedSequence
-	struct FMG_CC_MoveData                             m_WalkMoveData;                                           // 0x0080(0x000C) (Edit, BlueprintVisible)
-	struct FMG_CC_MoveData                             m_RunMoveData;                                            // 0x008C(0x000C) (Edit, BlueprintVisible)
-	float                                              m_MoveDistanceFromCenter;                                 // 0x0098(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              m_WaitTime;                                               // 0x009C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              m_MaxNotCatchTime;                                        // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.SimpleRequesterList
@@ -2436,14 +2428,6 @@ struct FCharaSkeletalAttachParam
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct Shenmue3.S3ClipperOnlyInfo
-// 0x0018
-struct FS3ClipperOnlyInfo
-{
-	struct FName                                       ClipperLabel;                                             // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ClipperData;                                              // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
 // ScriptStruct Shenmue3.S3ClipperSample
 // 0x000C
 struct FS3ClipperSample
@@ -2454,27 +2438,12 @@ struct FS3ClipperSample
 	float                                              VolumeNormalized;                                         // 0x0008(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Shenmue3.S3ClothPartsInfo
-// 0x0010
-struct FS3ClothPartsInfo
-{
-	struct FName                                       ID;                                                       // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class US3ClothPartsDataAsset*                      DataAsset;                                                // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-};
-
-// ScriptStruct Shenmue3.S3ClothPartsArray
-// 0x0010
-struct FS3ClothPartsArray
-{
-	TArray<struct FS3ClothPartsInfo>                   Array;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-};
-
-// ScriptStruct Shenmue3.S3ClothPartsBind
+// ScriptStruct Shenmue3.S3ClipperOnlyInfo
 // 0x0018
-struct FS3ClothPartsBind
+struct FS3ClipperOnlyInfo
 {
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FName>                               Exclude;                                                  // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       ClipperLabel;                                             // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ClipperData;                                              // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Shenmue3.S3ClothesCacheInfo
@@ -2507,6 +2476,29 @@ struct FComboTestInfo
 	struct FVector                                     Movement;                                                 // 0x0014(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
 	float                                              BlendInTime;                                              // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              BlendOutTime;                                             // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Shenmue3.S3ClothPartsInfo
+// 0x0010
+struct FS3ClothPartsInfo
+{
+	struct FName                                       ID;                                                       // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class US3ClothPartsDataAsset*                      DataAsset;                                                // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct Shenmue3.S3ClothPartsArray
+// 0x0010
+struct FS3ClothPartsArray
+{
+	TArray<struct FS3ClothPartsInfo>                   Array;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+};
+
+// ScriptStruct Shenmue3.S3ClothPartsBind
+// 0x0018
+struct FS3ClothPartsBind
+{
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FName>                               Exclude;                                                  // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct Shenmue3.S3CutsceneSubtitleLabelList
@@ -2572,6 +2564,26 @@ struct FS3DownloadableContentInfo
 	unsigned char                                      UnknownData01[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
 };
 
+// ScriptStruct Shenmue3.S3LookAtParamater
+// 0x0008
+struct FS3LookAtParamater
+{
+	float                                              Yaw;                                                      // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Pitch;                                                    // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Shenmue3.S3CharacterLookAtWholeBodyParamater
+// 0x0030
+struct FS3CharacterLookAtWholeBodyParamater
+{
+	struct FS3LookAtParamater                          Eyes;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible)
+	struct FS3LookAtParamater                          head;                                                     // 0x0008(0x0008) (Edit, BlueprintVisible)
+	struct FS3LookAtParamater                          Neck;                                                     // 0x0010(0x0008) (Edit, BlueprintVisible)
+	struct FS3LookAtParamater                          BodyBreast;                                               // 0x0018(0x0008) (Edit, BlueprintVisible)
+	struct FS3LookAtParamater                          BodyWaist;                                                // 0x0020(0x0008) (Edit, BlueprintVisible)
+	struct FS3LookAtParamater                          BodyLumbus;                                               // 0x0028(0x0008) (Edit, BlueprintVisible)
+};
+
 // ScriptStruct Shenmue3.FaceBlendInfo
 // 0x0010
 struct FFaceBlendInfo
@@ -2605,26 +2617,6 @@ struct FS3CharacterLookAtLocation
 	struct FVector                                     BodyBreast;                                               // 0x0054(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
 };
 
-// ScriptStruct Shenmue3.S3LookAtParamater
-// 0x0008
-struct FS3LookAtParamater
-{
-	float                                              Yaw;                                                      // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Pitch;                                                    // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Shenmue3.S3CharacterLookAtWholeBodyParamater
-// 0x0030
-struct FS3CharacterLookAtWholeBodyParamater
-{
-	struct FS3LookAtParamater                          Eyes;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible)
-	struct FS3LookAtParamater                          head;                                                     // 0x0008(0x0008) (Edit, BlueprintVisible)
-	struct FS3LookAtParamater                          Neck;                                                     // 0x0010(0x0008) (Edit, BlueprintVisible)
-	struct FS3LookAtParamater                          BodyBreast;                                               // 0x0018(0x0008) (Edit, BlueprintVisible)
-	struct FS3LookAtParamater                          BodyWaist;                                                // 0x0020(0x0008) (Edit, BlueprintVisible)
-	struct FS3LookAtParamater                          BodyLumbus;                                               // 0x0028(0x0008) (Edit, BlueprintVisible)
-};
-
 // ScriptStruct Shenmue3.S3CharacterLookAtBlendedWeight
 // 0x000C
 struct FS3CharacterLookAtBlendedWeight
@@ -2651,6 +2643,22 @@ struct FS3FadeMaterialSwapData
 	TArray<struct FName>                               TextureParams;                                            // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	bool                                               AutoFindParams;                                           // 0x0038(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Shenmue3.S3GameTimeEventList
+// 0x0020
+struct FS3GameTimeEventList
+{
+	struct FString                                     Memo;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<float>                                      Time;                                                     // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+};
+
+// ScriptStruct Shenmue3.S3CustomTimeEventList
+// 0x0020
+struct FS3CustomTimeEventList
+{
+	TArray<float>                                      TimeList;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<int>                                        TimeRankList;                                             // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
 // ScriptStruct Shenmue3.S3ChairPointStruct
@@ -2753,22 +2761,6 @@ struct FS3ItemDataTable : public FTableRowBase
 	int                                                DLCFlag;                                                  // 0x0074(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Shenmue3.S3GameTimeEventList
-// 0x0020
-struct FS3GameTimeEventList
-{
-	struct FString                                     Memo;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<float>                                      Time;                                                     // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-};
-
-// ScriptStruct Shenmue3.S3CustomTimeEventList
-// 0x0020
-struct FS3CustomTimeEventList
-{
-	TArray<float>                                      TimeList;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<int>                                        TimeRankList;                                             // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-};
-
 // ScriptStruct Shenmue3.S3CharaLoadingBackInfo
 // 0x0030
 struct FS3CharaLoadingBackInfo
@@ -2785,48 +2777,6 @@ struct FS3CharaLoadingCharaInfo
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0008(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.S3CharaLoadingCharaInfo.ImageSoft
 	struct FString                                     Name;                                                     // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	struct FString                                     Description;                                              // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct Shenmue3.S3FishingInfo
-// 0x0028
-struct FS3FishingInfo
-{
-	struct FString                                     StoreId;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     RodId;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FDateTime                                   RentalDate;                                               // 0x0020(0x0008) (Edit, BlueprintVisible)
-};
-
-// ScriptStruct Shenmue3.S3MiniGameProgressSaveInt
-// 0x0018
-struct FS3MiniGameProgressSaveInt
-{
-	struct FName                                       Key;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<int>                                        Values;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct Shenmue3.S3MiniGameProgressSaveFloat
-// 0x0018
-struct FS3MiniGameProgressSaveFloat
-{
-	struct FName                                       Key;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<float>                                      Values;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct Shenmue3.S3MiniGameProgressSaveString
-// 0x0018
-struct FS3MiniGameProgressSaveString
-{
-	struct FName                                       Key;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FString>                             Values;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct Shenmue3.S3MiniGameProgressSaveData
-// 0x0030
-struct FS3MiniGameProgressSaveData
-{
-	TArray<struct FS3MiniGameProgressSaveInt>          IntValues;                                                // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FS3MiniGameProgressSaveFloat>        FloatValues;                                              // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FS3MiniGameProgressSaveString>       StringValues;                                             // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Shenmue3.QTECommandCheckStruct
@@ -2893,6 +2843,48 @@ struct FAnimalRaceSpeedTableRowBase : public FTableRowBase
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Shenmue3.S3FishingInfo
+// 0x0028
+struct FS3FishingInfo
+{
+	struct FString                                     StoreId;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     RodId;                                                    // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FDateTime                                   RentalDate;                                               // 0x0020(0x0008) (Edit, BlueprintVisible)
+};
+
+// ScriptStruct Shenmue3.S3MiniGameProgressSaveInt
+// 0x0018
+struct FS3MiniGameProgressSaveInt
+{
+	struct FName                                       Key;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        Values;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct Shenmue3.S3MiniGameProgressSaveFloat
+// 0x0018
+struct FS3MiniGameProgressSaveFloat
+{
+	struct FName                                       Key;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<float>                                      Values;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct Shenmue3.S3MiniGameProgressSaveString
+// 0x0018
+struct FS3MiniGameProgressSaveString
+{
+	struct FName                                       Key;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FString>                             Values;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct Shenmue3.S3MiniGameProgressSaveData
+// 0x0030
+struct FS3MiniGameProgressSaveData
+{
+	TArray<struct FS3MiniGameProgressSaveInt>          IntValues;                                                // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FS3MiniGameProgressSaveFloat>        FloatValues;                                              // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FS3MiniGameProgressSaveString>       StringValues;                                             // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
 // ScriptStruct Shenmue3.S3FaceMontageData
 // 0x0040
 struct FS3FaceMontageData
@@ -2941,6 +2933,21 @@ struct FS3AnimSelectorRandomAnim
 	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	class US3NPCAnimSelector*                          AnimSelector;                                             // 0x0008(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// ScriptStruct Shenmue3.NPCHighPriorityShowSetting
+// 0x0030
+struct FNPCHighPriorityShowSetting
+{
+	int                                                MinStep;                                                  // 0x0000(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                MaxStep;                                                  // 0x0004(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                FlagIndex;                                                // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                FlagValueMin;                                             // 0x000C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                FlagValueMax;                                             // 0x0010(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	TArray<struct FGameplayTag>                        NPCIDs;                                                   // 0x0018(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool                                               bEnabled;                                                 // 0x0028(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.NPCFriendshipCondition
@@ -3002,21 +3009,6 @@ struct FNPCTalkEventInfo
 	bool                                               bTalkingSit;                                              // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              CauseSitHeightDifference;                                 // 0x0004(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-};
-
-// ScriptStruct Shenmue3.NPCHighPriorityShowSetting
-// 0x0030
-struct FNPCHighPriorityShowSetting
-{
-	int                                                MinStep;                                                  // 0x0000(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                MaxStep;                                                  // 0x0004(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                FlagIndex;                                                // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                FlagValueMin;                                             // 0x000C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                FlagValueMax;                                             // 0x0010(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-	TArray<struct FGameplayTag>                        NPCIDs;                                                   // 0x0018(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	bool                                               bEnabled;                                                 // 0x0028(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.PendingTask
@@ -3150,6 +3142,18 @@ struct FAdjustBlendSpaces
 	class UBlendSpace*                                 RightAdjust;                                              // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Shenmue3.NPCPOICommand
+// 0x0040
+struct FNPCPOICommand
+{
+	ENPCPOICommandType                                 Type;                                                     // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	ENPCPOIAnimationCategory                           AnimationCategory;                                        // 0x0001(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
+	float                                              AnimationTimeMinute;                                      // 0x0004(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                AnimationUniqueIndex;                                     // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x34];                                      // 0x000C(0x0034) MISSED OFFSET
+};
+
 // ScriptStruct Shenmue3.NPCPOICondition
 // 0x0028
 struct FNPCPOICondition
@@ -3162,18 +3166,6 @@ struct FNPCPOICondition
 	int                                                AgeMin;                                                   // 0x001C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                AgeMax;                                                   // 0x0020(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Shenmue3.NPCPOICommand
-// 0x0040
-struct FNPCPOICommand
-{
-	ENPCPOICommandType                                 Type;                                                     // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	ENPCPOIAnimationCategory                           AnimationCategory;                                        // 0x0001(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
-	float                                              AnimationTimeMinute;                                      // 0x0004(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                AnimationUniqueIndex;                                     // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x34];                                      // 0x000C(0x0034) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.S3NPCScheduleStepRange
@@ -3249,17 +3241,6 @@ struct FMapRangeStruct
 	struct FVector2D                                   OutRange;                                                 // 0x0008(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
 };
 
-// ScriptStruct Shenmue3.S3BattleRallyInfo
-// 0x0020
-struct FS3BattleRallyInfo
-{
-	float                                              BestCourseTime;                                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	TArray<float>                                      BestMissionTimes;                                         // 0x0008(0x0010) (ZeroConstructor)
-	bool                                               bClearFlag;                                               // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
-};
-
 // ScriptStruct Shenmue3.S3PlayerExpCollectionSaveData
 // 0x0050
 struct FS3PlayerExpCollectionSaveData
@@ -3297,6 +3278,17 @@ struct FTalkScheduleData
 	int                                                Count;                                                    // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               CountSet;                                                 // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Shenmue3.S3BattleRallyInfo
+// 0x0020
+struct FS3BattleRallyInfo
+{
+	float                                              BestCourseTime;                                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	TArray<float>                                      BestMissionTimes;                                         // 0x0008(0x0010) (ZeroConstructor)
+	bool                                               bClearFlag;                                               // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.S3IntMinMax
@@ -3537,6 +3529,15 @@ struct FAnimNode_S3LookAt : public FAnimNode_SkeletalControlBase
 	unsigned char                                      UnknownData00[0x4];                                       // 0x017C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Shenmue3.AnimNode_S3ScaleRootMotion
+// 0x0020 (0x0050 - 0x0030)
+struct FAnimNode_S3ScaleRootMotion : public FAnimNode_Base
+{
+	struct FPoseLink                                   SourcePose;                                               // 0x0030(0x0018) (Edit, BlueprintVisible)
+	float                                              SpeedScaling;                                             // 0x0048(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct Shenmue3.AnimNode_S3SpeedWarping
 // 0x0038 (0x0180 - 0x0148)
 struct FAnimNode_S3SpeedWarping : public FAnimNode_LegIK
@@ -3548,15 +3549,6 @@ struct FAnimNode_S3SpeedWarping : public FAnimNode_LegIK
 	float                                              SpeedScaling;                                             // 0x0174(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bEnableDebugDrawing;                                      // 0x0178(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0179(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Shenmue3.AnimNode_S3ScaleRootMotion
-// 0x0020 (0x0050 - 0x0030)
-struct FAnimNode_S3ScaleRootMotion : public FAnimNode_Base
-{
-	struct FPoseLink                                   SourcePose;                                               // 0x0030(0x0018) (Edit, BlueprintVisible)
-	float                                              SpeedScaling;                                             // 0x0048(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Shenmue3.AnimNode_S3TwoBoneIK
@@ -3586,6 +3578,16 @@ struct FAnimNode_S3TwoBoneIK : public FAnimNode_SkeletalControlBase
 	unsigned char                                      UnknownData02[0x38];                                      // 0x0178(0x0038) MISSED OFFSET
 };
 
+// ScriptStruct Shenmue3.S3GachaSetTable
+// 0x0028 (0x0030 - 0x0008)
+struct FS3GachaSetTable : public FTableRowBase
+{
+	int                                                Index;                                                    // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+	struct FString                                     ItemId;                                                   // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     SetId;                                                    // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
 // ScriptStruct Shenmue3.S3GameGift
 // 0x0010
 struct FS3GameGift
@@ -3600,16 +3602,6 @@ struct FS3GameGift
 struct FS3GiftDataTable : public FTableRowBase
 {
 	TArray<struct FS3GameGift>                         GiftList;                                                 // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct Shenmue3.S3GachaSetTable
-// 0x0028 (0x0030 - 0x0008)
-struct FS3GachaSetTable : public FTableRowBase
-{
-	int                                                Index;                                                    // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	struct FString                                     ItemId;                                                   // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     SetId;                                                    // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Shenmue3.MG_ODDataTableHandle
@@ -3962,19 +3954,19 @@ struct FS3WeatherPreset : public FTableRowBase
 	struct FString                                     Comment;                                                  // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
+// ScriptStruct Shenmue3.S3TalkEventProcessInfo
+// 0x0008 (0x0010 - 0x0008)
+struct FS3TalkEventProcessInfo : public FTableRowBase
+{
+	class UClass*                                      TalkEventProcessClass;                                    // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+};
+
 // ScriptStruct Shenmue3.S3TalkEventMetaInfo
 // 0x0008 (0x0010 - 0x0008)
 struct FS3TalkEventMetaInfo : public FTableRowBase
 {
 	bool                                               bStopForceSkip;                                           // 0x0008(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Shenmue3.S3TalkEventProcessInfo
-// 0x0008 (0x0010 - 0x0008)
-struct FS3TalkEventProcessInfo : public FTableRowBase
-{
-	class UClass*                                      TalkEventProcessClass;                                    // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 };
 
 }

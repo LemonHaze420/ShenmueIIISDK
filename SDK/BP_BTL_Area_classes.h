@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,13 +27,13 @@ public:
 
 
 	void InsideEntireArea(const struct FVector& Point, bool* bIsInside);
-	struct FVector STATIC_GetPathfindingRefLocation();
+	struct FVector GetPathfindingRefLocation();
 	bool TestStraightPathInside(const struct FVector& Location);
-	void STATIC_ClampLocation(const struct FVector& InLocation, struct FVector* OutLocation);
+	void ClampLocation(const struct FVector& InLocation, struct FVector* OutLocation);
 	struct FVector NudgeDirTowardsCenter(const struct FVector& Direction, const struct FVector& ToCenter);
 	void EnableCollision(bool Enabled, bool* dummy);
 	void IsReturnedInside(const struct FVector& InLocation, bool* Returned);
-	void STATIC_ScaleMovement(const struct FVector& Location, const struct FVector& Direction, struct FVector* Redirected);
+	void ScaleMovement(const struct FVector& Location, const struct FVector& Direction, struct FVector* Redirected);
 	void InsideFreeArea(const struct FVector& Point, bool* bIsInside);
 	void UserConstructionScript();
 };

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetSubtitles
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Config_Row_C::STATIC_SetSubtitles()
+void UBPW_UI_Config_Row_C::SetSubtitles()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetSubtitles");
 
@@ -31,7 +31,7 @@ void UBPW_UI_Config_Row_C::STATIC_SetSubtitles()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitSubtitles
-// (Exec, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::InitSubtitles()
 {
@@ -48,16 +48,15 @@ void UBPW_UI_Config_Row_C::InitSubtitles()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitTextBlock_3
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Config_Row_C::STATIC_InitTextBlock_3()
+void UBPW_UI_Config_Row_C::InitTextBlock_3()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitTextBlock_3");
 
 	UBPW_UI_Config_Row_C_InitTextBlock_3_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -66,7 +65,7 @@ void UBPW_UI_Config_Row_C::STATIC_InitTextBlock_3()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetZoomFinder
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::SetZoomFinder()
 {
@@ -75,7 +74,6 @@ void UBPW_UI_Config_Row_C::SetZoomFinder()
 	UBPW_UI_Config_Row_C_SetZoomFinder_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,16 +82,15 @@ void UBPW_UI_Config_Row_C::SetZoomFinder()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitZoomFinder
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Config_Row_C::STATIC_InitZoomFinder()
+void UBPW_UI_Config_Row_C::InitZoomFinder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitZoomFinder");
 
 	UBPW_UI_Config_Row_C_InitZoomFinder_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +99,7 @@ void UBPW_UI_Config_Row_C::STATIC_InitZoomFinder()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetDisable
-// (Net, NetReliable, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Disabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -122,9 +119,9 @@ void UBPW_UI_Config_Row_C::SetDisable(bool Disabled)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.AssignDressMode
-// (Net, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Config_Row_C::STATIC_AssignDressMode()
+void UBPW_UI_Config_Row_C::AssignDressMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.AssignDressMode");
 
@@ -139,7 +136,7 @@ void UBPW_UI_Config_Row_C::STATIC_AssignDressMode()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.GetParam
-// (NetReliable, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_ConfigParam>    Param                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -161,12 +158,12 @@ void UBPW_UI_Config_Row_C::GetParam(TEnumAsByte<EN_ConfigParam>* Param)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.ParseResolution
-// (NetRequest, Native, Static, NetMulticast, Private, Delegate, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 Resolution                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FIntPoint               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FIntPoint UBPW_UI_Config_Row_C::STATIC_ParseResolution(const struct FString& Resolution)
+struct FIntPoint UBPW_UI_Config_Row_C::ParseResolution(const struct FString& Resolution)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.ParseResolution");
 
@@ -174,7 +171,6 @@ struct FIntPoint UBPW_UI_Config_Row_C::STATIC_ParseResolution(const struct FStri
 	params.Resolution = Resolution;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -185,16 +181,15 @@ struct FIntPoint UBPW_UI_Config_Row_C::STATIC_ParseResolution(const struct FStri
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitVibration
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Config_Row_C::STATIC_InitVibration()
+void UBPW_UI_Config_Row_C::InitVibration()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitVibration");
 
 	UBPW_UI_Config_Row_C_InitVibration_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,11 +198,11 @@ void UBPW_UI_Config_Row_C::STATIC_InitVibration()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.CheckReLoadTitle
-// (Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReLoadTitle                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_CheckReLoadTitle(bool* ReLoadTitle)
+void UBPW_UI_Config_Row_C::CheckReLoadTitle(bool* ReLoadTitle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.CheckReLoadTitle");
 
@@ -225,16 +220,15 @@ void UBPW_UI_Config_Row_C::STATIC_CheckReLoadTitle(bool* ReLoadTitle)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetHorizontalKey
-// (Exec, Native, Event, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Config_Row_C::STATIC_SetHorizontalKey()
+void UBPW_UI_Config_Row_C::SetHorizontalKey()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetHorizontalKey");
 
 	UBPW_UI_Config_Row_C_SetHorizontalKey_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,16 +237,15 @@ void UBPW_UI_Config_Row_C::STATIC_SetHorizontalKey()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetVerticalKey
-// (NetReliable, Native, Event, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Config_Row_C::STATIC_SetVerticalKey()
+void UBPW_UI_Config_Row_C::SetVerticalKey()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetVerticalKey");
 
 	UBPW_UI_Config_Row_C_SetVerticalKey_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -261,9 +254,9 @@ void UBPW_UI_Config_Row_C::STATIC_SetVerticalKey()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetDecideKey
-// (Net, Exec, Event, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_Config_Row_C::STATIC_SetDecideKey()
+void UBPW_UI_Config_Row_C::SetDecideKey()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetDecideKey");
 
@@ -278,11 +271,11 @@ void UBPW_UI_Config_Row_C::STATIC_SetDecideKey()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.ChangeKey
-// (Net, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3KeyConfigType               Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_ChangeKey(ES3KeyConfigType Type)
+void UBPW_UI_Config_Row_C::ChangeKey(ES3KeyConfigType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.ChangeKey");
 
@@ -290,7 +283,6 @@ void UBPW_UI_Config_Row_C::STATIC_ChangeKey(ES3KeyConfigType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,11 +291,11 @@ void UBPW_UI_Config_Row_C::STATIC_ChangeKey(ES3KeyConfigType Type)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetDifficulty
-// (NetRequest, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EBattleDifficulty> Difficulty                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_SetDifficulty(TEnumAsByte<EBattleDifficulty> Difficulty)
+void UBPW_UI_Config_Row_C::SetDifficulty(TEnumAsByte<EBattleDifficulty> Difficulty)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetDifficulty");
 
@@ -319,7 +311,7 @@ void UBPW_UI_Config_Row_C::STATIC_SetDifficulty(TEnumAsByte<EBattleDifficulty> D
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetGamma
-// (Net, NetRequest, Native, Event, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Gamma                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -331,7 +323,6 @@ void UBPW_UI_Config_Row_C::SetGamma(float Gamma)
 	params.Gamma = Gamma;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -340,7 +331,7 @@ void UBPW_UI_Config_Row_C::SetGamma(float Gamma)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitVsync
-// (NetRequest, Exec, NetMulticast, Private, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::InitVsync()
 {
@@ -357,7 +348,7 @@ void UBPW_UI_Config_Row_C::InitVsync()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitResolution
-// (Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::InitResolution()
 {
@@ -366,7 +357,6 @@ void UBPW_UI_Config_Row_C::InitResolution()
 	UBPW_UI_Config_Row_C_InitResolution_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -375,11 +365,11 @@ void UBPW_UI_Config_Row_C::InitResolution()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.MakeResolutionList
-// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, Private, Protected, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            InBorderIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_MakeResolutionList(int InBorderIndex)
+void UBPW_UI_Config_Row_C::MakeResolutionList(int InBorderIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.MakeResolutionList");
 
@@ -387,7 +377,6 @@ void UBPW_UI_Config_Row_C::STATIC_MakeResolutionList(int InBorderIndex)
 	params.InBorderIndex = InBorderIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -396,11 +385,11 @@ void UBPW_UI_Config_Row_C::STATIC_MakeResolutionList(int InBorderIndex)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.GetBorderlessValue
-// (Net, NetRequest, Exec, NetResponse, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FIntPoint               Output                         (Parm, OutParm, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_GetBorderlessValue(struct FIntPoint* Output)
+void UBPW_UI_Config_Row_C::GetBorderlessValue(struct FIntPoint* Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.GetBorderlessValue");
 
@@ -418,11 +407,11 @@ void UBPW_UI_Config_Row_C::STATIC_GetBorderlessValue(struct FIntPoint* Output)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetGraphic
-// (NetRequest, Exec, Event, Static, Private, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3GraphicPreset               InGraphicPreset                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_SetGraphic(ES3GraphicPreset InGraphicPreset)
+void UBPW_UI_Config_Row_C::SetGraphic(ES3GraphicPreset InGraphicPreset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetGraphic");
 
@@ -438,7 +427,7 @@ void UBPW_UI_Config_Row_C::STATIC_SetGraphic(ES3GraphicPreset InGraphicPreset)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.PushRightButton
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::PushRightButton()
 {
@@ -455,7 +444,7 @@ void UBPW_UI_Config_Row_C::PushRightButton()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetName
-// (NetRequest, Exec, Native, NetResponse, NetClient, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::SetName()
 {
@@ -464,7 +453,6 @@ void UBPW_UI_Config_Row_C::SetName()
 	UBPW_UI_Config_Row_C_SetName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -473,11 +461,11 @@ void UBPW_UI_Config_Row_C::SetName()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetLocale
-// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3Locale                      Locale                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_SetLocale(ES3Locale Locale)
+void UBPW_UI_Config_Row_C::SetLocale(ES3Locale Locale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetLocale");
 
@@ -485,7 +473,6 @@ void UBPW_UI_Config_Row_C::STATIC_SetLocale(ES3Locale Locale)
 	params.Locale = Locale;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -494,11 +481,11 @@ void UBPW_UI_Config_Row_C::STATIC_SetLocale(ES3Locale Locale)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetVoiceLanguage
-// (Exec, Native, Event, NetResponse, Static, NetMulticast, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3VoiceLanguage               VoiceLanguage                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_SetVoiceLanguage(ES3VoiceLanguage VoiceLanguage)
+void UBPW_UI_Config_Row_C::SetVoiceLanguage(ES3VoiceLanguage VoiceLanguage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetVoiceLanguage");
 
@@ -506,7 +493,6 @@ void UBPW_UI_Config_Row_C::STATIC_SetVoiceLanguage(ES3VoiceLanguage VoiceLanguag
 	params.VoiceLanguage = VoiceLanguage;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -515,11 +501,11 @@ void UBPW_UI_Config_Row_C::STATIC_SetVoiceLanguage(ES3VoiceLanguage VoiceLanguag
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetVolume
-// (Native, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_SetVolume(float Volume)
+void UBPW_UI_Config_Row_C::SetVolume(float Volume)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SetVolume");
 
@@ -527,7 +513,6 @@ void UBPW_UI_Config_Row_C::STATIC_SetVolume(float Volume)
 	params.Volume = Volume;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -536,7 +521,7 @@ void UBPW_UI_Config_Row_C::STATIC_SetVolume(float Volume)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.HiddenChoice
-// (NetReliable, Exec, Native, NetResponse, NetClient, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::HiddenChoice()
 {
@@ -545,7 +530,6 @@ void UBPW_UI_Config_Row_C::HiddenChoice()
 	UBPW_UI_Config_Row_C_HiddenChoice_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -554,7 +538,7 @@ void UBPW_UI_Config_Row_C::HiddenChoice()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.PushLeftRightCursor
-// (Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -574,7 +558,7 @@ void UBPW_UI_Config_Row_C::PushLeftRightCursor(int Add)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.InitChoiceList
-// (NetReliable, NetRequest, Event, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FString>         ChoiceList                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -596,7 +580,7 @@ void UBPW_UI_Config_Row_C::InitChoiceList(TArray<struct FString>* ChoiceList)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.FocusButton
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsForcus                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -608,7 +592,6 @@ void UBPW_UI_Config_Row_C::FocusButton(bool IsForcus)
 	params.IsForcus = IsForcus;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -617,11 +600,11 @@ void UBPW_UI_Config_Row_C::FocusButton(bool IsForcus)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.OnLoaded_5B1B81D442FCD483358473950A373374
-// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_OnLoaded_5B1B81D442FCD483358473950A373374(class UObject* Loaded)
+void UBPW_UI_Config_Row_C::OnLoaded_5B1B81D442FCD483358473950A373374(class UObject* Loaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.OnLoaded_5B1B81D442FCD483358473950A373374");
 
@@ -629,7 +612,6 @@ void UBPW_UI_Config_Row_C::STATIC_OnLoaded_5B1B81D442FCD483358473950A373374(clas
 	params.Loaded = Loaded;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -638,11 +620,11 @@ void UBPW_UI_Config_Row_C::STATIC_OnLoaded_5B1B81D442FCD483358473950A373374(clas
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.OnLoaded_58EFD7524DB327D54C6CCE8DF255007C
-// (Net, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_OnLoaded_58EFD7524DB327D54C6CCE8DF255007C(class UObject* Loaded)
+void UBPW_UI_Config_Row_C::OnLoaded_58EFD7524DB327D54C6CCE8DF255007C(class UObject* Loaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.OnLoaded_58EFD7524DB327D54C6CCE8DF255007C");
 
@@ -650,7 +632,6 @@ void UBPW_UI_Config_Row_C::STATIC_OnLoaded_58EFD7524DB327D54C6CCE8DF255007C(clas
 	params.Loaded = Loaded;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -659,7 +640,7 @@ void UBPW_UI_Config_Row_C::STATIC_OnLoaded_58EFD7524DB327D54C6CCE8DF255007C(clas
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.Construct
-// (NetReliable, Exec, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::Construct()
 {
@@ -676,7 +657,7 @@ void UBPW_UI_Config_Row_C::Construct()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.Destruct
-// (Net, Exec, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::Destruct()
 {
@@ -693,7 +674,7 @@ void UBPW_UI_Config_Row_C::Destruct()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.BindVoicePlayer
-// (Net, Exec, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::BindVoicePlayer()
 {
@@ -710,11 +691,11 @@ void UBPW_UI_Config_Row_C::BindVoicePlayer()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.FinishPlayer
-// (Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     SoundPlayer                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_FinishPlayer(class ABP_S3SoundPlayer_C* SoundPlayer)
+void UBPW_UI_Config_Row_C::FinishPlayer(class ABP_S3SoundPlayer_C* SoundPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.FinishPlayer");
 
@@ -722,7 +703,6 @@ void UBPW_UI_Config_Row_C::STATIC_FinishPlayer(class ABP_S3SoundPlayer_C* SoundP
 	params.SoundPlayer = SoundPlayer;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -731,7 +711,7 @@ void UBPW_UI_Config_Row_C::STATIC_FinishPlayer(class ABP_S3SoundPlayer_C* SoundP
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.BindSEPlayer
-// (Exec, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::BindSEPlayer()
 {
@@ -748,7 +728,7 @@ void UBPW_UI_Config_Row_C::BindSEPlayer()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.OnSaveLoad
-// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::OnSaveLoad()
 {
@@ -765,7 +745,7 @@ void UBPW_UI_Config_Row_C::OnSaveLoad()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.FinishSaveLoad
-// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::FinishSaveLoad()
 {
@@ -782,7 +762,7 @@ void UBPW_UI_Config_Row_C::FinishSaveLoad()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.SelectTitleBack
-// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::SelectTitleBack()
 {
@@ -799,11 +779,11 @@ void UBPW_UI_Config_Row_C::SelectTitleBack()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.DecideTitleBack
-// (Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_DecideTitleBack(class AActor* Actor)
+void UBPW_UI_Config_Row_C::DecideTitleBack(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.DecideTitleBack");
 
@@ -811,7 +791,6 @@ void UBPW_UI_Config_Row_C::STATIC_DecideTitleBack(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -820,11 +799,11 @@ void UBPW_UI_Config_Row_C::STATIC_DecideTitleBack(class AActor* Actor)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.CancelTitleBack
-// (Net, NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_CancelTitleBack(class AActor* Actor)
+void UBPW_UI_Config_Row_C::CancelTitleBack(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.CancelTitleBack");
 
@@ -840,7 +819,7 @@ void UBPW_UI_Config_Row_C::STATIC_CancelTitleBack(class AActor* Actor)
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.TransitionTitle
-// (Net, NetRequest, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::TransitionTitle()
 {
@@ -857,7 +836,7 @@ void UBPW_UI_Config_Row_C::TransitionTitle()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.PlayTestVoice
-// (NetRequest, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_Config_Row_C::PlayTestVoice()
 {
@@ -874,11 +853,11 @@ void UBPW_UI_Config_Row_C::PlayTestVoice()
 
 
 // Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.ExecuteUbergraph_BPW_UI_Config_Row
-// (NetResponse, Static, NetMulticast, Public, Protected, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Row_C::STATIC_ExecuteUbergraph_BPW_UI_Config_Row(int EntryPoint)
+void UBPW_UI_Config_Row_C::ExecuteUbergraph_BPW_UI_Config_Row(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Row.BPW_UI_Config_Row_C.ExecuteUbergraph_BPW_UI_Config_Row");
 

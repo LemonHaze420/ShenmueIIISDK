@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,13 +72,13 @@ public:
 	}
 
 
-	void STATIC_GetFadeAnimations(TArray<class UWidgetAnimation*>* Array);
+	void GetFadeAnimations(TArray<class UWidgetAnimation*>* Array);
 	struct FText FormatMoneyText(int Value);
 	int GetActualBetMin();
 	int GetActualBetMax();
-	void STATIC_SetMoney(int Value);
+	void SetMoney(int Value);
 	int GetActualFluctuation();
-	void STATIC_UpdateBetMoneyText();
+	void UpdateBetMoneyText();
 	bool CanAdjustBet();
 	void GetBetMoney(int* BetMoney);
 	void DecideCancel();
@@ -88,7 +88,7 @@ public:
 	void SelectMaxBet();
 	void SelectCancel();
 	void DecideBet();
-	void STATIC_ExecuteUbergraph_wgt_BetMoney(int EntryPoint);
+	void ExecuteUbergraph_wgt_BetMoney(int EntryPoint);
 };
 
 

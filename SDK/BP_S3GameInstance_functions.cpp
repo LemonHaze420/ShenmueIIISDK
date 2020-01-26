@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.InitMemoFlag
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -37,9 +37,9 @@ bool UBP_S3GameInstance_C::InitMemoFlag(int Length)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.ResetTitle
-// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_ResetTitle()
+void UBP_S3GameInstance_C::ResetTitle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.ResetTitle");
 
@@ -54,7 +54,7 @@ void UBP_S3GameInstance_C::STATIC_ResetTitle()
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.DbgVerifyPlayerBehavior
-// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3PlayerBehavior              Expected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -74,11 +74,11 @@ void UBP_S3GameInstance_C::DbgVerifyPlayerBehavior(ES3PlayerBehavior Expected)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.GetPlayerBehaviorAllowsControl
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Allow                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_GetPlayerBehaviorAllowsControl(bool* Allow)
+void UBP_S3GameInstance_C::GetPlayerBehaviorAllowsControl(bool* Allow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.GetPlayerBehaviorAllowsControl");
 
@@ -96,12 +96,12 @@ void UBP_S3GameInstance_C::STATIC_GetPlayerBehaviorAllowsControl(bool* Allow)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.SetGameWeather
-// (Net, NetRequest, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EWeatherType                   NewWeather                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Force                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_SetGameWeather(EWeatherType NewWeather, bool Force)
+void UBP_S3GameInstance_C::SetGameWeather(EWeatherType NewWeather, bool Force)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.SetGameWeather");
 
@@ -118,7 +118,7 @@ void UBP_S3GameInstance_C::STATIC_SetGameWeather(EWeatherType NewWeather, bool F
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.SetVisibleMinimap
-// (NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsVisible                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -140,11 +140,11 @@ void UBP_S3GameInstance_C::SetVisibleMinimap(bool IsVisible, class AActor* Actor
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.SetIsDetectIconAnimShort
-// (Net, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsUse                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_SetIsDetectIconAnimShort(bool IsUse)
+void UBP_S3GameInstance_C::SetIsDetectIconAnimShort(bool IsUse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.SetIsDetectIconAnimShort");
 
@@ -152,7 +152,6 @@ void UBP_S3GameInstance_C::STATIC_SetIsDetectIconAnimShort(bool IsUse)
 	params.IsUse = IsUse;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,11 +160,11 @@ void UBP_S3GameInstance_C::STATIC_SetIsDetectIconAnimShort(bool IsUse)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.GetIsDetectIconAnimShort
-// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_GetIsDetectIconAnimShort(bool* newParam)
+void UBP_S3GameInstance_C::GetIsDetectIconAnimShort(bool* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.GetIsDetectIconAnimShort");
 
@@ -183,18 +182,17 @@ void UBP_S3GameInstance_C::STATIC_GetIsDetectIconAnimShort(bool* newParam)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.IsRecollectMoviePlaying
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsPlaying                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_IsRecollectMoviePlaying(bool* IsPlaying)
+void UBP_S3GameInstance_C::IsRecollectMoviePlaying(bool* IsPlaying)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.IsRecollectMoviePlaying");
 
 	UBP_S3GameInstance_C_IsRecollectMoviePlaying_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -206,18 +204,17 @@ void UBP_S3GameInstance_C::STATIC_IsRecollectMoviePlaying(bool* IsPlaying)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.GetDevelopText
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 Text                           (Parm, OutParm, ZeroConstructor)
 
-void UBP_S3GameInstance_C::STATIC_GetDevelopText(struct FString* Text)
+void UBP_S3GameInstance_C::GetDevelopText(struct FString* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.GetDevelopText");
 
 	UBP_S3GameInstance_C_GetDevelopText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -229,11 +226,11 @@ void UBP_S3GameInstance_C::STATIC_GetDevelopText(struct FString* Text)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.SetDevelopText
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UBP_S3GameInstance_C::STATIC_SetDevelopText(const struct FString& Text)
+void UBP_S3GameInstance_C::SetDevelopText(const struct FString& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.SetDevelopText");
 
@@ -241,7 +238,6 @@ void UBP_S3GameInstance_C::STATIC_SetDevelopText(const struct FString& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -250,16 +246,15 @@ void UBP_S3GameInstance_C::STATIC_SetDevelopText(const struct FString& Text)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.toggleDbgHideCutsceneSubtitle
-// (Net, NetRequest, Exec, Native, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_toggleDbgHideCutsceneSubtitle()
+void UBP_S3GameInstance_C::toggleDbgHideCutsceneSubtitle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.toggleDbgHideCutsceneSubtitle");
 
 	UBP_S3GameInstance_C_toggleDbgHideCutsceneSubtitle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,18 +263,17 @@ void UBP_S3GameInstance_C::STATIC_toggleDbgHideCutsceneSubtitle()
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.IsDbgHideCutsceneSubtitle
-// (Net, NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_IsDbgHideCutsceneSubtitle(bool* flag)
+void UBP_S3GameInstance_C::IsDbgHideCutsceneSubtitle(bool* flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.IsDbgHideCutsceneSubtitle");
 
 	UBP_S3GameInstance_C_IsDbgHideCutsceneSubtitle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -291,18 +285,17 @@ void UBP_S3GameInstance_C::STATIC_IsDbgHideCutsceneSubtitle(bool* flag)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.IsSheFollow
-// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_IsSheFollow(bool* flag)
+void UBP_S3GameInstance_C::IsSheFollow(bool* flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.IsSheFollow");
 
 	UBP_S3GameInstance_C_IsSheFollow_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -314,18 +307,17 @@ void UBP_S3GameInstance_C::STATIC_IsSheFollow(bool* flag)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.IsSheLead
-// (Net, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_IsSheLead(bool* flag)
+void UBP_S3GameInstance_C::IsSheLead(bool* flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.IsSheLead");
 
 	UBP_S3GameInstance_C_IsSheLead_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -337,11 +329,11 @@ void UBP_S3GameInstance_C::STATIC_IsSheLead(bool* flag)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.setSheFollowFlag
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_setSheFollowFlag(bool flag)
+void UBP_S3GameInstance_C::setSheFollowFlag(bool flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.setSheFollowFlag");
 
@@ -349,7 +341,6 @@ void UBP_S3GameInstance_C::STATIC_setSheFollowFlag(bool flag)
 	params.flag = flag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -358,11 +349,11 @@ void UBP_S3GameInstance_C::STATIC_setSheFollowFlag(bool flag)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.setSheLeadFlag
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_setSheLeadFlag(bool flag)
+void UBP_S3GameInstance_C::setSheLeadFlag(bool flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.setSheLeadFlag");
 
@@ -370,7 +361,6 @@ void UBP_S3GameInstance_C::STATIC_setSheLeadFlag(bool flag)
 	params.flag = flag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -379,18 +369,17 @@ void UBP_S3GameInstance_C::STATIC_setSheLeadFlag(bool flag)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.IsDbgMsgDisp
-// (NetReliable, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_IsDbgMsgDisp(bool* flag)
+void UBP_S3GameInstance_C::IsDbgMsgDisp(bool* flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.IsDbgMsgDisp");
 
 	UBP_S3GameInstance_C_IsDbgMsgDisp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -402,18 +391,17 @@ void UBP_S3GameInstance_C::STATIC_IsDbgMsgDisp(bool* flag)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.IsSearching
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsSearching                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_IsSearching(bool* IsSearching)
+void UBP_S3GameInstance_C::IsSearching(bool* IsSearching)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.IsSearching");
 
 	UBP_S3GameInstance_C_IsSearching_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -425,7 +413,7 @@ void UBP_S3GameInstance_C::STATIC_IsSearching(bool* IsSearching)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.IsLoadStreaming
-// (Net, NetReliable, Native, NetResponse, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -436,7 +424,6 @@ void UBP_S3GameInstance_C::IsLoadStreaming(bool* flag)
 	UBP_S3GameInstance_C_IsLoadStreaming_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -448,11 +435,11 @@ void UBP_S3GameInstance_C::IsLoadStreaming(bool* flag)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.endLoadstreamingMacro
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           loadFlag                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_endLoadstreamingMacro(bool loadFlag)
+void UBP_S3GameInstance_C::endLoadstreamingMacro(bool loadFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.endLoadstreamingMacro");
 
@@ -468,9 +455,9 @@ void UBP_S3GameInstance_C::STATIC_endLoadstreamingMacro(bool loadFlag)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.startLoadstreamingMacro
-// (Net, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_startLoadstreamingMacro()
+void UBP_S3GameInstance_C::startLoadstreamingMacro()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.startLoadstreamingMacro");
 
@@ -485,18 +472,17 @@ void UBP_S3GameInstance_C::STATIC_startLoadstreamingMacro()
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.isFreerun
-// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Delegate, HasOutParms, NetClient)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           isFreerun                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_isFreerun(bool* isFreerun)
+void UBP_S3GameInstance_C::isFreerun(bool* isFreerun)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.isFreerun");
 
 	UBP_S3GameInstance_C_isFreerun_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -508,18 +494,17 @@ void UBP_S3GameInstance_C::STATIC_isFreerun(bool* isFreerun)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.isBattle
-// (NetRequest, Exec, Native, Static, NetMulticast, Public, Delegate, HasOutParms, NetClient)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           isBattle                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_isBattle(bool* isBattle)
+void UBP_S3GameInstance_C::isBattle(bool* isBattle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.isBattle");
 
 	UBP_S3GameInstance_C_isBattle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -531,11 +516,11 @@ void UBP_S3GameInstance_C::STATIC_isBattle(bool* isBattle)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.getPlayerBehaviorId
-// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3PlayerBehavior              PlayerBehaviorId               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_getPlayerBehaviorId(ES3PlayerBehavior* PlayerBehaviorId)
+void UBP_S3GameInstance_C::getPlayerBehaviorId(ES3PlayerBehavior* PlayerBehaviorId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.getPlayerBehaviorId");
 
@@ -553,11 +538,11 @@ void UBP_S3GameInstance_C::STATIC_getPlayerBehaviorId(ES3PlayerBehavior* PlayerB
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.setPlayerBehaviorId
-// (Net, NetReliable, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3PlayerBehavior              PlayerBehaviorId               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_setPlayerBehaviorId(ES3PlayerBehavior PlayerBehaviorId)
+void UBP_S3GameInstance_C::setPlayerBehaviorId(ES3PlayerBehavior PlayerBehaviorId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.setPlayerBehaviorId");
 
@@ -573,11 +558,11 @@ void UBP_S3GameInstance_C::STATIC_setPlayerBehaviorId(ES3PlayerBehavior PlayerBe
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.wrap_gametimeEvent(day)
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3DayTimeEvent                EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_wrap_gametimeEvent_day_(ES3DayTimeEvent EventType)
+void UBP_S3GameInstance_C::wrap_gametimeEvent_day_(ES3DayTimeEvent EventType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.wrap_gametimeEvent(day)");
 
@@ -593,11 +578,11 @@ void UBP_S3GameInstance_C::STATIC_wrap_gametimeEvent_day_(ES3DayTimeEvent EventT
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.wrap_gametimeEvent(shop)
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ShopTimeEvent               EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_wrap_gametimeEvent_shop_(ES3ShopTimeEvent EventType)
+void UBP_S3GameInstance_C::wrap_gametimeEvent_shop_(ES3ShopTimeEvent EventType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.wrap_gametimeEvent(shop)");
 
@@ -613,9 +598,9 @@ void UBP_S3GameInstance_C::STATIC_wrap_gametimeEvent_shop_(ES3ShopTimeEvent Even
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.ReceiveInit
-// (Net, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_ReceiveInit()
+void UBP_S3GameInstance_C::ReceiveInit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.ReceiveInit");
 
@@ -630,9 +615,9 @@ void UBP_S3GameInstance_C::STATIC_ReceiveInit()
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.delayBeginPlay
-// (Net, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_delayBeginPlay()
+void UBP_S3GameInstance_C::delayBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.delayBeginPlay");
 
@@ -647,9 +632,9 @@ void UBP_S3GameInstance_C::STATIC_delayBeginPlay()
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.ReceiveShutdown
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_ReceiveShutdown()
+void UBP_S3GameInstance_C::ReceiveShutdown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.ReceiveShutdown");
 
@@ -664,9 +649,9 @@ void UBP_S3GameInstance_C::STATIC_ReceiveShutdown()
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.InitReward
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_InitReward()
+void UBP_S3GameInstance_C::InitReward()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.InitReward");
 
@@ -681,7 +666,7 @@ void UBP_S3GameInstance_C::STATIC_InitReward()
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.ExecuteUbergraph_BP_S3GameInstance
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -701,9 +686,9 @@ void UBP_S3GameInstance_C::ExecuteUbergraph_BP_S3GameInstance(int EntryPoint)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.OnGameShutdown__DelegateSignature
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_OnGameShutdown__DelegateSignature()
+void UBP_S3GameInstance_C::OnGameShutdown__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.OnGameShutdown__DelegateSignature");
 
@@ -718,11 +703,11 @@ void UBP_S3GameInstance_C::STATIC_OnGameShutdown__DelegateSignature()
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.OnChangeWetRate__DelegateSignature
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_OnChangeWetRate__DelegateSignature(float Rate)
+void UBP_S3GameInstance_C::OnChangeWetRate__DelegateSignature(float Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.OnChangeWetRate__DelegateSignature");
 
@@ -738,11 +723,11 @@ void UBP_S3GameInstance_C::STATIC_OnChangeWetRate__DelegateSignature(float Rate)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.NotVisibleMinimap__DelegateSignature
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_NotVisibleMinimap__DelegateSignature(class AActor* Actor)
+void UBP_S3GameInstance_C::NotVisibleMinimap__DelegateSignature(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.NotVisibleMinimap__DelegateSignature");
 
@@ -758,11 +743,11 @@ void UBP_S3GameInstance_C::STATIC_NotVisibleMinimap__DelegateSignature(class AAc
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.VisibleMinimap__DelegateSignature
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_VisibleMinimap__DelegateSignature(class AActor* Actor)
+void UBP_S3GameInstance_C::VisibleMinimap__DelegateSignature(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.VisibleMinimap__DelegateSignature");
 
@@ -778,11 +763,11 @@ void UBP_S3GameInstance_C::STATIC_VisibleMinimap__DelegateSignature(class AActor
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.onQTEResult__DelegateSignature
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_onQTEResult__DelegateSignature(bool Success)
+void UBP_S3GameInstance_C::onQTEResult__DelegateSignature(bool Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.onQTEResult__DelegateSignature");
 
@@ -798,11 +783,11 @@ void UBP_S3GameInstance_C::STATIC_onQTEResult__DelegateSignature(bool Success)
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.StartCutsceneFromName__DelegateSignature
-// (Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   CutsceneName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_StartCutsceneFromName__DelegateSignature(const struct FName& CutsceneName)
+void UBP_S3GameInstance_C::StartCutsceneFromName__DelegateSignature(const struct FName& CutsceneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.StartCutsceneFromName__DelegateSignature");
 
@@ -810,7 +795,6 @@ void UBP_S3GameInstance_C::STATIC_StartCutsceneFromName__DelegateSignature(const
 	params.CutsceneName = CutsceneName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -819,11 +803,11 @@ void UBP_S3GameInstance_C::STATIC_StartCutsceneFromName__DelegateSignature(const
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.onEndLoadstreamingMacro__DelegateSignature
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           loadFlag                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3GameInstance_C::STATIC_onEndLoadstreamingMacro__DelegateSignature(bool loadFlag)
+void UBP_S3GameInstance_C::onEndLoadstreamingMacro__DelegateSignature(bool loadFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.onEndLoadstreamingMacro__DelegateSignature");
 
@@ -839,16 +823,15 @@ void UBP_S3GameInstance_C::STATIC_onEndLoadstreamingMacro__DelegateSignature(boo
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.DbgSetMoonPhaseDispatcher__DelegateSignature
-// (Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_DbgSetMoonPhaseDispatcher__DelegateSignature()
+void UBP_S3GameInstance_C::DbgSetMoonPhaseDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.DbgSetMoonPhaseDispatcher__DelegateSignature");
 
 	UBP_S3GameInstance_C_DbgSetMoonPhaseDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -857,16 +840,15 @@ void UBP_S3GameInstance_C::STATIC_DbgSetMoonPhaseDispatcher__DelegateSignature()
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.DbgSetCloudDensitytDispatcher__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_DbgSetCloudDensitytDispatcher__DelegateSignature()
+void UBP_S3GameInstance_C::DbgSetCloudDensitytDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.DbgSetCloudDensitytDispatcher__DelegateSignature");
 
 	UBP_S3GameInstance_C_DbgSetCloudDensitytDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -875,16 +857,15 @@ void UBP_S3GameInstance_C::STATIC_DbgSetCloudDensitytDispatcher__DelegateSignatu
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.DbgToggleCloudShadowDispatcher__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_DbgToggleCloudShadowDispatcher__DelegateSignature()
+void UBP_S3GameInstance_C::DbgToggleCloudShadowDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.DbgToggleCloudShadowDispatcher__DelegateSignature");
 
 	UBP_S3GameInstance_C_DbgToggleCloudShadowDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -893,16 +874,15 @@ void UBP_S3GameInstance_C::STATIC_DbgToggleCloudShadowDispatcher__DelegateSignat
 
 
 // Function BP_S3GameInstance.BP_S3GameInstance_C.ForceWeatherChangeDispatcher__DelegateSignature
-// (NetReliable, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3GameInstance_C::STATIC_ForceWeatherChangeDispatcher__DelegateSignature()
+void UBP_S3GameInstance_C::ForceWeatherChangeDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GameInstance.BP_S3GameInstance_C.ForceWeatherChangeDispatcher__DelegateSignature");
 
 	UBP_S3GameInstance_C_ForceWeatherChangeDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

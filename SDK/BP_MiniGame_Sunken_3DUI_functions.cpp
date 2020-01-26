@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,19 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.CheckTiming
-// (Net, Exec, Native, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsJust                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsEx                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken_3DUI_C::STATIC_CheckTiming(bool* IsJust, bool* IsEx)
+void ABP_MiniGame_Sunken_3DUI_C::CheckTiming(bool* IsJust, bool* IsEx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.CheckTiming");
 
 	ABP_MiniGame_Sunken_3DUI_C_CheckTiming_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,7 +39,7 @@ void ABP_MiniGame_Sunken_3DUI_C::STATIC_CheckTiming(bool* IsJust, bool* IsEx)
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.SetJustTiming
-// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsJustTiming                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -52,7 +51,6 @@ void ABP_MiniGame_Sunken_3DUI_C::SetJustTiming(bool IsJustTiming)
 	params.IsJustTiming = IsJustTiming;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,9 +59,9 @@ void ABP_MiniGame_Sunken_3DUI_C::SetJustTiming(bool IsJustTiming)
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.UpdateToMaxDistance
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Sunken_3DUI_C::STATIC_UpdateToMaxDistance()
+void ABP_MiniGame_Sunken_3DUI_C::UpdateToMaxDistance()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.UpdateToMaxDistance");
 
@@ -78,7 +76,7 @@ void ABP_MiniGame_Sunken_3DUI_C::STATIC_UpdateToMaxDistance()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.UpdateBar
-// (NetReliable, NetRequest, Native, NetResponse, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -90,7 +88,6 @@ void ABP_MiniGame_Sunken_3DUI_C::UpdateBar(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,7 +96,7 @@ void ABP_MiniGame_Sunken_3DUI_C::UpdateBar(float Rate)
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::UserConstructionScript()
 {
@@ -108,7 +105,6 @@ void ABP_MiniGame_Sunken_3DUI_C::UserConstructionScript()
 	ABP_MiniGame_Sunken_3DUI_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +113,7 @@ void ABP_MiniGame_Sunken_3DUI_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_FlashCenterBar__FinishedFunc
-// (Net, Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_FlashCenterBar__FinishedFunc()
 {
@@ -134,7 +130,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_FlashCenterBar__FinishedFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_FlashCenterBar__UpdateFunc
-// (Net, Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_FlashCenterBar__UpdateFunc()
 {
@@ -151,7 +147,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_FlashCenterBar__UpdateFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.TimeLine_SideBar__FinishedFunc
-// (Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::TimeLine_SideBar__FinishedFunc()
 {
@@ -168,7 +164,7 @@ void ABP_MiniGame_Sunken_3DUI_C::TimeLine_SideBar__FinishedFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.TimeLine_SideBar__UpdateFunc
-// (Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::TimeLine_SideBar__UpdateFunc()
 {
@@ -185,7 +181,7 @@ void ABP_MiniGame_Sunken_3DUI_C::TimeLine_SideBar__UpdateFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_ScaleChangeBack__FinishedFunc
-// (Net, NetReliable, NetRequest, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_ScaleChangeBack__FinishedFunc()
 {
@@ -202,7 +198,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_ScaleChangeBack__FinishedFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_ScaleChangeBack__UpdateFunc
-// (Net, NetReliable, NetRequest, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_ScaleChangeBack__UpdateFunc()
 {
@@ -219,7 +215,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_ScaleChangeBack__UpdateFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_ActionTiming__FinishedFunc
-// (NetReliable, NetRequest, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__FinishedFunc()
 {
@@ -236,7 +232,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__FinishedFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_ActionTiming__UpdateFunc
-// (NetReliable, NetRequest, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__UpdateFunc()
 {
@@ -253,7 +249,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__UpdateFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_ActionTiming__EndJust__EventFunc
-// (Net, NetRequest, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__EndJust__EventFunc()
 {
@@ -270,7 +266,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__EndJust__EventFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_ActionTiming__EndEx__EventFunc
-// (Net, NetRequest, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__EndEx__EventFunc()
 {
@@ -287,7 +283,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__EndEx__EventFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_ActionTiming__StartEx__EventFunc
-// (Net, NetRequest, Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__StartEx__EventFunc()
 {
@@ -304,7 +300,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__StartEx__EventFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Timeline_ActionTiming__StartJust__EventFunc
-// (Net, NetRequest, Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__StartJust__EventFunc()
 {
@@ -321,7 +317,7 @@ void ABP_MiniGame_Sunken_3DUI_C::Timeline_ActionTiming__StartJust__EventFunc()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.ReceiveBeginPlay
-// (NetRequest, Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::ReceiveBeginPlay()
 {
@@ -338,7 +334,7 @@ void ABP_MiniGame_Sunken_3DUI_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Event_FlashCenterBar
-// (NetRequest, Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::Event_FlashCenterBar()
 {
@@ -355,11 +351,11 @@ void ABP_MiniGame_Sunken_3DUI_C::Event_FlashCenterBar()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Event_EnabledSideBar
-// (NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken_3DUI_C::STATIC_Event_EnabledSideBar(bool Enabled)
+void ABP_MiniGame_Sunken_3DUI_C::Event_EnabledSideBar(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Event_EnabledSideBar");
 
@@ -367,7 +363,6 @@ void ABP_MiniGame_Sunken_3DUI_C::STATIC_Event_EnabledSideBar(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -376,11 +371,11 @@ void ABP_MiniGame_Sunken_3DUI_C::STATIC_Event_EnabledSideBar(bool Enabled)
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Event_ForceSideBarEnabled
-// (NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Sunken_3DUI_C::STATIC_Event_ForceSideBarEnabled(bool Visible)
+void ABP_MiniGame_Sunken_3DUI_C::Event_ForceSideBarEnabled(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.Event_ForceSideBarEnabled");
 
@@ -388,7 +383,6 @@ void ABP_MiniGame_Sunken_3DUI_C::STATIC_Event_ForceSideBarEnabled(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -397,7 +391,7 @@ void ABP_MiniGame_Sunken_3DUI_C::STATIC_Event_ForceSideBarEnabled(bool Visible)
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.StartActionTiming
-// (NetReliable, Exec, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Sunken_3DUI_C::StartActionTiming()
 {
@@ -414,7 +408,7 @@ void ABP_MiniGame_Sunken_3DUI_C::StartActionTiming()
 
 
 // Function BP_MiniGame_Sunken_3DUI.BP_MiniGame_Sunken_3DUI_C.ExecuteUbergraph_BP_MiniGame_Sunken_3DUI
-// (Exec, Native, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -426,7 +420,6 @@ void ABP_MiniGame_Sunken_3DUI_C::ExecuteUbergraph_BP_MiniGame_Sunken_3DUI(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

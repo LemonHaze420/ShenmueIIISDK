@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,18 +49,19 @@ public:
 	}
 
 
+	struct FString ConvertBacklashN(const struct FString& SourceString, bool bSpace);
 	void ResetScroll();
-	void STATIC_ScrollSetName();
+	void ScrollSetName();
 	void ChangeInventoryType();
 	void CanExchange(bool Exchange);
 	void GetItemID(int* ItemId);
 	void GetName(struct FString* Name);
-	void STATIC_FocusIcon(bool IsSelect);
+	void FocusIcon(bool IsSelect);
 	void GetDescription(struct FString* Description);
 	void SetData(int ItemId, const struct FString& Name);
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void PreConstruct(bool IsDesignTime);
-	void STATIC_ExecuteUbergraph_BPW_UI_SetExchangeIcon(int EntryPoint);
+	void ExecuteUbergraph_BPW_UI_SetExchangeIcon(int EntryPoint);
 };
 
 

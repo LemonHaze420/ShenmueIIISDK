@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_PasswordConsole.BPW_PasswordConsole_C.PreConstruct
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UBPW_PasswordConsole_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UBPW_PasswordConsole_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BPW_PasswordConsole.BPW_PasswordConsole_C.Construct
-// (Net, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBPW_PasswordConsole_C::Construct()
 {
@@ -44,7 +43,6 @@ void UBPW_PasswordConsole_C::Construct()
 	UBPW_PasswordConsole_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,12 +51,12 @@ void UBPW_PasswordConsole_C::Construct()
 
 
 // Function BPW_PasswordConsole.BPW_PasswordConsole_C.Tick
-// (Net, Exec, Static, NetMulticast, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PasswordConsole_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_PasswordConsole_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PasswordConsole.BPW_PasswordConsole_C.Tick");
 
@@ -75,7 +73,7 @@ void UBPW_PasswordConsole_C::STATIC_Tick(const struct FGeometry& MyGeometry, flo
 
 
 // Function BPW_PasswordConsole.BPW_PasswordConsole_C.ExecuteUbergraph_BPW_PasswordConsole
-// (Native, NetMulticast, Private, Delegate, NetServer, NetClient)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -87,7 +85,6 @@ void UBPW_PasswordConsole_C::ExecuteUbergraph_BPW_PasswordConsole(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -66,15 +66,15 @@ public:
 	void IsErrorStopping(bool* IsStopping);
 	void PlayHitFallSE();
 	void PlayHitWallSE();
-	void STATIC_CheckAllVelocity(bool* result1);
-	void STATIC_SaveVelocity();
-	void STATIC_SetFallArea(bool bInFallArea);
+	void CheckAllVelocity(bool* result1);
+	void SaveVelocity();
+	void SetFallArea(bool bInFallArea);
 	void IsFinished(bool* bStop);
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void STATIC_DelayedStopCheckLocation();
-	void STATIC_ExecuteUbergraph_BP_OD_ball_Test(int EntryPoint);
+	void DelayedStopCheckLocation();
+	void ExecuteUbergraph_BP_OD_ball_Test(int EntryPoint);
 };
 
 

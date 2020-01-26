@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_DoorOpen.BP_AnimNotify_DoorOpen_C.SetDoorFlag
-// (NetReliable, NetRequest, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_AnimNotify_DoorOpen_C::STATIC_SetDoorFlag(class AS3GimmickOpenDoor* Door)
+void UBP_AnimNotify_DoorOpen_C::SetDoorFlag(class AS3GimmickOpenDoor* Door)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_DoorOpen.BP_AnimNotify_DoorOpen_C.SetDoorFlag");
 
@@ -34,7 +34,7 @@ void UBP_AnimNotify_DoorOpen_C::STATIC_SetDoorFlag(class AS3GimmickOpenDoor* Doo
 
 
 // Function BP_AnimNotify_DoorOpen.BP_AnimNotify_DoorOpen_C.GetDoorActor
-// (Native, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USkeletalMeshComponent*  Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AS3GimmickOpenDoor*      DoorActor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -47,7 +47,6 @@ void UBP_AnimNotify_DoorOpen_C::GetDoorActor(class USkeletalMeshComponent* Mesh,
 	params.Mesh = Mesh;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,7 +58,7 @@ void UBP_AnimNotify_DoorOpen_C::GetDoorActor(class USkeletalMeshComponent* Mesh,
 
 
 // Function BP_AnimNotify_DoorOpen.BP_AnimNotify_DoorOpen_C.GetSound
-// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           Sound                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -83,18 +82,17 @@ void UBP_AnimNotify_DoorOpen_C::GetSound(class AS3GimmickOpenDoor* Door, class U
 
 
 // Function BP_AnimNotify_DoorOpen.BP_AnimNotify_DoorOpen_C.GetNotifyName
-// (Net, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBP_AnimNotify_DoorOpen_C::STATIC_GetNotifyName()
+struct FString UBP_AnimNotify_DoorOpen_C::GetNotifyName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_DoorOpen.BP_AnimNotify_DoorOpen_C.GetNotifyName");
 
 	UBP_AnimNotify_DoorOpen_C_GetNotifyName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,13 +103,13 @@ struct FString UBP_AnimNotify_DoorOpen_C::STATIC_GetNotifyName()
 
 
 // Function BP_AnimNotify_DoorOpen.BP_AnimNotify_DoorOpen_C.Received_Notify
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_AnimNotify_DoorOpen_C::STATIC_Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+bool UBP_AnimNotify_DoorOpen_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_DoorOpen.BP_AnimNotify_DoorOpen_C.Received_Notify");
 

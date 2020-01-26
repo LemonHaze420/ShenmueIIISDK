@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Skill.BPF_Skill_C.GetNonItemSkillName_FName
-// (NetRequest, Event, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent)
+// (Static, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -43,7 +43,7 @@ void UBPF_Skill_C::STATIC_GetNonItemSkillName_FName(const struct FName& ID, clas
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_GetSkillText_FName
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FName                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -59,7 +59,6 @@ bool UBPF_Skill_C::STATIC_BPF_GetSkillText_FName(const struct FName& Name, class
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +72,7 @@ bool UBPF_Skill_C::STATIC_BPF_GetSkillText_FName(const struct FName& Name, class
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_FilterOutUnequippableSkills_Name
-// (Net, NetRequest, Exec, Native, NetResponse, Static, Protected, NetServer, BlueprintCallable)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   CommandLibrary                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           Array                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -88,7 +87,6 @@ void UBPF_Skill_C::STATIC_BPF_FilterOutUnequippableSkills_Name(class UBTL_Comman
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -100,14 +98,14 @@ void UBPF_Skill_C::STATIC_BPF_FilterOutUnequippableSkills_Name(class UBTL_Comman
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_GetSkillText
-// (Net, Exec, NetResponse, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // struct FST_SkillTextData       TextData                       (Parm, OutParm)
 
-bool UBPF_Skill_C::BPF_GetSkillText(int Index, class UObject* __WorldContext, struct FST_SkillTextData* TextData)
+bool UBPF_Skill_C::STATIC_BPF_GetSkillText(int Index, class UObject* __WorldContext, struct FST_SkillTextData* TextData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_GetSkillText");
 
@@ -129,7 +127,7 @@ bool UBPF_Skill_C::BPF_GetSkillText(int Index, class UObject* __WorldContext, st
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_SortSkillItemsForDisplay
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   SkillLibrary                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3GameInstance*         Inventory                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -137,7 +135,7 @@ bool UBPF_Skill_C::BPF_GetSkillText(int Index, class UObject* __WorldContext, st
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    SortedInts                     (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Skill_C::BPF_SortSkillItemsForDisplay(class UBTL_CommandLibrary_C* SkillLibrary, class US3GameInstance* Inventory, bool EquippableOnly, class UObject* __WorldContext, TArray<int>* SortedInts)
+void UBPF_Skill_C::STATIC_BPF_SortSkillItemsForDisplay(class UBTL_CommandLibrary_C* SkillLibrary, class US3GameInstance* Inventory, bool EquippableOnly, class UObject* __WorldContext, TArray<int>* SortedInts)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_SortSkillItemsForDisplay");
 
@@ -159,7 +157,7 @@ void UBPF_Skill_C::BPF_SortSkillItemsForDisplay(class UBTL_CommandLibrary_C* Ski
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_ConvertSkillNameListToIntList
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // TArray<struct FName>           Names                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    Ints                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -174,7 +172,6 @@ void UBPF_Skill_C::STATIC_BPF_ConvertSkillNameListToIntList(TArray<int> Ints, cl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -186,14 +183,14 @@ void UBPF_Skill_C::STATIC_BPF_ConvertSkillNameListToIntList(TArray<int> Ints, cl
 
 
 // Function BPF_Skill.BPF_Skill_C.GetNonItemSkillName_Int32
-// (NetResponse, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent)
+// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // int                            ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 NameText                       (Parm, OutParm, ZeroConstructor)
 // struct FString                 GraphicText                    (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Skill_C::GetNonItemSkillName_Int32(int ID, class UObject* __WorldContext, struct FString* NameText, struct FString* GraphicText)
+void UBPF_Skill_C::STATIC_GetNonItemSkillName_Int32(int ID, class UObject* __WorldContext, struct FString* NameText, struct FString* GraphicText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.GetNonItemSkillName_Int32");
 
@@ -215,12 +212,12 @@ void UBPF_Skill_C::GetNonItemSkillName_Int32(int ID, class UObject* __WorldConte
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_SelectAutoSkillSetAsFallback
-// (NetRequest, Event, NetResponse, Protected, NetServer, BlueprintCallable)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   CommandLibrary                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Skill_C::BPF_SelectAutoSkillSetAsFallback(class UBTL_CommandLibrary_C* CommandLibrary, class UObject* __WorldContext)
+void UBPF_Skill_C::STATIC_BPF_SelectAutoSkillSetAsFallback(class UBTL_CommandLibrary_C* CommandLibrary, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_SelectAutoSkillSetAsFallback");
 
@@ -237,13 +234,13 @@ void UBPF_Skill_C::BPF_SelectAutoSkillSetAsFallback(class UBTL_CommandLibrary_C*
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_ListLevelableSkills_int
-// (NetReliable, NetRequest, NetMulticast, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   SkillLibrary                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    SkillItems                     (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Skill_C::BPF_ListLevelableSkills_int(class UBTL_CommandLibrary_C* SkillLibrary, class UObject* __WorldContext, TArray<int>* SkillItems)
+void UBPF_Skill_C::STATIC_BPF_ListLevelableSkills_int(class UBTL_CommandLibrary_C* SkillLibrary, class UObject* __WorldContext, TArray<int>* SkillItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_ListLevelableSkills_int");
 
@@ -263,7 +260,7 @@ void UBPF_Skill_C::BPF_ListLevelableSkills_int(class UBTL_CommandLibrary_C* Skil
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_ListPlayerSkillItems_int
-// (NetRequest, Event, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   SkillLibrary                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3GameInstance*         Inventory                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -295,7 +292,7 @@ void UBPF_Skill_C::STATIC_BPF_ListPlayerSkillItems_int(class UBTL_CommandLibrary
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_ListPlayerSkillItems_Name
-// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   SkillLibrary                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3GameInstance*         Inventory                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -304,7 +301,7 @@ void UBPF_Skill_C::STATIC_BPF_ListPlayerSkillItems_int(class UBTL_CommandLibrary
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           SortedList                     (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Skill_C::BPF_ListPlayerSkillItems_Name(class UBTL_CommandLibrary_C* SkillLibrary, class US3GameInstance* Inventory, bool EquippableOnly, bool Sort, class UObject* __WorldContext, TArray<struct FName>* SortedList)
+void UBPF_Skill_C::STATIC_BPF_ListPlayerSkillItems_Name(class UBTL_CommandLibrary_C* SkillLibrary, class US3GameInstance* Inventory, bool EquippableOnly, bool Sort, class UObject* __WorldContext, TArray<struct FName>* SortedList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_ListPlayerSkillItems_Name");
 
@@ -327,13 +324,13 @@ void UBPF_Skill_C::BPF_ListPlayerSkillItems_Name(class UBTL_CommandLibrary_C* Sk
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_ListLevelableSkills_Name
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Protected, NetServer, BlueprintCallable)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   SkillLibrary                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           SkillItems                     (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Skill_C::BPF_ListLevelableSkills_Name(class UBTL_CommandLibrary_C* SkillLibrary, class UObject* __WorldContext, TArray<struct FName>* SkillItems)
+void UBPF_Skill_C::STATIC_BPF_ListLevelableSkills_Name(class UBTL_CommandLibrary_C* SkillLibrary, class UObject* __WorldContext, TArray<struct FName>* SkillItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_ListLevelableSkills_Name");
 
@@ -353,14 +350,14 @@ void UBPF_Skill_C::BPF_ListLevelableSkills_Name(class UBTL_CommandLibrary_C* Ski
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_CalcSelectedSkillsetName
-// (NetRequest, Native, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   TextData                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-struct FText UBPF_Skill_C::BPF_CalcSelectedSkillsetName(const struct FText& TextData, class UObject* __WorldContext, int* Index)
+struct FText UBPF_Skill_C::STATIC_BPF_CalcSelectedSkillsetName(const struct FText& TextData, class UObject* __WorldContext, int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_CalcSelectedSkillsetName");
 
@@ -369,7 +366,6 @@ struct FText UBPF_Skill_C::BPF_CalcSelectedSkillsetName(const struct FText& Text
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -383,14 +379,14 @@ struct FText UBPF_Skill_C::BPF_CalcSelectedSkillsetName(const struct FText& Text
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_IsSkillLevelable
-// (NetRequest, Native, NetResponse, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   CommandLibrary                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SkillItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_Skill_C::BPF_IsSkillLevelable(class UBTL_CommandLibrary_C* CommandLibrary, const struct FName& SkillItem, class UObject* __WorldContext)
+bool UBPF_Skill_C::STATIC_BPF_IsSkillLevelable(class UBTL_CommandLibrary_C* CommandLibrary, const struct FName& SkillItem, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_IsSkillLevelable");
 
@@ -400,7 +396,6 @@ bool UBPF_Skill_C::BPF_IsSkillLevelable(class UBTL_CommandLibrary_C* CommandLibr
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -411,7 +406,7 @@ bool UBPF_Skill_C::BPF_IsSkillLevelable(class UBTL_CommandLibrary_C* CommandLibr
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_IsSkillEquippable
-// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   CommandLibrary                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SkillItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -438,7 +433,7 @@ bool UBPF_Skill_C::STATIC_BPF_IsSkillEquippable(class UBTL_CommandLibrary_C* Com
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_GetManualSkillSetCount
-// (Net, Exec, Event, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -461,7 +456,7 @@ int UBPF_Skill_C::STATIC_BPF_GetManualSkillSetCount(class UObject* __WorldContex
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_GetSelectedSkillSetIndex
-// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -484,7 +479,7 @@ int UBPF_Skill_C::STATIC_BPF_GetSelectedSkillSetIndex(class UObject* __WorldCont
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_GetLastSkillSetIndex
-// (Net, NetRequest, Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -497,7 +492,6 @@ int UBPF_Skill_C::STATIC_BPF_GetLastSkillSetIndex(class UObject* __WorldContext)
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -508,11 +502,11 @@ int UBPF_Skill_C::STATIC_BPF_GetLastSkillSetIndex(class UObject* __WorldContext)
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_SelectAutoSkillSet
-// (NetReliable, NetRequest, Exec, NetResponse, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Skill_C::BPF_SelectAutoSkillSet(class UObject* __WorldContext)
+void UBPF_Skill_C::STATIC_BPF_SelectAutoSkillSet(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_SelectAutoSkillSet");
 
@@ -528,12 +522,12 @@ void UBPF_Skill_C::BPF_SelectAutoSkillSet(class UObject* __WorldContext)
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_SelectSkillSet
-// (NetReliable, Exec, Native, NetMulticast, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Skill_C::BPF_SelectSkillSet(int Index, class UObject* __WorldContext)
+void UBPF_Skill_C::STATIC_BPF_SelectSkillSet(int Index, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_SelectSkillSet");
 
@@ -542,7 +536,6 @@ void UBPF_Skill_C::BPF_SelectSkillSet(int Index, class UObject* __WorldContext)
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -551,7 +544,7 @@ void UBPF_Skill_C::BPF_SelectSkillSet(int Index, class UObject* __WorldContext)
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_IsAutoSkillSetSelected
-// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Returnalue                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -564,7 +557,6 @@ void UBPF_Skill_C::STATIC_BPF_IsAutoSkillSetSelected(class UObject* __WorldConte
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -576,7 +568,7 @@ void UBPF_Skill_C::STATIC_BPF_IsAutoSkillSetSelected(class UObject* __WorldConte
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_GetCurrentSkillList
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   CommandLibrary                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ESkillRecommendationType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -604,13 +596,13 @@ void UBPF_Skill_C::STATIC_BPF_GetCurrentSkillList(class UBTL_CommandLibrary_C* C
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_EquipSkill
-// (NetReliable, Native, NetResponse, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   SkillId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Skill_C::BPF_EquipSkill(const struct FName& SkillId, int Index, class UObject* __WorldContext)
+void UBPF_Skill_C::STATIC_BPF_EquipSkill(const struct FName& SkillId, int Index, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_EquipSkill");
 
@@ -620,7 +612,6 @@ void UBPF_Skill_C::BPF_EquipSkill(const struct FName& SkillId, int Index, class 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -629,14 +620,14 @@ void UBPF_Skill_C::BPF_EquipSkill(const struct FName& SkillId, int Index, class 
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_SelectRecommendedSkillList
-// (Net, Exec, Native, NetResponse, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibrary_C*   CommandLibrary                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ESkillRecommendationType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ItemLabels                     (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Skill_C::BPF_SelectRecommendedSkillList(class UBTL_CommandLibrary_C* CommandLibrary, TEnumAsByte<ESkillRecommendationType> Type, class UObject* __WorldContext, TArray<struct FName>* ItemLabels)
+void UBPF_Skill_C::STATIC_BPF_SelectRecommendedSkillList(class UBTL_CommandLibrary_C* CommandLibrary, TEnumAsByte<ESkillRecommendationType> Type, class UObject* __WorldContext, TArray<struct FName>* ItemLabels)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_SelectRecommendedSkillList");
 
@@ -646,7 +637,6 @@ void UBPF_Skill_C::BPF_SelectRecommendedSkillList(class UBTL_CommandLibrary_C* C
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -658,13 +648,13 @@ void UBPF_Skill_C::BPF_SelectRecommendedSkillList(class UBTL_CommandLibrary_C* C
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_ConvertItemIDToSkillID_Fast
-// (Net, NetReliable, Native, NetResponse, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Int                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Name                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Skill_C::BPF_ConvertItemIDToSkillID_Fast(int Int, class UObject* __WorldContext, struct FName* Name)
+void UBPF_Skill_C::STATIC_BPF_ConvertItemIDToSkillID_Fast(int Int, class UObject* __WorldContext, struct FName* Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skill.BPF_Skill_C.BPF_ConvertItemIDToSkillID_Fast");
 
@@ -673,7 +663,6 @@ void UBPF_Skill_C::BPF_ConvertItemIDToSkillID_Fast(int Int, class UObject* __Wor
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -685,7 +674,7 @@ void UBPF_Skill_C::BPF_ConvertItemIDToSkillID_Fast(int Int, class UObject* __Wor
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_CanPlayerEquipSkill_Int
-// (Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBTL_CommandLibrary_C*   CommandLibrary                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SkillId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -713,7 +702,7 @@ void UBPF_Skill_C::STATIC_BPF_CanPlayerEquipSkill_Int(class UBTL_CommandLibrary_
 
 
 // Function BPF_Skill.BPF_Skill_C.BPF_ConvertItemIDToSkillID
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, NetServer, BlueprintCallable)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Int                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -728,7 +717,6 @@ void UBPF_Skill_C::STATIC_BPF_ConvertItemIDToSkillID(int Int, class UObject* __W
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

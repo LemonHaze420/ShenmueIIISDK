@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,7 +28,7 @@ public:
 	int                                                FocusedItemIndex;                                         // 0x023C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               bIsCategoryFocusedAnotherButton;                          // 0x0240(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0241(0x0007) MISSED OFFSET
-	TArray<class UBW_DebugAutoConversationItem_C*>     itemList;                                                 // 0x0248(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UBW_DebugAutoConversationItem_C*>     ItemList;                                                 // 0x0248(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class UBW_DebugAutoConversationItem_C*             NowItem;                                                  // 0x0258(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	bool                                               IsUseIDSortFlag;                                          // 0x0260(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0261(0x0007) MISSED OFFSET
@@ -42,20 +42,20 @@ public:
 	}
 
 
-	void STATIC_InitLastButton();
+	void InitLastButton();
 	bool CheckGotoCategory(int NewIndex);
 	void UpdateFocus();
 	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void SetFocusToCategory();
-	void STATIC_SetFocusToItem(int Index);
-	struct FEventReply STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void STATIC_UpdateCutsceneList();
-	void STATIC_BuildCutsceneList();
-	void STATIC_Construct();
+	void SetFocusToItem(int Index);
+	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void UpdateCutsceneList();
+	void BuildCutsceneList();
+	void Construct();
 	void BndEvt__CheckBoxUseAnother_K2Node_ComponentBoundEvent_159_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
-	void STATIC_BndEvt__LastButton_K2Node_ComponentBoundEvent_225_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_BndEvt__S3Button_2_K2Node_ComponentBoundEvent_271_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_ExecuteUbergraph_BW_DebugAutoConversationList(int EntryPoint);
+	void BndEvt__LastButton_K2Node_ComponentBoundEvent_225_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__S3Button_2_K2Node_ComponentBoundEvent_271_OnButtonClickedEvent__DelegateSignature();
+	void ExecuteUbergraph_BW_DebugAutoConversationList(int EntryPoint);
 };
 
 

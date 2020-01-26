@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,11 +25,11 @@ public:
 	}
 
 
-	void GetS3PostProcessAnimInstance(class AActor* Actor, class UObject* __WorldContext, class US3PostProcessAnimInstance** AnimInstance);
+	void STATIC_GetS3PostProcessAnimInstance(class AActor* Actor, class UObject* __WorldContext, class US3PostProcessAnimInstance** AnimInstance);
 	void STATIC_ChangeMaterial(class USkeletalMeshComponent* Component, EClothPartsType Type, class UMaterialInterface* Material, class UObject* __WorldContext);
 	void STATIC_SetDisablePostProcessPhysics(class USkeletalMeshComponent* Component, bool Disable, class UObject* __WorldContext);
 	void STATIC_GetFaceSubAnimInstance(class USkeletalMeshComponent* Component, class UObject* __WorldContext, class USubABP_CharacterBase_C** SubABP);
-	void TryGetSocketLocation(class USceneComponent* Target, const struct FName& InSocketName, class UObject* __WorldContext, bool* Result, struct FVector* Location);
+	void STATIC_TryGetSocketLocation(class USceneComponent* Target, const struct FName& InSocketName, class UObject* __WorldContext, bool* Result, struct FVector* Location);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,9 +34,9 @@ public:
 
 	void ShowMessage(TEnumAsByte<ESaveMessageType> Type);
 	void Construct();
-	void STATIC_OnAnimationFinished(class UWidgetAnimation* Animation);
+	void OnAnimationFinished(class UWidgetAnimation* Animation);
 	void ExecuteUbergraph_BPW_SaveMessage(int EntryPoint);
-	void STATIC_OnFinishedSaveMessage__DelegateSignature();
+	void OnFinishedSaveMessage__DelegateSignature();
 };
 
 

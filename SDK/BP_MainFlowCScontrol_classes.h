@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,10 +30,10 @@ public:
 
 
 	void CSEvent_Enable(const struct FName& CutsceneName, bool UseFade);
-	void STATIC_CallCS_Event(const struct FName& EventName, bool End);
-	void STATIC_OnStartCutScene();
-	void STATIC_OnEndCutscene();
-	void STATIC_ExecuteUbergraph_BP_MainFlowCScontrol(int EntryPoint);
+	void CallCS_Event(const struct FName& EventName, bool End);
+	void OnStartCutScene();
+	void OnEndCutscene();
+	void ExecuteUbergraph_BP_MainFlowCScontrol(int EntryPoint);
 };
 
 

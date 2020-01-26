@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_LookAt.BPF_LookAt_C.TryGetLookAtFSMComponent
-// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBPC_LookAtFSM_C*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UBPC_LookAtFSM_C* UBPF_LookAt_C::TryGetLookAtFSMComponent(class AActor* TargetActor, class UObject* __WorldContext)
+class UBPC_LookAtFSM_C* UBPF_LookAt_C::STATIC_TryGetLookAtFSMComponent(class AActor* TargetActor, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_LookAt.BPF_LookAt_C.TryGetLookAtFSMComponent");
 
@@ -39,7 +39,7 @@ class UBPC_LookAtFSM_C* UBPF_LookAt_C::TryGetLookAtFSMComponent(class AActor* Ta
 
 
 // Function BPF_LookAt.BPF_LookAt_C.IsWithinASpecifiedAngle180
-// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 TargetLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class AActor*                  SelfActor                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -75,7 +75,7 @@ void UBPF_LookAt_C::STATIC_IsWithinASpecifiedAngle180(const struct FVector& Targ
 
 
 // Function BPF_LookAt.BPF_LookAt_C.LookAtSetup_Initialize
-// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBPC_LookAt_C*           LookAt                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -97,7 +97,7 @@ void UBPF_LookAt_C::STATIC_LookAtSetup_Initialize(class UBPC_LookAt_C* LookAt, c
 
 
 // Function BPF_LookAt.BPF_LookAt_C.LookAtSetup_ParamaterDefault
-// (Net, Native, Event, Static, MulticastDelegate, Protected, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBPC_LookAt_C*           LookAt                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -111,7 +111,6 @@ void UBPF_LookAt_C::STATIC_LookAtSetup_ParamaterDefault(class UBPC_LookAt_C* Loo
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

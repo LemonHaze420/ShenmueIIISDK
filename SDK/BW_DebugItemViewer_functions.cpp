@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugItemViewer.BW_DebugItemViewer_C.On_ViewerButton_MouseButtonDown_1
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FPointerEvent           MouseEvent                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UBW_DebugItemViewer_C::STATIC_On_ViewerButton_MouseButtonDown_1(const struct FGeometry& MyGeometry, struct FPointerEvent* MouseEvent)
+struct FEventReply UBW_DebugItemViewer_C::On_ViewerButton_MouseButtonDown_1(const struct FGeometry& MyGeometry, struct FPointerEvent* MouseEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugItemViewer.BW_DebugItemViewer_C.On_ViewerButton_MouseButtonDown_1");
 
@@ -28,7 +28,6 @@ struct FEventReply UBW_DebugItemViewer_C::STATIC_On_ViewerButton_MouseButtonDown
 	params.MyGeometry = MyGeometry;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -42,16 +41,15 @@ struct FEventReply UBW_DebugItemViewer_C::STATIC_On_ViewerButton_MouseButtonDown
 
 
 // Function BW_DebugItemViewer.BW_DebugItemViewer_C.Construct
-// (Net, NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UBW_DebugItemViewer_C::STATIC_Construct()
+void UBW_DebugItemViewer_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugItemViewer.BW_DebugItemViewer_C.Construct");
 
 	UBW_DebugItemViewer_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,16 +58,15 @@ void UBW_DebugItemViewer_C::STATIC_Construct()
 
 
 // Function BW_DebugItemViewer.BW_DebugItemViewer_C.BndEvt__MorningButton_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature
-// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void UBW_DebugItemViewer_C::STATIC_BndEvt__MorningButton_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugItemViewer_C::BndEvt__MorningButton_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugItemViewer.BW_DebugItemViewer_C.BndEvt__MorningButton_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_DebugItemViewer_C_BndEvt__MorningButton_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,11 +75,11 @@ void UBW_DebugItemViewer_C::STATIC_BndEvt__MorningButton_K2Node_ComponentBoundEv
 
 
 // Function BW_DebugItemViewer.BW_DebugItemViewer_C.ExecuteUbergraph_BW_DebugItemViewer
-// (Native, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugItemViewer_C::STATIC_ExecuteUbergraph_BW_DebugItemViewer(int EntryPoint)
+void UBW_DebugItemViewer_C::ExecuteUbergraph_BW_DebugItemViewer(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugItemViewer.BW_DebugItemViewer_C.ExecuteUbergraph_BW_DebugItemViewer");
 
@@ -90,7 +87,6 @@ void UBW_DebugItemViewer_C::STATIC_ExecuteUbergraph_BW_DebugItemViewer(int Entry
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,16 +95,15 @@ void UBW_DebugItemViewer_C::STATIC_ExecuteUbergraph_BW_DebugItemViewer(int Entry
 
 
 // Function BW_DebugItemViewer.BW_DebugItemViewer_C.OnClickedDispatcher__DelegateSignature
-// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UBW_DebugItemViewer_C::STATIC_OnClickedDispatcher__DelegateSignature()
+void UBW_DebugItemViewer_C::OnClickedDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugItemViewer.BW_DebugItemViewer_C.OnClickedDispatcher__DelegateSignature");
 
 	UBW_DebugItemViewer_C_OnClickedDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

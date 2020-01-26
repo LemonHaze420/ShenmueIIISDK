@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.Init
-// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemNumber                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_SaveData_ViewItem_C* GameData                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -36,16 +36,15 @@ void ABP_CaptureCameraAndLight_C::Init(int ItemNumber, class UBP_SaveData_ViewIt
 
 
 // Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.GameDataUpdate
-// (Net, NetRequest, Native, Static, NetMulticast, Private, Protected, Delegate, NetServer, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_CaptureCameraAndLight_C::STATIC_GameDataUpdate()
+void ABP_CaptureCameraAndLight_C::GameDataUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.GameDataUpdate");
 
 	ABP_CaptureCameraAndLight_C_GameDataUpdate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +53,7 @@ void ABP_CaptureCameraAndLight_C::STATIC_GameDataUpdate()
 
 
 // Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.UpdateLightPosAndRot
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          PosX                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          PosY                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -72,7 +71,6 @@ void ABP_CaptureCameraAndLight_C::UpdateLightPosAndRot(float PosX, float PosY, f
 	params.LightNumber = LightNumber;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,16 +79,15 @@ void ABP_CaptureCameraAndLight_C::UpdateLightPosAndRot(float PosX, float PosY, f
 
 
 // Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_CaptureCameraAndLight_C::STATIC_UserConstructionScript()
+void ABP_CaptureCameraAndLight_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.UserConstructionScript");
 
 	ABP_CaptureCameraAndLight_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,7 +96,7 @@ void ABP_CaptureCameraAndLight_C::STATIC_UserConstructionScript()
 
 
 // Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.ReceiveBeginPlay
-// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_CaptureCameraAndLight_C::ReceiveBeginPlay()
 {
@@ -116,11 +113,11 @@ void ABP_CaptureCameraAndLight_C::ReceiveBeginPlay()
 
 
 // Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.Update
-// (NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemNo                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CaptureCameraAndLight_C::STATIC_Update(int ItemNo)
+void ABP_CaptureCameraAndLight_C::Update(int ItemNo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.Update");
 
@@ -128,7 +125,6 @@ void ABP_CaptureCameraAndLight_C::STATIC_Update(int ItemNo)
 	params.ItemNo = ItemNo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,11 +133,11 @@ void ABP_CaptureCameraAndLight_C::STATIC_Update(int ItemNo)
 
 
 // Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.ExecuteUbergraph_BP_CaptureCameraAndLight
-// (NetReliable, Native, Static, NetMulticast, Public, Private, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CaptureCameraAndLight_C::STATIC_ExecuteUbergraph_BP_CaptureCameraAndLight(int EntryPoint)
+void ABP_CaptureCameraAndLight_C::ExecuteUbergraph_BP_CaptureCameraAndLight(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CaptureCameraAndLight.BP_CaptureCameraAndLight_C.ExecuteUbergraph_BP_CaptureCameraAndLight");
 
@@ -149,7 +145,6 @@ void ABP_CaptureCameraAndLight_C::STATIC_ExecuteUbergraph_BP_CaptureCameraAndLig
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

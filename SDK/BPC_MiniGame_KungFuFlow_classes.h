@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,30 +49,30 @@ public:
 
 	void SetExperienceAdjustRate(float Rate);
 	bool IsShowingResultScreen();
-	void STATIC_ShowResultScreen();
-	void STATIC_SetEnabledMasterImage(bool Enabled);
-	void STATIC_PlayMaxLevelMasteredAnim();
-	void STATIC_UpdateUIKungFuLevelInfo();
-	int STATIC_GetCurrentLimitLevel();
-	void STATIC_ChangeKungFuNameToNext();
+	void ShowResultScreen();
+	void SetEnabledMasterImage(bool Enabled);
+	void PlayMaxLevelMasteredAnim();
+	void UpdateUIKungFuLevelInfo();
+	int GetCurrentLimitLevel();
+	void ChangeKungFuNameToNext();
 	void BindEventSkillCountMax(const struct FScriptDelegate& Event);
-	void STATIC_SetTimerCurrentRate(float TimeRate);
-	void STATIC_AddSkillCount(int AddCount);
+	void SetTimerCurrentRate(float TimeRate);
+	void AddSkillCount(int AddCount);
 	void GetKungFuLocalizedName(TEnumAsByte<E_MiniGame_KungFuType> Type, int Level, struct FString* OutString);
-	void SetWidgetArrowSettings(float moveSpeed, float MoveTime, float IntervalTIme);
-	void STATIC_EnabledButtonIconUI(bool bEnabled);
-	void STATIC_Finalize();
-	void STATIC_UpdateAccumulation(float DeltaSeconds);
+	void SetWidgetArrowSettings(float moveSpeed, float MoveTime, float IntervalTime);
+	void EnabledButtonIconUI(bool bEnabled);
+	void Finalize();
+	void UpdateAccumulation(float DeltaSeconds);
 	void BindEventTimeUp(const struct FScriptDelegate& Event);
 	void Initialize(bool bUseButtonIcon, bool bFlashButtonAnimIcon, TEnumAsByte<E_MiniGame_KungFuType> KungFuType, int KungFuLevel, int MiniLevel, const struct FTransform& CameraTrans);
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void CallSkillCountMax();
 	void OnResultScreenClose();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BPC_MiniGame_KungFuFlow(int EntryPoint);
 	void ResultEndDispacher__DelegateSignature();
 	void SkillCountMaxDispacher__DelegateSignature();
-	void STATIC_TimeUpDispacher__DelegateSignature();
+	void TimeUpDispacher__DelegateSignature();
 };
 
 

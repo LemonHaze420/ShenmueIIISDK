@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Key                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UDatasmithContentBlueprintLibrary::GetDatasmithUserDataValueForKey(class UObject* Object, const struct FName& Key)
+struct FString UDatasmithContentBlueprintLibrary::STATIC_GetDatasmithUserDataValueForKey(class UObject* Object, const struct FName& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey");
 
@@ -29,6 +29,7 @@ struct FString UDatasmithContentBlueprintLibrary::GetDatasmithUserDataValueForKe
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,14 +40,14 @@ struct FString UDatasmithContentBlueprintLibrary::GetDatasmithUserDataValueForKe
 
 
 // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue
-// ()
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 StringToMatch                  (Parm, ZeroConstructor)
 // TArray<struct FName>           OutKeys                        (Parm, OutParm, ZeroConstructor)
 // TArray<struct FString>         OutValues                      (Parm, OutParm, ZeroConstructor)
 
-void UDatasmithContentBlueprintLibrary::GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, const struct FString& StringToMatch, TArray<struct FName>* OutKeys, TArray<struct FString>* OutValues)
+void UDatasmithContentBlueprintLibrary::STATIC_GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, const struct FString& StringToMatch, TArray<struct FName>* OutKeys, TArray<struct FString>* OutValues)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue");
 
@@ -55,6 +56,7 @@ void UDatasmithContentBlueprintLibrary::GetDatasmithUserDataKeysAndValuesForValu
 	params.StringToMatch = StringToMatch;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,12 +70,12 @@ void UDatasmithContentBlueprintLibrary::GetDatasmithUserDataKeysAndValuesForValu
 
 
 // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UDatasmithAssetUserData* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UDatasmithAssetUserData* UDatasmithContentBlueprintLibrary::GetDatasmithUserData(class UObject* Object)
+class UDatasmithAssetUserData* UDatasmithContentBlueprintLibrary::STATIC_GetDatasmithUserData(class UObject* Object)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData");
 
@@ -81,6 +83,7 @@ class UDatasmithAssetUserData* UDatasmithContentBlueprintLibrary::GetDatasmithUs
 	params.Object = Object;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

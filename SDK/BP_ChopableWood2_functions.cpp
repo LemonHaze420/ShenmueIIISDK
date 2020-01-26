@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ChopableWood2.BP_ChopableWood2_C.ChopActionFromRot
-// (NetReliable, NetRequest, Exec, Native, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                Rot                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_ChopableWood2_C::STATIC_ChopActionFromRot(const struct FRotator& Rot)
+void ABP_ChopableWood2_C::ChopActionFromRot(const struct FRotator& Rot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChopableWood2.BP_ChopableWood2_C.ChopActionFromRot");
 
@@ -26,7 +26,6 @@ void ABP_ChopableWood2_C::STATIC_ChopActionFromRot(const struct FRotator& Rot)
 	params.Rot = Rot;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void ABP_ChopableWood2_C::STATIC_ChopActionFromRot(const struct FRotator& Rot)
 
 
 // Function BP_ChopableWood2.BP_ChopableWood2_C.MakeRandomVector
-// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          x_max                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          x_min                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -69,16 +68,15 @@ void ABP_ChopableWood2_C::MakeRandomVector(float x_max, float x_min, float y_max
 
 
 // Function BP_ChopableWood2.BP_ChopableWood2_C.UserConstructionScript
-// (Exec, Native, NetResponse, Static, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ChopableWood2_C::STATIC_UserConstructionScript()
+void ABP_ChopableWood2_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChopableWood2.BP_ChopableWood2_C.UserConstructionScript");
 
 	ABP_ChopableWood2_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,9 +85,9 @@ void ABP_ChopableWood2_C::STATIC_UserConstructionScript()
 
 
 // Function BP_ChopableWood2.BP_ChopableWood2_C.ChopAction
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ChopableWood2_C::STATIC_ChopAction()
+void ABP_ChopableWood2_C::ChopAction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChopableWood2.BP_ChopableWood2_C.ChopAction");
 
@@ -104,9 +102,9 @@ void ABP_ChopableWood2_C::STATIC_ChopAction()
 
 
 // Function BP_ChopableWood2.BP_ChopableWood2_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_ChopableWood2_C::STATIC_ReceiveBeginPlay()
+void ABP_ChopableWood2_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChopableWood2.BP_ChopableWood2_C.ReceiveBeginPlay");
 
@@ -121,7 +119,7 @@ void ABP_ChopableWood2_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_ChopableWood2.BP_ChopableWood2_C.DelayDestroy
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DelayTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -133,7 +131,6 @@ void ABP_ChopableWood2_C::DelayDestroy(float DelayTime)
 	params.DelayTime = DelayTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,11 +139,11 @@ void ABP_ChopableWood2_C::DelayDestroy(float DelayTime)
 
 
 // Function BP_ChopableWood2.BP_ChopableWood2_C.ExecuteUbergraph_BP_ChopableWood2
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ChopableWood2_C::STATIC_ExecuteUbergraph_BP_ChopableWood2(int EntryPoint)
+void ABP_ChopableWood2_C::ExecuteUbergraph_BP_ChopableWood2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChopableWood2.BP_ChopableWood2_C.ExecuteUbergraph_BP_ChopableWood2");
 
@@ -154,7 +151,6 @@ void ABP_ChopableWood2_C::STATIC_ExecuteUbergraph_BP_ChopableWood2(int EntryPoin
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.AdjustForDifficultySetting
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            PlayerLevelsAbove              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBPC_BattleSoftlockSettings_C::STATIC_AdjustForDifficultySetting(int PlayerLevelsAbove)
+int UBPC_BattleSoftlockSettings_C::AdjustForDifficultySetting(int PlayerLevelsAbove)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.AdjustForDifficultySetting");
 
@@ -27,7 +27,6 @@ int UBPC_BattleSoftlockSettings_C::STATIC_AdjustForDifficultySetting(int PlayerL
 	params.PlayerLevelsAbove = PlayerLevelsAbove;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +37,7 @@ int UBPC_BattleSoftlockSettings_C::STATIC_AdjustForDifficultySetting(int PlayerL
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.CalcEnemyTeamAdjust
-// (Exec, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            LevelRef                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            MaxSimultaneousAttacks         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -62,12 +61,12 @@ void UBPC_BattleSoftlockSettings_C::CalcEnemyTeamAdjust(int LevelRef, int* MaxSi
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.CalcEnemyAdjust
-// (Native, Static, NetMulticast, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            PlayerLevelAbove               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            AIStep                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BattleSoftlockSettings_C::STATIC_CalcEnemyAdjust(int PlayerLevelAbove, int* AIStep)
+void UBPC_BattleSoftlockSettings_C::CalcEnemyAdjust(int PlayerLevelAbove, int* AIStep)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.CalcEnemyAdjust");
 
@@ -75,7 +74,6 @@ void UBPC_BattleSoftlockSettings_C::STATIC_CalcEnemyAdjust(int PlayerLevelAbove,
 	params.PlayerLevelAbove = PlayerLevelAbove;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +85,7 @@ void UBPC_BattleSoftlockSettings_C::STATIC_CalcEnemyAdjust(int PlayerLevelAbove,
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.DebugPrintEffects
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            RelativeLevel                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InDamage                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -96,7 +94,7 @@ void UBPC_BattleSoftlockSettings_C::STATIC_CalcEnemyAdjust(int PlayerLevelAbove,
 // bool                           Short                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBPC_BattleSoftlockSettings_C::STATIC_DebugPrintEffects(int RelativeLevel, float InDamage, float OutDamage, int Adjust, bool Short)
+struct FString UBPC_BattleSoftlockSettings_C::DebugPrintEffects(int RelativeLevel, float InDamage, float OutDamage, int Adjust, bool Short)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.DebugPrintEffects");
 
@@ -118,9 +116,9 @@ struct FString UBPC_BattleSoftlockSettings_C::STATIC_DebugPrintEffects(int Relat
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.PrintExampleStats
-// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UBPC_BattleSoftlockSettings_C::STATIC_PrintExampleStats()
+void UBPC_BattleSoftlockSettings_C::PrintExampleStats()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.PrintExampleStats");
 
@@ -135,7 +133,7 @@ void UBPC_BattleSoftlockSettings_C::STATIC_PrintExampleStats()
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.CalcPlayerAdjust
-// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            PlayerLevelsAbove              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Apply                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)

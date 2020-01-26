@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -65,52 +65,52 @@ public:
 	}
 
 
-	void STATIC_SetSubtitles();
+	void SetSubtitles();
 	void InitSubtitles();
-	void STATIC_InitTextBlock_3();
+	void InitTextBlock_3();
 	void SetZoomFinder();
-	void STATIC_InitZoomFinder();
+	void InitZoomFinder();
 	void SetDisable(bool Disabled);
-	void STATIC_AssignDressMode();
+	void AssignDressMode();
 	void GetParam(TEnumAsByte<EN_ConfigParam>* Param);
-	struct FIntPoint STATIC_ParseResolution(const struct FString& Resolution);
-	void STATIC_InitVibration();
-	void STATIC_CheckReLoadTitle(bool* ReLoadTitle);
-	void STATIC_SetHorizontalKey();
-	void STATIC_SetVerticalKey();
-	void STATIC_SetDecideKey();
-	void STATIC_ChangeKey(ES3KeyConfigType Type);
-	void STATIC_SetDifficulty(TEnumAsByte<EBattleDifficulty> Difficulty);
+	struct FIntPoint ParseResolution(const struct FString& Resolution);
+	void InitVibration();
+	void CheckReLoadTitle(bool* ReLoadTitle);
+	void SetHorizontalKey();
+	void SetVerticalKey();
+	void SetDecideKey();
+	void ChangeKey(ES3KeyConfigType Type);
+	void SetDifficulty(TEnumAsByte<EBattleDifficulty> Difficulty);
 	void SetGamma(float Gamma);
 	void InitVsync();
 	void InitResolution();
-	void STATIC_MakeResolutionList(int InBorderIndex);
-	void STATIC_GetBorderlessValue(struct FIntPoint* Output);
-	void STATIC_SetGraphic(ES3GraphicPreset InGraphicPreset);
+	void MakeResolutionList(int InBorderIndex);
+	void GetBorderlessValue(struct FIntPoint* Output);
+	void SetGraphic(ES3GraphicPreset InGraphicPreset);
 	void PushRightButton();
 	void SetName();
-	void STATIC_SetLocale(ES3Locale Locale);
-	void STATIC_SetVoiceLanguage(ES3VoiceLanguage VoiceLanguage);
-	void STATIC_SetVolume(float Volume);
+	void SetLocale(ES3Locale Locale);
+	void SetVoiceLanguage(ES3VoiceLanguage VoiceLanguage);
+	void SetVolume(float Volume);
 	void HiddenChoice();
 	void PushLeftRightCursor(int Add);
 	void InitChoiceList(TArray<struct FString>* ChoiceList);
 	void FocusButton(bool IsForcus);
-	void STATIC_OnLoaded_5B1B81D442FCD483358473950A373374(class UObject* Loaded);
-	void STATIC_OnLoaded_58EFD7524DB327D54C6CCE8DF255007C(class UObject* Loaded);
+	void OnLoaded_5B1B81D442FCD483358473950A373374(class UObject* Loaded);
+	void OnLoaded_58EFD7524DB327D54C6CCE8DF255007C(class UObject* Loaded);
 	void Construct();
 	void Destruct();
 	void BindVoicePlayer();
-	void STATIC_FinishPlayer(class ABP_S3SoundPlayer_C* SoundPlayer);
+	void FinishPlayer(class ABP_S3SoundPlayer_C* SoundPlayer);
 	void BindSEPlayer();
 	void OnSaveLoad();
 	void FinishSaveLoad();
 	void SelectTitleBack();
-	void STATIC_DecideTitleBack(class AActor* Actor);
-	void STATIC_CancelTitleBack(class AActor* Actor);
+	void DecideTitleBack(class AActor* Actor);
+	void CancelTitleBack(class AActor* Actor);
 	void TransitionTitle();
 	void PlayTestVoice();
-	void STATIC_ExecuteUbergraph_BPW_UI_Config_Row(int EntryPoint);
+	void ExecuteUbergraph_BPW_UI_Config_Row(int EntryPoint);
 };
 
 

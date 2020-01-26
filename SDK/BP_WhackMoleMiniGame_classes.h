@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -130,40 +130,40 @@ public:
 	}
 
 
-	void STATIC_UpdateSuddenDeathMole();
-	void STATIC_GetMoleAppearWaitTime(float* Time);
-	void STATIC_SetDummyHammerRandomRot();
+	void UpdateSuddenDeathMole();
+	void GetMoleAppearWaitTime(float* Time);
+	void SetDummyHammerRandomRot();
 	void SetLastScore();
 	class UMeshComponent* GetClothMeshComponent();
-	void STATIC_SetRenderScore(class UChildActorComponent* ScoreChildActor, int Score, bool IsStage);
-	void STATIC_SetRenderScoreEnabled(bool bEnabled);
-	void STATIC_SetMoleTickEnabled(bool bEnabled);
-	void STATIC_StopRoundBGM();
-	void STATIC_SetHighScore();
+	void SetRenderScore(class UChildActorComponent* ScoreChildActor, int Score, bool IsStage);
+	void SetRenderScoreEnabled(bool bEnabled);
+	void SetMoleTickEnabled(bool bEnabled);
+	void StopRoundBGM();
+	void SetHighScore();
 	void PlayRoundBGM();
-	void STATIC_CheckHighScore(bool* HighScore);
-	void STATIC_LoadScore();
+	void CheckHighScore(bool* HighScore);
+	void LoadScore();
 	void SaveHighScore();
 	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
 	void UpdateInputCommand();
 	void UpdateInputInterval(float DeltaSeconds);
-	void STATIC_UpdateMoleAppearFromData(class UMG_WMData* MoleData, int RoundNum, bool* End);
-	void STATIC_IsCameraPosMove(bool* Move);
-	void STATIC_UpdateCamera(float DeltaSeconds);
+	void UpdateMoleAppearFromData(class UMG_WMData* MoleData, int RoundNum, bool* End);
+	void IsCameraPosMove(bool* Move);
+	void UpdateCamera(float DeltaSeconds);
 	void InitializeValue();
 	void CanNextRound(bool* Next);
 	void GetMaxTime(class UMG_WMData* Data, int RoundNum, float* Time);
 	void UpdateWhackAnim(float DeltaSeconds);
-	void STATIC_GetUnAdjustedPos(const struct FVector& Input, struct FVector* pos);
-	void STATIC_GetAdjustedPos(const struct FVector& Input, struct FVector* pos);
+	void GetUnAdjustedPos(const struct FVector& Input, struct FVector* pos);
+	void GetAdjustedPos(const struct FVector& Input, struct FVector* pos);
 	void IsAppearMole(TArray<class ABP_MiniGameMole_C*>* MoleList, bool* Enabled);
-	void STATIC_CheckMoleWhack();
-	void STATIC_InterpPlayerMeshPos(float DeltaSeconds);
+	void CheckMoleWhack();
+	void InterpPlayerMeshPos(float DeltaSeconds);
 	void SetPlayerMeshPos(const struct FVector& NewPos);
 	void AddScorePoint(int AddScore);
-	void STATIC_EndCheck(bool* EndGame);
-	void STATIC_InputAction(bool* Enable);
-	void STATIC_UserConstructionScript();
+	void EndCheck(bool* EndGame);
+	void InputAction(bool* Enable);
+	void UserConstructionScript();
 	void FieldOfViewTimeLine__FinishedFunc();
 	void FieldOfViewTimeLine__UpdateFunc();
 	void TL_FlashScore1__FinishedFunc();
@@ -206,8 +206,8 @@ public:
 	void EnableScore1();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_42_OnGameContinueDispatcher__DelegateSignature();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_43_OnGameFinishedDispatcher__DelegateSignature();
-	void STATIC_ResumeMiniGame(const struct FString& ResumeKeyword);
-	void STATIC_OnTalkScriptEvent(int EventNumber);
+	void ResumeMiniGame(const struct FString& ResumeKeyword);
+	void OnTalkScriptEvent(int EventNumber);
 	void EndGame();
 	void OnEndKihudaFlow();
 	void ChangedClothes(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);

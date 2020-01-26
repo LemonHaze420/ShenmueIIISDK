@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_GameOverCtl.BP_GameOverCtl_C.CheckLimitDay
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,18 +36,17 @@ void ABP_GameOverCtl_C::CheckLimitDay(struct FName* Type)
 
 
 // Function BP_GameOverCtl.BP_GameOverCtl_C.InitSet
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Make_Actor                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GameOverCtl_C::STATIC_InitSet(bool* Make_Actor)
+void ABP_GameOverCtl_C::InitSet(bool* Make_Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameOverCtl.BP_GameOverCtl_C.InitSet");
 
 	ABP_GameOverCtl_C_InitSet_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,9 +58,9 @@ void ABP_GameOverCtl_C::STATIC_InitSet(bool* Make_Actor)
 
 
 // Function BP_GameOverCtl.BP_GameOverCtl_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_GameOverCtl_C::STATIC_UserConstructionScript()
+void ABP_GameOverCtl_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameOverCtl.BP_GameOverCtl_C.UserConstructionScript");
 
@@ -76,11 +75,11 @@ void ABP_GameOverCtl_C::STATIC_UserConstructionScript()
 
 
 // Function BP_GameOverCtl.BP_GameOverCtl_C.ReceiveTick
-// (Net, NetRequest, Native, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GameOverCtl_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_GameOverCtl_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameOverCtl.BP_GameOverCtl_C.ReceiveTick");
 
@@ -88,7 +87,6 @@ void ABP_GameOverCtl_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,16 +95,15 @@ void ABP_GameOverCtl_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_GameOverCtl.BP_GameOverCtl_C.OnCutsceneEnd_M06_S9001
-// (Native, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_GameOverCtl_C::STATIC_OnCutsceneEnd_M06_S9001()
+void ABP_GameOverCtl_C::OnCutsceneEnd_M06_S9001()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameOverCtl.BP_GameOverCtl_C.OnCutsceneEnd_M06_S9001");
 
 	ABP_GameOverCtl_C_OnCutsceneEnd_M06_S9001_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,9 +112,9 @@ void ABP_GameOverCtl_C::STATIC_OnCutsceneEnd_M06_S9001()
 
 
 // Function BP_GameOverCtl.BP_GameOverCtl_C.OnStartCutscenePlayer_M06_S9001
-// (Net, NetReliable, NetRequest, Exec, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_GameOverCtl_C::STATIC_OnStartCutscenePlayer_M06_S9001()
+void ABP_GameOverCtl_C::OnStartCutscenePlayer_M06_S9001()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameOverCtl.BP_GameOverCtl_C.OnStartCutscenePlayer_M06_S9001");
 
@@ -132,9 +129,9 @@ void ABP_GameOverCtl_C::STATIC_OnStartCutscenePlayer_M06_S9001()
 
 
 // Function BP_GameOverCtl.BP_GameOverCtl_C.OnCutsceneEnd_M06_S9002
-// (Net, NetReliable, NetRequest, Exec, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_GameOverCtl_C::STATIC_OnCutsceneEnd_M06_S9002()
+void ABP_GameOverCtl_C::OnCutsceneEnd_M06_S9002()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameOverCtl.BP_GameOverCtl_C.OnCutsceneEnd_M06_S9002");
 
@@ -149,9 +146,9 @@ void ABP_GameOverCtl_C::STATIC_OnCutsceneEnd_M06_S9002()
 
 
 // Function BP_GameOverCtl.BP_GameOverCtl_C.OnStartCutscenePlayer_M06_S9002
-// (NetReliable, NetRequest, Exec, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_GameOverCtl_C::STATIC_OnStartCutscenePlayer_M06_S9002()
+void ABP_GameOverCtl_C::OnStartCutscenePlayer_M06_S9002()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameOverCtl.BP_GameOverCtl_C.OnStartCutscenePlayer_M06_S9002");
 
@@ -166,11 +163,11 @@ void ABP_GameOverCtl_C::STATIC_OnStartCutscenePlayer_M06_S9002()
 
 
 // Function BP_GameOverCtl.BP_GameOverCtl_C.ExecuteUbergraph_BP_GameOverCtl
-// (Net, Static, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GameOverCtl_C::STATIC_ExecuteUbergraph_BP_GameOverCtl(int EntryPoint)
+void ABP_GameOverCtl_C::ExecuteUbergraph_BP_GameOverCtl(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameOverCtl.BP_GameOverCtl_C.ExecuteUbergraph_BP_GameOverCtl");
 

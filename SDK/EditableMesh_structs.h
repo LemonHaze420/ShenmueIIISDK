@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,15 +12,6 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum EditableMesh.ETriangleTessellationMode
-enum class ETriangleTessellationMode : uint8_t
-{
-	ETriangleTessellationMode__ThreeTriangles = 0,
-	ETriangleTessellationMode__FourTriangles = 1,
-	ETriangleTessellationMode__ETriangleTessellationMode_MAX = 2
-};
-
-
 // Enum EditableMesh.EInsetPolygonsMode
 enum class EInsetPolygonsMode : uint8_t
 {
@@ -28,6 +19,17 @@ enum class EInsetPolygonsMode : uint8_t
 	EInsetPolygonsMode__CenterPolygonOnly = 1,
 	EInsetPolygonsMode__SidePolygonsOnly = 2,
 	EInsetPolygonsMode__EInsetPolygonsMode_MAX = 3
+};
+
+
+// Enum EditableMesh.EPolygonEdgeHardness
+enum class EPolygonEdgeHardness : uint8_t
+{
+	EPolygonEdgeHardness__NewEdgesSoft = 0,
+	EPolygonEdgeHardness__NewEdgesHard = 1,
+	EPolygonEdgeHardness__AllEdgesSoft = 2,
+	EPolygonEdgeHardness__AllEdgesHard = 3,
+	EPolygonEdgeHardness__EPolygonEdgeHardness_MAX = 4
 };
 
 
@@ -55,17 +57,6 @@ enum class EMeshTopologyChange : uint8_t
 };
 
 
-// Enum EditableMesh.EPolygonEdgeHardness
-enum class EPolygonEdgeHardness : uint8_t
-{
-	EPolygonEdgeHardness__NewEdgesSoft = 0,
-	EPolygonEdgeHardness__NewEdgesHard = 1,
-	EPolygonEdgeHardness__AllEdgesSoft = 2,
-	EPolygonEdgeHardness__AllEdgesHard = 3,
-	EPolygonEdgeHardness__EPolygonEdgeHardness_MAX = 4
-};
-
-
 // Enum EditableMesh.EMeshModificationType
 enum class EMeshModificationType : uint8_t
 {
@@ -73,6 +64,15 @@ enum class EMeshModificationType : uint8_t
 	EMeshModificationType__Interim = 1,
 	EMeshModificationType__Final   = 2,
 	EMeshModificationType__EMeshModificationType_MAX = 3
+};
+
+
+// Enum EditableMesh.ETriangleTessellationMode
+enum class ETriangleTessellationMode : uint8_t
+{
+	ETriangleTessellationMode__ThreeTriangles = 0,
+	ETriangleTessellationMode__FourTriangles = 1,
+	ETriangleTessellationMode__ETriangleTessellationMode_MAX = 2
 };
 
 

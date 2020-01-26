@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.SetInputZones
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Radii                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeadZone                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RunZone                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_VirtualJotstickCircle_C::STATIC_SetInputZones(float Radii, float DeadZone, float RunZone)
+void UBPW_VirtualJotstickCircle_C::SetInputZones(float Radii, float DeadZone, float RunZone)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.SetInputZones");
 
@@ -30,7 +30,6 @@ void UBPW_VirtualJotstickCircle_C::STATIC_SetInputZones(float Radii, float DeadZ
 	params.RunZone = RunZone;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,12 +38,12 @@ void UBPW_VirtualJotstickCircle_C::STATIC_SetInputZones(float Radii, float DeadZ
 
 
 // Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.GetDeltaPosition
-// (Exec, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               FindMyRelativePos              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               Relative                       (Parm, OutParm, IsPlainOldData)
 
-void UBPW_VirtualJotstickCircle_C::STATIC_GetDeltaPosition(const struct FVector2D& FindMyRelativePos, struct FVector2D* Relative)
+void UBPW_VirtualJotstickCircle_C::GetDeltaPosition(const struct FVector2D& FindMyRelativePos, struct FVector2D* Relative)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.GetDeltaPosition");
 
@@ -63,7 +62,7 @@ void UBPW_VirtualJotstickCircle_C::STATIC_GetDeltaPosition(const struct FVector2
 
 
 // Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.MakeAxii
-// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Private, NetServer, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               Position                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               Axii                           (Parm, OutParm, IsPlainOldData)
@@ -87,7 +86,7 @@ void UBPW_VirtualJotstickCircle_C::MakeAxii(const struct FVector2D& Position, st
 
 
 // Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.SetRadius
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Radius_Pixels_                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -99,7 +98,6 @@ void UBPW_VirtualJotstickCircle_C::SetRadius(float Radius_Pixels_)
 	params.Radius_Pixels_ = Radius_Pixels_;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,11 +106,11 @@ void UBPW_VirtualJotstickCircle_C::SetRadius(float Radius_Pixels_)
 
 
 // Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.SetCenterPosition
-// (Net, NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               Position                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPW_VirtualJotstickCircle_C::STATIC_SetCenterPosition(const struct FVector2D& Position)
+void UBPW_VirtualJotstickCircle_C::SetCenterPosition(const struct FVector2D& Position)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.SetCenterPosition");
 
@@ -128,12 +126,12 @@ void UBPW_VirtualJotstickCircle_C::STATIC_SetCenterPosition(const struct FVector
 
 
 // Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.ConstrainPosition
-// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector2D UBPW_VirtualJotstickCircle_C::STATIC_ConstrainPosition(const struct FVector2D& Location)
+struct FVector2D UBPW_VirtualJotstickCircle_C::ConstrainPosition(const struct FVector2D& Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.ConstrainPosition");
 
@@ -141,7 +139,6 @@ struct FVector2D UBPW_VirtualJotstickCircle_C::STATIC_ConstrainPosition(const st
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -152,11 +149,11 @@ struct FVector2D UBPW_VirtualJotstickCircle_C::STATIC_ConstrainPosition(const st
 
 
 // Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.PreConstruct
-// (NetRequest, Native, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_VirtualJotstickCircle_C::STATIC_PreConstruct(bool IsDesignTime)
+void UBPW_VirtualJotstickCircle_C::PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.PreConstruct");
 
@@ -164,7 +161,6 @@ void UBPW_VirtualJotstickCircle_C::STATIC_PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,11 +169,11 @@ void UBPW_VirtualJotstickCircle_C::STATIC_PreConstruct(bool IsDesignTime)
 
 
 // Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.ExecuteUbergraph_BPW_VirtualJotstickCircle
-// (Net, Native, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_VirtualJotstickCircle_C::STATIC_ExecuteUbergraph_BPW_VirtualJotstickCircle(int EntryPoint)
+void UBPW_VirtualJotstickCircle_C::ExecuteUbergraph_BPW_VirtualJotstickCircle(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_VirtualJotstickCircle.BPW_VirtualJotstickCircle_C.ExecuteUbergraph_BPW_VirtualJotstickCircle");
 
@@ -185,7 +181,6 @@ void UBPW_VirtualJotstickCircle_C::STATIC_ExecuteUbergraph_BPW_VirtualJotstickCi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,11 +33,11 @@ public:
 
 	void SetFullTex(class UTexture2D* FullTexture);
 	void SetFillRatio(float FillRatio, bool* Changed);
-	void STATIC_SetScaleRatio(float ScaleRatio, bool* Changed);
+	void SetScaleRatio(float ScaleRatio, bool* Changed);
 	void SetUse(bool Use);
-	void STATIC_UpdateIcon();
+	void UpdateIcon();
 	void Construct();
-	void STATIC_ExecuteUbergraph_wgt_HealthOrb(int EntryPoint);
+	void ExecuteUbergraph_wgt_HealthOrb(int EntryPoint);
 };
 
 

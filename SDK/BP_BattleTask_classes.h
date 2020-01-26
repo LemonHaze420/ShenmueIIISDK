@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,29 +51,29 @@ public:
 	void EndBattle(TEnumAsByte<EBattleWinLoseResult> Result, bool* newParam);
 	void EnableGameTime(bool Enable);
 	void RunOnBothTransitions();
-	void STATIC_CheckFadeFinishedOrCancelled(bool* Done);
+	void CheckFadeFinishedOrCancelled(bool* Done);
 	void StartChangeClothes(bool StartBattle);
-	void STATIC_SetPostBattleEventFlags();
+	void SetPostBattleEventFlags();
 	void StartFadeStep(bool FadeOut, bool CanStartFade, bool* MustWait);
-	void STATIC_CheckFadeFinished(bool FadeOut, bool* Finished);
-	void STATIC_CheckFadeInProgress(bool FadeOut, bool* InProgress);
-	void STATIC_StartBattle_ByMediator(class ABP_BattleMediatorBase_C* MediatorBase);
-	void STATIC_StartBattle_ByID(const struct FName& BattleId, const struct FName& LoadLevel);
+	void CheckFadeFinished(bool FadeOut, bool* Finished);
+	void CheckFadeInProgress(bool FadeOut, bool* InProgress);
+	void StartBattle_ByMediator(class ABP_BattleMediatorBase_C* MediatorBase);
+	void StartBattle_ByID(const struct FName& BattleId, const struct FName& LoadLevel);
 	void FindMediator(const struct FName& ID, class ABP_BattleMediatorBase_C** Battle);
-	void STATIC_CallEndEvents();
+	void CallEndEvents();
 	void UserConstructionScript();
-	void STATIC_OnLoaded_3AC68FA04E82B1C21019C4A9165E85C1(class UClass* Loaded);
-	void STATIC_OnLoaded_F3EFC8734A9BA6BB6F0861A8C832BDC2(class UClass* Loaded);
-	void STATIC_OnBattleEndEvent(TEnumAsByte<EBattleWinLoseResult> Result);
+	void OnLoaded_3AC68FA04E82B1C21019C4A9165E85C1(class UClass* Loaded);
+	void OnLoaded_F3EFC8734A9BA6BB6F0861A8C832BDC2(class UClass* Loaded);
+	void OnBattleEndEvent(TEnumAsByte<EBattleWinLoseResult> Result);
 	void AbortBattle();
-	void STATIC_ClothesChanged(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ClothesChanged(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void StartBattle();
 	void BndEvt__BPC_EventLevelStreaming_K2Node_ComponentBoundEvent_1_OnFinishDataLoad__DelegateSignature();
 	void BndEvt__BPC_EventLevelStreaming_K2Node_ComponentBoundEvent_2_OnFinishUnload__DelegateSignature();
 	void BndEvt__BPC_EventLevelStreaming_K2Node_ComponentBoundEvent_0_OnFinishListLoad__DelegateSignature();
 	void OnHintWindowClose();
-	void STATIC_ExecuteUbergraph_BP_BattleTask(int EntryPoint);
+	void ExecuteUbergraph_BP_BattleTask(int EntryPoint);
 };
 
 

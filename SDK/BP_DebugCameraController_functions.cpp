@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DebugCameraController.BP_DebugCameraController_C.UserConstructionScript
-// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_DebugCameraController_C::UserConstructionScript()
 {
@@ -31,11 +31,11 @@ void ABP_DebugCameraController_C::UserConstructionScript()
 
 
 // Function BP_DebugCameraController.BP_DebugCameraController_C.ReceiveTick
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DebugCameraController_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_DebugCameraController_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCameraController.BP_DebugCameraController_C.ReceiveTick");
 
@@ -51,11 +51,11 @@ void ABP_DebugCameraController_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_DebugCameraController.BP_DebugCameraController_C.ExecuteUbergraph_BP_DebugCameraController
-// (Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DebugCameraController_C::STATIC_ExecuteUbergraph_BP_DebugCameraController(int EntryPoint)
+void ABP_DebugCameraController_C::ExecuteUbergraph_BP_DebugCameraController(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCameraController.BP_DebugCameraController_C.ExecuteUbergraph_BP_DebugCameraController");
 

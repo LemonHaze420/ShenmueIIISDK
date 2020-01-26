@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_WM_Input.BP_WM_Input_C.UserConstructionScript
-// (NetReliable, Exec, Native, Event, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_WM_Input_C::STATIC_UserConstructionScript()
+void ABP_WM_Input_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WM_Input.BP_WM_Input_C.UserConstructionScript");
 
 	ABP_WM_Input_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_WM_Input_C::STATIC_UserConstructionScript()
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_24
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -44,7 +43,6 @@ void ABP_WM_Input_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_24(const st
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +51,7 @@ void ABP_WM_Input_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_24(const st
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_23
-// (NetRequest, Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -65,7 +63,6 @@ void ABP_WM_Input_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_23(const str
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +71,7 @@ void ABP_WM_Input_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_23(const str
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_22
-// (Net, Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -86,7 +83,6 @@ void ABP_WM_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_22(const struct
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +91,7 @@ void ABP_WM_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_22(const struct
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_21
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -107,7 +103,6 @@ void ABP_WM_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_21(const struct
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +111,7 @@ void ABP_WM_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_21(const struct
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_20
-// (Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -128,7 +123,6 @@ void ABP_WM_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_20(const struct FK
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +131,7 @@ void ABP_WM_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_20(const struct FK
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_19
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -149,7 +143,6 @@ void ABP_WM_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_19(const struct FK
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,7 +151,7 @@ void ABP_WM_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_19(const struct FK
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_Right_K2Node_InputActionEvent_18
-// (NetReliable, NetRequest, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -170,7 +163,6 @@ void ABP_WM_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_18(const struct 
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,7 +171,7 @@ void ABP_WM_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_18(const struct 
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_Right_K2Node_InputActionEvent_17
-// (Net, NetRequest, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -191,7 +183,6 @@ void ABP_WM_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_17(const struct 
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -200,7 +191,7 @@ void ABP_WM_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_17(const struct 
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_Left_K2Node_InputActionEvent_16
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -212,7 +203,6 @@ void ABP_WM_Input_C::InpActEvt_MG_Left_K2Node_InputActionEvent_16(const struct F
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,11 +211,11 @@ void ABP_WM_Input_C::InpActEvt_MG_Left_K2Node_InputActionEvent_16(const struct F
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_Left_K2Node_InputActionEvent_15
-// (Net, NetReliable, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_WM_Input_C::STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_15(const struct FKey& Key)
+void ABP_WM_Input_C::InpActEvt_MG_Left_K2Node_InputActionEvent_15(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_Left_K2Node_InputActionEvent_15");
 
@@ -233,7 +223,6 @@ void ABP_WM_Input_C::STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_15(const s
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,7 +231,7 @@ void ABP_WM_Input_C::STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_15(const s
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_14
-// (NetRequest, Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -254,7 +243,6 @@ void ABP_WM_Input_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_14
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -263,7 +251,7 @@ void ABP_WM_Input_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_14
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_13
-// (NetReliable, Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -275,7 +263,6 @@ void ABP_WM_Input_C::InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_1
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -284,7 +271,7 @@ void ABP_WM_Input_C::InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_1
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_6
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -296,7 +283,6 @@ void ABP_WM_Input_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_6(flo
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -305,7 +291,7 @@ void ABP_WM_Input_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_6(flo
 
 
 // Function BP_WM_Input.BP_WM_Input_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_7
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -317,7 +303,6 @@ void ABP_WM_Input_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_7(f
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -326,7 +311,7 @@ void ABP_WM_Input_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_7(f
 
 
 // Function BP_WM_Input.BP_WM_Input_C.ExecuteUbergraph_BP_WM_Input
-// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

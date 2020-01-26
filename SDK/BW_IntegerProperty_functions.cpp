@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.SetValue
-// (NetReliable, NetRequest, Native, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_IntegerProperty_C::STATIC_SetValue(float InValue)
+void UBW_IntegerProperty_C::SetValue(float InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.SetValue");
 
@@ -26,7 +26,6 @@ void UBW_IntegerProperty_C::STATIC_SetValue(float InValue)
 	params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +34,11 @@ void UBW_IntegerProperty_C::STATIC_SetValue(float InValue)
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.GetIntToFloatConvertValue
-// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBW_IntegerProperty_C::STATIC_GetIntToFloatConvertValue()
+float UBW_IntegerProperty_C::GetIntToFloatConvertValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.GetIntToFloatConvertValue");
 
@@ -56,16 +55,15 @@ float UBW_IntegerProperty_C::STATIC_GetIntToFloatConvertValue()
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.Reset
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBW_IntegerProperty_C::STATIC_Reset()
+void UBW_IntegerProperty_C::Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.Reset");
 
 	UBW_IntegerProperty_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +72,7 @@ void UBW_IntegerProperty_C::STATIC_Reset()
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.ClampNewValue
-// (NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -98,7 +96,7 @@ void UBW_IntegerProperty_C::ClampNewValue(int InValue, int* OutValue)
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.OnAnalogValueChanged
-// (Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FAnalogInputEvent       InAnalogInputEvent             (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -113,7 +111,6 @@ struct FEventReply UBW_IntegerProperty_C::OnAnalogValueChanged(const struct FGeo
 	params.InAnalogInputEvent = InAnalogInputEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,12 +121,12 @@ struct FEventReply UBW_IntegerProperty_C::OnAnalogValueChanged(const struct FGeo
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.SetIntegerParameterValue
-// (Exec, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            NewValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CallDispatcher                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_IntegerProperty_C::STATIC_SetIntegerParameterValue(int NewValue, bool CallDispatcher)
+void UBW_IntegerProperty_C::SetIntegerParameterValue(int NewValue, bool CallDispatcher)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.SetIntegerParameterValue");
 
@@ -146,7 +143,7 @@ void UBW_IntegerProperty_C::STATIC_SetIntegerParameterValue(int NewValue, bool C
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.GetIntegerParameterValue
-// (Net, NetReliable, Native, Event, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -157,7 +154,6 @@ int UBW_IntegerProperty_C::GetIntegerParameterValue()
 	UBW_IntegerProperty_C_GetIntegerParameterValue_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -168,18 +164,17 @@ int UBW_IntegerProperty_C::GetIntegerParameterValue()
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.GetParameterName
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_IntegerProperty_C::STATIC_GetParameterName()
+struct FText UBW_IntegerProperty_C::GetParameterName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.GetParameterName");
 
 	UBW_IntegerProperty_C_GetParameterName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -190,9 +185,9 @@ struct FText UBW_IntegerProperty_C::STATIC_GetParameterName()
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.Construct
-// (NetReliable, Exec, NetResponse, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UBW_IntegerProperty_C::STATIC_Construct()
+void UBW_IntegerProperty_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.Construct");
 
@@ -207,7 +202,7 @@ void UBW_IntegerProperty_C::STATIC_Construct()
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.Tick
-// (Net, NetRequest, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -229,11 +224,11 @@ void UBW_IntegerProperty_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature
-// (Exec, Native, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_IntegerProperty_C::STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
+void UBW_IntegerProperty_C::BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature");
 
@@ -241,7 +236,6 @@ void UBW_IntegerProperty_C::STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEve
 	params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -250,9 +244,9 @@ void UBW_IntegerProperty_C::STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEve
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.GetMinMax
-// (Exec, NetResponse, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBW_IntegerProperty_C::STATIC_GetMinMax()
+void UBW_IntegerProperty_C::GetMinMax()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.GetMinMax");
 
@@ -267,12 +261,12 @@ void UBW_IntegerProperty_C::STATIC_GetMinMax()
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_IntegerProperty_C::STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod)
+void UBW_IntegerProperty_C::BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature");
 
@@ -281,7 +275,6 @@ void UBW_IntegerProperty_C::STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEve
 	params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -290,9 +283,9 @@ void UBW_IntegerProperty_C::STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEve
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.PropertyChanged
-// (Net, NetReliable, NetRequest, NetResponse, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBW_IntegerProperty_C::STATIC_PropertyChanged()
+void UBW_IntegerProperty_C::PropertyChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_IntegerProperty.BW_IntegerProperty_C.PropertyChanged");
 
@@ -307,7 +300,7 @@ void UBW_IntegerProperty_C::STATIC_PropertyChanged()
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.ExecuteUbergraph_BW_IntegerProperty
-// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -327,7 +320,7 @@ void UBW_IntegerProperty_C::ExecuteUbergraph_BW_IntegerProperty(int EntryPoint)
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.IntegerPropertyChangedWithData__DelegateSignature
-// (Net, NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBW_IntegerProperty_C*   Context                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -349,7 +342,7 @@ void UBW_IntegerProperty_C::IntegerPropertyChangedWithData__DelegateSignature(in
 
 
 // Function BW_IntegerProperty.BW_IntegerProperty_C.IntegerPropertyChanged__DelegateSignature
-// (Net, NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBW_IntegerProperty_C::IntegerPropertyChanged__DelegateSignature()
 {

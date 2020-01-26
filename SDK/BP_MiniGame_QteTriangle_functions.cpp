@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_QteTriangle.BP_MiniGame_QteTriangle_C.UserConstructionScript
-// (NetReliable, Exec, Native, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_QteTriangle_C::UserConstructionScript()
 {
@@ -23,7 +23,6 @@ void ABP_MiniGame_QteTriangle_C::UserConstructionScript()
 	ABP_MiniGame_QteTriangle_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_MiniGame_QteTriangle_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_QteTriangle.BP_MiniGame_QteTriangle_C.ReceiveBeginPlay
-// (NetReliable, Exec, Native, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_QteTriangle_C::ReceiveBeginPlay()
 {
@@ -41,7 +40,6 @@ void ABP_MiniGame_QteTriangle_C::ReceiveBeginPlay()
 	ABP_MiniGame_QteTriangle_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,7 +48,7 @@ void ABP_MiniGame_QteTriangle_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_QteTriangle.BP_MiniGame_QteTriangle_C.ReceiveTick
-// (NetRequest, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -70,11 +68,11 @@ void ABP_MiniGame_QteTriangle_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_QteTriangle.BP_MiniGame_QteTriangle_C.ExecuteUbergraph_BP_MiniGame_QteTriangle
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_QteTriangle_C::STATIC_ExecuteUbergraph_BP_MiniGame_QteTriangle(int EntryPoint)
+void ABP_MiniGame_QteTriangle_C::ExecuteUbergraph_BP_MiniGame_QteTriangle(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_QteTriangle.BP_MiniGame_QteTriangle_C.ExecuteUbergraph_BP_MiniGame_QteTriangle");
 
@@ -82,7 +80,6 @@ void ABP_MiniGame_QteTriangle_C::STATIC_ExecuteUbergraph_BP_MiniGame_QteTriangle
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.CheckStreetFight
-// (Net, NetReliable, NetRequest, Event, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Price                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -39,7 +39,7 @@ void UBP_TalkProcess_Bet_C::CheckStreetFight(bool* Success, int* Price)
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.OnBetCancel
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Bet_C::OnBetCancel()
 {
@@ -56,7 +56,7 @@ void UBP_TalkProcess_Bet_C::OnBetCancel()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.OnBet
-// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Bet_C::OnBet()
 {
@@ -73,7 +73,7 @@ void UBP_TalkProcess_Bet_C::OnBet()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.WasEnteredBet
-// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Bet_C::WasEnteredBet()
 {
@@ -90,7 +90,7 @@ void UBP_TalkProcess_Bet_C::WasEnteredBet()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.CreateBetUI
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            bet                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            maxbet                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -108,7 +108,6 @@ void UBP_TalkProcess_Bet_C::CreateBetUI(int bet, int maxbet, int FluctuationValu
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +116,7 @@ void UBP_TalkProcess_Bet_C::CreateBetUI(int bet, int maxbet, int FluctuationValu
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.Finalize
-// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_TalkProcess_Bet_C::Finalize()
 {
@@ -134,7 +133,7 @@ void UBP_TalkProcess_Bet_C::Finalize()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.Activate
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
 void UBP_TalkProcess_Bet_C::Activate()
 {
@@ -151,11 +150,11 @@ void UBP_TalkProcess_Bet_C::Activate()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.ExecuteUbergraph_BP_TalkProcess_Bet
-// (Static, NetMulticast, Private, Delegate, DLLImport, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Bet_C::STATIC_ExecuteUbergraph_BP_TalkProcess_Bet(int EntryPoint)
+void UBP_TalkProcess_Bet_C::ExecuteUbergraph_BP_TalkProcess_Bet(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.ExecuteUbergraph_BP_TalkProcess_Bet");
 

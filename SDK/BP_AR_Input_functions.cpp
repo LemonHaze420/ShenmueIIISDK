@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AR_Input.BP_AR_Input_C.UserConstructionScript
-// (NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AR_Input_C::STATIC_UserConstructionScript()
+void ABP_AR_Input_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.UserConstructionScript");
 
@@ -31,11 +31,11 @@ void ABP_AR_Input_C::STATIC_UserConstructionScript()
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_24
-// (Net, NetReliable, NetRequest, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_24(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_24(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_24");
 
@@ -43,7 +43,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_24(
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,11 +51,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_24(
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_23
-// (NetReliable, NetRequest, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_23(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_23(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_23");
 
@@ -64,7 +63,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_23
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,11 +71,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_23
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_Right_K2Node_InputActionEvent_22
-// (NetRequest, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_Right_K2Node_InputActionEvent_22(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_22(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_Right_K2Node_InputActionEvent_22");
 
@@ -85,7 +83,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_Right_K2Node_InputActionEvent_22(const 
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,11 +91,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_Right_K2Node_InputActionEvent_22(const 
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_Left_K2Node_InputActionEvent_21
-// (NetReliable, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_21(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_Left_K2Node_InputActionEvent_21(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_Left_K2Node_InputActionEvent_21");
 
@@ -106,7 +103,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_21(const s
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,11 +111,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_21(const s
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_20
-// (Net, NetRequest, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_20(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_20(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_20");
 
@@ -127,7 +123,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_20(const st
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,11 +131,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_20(const st
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_19
-// (Net, NetReliable, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_19(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_19(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_19");
 
@@ -148,7 +143,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_19(const
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -157,11 +151,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_19(const
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18
-// (Net, NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18");
 
@@ -169,7 +163,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18(c
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,11 +171,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18(c
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_17
-// (Net, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_17(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_17(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_17");
 
@@ -190,7 +183,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_17(co
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -199,11 +191,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_17(co
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_16
-// (Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_16(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_16(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_16");
 
@@ -211,7 +203,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionE
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,11 +211,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionE
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_15
-// (Net, NetReliable, NetRequest, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_15(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_15(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_15");
 
@@ -232,7 +223,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonBottomNoChange_K2Node_InputAction
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,11 +231,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_ButtonBottomNoChange_K2Node_InputAction
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_14
-// (NetReliable, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_14(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_14(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_14");
 
@@ -253,7 +243,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_1
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -262,11 +251,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_1
 
 
 // Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_13
-// (NetRequest, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_AR_Input_C::STATIC_InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_13(const struct FKey& Key)
+void ABP_AR_Input_C::InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_13(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_13");
 
@@ -274,7 +263,6 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -283,11 +271,11 @@ void ABP_AR_Input_C::STATIC_InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_
 
 
 // Function BP_AR_Input.BP_AR_Input_C.Push Support
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_padSwitch>      ButtonType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Input_C::STATIC_Push_Support(TEnumAsByte<EN_padSwitch> ButtonType)
+void ABP_AR_Input_C::Push_Support(TEnumAsByte<EN_padSwitch> ButtonType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.Push Support");
 
@@ -295,7 +283,6 @@ void ABP_AR_Input_C::STATIC_Push_Support(TEnumAsByte<EN_padSwitch> ButtonType)
 	params.ButtonType = ButtonType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -304,11 +291,11 @@ void ABP_AR_Input_C::STATIC_Push_Support(TEnumAsByte<EN_padSwitch> ButtonType)
 
 
 // Function BP_AR_Input.BP_AR_Input_C.ReceiveTick
-// (NetReliable, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Input_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_AR_Input_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.ReceiveTick");
 
@@ -316,7 +303,6 @@ void ABP_AR_Input_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -325,11 +311,11 @@ void ABP_AR_Input_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AR_Input.BP_AR_Input_C.ExecuteUbergraph_BP_AR_Input
-// (Static, NetMulticast, Protected, NetServer, NetClient, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Input_C::STATIC_ExecuteUbergraph_BP_AR_Input(int EntryPoint)
+void ABP_AR_Input_C::ExecuteUbergraph_BP_AR_Input(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Input.BP_AR_Input_C.ExecuteUbergraph_BP_AR_Input");
 

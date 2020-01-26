@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BaseTalkCamera.BP_BaseTalkCamera_C.GetCamera
-// (Net, Native, Public, Protected, NetServer, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UCameraComponent*        Camera                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void ABP_BaseTalkCamera_C::GetCamera(class UCameraComponent** Camera)
 	ABP_BaseTalkCamera_C_GetCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ABP_BaseTalkCamera_C::GetCamera(class UCameraComponent** Camera)
 
 
 // Function BP_BaseTalkCamera.BP_BaseTalkCamera_C.UserConstructionScript
-// (Net, NetRequest, Exec, Event, NetResponse, Public, Protected, NetServer, NetClient, DLLImport)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BaseTalkCamera_C::UserConstructionScript()
 {
@@ -54,7 +53,7 @@ void ABP_BaseTalkCamera_C::UserConstructionScript()
 
 
 // Function BP_BaseTalkCamera.BP_BaseTalkCamera_C.ReceiveTick
-// (Net, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -74,7 +73,7 @@ void ABP_BaseTalkCamera_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_BaseTalkCamera.BP_BaseTalkCamera_C.ReceiveBeginPlay
-// (Net, NetRequest, NetMulticast, NetServer)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_BaseTalkCamera_C::ReceiveBeginPlay()
 {
@@ -91,11 +90,11 @@ void ABP_BaseTalkCamera_C::ReceiveBeginPlay()
 
 
 // Function BP_BaseTalkCamera.BP_BaseTalkCamera_C.ExecuteUbergraph_BP_BaseTalkCamera
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BaseTalkCamera_C::STATIC_ExecuteUbergraph_BP_BaseTalkCamera(int EntryPoint)
+void ABP_BaseTalkCamera_C::ExecuteUbergraph_BP_BaseTalkCamera(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BaseTalkCamera.BP_BaseTalkCamera_C.ExecuteUbergraph_BP_BaseTalkCamera");
 

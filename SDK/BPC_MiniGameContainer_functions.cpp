@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.GetGameGamblePrice
-// (Exec, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Price                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void UBPC_MiniGameContainer_C::GetGameGamblePrice(int* Price)
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.IsGambleMiniGame
-// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -47,7 +47,6 @@ bool UBPC_MiniGameContainer_C::IsGambleMiniGame()
 	UBPC_MiniGameContainer_C_IsGambleMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,11 +57,11 @@ bool UBPC_MiniGameContainer_C::IsGambleMiniGame()
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.GetGameGambleSuccessPrice
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Price                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameContainer_C::STATIC_GetGameGambleSuccessPrice(int* Price)
+void UBPC_MiniGameContainer_C::GetGameGambleSuccessPrice(int* Price)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.GetGameGambleSuccessPrice");
 
@@ -80,11 +79,11 @@ void UBPC_MiniGameContainer_C::STATIC_GetGameGambleSuccessPrice(int* Price)
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.GetGameMaxPrice
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Price                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameContainer_C::STATIC_GetGameMaxPrice(int* Price)
+void UBPC_MiniGameContainer_C::GetGameMaxPrice(int* Price)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.GetGameMaxPrice");
 
@@ -102,7 +101,7 @@ void UBPC_MiniGameContainer_C::STATIC_GetGameMaxPrice(int* Price)
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.ResetScriptOverrideMaxPlayCount
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameContainer_C::ResetScriptOverrideMaxPlayCount()
 {
@@ -111,7 +110,6 @@ void UBPC_MiniGameContainer_C::ResetScriptOverrideMaxPlayCount()
 	UBPC_MiniGameContainer_C_ResetScriptOverrideMaxPlayCount_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,11 +118,11 @@ void UBPC_MiniGameContainer_C::ResetScriptOverrideMaxPlayCount()
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.GetGameMaxPlayCount
-// (Net, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            MaxPlayCount                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameContainer_C::STATIC_GetGameMaxPlayCount(int* MaxPlayCount)
+void UBPC_MiniGameContainer_C::GetGameMaxPlayCount(int* MaxPlayCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.GetGameMaxPlayCount");
 
@@ -142,11 +140,11 @@ void UBPC_MiniGameContainer_C::STATIC_GetGameMaxPlayCount(int* MaxPlayCount)
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.IsPlayMiniGame
-// (NetRequest, Exec, NetResponse, Static, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_MiniGameContainer_C::STATIC_IsPlayMiniGame()
+bool UBPC_MiniGameContainer_C::IsPlayMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.IsPlayMiniGame");
 
@@ -163,11 +161,11 @@ bool UBPC_MiniGameContainer_C::STATIC_IsPlayMiniGame()
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.RemainingGamePlayCount
-// (NetReliable, Exec, NetResponse, Static, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameContainer_C::STATIC_RemainingGamePlayCount(int* Result)
+void UBPC_MiniGameContainer_C::RemainingGamePlayCount(int* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.RemainingGamePlayCount");
 
@@ -185,11 +183,11 @@ void UBPC_MiniGameContainer_C::STATIC_RemainingGamePlayCount(int* Result)
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.IncrementGamePlayCount
-// (Exec, NetResponse, Static, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameContainer_C::STATIC_IncrementGamePlayCount(int* Result)
+void UBPC_MiniGameContainer_C::IncrementGamePlayCount(int* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.IncrementGamePlayCount");
 
@@ -207,16 +205,15 @@ void UBPC_MiniGameContainer_C::STATIC_IncrementGamePlayCount(int* Result)
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.Initialize
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameContainer_C::STATIC_Initialize()
+void UBPC_MiniGameContainer_C::Initialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.Initialize");
 
 	UBPC_MiniGameContainer_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,7 +222,7 @@ void UBPC_MiniGameContainer_C::STATIC_Initialize()
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.ResetScriptOverridePrice
-// (NetRequest, Exec, Native, Event, NetResponse, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBPC_MiniGameContainer_C::ResetScriptOverridePrice()
 {
@@ -234,7 +231,6 @@ void UBPC_MiniGameContainer_C::ResetScriptOverridePrice()
 	UBPC_MiniGameContainer_C_ResetScriptOverridePrice_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,18 +239,17 @@ void UBPC_MiniGameContainer_C::ResetScriptOverridePrice()
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.GetGamePrice
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Price                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameContainer_C::STATIC_GetGamePrice(int* Price)
+void UBPC_MiniGameContainer_C::GetGamePrice(int* Price)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.GetGamePrice");
 
 	UBPC_MiniGameContainer_C_GetGamePrice_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -266,7 +261,7 @@ void UBPC_MiniGameContainer_C::STATIC_GetGamePrice(int* Price)
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.ReceiveBeginPlay
-// (NetRequest, Exec, Native, Event, NetResponse, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
 void UBPC_MiniGameContainer_C::ReceiveBeginPlay()
 {
@@ -275,7 +270,6 @@ void UBPC_MiniGameContainer_C::ReceiveBeginPlay()
 	UBPC_MiniGameContainer_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -284,11 +278,11 @@ void UBPC_MiniGameContainer_C::ReceiveBeginPlay()
 
 
 // Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.ExecuteUbergraph_BPC_MiniGameContainer
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameContainer_C::STATIC_ExecuteUbergraph_BPC_MiniGameContainer(int EntryPoint)
+void UBPC_MiniGameContainer_C::ExecuteUbergraph_BPC_MiniGameContainer(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameContainer.BPC_MiniGameContainer_C.ExecuteUbergraph_BPC_MiniGameContainer");
 
@@ -296,7 +290,6 @@ void UBPC_MiniGameContainer_C::STATIC_ExecuteUbergraph_BPC_MiniGameContainer(int
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,29 +47,29 @@ public:
 	}
 
 
-	void STATIC__dbgPrint();
+	void _dbgPrint();
 	void registTimerEvent();
 	void doCmd_startTimer();
 	void updateProgress();
 	void doCmd_resetTimer(float Time);
 	void doCmd_pauseTimer(bool Enable);
 	void getProgress_percent_(float* Progress);
-	void STATIC_getProgress_second_(float* Second);
-	void STATIC_doCmd_cancel();
-	void STATIC_doCmd_fadeOut();
-	void STATIC_doCmd_fadeIn();
-	void STATIC_updateOpacity_imageTimer_(float Opacity);
+	void getProgress_second_(float* Second);
+	void doCmd_cancel();
+	void doCmd_fadeOut();
+	void doCmd_fadeIn();
+	void updateOpacity_imageTimer_(float Opacity);
 	void Construct();
 	void OnAnimationFinished(class UWidgetAnimation* Animation);
 	void PauseTimer();
 	void UnpauseTimer();
-	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void STATIC_endFadeIn_hiddenParent_();
-	void STATIC_endFadeOut_hiddenParent_();
-	void STATIC_ExecuteUbergraph_wgt_S3actionSelect_timer(int EntryPoint);
-	void STATIC_onTimeover__DelegateSignature();
-	void STATIC_onEndFadeOut__DelegateSignature();
-	void STATIC_onEndFadeIn__DelegateSignature();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void endFadeIn_hiddenParent_();
+	void endFadeOut_hiddenParent_();
+	void ExecuteUbergraph_wgt_S3actionSelect_timer(int EntryPoint);
+	void onTimeover__DelegateSignature();
+	void onEndFadeOut__DelegateSignature();
+	void onEndFadeIn__DelegateSignature();
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,18 +44,18 @@ public:
 
 	void GetGameGamblePrice(int* Price);
 	bool IsGambleMiniGame();
-	void STATIC_GetGameGambleSuccessPrice(int* Price);
-	void STATIC_GetGameMaxPrice(int* Price);
+	void GetGameGambleSuccessPrice(int* Price);
+	void GetGameMaxPrice(int* Price);
 	void ResetScriptOverrideMaxPlayCount();
-	void STATIC_GetGameMaxPlayCount(int* MaxPlayCount);
-	bool STATIC_IsPlayMiniGame();
-	void STATIC_RemainingGamePlayCount(int* Result);
-	void STATIC_IncrementGamePlayCount(int* Result);
-	void STATIC_Initialize();
+	void GetGameMaxPlayCount(int* MaxPlayCount);
+	bool IsPlayMiniGame();
+	void RemainingGamePlayCount(int* Result);
+	void IncrementGamePlayCount(int* Result);
+	void Initialize();
 	void ResetScriptOverridePrice();
-	void STATIC_GetGamePrice(int* Price);
+	void GetGamePrice(int* Price);
 	void ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BPC_MiniGameContainer(int EntryPoint);
+	void ExecuteUbergraph_BPC_MiniGameContainer(int EntryPoint);
 };
 
 

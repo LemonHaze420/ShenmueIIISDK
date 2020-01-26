@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
+
+// Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.GetItemNumSafe
+struct UBPW_UI_ItemIcon_C_GetItemNumSafe_Params
+{
+	struct FST_SelectSellItem                          ST_SelectSellItem;                                        // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int                                                ItemToFind;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.GetSelectSellItem
 struct UBPW_UI_ItemIcon_C_GetSelectSellItem_Params

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.IconNeedsAnimUpdate
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FS3DetectActionParam    Action                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class Uwgt_S3DetectButtonIcon_C* Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -29,7 +29,6 @@ bool Uwgt_S3DetectAction_C::IconNeedsAnimUpdate(const struct FS3DetectActionPara
 	params.Widget = Widget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,13 +39,13 @@ bool Uwgt_S3DetectAction_C::IconNeedsAnimUpdate(const struct FS3DetectActionPara
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.IconNeedsUpdate
-// (Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FS3DetectActionParam    Action                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class Uwgt_S3DetectButtonIcon_C* Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool Uwgt_S3DetectAction_C::STATIC_IconNeedsUpdate(const struct FS3DetectActionParam& Action, class Uwgt_S3DetectButtonIcon_C* Widget)
+bool Uwgt_S3DetectAction_C::IconNeedsUpdate(const struct FS3DetectActionParam& Action, class Uwgt_S3DetectButtonIcon_C* Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.IconNeedsUpdate");
 
@@ -65,13 +64,13 @@ bool Uwgt_S3DetectAction_C::STATIC_IconNeedsUpdate(const struct FS3DetectActionP
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.ShowNewIcon_UpdateOnly
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FS3DetectActionParam    Param                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class Uwgt_S3DetectButtonIcon_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class Uwgt_S3DetectButtonIcon_C* Uwgt_S3DetectAction_C::STATIC_ShowNewIcon_UpdateOnly(int ButtonIndex, struct FS3DetectActionParam* Param)
+class Uwgt_S3DetectButtonIcon_C* Uwgt_S3DetectAction_C::ShowNewIcon_UpdateOnly(int ButtonIndex, struct FS3DetectActionParam* Param)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.ShowNewIcon_UpdateOnly");
 
@@ -79,7 +78,6 @@ class Uwgt_S3DetectButtonIcon_C* Uwgt_S3DetectAction_C::STATIC_ShowNewIcon_Updat
 	params.ButtonIndex = ButtonIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,7 +91,7 @@ class Uwgt_S3DetectButtonIcon_C* Uwgt_S3DetectAction_C::STATIC_ShowNewIcon_Updat
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.GetPlatformButton
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3DetectAction_C::GetPlatformButton()
 {
@@ -102,7 +100,6 @@ void Uwgt_S3DetectAction_C::GetPlatformButton()
 	Uwgt_S3DetectAction_C_GetPlatformButton_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,16 +108,15 @@ void Uwgt_S3DetectAction_C::GetPlatformButton()
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.EndNewInfoAnimation
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3DetectAction_C::STATIC_EndNewInfoAnimation()
+void Uwgt_S3DetectAction_C::EndNewInfoAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.EndNewInfoAnimation");
 
 	Uwgt_S3DetectAction_C_EndNewInfoAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,7 +125,7 @@ void Uwgt_S3DetectAction_C::STATIC_EndNewInfoAnimation()
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.StartNewInfoAnimation
-// (Native, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -141,7 +137,6 @@ void Uwgt_S3DetectAction_C::StartNewInfoAnimation(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,7 +145,7 @@ void Uwgt_S3DetectAction_C::StartNewInfoAnimation(ES3ActionIconType Type)
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.GetButtonIcon
-// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class Uwgt_S3DetectButtonIcon_C* Icon                           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -163,7 +158,6 @@ void Uwgt_S3DetectAction_C::GetButtonIcon(int ButtonIndex, class Uwgt_S3DetectBu
 	params.ButtonIndex = ButtonIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,7 +169,7 @@ void Uwgt_S3DetectAction_C::GetButtonIcon(int ButtonIndex, class Uwgt_S3DetectBu
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.BlinkHelpIcon
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           End                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -195,7 +189,7 @@ void Uwgt_S3DetectAction_C::BlinkHelpIcon(bool End)
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.SetCharaName
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 AlphabetName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -211,7 +205,6 @@ void Uwgt_S3DetectAction_C::SetCharaName(const struct FString& CharaName, const 
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,9 +213,9 @@ void Uwgt_S3DetectAction_C::SetCharaName(const struct FString& CharaName, const 
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.CheckShowIconBaseAll
-// (Net, NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3DetectAction_C::STATIC_CheckShowIconBaseAll()
+void Uwgt_S3DetectAction_C::CheckShowIconBaseAll()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.CheckShowIconBaseAll");
 
@@ -237,9 +230,9 @@ void Uwgt_S3DetectAction_C::STATIC_CheckShowIconBaseAll()
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.CreateIcons
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3DetectAction_C::STATIC_CreateIcons()
+void Uwgt_S3DetectAction_C::CreateIcons()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.CreateIcons");
 
@@ -254,12 +247,12 @@ void Uwgt_S3DetectAction_C::STATIC_CreateIcons()
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.ShowNewIcon
-// (Net, NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FS3DetectActionParam    Param                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void Uwgt_S3DetectAction_C::STATIC_ShowNewIcon(int Index, struct FS3DetectActionParam* Param)
+void Uwgt_S3DetectAction_C::ShowNewIcon(int Index, struct FS3DetectActionParam* Param)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.ShowNewIcon");
 
@@ -267,7 +260,6 @@ void Uwgt_S3DetectAction_C::STATIC_ShowNewIcon(int Index, struct FS3DetectAction
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -279,7 +271,7 @@ void Uwgt_S3DetectAction_C::STATIC_ShowNewIcon(int Index, struct FS3DetectAction
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.FadeOutIcon
-// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class Uwgt_S3DetectButtonIcon_C* Icon                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Decide                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -301,7 +293,7 @@ void Uwgt_S3DetectAction_C::FadeOutIcon(class Uwgt_S3DetectButtonIcon_C* Icon, b
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.DecideAction
-// (Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            DecideIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  ReturnActor                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -328,7 +320,7 @@ void Uwgt_S3DetectAction_C::DecideAction(int DecideIndex, class AActor** ReturnA
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.UpdateIcon
-// (NetRequest, Exec, NetMulticast, MulticastDelegate, Private, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FS3DetectActionParam    Param                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -357,18 +349,17 @@ void Uwgt_S3DetectAction_C::UpdateIcon(int ButtonIndex, bool InDecide, struct FS
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.UpdateIconAll
-// (Exec, Native, Static, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> InParams                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void Uwgt_S3DetectAction_C::STATIC_UpdateIconAll(TArray<struct FS3DetectActionParam>* InParams)
+void Uwgt_S3DetectAction_C::UpdateIconAll(TArray<struct FS3DetectActionParam>* InParams)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.UpdateIconAll");
 
 	Uwgt_S3DetectAction_C_UpdateIconAll_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -380,11 +371,11 @@ void Uwgt_S3DetectAction_C::STATIC_UpdateIconAll(TArray<struct FS3DetectActionPa
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.AdjustCenter
-// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPanelSlot*              PanelSlot                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void Uwgt_S3DetectAction_C::STATIC_AdjustCenter(class UPanelSlot* PanelSlot)
+void Uwgt_S3DetectAction_C::AdjustCenter(class UPanelSlot* PanelSlot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.AdjustCenter");
 
@@ -400,9 +391,9 @@ void Uwgt_S3DetectAction_C::STATIC_AdjustCenter(class UPanelSlot* PanelSlot)
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.Construct
-// (Net, NetReliable, Exec, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void Uwgt_S3DetectAction_C::STATIC_Construct()
+void Uwgt_S3DetectAction_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.Construct");
 
@@ -417,12 +408,12 @@ void Uwgt_S3DetectAction_C::STATIC_Construct()
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.Tick
-// (Net, NetReliable, Exec, Event, NetResponse, Static, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3DetectAction_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void Uwgt_S3DetectAction_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.Tick");
 
@@ -439,9 +430,9 @@ void Uwgt_S3DetectAction_C::STATIC_Tick(const struct FGeometry& MyGeometry, floa
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.BndEvt__NewHelpAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (NetReliable, Exec, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void Uwgt_S3DetectAction_C::STATIC_BndEvt__NewHelpAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3DetectAction_C::BndEvt__NewHelpAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.BndEvt__NewHelpAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -456,9 +447,9 @@ void Uwgt_S3DetectAction_C::STATIC_BndEvt__NewHelpAnim_K2Node_ComponentBoundEven
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.BndEvt__NewHelpFade_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (Net, Exec, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void Uwgt_S3DetectAction_C::STATIC_BndEvt__NewHelpFade_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3DetectAction_C::BndEvt__NewHelpFade_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.BndEvt__NewHelpFade_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -473,9 +464,9 @@ void Uwgt_S3DetectAction_C::STATIC_BndEvt__NewHelpFade_K2Node_ComponentBoundEven
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.BndEvt__NewHelpFlash_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (Net, Exec, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void Uwgt_S3DetectAction_C::STATIC_BndEvt__NewHelpFlash_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3DetectAction_C::BndEvt__NewHelpFlash_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.BndEvt__NewHelpFlash_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -490,9 +481,9 @@ void Uwgt_S3DetectAction_C::STATIC_BndEvt__NewHelpFlash_K2Node_ComponentBoundEve
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.BndEvt__NewHelpAnim_35_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void Uwgt_S3DetectAction_C::STATIC_BndEvt__NewHelpAnim_35_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3DetectAction_C::BndEvt__NewHelpAnim_35_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.BndEvt__NewHelpAnim_35_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -507,11 +498,11 @@ void Uwgt_S3DetectAction_C::STATIC_BndEvt__NewHelpAnim_35_K2Node_ComponentBoundE
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.ExecuteUbergraph_wgt_S3DetectAction
-// (Exec, Native, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3DetectAction_C::STATIC_ExecuteUbergraph_wgt_S3DetectAction(int EntryPoint)
+void Uwgt_S3DetectAction_C::ExecuteUbergraph_wgt_S3DetectAction(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectAction.wgt_S3DetectAction_C.ExecuteUbergraph_wgt_S3DetectAction");
 
@@ -519,7 +510,6 @@ void Uwgt_S3DetectAction_C::STATIC_ExecuteUbergraph_wgt_S3DetectAction(int Entry
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -528,7 +518,7 @@ void Uwgt_S3DetectAction_C::STATIC_ExecuteUbergraph_wgt_S3DetectAction(int Entry
 
 
 // Function wgt_S3DetectAction.wgt_S3DetectAction_C.ED_NewHelpAnim_Finish__DelegateSignature
-// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_S3DetectAction_C::ED_NewHelpAnim_Finish__DelegateSignature()
 {
@@ -537,7 +527,6 @@ void Uwgt_S3DetectAction_C::ED_NewHelpAnim_Finish__DelegateSignature()
 	Uwgt_S3DetectAction_C_ED_NewHelpAnim_Finish__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

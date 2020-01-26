@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_WetnessComponent.BP_WetnessComponent_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 
 void UBP_WetnessComponent_C::ReceiveBeginPlay()
 {
@@ -31,7 +31,7 @@ void UBP_WetnessComponent_C::ReceiveBeginPlay()
 
 
 // Function BP_WetnessComponent.BP_WetnessComponent_C.ExecuteUbergraph_BP_WetnessComponent
-// (Exec, Native, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,7 +43,6 @@ void UBP_WetnessComponent_C::ExecuteUbergraph_BP_WetnessComponent(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

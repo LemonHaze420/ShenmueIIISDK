@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.Activate
-// (Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 
-void UBP_TalkProcess_Look_C::STATIC_Activate()
+void UBP_TalkProcess_Look_C::Activate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.Activate");
 
 	UBP_TalkProcess_Look_C_Activate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,11 +31,11 @@ void UBP_TalkProcess_Look_C::STATIC_Activate()
 
 
 // Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.Update
-// (Exec, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Look_C::STATIC_Update(float DeltaTime)
+void UBP_TalkProcess_Look_C::Update(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.Update");
 
@@ -44,7 +43,6 @@ void UBP_TalkProcess_Look_C::STATIC_Update(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +51,11 @@ void UBP_TalkProcess_Look_C::STATIC_Update(float DeltaTime)
 
 
 // Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.ExecuteUbergraph_BP_TalkProcess_Look
-// (NetReliable, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Look_C::STATIC_ExecuteUbergraph_BP_TalkProcess_Look(int EntryPoint)
+void UBP_TalkProcess_Look_C::ExecuteUbergraph_BP_TalkProcess_Look(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.ExecuteUbergraph_BP_TalkProcess_Look");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -65,20 +65,20 @@ public:
 	void updateDate();
 	void checkHour(int Time_hour_, int* ChangeHour);
 	void updateDatas_logo_(class UTexture* LogoImage);
-	void STATIC_updateDatas_text2_(const struct FText& main1, const struct FText& sub1, const struct FText& main2, const struct FText& sub2);
-	void STATIC_updateDatas_text1_(const struct FText& Main, const struct FText& sub);
+	void updateDatas_text2_(const struct FText& main1, const struct FText& sub1, const struct FText& main2, const struct FText& sub2);
+	void updateDatas_text1_(const struct FText& Main, const struct FText& sub);
 	void OnAnimationFinished(class UWidgetAnimation* Animation);
 	void fadeOut_Event_text1_(bool fadeFlag);
 	void fadeOut_Event_text2_(bool fadeFlag);
 	void fadeOut_Event_logo_(bool fadeFlag);
-	void STATIC_fade_Event(bool Visible, bool fadeFlag);
-	void STATIC_ShowEyecatch(const struct FText& MainTitle, const struct FText& Subtitle, bool bUseFade);
+	void fade_Event(bool Visible, bool fadeFlag);
+	void ShowEyecatch(const struct FText& MainTitle, const struct FText& Subtitle, bool bUseFade);
 	void ShowEyecatchText2(const struct FText& MainTitle1, const struct FText& SubTitle1, const struct FText& MainTitle2, const struct FText& SubTitle2, bool bUseFade);
-	void STATIC_ShowEyecatchTexture(class UTexture* LogoImage, bool bUseFade);
+	void ShowEyecatchTexture(class UTexture* LogoImage, bool bUseFade);
 	void HideEyecatch(bool bUseFade);
-	void STATIC_ExecuteUbergraph_wgt_eyecatch(int EntryPoint);
-	void STATIC_onFadeFinish_out___DelegateSignature();
-	void STATIC_onFadeFinish_in___DelegateSignature();
+	void ExecuteUbergraph_wgt_eyecatch(int EntryPoint);
+	void onFadeFinish_out___DelegateSignature();
+	void onFadeFinish_in___DelegateSignature();
 };
 
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetPriority
-// (Net, NetRequest, Exec, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,11 +35,11 @@ int ABP_S3ItemListViewerManager_C::GetPriority()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetDetectAction
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FS3DetectActionParam> ABP_S3ItemListViewerManager_C::STATIC_GetDetectAction()
+TArray<struct FS3DetectActionParam> ABP_S3ItemListViewerManager_C::GetDetectAction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetDetectAction");
 
@@ -56,9 +56,9 @@ TArray<struct FS3DetectActionParam> ABP_S3ItemListViewerManager_C::STATIC_GetDet
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.CheckTrialVersion
-// (Net, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_CheckTrialVersion()
+void ABP_S3ItemListViewerManager_C::CheckTrialVersion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.CheckTrialVersion");
 
@@ -73,12 +73,12 @@ void ABP_S3ItemListViewerManager_C::STATIC_CheckTrialVersion()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsVisibleRStickOnlyViewMode
-// (Native, NetResponse, Static, NetMulticast, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3ItemListMenuType            Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3ItemListViewerManager_C::STATIC_IsVisibleRStickOnlyViewMode(ES3ItemListMenuType Type)
+bool ABP_S3ItemListViewerManager_C::IsVisibleRStickOnlyViewMode(ES3ItemListMenuType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsVisibleRStickOnlyViewMode");
 
@@ -86,7 +86,6 @@ bool ABP_S3ItemListViewerManager_C::STATIC_IsVisibleRStickOnlyViewMode(ES3ItemLi
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,9 +96,9 @@ bool ABP_S3ItemListViewerManager_C::STATIC_IsVisibleRStickOnlyViewMode(ES3ItemLi
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InitializeCategories
-// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_InitializeCategories()
+void ABP_S3ItemListViewerManager_C::InitializeCategories()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InitializeCategories");
 
@@ -114,7 +113,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_InitializeCategories()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SetSelectMenuTypeList
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::SetSelectMenuTypeList()
 {
@@ -123,7 +122,6 @@ void ABP_S3ItemListViewerManager_C::SetSelectMenuTypeList()
 	ABP_S3ItemListViewerManager_C_SetSelectMenuTypeList_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,11 +130,11 @@ void ABP_S3ItemListViewerManager_C::SetSelectMenuTypeList()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsOnExchangeCategory
-// (NetRequest, Exec, Event, NetResponse, Static, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3ItemListViewerManager_C::STATIC_IsOnExchangeCategory()
+bool ABP_S3ItemListViewerManager_C::IsOnExchangeCategory()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsOnExchangeCategory");
 
@@ -153,16 +151,15 @@ bool ABP_S3ItemListViewerManager_C::STATIC_IsOnExchangeCategory()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UpdateSkillDisplay
-// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_UpdateSkillDisplay()
+void ABP_S3ItemListViewerManager_C::UpdateSkillDisplay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UpdateSkillDisplay");
 
 	ABP_S3ItemListViewerManager_C_UpdateSkillDisplay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,7 +168,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_UpdateSkillDisplay()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.AddItemDataToList
-// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NextTableIdx                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -186,7 +183,6 @@ void ABP_S3ItemListViewerManager_C::AddItemDataToList(int ItemId, TArray<struct 
 	params.Table = Table;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -198,12 +194,12 @@ void ABP_S3ItemListViewerManager_C::AddItemDataToList(int ItemId, TArray<struct 
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SimpleValueAdditiveSort
-// (Exec, Native, Event, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ItemListMenuType            CategoryType                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FItemListItemTable> itemList                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FItemListItemTable> ItemList                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_S3ItemListViewerManager_C::STATIC_SimpleValueAdditiveSort(ES3ItemListMenuType CategoryType, TArray<struct FItemListItemTable>* itemList)
+void ABP_S3ItemListViewerManager_C::SimpleValueAdditiveSort(ES3ItemListMenuType CategoryType, TArray<struct FItemListItemTable>* ItemList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SimpleValueAdditiveSort");
 
@@ -211,19 +207,18 @@ void ABP_S3ItemListViewerManager_C::STATIC_SimpleValueAdditiveSort(ES3ItemListMe
 	params.CategoryType = CategoryType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (itemList != nullptr)
-		*itemList = params.itemList;
+	if (ItemList != nullptr)
+		*ItemList = params.ItemList;
 }
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SpaceOneItemPerRow
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FItemListItemTable> ItemDataList                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -245,12 +240,12 @@ void ABP_S3ItemListViewerManager_C::SpaceOneItemPerRow(TArray<struct FItemListIt
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsSetMenu
-// (Net, NetRequest, Event, NetResponse, Static, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3ItemListMenuType            InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3ItemListViewerManager_C::STATIC_IsSetMenu(ES3ItemListMenuType InputPin)
+bool ABP_S3ItemListViewerManager_C::IsSetMenu(ES3ItemListMenuType InputPin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsSetMenu");
 
@@ -268,13 +263,13 @@ bool ABP_S3ItemListViewerManager_C::STATIC_IsSetMenu(ES3ItemListMenuType InputPi
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SortItemListByInt
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FItemListItemTable> SortArray                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    IntArray                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           dsc                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemListViewerManager_C::STATIC_SortItemListByInt(TArray<int> IntArray, bool dsc, TArray<struct FItemListItemTable>* SortArray)
+void ABP_S3ItemListViewerManager_C::SortItemListByInt(TArray<int> IntArray, bool dsc, TArray<struct FItemListItemTable>* SortArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SortItemListByInt");
 
@@ -283,7 +278,6 @@ void ABP_S3ItemListViewerManager_C::STATIC_SortItemListByInt(TArray<int> IntArra
 	params.dsc = dsc;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -295,12 +289,12 @@ void ABP_S3ItemListViewerManager_C::STATIC_SortItemListByInt(TArray<int> IntArra
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.MoveContentsOfArray
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FItemListItemTable> Sorce_Array                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FItemListItemTable> Temp_Array                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_S3ItemListViewerManager_C::STATIC_MoveContentsOfArray(TArray<struct FItemListItemTable>* Sorce_Array, TArray<struct FItemListItemTable>* Temp_Array)
+void ABP_S3ItemListViewerManager_C::MoveContentsOfArray(TArray<struct FItemListItemTable>* Sorce_Array, TArray<struct FItemListItemTable>* Temp_Array)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.MoveContentsOfArray");
 
@@ -320,12 +314,12 @@ void ABP_S3ItemListViewerManager_C::STATIC_MoveContentsOfArray(TArray<struct FIt
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetDescriptionType
-// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_Inventory_CategoryType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EN_Inventory_CategoryType> ABP_S3ItemListViewerManager_C::STATIC_GetDescriptionType(int Index)
+TEnumAsByte<EN_Inventory_CategoryType> ABP_S3ItemListViewerManager_C::GetDescriptionType(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetDescriptionType");
 
@@ -343,12 +337,12 @@ TEnumAsByte<EN_Inventory_CategoryType> ABP_S3ItemListViewerManager_C::STATIC_Get
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.AllowsViewModeAxisInput
-// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // bool                           TryTransit                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-bool ABP_S3ItemListViewerManager_C::STATIC_AllowsViewModeAxisInput(bool* TryTransit)
+bool ABP_S3ItemListViewerManager_C::AllowsViewModeAxisInput(bool* TryTransit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.AllowsViewModeAxisInput");
 
@@ -368,9 +362,9 @@ bool ABP_S3ItemListViewerManager_C::STATIC_AllowsViewModeAxisInput(bool* TryTran
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UpdateCategoryTipsImage
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_UpdateCategoryTipsImage()
+void ABP_S3ItemListViewerManager_C::UpdateCategoryTipsImage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UpdateCategoryTipsImage");
 
@@ -385,7 +379,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_UpdateCategoryTipsImage()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.NavigateSkillEditor
-// (Net, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<Een_skill_key_type> Key                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -397,7 +391,6 @@ void ABP_S3ItemListViewerManager_C::NavigateSkillEditor(TEnumAsByte<Een_skill_ke
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -406,7 +399,7 @@ void ABP_S3ItemListViewerManager_C::NavigateSkillEditor(TEnumAsByte<Een_skill_ke
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SetSkillWindow
-// (Net, Native, Event, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EMenuType>         InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -418,7 +411,6 @@ void ABP_S3ItemListViewerManager_C::SetSkillWindow(TEnumAsByte<EMenuType> InputP
 	params.InputPin = InputPin;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -427,11 +419,11 @@ void ABP_S3ItemListViewerManager_C::SetSkillWindow(TEnumAsByte<EMenuType> InputP
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.MakeFocusItemList
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemListViewerManager_C::STATIC_MakeFocusItemList(int ItemIndex)
+void ABP_S3ItemListViewerManager_C::MakeFocusItemList(int ItemIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.MakeFocusItemList");
 
@@ -439,7 +431,6 @@ void ABP_S3ItemListViewerManager_C::STATIC_MakeFocusItemList(int ItemIndex)
 	params.ItemIndex = ItemIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -448,7 +439,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_MakeFocusItemList(int ItemIndex)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.PlaySound
-// (Net, NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -460,7 +451,6 @@ void ABP_S3ItemListViewerManager_C::PlaySound(class USoundAtomCue* Sound)
 	params.Sound = Sound;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -469,11 +459,11 @@ void ABP_S3ItemListViewerManager_C::PlaySound(class USoundAtomCue* Sound)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.OpenToFoodItem
-// (Net, Static, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemListViewerManager_C::STATIC_OpenToFoodItem(int ItemId)
+void ABP_S3ItemListViewerManager_C::OpenToFoodItem(int ItemId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.OpenToFoodItem");
 
@@ -489,7 +479,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_OpenToFoodItem(int ItemId)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ReleaseCursor
-// (Net, NetReliable, NetRequest, Exec, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::ReleaseCursor()
 {
@@ -506,7 +496,7 @@ void ABP_S3ItemListViewerManager_C::ReleaseCursor()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsValidSetExchange
-// (Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -517,7 +507,6 @@ void ABP_S3ItemListViewerManager_C::IsValidSetExchange(bool* IsValid)
 	ABP_S3ItemListViewerManager_C_IsValidSetExchange_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -529,7 +518,7 @@ void ABP_S3ItemListViewerManager_C::IsValidSetExchange(bool* IsValid)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetIndex
-// (Net, NetReliable, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 ItemLabel                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            ItemIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -553,7 +542,7 @@ void ABP_S3ItemListViewerManager_C::GetIndex(const struct FString& ItemLabel, in
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.TickSelectKeyPresses
-// (NetReliable, NetRequest, Exec, NetResponse, Protected, NetServer, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DelayTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -573,11 +562,11 @@ void ABP_S3ItemListViewerManager_C::TickSelectKeyPresses(float DelayTime)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsViewHelp
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsDisp                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemListViewerManager_C::STATIC_IsViewHelp(bool* IsDisp)
+void ABP_S3ItemListViewerManager_C::IsViewHelp(bool* IsDisp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsViewHelp");
 
@@ -595,11 +584,11 @@ void ABP_S3ItemListViewerManager_C::STATIC_IsViewHelp(bool* IsDisp)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.FlipPage
-// (Net, NetRequest, Event, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           DirRight                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemListViewerManager_C::STATIC_FlipPage(bool DirRight)
+void ABP_S3ItemListViewerManager_C::FlipPage(bool DirRight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.FlipPage");
 
@@ -615,7 +604,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_FlipPage(bool DirRight)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.CanUseItem
-// (NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Warn                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -638,9 +627,9 @@ bool ABP_S3ItemListViewerManager_C::CanUseItem(bool Warn)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.MovedCursor
-// (NetReliable, NetRequest, Exec, Static, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_MovedCursor()
+void ABP_S3ItemListViewerManager_C::MovedCursor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.MovedCursor");
 
@@ -655,7 +644,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_MovedCursor()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.FormatItemString
-// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FS3ItemDataTable        S3ItemDataTable                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                           Show                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -681,9 +670,9 @@ void ABP_S3ItemListViewerManager_C::FormatItemString(const struct FS3ItemDataTab
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.TrySelectCategory
-// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_TrySelectCategory()
+void ABP_S3ItemListViewerManager_C::TrySelectCategory()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.TrySelectCategory");
 
@@ -698,7 +687,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_TrySelectCategory()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.CloseUseItemWindow
-// (Net, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::CloseUseItemWindow()
 {
@@ -715,7 +704,7 @@ void ABP_S3ItemListViewerManager_C::CloseUseItemWindow()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.LaunchUseItemWindow
-// (Event, MulticastDelegate, Public, Protected, NetServer)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EMenuType>         InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -735,7 +724,7 @@ void ABP_S3ItemListViewerManager_C::LaunchUseItemWindow(TEnumAsByte<EMenuType> I
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetCurrentItemUseAction
-// (Net, Exec, Native, Event, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3ItemEffectTarget            Value_Target                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -746,7 +735,6 @@ void ABP_S3ItemListViewerManager_C::GetCurrentItemUseAction(ES3ItemEffectTarget*
 	ABP_S3ItemListViewerManager_C_GetCurrentItemUseAction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -758,9 +746,9 @@ void ABP_S3ItemListViewerManager_C::GetCurrentItemUseAction(ES3ItemEffectTarget*
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UseItem
-// (Net, NetRequest, Exec, NetResponse, Static, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_UseItem()
+void ABP_S3ItemListViewerManager_C::UseItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UseItem");
 
@@ -775,7 +763,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_UseItem()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetLocalizedText
-// (NetReliable, Event, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EUIText_Enum>      ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Text                           (Parm, OutParm, ZeroConstructor)
@@ -799,7 +787,7 @@ void ABP_S3ItemListViewerManager_C::GetLocalizedText(TEnumAsByte<EUIText_Enum> I
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.MakeLocalizedText
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::MakeLocalizedText()
 {
@@ -808,7 +796,6 @@ void ABP_S3ItemListViewerManager_C::MakeLocalizedText()
 	ABP_S3ItemListViewerManager_C_MakeLocalizedText_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -817,7 +804,7 @@ void ABP_S3ItemListViewerManager_C::MakeLocalizedText()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.PlayCommonSound
-// (Exec, Native, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_InventorySE_List> ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -829,7 +816,6 @@ void ABP_S3ItemListViewerManager_C::PlayCommonSound(TEnumAsByte<EN_InventorySE_L
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -838,16 +824,15 @@ void ABP_S3ItemListViewerManager_C::PlayCommonSound(TEnumAsByte<EN_InventorySE_L
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.MakeDetail
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_MakeDetail()
+void ABP_S3ItemListViewerManager_C::MakeDetail()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.MakeDetail");
 
 	ABP_S3ItemListViewerManager_C_MakeDetail_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -856,11 +841,11 @@ void ABP_S3ItemListViewerManager_C::STATIC_MakeDetail()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SetVisibleDetail
-// (NetReliable, NetRequest, Native, Static, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            idx                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemListViewerManager_C::STATIC_SetVisibleDetail(int idx)
+void ABP_S3ItemListViewerManager_C::SetVisibleDetail(int idx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SetVisibleDetail");
 
@@ -868,7 +853,6 @@ void ABP_S3ItemListViewerManager_C::STATIC_SetVisibleDetail(int idx)
 	params.idx = idx;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -877,7 +861,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_SetVisibleDetail(int idx)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ResetSelect
-// (NetRequest, Event, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::ResetSelect()
 {
@@ -894,7 +878,7 @@ void ABP_S3ItemListViewerManager_C::ResetSelect()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.AddCurrentItemNum
-// (Exec, NetResponse, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -914,12 +898,12 @@ void ABP_S3ItemListViewerManager_C::AddCurrentItemNum(int Add)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetItem
-// (Net, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ItemIndexText                  (Parm, OutParm)
 
-void ABP_S3ItemListViewerManager_C::STATIC_GetItem(int ItemIndex, struct FText* ItemIndexText)
+void ABP_S3ItemListViewerManager_C::GetItem(int ItemIndex, struct FText* ItemIndexText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.GetItem");
 
@@ -938,9 +922,9 @@ void ABP_S3ItemListViewerManager_C::STATIC_GetItem(int ItemIndex, struct FText* 
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.AllDestroy
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_AllDestroy()
+void ABP_S3ItemListViewerManager_C::AllDestroy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.AllDestroy");
 
@@ -955,7 +939,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_AllDestroy()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SetCursorMode
-// (Net, NetMulticast, MulticastDelegate, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           selectMode                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -975,16 +959,15 @@ void ABP_S3ItemListViewerManager_C::SetCursorMode(bool selectMode)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.RightCursor
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_RightCursor()
+void ABP_S3ItemListViewerManager_C::RightCursor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.RightCursor");
 
 	ABP_S3ItemListViewerManager_C_RightCursor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -993,9 +976,9 @@ void ABP_S3ItemListViewerManager_C::STATIC_RightCursor()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.LeftCursor
-// (Net, NetReliable, Static, Protected, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_LeftCursor()
+void ABP_S3ItemListViewerManager_C::LeftCursor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.LeftCursor");
 
@@ -1010,9 +993,9 @@ void ABP_S3ItemListViewerManager_C::STATIC_LeftCursor()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UpCursor
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_UpCursor()
+void ABP_S3ItemListViewerManager_C::UpCursor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UpCursor");
 
@@ -1027,7 +1010,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_UpCursor()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.DownCursor
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::DownCursor()
 {
@@ -1044,9 +1027,9 @@ void ABP_S3ItemListViewerManager_C::DownCursor()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UpdateDetailItemInfo
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_UpdateDetailItemInfo()
+void ABP_S3ItemListViewerManager_C::UpdateDetailItemInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UpdateDetailItemInfo");
 
@@ -1061,7 +1044,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_UpdateDetailItemInfo()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.changeItemList
-// (Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::changeItemList()
 {
@@ -1078,7 +1061,7 @@ void ABP_S3ItemListViewerManager_C::changeItemList()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.RegisterForInput
-// (Net, NetRequest, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           isOpe                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1098,11 +1081,11 @@ void ABP_S3ItemListViewerManager_C::RegisterForInput(bool isOpe)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsNoScrollRange
-// (Static, MulticastDelegate, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3ItemListViewerManager_C::STATIC_IsNoScrollRange()
+bool ABP_S3ItemListViewerManager_C::IsNoScrollRange()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.IsNoScrollRange");
 
@@ -1119,16 +1102,15 @@ bool ABP_S3ItemListViewerManager_C::STATIC_IsNoScrollRange()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ChangeCursorPos
-// (NetReliable, NetRequest, Native, NetResponse, Static, Delegate, NetServer)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_ChangeCursorPos()
+void ABP_S3ItemListViewerManager_C::ChangeCursorPos()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ChangeCursorPos");
 
 	ABP_S3ItemListViewerManager_C_ChangeCursorPos_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1137,16 +1119,15 @@ void ABP_S3ItemListViewerManager_C::STATIC_ChangeCursorPos()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ChangeStatus
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_ChangeStatus()
+void ABP_S3ItemListViewerManager_C::ChangeStatus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ChangeStatus");
 
 	ABP_S3ItemListViewerManager_C_ChangeStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1155,16 +1136,15 @@ void ABP_S3ItemListViewerManager_C::STATIC_ChangeStatus()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ReturnStatus
-// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_ReturnStatus()
+void ABP_S3ItemListViewerManager_C::ReturnStatus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ReturnStatus");
 
 	ABP_S3ItemListViewerManager_C_ReturnStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1173,7 +1153,7 @@ void ABP_S3ItemListViewerManager_C::STATIC_ReturnStatus()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UserConstructionScript
-// (Net, Native, Event, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::UserConstructionScript()
 {
@@ -1182,7 +1162,6 @@ void ABP_S3ItemListViewerManager_C::UserConstructionScript()
 	ABP_S3ItemListViewerManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1191,7 +1170,7 @@ void ABP_S3ItemListViewerManager_C::UserConstructionScript()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchBottomButton_K2Node_InputActionEvent_28
-// (Net, NetReliable, NetRequest, Exec, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1211,7 +1190,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchBottomButton_K2Node_InputAct
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchRightButton_K2Node_InputActionEvent_27
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1223,7 +1202,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchRightButton_K2Node_InputActi
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1232,7 +1210,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchRightButton_K2Node_InputActi
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_Menu_K2Node_InputActionEvent_26
-// (Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1244,7 +1222,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_Menu_K2Node_InputActionEvent_26(co
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1253,7 +1230,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_Menu_K2Node_InputActionEvent_26(co
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_MenuPageLeft_K2Node_InputActionEvent_25
-// (Net, NetReliable, NetRequest, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1265,7 +1242,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_MenuPageLeft_K2Node_InputActionEve
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1274,7 +1250,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_MenuPageLeft_K2Node_InputActionEve
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_MenuPageRight_K2Node_InputActionEvent_24
-// (NetReliable, NetRequest, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1286,7 +1262,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_MenuPageRight_K2Node_InputActionEv
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1295,7 +1270,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_MenuPageRight_K2Node_InputActionEv
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_23
-// (Net, NetRequest, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1307,7 +1282,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionE
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1316,7 +1290,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionE
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_22
-// (Net, NetRequest, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1328,7 +1302,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionE
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1337,7 +1310,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionE
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_21
-// (NetRequest, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1349,7 +1322,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchDownSelect_K2Node_InputActio
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1358,7 +1330,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchDownSelect_K2Node_InputActio
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_20
-// (Net, NetReliable, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1370,7 +1342,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchDownSelect_K2Node_InputActio
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1379,7 +1350,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchDownSelect_K2Node_InputActio
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_19
-// (NetReliable, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1391,7 +1362,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActio
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1400,7 +1370,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActio
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_18
-// (NetReliable, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1412,7 +1382,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActio
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1421,7 +1390,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActio
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_17
-// (Net, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1433,7 +1402,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchRightSelect_K2Node_InputActi
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1442,7 +1410,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchRightSelect_K2Node_InputActi
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_16
-// (Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1454,7 +1422,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchRightSelect_K2Node_InputActi
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1463,7 +1430,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_SearchRightSelect_K2Node_InputActi
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_Alt_P_K2Node_InputKeyEvent_2
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1475,7 +1442,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_Alt_P_K2Node_InputKeyEvent_2(const
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1484,7 +1450,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_Alt_P_K2Node_InputKeyEvent_2(const
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpActEvt_ResetCamera_K2Node_InputActionEvent_15
-// (Net, NetRequest, Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1496,7 +1462,6 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_ResetCamera_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1505,7 +1470,7 @@ void ABP_S3ItemListViewerManager_C::InpActEvt_ResetCamera_K2Node_InputActionEven
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ReceiveBeginPlay
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::ReceiveBeginPlay()
 {
@@ -1522,7 +1487,7 @@ void ABP_S3ItemListViewerManager_C::ReceiveBeginPlay()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ReceiveTick
-// (NetRequest, Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1534,7 +1499,6 @@ void ABP_S3ItemListViewerManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1543,7 +1507,7 @@ void ABP_S3ItemListViewerManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ReceiveEndPlay
-// (Net, NetReliable, Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1555,7 +1519,6 @@ void ABP_S3ItemListViewerManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> E
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1564,7 +1527,7 @@ void ABP_S3ItemListViewerManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> E
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.DecideDetectAction
-// (Net, NetReliable, Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1576,7 +1539,6 @@ void ABP_S3ItemListViewerManager_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1585,7 +1547,7 @@ void ABP_S3ItemListViewerManager_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_4
-// (NetReliable, Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1597,7 +1559,6 @@ void ABP_S3ItemListViewerManager_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_In
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1606,7 +1567,7 @@ void ABP_S3ItemListViewerManager_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_In
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_7
-// (Net, Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1618,7 +1579,6 @@ void ABP_S3ItemListViewerManager_C::InpAxisEvt_MG_RightStickVertical_K2Node_Inpu
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1627,7 +1587,7 @@ void ABP_S3ItemListViewerManager_C::InpAxisEvt_MG_RightStickVertical_K2Node_Inpu
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_33
-// (Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1639,7 +1599,6 @@ void ABP_S3ItemListViewerManager_C::InpAxisEvt_MG_LeftStickVertical_K2Node_Input
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1648,7 +1607,7 @@ void ABP_S3ItemListViewerManager_C::InpAxisEvt_MG_LeftStickVertical_K2Node_Input
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.CloseMenuSelf
-// (Net, Exec, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::CloseMenuSelf()
 {
@@ -1665,7 +1624,7 @@ void ABP_S3ItemListViewerManager_C::CloseMenuSelf()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.UpSelect
-// (Net, Exec, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::UpSelect()
 {
@@ -1682,7 +1641,7 @@ void ABP_S3ItemListViewerManager_C::UpSelect()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.DownSelect
-// (Exec, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::DownSelect()
 {
@@ -1699,7 +1658,7 @@ void ABP_S3ItemListViewerManager_C::DownSelect()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.LeftSelect
-// (Exec, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::LeftSelect()
 {
@@ -1716,7 +1675,7 @@ void ABP_S3ItemListViewerManager_C::LeftSelect()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.RightSelect
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::RightSelect()
 {
@@ -1733,7 +1692,7 @@ void ABP_S3ItemListViewerManager_C::RightSelect()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.OnGatchaAnimEnd
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::OnGatchaAnimEnd()
 {
@@ -1750,7 +1709,7 @@ void ABP_S3ItemListViewerManager_C::OnGatchaAnimEnd()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_9
-// (NetRequest, Event, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1770,7 +1729,7 @@ void ABP_S3ItemListViewerManager_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_Inp
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.EndSetEcchange
-// (Net, NetReliable, Event, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           DoBuy                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1790,7 +1749,7 @@ void ABP_S3ItemListViewerManager_C::EndSetEcchange(bool DoBuy)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.StartViewMode
-// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::StartViewMode()
 {
@@ -1799,7 +1758,6 @@ void ABP_S3ItemListViewerManager_C::StartViewMode()
 	ABP_S3ItemListViewerManager_C_StartViewMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1808,7 +1766,7 @@ void ABP_S3ItemListViewerManager_C::StartViewMode()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.PushL2R2_ViewMode
-// (NetReliable, Event, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1828,7 +1786,7 @@ void ABP_S3ItemListViewerManager_C::PushL2R2_ViewMode(float InputPin)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_1
-// (Net, Event, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1848,7 +1806,7 @@ void ABP_S3ItemListViewerManager_C::InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEv
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_3
-// (Net, Event, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1868,7 +1826,7 @@ void ABP_S3ItemListViewerManager_C::InpAxisEvt_MG_RightTrigger_K2Node_InputAxisE
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.EnterViewModeInternal
-// (Net, Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::EnterViewModeInternal()
 {
@@ -1877,7 +1835,6 @@ void ABP_S3ItemListViewerManager_C::EnterViewModeInternal()
 	ABP_S3ItemListViewerManager_C_EnterViewModeInternal_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1886,7 +1843,7 @@ void ABP_S3ItemListViewerManager_C::EnterViewModeInternal()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.Private_SelectCategoryVert
-// (Event, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Up                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1906,7 +1863,7 @@ void ABP_S3ItemListViewerManager_C::Private_SelectCategoryVert(bool Up)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.CloseReserve
-// (Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::CloseReserve()
 {
@@ -1915,7 +1872,6 @@ void ABP_S3ItemListViewerManager_C::CloseReserve()
 	ABP_S3ItemListViewerManager_C_CloseReserve_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1924,7 +1880,7 @@ void ABP_S3ItemListViewerManager_C::CloseReserve()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.PermitHelpOnInit
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Protected, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::PermitHelpOnInit()
 {
@@ -1941,7 +1897,7 @@ void ABP_S3ItemListViewerManager_C::PermitHelpOnInit()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.PushButton
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1953,7 +1909,6 @@ void ABP_S3ItemListViewerManager_C::PushButton(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1962,7 +1917,7 @@ void ABP_S3ItemListViewerManager_C::PushButton(class AActor* Actor)
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ExecuteUbergraph_BP_S3ItemListViewerManager
-// (MulticastDelegate, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1982,7 +1937,7 @@ void ABP_S3ItemListViewerManager_C::ExecuteUbergraph_BP_S3ItemListViewerManager(
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ED_FinishInit__DelegateSignature
-// (Net, Native, Event, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::ED_FinishInit__DelegateSignature()
 {
@@ -1991,7 +1946,6 @@ void ABP_S3ItemListViewerManager_C::ED_FinishInit__DelegateSignature()
 	ABP_S3ItemListViewerManager_C_ED_FinishInit__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2000,7 +1954,7 @@ void ABP_S3ItemListViewerManager_C::ED_FinishInit__DelegateSignature()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ED_DestroyManager__DelegateSignature
-// (Net, Native, Event, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3ItemListViewerManager_C::ED_DestroyManager__DelegateSignature()
 {
@@ -2009,7 +1963,6 @@ void ABP_S3ItemListViewerManager_C::ED_DestroyManager__DelegateSignature()
 	ABP_S3ItemListViewerManager_C_ED_DestroyManager__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2018,16 +1971,15 @@ void ABP_S3ItemListViewerManager_C::ED_DestroyManager__DelegateSignature()
 
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ED_shopEnd__DelegateSignature
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ItemListViewerManager_C::STATIC_ED_shopEnd__DelegateSignature()
+void ABP_S3ItemListViewerManager_C::ED_shopEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.ED_shopEnd__DelegateSignature");
 
 	ABP_S3ItemListViewerManager_C_ED_shopEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

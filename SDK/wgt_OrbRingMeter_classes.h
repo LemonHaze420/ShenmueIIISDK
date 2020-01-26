@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,10 +47,10 @@ public:
 	}
 
 
-	void STATIC_SetForegroundVisible(bool Visible);
+	void SetForegroundVisible(bool Visible);
 	void SetColorByEnum(TEnumAsByte<EHealthOrbColor> Color);
 	void SetBackgroundTexture(class UTexture2D* Background);
-	void STATIC_PreConstruct(bool IsDesignTime);
+	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_wgt_OrbRingMeter(int EntryPoint);
 };
 

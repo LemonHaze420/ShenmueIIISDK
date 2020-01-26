@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.RelayOnSceneCapture
-// (NetReliable, Exec, Native, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_BTL_MontagePlayer_C::RelayOnSceneCapture()
 {
@@ -23,7 +23,6 @@ void Uwgt_BTL_MontagePlayer_C::RelayOnSceneCapture()
 	Uwgt_BTL_MontagePlayer_C_RelayOnSceneCapture_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,11 +31,11 @@ void Uwgt_BTL_MontagePlayer_C::RelayOnSceneCapture()
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.SetSkillLibrary
-// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBTL_CommandLibraryBase* CommandLibrary                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_MontagePlayer_C::STATIC_SetSkillLibrary(class UBTL_CommandLibraryBase* CommandLibrary)
+void Uwgt_BTL_MontagePlayer_C::SetSkillLibrary(class UBTL_CommandLibraryBase* CommandLibrary)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.SetSkillLibrary");
 
@@ -52,18 +51,17 @@ void Uwgt_BTL_MontagePlayer_C::STATIC_SetSkillLibrary(class UBTL_CommandLibraryB
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.IsLoadingFinished
-// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool Uwgt_BTL_MontagePlayer_C::STATIC_IsLoadingFinished()
+bool Uwgt_BTL_MontagePlayer_C::IsLoadingFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.IsLoadingFinished");
 
 	Uwgt_BTL_MontagePlayer_C_IsLoadingFinished_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +72,11 @@ bool Uwgt_BTL_MontagePlayer_C::STATIC_IsLoadingFinished()
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.IsRenderObjectReady
-// (Net, NetReliable, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool Uwgt_BTL_MontagePlayer_C::STATIC_IsRenderObjectReady()
+bool Uwgt_BTL_MontagePlayer_C::IsRenderObjectReady()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.IsRenderObjectReady");
 
@@ -95,7 +93,7 @@ bool Uwgt_BTL_MontagePlayer_C::STATIC_IsRenderObjectReady()
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.CalculateRenderObjectTransform
-// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -116,16 +114,15 @@ struct FTransform Uwgt_BTL_MontagePlayer_C::CalculateRenderObjectTransform()
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.DestroyRenderObject
-// (Native, Event, Static, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_BTL_MontagePlayer_C::STATIC_DestroyRenderObject()
+void Uwgt_BTL_MontagePlayer_C::DestroyRenderObject()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.DestroyRenderObject");
 
 	Uwgt_BTL_MontagePlayer_C_DestroyRenderObject_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,7 +131,7 @@ void Uwgt_BTL_MontagePlayer_C::STATIC_DestroyRenderObject()
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.PlaySingleFrame
-// (NetReliable, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -158,18 +155,17 @@ void Uwgt_BTL_MontagePlayer_C::PlaySingleFrame(const struct FName& InputPin, boo
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.StopMotion
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_MontagePlayer_C::STATIC_StopMotion(bool* bSuccess)
+void Uwgt_BTL_MontagePlayer_C::StopMotion(bool* bSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.StopMotion");
 
 	Uwgt_BTL_MontagePlayer_C_StopMotion_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -181,7 +177,7 @@ void Uwgt_BTL_MontagePlayer_C::STATIC_StopMotion(bool* bSuccess)
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.PlayMotionForItem
-// (Net, NetReliable, Native, Event, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -194,7 +190,6 @@ void Uwgt_BTL_MontagePlayer_C::PlayMotionForItem(const struct FName& InputPin, b
 	params.InputPin = InputPin;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -206,7 +201,7 @@ void Uwgt_BTL_MontagePlayer_C::PlayMotionForItem(const struct FName& InputPin, b
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.SpawnRenderObject
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -230,11 +225,11 @@ void Uwgt_BTL_MontagePlayer_C::SpawnRenderObject(class UClass* InputPin, bool* n
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.SetRenderTex
-// (NetRequest, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextureRenderTarget2D*  Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_MontagePlayer_C::STATIC_SetRenderTex(class UTextureRenderTarget2D* Value)
+void Uwgt_BTL_MontagePlayer_C::SetRenderTex(class UTextureRenderTarget2D* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.SetRenderTex");
 
@@ -250,11 +245,11 @@ void Uwgt_BTL_MontagePlayer_C::STATIC_SetRenderTex(class UTextureRenderTarget2D*
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.OnLoaded_887C3B4A44C26F627DEC4EAAECA73E5C
-// (Net, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_MontagePlayer_C::STATIC_OnLoaded_887C3B4A44C26F627DEC4EAAECA73E5C(class UObject* Loaded)
+void Uwgt_BTL_MontagePlayer_C::OnLoaded_887C3B4A44C26F627DEC4EAAECA73E5C(class UObject* Loaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.OnLoaded_887C3B4A44C26F627DEC4EAAECA73E5C");
 
@@ -270,11 +265,11 @@ void Uwgt_BTL_MontagePlayer_C::STATIC_OnLoaded_887C3B4A44C26F627DEC4EAAECA73E5C(
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.OnLoaded_6B67131F435381D27123BE8560D7EF88
-// (NetReliable, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                  Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_MontagePlayer_C::STATIC_OnLoaded_6B67131F435381D27123BE8560D7EF88(class UClass* Loaded)
+void Uwgt_BTL_MontagePlayer_C::OnLoaded_6B67131F435381D27123BE8560D7EF88(class UClass* Loaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.OnLoaded_6B67131F435381D27123BE8560D7EF88");
 
@@ -290,12 +285,12 @@ void Uwgt_BTL_MontagePlayer_C::STATIC_OnLoaded_6B67131F435381D27123BE8560D7EF88(
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.Tick
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_MontagePlayer_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void Uwgt_BTL_MontagePlayer_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.Tick");
 
@@ -304,7 +299,6 @@ void Uwgt_BTL_MontagePlayer_C::STATIC_Tick(const struct FGeometry& MyGeometry, f
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -313,7 +307,7 @@ void Uwgt_BTL_MontagePlayer_C::STATIC_Tick(const struct FGeometry& MyGeometry, f
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.Destruct
-// (NetRequest, Exec, Native, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_BTL_MontagePlayer_C::Destruct()
 {
@@ -322,7 +316,6 @@ void Uwgt_BTL_MontagePlayer_C::Destruct()
 	Uwgt_BTL_MontagePlayer_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -331,7 +324,7 @@ void Uwgt_BTL_MontagePlayer_C::Destruct()
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.RespawnRenderObject
-// (NetRequest, Exec, Native, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void Uwgt_BTL_MontagePlayer_C::RespawnRenderObject()
 {
@@ -340,7 +333,6 @@ void Uwgt_BTL_MontagePlayer_C::RespawnRenderObject()
 	Uwgt_BTL_MontagePlayer_C_RespawnRenderObject_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -349,7 +341,7 @@ void Uwgt_BTL_MontagePlayer_C::RespawnRenderObject()
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.Construct
-// (Net, NetReliable, Exec, Native, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void Uwgt_BTL_MontagePlayer_C::Construct()
 {
@@ -358,7 +350,6 @@ void Uwgt_BTL_MontagePlayer_C::Construct()
 	Uwgt_BTL_MontagePlayer_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -367,11 +358,11 @@ void Uwgt_BTL_MontagePlayer_C::Construct()
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.ExecuteUbergraph_wgt_BTL_MontagePlayer
-// (Net, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_MontagePlayer_C::STATIC_ExecuteUbergraph_wgt_BTL_MontagePlayer(int EntryPoint)
+void Uwgt_BTL_MontagePlayer_C::ExecuteUbergraph_wgt_BTL_MontagePlayer(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.ExecuteUbergraph_wgt_BTL_MontagePlayer");
 
@@ -387,7 +378,7 @@ void Uwgt_BTL_MontagePlayer_C::STATIC_ExecuteUbergraph_wgt_BTL_MontagePlayer(int
 
 
 // Function wgt_BTL_MontagePlayer.wgt_BTL_MontagePlayer_C.OnSceneCapture__DelegateSignature
-// (NetReliable, Exec, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void Uwgt_BTL_MontagePlayer_C::OnSceneCapture__DelegateSignature()
 {

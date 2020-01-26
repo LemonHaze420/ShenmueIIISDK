@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,14 +37,14 @@ public:
 
 
 	void ResetValue();
-	void STATIC_SetVisiblity(bool Visible);
-	void STATIC_UpdateNumber();
-	void STATIC_Initialize(int DigitsNumber);
-	void STATIC_SetNumber(int Number, bool IsStage);
+	void SetVisiblity(bool Visible);
+	void UpdateNumber();
+	void Initialize(int DigitsNumber);
+	void SetNumber(int Number, bool IsStage);
 	void GetUVs(int Num, TArray<struct FVector2D>* Array);
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BP_MIniGame_WM_Score(int EntryPoint);
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_MIniGame_WM_Score(int EntryPoint);
 };
 
 

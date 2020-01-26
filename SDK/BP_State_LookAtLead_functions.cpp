@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtLead.BP_State_LookAtLead_C.IsInitializeState
-// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,16 +36,15 @@ void UBP_State_LookAtLead_C::IsInitializeState(bool* bSuccess)
 
 
 // Function BP_State_LookAtLead.BP_State_LookAtLead_C.StateOnInitialize
-// (Net, NetRequest, Native, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
-void UBP_State_LookAtLead_C::STATIC_StateOnInitialize()
+void UBP_State_LookAtLead_C::StateOnInitialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtLead.BP_State_LookAtLead_C.StateOnInitialize");
 
 	UBP_State_LookAtLead_C_StateOnInitialize_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +53,7 @@ void UBP_State_LookAtLead_C::STATIC_StateOnInitialize()
 
 
 // Function BP_State_LookAtLead.BP_State_LookAtLead_C.ExecuteUbergraph_BP_State_LookAtLead
-// (NetRequest, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

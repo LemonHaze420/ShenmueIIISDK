@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -121,19 +121,6 @@ struct FTargetListTableRowBase : public FTableRowBase
 	float                                              fEndTime;                                                 // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct S3NPC.S3NPCSpawnerStruct
-// 0x0040
-struct FS3NPCSpawnerStruct
-{
-	class UClass*                                      NPC_Class;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AS3NPCSpawnPointBase*                        SpawnPoint;                                               // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AS3NPCPOITargetListManagerBase*              POITargetPointListArray;                                  // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bUsePOITargetPointList;                                   // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseSpline;                                               // 0x0019(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x001A(0x0006) MISSED OFFSET
-	struct FGameplayTagContainer                       GroupTags;                                                // 0x0020(0x0020) (Edit, BlueprintVisible)
-};
-
 // ScriptStruct S3NPC.S3NPCRegionStruct
 // 0x0010
 struct FS3NPCRegionStruct
@@ -159,6 +146,19 @@ struct FS3NPCScheduleSplineStruct
 	class AS3NPCSplineActorBase*                       ScheduleSplineActor;                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              StartTime;                                                // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              EndTime;                                                  // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct S3NPC.S3NPCSpawnerStruct
+// 0x0040
+struct FS3NPCSpawnerStruct
+{
+	class UClass*                                      NPC_Class;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AS3NPCSpawnPointBase*                        SpawnPoint;                                               // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AS3NPCPOITargetListManagerBase*              POITargetPointListArray;                                  // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bUsePOITargetPointList;                                   // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bUseSpline;                                               // 0x0019(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x001A(0x0006) MISSED OFFSET
+	struct FGameplayTagContainer                       GroupTags;                                                // 0x0020(0x0020) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct S3NPC.S3POITimeTableStruct

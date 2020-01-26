@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_PFD_02.BP_TalkCamera_PFD_02_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_TalkCamera_PFD_02_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_TalkCamera_PFD_02_C::UserConstructionScript()
 
 
 // Function BP_TalkCamera_PFD_02.BP_TalkCamera_PFD_02_C.ReceiveBeginPlay
-// (Net, NetReliable, Exec, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_TalkCamera_PFD_02_C::ReceiveBeginPlay()
 {
@@ -48,7 +48,7 @@ void ABP_TalkCamera_PFD_02_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_PFD_02.BP_TalkCamera_PFD_02_C.ReceiveTick
-// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,7 +60,6 @@ void ABP_TalkCamera_PFD_02_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,7 +68,7 @@ void ABP_TalkCamera_PFD_02_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_PFD_02.BP_TalkCamera_PFD_02_C.ExecuteUbergraph_BP_TalkCamera_PFD_02
-// (Net, NetRequest, Exec, Native, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -81,7 +80,6 @@ void ABP_TalkCamera_PFD_02_C::ExecuteUbergraph_BP_TalkCamera_PFD_02(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

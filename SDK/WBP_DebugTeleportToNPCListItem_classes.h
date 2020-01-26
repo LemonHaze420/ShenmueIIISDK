@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -33,7 +33,7 @@ public:
 	void SetFocusToButton();
 	void Construct();
 	void BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature();
-	void STATIC_ExecuteUbergraph_WBP_DebugTeleportToNPCListItem(int EntryPoint);
+	void ExecuteUbergraph_WBP_DebugTeleportToNPCListItem(int EntryPoint);
 };
 
 

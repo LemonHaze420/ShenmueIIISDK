@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,15 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
-
-// ScriptStruct Serialization.StructSerializerMapTestStruct
-// 0x00F0
-struct FStructSerializerMapTestStruct
-{
-	TMap<int, struct FString>                          IntToStr;                                                 // 0x0000(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FString>               StrToStr;                                                 // 0x0050(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FVector>               StrToVec;                                                 // 0x00A0(0x0050) (ZeroConstructor)
-};
 
 // ScriptStruct Serialization.StructSerializerNumericTestStruct
 // 0x0030
@@ -82,6 +73,15 @@ struct FStructSerializerArrayTestStruct
 	float                                              StaticFloatArray[0x3];                                    // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	TArray<struct FVector>                             VectorArray;                                              // 0x0030(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Serialization.StructSerializerMapTestStruct
+// 0x00F0
+struct FStructSerializerMapTestStruct
+{
+	TMap<int, struct FString>                          IntToStr;                                                 // 0x0000(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FString>               StrToStr;                                                 // 0x0050(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FVector>               StrToVec;                                                 // 0x00A0(0x0050) (ZeroConstructor)
 };
 
 // ScriptStruct Serialization.StructSerializerTestStruct

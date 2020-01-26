@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function S3Sequencer.CineAnimInstance.GetCineLookAtEyesAlpha
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ float UCineAnimInstance::GetCineLookAtEyesAlpha()
 	UCineAnimInstance_GetCineLookAtEyesAlpha_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ float UCineAnimInstance::GetCineLookAtEyesAlpha()
 
 
 // Function S3Sequencer.CineAnimInstance.GetCineLookAtAlphaBySocketName
-// ()
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -48,6 +49,7 @@ float UCineAnimInstance::GetCineLookAtAlphaBySocketName(const struct FName& Sock
 	params.SocketName = SocketName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +60,7 @@ float UCineAnimInstance::GetCineLookAtAlphaBySocketName(const struct FName& Sock
 
 
 // Function S3Sequencer.S3LevelSequencePlayer.RefreshRootMovieSceneInstance
-// ()
+// (Final, Native, Public, BlueprintCallable)
 
 void US3LevelSequencePlayer::RefreshRootMovieSceneInstance()
 {
@@ -67,6 +69,7 @@ void US3LevelSequencePlayer::RefreshRootMovieSceneInstance()
 	US3LevelSequencePlayer_RefreshRootMovieSceneInstance_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,14 +78,14 @@ void US3LevelSequencePlayer::RefreshRootMovieSceneInstance()
 
 
 // Function S3Sequencer.S3LevelSequencePlayer.CreateS3LevelSequencePlayer
-// ()
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // class ULevelSequence*          InLevelSequence                (Parm, ZeroConstructor, IsPlainOldData)
 // struct FMovieSceneSequencePlaybackSettings Settings                       (Parm)
 // class US3LevelSequencePlayer*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class US3LevelSequencePlayer* US3LevelSequencePlayer::CreateS3LevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* InLevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings)
+class US3LevelSequencePlayer* US3LevelSequencePlayer::STATIC_CreateS3LevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* InLevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function S3Sequencer.S3LevelSequencePlayer.CreateS3LevelSequencePlayer");
 
@@ -92,6 +95,7 @@ class US3LevelSequencePlayer* US3LevelSequencePlayer::CreateS3LevelSequencePlaye
 	params.Settings = Settings;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +106,7 @@ class US3LevelSequencePlayer* US3LevelSequencePlayer::CreateS3LevelSequencePlaye
 
 
 // Function S3Sequencer.S3LevelSequencePlayer.AttachSpawnActorToActor
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                  ParentActor                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -116,6 +120,7 @@ void US3LevelSequencePlayer::AttachSpawnActorToActor(class AActor* ParentActor, 
 	params.SocketName = SocketName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +129,7 @@ void US3LevelSequencePlayer::AttachSpawnActorToActor(class AActor* ParentActor, 
 
 
 // Function S3Sequencer.S3LevelSequencePlayer.AssignActorByTag
-// ()
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // struct FName                   Tag                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -138,6 +143,7 @@ void US3LevelSequencePlayer::AssignActorByTag(const struct FName& Tag, class AAc
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,7 +152,7 @@ void US3LevelSequencePlayer::AssignActorByTag(const struct FName& Tag, class AAc
 
 
 // Function S3Sequencer.S3SequencerBgmManager.StopFromSequencer
-// ()
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   SoundId                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -158,6 +164,7 @@ void AS3SequencerBgmManager::StopFromSequencer(const struct FName& SoundId)
 	params.SoundId = SoundId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +173,7 @@ void AS3SequencerBgmManager::StopFromSequencer(const struct FName& SoundId)
 
 
 // Function S3Sequencer.S3SequencerBgmManager.PlayFromSequencer
-// ()
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Cue                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SoundId                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -186,6 +193,7 @@ void AS3SequencerBgmManager::PlayFromSequencer(class USoundAtomCue* Cue, const s
 	params.Pitch = Pitch;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,7 +202,7 @@ void AS3SequencerBgmManager::PlayFromSequencer(class USoundAtomCue* Cue, const s
 
 
 // Function S3Sequencer.S3SequencerSoundManager.StopFromSequencer
-// ()
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   SoundId                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -206,6 +214,7 @@ void AS3SequencerSoundManager::StopFromSequencer(const struct FName& SoundId)
 	params.SoundId = SoundId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -214,7 +223,7 @@ void AS3SequencerSoundManager::StopFromSequencer(const struct FName& SoundId)
 
 
 // Function S3Sequencer.S3SequencerSoundManager.PlayFromSequencer
-// ()
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Cue                            (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SoundId                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -238,6 +247,7 @@ void AS3SequencerSoundManager::PlayFromSequencer(class USoundAtomCue* Cue, const
 	params.Pitch = Pitch;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

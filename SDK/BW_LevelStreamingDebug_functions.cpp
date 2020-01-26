@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.Construct
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBW_LevelStreamingDebug_C::Construct()
 {
@@ -23,7 +23,6 @@ void UBW_LevelStreamingDebug_C::Construct()
 	UBW_LevelStreamingDebug_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,12 +31,12 @@ void UBW_LevelStreamingDebug_C::Construct()
 
 
 // Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.Tick
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_LevelStreamingDebug_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBW_LevelStreamingDebug_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.Tick");
 
@@ -46,7 +45,6 @@ void UBW_LevelStreamingDebug_C::STATIC_Tick(const struct FGeometry& MyGeometry, 
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +53,7 @@ void UBW_LevelStreamingDebug_C::STATIC_Tick(const struct FGeometry& MyGeometry, 
 
 
 // Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.UpdateLevelData
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UBW_LevelStreamingDebug_C::UpdateLevelData()
 {
@@ -64,7 +62,6 @@ void UBW_LevelStreamingDebug_C::UpdateLevelData()
 	UBW_LevelStreamingDebug_C_UpdateLevelData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,11 +70,11 @@ void UBW_LevelStreamingDebug_C::UpdateLevelData()
 
 
 // Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.ExecuteUbergraph_BW_LevelStreamingDebug
-// (NetReliable, NetRequest, Event, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_LevelStreamingDebug_C::STATIC_ExecuteUbergraph_BW_LevelStreamingDebug(int EntryPoint)
+void UBW_LevelStreamingDebug_C::ExecuteUbergraph_BW_LevelStreamingDebug(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.ExecuteUbergraph_BW_LevelStreamingDebug");
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,9 +50,9 @@ public:
 
 
 	void IsHeightFixEnabled(bool* bEnabled);
-	struct FVector STATIC_MatchHorizontal(const struct FVector& InLocation, const struct FVector& TargetRelativeY);
-	bool STATIC_ValidateStairCollisionWithTrace(const struct FVector& TestLocation, class ABP_S3StaircaseBase_C* Stair);
-	void STATIC_SetMainStairs(class ABP_S3StaircaseBase_C* StairsIn);
+	struct FVector MatchHorizontal(const struct FVector& InLocation, const struct FVector& TargetRelativeY);
+	bool ValidateStairCollisionWithTrace(const struct FVector& TestLocation, class ABP_S3StaircaseBase_C* Stair);
+	void SetMainStairs(class ABP_S3StaircaseBase_C* StairsIn);
 	void IgnoreStairCollision(bool bShouldIgnore, class ABP_S3StaircaseBase_C* Stair);
 	void PostUpdateHeightFix();
 	void BottomToCenterLocation(const struct FVector& Bottom, struct FVector* Center);
@@ -61,15 +61,15 @@ public:
 	void CalculateAngleData(class ABP_S3StaircaseBase_C* Stairs, float* OutRawVeerAngle, float* OutDirectionalVeerAngle, float* OutStrideScale, bool* OutDirUp);
 	bool CheckOnStairs(class ABP_S3StaircaseBase_C* Stairs, float StrideScale, bool AddHysteresis);
 	void GetArcTOA(const struct FVector2D& End, const struct FVector2D& Start, float* OutCalc);
-	void STATIC_GetWeightedAngleToCorner(bool IsLeftSide, float* Angle);
-	void STATIC_SetInteractingStairs(class ABP_S3StaircaseBase_C* Stair);
+	void GetWeightedAngleToCorner(bool IsLeftSide, float* Angle);
+	void SetInteractingStairs(class ABP_S3StaircaseBase_C* Stair);
 	void MatchAnimCycle(float InAnimPosition, float InStairPosition, bool bUp, float* OutAnimPosition);
 	void ClampDirection(const struct FVector& Direction, struct FVector* Clamped);
 	void Update(float DeltaTime);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_OnBeginOverlapStairs(class ABP_S3StaircaseBase_C* Staircase);
-	void STATIC_OnEndOverlapStairs(class ABP_S3StaircaseBase_C* Staircase);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void OnBeginOverlapStairs(class ABP_S3StaircaseBase_C* Staircase);
+	void OnEndOverlapStairs(class ABP_S3StaircaseBase_C* Staircase);
 	void ExecuteUbergraph_BPC_S3StairClimber(int EntryPoint);
 	void OnEndStairUse__DelegateSignature();
 	void OnStartStairUse__DelegateSignature();

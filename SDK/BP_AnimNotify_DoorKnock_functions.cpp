@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_DoorKnock.BP_AnimNotify_DoorKnock_C.GetDoorActor
-// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USkeletalMeshComponent*  Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AS3GimmickOpenDoor*      DoorActor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_AnimNotify_DoorKnock_C::STATIC_GetDoorActor(class USkeletalMeshComponent* Mesh, class AS3GimmickOpenDoor** DoorActor)
+void UBP_AnimNotify_DoorKnock_C::GetDoorActor(class USkeletalMeshComponent* Mesh, class AS3GimmickOpenDoor** DoorActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_DoorKnock.BP_AnimNotify_DoorKnock_C.GetDoorActor");
 
@@ -38,7 +38,7 @@ void UBP_AnimNotify_DoorKnock_C::STATIC_GetDoorActor(class USkeletalMeshComponen
 
 
 // Function BP_AnimNotify_DoorKnock.BP_AnimNotify_DoorKnock_C.GetSound
-// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           Sound                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -62,7 +62,7 @@ void UBP_AnimNotify_DoorKnock_C::GetSound(class AS3GimmickOpenDoor* Door, class 
 
 
 // Function BP_AnimNotify_DoorKnock.BP_AnimNotify_DoorKnock_C.GetNotifyName
-// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 

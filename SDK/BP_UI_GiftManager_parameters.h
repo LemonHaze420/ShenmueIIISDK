@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -93,7 +93,7 @@ struct ABP_UI_GiftManager_C_ExecuteUbergraph_BP_UI_GiftManager_Params
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.INFO_SuccessItem__DelegateSignature
 struct ABP_UI_GiftManager_C_INFO_SuccessItem__DelegateSignature_Params
 {
-	int                                                itemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ItemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.ED_UseItem__DelegateSignature

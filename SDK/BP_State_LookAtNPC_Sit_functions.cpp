@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.GetLookAngle
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Angle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Sit_C::STATIC_GetLookAngle(float* Angle)
+void UBP_State_LookAtNPC_Sit_C::GetLookAngle(float* Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.GetLookAngle");
 
 	UBP_State_LookAtNPC_Sit_C_GetLookAngle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,18 +36,17 @@ void UBP_State_LookAtNPC_Sit_C::STATIC_GetLookAngle(float* Angle)
 
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.GetLookDistance
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Sit_C::STATIC_GetLookDistance(float* Distance)
+void UBP_State_LookAtNPC_Sit_C::GetLookDistance(float* Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.GetLookDistance");
 
 	UBP_State_LookAtNPC_Sit_C_GetLookDistance_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,12 +58,12 @@ void UBP_State_LookAtNPC_Sit_C::STATIC_GetLookDistance(float* Distance)
 
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.StateExit
-// (Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Sit_C::STATIC_StateExit(float Delta, bool* bProcessing)
+void UBP_State_LookAtNPC_Sit_C::StateExit(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.StateExit");
 
@@ -84,7 +82,7 @@ void UBP_State_LookAtNPC_Sit_C::STATIC_StateExit(float Delta, bool* bProcessing)
 
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.StateUpdate
-// (Net, NetRequest, NetResponse, NetMulticast, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -108,7 +106,7 @@ void UBP_State_LookAtNPC_Sit_C::StateUpdate(float Delta, bool* bDummy)
 
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.StateEnter
-// (NetReliable, Exec, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)

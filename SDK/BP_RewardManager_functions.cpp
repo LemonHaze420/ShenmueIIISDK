@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_RewardManager.BP_RewardManager_C.InitialPassword
-// (Net, NetRequest, Exec, Event, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_RewardManager_C::InitialPassword()
 {
@@ -31,7 +31,7 @@ void ABP_RewardManager_C::InitialPassword()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ConvertType
-// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Private, HasDefaults, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_RewardPresetInfo    Info                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // ES3RewardType                  Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -44,7 +44,6 @@ void ABP_RewardManager_C::ConvertType(const struct FST_RewardPresetInfo& Info, E
 	params.Info = Info;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +55,7 @@ void ABP_RewardManager_C::ConvertType(const struct FST_RewardPresetInfo& Info, E
 
 
 // Function BP_RewardManager.BP_RewardManager_C.IsInstalledContent
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, HasOutParms, HasDefaults, DLLImport)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3RewardType                  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Installed                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -69,7 +68,6 @@ void ABP_RewardManager_C::IsInstalledContent(ES3RewardType Type, bool* Installed
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,7 +79,7 @@ void ABP_RewardManager_C::IsInstalledContent(ES3RewardType Type, bool* Installed
 
 
 // Function BP_RewardManager.BP_RewardManager_C.SetEndRollPassword
-// (Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, HasOutParms, NetClient, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -94,7 +92,6 @@ void ABP_RewardManager_C::SetEndRollPassword(const struct FName& ID, bool* Succe
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -106,7 +103,7 @@ void ABP_RewardManager_C::SetEndRollPassword(const struct FName& ID, bool* Succe
 
 
 // Function BP_RewardManager.BP_RewardManager_C.RandomCapsulToy
-// (NetReliable, Exec, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ItemId                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -128,7 +125,7 @@ void ABP_RewardManager_C::RandomCapsulToy(struct FName* ItemId)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.IsBonusPack
-// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3RewardType                  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Bonus                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -141,7 +138,6 @@ void ABP_RewardManager_C::IsBonusPack(ES3RewardType Type, bool* Bonus)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,9 +149,9 @@ void ABP_RewardManager_C::IsBonusPack(ES3RewardType Type, bool* Bonus)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.GetEmaMateiral
-// (NetReliable, NetResponse, Static, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_RewardManager_C::STATIC_GetEmaMateiral()
+void ABP_RewardManager_C::GetEmaMateiral()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.GetEmaMateiral");
 
@@ -170,7 +166,7 @@ void ABP_RewardManager_C::STATIC_GetEmaMateiral()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ConvertCategory
-// (Event, NetResponse, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3RewardType                  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3RewardCategory              Category                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -194,7 +190,7 @@ void ABP_RewardManager_C::ConvertCategory(ES3RewardType Type, ES3RewardCategory*
 
 
 // Function BP_RewardManager.BP_RewardManager_C.DebugResetPassword
-// (Exec, Native, NetResponse, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_RewardManager_C::DebugResetPassword()
 {
@@ -203,7 +199,6 @@ void ABP_RewardManager_C::DebugResetPassword()
 	ABP_RewardManager_C_DebugResetPassword_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,14 +207,14 @@ void ABP_RewardManager_C::DebugResetPassword()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.AddRewardItem
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3RewardType                  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   InItemId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Num                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   O                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_AddRewardItem(ES3RewardType Type, const struct FName& InItemId, int Num, struct FName* O)
+void ABP_RewardManager_C::AddRewardItem(ES3RewardType Type, const struct FName& InItemId, int Num, struct FName* O)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.AddRewardItem");
 
@@ -229,7 +224,6 @@ void ABP_RewardManager_C::STATIC_AddRewardItem(ES3RewardType Type, const struct 
 	params.Num = Num;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,12 +235,12 @@ void ABP_RewardManager_C::STATIC_AddRewardItem(ES3RewardType Type, const struct 
 
 
 // Function BP_RewardManager.BP_RewardManager_C.CheckRewardItem
-// (Net, NetRequest, Exec, Native, Static, Public, Private, NetServer, BlueprintCallable)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   PresetId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           exec                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_CheckRewardItem(const struct FName& PresetId, bool* exec)
+void ABP_RewardManager_C::CheckRewardItem(const struct FName& PresetId, bool* exec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.CheckRewardItem");
 
@@ -254,7 +248,6 @@ void ABP_RewardManager_C::STATIC_CheckRewardItem(const struct FName& PresetId, b
 	params.PresetId = PresetId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -266,7 +259,7 @@ void ABP_RewardManager_C::STATIC_CheckRewardItem(const struct FName& PresetId, b
 
 
 // Function BP_RewardManager.BP_RewardManager_C.SetRodAndLureFlag
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, DLLImport)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_RewardManager_C::SetRodAndLureFlag()
 {
@@ -283,19 +276,18 @@ void ABP_RewardManager_C::SetRodAndLureFlag()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.CheckShowFlag
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_RewardInfo          Info                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                           Show                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_CheckShowFlag(struct FST_RewardInfo* Info, bool* Show)
+void ABP_RewardManager_C::CheckShowFlag(struct FST_RewardInfo* Info, bool* Show)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.CheckShowFlag");
 
 	ABP_RewardManager_C_CheckShowFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -309,11 +301,11 @@ void ABP_RewardManager_C::STATIC_CheckShowFlag(struct FST_RewardInfo* Info, bool
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ShowNotice
-// (Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3RewardType                  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_ShowNotice(ES3RewardType Type)
+void ABP_RewardManager_C::ShowNotice(ES3RewardType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.ShowNotice");
 
@@ -321,7 +313,6 @@ void ABP_RewardManager_C::STATIC_ShowNotice(ES3RewardType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -330,18 +321,17 @@ void ABP_RewardManager_C::STATIC_ShowNotice(ES3RewardType Type)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.GetActivateRewards
-// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<ES3RewardType>          Rewards                        (Parm, OutParm, ZeroConstructor)
 
-void ABP_RewardManager_C::STATIC_GetActivateRewards(TArray<ES3RewardType>* Rewards)
+void ABP_RewardManager_C::GetActivateRewards(TArray<ES3RewardType>* Rewards)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.GetActivateRewards");
 
 	ABP_RewardManager_C_GetActivateRewards_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -353,7 +343,7 @@ void ABP_RewardManager_C::STATIC_GetActivateRewards(TArray<ES3RewardType>* Rewar
 
 
 // Function BP_RewardManager.BP_RewardManager_C.IsActivate
-// (NetRequest, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3RewardType                  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Activate                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -377,7 +367,7 @@ void ABP_RewardManager_C::IsActivate(ES3RewardType Type, bool* Activate)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ConvertTypeArray
-// (Net, NetReliable, NetMulticast, Public, Private, NetServer, BlueprintCallable)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_RewardPresetInfo    Info                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<ES3RewardType>          Types                          (Parm, OutParm, ZeroConstructor)
@@ -402,13 +392,13 @@ void ABP_RewardManager_C::ConvertTypeArray(struct FST_RewardPresetInfo* Info, TA
 
 
 // Function BP_RewardManager.BP_RewardManager_C.MakePresetArray
-// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<ES3RewardType>          Array                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<ES3RewardType>          NewArray                       (Parm, OutParm, ZeroConstructor)
 
-void ABP_RewardManager_C::STATIC_MakePresetArray(const struct FName& ID, TArray<ES3RewardType>* Array, TArray<ES3RewardType>* NewArray)
+void ABP_RewardManager_C::MakePresetArray(const struct FName& ID, TArray<ES3RewardType>* Array, TArray<ES3RewardType>* NewArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.MakePresetArray");
 
@@ -416,7 +406,6 @@ void ABP_RewardManager_C::STATIC_MakePresetArray(const struct FName& ID, TArray<
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -430,16 +419,15 @@ void ABP_RewardManager_C::STATIC_MakePresetArray(const struct FName& ID, TArray<
 
 
 // Function BP_RewardManager.BP_RewardManager_C.CheckDownloadFile
-// (Exec, Native, Static, NetMulticast, Private, NetServer, BlueprintCallable)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_RewardManager_C::STATIC_CheckDownloadFile()
+void ABP_RewardManager_C::CheckDownloadFile()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.CheckDownloadFile");
 
 	ABP_RewardManager_C_CheckDownloadFile_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -448,7 +436,7 @@ void ABP_RewardManager_C::STATIC_CheckDownloadFile()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.SetPresetId
-// (Net, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   PresetId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -468,12 +456,12 @@ void ABP_RewardManager_C::SetPresetId(const struct FName& PresetId)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.SetDebugUpdateParam
-// (Native, NetResponse, Static, Public, Private, NetServer, BlueprintCallable)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ParamName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_SetDebugUpdateParam(const struct FString& ParamName, bool flag)
+void ABP_RewardManager_C::SetDebugUpdateParam(const struct FString& ParamName, bool flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.SetDebugUpdateParam");
 
@@ -482,7 +470,6 @@ void ABP_RewardManager_C::STATIC_SetDebugUpdateParam(const struct FString& Param
 	params.flag = flag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -491,11 +478,11 @@ void ABP_RewardManager_C::STATIC_SetDebugUpdateParam(const struct FString& Param
 
 
 // Function BP_RewardManager.BP_RewardManager_C.GetUserName
-// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 UserName                       (Parm, OutParm, ZeroConstructor)
 
-void ABP_RewardManager_C::STATIC_GetUserName(struct FString* UserName)
+void ABP_RewardManager_C::GetUserName(struct FString* UserName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.GetUserName");
 
@@ -513,16 +500,15 @@ void ABP_RewardManager_C::STATIC_GetUserName(struct FString* UserName)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.GetFudaMateiral
-// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_RewardManager_C::STATIC_GetFudaMateiral()
+void ABP_RewardManager_C::GetFudaMateiral()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.GetFudaMateiral");
 
 	ABP_RewardManager_C_GetFudaMateiral_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -531,7 +517,7 @@ void ABP_RewardManager_C::STATIC_GetFudaMateiral()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.GetHanamojiMaterial
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Protected, NetServer, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_RewardManager_C::GetHanamojiMaterial()
 {
@@ -548,7 +534,7 @@ void ABP_RewardManager_C::GetHanamojiMaterial()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.GetDebugRewardPresetId
-// (NetRequest, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ID                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -570,7 +556,7 @@ void ABP_RewardManager_C::GetDebugRewardPresetId(struct FName* ID)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.GetEndCreditType
-// (Exec, Event, NetResponse, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_EndCreditType>  Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -592,18 +578,17 @@ void ABP_RewardManager_C::GetEndCreditType(TEnumAsByte<EN_EndCreditType>* Type)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.GetDreamsComeTrueType
-// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_DreamsComeTrue> Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_GetDreamsComeTrueType(TEnumAsByte<EN_DreamsComeTrue>* Type)
+void ABP_RewardManager_C::GetDreamsComeTrueType(TEnumAsByte<EN_DreamsComeTrue>* Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.GetDreamsComeTrueType");
 
 	ABP_RewardManager_C_GetDreamsComeTrueType_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -615,7 +600,7 @@ void ABP_RewardManager_C::STATIC_GetDreamsComeTrueType(TEnumAsByte<EN_DreamsCome
 
 
 // Function BP_RewardManager.BP_RewardManager_C.SetPassword
-// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_PasswordResult> Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -628,7 +613,6 @@ void ABP_RewardManager_C::SetPassword(const struct FName& ID, TEnumAsByte<EN_Pas
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -640,9 +624,9 @@ void ABP_RewardManager_C::SetPassword(const struct FName& ID, TEnumAsByte<EN_Pas
 
 
 // Function BP_RewardManager.BP_RewardManager_C.UserConstructionScript
-// (NetReliable, Event, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_RewardManager_C::STATIC_UserConstructionScript()
+void ABP_RewardManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.UserConstructionScript");
 
@@ -657,12 +641,12 @@ void ABP_RewardManager_C::STATIC_UserConstructionScript()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.FlagChange
-// (Net, Native, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_FlagChange(int ArrayIndex, int SetFlags)
+void ABP_RewardManager_C::FlagChange(int ArrayIndex, int SetFlags)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.FlagChange");
 
@@ -671,7 +655,6 @@ void ABP_RewardManager_C::STATIC_FlagChange(int ArrayIndex, int SetFlags)
 	params.SetFlags = SetFlags;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -680,7 +663,7 @@ void ABP_RewardManager_C::STATIC_FlagChange(int ArrayIndex, int SetFlags)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ReceiveEndPlay
-// (NetRequest, NetMulticast, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -700,7 +683,7 @@ void ABP_RewardManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReas
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ShowItemDialog
-// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_RewardManager_C::ShowItemDialog()
 {
@@ -717,12 +700,12 @@ void ABP_RewardManager_C::ShowItemDialog()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ChangePlayerBehavior
-// (NetRequest, Exec, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3PlayerBehavior              NewId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PlayerBehavior              OldId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
+void ABP_RewardManager_C::ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.ChangePlayerBehavior");
 
@@ -739,7 +722,7 @@ void ABP_RewardManager_C::STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, E
 
 
 // Function BP_RewardManager.BP_RewardManager_C.PushDecide
-// (Net, NetRequest, NetMulticast, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -759,7 +742,7 @@ void ABP_RewardManager_C::PushDecide(class AActor* Actor)
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_RewardManager_C::ReceiveBeginPlay()
 {
@@ -776,7 +759,7 @@ void ABP_RewardManager_C::ReceiveBeginPlay()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.CheckFreerun
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_RewardManager_C::CheckFreerun()
 {
@@ -793,7 +776,7 @@ void ABP_RewardManager_C::CheckFreerun()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.FinishedDLC
-// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_RewardManager_C::FinishedDLC()
 {
@@ -810,13 +793,13 @@ void ABP_RewardManager_C::FinishedDLC()
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ChangedItemNum
-// (NetReliable, Exec, NetResponse, Static, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NewNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OldNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_ChangedItemNum(const struct FName& ItemId, int NewNum, int OldNum)
+void ABP_RewardManager_C::ChangedItemNum(const struct FName& ItemId, int NewNum, int OldNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.ChangedItemNum");
 
@@ -834,11 +817,11 @@ void ABP_RewardManager_C::STATIC_ChangedItemNum(const struct FName& ItemId, int 
 
 
 // Function BP_RewardManager.BP_RewardManager_C.ExecuteUbergraph_BP_RewardManager
-// (Static, NetMulticast)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RewardManager_C::STATIC_ExecuteUbergraph_BP_RewardManager(int EntryPoint)
+void ABP_RewardManager_C::ExecuteUbergraph_BP_RewardManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.ExecuteUbergraph_BP_RewardManager");
 
@@ -854,9 +837,9 @@ void ABP_RewardManager_C::STATIC_ExecuteUbergraph_BP_RewardManager(int EntryPoin
 
 
 // Function BP_RewardManager.BP_RewardManager_C.OnChangeReward__DelegateSignature
-// (NetReliable, Event, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_RewardManager_C::STATIC_OnChangeReward__DelegateSignature()
+void ABP_RewardManager_C::OnChangeReward__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RewardManager.BP_RewardManager_C.OnChangeReward__DelegateSignature");
 

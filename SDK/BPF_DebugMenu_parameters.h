@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,7 @@ struct UBPF_DebugMenu_C_CheckPressButton_Params
 	struct FKeyEvent                                   InKeyEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 	class UPanelWidget*                                PanelWidget;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               press;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Press;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BPF_DebugMenu.BPF_DebugMenu_C.GetDebugMenu

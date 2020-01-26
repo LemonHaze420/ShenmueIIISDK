@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -183,7 +183,7 @@ struct ABP_MiniGameBase_C_GetSightCheckLocation_Params
 // Function BP_MiniGameBase.BP_MiniGameBase_C.UnBindEventToSequenceFinished
 struct ABP_MiniGameBase_C_UnBindEventToSequenceFinished_Params
 {
-	struct FScriptDelegate                             UnknownVar01;                                                // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	struct FScriptDelegate                             ¤0Ù0ó0È0;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function BP_MiniGameBase.BP_MiniGameBase_C.SetMeshUpdateEnabled
@@ -197,7 +197,7 @@ struct ABP_MiniGameBase_C_SetMeshUpdateEnabled_Params
 struct ABP_MiniGameBase_C_BindEventToSequenceFinished_Params
 {
 	class ULevelSequencePlayer*                        SequencePlayer;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FScriptDelegate                             UnknownVar01;                                                // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	struct FScriptDelegate                             ¤0Ù0ó0È0;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function BP_MiniGameBase.BP_MiniGameBase_C.GetMiniGameHelpName

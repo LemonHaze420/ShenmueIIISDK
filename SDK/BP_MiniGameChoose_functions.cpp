@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.GetPriority
-// (Net, NetRequest, Exec, Native, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,7 +25,6 @@ int ABP_MiniGameChoose_C::GetPriority()
 	ABP_MiniGameChoose_C_GetPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +35,7 @@ int ABP_MiniGameChoose_C::GetPriority()
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.GetDetectAction
-// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -47,7 +46,6 @@ TArray<struct FS3DetectActionParam> ABP_MiniGameChoose_C::GetDetectAction()
 	ABP_MiniGameChoose_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +56,7 @@ TArray<struct FS3DetectActionParam> ABP_MiniGameChoose_C::GetDetectAction()
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.FinalizeMoneyInfo
-// (NetResponse, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGameChoose_C::FinalizeMoneyInfo()
 {
@@ -75,7 +73,7 @@ void ABP_MiniGameChoose_C::FinalizeMoneyInfo()
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.InitializeMoneyInfo
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGameChoose_C::InitializeMoneyInfo()
 {
@@ -92,7 +90,7 @@ void ABP_MiniGameChoose_C::InitializeMoneyInfo()
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.UpdateOnePriceInfo
-// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGameChoose_C::UpdateOnePriceInfo()
 {
@@ -101,7 +99,6 @@ void ABP_MiniGameChoose_C::UpdateOnePriceInfo()
 	ABP_MiniGameChoose_C_UpdateOnePriceInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,9 +107,9 @@ void ABP_MiniGameChoose_C::UpdateOnePriceInfo()
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.UserConstructionScript
-// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameChoose_C::STATIC_UserConstructionScript()
+void ABP_MiniGameChoose_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose.BP_MiniGameChoose_C.UserConstructionScript");
 
@@ -127,7 +124,7 @@ void ABP_MiniGameChoose_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.DecideDetectAction
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -139,7 +136,6 @@ void ABP_MiniGameChoose_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -148,7 +144,7 @@ void ABP_MiniGameChoose_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.ReceiveBeginPlay
-// (Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGameChoose_C::ReceiveBeginPlay()
 {
@@ -157,7 +153,6 @@ void ABP_MiniGameChoose_C::ReceiveBeginPlay()
 	ABP_MiniGameChoose_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +161,7 @@ void ABP_MiniGameChoose_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -178,7 +173,6 @@ void ABP_MiniGameChoose_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,7 +181,7 @@ void ABP_MiniGameChoose_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.ReceiveEndPlay
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -199,7 +193,6 @@ void ABP_MiniGameChoose_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,7 +201,7 @@ void ABP_MiniGameChoose_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.ExecuteUbergraph_BP_MiniGameChoose
-// (Net, NetResponse, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -228,16 +221,15 @@ void ABP_MiniGameChoose_C::ExecuteUbergraph_BP_MiniGameChoose(int EntryPoint)
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.OnCancelMiniGameDispatcher__DelegateSignature
-// (Native, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameChoose_C::STATIC_OnCancelMiniGameDispatcher__DelegateSignature()
+void ABP_MiniGameChoose_C::OnCancelMiniGameDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose.BP_MiniGameChoose_C.OnCancelMiniGameDispatcher__DelegateSignature");
 
 	ABP_MiniGameChoose_C_OnCancelMiniGameDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -246,11 +238,11 @@ void ABP_MiniGameChoose_C::STATIC_OnCancelMiniGameDispatcher__DelegateSignature(
 
 
 // Function BP_MiniGameChoose.BP_MiniGameChoose_C.OnChooseMiniGameDispatcher__DelegateSignature
-// (Native, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  ChooseActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameChoose_C::STATIC_OnChooseMiniGameDispatcher__DelegateSignature(class AActor* ChooseActor)
+void ABP_MiniGameChoose_C::OnChooseMiniGameDispatcher__DelegateSignature(class AActor* ChooseActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose.BP_MiniGameChoose_C.OnChooseMiniGameDispatcher__DelegateSignature");
 
@@ -258,7 +250,6 @@ void ABP_MiniGameChoose_C::STATIC_OnChooseMiniGameDispatcher__DelegateSignature(
 	params.ChooseActor = ChooseActor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

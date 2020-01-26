@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,14 +30,14 @@ public:
 
 	TArray<struct FString> ConvertDisplayTextArray(const struct FName& CharaName, TArray<struct FString>* BaseTextArray);
 	struct FString GetSubtitleCharaNameString(const struct FName& InCharaName);
-	void STATIC_Stop();
-	void STATIC_Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName);
+	void Stop();
+	void Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName);
 	void SetSubtitlesWidgetVisible(bool IsVisible);
 	void FinalizeSubtitlesWidget();
-	void STATIC_CreateSubtitlesWidget();
+	void CreateSubtitlesWidget();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_SecondarySubtitlePlayer(int EntryPoint);
 };
 

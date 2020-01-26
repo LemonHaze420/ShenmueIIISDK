@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_AutoFocusing.BPC_AutoFocusing_C.GetDotedDistance
-// (NetReliable, Exec, Event, NetResponse, Private, Protected, Delegate, NetClient, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UbpS3CameraComp_C*       Camera                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -40,7 +40,7 @@ void UBPC_AutoFocusing_C::GetDotedDistance(class AActor* Actor, class UbpS3Camer
 
 
 // Function BPC_AutoFocusing.BPC_AutoFocusing_C.CullActors
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AActor*>          ActorList                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UbpS3CameraComp_C*       Camera                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -67,7 +67,7 @@ void UBPC_AutoFocusing_C::CullActors(class UbpS3CameraComp_C* Camera, TArray<cla
 
 
 // Function BPC_AutoFocusing.BPC_AutoFocusing_C.GetNearestAndFarthestActor
-// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AActor*>          ActorList                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UbpS3CameraComp_C*       Camera                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -97,7 +97,7 @@ void UBPC_AutoFocusing_C::GetNearestAndFarthestActor(class UbpS3CameraComp_C* Ca
 
 
 // Function BPC_AutoFocusing.BPC_AutoFocusing_C.ReceiveBeginPlay
-// (Net, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Event, Public, BlueprintEvent)
 
 void UBPC_AutoFocusing_C::ReceiveBeginPlay()
 {
@@ -106,7 +106,6 @@ void UBPC_AutoFocusing_C::ReceiveBeginPlay()
 	UBPC_AutoFocusing_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,12 +114,12 @@ void UBPC_AutoFocusing_C::ReceiveBeginPlay()
 
 
 // Function BPC_AutoFocusing.BPC_AutoFocusing_C.ChangeTarget
-// (Net, NetRequest, Native, Static, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AActor*>          NewTarget                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          lerpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_AutoFocusing_C::STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
+void UBPC_AutoFocusing_C::ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AutoFocusing.BPC_AutoFocusing_C.ChangeTarget");
 
@@ -129,7 +128,6 @@ void UBPC_AutoFocusing_C::STATIC_ChangeTarget(TArray<class AActor*> NewTarget, f
 	params.lerpTime = lerpTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,9 +136,9 @@ void UBPC_AutoFocusing_C::STATIC_ChangeTarget(TArray<class AActor*> NewTarget, f
 
 
 // Function BPC_AutoFocusing.BPC_AutoFocusing_C.Update
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_AutoFocusing_C::STATIC_Update()
+void UBPC_AutoFocusing_C::Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AutoFocusing.BPC_AutoFocusing_C.Update");
 
@@ -155,11 +153,11 @@ void UBPC_AutoFocusing_C::STATIC_Update()
 
 
 // Function BPC_AutoFocusing.BPC_AutoFocusing_C.ExecuteUbergraph_BPC_AutoFocusing
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Protected, NetClient, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_AutoFocusing_C::STATIC_ExecuteUbergraph_BPC_AutoFocusing(int EntryPoint)
+void UBPC_AutoFocusing_C::ExecuteUbergraph_BPC_AutoFocusing(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AutoFocusing.BPC_AutoFocusing_C.ExecuteUbergraph_BPC_AutoFocusing");
 

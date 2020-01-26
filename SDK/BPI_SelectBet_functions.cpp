@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPI_SelectBet.BPI_SelectBet_C.DecideCancel
-// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPI_SelectBet_C::STATIC_DecideCancel()
+void UBPI_SelectBet_C::DecideCancel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_SelectBet.BPI_SelectBet_C.DecideCancel");
 
@@ -31,9 +31,9 @@ void UBPI_SelectBet_C::STATIC_DecideCancel()
 
 
 // Function BPI_SelectBet.BPI_SelectBet_C.DecideBet
-// (Net, NetReliable, Static, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPI_SelectBet_C::STATIC_DecideBet()
+void UBPI_SelectBet_C::DecideBet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_SelectBet.BPI_SelectBet_C.DecideBet");
 
@@ -48,16 +48,15 @@ void UBPI_SelectBet_C::STATIC_DecideBet()
 
 
 // Function BPI_SelectBet.BPI_SelectBet_C.SelectCancel
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPI_SelectBet_C::STATIC_SelectCancel()
+void UBPI_SelectBet_C::SelectCancel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_SelectBet.BPI_SelectBet_C.SelectCancel");
 
 	UBPI_SelectBet_C_SelectCancel_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -66,16 +65,15 @@ void UBPI_SelectBet_C::STATIC_SelectCancel()
 
 
 // Function BPI_SelectBet.BPI_SelectBet_C.SelectMaxBet
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPI_SelectBet_C::STATIC_SelectMaxBet()
+void UBPI_SelectBet_C::SelectMaxBet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_SelectBet.BPI_SelectBet_C.SelectMaxBet");
 
 	UBPI_SelectBet_C_SelectMaxBet_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,7 +82,7 @@ void UBPI_SelectBet_C::STATIC_SelectMaxBet()
 
 
 // Function BPI_SelectBet.BPI_SelectBet_C.SelectBetDown
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPI_SelectBet_C::SelectBetDown()
 {
@@ -101,7 +99,7 @@ void UBPI_SelectBet_C::SelectBetDown()
 
 
 // Function BPI_SelectBet.BPI_SelectBet_C.SelectBetUp
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBPI_SelectBet_C::SelectBetUp()
 {

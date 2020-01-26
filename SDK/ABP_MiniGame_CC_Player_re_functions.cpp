@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.IsPlayCatchAnim
-// (NetReliable, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           isPlay                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void UABP_MiniGame_CC_Player_re_C::IsPlayCatchAnim(bool* isPlay)
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.PlayCatchAnim
-// (NetReliable, Event, NetResponse, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::PlayCatchAnim()
 {
@@ -53,16 +53,15 @@ void UABP_MiniGame_CC_Player_re_C::PlayCatchAnim()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.UpdatePA
-// (Net, Native, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_UpdatePA()
+void UABP_MiniGame_CC_Player_re_C::UpdatePA()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.UpdatePA");
 
 	UABP_MiniGame_CC_Player_re_C_UpdatePA_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +70,7 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_UpdatePA()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.RInterpToQ
-// (Exec, Native, NetResponse, Static, NetMulticast, Protected, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                Current                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Target                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -79,7 +78,7 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_UpdatePA()
 // float                          InterpSpeed                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                RetRot                         (Parm, OutParm, IsPlainOldData)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_RInterpToQ(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed, struct FRotator* RetRot)
+void UABP_MiniGame_CC_Player_re_C::RInterpToQ(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed, struct FRotator* RetRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.RInterpToQ");
 
@@ -90,7 +89,6 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_RInterpToQ(const struct FRotator& Curr
 	params.InterpSpeed = InterpSpeed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +100,7 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_RInterpToQ(const struct FRotator& Curr
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.InitFunc
-// (Exec, Native, NetResponse, NetMulticast, Public, Delegate, BlueprintCallable)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::InitFunc()
 {
@@ -111,7 +109,6 @@ void UABP_MiniGame_CC_Player_re_C::InitFunc()
 	UABP_MiniGame_CC_Player_re_C_InitFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,11 +117,11 @@ void UABP_MiniGame_CC_Player_re_C::InitFunc()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.MakeTargetRotation
-// (NetReliable, NetRequest, Exec, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                ReturnRot                      (Parm, OutParm, IsPlainOldData)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_MakeTargetRotation(struct FRotator* ReturnRot)
+void UABP_MiniGame_CC_Player_re_C::MakeTargetRotation(struct FRotator* ReturnRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.MakeTargetRotation");
 
@@ -142,9 +139,9 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_MakeTargetRotation(struct FRotator* Re
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.GOMA8_OtherFunc
-// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_GOMA8_OtherFunc()
+void UABP_MiniGame_CC_Player_re_C::GOMA8_OtherFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.GOMA8_OtherFunc");
 
@@ -159,9 +156,9 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_GOMA8_OtherFunc()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.StopMontageWrapper
-// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_StopMontageWrapper()
+void UABP_MiniGame_CC_Player_re_C::StopMontageWrapper()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.StopMontageWrapper");
 
@@ -176,7 +173,7 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_StopMontageWrapper()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.TurnInPlaceCheck
-// (Exec, Native, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          TurnThreshold                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          TurnAngle                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -193,7 +190,6 @@ void UABP_MiniGame_CC_Player_re_C::TurnInPlaceCheck(float TurnThreshold, float T
 	params.TurnAngle = TurnAngle;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -209,12 +205,12 @@ void UABP_MiniGame_CC_Player_re_C::TurnInPlaceCheck(float TurnThreshold, float T
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.SetCharacterRotation
-// (Net, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FRotator                TargetRotation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          RotationRate                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_SetCharacterRotation(const struct FRotator& TargetRotation, float RotationRate)
+void UABP_MiniGame_CC_Player_re_C::SetCharacterRotation(const struct FRotator& TargetRotation, float RotationRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.SetCharacterRotation");
 
@@ -223,7 +219,6 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_SetCharacterRotation(const struct FRot
 	params.RotationRate = RotationRate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -232,7 +227,7 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_SetCharacterRotation(const struct FRot
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_1072A9C2421FEC08965D54A159409CA0
-// (Net, NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_1072A9C2421FEC08965D54A159409CA0()
 {
@@ -241,7 +236,6 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 	UABP_MiniGame_CC_Player_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_1072A9C2421FEC08965D54A159409CA0_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -250,7 +244,7 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_6F4D1FD141704E98769B6AA1B6AE6186
-// (Net, NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_6F4D1FD141704E98769B6AA1B6AE6186()
 {
@@ -259,7 +253,6 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 	UABP_MiniGame_CC_Player_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_6F4D1FD141704E98769B6AA1B6AE6186_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,7 +261,7 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_45F2B9AB47E730ED2E576EA6B34048D2
-// (NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_45F2B9AB47E730ED2E576EA6B34048D2()
 {
@@ -277,7 +270,6 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 	UABP_MiniGame_CC_Player_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_45F2B9AB47E730ED2E576EA6B34048D2_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -286,7 +278,7 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_8C5FDAF346797F8B3BB06A871FB2EBC8
-// (NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_8C5FDAF346797F8B3BB06A871FB2EBC8()
 {
@@ -295,7 +287,6 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 	UABP_MiniGame_CC_Player_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_TransitionResult_8C5FDAF346797F8B3BB06A871FB2EBC8_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -304,7 +295,7 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_BlendSpacePlayer_81360C884437633463479E95ADE5F452
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_BlendSpacePlayer_81360C884437633463479E95ADE5F452()
 {
@@ -313,7 +304,6 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 	UABP_MiniGame_CC_Player_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_BlendSpacePlayer_81360C884437633463479E95ADE5F452_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -322,7 +312,7 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_RotateRootBone_E738FA8E4DAE1C5595DA2FAE77DAD20E
-// (Net, NetReliable, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_RotateRootBone_E738FA8E4DAE1C5595DA2FAE77DAD20E()
 {
@@ -331,7 +321,6 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 	UABP_MiniGame_CC_Player_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Player_re_AnimGraphNode_RotateRootBone_E738FA8E4DAE1C5595DA2FAE77DAD20E_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -340,7 +329,7 @@ void UABP_MiniGame_CC_Player_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.AnimNotify_QTE_FinishWait
-// (NetReliable, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_FinishWait()
 {
@@ -349,7 +338,6 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_FinishWait()
 	UABP_MiniGame_CC_Player_re_C_AnimNotify_QTE_FinishWait_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -358,7 +346,7 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_FinishWait()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.AnimNotify_QTE_InputStart
-// (NetReliable, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_InputStart()
 {
@@ -367,7 +355,6 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_InputStart()
 	UABP_MiniGame_CC_Player_re_C_AnimNotify_QTE_InputStart_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -376,7 +363,7 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_InputStart()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.AnimNotify_QTE_InputEnd
-// (Net, NetReliable, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_InputEnd()
 {
@@ -393,7 +380,7 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_InputEnd()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.AnimNotify_QTE_End
-// (NetReliable, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_End()
 {
@@ -410,11 +397,11 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_QTE_End()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.BlueprintUpdateAnimation
-// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_BlueprintUpdateAnimation(float DeltaTimeX)
+void UABP_MiniGame_CC_Player_re_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.BlueprintUpdateAnimation");
 
@@ -430,7 +417,7 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_BlueprintUpdateAnimation(float DeltaTi
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.AnimNotify_CanRotate
-// (Net, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::AnimNotify_CanRotate()
 {
@@ -447,7 +434,7 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_CanRotate()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.OnJump
-// (Net, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::OnJump()
 {
@@ -464,7 +451,7 @@ void UABP_MiniGame_CC_Player_re_C::OnJump()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.PauseMotion
-// (NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::PauseMotion()
 {
@@ -481,7 +468,7 @@ void UABP_MiniGame_CC_Player_re_C::PauseMotion()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.SetPlayRate
-// (Net, NetRequest, Native, Event, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          PlayRate                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -493,7 +480,6 @@ void UABP_MiniGame_CC_Player_re_C::SetPlayRate(float PlayRate)
 	params.PlayRate = PlayRate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -502,7 +488,7 @@ void UABP_MiniGame_CC_Player_re_C::SetPlayRate(float PlayRate)
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.BlueprintInitializeAnimation
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::BlueprintInitializeAnimation()
 {
@@ -511,7 +497,6 @@ void UABP_MiniGame_CC_Player_re_C::BlueprintInitializeAnimation()
 	UABP_MiniGame_CC_Player_re_C_BlueprintInitializeAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -520,7 +505,7 @@ void UABP_MiniGame_CC_Player_re_C::BlueprintInitializeAnimation()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.SetForceIdle
-// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bForceIdle                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -532,7 +517,6 @@ void UABP_MiniGame_CC_Player_re_C::SetForceIdle(bool bForceIdle)
 	params.bForceIdle = bForceIdle;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -541,7 +525,7 @@ void UABP_MiniGame_CC_Player_re_C::SetForceIdle(bool bForceIdle)
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.AnimNotify_GroundingFootL
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::AnimNotify_GroundingFootL()
 {
@@ -550,7 +534,6 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_GroundingFootL()
 	UABP_MiniGame_CC_Player_re_C_AnimNotify_GroundingFootL_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -559,7 +542,7 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_GroundingFootL()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.AnimNotify_GroundingFootR
-// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void UABP_MiniGame_CC_Player_re_C::AnimNotify_GroundingFootR()
 {
@@ -568,7 +551,6 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_GroundingFootR()
 	UABP_MiniGame_CC_Player_re_C_AnimNotify_GroundingFootR_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -577,11 +559,11 @@ void UABP_MiniGame_CC_Player_re_C::AnimNotify_GroundingFootR()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.ExecuteUbergraph_ABP_MiniGame_CC_Player_re
-// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_ExecuteUbergraph_ABP_MiniGame_CC_Player_re(int EntryPoint)
+void UABP_MiniGame_CC_Player_re_C::ExecuteUbergraph_ABP_MiniGame_CC_Player_re(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.ExecuteUbergraph_ABP_MiniGame_CC_Player_re");
 
@@ -597,9 +579,9 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_ExecuteUbergraph_ABP_MiniGame_CC_Playe
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.QTE_End__DelegateSignature
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_QTE_End__DelegateSignature()
+void UABP_MiniGame_CC_Player_re_C::QTE_End__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.QTE_End__DelegateSignature");
 
@@ -614,11 +596,11 @@ void UABP_MiniGame_CC_Player_re_C::STATIC_QTE_End__DelegateSignature()
 
 
 // Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.QTE_Input__DelegateSignature
-// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           StartFlag                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_CC_Player_re_C::STATIC_QTE_Input__DelegateSignature(bool StartFlag)
+void UABP_MiniGame_CC_Player_re_C::QTE_Input__DelegateSignature(bool StartFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Player_re.ABP_MiniGame_CC_Player_re_C.QTE_Input__DelegateSignature");
 

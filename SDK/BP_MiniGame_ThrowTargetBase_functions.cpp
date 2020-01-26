@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.GetMiniGameValueType
-// (Net, NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_ValueType>      Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type)
+void ABP_MiniGame_ThrowTargetBase_C::GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.GetMiniGameValueType");
 
 	ABP_MiniGame_ThrowTargetBase_C_GetMiniGameValueType_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_GetMiniGameValueType(TEnumAsByte<EN_
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.EnabledMeshTarget
-// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ThrowTargetBase_C::EnabledMeshTarget()
 {
@@ -54,16 +53,15 @@ void ABP_MiniGame_ThrowTargetBase_C::EnabledMeshTarget()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.AddSuccessCount
-// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_AddSuccessCount()
+void ABP_MiniGame_ThrowTargetBase_C::AddSuccessCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.AddSuccessCount");
 
 	ABP_MiniGame_ThrowTargetBase_C_AddSuccessCount_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,18 +70,17 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_AddSuccessCount()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.IsGolfHoleType
-// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsGolfHole                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_IsGolfHoleType(bool* IsGolfHole)
+void ABP_MiniGame_ThrowTargetBase_C::IsGolfHoleType(bool* IsGolfHole)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.IsGolfHoleType");
 
 	ABP_MiniGame_ThrowTargetBase_C_IsGolfHoleType_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +92,7 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_IsGolfHoleType(bool* IsGolfHole)
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.IsStoped
-// (NetReliable, NetResponse, Private, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bStoped                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -117,7 +114,7 @@ void ABP_MiniGame_ThrowTargetBase_C::IsStoped(bool* bStoped)
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.UserConstructionScript
-// (Exec, Event, NetResponse, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_ThrowTargetBase_C::UserConstructionScript()
 {
@@ -134,7 +131,7 @@ void ABP_MiniGame_ThrowTargetBase_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.EnterMiniGame
-// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          EnterTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -146,7 +143,6 @@ void ABP_MiniGame_ThrowTargetBase_C::EnterMiniGame(float EnterTime)
 	params.EnterTime = EnterTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,16 +151,15 @@ void ABP_MiniGame_ThrowTargetBase_C::EnterMiniGame(float EnterTime)
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.FinalizeTalk
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_FinalizeTalk()
+void ABP_MiniGame_ThrowTargetBase_C::FinalizeTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.FinalizeTalk");
 
 	ABP_MiniGame_ThrowTargetBase_C_FinalizeTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,16 +168,15 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_FinalizeTalk()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.StartMiniGame
-// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_StartMiniGame()
+void ABP_MiniGame_ThrowTargetBase_C::StartMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.StartMiniGame");
 
 	ABP_MiniGame_ThrowTargetBase_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,16 +185,15 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_StartMiniGame()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.EndMiniGame
-// (Net, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_EndMiniGame()
+void ABP_MiniGame_ThrowTargetBase_C::EndMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.EndMiniGame");
 
 	ABP_MiniGame_ThrowTargetBase_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -209,16 +202,15 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_EndMiniGame()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.WinMiniGame
-// (Net, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_WinMiniGame()
+void ABP_MiniGame_ThrowTargetBase_C::WinMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.WinMiniGame");
 
 	ABP_MiniGame_ThrowTargetBase_C_WinMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,16 +219,15 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_WinMiniGame()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.LoseMiniGame
-// (Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_LoseMiniGame()
+void ABP_MiniGame_ThrowTargetBase_C::LoseMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.LoseMiniGame");
 
 	ABP_MiniGame_ThrowTargetBase_C_LoseMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -245,16 +236,15 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_LoseMiniGame()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.DrawMiniGame
-// (Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_DrawMiniGame()
+void ABP_MiniGame_ThrowTargetBase_C::DrawMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.DrawMiniGame");
 
 	ABP_MiniGame_ThrowTargetBase_C_DrawMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -263,16 +253,15 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_DrawMiniGame()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.RestartMiniGame
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_RestartMiniGame()
+void ABP_MiniGame_ThrowTargetBase_C::RestartMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.RestartMiniGame");
 
 	ABP_MiniGame_ThrowTargetBase_C_RestartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -281,16 +270,15 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_RestartMiniGame()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.ReceiveBeginPlay
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_MiniGame_ThrowTargetBase_C::STATIC_ReceiveBeginPlay()
+void ABP_MiniGame_ThrowTargetBase_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.ReceiveBeginPlay");
 
 	ABP_MiniGame_ThrowTargetBase_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,7 +287,7 @@ void ABP_MiniGame_ThrowTargetBase_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.ReceiveTick
-// (Net, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -311,7 +299,6 @@ void ABP_MiniGame_ThrowTargetBase_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,7 +307,7 @@ void ABP_MiniGame_ThrowTargetBase_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_ThrowTargetBase.BP_MiniGame_ThrowTargetBase_C.ExecuteUbergraph_BP_MiniGame_ThrowTargetBase
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -332,7 +319,6 @@ void ABP_MiniGame_ThrowTargetBase_C::ExecuteUbergraph_BP_MiniGame_ThrowTargetBas
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

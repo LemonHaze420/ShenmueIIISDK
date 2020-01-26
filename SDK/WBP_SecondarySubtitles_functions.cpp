@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.InitializeFontSize
-// (Net, NetReliable, Exec, Event, NetResponse, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWBP_SecondarySubtitles_C::STATIC_InitializeFontSize()
+void UWBP_SecondarySubtitles_C::InitializeFontSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.InitializeFontSize");
 
@@ -31,7 +31,7 @@ void UWBP_SecondarySubtitles_C::STATIC_InitializeFontSize()
 
 
 // Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.ClearSubtitleTextWidget
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextBlock*              InTextWidget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -43,7 +43,6 @@ void UWBP_SecondarySubtitles_C::ClearSubtitleTextWidget(class UTextBlock* InText
 	params.InTextWidget = InTextWidget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,12 +51,12 @@ void UWBP_SecondarySubtitles_C::ClearSubtitleTextWidget(class UTextBlock* InText
 
 
 // Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.DrawSubtitleTextWidget
-// (Net, NetRequest, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextBlock*              InTextWidget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FString                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UWBP_SecondarySubtitles_C::STATIC_DrawSubtitleTextWidget(class UTextBlock* InTextWidget, const struct FString& Text)
+void UWBP_SecondarySubtitles_C::DrawSubtitleTextWidget(class UTextBlock* InTextWidget, const struct FString& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.DrawSubtitleTextWidget");
 
@@ -74,16 +73,15 @@ void UWBP_SecondarySubtitles_C::STATIC_DrawSubtitleTextWidget(class UTextBlock* 
 
 
 // Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.Clear
-// (Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_SecondarySubtitles_C::STATIC_Clear()
+void UWBP_SecondarySubtitles_C::Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.Clear");
 
 	UWBP_SecondarySubtitles_C_Clear_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +90,7 @@ void UWBP_SecondarySubtitles_C::STATIC_Clear()
 
 
 // Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.DrawSubtitles
-// (NetRequest, Native, Event, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FString>         InTextArray                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -103,7 +101,6 @@ void UWBP_SecondarySubtitles_C::DrawSubtitles(TArray<struct FString>* InTextArra
 	UWBP_SecondarySubtitles_C_DrawSubtitles_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,9 +112,9 @@ void UWBP_SecondarySubtitles_C::DrawSubtitles(TArray<struct FString>* InTextArra
 
 
 // Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.Construct
-// (NetReliable, NetRequest, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_SecondarySubtitles_C::STATIC_Construct()
+void UWBP_SecondarySubtitles_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.Construct");
 
@@ -132,7 +129,7 @@ void UWBP_SecondarySubtitles_C::STATIC_Construct()
 
 
 // Function WBP_SecondarySubtitles.WBP_SecondarySubtitles_C.ExecuteUbergraph_WBP_SecondarySubtitles
-// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

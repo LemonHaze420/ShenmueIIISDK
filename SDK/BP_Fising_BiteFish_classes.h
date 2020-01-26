@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,17 +43,17 @@ public:
 	}
 
 
-	void STATIC_DisableBite();
+	void DisableBite();
 	void MoveToTargetInTime();
-	void STATIC_SetTargetLocation(const struct FVector& TargetLocation, struct FVector* Output_Get);
+	void SetTargetLocation(const struct FVector& TargetLocation, struct FVector* Output_Get);
 	void UpdateBite();
 	void UserConstructionScript();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_Initialize();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_DestroyReady();
-	void STATIC_ExecuteUbergraph_BP_Fising_BiteFish(int EntryPoint);
-	void STATIC_OnPerfectBiteDispacher__DelegateSignature();
+	void ReceiveTick(float DeltaSeconds);
+	void Initialize();
+	void ReceiveBeginPlay();
+	void DestroyReady();
+	void ExecuteUbergraph_BP_Fising_BiteFish(int EntryPoint);
+	void OnPerfectBiteDispacher__DelegateSignature();
 };
 
 

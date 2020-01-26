@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,16 +41,16 @@ public:
 
 
 	void SetForceNPCVisible(int Num);
-	void STATIC_Init_DebugItemPrice();
-	void STATIC_DisplayLightCount();
+	void Init_DebugItemPrice();
+	void DisplayLightCount();
 	void ToggleDispDevelopText();
 	void ToggleDispCutscenePlayArea();
 	void BatchAddPropertyWatch(const struct FText& ObjectDisplayName, class UObject* Object, TArray<struct FBatchPropertyWatchInfo>* Properties);
 	void DisplayWorkMap();
-	void STATIC_DisplayLightInfo();
+	void DisplayLightInfo();
 	void DebugAddMoney(bool Add);
 	void DisplayNPCNum();
-	void STATIC_dbgCalcAddtime(float Base, float Bias, bool Signed, float* Result);
+	void dbgCalcAddtime(float Base, float Bias, bool signed, float* Result);
 	void UserConstructionScript();
 	void ReceiveInitCheatManager();
 	void OnInputKey_Cmd_Insert();
@@ -62,8 +62,8 @@ public:
 	void OnInputKey_CmdAltPageDown();
 	void OnKeyInput_3();
 	void OnKeyInput_2();
-	void OnKeyInput_Num_Plus();
-	void OnKeyInput_Num_Minus();
+	void OnKeyInput_Num_();
+	void OnKeyInput_Num_();
 	void OnInputKey_Alt_L();
 	void OnInputKey_Alt_Shift_L();
 	void OnKeyInput_F9Ctrl();

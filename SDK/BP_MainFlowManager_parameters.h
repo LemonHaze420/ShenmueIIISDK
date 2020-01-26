@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,13 +90,13 @@ struct ABP_MainFlowManager_C_FindEventMan_Params
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckIntervalMessage
 struct ABP_MainFlowManager_C_CheckIntervalMessage_Params
 {
-	float                                              DeltaSecond;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaSEcond;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ReservationInquiryMessage
 struct ABP_MainFlowManager_C_ReservationInquiryMessage_Params
 {
-	float                                              IntervalTIme;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              IntervalTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MessageControlWorkSub

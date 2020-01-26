@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -71,18 +71,18 @@ public:
 	void Initialize();
 	void UpdateAppearWait(float DeltaSeconds);
 	void CheckWhack(bool* Hit);
-	void STATIC_ChangeToNextState();
-	void STATIC_ClearValue();
+	void ChangeToNextState();
+	void ClearValue();
 	void UpdateWhacked(float DeltaSeconds);
 	void UpdateReverse(float DeltaSeconds);
-	void STATIC_UpdateAppear(float DeltaSeconds);
-	void STATIC_UpDown(float DeltaSeconds, float moveSpeed, float DownLimit, bool* Reached);
+	void UpdateAppear(float DeltaSeconds);
+	void UpDown(float DeltaSeconds, float moveSpeed, float DownLimit, bool* Reached);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void Appear();
-	void STATIC_OnEndLoad(const struct FString& LoadId, class UObject* LoadedObject);
-	void STATIC_ExecuteUbergraph_BP_MiniGameMole(int EntryPoint);
+	void OnEndLoad(const struct FString& LoadId, class UObject* LoadedObject);
+	void ExecuteUbergraph_BP_MiniGameMole(int EntryPoint);
 	void MissDispacher__DelegateSignature();
 };
 

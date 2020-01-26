@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,18 +14,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTL_LaunchParameters.BTL_LaunchParameters_C.GetNPCNum
-// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBTL_LaunchParameters_C::STATIC_GetNPCNum()
+int UBTL_LaunchParameters_C::GetNPCNum()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_LaunchParameters.BTL_LaunchParameters_C.GetNPCNum");
 
 	UBTL_LaunchParameters_C_GetNPCNum_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

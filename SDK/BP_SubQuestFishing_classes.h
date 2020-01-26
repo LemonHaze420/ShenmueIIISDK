@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,22 +53,22 @@ public:
 	}
 
 
-	void STATIC_CheckTableIndex(int Index, int Length, bool* In_Range);
+	void CheckTableIndex(int Index, int Length, bool* In_Range);
 	void CulcFlagValue(bool* Start_on_the_way, int* StartCount, float* StartStep, float* StartDifference);
 	void AddRandom(bool* Write);
 	void GetTableIndex(int Index, int Length, int* change_index);
 	void SetTimeChange(int CountUp, bool* Write);
 	void CulcElapsedTime(int* CountUp);
-	void STATIC_GameTimeMark(bool StartMark);
-	void STATIC_isEventEnable(bool* Enable);
-	void STATIC_UserConstructionScript();
+	void GameTimeMark(bool StartMark);
+	void isEventEnable(bool* Enable);
+	void UserConstructionScript();
 	void StartEvent(int ArrayIndex, int SetFlags);
 	void ReceiveTick(float DeltaSeconds);
 	void TimeChange(const struct FName& CutsceneName);
-	void STATIC_Recharge();
-	void STATIC_LoadStartIn();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BP_SubQuestFishing(int EntryPoint);
+	void Recharge();
+	void LoadStartIn();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_SubQuestFishing(int EntryPoint);
 };
 
 

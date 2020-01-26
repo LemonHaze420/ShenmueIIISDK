@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,12 +34,12 @@ public:
 
 	void ClearOverrideState();
 	void SetOverrideState(const struct FName& State);
-	bool STATIC_GetIdealLookAtTargetLocation(struct FVector* OutTargetLocation);
-	void STATIC_TryCacheTargetLocation(const struct FVector& Target, struct FVector* Output);
-	bool STATIC_GetLookAtTargetLocation(struct FVector* OutTargetLocation);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_Init(class US3FaceAnimDataAsset* FaceAnimData);
-	void STATIC_ExecuteUbergraph_BPC_LookAtFSM(int EntryPoint);
+	bool GetIdealLookAtTargetLocation(struct FVector* OutTargetLocation);
+	void TryCacheTargetLocation(const struct FVector& Target, struct FVector* Output);
+	bool GetLookAtTargetLocation(struct FVector* OutTargetLocation);
+	void ReceiveTick(float DeltaSeconds);
+	void Init(class US3FaceAnimDataAsset* FaceAnimData);
+	void ExecuteUbergraph_BPC_LookAtFSM(int EntryPoint);
 };
 
 

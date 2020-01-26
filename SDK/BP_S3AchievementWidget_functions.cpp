@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AchievementWidget.BP_S3AchievementWidget_C.SetAchievementName
-// (NetRequest, Exec, Native, NetMulticast, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 AchievementName                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -26,7 +26,6 @@ void UBP_S3AchievementWidget_C::SetAchievementName(const struct FString& Achieve
 	params.AchievementName = AchievementName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UBP_S3AchievementWidget_C::SetAchievementName(const struct FString& Achieve
 
 
 // Function BP_S3AchievementWidget.BP_S3AchievementWidget_C.Construct
-// (Net, NetReliable, Native, Event, NetResponse, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UBP_S3AchievementWidget_C::Construct()
 {
@@ -44,7 +43,6 @@ void UBP_S3AchievementWidget_C::Construct()
 	UBP_S3AchievementWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +51,11 @@ void UBP_S3AchievementWidget_C::Construct()
 
 
 // Function BP_S3AchievementWidget.BP_S3AchievementWidget_C.ExecuteUbergraph_BP_S3AchievementWidget
-// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3AchievementWidget_C::STATIC_ExecuteUbergraph_BP_S3AchievementWidget(int EntryPoint)
+void UBP_S3AchievementWidget_C::ExecuteUbergraph_BP_S3AchievementWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AchievementWidget.BP_S3AchievementWidget_C.ExecuteUbergraph_BP_S3AchievementWidget");
 

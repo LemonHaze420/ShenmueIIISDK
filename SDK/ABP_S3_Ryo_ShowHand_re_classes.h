@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,8 +54,8 @@ public:
 	}
 
 
-	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re_AnimGraphNode_BlendSpacePlayer_634697114ACC5A22898894888A89C5FF();
-	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re_AnimGraphNode_BlendSpacePlayer_634697114ACC5A22898894888A89C5FF();
+	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,13 +36,13 @@ public:
 
 	void LengthToDistanceEnum(float Length, TEnumAsByte<EN_HintTalkDistance>* DistanceEnum);
 	void GetPlaceMessage(struct FString* Message);
-	void STATIC_IsPlaceMessage(const struct FName& TextID, bool* Result);
+	void IsPlaceMessage(const struct FName& TextID, bool* Result);
 	void GetTextDataStrings(struct FName* Label, struct FString* OutString, struct FString* ClipperString, TArray<struct FString>* TextArray, int* LinefeedCount, TArray<struct FST_RubyInfo>* RubyInfoArray);
 	void UserConstructionScript();
-	void STATIC_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_2(const struct FKey& Key);
 	void ReceiveBeginPlay();
 	void ReceiveDestroyed();
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_HintTalkManager(int EntryPoint);
 };
 

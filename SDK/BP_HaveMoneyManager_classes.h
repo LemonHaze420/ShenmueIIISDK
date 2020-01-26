@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,12 +32,12 @@ public:
 	}
 
 
-	void STATIC_RemoveWidget();
-	void STATIC_SubMoney(int SubMoney, int* AfterHaveMoney);
-	void STATIC_AddMoney(int AddMoney, int* AfterHaveMoney);
+	void RemoveWidget();
+	void SubMoney(int SubMoney, int* AfterHaveMoney);
+	void AddMoney(int AddMoney, int* AfterHaveMoney);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BP_HaveMoneyManager(int EntryPoint);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_HaveMoneyManager(int EntryPoint);
 };
 
 

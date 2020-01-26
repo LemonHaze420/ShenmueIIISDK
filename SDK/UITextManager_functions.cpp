@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function UITextManager.UITextManager_C.GetLocalTxt
-// (Net, NetReliable, NetRequest, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 Text                           (Parm, OutParm, ZeroConstructor)
@@ -38,7 +38,7 @@ void AUITextManager_C::GetLocalTxt(const struct FString& Name, struct FString* T
 
 
 // Function UITextManager.UITextManager_C.GetLocalizedText
-// (Exec, Native, Event, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EUIText_Enum>      ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Text                           (Parm, OutParm, ZeroConstructor)
@@ -51,7 +51,6 @@ void AUITextManager_C::GetLocalizedText(TEnumAsByte<EUIText_Enum> ID, struct FSt
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,9 +62,9 @@ void AUITextManager_C::GetLocalizedText(TEnumAsByte<EUIText_Enum> ID, struct FSt
 
 
 // Function UITextManager.UITextManager_C.UserConstructionScript
-// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AUITextManager_C::STATIC_UserConstructionScript()
+void AUITextManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UITextManager.UITextManager_C.UserConstructionScript");
 
@@ -80,7 +79,7 @@ void AUITextManager_C::STATIC_UserConstructionScript()
 
 
 // Function UITextManager.UITextManager_C.ReceiveBeginPlay
-// (Exec, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void AUITextManager_C::ReceiveBeginPlay()
 {
@@ -97,11 +96,11 @@ void AUITextManager_C::ReceiveBeginPlay()
 
 
 // Function UITextManager.UITextManager_C.ExecuteUbergraph_UITextManager
-// (Net, Exec, Event, Static, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AUITextManager_C::STATIC_ExecuteUbergraph_UITextManager(int EntryPoint)
+void AUITextManager_C::ExecuteUbergraph_UITextManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UITextManager.UITextManager_C.ExecuteUbergraph_UITextManager");
 

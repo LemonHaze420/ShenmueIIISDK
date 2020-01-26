@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,20 +13,19 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.JudgeBGM
-// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.JudgeBgm
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3DayTimeEvent                NewEvent                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmArea_dayTime_C::STATIC_JudgeBGM(ES3DayTimeEvent NewEvent)
+void ABP_S3BgmArea_dayTime_C::JudgeBgm(ES3DayTimeEvent NewEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.JudgeBGM");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.JudgeBgm");
 
-	ABP_S3BgmArea_dayTime_C_JudgeBGM_Params params;
+	ABP_S3BgmArea_dayTime_C_JudgeBgm_Params params;
 	params.NewEvent = NewEvent;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,16 +34,15 @@ void ABP_S3BgmArea_dayTime_C::STATIC_JudgeBGM(ES3DayTimeEvent NewEvent)
 
 
 // Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.UserConstructionScript
-// (NetReliable, NetRequest, Native, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3BgmArea_dayTime_C::STATIC_UserConstructionScript()
+void ABP_S3BgmArea_dayTime_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.UserConstructionScript");
 
 	ABP_S3BgmArea_dayTime_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,9 +51,9 @@ void ABP_S3BgmArea_dayTime_C::STATIC_UserConstructionScript()
 
 
 // Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.ReceiveBeginPlay
-// (NetRequest, NetResponse, Static, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_S3BgmArea_dayTime_C::STATIC_ReceiveBeginPlay()
+void ABP_S3BgmArea_dayTime_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.ReceiveBeginPlay");
 
@@ -70,7 +68,7 @@ void ABP_S3BgmArea_dayTime_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.ChangeGameTimeEvent
-// (Net, NetReliable, Exec, NetResponse, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3DayTimeEvent                EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -90,7 +88,7 @@ void ABP_S3BgmArea_dayTime_C::ChangeGameTimeEvent(ES3DayTimeEvent EventType)
 
 
 // Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.ReceiveEndPlay
-// (NetRequest, Exec, NetResponse, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -110,7 +108,7 @@ void ABP_S3BgmArea_dayTime_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 
 
 // Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.ExecuteUbergraph_BP_S3BgmArea_dayTime
-// (NetRequest, Exec, Native, Event, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -122,7 +120,6 @@ void ABP_S3BgmArea_dayTime_C::ExecuteUbergraph_BP_S3BgmArea_dayTime(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

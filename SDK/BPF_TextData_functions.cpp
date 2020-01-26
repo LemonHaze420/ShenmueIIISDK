@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_TextData.BPF_TextData_C.GetS3TextItemName
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ItemName                       (Parm, OutParm)
 
-void UBPF_TextData_C::GetS3TextItemName(const struct FString& ItemId, class UObject* __WorldContext, struct FText* ItemName)
+void UBPF_TextData_C::STATIC_GetS3TextItemName(const struct FString& ItemId, class UObject* __WorldContext, struct FText* ItemName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_TextData.BPF_TextData_C.GetS3TextItemName");
 
@@ -40,12 +40,12 @@ void UBPF_TextData_C::GetS3TextItemName(const struct FString& ItemId, class UObj
 
 
 // Function BPF_TextData.BPF_TextData_C.getS3TextDataManager
-// (Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_TextDataManager_C*   TextDataManager                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_TextData_C::getS3TextDataManager(class UObject* __WorldContext, class UBP_TextDataManager_C** TextDataManager)
+void UBPF_TextData_C::STATIC_getS3TextDataManager(class UObject* __WorldContext, class UBP_TextDataManager_C** TextDataManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_TextData.BPF_TextData_C.getS3TextDataManager");
 

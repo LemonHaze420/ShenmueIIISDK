@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -129,6 +129,15 @@ enum class EAtomProfileSortType : uint8_t
 };
 
 
+// Enum CriWareRuntime.ECriWareSpeakerSystem
+enum class ECriWareSpeakerSystem : uint8_t
+{
+	ECriWareSpeakerSystem__Surround5Point1 = 0,
+	ECriWareSpeakerSystem__Surround7Point1 = 1,
+	ECriWareSpeakerSystem__ECriWareSpeakerSystem_MAX = 2
+};
+
+
 // Enum CriWareRuntime.EAtomSoundRendererType
 enum class EAtomSoundRendererType : uint8_t
 {
@@ -141,17 +150,6 @@ enum class EAtomSoundRendererType : uint8_t
 	EAtomSoundRendererType__Hardware4 = 6,
 	EAtomSoundRendererType__Pad    = 7,
 	EAtomSoundRendererType__EAtomSoundRendererType_MAX = 8
-};
-
-
-// Enum CriWareRuntime.EManaSoundType
-enum class EManaSoundType : uint8_t
-{
-	EManaSoundType__Adx            = 0,
-	EManaSoundType__HCA            = 1,
-	EManaSoundType__Num            = 2,
-	EManaSoundType__Unknown        = 3,
-	EManaSoundType__EManaSoundType_MAX = 4
 };
 
 
@@ -189,15 +187,6 @@ enum class EManaColorSpace : uint8_t
 };
 
 
-// Enum CriWareRuntime.ECriWareSpeakerSystem
-enum class ECriWareSpeakerSystem : uint8_t
-{
-	ECriWareSpeakerSystem__Surround5Point1 = 0,
-	ECriWareSpeakerSystem__Surround7Point1 = 1,
-	ECriWareSpeakerSystem__ECriWareSpeakerSystem_MAX = 2
-};
-
-
 // Enum CriWareRuntime.EManaMovieType
 enum class EManaMovieType : uint8_t
 {
@@ -210,10 +199,34 @@ enum class EManaMovieType : uint8_t
 };
 
 
+// Enum CriWareRuntime.EManaSoundType
+enum class EManaSoundType : uint8_t
+{
+	EManaSoundType__Adx            = 0,
+	EManaSoundType__HCA            = 1,
+	EManaSoundType__Num            = 2,
+	EManaSoundType__Unknown        = 3,
+	EManaSoundType__EManaSoundType_MAX = 4
+};
+
+
 
 //---------------------------------------------------------------------------
 // Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct CriWareRuntime.AtomAisacInfo
+// 0x0030
+struct FAtomAisacInfo
+{
+	struct FString                                     Name;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               DefaultControlFlag;                                       // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+	float                                              DefaultControlValue;                                      // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                ControlId;                                                // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	struct FString                                     ControlName;                                              // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
 
 // ScriptStruct CriWareRuntime.AtomAisacControlParam
 // 0x0018
@@ -230,19 +243,6 @@ struct FAtomSelectorParam
 {
 	struct FString                                     Selector;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
 	struct FString                                     Label;                                                    // 0x0010(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct CriWareRuntime.AtomAisacInfo
-// 0x0030
-struct FAtomAisacInfo
-{
-	struct FString                                     Name;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               DefaultControlFlag;                                       // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
-	float                                              DefaultControlValue;                                      // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ControlId;                                                // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-	struct FString                                     ControlName;                                              // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct CriWareRuntime.AtomProfileItem
@@ -289,6 +289,16 @@ struct FAtomAsrRackConfig
 	int                                                SoundRendererType;                                        // 0x0000(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
 };
 
+// ScriptStruct CriWareRuntime.ManaEventPointInfo
+// 0x0028
+struct FManaEventPointInfo
+{
+	struct FString                                     Name;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	float                                              Time;                                                     // 0x0010(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                Type;                                                     // 0x0014(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	struct FString                                     Parameter;                                                // 0x0018(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+};
+
 // ScriptStruct CriWareRuntime.ManaVideoTrackInfo
 // 0x001C
 struct FManaVideoTrackInfo
@@ -314,16 +324,6 @@ struct FManaAudioTrackInfo
 	unsigned char                                      UnknownData00[0x2];                                       // 0x000E(0x0002) MISSED OFFSET
 };
 
-// ScriptStruct CriWareRuntime.ManaEventPointInfo
-// 0x0028
-struct FManaEventPointInfo
-{
-	struct FString                                     Name;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	float                                              Time;                                                     // 0x0010(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                Type;                                                     // 0x0014(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	struct FString                                     Parameter;                                                // 0x0018(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-};
-
 // ScriptStruct CriWareRuntime.AtomTrackKeyframe
 // 0x0010
 struct FAtomTrackKeyframe
@@ -341,15 +341,6 @@ struct FAtomCueIdTrackKeyframe
 	int                                                CueId;                                                    // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct CriWareRuntime.AtomSelectorTrackKeyframe
-// 0x0018
-struct FAtomSelectorTrackKeyframe
-{
-	float                                              Time;                                                     // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FString                                     SelectorLabel;                                            // 0x0008(0x0010) (Edit, ZeroConstructor)
-};
-
 // ScriptStruct CriWareRuntime.AtomCueNameTrackKeyframe
 // 0x0018
 struct FAtomCueNameTrackKeyframe
@@ -357,6 +348,15 @@ struct FAtomCueNameTrackKeyframe
 	float                                              Time;                                                     // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FString                                     CueName;                                                  // 0x0008(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct CriWareRuntime.AtomSelectorTrackKeyframe
+// 0x0018
+struct FAtomSelectorTrackKeyframe
+{
+	float                                              Time;                                                     // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	struct FString                                     SelectorLabel;                                            // 0x0008(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct CriWareRuntime.MovieSceneAtomSectionTemplateData

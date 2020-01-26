@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,17 +45,17 @@ public:
 
 	void ChangeFlag_Impl(int Index, int flag);
 	void Activate(int Mode);
-	void STATIC_RandomBox(int* NextIndex);
+	void RandomBox(int* NextIndex);
 	void IsIgnoreStep(bool* Ignore);
 	void CheckMainFlowBattle();
-	struct FString STATIC_GetNextFighter();
+	struct FString GetNextFighter();
 	void JudgeBattle(TEnumAsByte<Enum_StreetFightResult> Reselt);
-	void STATIC_UpdateFighter();
-	void STATIC_UpdateReward();
-	void STATIC_IsChampion(bool* Champion);
+	void UpdateFighter();
+	void UpdateReward();
+	void IsChampion(bool* Champion);
 	void Reset();
 	void UpdateEntryMoney();
-	void STATIC_GetReward(int* Value);
+	void GetReward(int* Value);
 	void ConvertMinite(float Time, int* Minite);
 	void UpdateCheckTime();
 	void UserConstructionScript();

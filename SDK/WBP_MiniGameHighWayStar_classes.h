@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,17 +43,17 @@ public:
 	}
 
 
-	void STATIC_UpdateAddScoreDisplay();
-	void STATIC_SetUpdateScore(bool Enabled);
+	void UpdateAddScoreDisplay();
+	void SetUpdateScore(bool Enabled);
 	struct FText Get_CurrentScore_Text_1();
-	void STATIC_SetLastScore(int Num);
+	void SetLastScore(int Num);
 	void SetVisibleScore(bool Visible);
-	void STATIC_SetCurrentScore(int ScoreNum);
-	void STATIC_SetVisibleIcon(bool Visible);
-	void STATIC_Construct();
+	void SetCurrentScore(int ScoreNum);
+	void SetVisibleIcon(bool Visible);
+	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_WBP_MiniGameHighWayStar(int EntryPoint);
-	void STATIC_OnChangeDisplayScore__DelegateSignature();
+	void OnChangeDisplayScore__DelegateSignature();
 };
 
 

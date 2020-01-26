@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGameNewStoneThrowing.WBP_MiniGameNewStoneThrowing_C.SetVisibleButton
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGameNewStoneThrowing_C::STATIC_SetVisibleButton(bool Visible)
+void UWBP_MiniGameNewStoneThrowing_C::SetVisibleButton(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameNewStoneThrowing.WBP_MiniGameNewStoneThrowing_C.SetVisibleButton");
 
@@ -26,7 +26,6 @@ void UWBP_MiniGameNewStoneThrowing_C::STATIC_SetVisibleButton(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UWBP_MiniGameNewStoneThrowing_C::STATIC_SetVisibleButton(bool Visible)
 
 
 // Function WBP_MiniGameNewStoneThrowing.WBP_MiniGameNewStoneThrowing_C.Construct
-// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
 void UWBP_MiniGameNewStoneThrowing_C::Construct()
 {
@@ -44,7 +43,6 @@ void UWBP_MiniGameNewStoneThrowing_C::Construct()
 	UWBP_MiniGameNewStoneThrowing_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +51,7 @@ void UWBP_MiniGameNewStoneThrowing_C::Construct()
 
 
 // Function WBP_MiniGameNewStoneThrowing.WBP_MiniGameNewStoneThrowing_C.ExecuteUbergraph_WBP_MiniGameNewStoneThrowing
-// (MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

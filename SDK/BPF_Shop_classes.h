@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void SellMagnification_SkillBook(class UObject* __WorldContext, float* Magnification_Skillbook);
-	void SellMagnification(class UObject* __WorldContext, float* SellMagnification);
-	void GetS3ShopDataManager(class UObject* __WorldContext, class ABP_ShopDataManager_C** BP_ShopDataManager);
+	void STATIC_SellMagnification_SkillBook(class UObject* __WorldContext, float* Magnification_Skillbook);
+	void STATIC_SellMagnification(class UObject* __WorldContext, float* SellMagnification);
+	void STATIC_GetS3ShopDataManager(class UObject* __WorldContext, class ABP_ShopDataManager_C** BP_ShopDataManager);
 };
 
 

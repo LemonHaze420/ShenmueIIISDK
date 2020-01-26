@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.Hide
-// (Net, NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_GeneralWindow_Button_C::STATIC_Hide()
+void UBPW_UI_GeneralWindow_Button_C::Hide()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.Hide");
 
@@ -31,16 +31,15 @@ void UBPW_UI_GeneralWindow_Button_C::STATIC_Hide()
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.AnimateIn
-// (Net, NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPW_UI_GeneralWindow_Button_C::STATIC_AnimateIn()
+void UBPW_UI_GeneralWindow_Button_C::AnimateIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.AnimateIn");
 
 	UBPW_UI_GeneralWindow_Button_C_AnimateIn_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -49,11 +48,11 @@ void UBPW_UI_GeneralWindow_Button_C::STATIC_AnimateIn()
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.SetButtonIcon
-// (NetReliable, Exec, Event, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_GeneralWindow_Button> Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_GeneralWindow_Button_C::STATIC_SetButtonIcon(TEnumAsByte<EN_GeneralWindow_Button> Index)
+void UBPW_UI_GeneralWindow_Button_C::SetButtonIcon(TEnumAsByte<EN_GeneralWindow_Button> Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.SetButtonIcon");
 
@@ -69,7 +68,7 @@ void UBPW_UI_GeneralWindow_Button_C::STATIC_SetButtonIcon(TEnumAsByte<EN_General
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.SetLocalizedText
-// (NetRequest, Public, Private, DLLImport, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -89,11 +88,11 @@ void UBPW_UI_GeneralWindow_Button_C::SetLocalizedText(const struct FName& Label)
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.SetText
-// (Net, Event, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPW_UI_GeneralWindow_Button_C::STATIC_SetText(const struct FText& Text)
+void UBPW_UI_GeneralWindow_Button_C::SetText(const struct FText& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.SetText");
 
@@ -109,13 +108,13 @@ void UBPW_UI_GeneralWindow_Button_C::STATIC_SetText(const struct FText& Text)
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.GetButtonIcon
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_GeneralWindow_Button> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Texture                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_GeneralWindow_Button_C::STATIC_GetButtonIcon(bool IsDesignTime, TEnumAsByte<EN_GeneralWindow_Button> Type, class UTexture2D** Texture)
+void UBPW_UI_GeneralWindow_Button_C::GetButtonIcon(bool IsDesignTime, TEnumAsByte<EN_GeneralWindow_Button> Type, class UTexture2D** Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.GetButtonIcon");
 
@@ -135,7 +134,7 @@ void UBPW_UI_GeneralWindow_Button_C::STATIC_GetButtonIcon(bool IsDesignTime, TEn
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.SetData
-// (Exec, Native, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_GeneralWindow_Button Data                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -147,7 +146,6 @@ void UBPW_UI_GeneralWindow_Button_C::SetData(const struct FST_GeneralWindow_Butt
 	params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,11 +154,11 @@ void UBPW_UI_GeneralWindow_Button_C::SetData(const struct FST_GeneralWindow_Butt
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.PreConstruct
-// (Event, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_GeneralWindow_Button_C::STATIC_PreConstruct(bool IsDesignTime)
+void UBPW_UI_GeneralWindow_Button_C::PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.PreConstruct");
 
@@ -176,7 +174,7 @@ void UBPW_UI_GeneralWindow_Button_C::STATIC_PreConstruct(bool IsDesignTime)
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.BndEvt__FadeIn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (BlueprintEvent)
 
 void UBPW_UI_GeneralWindow_Button_C::BndEvt__FadeIn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
@@ -193,11 +191,11 @@ void UBPW_UI_GeneralWindow_Button_C::BndEvt__FadeIn_K2Node_ComponentBoundEvent_0
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.ExecuteUbergraph_BPW_UI_GeneralWindow_Button
-// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_GeneralWindow_Button_C::STATIC_ExecuteUbergraph_BPW_UI_GeneralWindow_Button(int EntryPoint)
+void UBPW_UI_GeneralWindow_Button_C::ExecuteUbergraph_BPW_UI_GeneralWindow_Button(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.ExecuteUbergraph_BPW_UI_GeneralWindow_Button");
 
@@ -213,7 +211,7 @@ void UBPW_UI_GeneralWindow_Button_C::STATIC_ExecuteUbergraph_BPW_UI_GeneralWindo
 
 
 // Function BPW_UI_GeneralWindow_Button.BPW_UI_GeneralWindow_Button_C.OnFinishFadingIn__DelegateSignature
-// (NetReliable, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_GeneralWindow_Button_C::OnFinishFadingIn__DelegateSignature()
 {

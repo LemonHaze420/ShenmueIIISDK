@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateEffectsAroundPlayer
-// (Net, Event, Static, NetMulticast, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_UpdateEffectsAroundPlayer()
+void ABP_S3SkyManager_C::UpdateEffectsAroundPlayer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateEffectsAroundPlayer");
 
@@ -31,11 +31,11 @@ void ABP_S3SkyManager_C::STATIC_UpdateEffectsAroundPlayer()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.SetSunAndMoonMovement
-// (NetRequest, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_SetSunAndMoonMovement(bool Enable)
+void ABP_S3SkyManager_C::SetSunAndMoonMovement(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.SetSunAndMoonMovement");
 
@@ -43,7 +43,6 @@ void ABP_S3SkyManager_C::STATIC_SetSunAndMoonMovement(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,11 +51,11 @@ void ABP_S3SkyManager_C::STATIC_SetSunAndMoonMovement(bool Enable)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.SetForceGameTime
-// (Net, NetReliable, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          NewTime                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_SetForceGameTime(float NewTime)
+void ABP_S3SkyManager_C::SetForceGameTime(float NewTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.SetForceGameTime");
 
@@ -64,7 +63,6 @@ void ABP_S3SkyManager_C::STATIC_SetForceGameTime(float NewTime)
 	params.NewTime = NewTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +71,7 @@ void ABP_S3SkyManager_C::STATIC_SetForceGameTime(float NewTime)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.GetGameTime
-// (NetReliable, Exec, Event, NetResponse, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Time                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -95,18 +93,17 @@ void ABP_S3SkyManager_C::GetGameTime(float* Time)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.CalcGradualWeather
-// (Net, NetReliable, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EWeatherType                   Next                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_CalcGradualWeather(EWeatherType* Next)
+void ABP_S3SkyManager_C::CalcGradualWeather(EWeatherType* Next)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.CalcGradualWeather");
 
 	ABP_S3SkyManager_C_CalcGradualWeather_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,11 +115,11 @@ void ABP_S3SkyManager_C::STATIC_CalcGradualWeather(EWeatherType* Next)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.SetSunCastShadow
-// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_SetSunCastShadow(bool Enable)
+void ABP_S3SkyManager_C::SetSunCastShadow(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.SetSunCastShadow");
 
@@ -138,7 +135,7 @@ void ABP_S3SkyManager_C::STATIC_SetSunCastShadow(bool Enable)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.GetSunShadowDistance
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -160,7 +157,7 @@ void ABP_S3SkyManager_C::GetSunShadowDistance(float* Distance)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.SetSunShadowDistance
-// (NetRequest, Event, NetResponse, NetMulticast, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -180,11 +177,11 @@ void ABP_S3SkyManager_C::SetSunShadowDistance(float Distance)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.SetMoonCastShadow
-// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_SetMoonCastShadow(bool Enable)
+void ABP_S3SkyManager_C::SetMoonCastShadow(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.SetMoonCastShadow");
 
@@ -200,9 +197,9 @@ void ABP_S3SkyManager_C::STATIC_SetMoonCastShadow(bool Enable)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.NotifyIgnoreChangeWeather
-// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_NotifyIgnoreChangeWeather()
+void ABP_S3SkyManager_C::NotifyIgnoreChangeWeather()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.NotifyIgnoreChangeWeather");
 
@@ -217,9 +214,9 @@ void ABP_S3SkyManager_C::STATIC_NotifyIgnoreChangeWeather()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ResetMoonPosition
-// (Exec, Event, NetResponse, Static, NetMulticast, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_ResetMoonPosition()
+void ABP_S3SkyManager_C::ResetMoonPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ResetMoonPosition");
 
@@ -234,7 +231,7 @@ void ABP_S3SkyManager_C::STATIC_ResetMoonPosition()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ForceMoonPosition
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Yaw                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Orbit                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -260,7 +257,7 @@ void ABP_S3SkyManager_C::ForceMoonPosition(float Yaw, float Orbit, float Height,
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ForceCloudDensity
-// (NetRequest, Exec, Event, NetResponse, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Density                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Release                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -282,7 +279,7 @@ void ABP_S3SkyManager_C::ForceCloudDensity(float Density, bool Release)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.CalcMoonPhase_Impl
-// (Net, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3SkyManager_C::CalcMoonPhase_Impl()
 {
@@ -299,11 +296,11 @@ void ABP_S3SkyManager_C::CalcMoonPhase_Impl()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.SetWindMaterialParam
-// (Native, NetResponse, Static, Public, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 NewDirection                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_SetWindMaterialParam(const struct FVector& NewDirection)
+void ABP_S3SkyManager_C::SetWindMaterialParam(const struct FVector& NewDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.SetWindMaterialParam");
 
@@ -311,7 +308,6 @@ void ABP_S3SkyManager_C::STATIC_SetWindMaterialParam(const struct FVector& NewDi
 	params.NewDirection = NewDirection;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,9 +316,9 @@ void ABP_S3SkyManager_C::STATIC_SetWindMaterialParam(const struct FVector& NewDi
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.CheckWeather
-// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_CheckWeather()
+void ABP_S3SkyManager_C::CheckWeather()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.CheckWeather");
 
@@ -337,12 +333,12 @@ void ABP_S3SkyManager_C::STATIC_CheckWeather()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.IsRainy
-// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           System                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Rainy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_IsRainy(bool System, bool* Rainy)
+void ABP_S3SkyManager_C::IsRainy(bool System, bool* Rainy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.IsRainy");
 
@@ -350,7 +346,6 @@ void ABP_S3SkyManager_C::STATIC_IsRainy(bool System, bool* Rainy)
 	params.System = System;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -362,7 +357,7 @@ void ABP_S3SkyManager_C::STATIC_IsRainy(bool System, bool* Rainy)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.CalcRainParam
-// (Exec, Native, NetMulticast, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // float                          Blend                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Strength1                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -379,7 +374,6 @@ void ABP_S3SkyManager_C::CalcRainParam(float Blend, float* Strength1, float* Str
 	params.Blend = Blend;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -399,7 +393,7 @@ void ABP_S3SkyManager_C::CalcRainParam(float Blend, float* Strength1, float* Str
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.GetStepPreset
-// (Net, NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Appoint                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Preset                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -411,7 +405,6 @@ void ABP_S3SkyManager_C::GetStepPreset(bool* Appoint, struct FName* Preset)
 	ABP_S3SkyManager_C_GetStepPreset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -425,19 +418,18 @@ void ABP_S3SkyManager_C::GetStepPreset(bool* Appoint, struct FName* Preset)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ChooseWeather
-// (Net, NetReliable, NetRequest, Native, Event, Static, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Appoint                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // EWeatherType                   Weather                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_ChooseWeather(bool* Appoint, EWeatherType* Weather)
+void ABP_S3SkyManager_C::ChooseWeather(bool* Appoint, EWeatherType* Weather)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ChooseWeather");
 
 	ABP_S3SkyManager_C_ChooseWeather_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -451,11 +443,11 @@ void ABP_S3SkyManager_C::STATIC_ChooseWeather(bool* Appoint, EWeatherType* Weath
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.SetWindSpeed
-// (Net, NetRequest, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Speed                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_SetWindSpeed(float Speed)
+void ABP_S3SkyManager_C::SetWindSpeed(float Speed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.SetWindSpeed");
 
@@ -463,7 +455,6 @@ void ABP_S3SkyManager_C::STATIC_SetWindSpeed(float Speed)
 	params.Speed = Speed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -472,7 +463,7 @@ void ABP_S3SkyManager_C::STATIC_SetWindSpeed(float Speed)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ChangeWind
-// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Drastic                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ForceAngle                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -494,11 +485,11 @@ void ABP_S3SkyManager_C::ChangeWind(bool Drastic, float ForceAngle)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateRainMaterial
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_UpdateRainMaterial(float DeltaSeconds)
+void ABP_S3SkyManager_C::UpdateRainMaterial(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateRainMaterial");
 
@@ -514,7 +505,7 @@ void ABP_S3SkyManager_C::STATIC_UpdateRainMaterial(float DeltaSeconds)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.GetTransitionInterval
-// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Interval                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -525,7 +516,6 @@ void ABP_S3SkyManager_C::GetTransitionInterval(float* Interval)
 	ABP_S3SkyManager_C_GetTransitionInterval_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -537,7 +527,7 @@ void ABP_S3SkyManager_C::GetTransitionInterval(float* Interval)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.InitTransition
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3SkyManager_C::InitTransition()
 {
@@ -546,7 +536,6 @@ void ABP_S3SkyManager_C::InitTransition()
 	ABP_S3SkyManager_C_InitTransition_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -555,11 +544,11 @@ void ABP_S3SkyManager_C::InitTransition()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ProgressTransition
-// (Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_ProgressTransition(float DeltaSeconds)
+void ABP_S3SkyManager_C::ProgressTransition(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ProgressTransition");
 
@@ -575,7 +564,7 @@ void ABP_S3SkyManager_C::STATIC_ProgressTransition(float DeltaSeconds)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.KeepCurrentFogIntensityMin
-// (Net, Event, NetMulticast, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3SkyManager_C::KeepCurrentFogIntensityMin()
 {
@@ -592,9 +581,9 @@ void ABP_S3SkyManager_C::KeepCurrentFogIntensityMin()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.SetRainMaterial
-// (Net, Static, MulticastDelegate, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_SetRainMaterial()
+void ABP_S3SkyManager_C::SetRainMaterial()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.SetRainMaterial");
 
@@ -609,11 +598,11 @@ void ABP_S3SkyManager_C::STATIC_SetRainMaterial()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateFogDensity
-// (Exec, NetResponse, Static, Public, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Force                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_UpdateFogDensity(bool Force)
+void ABP_S3SkyManager_C::UpdateFogDensity(bool Force)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateFogDensity");
 
@@ -629,7 +618,7 @@ void ABP_S3SkyManager_C::STATIC_UpdateFogDensity(bool Force)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ResetWeatherInterval
-// (Net, NetReliable, NetRequest, Exec, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          jumpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -649,11 +638,11 @@ void ABP_S3SkyManager_C::ResetWeatherInterval(float jumpTime)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ToggleCloudy
-// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Force                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_ToggleCloudy(bool Force)
+void ABP_S3SkyManager_C::ToggleCloudy(bool Force)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ToggleCloudy");
 
@@ -669,7 +658,7 @@ void ABP_S3SkyManager_C::STATIC_ToggleCloudy(bool Force)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateWeather
-// (NetReliable, Native, Event, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3SkyManager_C::UpdateWeather()
 {
@@ -678,7 +667,6 @@ void ABP_S3SkyManager_C::UpdateWeather()
 	ABP_S3SkyManager_C_UpdateWeather_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -687,7 +675,7 @@ void ABP_S3SkyManager_C::UpdateWeather()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ChangeWeather
-// (NetReliable, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsChange                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -709,11 +697,11 @@ void ABP_S3SkyManager_C::ChangeWeather(bool* IsChange)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateGameTime
-// (NetReliable, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_UpdateGameTime(float DeltaSeconds)
+void ABP_S3SkyManager_C::UpdateGameTime(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateGameTime");
 
@@ -729,9 +717,9 @@ void ABP_S3SkyManager_C::STATIC_UpdateGameTime(float DeltaSeconds)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.UserConstructionScript
-// (NetResponse, Static, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_UserConstructionScript()
+void ABP_S3SkyManager_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.UserConstructionScript");
 
@@ -746,9 +734,9 @@ void ABP_S3SkyManager_C::STATIC_UserConstructionScript()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.RainValueTimeline__FinishedFunc
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_RainValueTimeline__FinishedFunc()
+void ABP_S3SkyManager_C::RainValueTimeline__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.RainValueTimeline__FinishedFunc");
 
@@ -763,9 +751,9 @@ void ABP_S3SkyManager_C::STATIC_RainValueTimeline__FinishedFunc()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.RainValueTimeline__UpdateFunc
-// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_RainValueTimeline__UpdateFunc()
+void ABP_S3SkyManager_C::RainValueTimeline__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.RainValueTimeline__UpdateFunc");
 
@@ -780,9 +768,9 @@ void ABP_S3SkyManager_C::STATIC_RainValueTimeline__UpdateFunc()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.RainSplashValue__FinishedFunc
-// (Net, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_RainSplashValue__FinishedFunc()
+void ABP_S3SkyManager_C::RainSplashValue__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.RainSplashValue__FinishedFunc");
 
@@ -797,9 +785,9 @@ void ABP_S3SkyManager_C::STATIC_RainSplashValue__FinishedFunc()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.RainSplashValue__UpdateFunc
-// (Net, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_RainSplashValue__UpdateFunc()
+void ABP_S3SkyManager_C::RainSplashValue__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.RainSplashValue__UpdateFunc");
 
@@ -814,11 +802,11 @@ void ABP_S3SkyManager_C::STATIC_RainSplashValue__UpdateFunc()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.jumpTime
-// (Net, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          jumpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_jumpTime(float jumpTime)
+void ABP_S3SkyManager_C::jumpTime(float jumpTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.jumpTime");
 
@@ -834,9 +822,9 @@ void ABP_S3SkyManager_C::STATIC_jumpTime(float jumpTime)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.TimeGoesBy
-// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_TimeGoesBy()
+void ABP_S3SkyManager_C::TimeGoesBy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.TimeGoesBy");
 
@@ -851,16 +839,15 @@ void ABP_S3SkyManager_C::STATIC_TimeGoesBy()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ManualChangeWeather
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_ManualChangeWeather()
+void ABP_S3SkyManager_C::ManualChangeWeather()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ManualChangeWeather");
 
 	ABP_S3SkyManager_C_ManualChangeWeather_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -869,16 +856,15 @@ void ABP_S3SkyManager_C::STATIC_ManualChangeWeather()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.UnbindEvent
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_UnbindEvent()
+void ABP_S3SkyManager_C::UnbindEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.UnbindEvent");
 
 	ABP_S3SkyManager_C_UnbindEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -887,11 +873,11 @@ void ABP_S3SkyManager_C::STATIC_UnbindEvent()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ChangedStep
-// (Net, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_ChangedStep(int SetSteps)
+void ABP_S3SkyManager_C::ChangedStep(int SetSteps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ChangedStep");
 
@@ -907,16 +893,15 @@ void ABP_S3SkyManager_C::STATIC_ChangedStep(int SetSteps)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ReadyCloud
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_ReadyCloud()
+void ABP_S3SkyManager_C::ReadyCloud()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ReadyCloud");
 
 	ABP_S3SkyManager_C_ReadyCloud_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -925,11 +910,11 @@ void ABP_S3SkyManager_C::STATIC_ReadyCloud()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.SwitchController
-// (Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerController*       PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_SwitchController(class APlayerController* PlayerController)
+void ABP_S3SkyManager_C::SwitchController(class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.SwitchController");
 
@@ -945,16 +930,15 @@ void ABP_S3SkyManager_C::STATIC_SwitchController(class APlayerController* Player
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.FinishedLevelLoad
-// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_FinishedLevelLoad()
+void ABP_S3SkyManager_C::FinishedLevelLoad()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.FinishedLevelLoad");
 
 	ABP_S3SkyManager_C_FinishedLevelLoad_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -963,9 +947,9 @@ void ABP_S3SkyManager_C::STATIC_FinishedLevelLoad()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ReceiveBeginPlay
-// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_ReceiveBeginPlay()
+void ABP_S3SkyManager_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ReceiveBeginPlay");
 
@@ -980,11 +964,11 @@ void ABP_S3SkyManager_C::STATIC_ReceiveBeginPlay()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ReceiveTick
-// (NetRequest, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_S3SkyManager_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ReceiveTick");
 
@@ -1000,9 +984,9 @@ void ABP_S3SkyManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.DbgSetCloudDensity
-// (Net, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_DbgSetCloudDensity()
+void ABP_S3SkyManager_C::DbgSetCloudDensity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.DbgSetCloudDensity");
 
@@ -1017,9 +1001,9 @@ void ABP_S3SkyManager_C::STATIC_DbgSetCloudDensity()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.DbgSetMoonPhase
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_DbgSetMoonPhase()
+void ABP_S3SkyManager_C::DbgSetMoonPhase()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.DbgSetMoonPhase");
 
@@ -1034,9 +1018,9 @@ void ABP_S3SkyManager_C::STATIC_DbgSetMoonPhase()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.RainControl
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_RainControl()
+void ABP_S3SkyManager_C::RainControl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.RainControl");
 
@@ -1051,9 +1035,9 @@ void ABP_S3SkyManager_C::STATIC_RainControl()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.WaitCloudDensity
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_WaitCloudDensity()
+void ABP_S3SkyManager_C::WaitCloudDensity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.WaitCloudDensity");
 
@@ -1068,9 +1052,9 @@ void ABP_S3SkyManager_C::STATIC_WaitCloudDensity()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ForceChangeWeather
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_ForceChangeWeather()
+void ABP_S3SkyManager_C::ForceChangeWeather()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ForceChangeWeather");
 
@@ -1085,9 +1069,9 @@ void ABP_S3SkyManager_C::STATIC_ForceChangeWeather()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ChangeDate
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_ChangeDate()
+void ABP_S3SkyManager_C::ChangeDate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ChangeDate");
 
@@ -1102,9 +1086,9 @@ void ABP_S3SkyManager_C::STATIC_ChangeDate()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ToggleCloudShaow
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_ToggleCloudShaow()
+void ABP_S3SkyManager_C::ToggleCloudShaow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ToggleCloudShaow");
 
@@ -1119,11 +1103,11 @@ void ABP_S3SkyManager_C::STATIC_ToggleCloudShaow()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ReceiveEndPlay
-// (NetRequest, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3SkyManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ReceiveEndPlay");
 
@@ -1139,11 +1123,11 @@ void ABP_S3SkyManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateRainValue
-// (Net, NetReliable, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Reverse                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_UpdateRainValue(bool Reverse)
+void ABP_S3SkyManager_C::UpdateRainValue(bool Reverse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.UpdateRainValue");
 
@@ -1159,9 +1143,9 @@ void ABP_S3SkyManager_C::STATIC_UpdateRainValue(bool Reverse)
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.WaitDry
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_WaitDry()
+void ABP_S3SkyManager_C::WaitDry()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.WaitDry");
 
@@ -1176,9 +1160,9 @@ void ABP_S3SkyManager_C::STATIC_WaitDry()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.BindEvent
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_BindEvent()
+void ABP_S3SkyManager_C::BindEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.BindEvent");
 
@@ -1193,9 +1177,9 @@ void ABP_S3SkyManager_C::STATIC_BindEvent()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.CalcMoonPhase
-// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3SkyManager_C::STATIC_CalcMoonPhase()
+void ABP_S3SkyManager_C::CalcMoonPhase()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.CalcMoonPhase");
 
@@ -1210,11 +1194,11 @@ void ABP_S3SkyManager_C::STATIC_CalcMoonPhase()
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.DelayChangeWeatherProperty
-// (NetReliable, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EWeatherType                   NewWeather                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_DelayChangeWeatherProperty(EWeatherType NewWeather)
+void ABP_S3SkyManager_C::DelayChangeWeatherProperty(EWeatherType NewWeather)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.DelayChangeWeatherProperty");
 
@@ -1230,11 +1214,11 @@ void ABP_S3SkyManager_C::STATIC_DelayChangeWeatherProperty(EWeatherType NewWeath
 
 
 // Function BP_S3SkyManager.BP_S3SkyManager_C.ExecuteUbergraph_BP_S3SkyManager
-// (NetReliable, Exec, Static, NetMulticast, Public, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3SkyManager_C::STATIC_ExecuteUbergraph_BP_S3SkyManager(int EntryPoint)
+void ABP_S3SkyManager_C::ExecuteUbergraph_BP_S3SkyManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SkyManager.BP_S3SkyManager_C.ExecuteUbergraph_BP_S3SkyManager");
 

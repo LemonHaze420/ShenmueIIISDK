@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -75,16 +75,16 @@ public:
 	}
 
 
-	void STATIC_SetEmissivePower(class UPrimitiveComponent* Target, float Value);
-	void STATIC_DispScoreLight(bool Disp, int TargetNum, TArray<class UStaticMeshComponent*> TargetArray, float EmissivePowerOnTrace, bool* bChange, class UStaticMeshComponent** ChangeTarget);
+	void SetEmissivePower(class UPrimitiveComponent* Target, float Value);
+	void DispScoreLight(bool Disp, int TargetNum, TArray<class UStaticMeshComponent*> TargetArray, float EmissivePowerOnTrace, bool* bChange, class UStaticMeshComponent** ChangeTarget);
 	void DispEnemyScoreLight(bool ArgDisp, int ArgBlinkIndex);
 	void RegisterScoreLightArray();
-	void STATIC_DispMyScoreLight(bool ArgDisp, int ArgBlinkIndex);
-	void STATIC_ScoreLightAllOff();
-	void STATIC_UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ExecuteUbergraph_BP_HW_ScoreLight(int EntryPoint);
-	void STATIC_OnChangeLightDispacher__DelegateSignature();
+	void DispMyScoreLight(bool ArgDisp, int ArgBlinkIndex);
+	void ScoreLightAllOff();
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_HW_ScoreLight(int EntryPoint);
+	void OnChangeLightDispacher__DelegateSignature();
 };
 
 

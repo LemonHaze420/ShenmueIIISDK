@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,7 +36,7 @@ public:
 	}
 
 
-	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
+	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void TelEnd();
 	void TelStart();
 	void AnimNotify_Talk_Start();
@@ -46,7 +46,7 @@ public:
 	void AnimNotify_Sound_Take();
 	void AnimNotify_Sound_ButtonPush();
 	void AnimNotify_Sound_end();
-	void STATIC_ExecuteUbergraph_ABP_WorldTel(int EntryPoint);
+	void ExecuteUbergraph_ABP_WorldTel(int EntryPoint);
 };
 
 

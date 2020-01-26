@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -72,31 +72,31 @@ public:
 
 
 	void GetGachaID(struct FName* GachaId);
-	void STATIC_LotteryGacha();
-	void STATIC_GetGachaMaterialByPrice(class UMaterialInterface** Material);
-	bool STATIC_IsTalking();
+	void LotteryGacha();
+	void GetGachaMaterialByPrice(class UMaterialInterface** Material);
+	bool IsTalking();
 	void SettingPlayerShowObject(bool ArgIsNext);
-	void STATIC_DispCSCapsuleMass(bool ArgDisp);
+	void DispCSCapsuleMass(bool ArgDisp);
 	void DispCapsuleMass(bool ArgDisp);
-	void STATIC_DestroyReplaceActors();
+	void DestroyReplaceActors();
 	void SpawnReplaceActors();
 	void SetupRandomCapsuleMaterial();
-	void STATIC_RemoveAllSceneActors();
+	void RemoveAllSceneActors();
 	void AllStopScenePlayer();
 	void CreateSequenceActors();
-	void STATIC_SpawnSequenceActor(class ULevelSequence* InSequence, class AActor* AttachParentActor, const struct FName& AttachSocketName, class ABP_SpawnableSequenceActor_C** SpawnObj);
-	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
-	void STATIC_UserConstructionScript();
-	void STATIC_OnNotifyEnd_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
-	void STATIC_OnNotifyBegin_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
-	void STATIC_OnInterrupted_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
-	void STATIC_OnBlendOut_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
-	void STATIC_OnCompleted_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
-	void STATIC_OnLoaded_FFFA5DCD4EBEA9EE7B67F491D7F3128F(class UObject* Loaded);
+	void SpawnSequenceActor(class ULevelSequence* InSequence, class AActor* AttachParentActor, const struct FName& AttachSocketName, class ABP_SpawnableSequenceActor_C** SpawnObj);
+	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
+	void UserConstructionScript();
+	void OnNotifyEnd_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
+	void OnNotifyBegin_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
+	void OnInterrupted_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
+	void OnBlendOut_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
+	void OnCompleted_0EE0A467474F13C67ED75B980A09A9AB(const struct FName& NotifyName);
+	void OnLoaded_FFFA5DCD4EBEA9EE7B67F491D7F3128F(class UObject* Loaded);
 	void OnStoped_Intro();
 	void FinalizeTalk();
 	void OnTalkStart(class US3TalkComponent* TalkComponent);
-	void STATIC_OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
+	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
 	void Screen_Player();
 	void Screen_NPC();
 	void GachaThinkingGameContinue();
@@ -105,7 +105,7 @@ public:
 	void ResumeMiniGame(const struct FString& ResumeKeyword);
 	void OnStopedPreAction();
 	void OnStoped_Action();
-	void STATIC_ConsumeMoney(float WaitTime);
+	void ConsumeMoney(float WaitTime);
 	void GachaRewardWathing();
 	void EnterMiniGame(float EnterTime);
 	void GachaGameContinue();
@@ -115,11 +115,11 @@ public:
 	void WinMiniGame();
 	void EndMiniGame();
 	void StartMiniGame();
-	void STATIC_OnFinishedPopup(int PopupId);
+	void OnFinishedPopup(int PopupId);
 	void DecideDetectAction(ES3ActionIconType Type);
 	void LoadMesh();
 	void SuspendMiniGame();
-	void STATIC_ExecuteUbergraph_BP_MiniGame_Gacha(int EntryPoint);
+	void ExecuteUbergraph_BP_MiniGame_Gacha(int EntryPoint);
 	void OnEndMiniGameForLinkDispacher__DelegateSignature();
 };
 

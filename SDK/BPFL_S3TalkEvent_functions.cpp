@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.GetEventStartIndex
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,7 +27,6 @@ void UBPFL_S3TalkEvent_C::STATIC_GetEventStartIndex(class UObject* __WorldContex
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,7 +38,7 @@ void UBPFL_S3TalkEvent_C::STATIC_GetEventStartIndex(class UObject* __WorldContex
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.InRange
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FInt32Range             intRange                       (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -67,13 +66,13 @@ void UBPFL_S3TalkEvent_C::STATIC_InRange(int InValue, const struct FInt32Range& 
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.SetBsEnable
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Public, Delegate, HasOutParms, HasDefaults, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   TargetCharaId                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3TalkEvent_C::SetBsEnable(const struct FName& TargetCharaId, bool Enable, class UObject* __WorldContext)
+void UBPFL_S3TalkEvent_C::STATIC_SetBsEnable(const struct FName& TargetCharaId, bool Enable, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.SetBsEnable");
 
@@ -83,7 +82,6 @@ void UBPFL_S3TalkEvent_C::SetBsEnable(const struct FName& TargetCharaId, bool En
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,13 +90,13 @@ void UBPFL_S3TalkEvent_C::SetBsEnable(const struct FName& TargetCharaId, bool En
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.SetBsCount
-// (Net, NetReliable, NetRequest, Exec, Event, Public, Delegate, HasOutParms, HasDefaults, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   TargetCharaId                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            EventCount                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3TalkEvent_C::SetBsCount(const struct FName& TargetCharaId, int EventCount, class UObject* __WorldContext)
+void UBPFL_S3TalkEvent_C::STATIC_SetBsCount(const struct FName& TargetCharaId, int EventCount, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.SetBsCount");
 
@@ -116,7 +114,7 @@ void UBPFL_S3TalkEvent_C::SetBsCount(const struct FName& TargetCharaId, int Even
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.IsCheckTalkSitMotion
-// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  SitActor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -124,7 +122,7 @@ void UBPFL_S3TalkEvent_C::SetBsCount(const struct FName& TargetCharaId, int Even
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bPlaySit                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3TalkEvent_C::IsCheckTalkSitMotion(class AActor* SitActor, class AActor* TargetActor, bool bOutputLog, class UObject* __WorldContext, bool* bPlaySit)
+void UBPFL_S3TalkEvent_C::STATIC_IsCheckTalkSitMotion(class AActor* SitActor, class AActor* TargetActor, bool bOutputLog, class UObject* __WorldContext, bool* bPlaySit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.IsCheckTalkSitMotion");
 
@@ -135,7 +133,6 @@ void UBPFL_S3TalkEvent_C::IsCheckTalkSitMotion(class AActor* SitActor, class AAc
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,7 +144,7 @@ void UBPFL_S3TalkEvent_C::IsCheckTalkSitMotion(class AActor* SitActor, class AAc
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.GetTalkStartIndex
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -160,7 +157,6 @@ void UBPFL_S3TalkEvent_C::STATIC_GetTalkStartIndex(class UObject* __WorldContext
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -172,7 +168,7 @@ void UBPFL_S3TalkEvent_C::STATIC_GetTalkStartIndex(class UObject* __WorldContext
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.HintTalkStart
-// (Net, NetReliable, NetRequest, Exec, Native, Public, Delegate, HasOutParms, HasDefaults, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  TalkTargetNPC                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTalkScript*             TalkScript                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -180,7 +176,7 @@ void UBPFL_S3TalkEvent_C::STATIC_GetTalkStartIndex(class UObject* __WorldContext
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Error                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3TalkEvent_C::HintTalkStart(class AActor* TalkTargetNPC, class UTalkScript* TalkScript, class AActor* CurrentTargetActor, class UObject* __WorldContext, bool* Error)
+void UBPFL_S3TalkEvent_C::STATIC_HintTalkStart(class AActor* TalkTargetNPC, class UTalkScript* TalkScript, class AActor* CurrentTargetActor, class UObject* __WorldContext, bool* Error)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.HintTalkStart");
 
@@ -191,7 +187,6 @@ void UBPFL_S3TalkEvent_C::HintTalkStart(class AActor* TalkTargetNPC, class UTalk
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,7 +198,7 @@ void UBPFL_S3TalkEvent_C::HintTalkStart(class AActor* TalkTargetNPC, class UTalk
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.AC_StartFromScript
-// (Net, NetReliable, Exec, Native, Static, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTalkScript*             TalkScript                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -217,7 +212,6 @@ void UBPFL_S3TalkEvent_C::STATIC_AC_StartFromScript(class UTalkScript* TalkScrip
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -226,7 +220,7 @@ void UBPFL_S3TalkEvent_C::STATIC_AC_StartFromScript(class UTalkScript* TalkScrip
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.TryTalkStartByActor
-// (Exec, Event, Static, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -252,7 +246,7 @@ void UBPFL_S3TalkEvent_C::STATIC_TryTalkStartByActor(class AActor* TargetActor, 
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.IsLineSight
-// (Event, Static, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ACharacter*              Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ACharacter*              NPC                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -280,12 +274,12 @@ void UBPFL_S3TalkEvent_C::STATIC_IsLineSight(class ACharacter* Player, class ACh
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.IsEjectFromTalkCamera
-// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3TalkEvent_C::IsEjectFromTalkCamera(class UObject* __WorldContext, bool* newParam)
+void UBPFL_S3TalkEvent_C::STATIC_IsEjectFromTalkCamera(class UObject* __WorldContext, bool* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.IsEjectFromTalkCamera");
 
@@ -304,12 +298,12 @@ void UBPFL_S3TalkEvent_C::IsEjectFromTalkCamera(class UObject* __WorldContext, b
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.PossessTalkCamera
-// (Native, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3TalkEvent_C::PossessTalkCamera(class UObject* __WorldContext, bool* Result)
+void UBPFL_S3TalkEvent_C::STATIC_PossessTalkCamera(class UObject* __WorldContext, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.PossessTalkCamera");
 
@@ -317,7 +311,6 @@ void UBPFL_S3TalkEvent_C::PossessTalkCamera(class UObject* __WorldContext, bool*
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -329,12 +322,12 @@ void UBPFL_S3TalkEvent_C::PossessTalkCamera(class UObject* __WorldContext, bool*
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.EjectFromTalkCamera
-// (Net, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPFL_S3TalkEvent_C::EjectFromTalkCamera(class UObject* __WorldContext, bool* Result)
+void UBPFL_S3TalkEvent_C::STATIC_EjectFromTalkCamera(class UObject* __WorldContext, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.EjectFromTalkCamera");
 
@@ -342,7 +335,6 @@ void UBPFL_S3TalkEvent_C::EjectFromTalkCamera(class UObject* __WorldContext, boo
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,7 +346,7 @@ void UBPFL_S3TalkEvent_C::EjectFromTalkCamera(class UObject* __WorldContext, boo
 
 
 // Function BPFL_S3TalkEvent.BPFL_S3TalkEvent_C.RunTalkEvent
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Const)
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  NpcActors                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isBS                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -377,7 +369,6 @@ void UBPFL_S3TalkEvent_C::STATIC_RunTalkEvent(class AActor* NpcActors, bool isBS
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

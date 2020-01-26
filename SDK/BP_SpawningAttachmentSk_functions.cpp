@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SpawningAttachmentSk.BP_SpawningAttachmentSk_C.GetSkeletalMeshComp
-// (Net, NetRequest, Native, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -25,7 +25,6 @@ class USkeletalMeshComponent* ABP_SpawningAttachmentSk_C::GetSkeletalMeshComp()
 	ABP_SpawningAttachmentSk_C_GetSkeletalMeshComp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +35,7 @@ class USkeletalMeshComponent* ABP_SpawningAttachmentSk_C::GetSkeletalMeshComp()
 
 
 // Function BP_SpawningAttachmentSk.BP_SpawningAttachmentSk_C.IsMeshVisibility
-// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -47,7 +46,6 @@ bool ABP_SpawningAttachmentSk_C::IsMeshVisibility()
 	ABP_SpawningAttachmentSk_C_IsMeshVisibility_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +56,7 @@ bool ABP_SpawningAttachmentSk_C::IsMeshVisibility()
 
 
 // Function BP_SpawningAttachmentSk.BP_SpawningAttachmentSk_C.GetSkeletalMeshComponent
-// (NetRequest, Native, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*  SkeltalMeshComp                (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -69,7 +67,6 @@ void ABP_SpawningAttachmentSk_C::GetSkeletalMeshComponent(class USkeletalMeshCom
 	ABP_SpawningAttachmentSk_C_GetSkeletalMeshComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,7 +78,7 @@ void ABP_SpawningAttachmentSk_C::GetSkeletalMeshComponent(class USkeletalMeshCom
 
 
 // Function BP_SpawningAttachmentSk.BP_SpawningAttachmentSk_C.UserConstructionScript
-// (NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SpawningAttachmentSk_C::UserConstructionScript()
 {
@@ -98,7 +95,7 @@ void ABP_SpawningAttachmentSk_C::UserConstructionScript()
 
 
 // Function BP_SpawningAttachmentSk.BP_SpawningAttachmentSk_C.SetMeshVisibility
-// (NetRequest, Exec, Native, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bEnable                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -110,7 +107,6 @@ void ABP_SpawningAttachmentSk_C::SetMeshVisibility(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,11 +115,11 @@ void ABP_SpawningAttachmentSk_C::SetMeshVisibility(bool bEnable)
 
 
 // Function BP_SpawningAttachmentSk.BP_SpawningAttachmentSk_C.ExecuteUbergraph_BP_SpawningAttachmentSk
-// (NetRequest, Native, Event, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpawningAttachmentSk_C::STATIC_ExecuteUbergraph_BP_SpawningAttachmentSk(int EntryPoint)
+void ABP_SpawningAttachmentSk_C::ExecuteUbergraph_BP_SpawningAttachmentSk(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpawningAttachmentSk.BP_SpawningAttachmentSk_C.ExecuteUbergraph_BP_SpawningAttachmentSk");
 
@@ -131,7 +127,6 @@ void ABP_SpawningAttachmentSk_C::STATIC_ExecuteUbergraph_BP_SpawningAttachmentSk
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

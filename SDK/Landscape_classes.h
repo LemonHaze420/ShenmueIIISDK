@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,21 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Classes
 //---------------------------------------------------------------------------
+
+// Class Landscape.ControlPointMeshComponent
+// 0x0000 (0x05F0 - 0x05F0)
+class UControlPointMeshComponent : public UStaticMeshComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.ControlPointMeshComponent");
+		return ptr;
+	}
+
+};
+
 
 // Class Landscape.LandscapeProxy
 // 0x0330 (0x0658 - 0x0328)
@@ -98,6 +113,21 @@ public:
 	void ChangeTessellationComponentScreenSize(float InTessellationComponentScreenSize);
 	void ChangeLODDistanceFactor(float InLODDistanceFactor);
 	void ChangeComponentScreenSizeToUseSubSections(float InComponentScreenSizeToUseSubSections);
+};
+
+
+// Class Landscape.Landscape
+// 0x0000 (0x0658 - 0x0658)
+class ALandscape : public ALandscapeProxy
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.Landscape");
+		return ptr;
+	}
+
 };
 
 
@@ -189,65 +219,6 @@ public:
 };
 
 
-// Class Landscape.Landscape
-// 0x0000 (0x0658 - 0x0658)
-class ALandscape : public ALandscapeProxy
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.Landscape");
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.ControlPointMeshComponent
-// 0x0000 (0x05F0 - 0x05F0)
-class UControlPointMeshComponent : public UStaticMeshComponent
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.ControlPointMeshComponent");
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.LandscapeHeightfieldCollisionComponent
-// 0x00E0 (0x0640 - 0x0560)
-class ULandscapeHeightfieldCollisionComponent : public UPrimitiveComponent
-{
-public:
-	TArray<class ULandscapeLayerInfoObject*>           ComponentLayerInfos;                                      // 0x0560(0x0010) (ZeroConstructor)
-	int                                                SectionBaseX;                                             // 0x0570(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SectionBaseY;                                             // 0x0574(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                CollisionSizeQuads;                                       // 0x0578(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              CollisionScale;                                           // 0x057C(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SimpleCollisionSizeQuads;                                 // 0x0580(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0584(0x0004) MISSED OFFSET
-	TArray<unsigned char>                              CollisionQuadFlags;                                       // 0x0588(0x0010) (ZeroConstructor)
-	struct FGuid                                       HeightfieldGuid;                                          // 0x0598(0x0010) (IsPlainOldData)
-	struct FBox                                        CachedLocalBox;                                           // 0x05A8(0x001C) (IsPlainOldData)
-	TLazyObjectPtr<class ULandscapeComponent>          RenderComponent;                                          // 0x05C4(0x001C) (ExportObject, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x05E0(0x0010) MISSED OFFSET
-	TArray<class UPhysicalMaterial*>                   CookedPhysicalMaterials;                                  // 0x05F0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x40];                                      // 0x0600(0x0040) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeHeightfieldCollisionComponent");
-		return ptr;
-	}
-
-};
-
-
 // Class Landscape.LandscapeGizmoRenderComponent
 // 0x0000 (0x0560 - 0x0560)
 class ULandscapeGizmoRenderComponent : public UPrimitiveComponent
@@ -289,6 +260,59 @@ public:
 };
 
 
+// Class Landscape.LandscapeHeightfieldCollisionComponent
+// 0x00E0 (0x0640 - 0x0560)
+class ULandscapeHeightfieldCollisionComponent : public UPrimitiveComponent
+{
+public:
+	TArray<class ULandscapeLayerInfoObject*>           ComponentLayerInfos;                                      // 0x0560(0x0010) (ZeroConstructor)
+	int                                                SectionBaseX;                                             // 0x0570(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SectionBaseY;                                             // 0x0574(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                CollisionSizeQuads;                                       // 0x0578(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              CollisionScale;                                           // 0x057C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SimpleCollisionSizeQuads;                                 // 0x0580(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0584(0x0004) MISSED OFFSET
+	TArray<unsigned char>                              CollisionQuadFlags;                                       // 0x0588(0x0010) (ZeroConstructor)
+	struct FGuid                                       HeightfieldGuid;                                          // 0x0598(0x0010) (IsPlainOldData)
+	struct FBox                                        CachedLocalBox;                                           // 0x05A8(0x001C) (IsPlainOldData)
+	TLazyObjectPtr<class ULandscapeComponent>          RenderComponent;                                          // 0x05C4(0x001C) (ExportObject, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x05E0(0x0010) MISSED OFFSET
+	TArray<class UPhysicalMaterial*>                   CookedPhysicalMaterials;                                  // 0x05F0(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData02[0x40];                                      // 0x0600(0x0040) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeHeightfieldCollisionComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Landscape.LandscapeInfo
+// 0x01D8 (0x0200 - 0x0028)
+class ULandscapeInfo : public UObject
+{
+public:
+	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0028(0x001C) (IsPlainOldData)
+	struct FGuid                                       LandscapeGuid;                                            // 0x0044(0x0010) (IsPlainOldData)
+	int                                                ComponentSizeQuads;                                       // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SubsectionSizeQuads;                                      // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                ComponentNumSubsections;                                  // 0x005C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DrawScale;                                                // 0x0060(0x000C) (IsPlainOldData)
+	unsigned char                                      UnknownData00[0x54];                                      // 0x006C(0x0054) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x50];                                      // 0x006C(0x0050) UNKNOWN PROPERTY: SetProperty Landscape.LandscapeInfo.Proxies
+	unsigned char                                      UnknownData02[0xF0];                                      // 0x0110(0x00F0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeInfo");
+		return ptr;
+	}
+
+};
+
+
 // Class Landscape.LandscapeInfoMap
 // 0x0058 (0x0080 - 0x0028)
 class ULandscapeInfoMap : public UObject
@@ -319,30 +343,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Landscape.LandscapeLayerInfoObject");
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.LandscapeInfo
-// 0x01D8 (0x0200 - 0x0028)
-class ULandscapeInfo : public UObject
-{
-public:
-	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0028(0x001C) (IsPlainOldData)
-	struct FGuid                                       LandscapeGuid;                                            // 0x0044(0x0010) (IsPlainOldData)
-	int                                                ComponentSizeQuads;                                       // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SubsectionSizeQuads;                                      // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                ComponentNumSubsections;                                  // 0x005C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     DrawScale;                                                // 0x0060(0x000C) (IsPlainOldData)
-	unsigned char                                      UnknownData00[0x54];                                      // 0x006C(0x0054) MISSED OFFSET
-	unsigned char                                      UnknownData01[0x50];                                      // 0x006C(0x0050) UNKNOWN PROPERTY: SetProperty Landscape.LandscapeInfo.Proxies
-	unsigned char                                      UnknownData02[0xF0];                                      // 0x0110(0x00F0) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeInfo");
 		return ptr;
 	}
 
@@ -386,6 +386,22 @@ public:
 };
 
 
+// Class Landscape.LandscapeMeshProxyActor
+// 0x0008 (0x0330 - 0x0328)
+class ALandscapeMeshProxyActor : public AActor
+{
+public:
+	class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                              // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyActor");
+		return ptr;
+	}
+
+};
+
+
 // Class Landscape.LandscapeMeshProxyComponent
 // 0x0030 (0x0620 - 0x05F0)
 class ULandscapeMeshProxyComponent : public UStaticMeshComponent
@@ -405,22 +421,6 @@ public:
 };
 
 
-// Class Landscape.LandscapeMeshProxyActor
-// 0x0008 (0x0330 - 0x0328)
-class ALandscapeMeshProxyActor : public AActor
-{
-public:
-	class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                              // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyActor");
-		return ptr;
-	}
-
-};
-
-
 // Class Landscape.LandscapeSplinesComponent
 // 0x0030 (0x0590 - 0x0560)
 class ULandscapeSplinesComponent : public UPrimitiveComponent
@@ -433,6 +433,27 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplinesComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Landscape.LandscapeSplineSegment
+// 0x0088 (0x00B0 - 0x0028)
+class ULandscapeSplineSegment : public UObject
+{
+public:
+	struct FLandscapeSplineSegmentConnection           Connections[0x2];                                         // 0x0028(0x0018) (Edit, EditFixedSize)
+	struct FInterpCurveVector                          SplineInfo;                                               // 0x0058(0x0018)
+	TArray<struct FLandscapeSplineInterpPoint>         Points;                                                   // 0x0070(0x0010) (ZeroConstructor)
+	struct FBox                                        Bounds;                                                   // 0x0080(0x001C) (IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	TArray<class USplineMeshComponent*>                LocalMeshComponents;                                      // 0x00A0(0x0010) (ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplineSegment");
 		return ptr;
 	}
 
@@ -492,27 +513,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeGrassOutput");
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.LandscapeSplineSegment
-// 0x0088 (0x00B0 - 0x0028)
-class ULandscapeSplineSegment : public UObject
-{
-public:
-	struct FLandscapeSplineSegmentConnection           Connections[0x2];                                         // 0x0028(0x0018) (Edit, EditFixedSize)
-	struct FInterpCurveVector                          SplineInfo;                                               // 0x0058(0x0018)
-	TArray<struct FLandscapeSplineInterpPoint>         Points;                                                   // 0x0070(0x0010) (ZeroConstructor)
-	struct FBox                                        Bounds;                                                   // 0x0080(0x001C) (IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
-	TArray<class USplineMeshComponent*>                LocalMeshComponents;                                      // 0x00A0(0x0010) (ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplineSegment");
 		return ptr;
 	}
 

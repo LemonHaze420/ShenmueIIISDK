@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,37 +47,37 @@ public:
 	}
 
 
-	int STATIC_GetPriority();
+	int GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
-	float STATIC_GetCurrentTargetSpeed();
+	float GetCurrentTargetSpeed();
 	bool IsSitting();
-	void STATIC_SetLookAheadSpline(class USplineComponent* spline);
+	void SetLookAheadSpline(class USplineComponent* spline);
 	bool CanEnterBuilding(class ABP_S3BuildingStaticMeshActor_C* Building);
 	void TeleportToLeavePoint();
 	void StopMovement(bool bInstant);
-	bool STATIC_IsIdle();
+	bool IsIdle();
 	void GetEnableIK(bool* bIKEnabled);
-	void STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy);
-	void STATIC_GetAnimVelocity(float* Velocity);
+	void SetEnableIK(bool bInIKEnabled, bool* dummy);
+	void GetAnimVelocity(float* Velocity);
 	class UBPC_S3PlayerStairClimber_C* GetStairClimber();
 	void GetSpeed(float* Speed);
-	void STATIC_SetTargetSpeed(float TargetSpeed);
+	void SetTargetSpeed(float TargetSpeed);
 	bool IsTalking();
-	struct FRotator STATIC_GetTalkRotation();
+	struct FRotator GetTalkRotation();
 	void AddTurnAroundComponent(class UBPC_TurnAround_C** Component);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
 	void OnTalkStart(class US3TalkComponent* TalkComponent);
 	void Screen_Player();
 	void Screen_NPC();
-	void STATIC_OnFinishedTurnRotate(class UBPC_TurnAround_C* SelfTurnAroundComponent);
+	void OnFinishedTurnRotate(class UBPC_TurnAround_C* SelfTurnAroundComponent);
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_DecideDetectAction(ES3ActionIconType Type);
-	void STATIC_ReceiveTick(float DeltaSeconds);
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void DecideDetectAction(ES3ActionIconType Type);
+	void ReceiveTick(float DeltaSeconds);
 	void BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_0_OnStartStairUse__DelegateSignature();
 	void BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_1_OnEndStairUse__DelegateSignature();
-	void STATIC_HandleTeleportSucceeded(bool bIsATest);
+	void HandleTeleportSucceeded(bool bIsATest);
 	void ExecuteUbergraph_BP_NPC_Lead(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -73,33 +73,33 @@ public:
 	}
 
 
-	void STATIC_BehaviorControl(bool NoChangeBehavior);
-	bool STATIC_CheckSavedConditions();
+	void BehaviorControl(bool NoChangeBehavior);
+	bool CheckSavedConditions();
 	bool CheckPlayCount();
-	void STATIC_TriggerEnable(bool* Enable);
+	void TriggerEnable(bool* Enable);
 	void ShutDownActionFunc();
-	void STATIC_IsForward(const struct FVector& HitLocation, bool* Play);
+	void IsForward(const struct FVector& HitLocation, bool* Play);
 	void ShouldDelayFadeIn(bool* DisableIt);
 	void ShouldDisablePlayerControl(bool* DisableIt);
 	void ApplyLog();
 	void ResetLog();
-	void STATIC_CheckReset(bool* Reset);
-	void STATIC_SaveLog();
+	void CheckReset(bool* Reset);
+	void SaveLog();
 	void CanPlay(bool* CAN);
 	void TeleportPlayer();
 	void SetPlayerControl(bool Enable);
-	void STATIC_PlayAction(bool* Success);
-	void STATIC_UserConstructionScript();
+	void PlayAction(bool* Success);
+	void UserConstructionScript();
 	void OnLoaded_3DE5C7A6450AC770771EC1A18B8E6811(class UObject* Loaded);
 	void ReceiveTick(float DeltaSeconds);
 	void BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_PlayACEvent();
-	void STATIC_CheckCanPlay();
+	void PlayACEvent();
+	void CheckCanPlay();
 	void CustomEvent(int SetSteps);
-	void STATIC_LoadTalkScript();
+	void LoadTalkScript();
 	void ExecuteUbergraph_BP_ACTrigger(int EntryPoint);
 };
 

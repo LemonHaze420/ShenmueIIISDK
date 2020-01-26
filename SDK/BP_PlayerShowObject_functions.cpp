@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.GetClothMeshComponent
-// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -35,7 +35,7 @@ class UMeshComponent* ABP_PlayerShowObject_C::GetClothMeshComponent()
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.Zoom
-// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerShowObject_C::Zoom()
 {
@@ -52,7 +52,7 @@ void ABP_PlayerShowObject_C::Zoom()
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.SetShowObjeectScale
-// (Net, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -72,14 +72,14 @@ void ABP_PlayerShowObject_C::SetShowObjeectScale(float Scale)
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.CacheFingerLocationAndRotation
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FVector>         FingerLocations                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FRotator>        FingerRotations                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FString                 soketName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerShowObject_C::STATIC_CacheFingerLocationAndRotation(const struct FString& soketName, int Length, TArray<struct FVector>* FingerLocations, TArray<struct FRotator>* FingerRotations)
+void ABP_PlayerShowObject_C::CacheFingerLocationAndRotation(const struct FString& soketName, int Length, TArray<struct FVector>* FingerLocations, TArray<struct FRotator>* FingerRotations)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerShowObject.BP_PlayerShowObject_C.CacheFingerLocationAndRotation");
 
@@ -88,7 +88,6 @@ void ABP_PlayerShowObject_C::STATIC_CacheFingerLocationAndRotation(const struct 
 	params.Length = Length;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +101,7 @@ void ABP_PlayerShowObject_C::STATIC_CacheFingerLocationAndRotation(const struct 
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.UserConstructionScript
-// (Net, Exec, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerShowObject_C::UserConstructionScript()
 {
@@ -119,7 +118,7 @@ void ABP_PlayerShowObject_C::UserConstructionScript()
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.SetTargetShowCamera
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerShowObject_C::SetTargetShowCamera()
 {
@@ -136,7 +135,7 @@ void ABP_PlayerShowObject_C::SetTargetShowCamera()
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.Reset
-// (Exec, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bNewVisibility                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -156,7 +155,7 @@ void ABP_PlayerShowObject_C::Reset(bool bNewVisibility)
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.PreviousSetTargetCamera
-// (Exec, Native, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          BlendTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EViewTargetBlendFunction> BlendFunc                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -174,7 +173,6 @@ void ABP_PlayerShowObject_C::PreviousSetTargetCamera(float BlendTime, TEnumAsByt
 	params.bLockOutgoing = bLockOutgoing;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,7 +181,7 @@ void ABP_PlayerShowObject_C::PreviousSetTargetCamera(float BlendTime, TEnumAsByt
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -203,7 +201,7 @@ void ABP_PlayerShowObject_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.ReceiveBeginPlay
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_PlayerShowObject_C::ReceiveBeginPlay()
 {
@@ -220,7 +218,7 @@ void ABP_PlayerShowObject_C::ReceiveBeginPlay()
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.Input Wait Update
-// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerShowObject_C::Input_Wait_Update()
 {
@@ -237,7 +235,7 @@ void ABP_PlayerShowObject_C::Input_Wait_Update()
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_10
-// (Net, NetReliable, NetRequest, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -257,7 +255,7 @@ void ABP_PlayerShowObject_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_10(float
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_6
-// (NetReliable, NetRequest, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -277,11 +275,11 @@ void ABP_PlayerShowObject_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_6(floa
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.ExecuteUbergraph_BP_PlayerShowObject
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, DLLImport)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerShowObject_C::STATIC_ExecuteUbergraph_BP_PlayerShowObject(int EntryPoint)
+void ABP_PlayerShowObject_C::ExecuteUbergraph_BP_PlayerShowObject(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerShowObject.BP_PlayerShowObject_C.ExecuteUbergraph_BP_PlayerShowObject");
 
@@ -289,7 +287,6 @@ void ABP_PlayerShowObject_C::STATIC_ExecuteUbergraph_BP_PlayerShowObject(int Ent
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,7 +295,7 @@ void ABP_PlayerShowObject_C::STATIC_ExecuteUbergraph_BP_PlayerShowObject(int Ent
 
 
 // Function BP_PlayerShowObject.BP_PlayerShowObject_C.OnCalcFinishedDispatcher__DelegateSignature
-// (Exec, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
 void ABP_PlayerShowObject_C::OnCalcFinishedDispatcher__DelegateSignature()
 {

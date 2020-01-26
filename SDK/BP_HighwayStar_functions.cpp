@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HighwayStar.BP_HighwayStar_C.LoadScore
-// (Net, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_LoadScore()
+void ABP_HighwayStar_C::LoadScore()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.LoadScore");
 
@@ -31,9 +31,9 @@ void ABP_HighwayStar_C::STATIC_LoadScore()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.SaveScore
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_SaveScore()
+void ABP_HighwayStar_C::SaveScore()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.SaveScore");
 
@@ -48,9 +48,9 @@ void ABP_HighwayStar_C::STATIC_SaveScore()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.UpdateQte
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_UpdateQte()
+void ABP_HighwayStar_C::UpdateQte()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.UpdateQte");
 
@@ -65,7 +65,7 @@ void ABP_HighwayStar_C::STATIC_UpdateQte()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.MakeQteTriangle
-// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::MakeQteTriangle()
 {
@@ -74,7 +74,6 @@ void ABP_HighwayStar_C::MakeQteTriangle()
 	ABP_HighwayStar_C_MakeQteTriangle_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,7 +82,7 @@ void ABP_HighwayStar_C::MakeQteTriangle()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.RemoveQte
-// (NetRequest, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::RemoveQte()
 {
@@ -100,18 +99,17 @@ void ABP_HighwayStar_C::RemoveQte()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.InitAsyncLoad
-// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_InitAsyncLoad(bool* dummy)
+void ABP_HighwayStar_C::InitAsyncLoad(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.InitAsyncLoad");
 
 	ABP_HighwayStar_C_InitAsyncLoad_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,16 +121,15 @@ void ABP_HighwayStar_C::STATIC_InitAsyncLoad(bool* dummy)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.DeleteScoreLightActor
-// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_DeleteScoreLightActor()
+void ABP_HighwayStar_C::DeleteScoreLightActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.DeleteScoreLightActor");
 
 	ABP_HighwayStar_C_DeleteScoreLightActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,9 +138,9 @@ void ABP_HighwayStar_C::STATIC_DeleteScoreLightActor()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.CreateScoreLightActor
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_CreateScoreLightActor()
+void ABP_HighwayStar_C::CreateScoreLightActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.CreateScoreLightActor");
 
@@ -158,7 +155,7 @@ void ABP_HighwayStar_C::STATIC_CreateScoreLightActor()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.SettingSEPlayer
-// (Net, Exec, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsDestroy                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -178,16 +175,15 @@ void ABP_HighwayStar_C::SettingSEPlayer(bool IsDestroy)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.UpdatePatLight
-// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_UpdatePatLight()
+void ABP_HighwayStar_C::UpdatePatLight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.UpdatePatLight");
 
 	ABP_HighwayStar_C_UpdatePatLight_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,16 +192,15 @@ void ABP_HighwayStar_C::STATIC_UpdatePatLight()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.StopPatLight
-// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_StopPatLight()
+void ABP_HighwayStar_C::StopPatLight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.StopPatLight");
 
 	ABP_HighwayStar_C_StopPatLight_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -214,7 +209,7 @@ void ABP_HighwayStar_C::STATIC_StopPatLight()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.StartPatLight
-// (Event, NetResponse, NetMulticast, Public, Protected, NetServer, DLLImport, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::StartPatLight()
 {
@@ -231,16 +226,15 @@ void ABP_HighwayStar_C::StartPatLight()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.DebugSetting
-// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, Public, Private, Protected, Delegate, HasOutParms, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_DebugSetting()
+void ABP_HighwayStar_C::DebugSetting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.DebugSetting");
 
 	ABP_HighwayStar_C_DebugSetting_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -249,7 +243,7 @@ void ABP_HighwayStar_C::STATIC_DebugSetting()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.SetCarOffset
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::SetCarOffset()
 {
@@ -266,7 +260,7 @@ void ABP_HighwayStar_C::SetCarOffset()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.GetNowArrowRot
-// (NetRequest, Exec, Event, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          RetRot                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -288,7 +282,7 @@ void ABP_HighwayStar_C::GetNowArrowRot(float* RetRot)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.ScoreLightAllOff
-// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::ScoreLightAllOff()
 {
@@ -297,7 +291,6 @@ void ABP_HighwayStar_C::ScoreLightAllOff()
 	ABP_HighwayStar_C_ScoreLightAllOff_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -306,12 +299,12 @@ void ABP_HighwayStar_C::ScoreLightAllOff()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.GetScoreLIghtBlinkIndex
-// (NetReliable, Native, Event, Static, NetMulticast, Public, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ArgMy                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            RetIndex                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_GetScoreLIghtBlinkIndex(bool ArgMy, int* RetIndex)
+void ABP_HighwayStar_C::GetScoreLIghtBlinkIndex(bool ArgMy, int* RetIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.GetScoreLIghtBlinkIndex");
 
@@ -319,7 +312,6 @@ void ABP_HighwayStar_C::STATIC_GetScoreLIghtBlinkIndex(bool ArgMy, int* RetIndex
 	params.ArgMy = ArgMy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -331,7 +323,7 @@ void ABP_HighwayStar_C::STATIC_GetScoreLIghtBlinkIndex(bool ArgMy, int* RetIndex
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.UpdateDispScoreLight
-// (Exec, Event, NetResponse, Protected, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ArgOn                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -351,16 +343,15 @@ void ABP_HighwayStar_C::UpdateDispScoreLight(bool ArgOn)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.ScoreCheck
-// (Net, NetReliable, Native, Static, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_ScoreCheck()
+void ABP_HighwayStar_C::ScoreCheck()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.ScoreCheck");
 
 	ABP_HighwayStar_C_ScoreCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -369,7 +360,7 @@ void ABP_HighwayStar_C::STATIC_ScoreCheck()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.ParamSetting
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::ParamSetting()
 {
@@ -386,7 +377,7 @@ void ABP_HighwayStar_C::ParamSetting()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.ItemGetCheck
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            item_count1                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -397,7 +388,6 @@ void ABP_HighwayStar_C::ItemGetCheck(int* item_count1)
 	ABP_HighwayStar_C_ItemGetCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -409,11 +399,11 @@ void ABP_HighwayStar_C::ItemGetCheck(int* item_count1)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.SpawnInputControlActor
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_MiniGameInputBase_C* ABP_HighwayStar_C::STATIC_SpawnInputControlActor()
+class ABP_MiniGameInputBase_C* ABP_HighwayStar_C::SpawnInputControlActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.SpawnInputControlActor");
 
@@ -430,16 +420,15 @@ class ABP_MiniGameInputBase_C* ABP_HighwayStar_C::STATIC_SpawnInputControlActor(
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.CreateRootPoint
-// (NetReliable, NetRequest, Native, Static, Private, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_CreateRootPoint()
+void ABP_HighwayStar_C::CreateRootPoint()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.CreateRootPoint");
 
 	ABP_HighwayStar_C_CreateRootPoint_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -448,7 +437,7 @@ void ABP_HighwayStar_C::STATIC_CreateRootPoint()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.AddScore
-// (NetRequest, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            AddNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -470,9 +459,9 @@ void ABP_HighwayStar_C::AddScore(bool InputPin, int AddNum)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.updateLocation
-// (Net, NetRequest, Event, Static, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_updateLocation()
+void ABP_HighwayStar_C::updateLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.updateLocation");
 
@@ -487,16 +476,15 @@ void ABP_HighwayStar_C::STATIC_updateLocation()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.setCarRotation
-// (Net, NetReliable, Native, Event, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_HighwayStar_C::STATIC_setCarRotation()
+void ABP_HighwayStar_C::setCarRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.setCarRotation");
 
 	ABP_HighwayStar_C_setCarRotation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -505,7 +493,7 @@ void ABP_HighwayStar_C::STATIC_setCarRotation()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.UserConstructionScript
-// (NetRequest, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::UserConstructionScript()
 {
@@ -522,16 +510,15 @@ void ABP_HighwayStar_C::UserConstructionScript()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.򠪦􆖐񍳔_
-// (NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
-void ABP_HighwayStar_C::UnknownFunc01()
+void ABP_HighwayStar_C::򠪦􆖐񍳔_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.򠪦􆖐񍳔_");
 
-	ABP_HighwayStar_C__UnknownFunc01__Params params;
+	ABP_HighwayStar_C_򠪦􆖐񍳔__Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -540,7 +527,7 @@ void ABP_HighwayStar_C::UnknownFunc01()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.LightFlickerTimeline__FinishedFunc
-// (Net, NetReliable, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_HighwayStar_C::LightFlickerTimeline__FinishedFunc()
 {
@@ -549,7 +536,6 @@ void ABP_HighwayStar_C::LightFlickerTimeline__FinishedFunc()
 	ABP_HighwayStar_C_LightFlickerTimeline__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -558,7 +544,7 @@ void ABP_HighwayStar_C::LightFlickerTimeline__FinishedFunc()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.LightFlickerTimeline__UpdateFunc
-// (Net, NetReliable, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_HighwayStar_C::LightFlickerTimeline__UpdateFunc()
 {
@@ -567,7 +553,6 @@ void ABP_HighwayStar_C::LightFlickerTimeline__UpdateFunc()
 	ABP_HighwayStar_C_LightFlickerTimeline__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -576,7 +561,7 @@ void ABP_HighwayStar_C::LightFlickerTimeline__UpdateFunc()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Lamp Flashing__FinishedFunc
-// (NetReliable, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_HighwayStar_C::Lamp_Flashing__FinishedFunc()
 {
@@ -585,7 +570,6 @@ void ABP_HighwayStar_C::Lamp_Flashing__FinishedFunc()
 	ABP_HighwayStar_C_Lamp_Flashing__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -594,7 +578,7 @@ void ABP_HighwayStar_C::Lamp_Flashing__FinishedFunc()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Lamp Flashing__UpdateFunc
-// (NetReliable, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_HighwayStar_C::Lamp_Flashing__UpdateFunc()
 {
@@ -603,7 +587,6 @@ void ABP_HighwayStar_C::Lamp_Flashing__UpdateFunc()
 	ABP_HighwayStar_C_Lamp_Flashing__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -612,7 +595,7 @@ void ABP_HighwayStar_C::Lamp_Flashing__UpdateFunc()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Lamp Flashing__on__EventFunc
-// (NetReliable, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_HighwayStar_C::Lamp_Flashing__on__EventFunc()
 {
@@ -621,7 +604,6 @@ void ABP_HighwayStar_C::Lamp_Flashing__on__EventFunc()
 	ABP_HighwayStar_C_Lamp_Flashing__on__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -630,7 +612,7 @@ void ABP_HighwayStar_C::Lamp_Flashing__on__EventFunc()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Lamp Flashing__off__EventFunc
-// (NetReliable, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_HighwayStar_C::Lamp_Flashing__off__EventFunc()
 {
@@ -639,7 +621,6 @@ void ABP_HighwayStar_C::Lamp_Flashing__off__EventFunc()
 	ABP_HighwayStar_C_Lamp_Flashing__off__EventFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -648,7 +629,7 @@ void ABP_HighwayStar_C::Lamp_Flashing__off__EventFunc()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Initialize_Event
-// (Net, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::Initialize_Event()
 {
@@ -657,7 +638,6 @@ void ABP_HighwayStar_C::Initialize_Event()
 	ABP_HighwayStar_C_Initialize_Event_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -666,7 +646,7 @@ void ABP_HighwayStar_C::Initialize_Event()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Finalize_Event
-// (Net, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::Finalize_Event()
 {
@@ -675,7 +655,6 @@ void ABP_HighwayStar_C::Finalize_Event()
 	ABP_HighwayStar_C_Finalize_Event_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -684,7 +663,7 @@ void ABP_HighwayStar_C::Finalize_Event()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.StartMiniGame
-// (Net, Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::StartMiniGame()
 {
@@ -693,7 +672,6 @@ void ABP_HighwayStar_C::StartMiniGame()
 	ABP_HighwayStar_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -702,7 +680,7 @@ void ABP_HighwayStar_C::StartMiniGame()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.EndMiniGame
-// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::EndMiniGame()
 {
@@ -711,7 +689,6 @@ void ABP_HighwayStar_C::EndMiniGame()
 	ABP_HighwayStar_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -720,7 +697,7 @@ void ABP_HighwayStar_C::EndMiniGame()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.RestartMiniGame
-// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::RestartMiniGame()
 {
@@ -729,7 +706,6 @@ void ABP_HighwayStar_C::RestartMiniGame()
 	ABP_HighwayStar_C_RestartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -738,11 +714,11 @@ void ABP_HighwayStar_C::RestartMiniGame()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BGMPlay
-// (NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_BGMPlay(int Index)
+void ABP_HighwayStar_C::BGMPlay(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.BGMPlay");
 
@@ -758,11 +734,11 @@ void ABP_HighwayStar_C::STATIC_BGMPlay(int Index)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BGMStop
-// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_BGMStop(int Index)
+void ABP_HighwayStar_C::BGMStop(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.BGMStop");
 
@@ -770,7 +746,6 @@ void ABP_HighwayStar_C::STATIC_BGMStop(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -779,7 +754,7 @@ void ABP_HighwayStar_C::STATIC_BGMStop(int Index)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Reset Start
-// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::Reset_Start()
 {
@@ -788,7 +763,6 @@ void ABP_HighwayStar_C::Reset_Start()
 	ABP_HighwayStar_C_Reset_Start_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -797,7 +771,7 @@ void ABP_HighwayStar_C::Reset_Start()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Reset Info Save
-// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::Reset_Info_Save()
 {
@@ -806,7 +780,6 @@ void ABP_HighwayStar_C::Reset_Info_Save()
 	ABP_HighwayStar_C_Reset_Info_Save_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -815,11 +788,11 @@ void ABP_HighwayStar_C::Reset_Info_Save()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.SE_LampPlay
-// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsEnemy                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_SE_LampPlay(bool IsEnemy)
+void ABP_HighwayStar_C::SE_LampPlay(bool IsEnemy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.SE_LampPlay");
 
@@ -827,7 +800,6 @@ void ABP_HighwayStar_C::STATIC_SE_LampPlay(bool IsEnemy)
 	params.IsEnemy = IsEnemy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -836,7 +808,7 @@ void ABP_HighwayStar_C::STATIC_SE_LampPlay(bool IsEnemy)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.WinMiniGame
-// (Net, Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::WinMiniGame()
 {
@@ -845,7 +817,6 @@ void ABP_HighwayStar_C::WinMiniGame()
 	ABP_HighwayStar_C_WinMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -854,7 +825,7 @@ void ABP_HighwayStar_C::WinMiniGame()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.LoseMiniGame
-// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::LoseMiniGame()
 {
@@ -863,7 +834,6 @@ void ABP_HighwayStar_C::LoseMiniGame()
 	ABP_HighwayStar_C_LoseMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -872,7 +842,7 @@ void ABP_HighwayStar_C::LoseMiniGame()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.ReceiveBeginPlay
-// (Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_HighwayStar_C::ReceiveBeginPlay()
 {
@@ -881,7 +851,6 @@ void ABP_HighwayStar_C::ReceiveBeginPlay()
 	ABP_HighwayStar_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -890,11 +859,11 @@ void ABP_HighwayStar_C::ReceiveBeginPlay()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.ReceiveTick
-// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_HighwayStar_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.ReceiveTick");
 
@@ -902,7 +871,6 @@ void ABP_HighwayStar_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -911,7 +879,7 @@ void ABP_HighwayStar_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Zoom
-// (Net, NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::Zoom()
 {
@@ -920,7 +888,6 @@ void ABP_HighwayStar_C::Zoom()
 	ABP_HighwayStar_C_Zoom_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -929,7 +896,7 @@ void ABP_HighwayStar_C::Zoom()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Unzoom
-// (Net, NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::Unzoom()
 {
@@ -938,7 +905,6 @@ void ABP_HighwayStar_C::Unzoom()
 	ABP_HighwayStar_C_Unzoom_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -947,7 +913,7 @@ void ABP_HighwayStar_C::Unzoom()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -956,7 +922,7 @@ void ABP_HighwayStar_C::Unzoom()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_HighwayStar_C::BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -977,7 +943,7 @@ void ABP_HighwayStar_C::STATIC_BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -986,7 +952,7 @@ void ABP_HighwayStar_C::STATIC_BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_HighwayStar_C::BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -999,7 +965,6 @@ void ABP_HighwayStar_C::STATIC_BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_4
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1008,14 +973,14 @@ void ABP_HighwayStar_C::STATIC_BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_4
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature
-// (Net, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_HighwayStar_C::BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1026,7 +991,6 @@ void ABP_HighwayStar_C::STATIC_BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_5
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1035,14 +999,14 @@ void ABP_HighwayStar_C::STATIC_BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_5
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_HighwayStar_C::BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1053,7 +1017,6 @@ void ABP_HighwayStar_C::STATIC_BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1062,11 +1025,11 @@ void ABP_HighwayStar_C::STATIC_BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_131
-// (Net, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_131(float AxisValue)
+void ABP_HighwayStar_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_131(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_131");
 
@@ -1082,11 +1045,11 @@ void ABP_HighwayStar_C::STATIC_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_131(
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Right Stick X
-// (Net, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_Right_Stick_X(float InputPin)
+void ABP_HighwayStar_C::Right_Stick_X(float InputPin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.Right Stick X");
 
@@ -1102,7 +1065,7 @@ void ABP_HighwayStar_C::STATIC_Right_Stick_X(float InputPin)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.LightFlicker
-// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::LightFlicker()
 {
@@ -1111,7 +1074,6 @@ void ABP_HighwayStar_C::LightFlicker()
 	ABP_HighwayStar_C_LightFlicker_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1120,7 +1082,7 @@ void ABP_HighwayStar_C::LightFlicker()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.LightStop
-// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::LightStop()
 {
@@ -1129,7 +1091,6 @@ void ABP_HighwayStar_C::LightStop()
 	ABP_HighwayStar_C_LightStop_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1138,7 +1099,7 @@ void ABP_HighwayStar_C::LightStop()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.PushUp
-// (Net, NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::PushUp()
 {
@@ -1147,7 +1108,6 @@ void ABP_HighwayStar_C::PushUp()
 	ABP_HighwayStar_C_PushUp_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1156,7 +1116,7 @@ void ABP_HighwayStar_C::PushUp()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.PushDown
-// (Net, NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::PushDown()
 {
@@ -1165,7 +1125,6 @@ void ABP_HighwayStar_C::PushDown()
 	ABP_HighwayStar_C_PushDown_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1174,7 +1133,7 @@ void ABP_HighwayStar_C::PushDown()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__Box1_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1183,7 +1142,7 @@ void ABP_HighwayStar_C::PushDown()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_BndEvt__Box1_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_HighwayStar_C::BndEvt__Box1_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__Box1_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1204,7 +1163,7 @@ void ABP_HighwayStar_C::STATIC_BndEvt__Box1_K2Node_ComponentBoundEvent_2_Compone
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__life_check_00_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1213,7 +1172,7 @@ void ABP_HighwayStar_C::STATIC_BndEvt__Box1_K2Node_ComponentBoundEvent_2_Compone
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_BndEvt__life_check_00_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_HighwayStar_C::BndEvt__life_check_00_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__life_check_00_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1226,7 +1185,6 @@ void ABP_HighwayStar_C::STATIC_BndEvt__life_check_00_K2Node_ComponentBoundEvent_
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1235,7 +1193,7 @@ void ABP_HighwayStar_C::STATIC_BndEvt__life_check_00_K2Node_ComponentBoundEvent_
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.RestartTick
-// (NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::RestartTick()
 {
@@ -1244,7 +1202,6 @@ void ABP_HighwayStar_C::RestartTick()
 	ABP_HighwayStar_C_RestartTick_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1253,7 +1210,7 @@ void ABP_HighwayStar_C::RestartTick()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.LapsCheck
-// (NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::LapsCheck()
 {
@@ -1262,7 +1219,6 @@ void ABP_HighwayStar_C::LapsCheck()
 	ABP_HighwayStar_C_LapsCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1271,7 +1227,7 @@ void ABP_HighwayStar_C::LapsCheck()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.RotateArrow
-// (Net, NetReliable, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::RotateArrow()
 {
@@ -1280,7 +1236,6 @@ void ABP_HighwayStar_C::RotateArrow()
 	ABP_HighwayStar_C_RotateArrow_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1289,7 +1244,7 @@ void ABP_HighwayStar_C::RotateArrow()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Play Use Coin
-// (Net, NetReliable, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::Play_Use_Coin()
 {
@@ -1298,7 +1253,6 @@ void ABP_HighwayStar_C::Play_Use_Coin()
 	ABP_HighwayStar_C_Play_Use_Coin_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1307,7 +1261,7 @@ void ABP_HighwayStar_C::Play_Use_Coin()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature
-// (Net, NetRequest, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_HighwayStar_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
 {
@@ -1324,7 +1278,7 @@ void ABP_HighwayStar_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoun
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature
-// (NetRequest, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_HighwayStar_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
 {
@@ -1341,11 +1295,11 @@ void ABP_HighwayStar_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoun
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.ResumeMiniGame
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_HighwayStar_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword)
+void ABP_HighwayStar_C::ResumeMiniGame(const struct FString& ResumeKeyword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.ResumeMiniGame");
 
@@ -1361,11 +1315,11 @@ void ABP_HighwayStar_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeywor
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.OnTalkScriptEvent
-// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_OnTalkScriptEvent(int EventNumber)
+void ABP_HighwayStar_C::OnTalkScriptEvent(int EventNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.OnTalkScriptEvent");
 
@@ -1381,7 +1335,7 @@ void ABP_HighwayStar_C::STATIC_OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.OnEndKihudaFlow
-// (NetRequest, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::OnEndKihudaFlow()
 {
@@ -1398,7 +1352,7 @@ void ABP_HighwayStar_C::OnEndKihudaFlow()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.UsedCoin
-// (Net, NetReliable, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::UsedCoin()
 {
@@ -1415,7 +1369,7 @@ void ABP_HighwayStar_C::UsedCoin()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.GameStartEnd
-// (Net, NetReliable, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::GameStartEnd()
 {
@@ -1432,7 +1386,7 @@ void ABP_HighwayStar_C::GameStartEnd()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.CancelMiniGame
-// (Net, NetRequest, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::CancelMiniGame()
 {
@@ -1441,7 +1395,6 @@ void ABP_HighwayStar_C::CancelMiniGame()
 	ABP_HighwayStar_C_CancelMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1450,7 +1403,7 @@ void ABP_HighwayStar_C::CancelMiniGame()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.OnFinishedFadeEndGame
-// (NetReliable, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::OnFinishedFadeEndGame()
 {
@@ -1467,11 +1420,11 @@ void ABP_HighwayStar_C::OnFinishedFadeEndGame()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.ReceiveEndPlay
-// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HighwayStar_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_HighwayStar_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.ReceiveEndPlay");
 
@@ -1487,7 +1440,7 @@ void ABP_HighwayStar_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPla
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.QteWidgetUpdate
-// (NetReliable, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::QteWidgetUpdate()
 {
@@ -1504,7 +1457,7 @@ void ABP_HighwayStar_C::QteWidgetUpdate()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.OnEndGameOver
-// (Net, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::OnEndGameOver()
 {
@@ -1521,7 +1474,7 @@ void ABP_HighwayStar_C::OnEndGameOver()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.OnEndPerfect
-// (Net, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::OnEndPerfect()
 {
@@ -1538,7 +1491,7 @@ void ABP_HighwayStar_C::OnEndPerfect()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.PlayForceFeedBack
-// (Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::PlayForceFeedBack()
 {
@@ -1555,7 +1508,7 @@ void ABP_HighwayStar_C::PlayForceFeedBack()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.StartGame
-// (Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::StartGame()
 {
@@ -1572,7 +1525,7 @@ void ABP_HighwayStar_C::StartGame()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.Event_EndMiniGame
-// (Net, NetReliable, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_HighwayStar_C::Event_EndMiniGame()
 {
@@ -1581,7 +1534,6 @@ void ABP_HighwayStar_C::Event_EndMiniGame()
 	ABP_HighwayStar_C_Event_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1590,7 +1542,7 @@ void ABP_HighwayStar_C::Event_EndMiniGame()
 
 
 // Function BP_HighwayStar.BP_HighwayStar_C.ExecuteUbergraph_BP_HighwayStar
-// (Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

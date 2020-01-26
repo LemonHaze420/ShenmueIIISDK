@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,21 +38,21 @@ public:
 	}
 
 
-	void STATIC_GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
+	void GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
 	void EnabledMeshTarget();
-	void STATIC_AddSuccessCount();
-	void STATIC_IsGolfHoleType(bool* IsGolfHole);
+	void AddSuccessCount();
+	void IsGolfHoleType(bool* IsGolfHole);
 	void IsStoped(bool* bStoped);
 	void UserConstructionScript();
 	void EnterMiniGame(float EnterTime);
-	void STATIC_FinalizeTalk();
-	void STATIC_StartMiniGame();
-	void STATIC_EndMiniGame();
-	void STATIC_WinMiniGame();
-	void STATIC_LoseMiniGame();
-	void STATIC_DrawMiniGame();
-	void STATIC_RestartMiniGame();
-	void STATIC_ReceiveBeginPlay();
+	void FinalizeTalk();
+	void StartMiniGame();
+	void EndMiniGame();
+	void WinMiniGame();
+	void LoseMiniGame();
+	void DrawMiniGame();
+	void RestartMiniGame();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_MiniGame_ThrowTargetBase(int EntryPoint);
 };

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.UpdatePlayerFaderState
-// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void ABP_CameraFadeCollision_C::UpdatePlayerFaderState()
 {
@@ -23,7 +23,6 @@ void ABP_CameraFadeCollision_C::UpdatePlayerFaderState()
 	ABP_CameraFadeCollision_C_UpdatePlayerFaderState_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,12 +31,12 @@ void ABP_CameraFadeCollision_C::UpdatePlayerFaderState()
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.SelectFadeTime
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          NonInstant                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_CameraFadeCollision_C::STATIC_SelectFadeTime(float NonInstant)
+float ABP_CameraFadeCollision_C::SelectFadeTime(float NonInstant)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.SelectFadeTime");
 
@@ -55,7 +54,7 @@ float ABP_CameraFadeCollision_C::STATIC_SelectFadeTime(float NonInstant)
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.ShouldAllFadesBeInstant
-// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,7 +75,7 @@ bool ABP_CameraFadeCollision_C::ShouldAllFadesBeInstant()
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.EnableNPCFadeCollision
-// (Net, NetReliable, Native, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 Requester                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -90,7 +89,6 @@ void ABP_CameraFadeCollision_C::EnableNPCFadeCollision(bool Enable, class UObjec
 	params.Requester = Requester;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,14 +97,14 @@ void ABP_CameraFadeCollision_C::EnableNPCFadeCollision(bool Enable, class UObjec
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.GetCollidedDoor
-// (Net, NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     Primitive                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // class AS3GimmickOpenDoor*      Door                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-bool ABP_CameraFadeCollision_C::STATIC_GetCollidedDoor(class AActor* Actor, class UPrimitiveComponent* Primitive, class AS3GimmickOpenDoor** Door)
+bool ABP_CameraFadeCollision_C::GetCollidedDoor(class AActor* Actor, class UPrimitiveComponent* Primitive, class AS3GimmickOpenDoor** Door)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.GetCollidedDoor");
 
@@ -115,7 +113,6 @@ bool ABP_CameraFadeCollision_C::STATIC_GetCollidedDoor(class AActor* Actor, clas
 	params.Primitive = Primitive;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,7 +126,7 @@ bool ABP_CameraFadeCollision_C::STATIC_GetCollidedDoor(class AActor* Actor, clas
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.FadeDoor
-// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, NetClient, DLLImport)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -149,11 +146,11 @@ void ABP_CameraFadeCollision_C::FadeDoor(class AS3GimmickOpenDoor* Door)
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.ShouldHideOverlappingNPCs
-// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CameraFadeCollision_C::STATIC_ShouldHideOverlappingNPCs()
+bool ABP_CameraFadeCollision_C::ShouldHideOverlappingNPCs()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.ShouldHideOverlappingNPCs");
 
@@ -170,12 +167,12 @@ bool ABP_CameraFadeCollision_C::STATIC_ShouldHideOverlappingNPCs()
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.OverlapNPC
-// (Net, Exec, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3Character*            NPC                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Overlap                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CameraFadeCollision_C::STATIC_OverlapNPC(class AS3Character* NPC, bool Overlap)
+void ABP_CameraFadeCollision_C::OverlapNPC(class AS3Character* NPC, bool Overlap)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.OverlapNPC");
 
@@ -192,7 +189,7 @@ void ABP_CameraFadeCollision_C::STATIC_OverlapNPC(class AS3Character* NPC, bool 
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.EnablePlayerFadeCollision
-// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 Requester                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -206,7 +203,6 @@ void ABP_CameraFadeCollision_C::EnablePlayerFadeCollision(bool Enable, class UOb
 	params.Requester = Requester;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,18 +211,17 @@ void ABP_CameraFadeCollision_C::EnablePlayerFadeCollision(bool Enable, class UOb
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.WantsToHidePlayer
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CameraFadeCollision_C::STATIC_WantsToHidePlayer()
+bool ABP_CameraFadeCollision_C::WantsToHidePlayer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.WantsToHidePlayer");
 
 	ABP_CameraFadeCollision_C_WantsToHidePlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -237,7 +232,7 @@ bool ABP_CameraFadeCollision_C::STATIC_WantsToHidePlayer()
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.FadeCharacter
-// (Native, NetMulticast, MulticastDelegate, Public, Private, Protected, BlueprintCallable, BlueprintEvent)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AS3Character*            Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           FadeOut                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -251,7 +246,6 @@ void ABP_CameraFadeCollision_C::FadeCharacter(class AS3Character* Character, boo
 	params.FadeOut = FadeOut;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -260,7 +254,7 @@ void ABP_CameraFadeCollision_C::FadeCharacter(class AS3Character* Character, boo
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.IsPlayerMeshCollision
-// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USceneComponent*         Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -283,7 +277,7 @@ bool ABP_CameraFadeCollision_C::IsPlayerMeshCollision(class USceneComponent* Tar
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.UserConstructionScript
-// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_CameraFadeCollision_C::UserConstructionScript()
 {
@@ -292,7 +286,6 @@ void ABP_CameraFadeCollision_C::UserConstructionScript()
 	ABP_CameraFadeCollision_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -301,7 +294,7 @@ void ABP_CameraFadeCollision_C::UserConstructionScript()
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__PlayerTrigger_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -331,14 +324,14 @@ void ABP_CameraFadeCollision_C::BndEvt__PlayerTrigger_K2Node_ComponentBoundEvent
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__PlayerTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CameraFadeCollision_C::STATIC_BndEvt__PlayerTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_CameraFadeCollision_C::BndEvt__PlayerTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__PlayerTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -349,7 +342,6 @@ void ABP_CameraFadeCollision_C::STATIC_BndEvt__PlayerTrigger_K2Node_ComponentBou
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -358,11 +350,11 @@ void ABP_CameraFadeCollision_C::STATIC_BndEvt__PlayerTrigger_K2Node_ComponentBou
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.ReceiveTick
-// (Net, NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CameraFadeCollision_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_CameraFadeCollision_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.ReceiveTick");
 
@@ -378,7 +370,7 @@ void ABP_CameraFadeCollision_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, NetRequest, Native, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -400,7 +392,6 @@ void ABP_CameraFadeCollision_C::BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_2_
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -409,14 +400,14 @@ void ABP_CameraFadeCollision_C::BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_2_
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CameraFadeCollision_C::STATIC_BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_CameraFadeCollision_C::BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -427,7 +418,6 @@ void ABP_CameraFadeCollision_C::STATIC_BndEvt__NPCTrigger_K2Node_ComponentBoundE
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -436,7 +426,7 @@ void ABP_CameraFadeCollision_C::STATIC_BndEvt__NPCTrigger_K2Node_ComponentBoundE
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.ReceiveEndPlay
-// (Net, Exec, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -456,7 +446,7 @@ void ABP_CameraFadeCollision_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -465,7 +455,7 @@ void ABP_CameraFadeCollision_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_CameraFadeCollision_C::STATIC_BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_CameraFadeCollision_C::BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -486,14 +476,14 @@ void ABP_CameraFadeCollision_C::STATIC_BndEvt__DoorTrigger_K2Node_ComponentBound
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CameraFadeCollision_C::STATIC_BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_CameraFadeCollision_C::BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -504,7 +494,6 @@ void ABP_CameraFadeCollision_C::STATIC_BndEvt__DoorTrigger_K2Node_ComponentBound
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -513,7 +502,7 @@ void ABP_CameraFadeCollision_C::STATIC_BndEvt__DoorTrigger_K2Node_ComponentBound
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__DisablePlayerFade_K2Node_ComponentBoundEvent_8_OnLastRequestRemove__DelegateSignature
-// (NetReliable, Exec, Native, Event, NetServer)
+// (BlueprintEvent)
 
 void ABP_CameraFadeCollision_C::BndEvt__DisablePlayerFade_K2Node_ComponentBoundEvent_8_OnLastRequestRemove__DelegateSignature()
 {
@@ -522,7 +511,6 @@ void ABP_CameraFadeCollision_C::BndEvt__DisablePlayerFade_K2Node_ComponentBoundE
 	ABP_CameraFadeCollision_C_BndEvt__DisablePlayerFade_K2Node_ComponentBoundEvent_8_OnLastRequestRemove__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -531,7 +519,7 @@ void ABP_CameraFadeCollision_C::BndEvt__DisablePlayerFade_K2Node_ComponentBoundE
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBoundEvent_6_OnFirstRequestAdd__DelegateSignature
-// (Net, Exec, Native, Event, NetServer)
+// (BlueprintEvent)
 
 void ABP_CameraFadeCollision_C::BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBoundEvent_6_OnFirstRequestAdd__DelegateSignature()
 {
@@ -540,7 +528,6 @@ void ABP_CameraFadeCollision_C::BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBo
 	ABP_CameraFadeCollision_C_BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBoundEvent_6_OnFirstRequestAdd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -549,7 +536,7 @@ void ABP_CameraFadeCollision_C::BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBo
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBoundEvent_7_OnLastRequestRemove__DelegateSignature
-// (Net, Exec, Native, Event, NetServer)
+// (BlueprintEvent)
 
 void ABP_CameraFadeCollision_C::BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBoundEvent_7_OnLastRequestRemove__DelegateSignature()
 {
@@ -558,7 +545,6 @@ void ABP_CameraFadeCollision_C::BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBo
 	ABP_CameraFadeCollision_C_BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBoundEvent_7_OnLastRequestRemove__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -567,7 +553,7 @@ void ABP_CameraFadeCollision_C::BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBo
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.ReceiveBeginPlay
-// (Exec, Native, Event, NetServer)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_CameraFadeCollision_C::ReceiveBeginPlay()
 {
@@ -576,7 +562,6 @@ void ABP_CameraFadeCollision_C::ReceiveBeginPlay()
 	ABP_CameraFadeCollision_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -585,7 +570,7 @@ void ABP_CameraFadeCollision_C::ReceiveBeginPlay()
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.ResumeNormalNPCFadeMode
-// (Exec, Native, Event, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_CameraFadeCollision_C::ResumeNormalNPCFadeMode()
 {
@@ -594,7 +579,6 @@ void ABP_CameraFadeCollision_C::ResumeNormalNPCFadeMode()
 	ABP_CameraFadeCollision_C_ResumeNormalNPCFadeMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -603,7 +587,7 @@ void ABP_CameraFadeCollision_C::ResumeNormalNPCFadeMode()
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.StartFastNPCFadeMode
-// (Net, NetReliable, NetRequest, Native, Event, NetServer)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_CameraFadeCollision_C::StartFastNPCFadeMode()
 {
@@ -612,7 +596,6 @@ void ABP_CameraFadeCollision_C::StartFastNPCFadeMode()
 	ABP_CameraFadeCollision_C_StartFastNPCFadeMode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -621,7 +604,7 @@ void ABP_CameraFadeCollision_C::StartFastNPCFadeMode()
 
 
 // Function BP_CameraFadeCollision.BP_CameraFadeCollision_C.ExecuteUbergraph_BP_CameraFadeCollision
-// (Net, NetRequest, Native, Event, Protected, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -633,7 +616,6 @@ void ABP_CameraFadeCollision_C::ExecuteUbergraph_BP_CameraFadeCollision(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

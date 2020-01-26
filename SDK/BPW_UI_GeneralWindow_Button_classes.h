@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,16 +35,16 @@ public:
 	}
 
 
-	void STATIC_Hide();
-	void STATIC_AnimateIn();
-	void STATIC_SetButtonIcon(TEnumAsByte<EN_GeneralWindow_Button> Index);
+	void Hide();
+	void AnimateIn();
+	void SetButtonIcon(TEnumAsByte<EN_GeneralWindow_Button> Index);
 	void SetLocalizedText(const struct FName& Label);
-	void STATIC_SetText(const struct FText& Text);
-	void STATIC_GetButtonIcon(bool IsDesignTime, TEnumAsByte<EN_GeneralWindow_Button> Type, class UTexture2D** Texture);
+	void SetText(const struct FText& Text);
+	void GetButtonIcon(bool IsDesignTime, TEnumAsByte<EN_GeneralWindow_Button> Type, class UTexture2D** Texture);
 	void SetData(const struct FST_GeneralWindow_Button& Data);
-	void STATIC_PreConstruct(bool IsDesignTime);
+	void PreConstruct(bool IsDesignTime);
 	void BndEvt__FadeIn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void STATIC_ExecuteUbergraph_BPW_UI_GeneralWindow_Button(int EntryPoint);
+	void ExecuteUbergraph_BPW_UI_GeneralWindow_Button(int EntryPoint);
 	void OnFinishFadingIn__DelegateSignature();
 };
 

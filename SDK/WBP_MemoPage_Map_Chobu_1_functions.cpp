@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MemoPage_Map_Chobu_1.WBP_MemoPage_Map_Chobu_0_C.Construct
-// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_MemoPage_Map_Chobu_0_C::STATIC_Construct()
+void UWBP_MemoPage_Map_Chobu_0_C::Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Chobu_1.WBP_MemoPage_Map_Chobu_0_C.Construct");
 
@@ -31,11 +31,11 @@ void UWBP_MemoPage_Map_Chobu_0_C::STATIC_Construct()
 
 
 // Function WBP_MemoPage_Map_Chobu_1.WBP_MemoPage_Map_Chobu_0_C.ExecuteUbergraph_WBP_MemoPage_Map_Chobu_1
-// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MemoPage_Map_Chobu_0_C::STATIC_ExecuteUbergraph_WBP_MemoPage_Map_Chobu_1(int EntryPoint)
+void UWBP_MemoPage_Map_Chobu_0_C::ExecuteUbergraph_WBP_MemoPage_Map_Chobu_1(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Chobu_1.WBP_MemoPage_Map_Chobu_0_C.ExecuteUbergraph_WBP_MemoPage_Map_Chobu_1");
 

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function bpS3CameraComp.bpS3CameraComp_C.GetVerticalFOV
-// (NetReliable, Native, Event, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          VerticalFOV                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,7 +25,6 @@ void UbpS3CameraComp_C::GetVerticalFOV(float* VerticalFOV)
 	UbpS3CameraComp_C_GetVerticalFOV_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,12 +36,12 @@ void UbpS3CameraComp_C::GetVerticalFOV(float* VerticalFOV)
 
 
 // Function bpS3CameraComp.bpS3CameraComp_C.HorizonRatioToPitch
-// (Net, NetRequest, Static, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          HorizonRatio                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UbpS3CameraComp_C::STATIC_HorizonRatioToPitch(float HorizonRatio, float* Pitch)
+void UbpS3CameraComp_C::HorizonRatioToPitch(float HorizonRatio, float* Pitch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function bpS3CameraComp.bpS3CameraComp_C.HorizonRatioToPitch");
 

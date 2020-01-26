@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,15 +41,15 @@ public:
 	}
 
 
-	void STATIC_DisableBall();
-	void STATIC_EnableBall();
+	void DisableBall();
+	void EnableBall();
 	void SetInsideArea(bool Inside);
 	void IsStopped(bool* bStop);
 	void UserConstructionScript();
-	void STATIC_BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_BP_KF_Ball2(int EntryPoint);
+	void BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BP_KF_Ball2(int EntryPoint);
 	void EventDispatcher_BallHitXObj__DelegateSignature();
 };
 

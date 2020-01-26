@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.InitDefaultLevelProgression
-// (Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_S3BattleStatsManager_C::InitDefaultLevelProgression()
 {
@@ -31,9 +31,9 @@ void UBP_S3BattleStatsManager_C::InitDefaultLevelProgression()
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.ReinitFixedLevel
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3BattleStatsManager_C::STATIC_ReinitFixedLevel()
+void UBP_S3BattleStatsManager_C::ReinitFixedLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.ReinitFixedLevel");
 
@@ -48,9 +48,9 @@ void UBP_S3BattleStatsManager_C::STATIC_ReinitFixedLevel()
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.Debug_TestSkillProgression
-// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetClient)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3BattleStatsManager_C::STATIC_Debug_TestSkillProgression()
+void UBP_S3BattleStatsManager_C::Debug_TestSkillProgression()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.Debug_TestSkillProgression");
 
@@ -65,12 +65,12 @@ void UBP_S3BattleStatsManager_C::STATIC_Debug_TestSkillProgression()
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.IsSkillEquipable
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   SkillId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_S3BattleStatsManager_C::STATIC_IsSkillEquipable(const struct FName& SkillId)
+bool UBP_S3BattleStatsManager_C::IsSkillEquipable(const struct FName& SkillId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.IsSkillEquipable");
 
@@ -78,7 +78,6 @@ bool UBP_S3BattleStatsManager_C::STATIC_IsSkillEquipable(const struct FName& Ski
 	params.SkillId = SkillId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,7 +88,7 @@ bool UBP_S3BattleStatsManager_C::STATIC_IsSkillEquipable(const struct FName& Ski
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.IsSkillLevelable
-// (Net, Native, Event, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   SkillItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -102,7 +101,6 @@ bool UBP_S3BattleStatsManager_C::IsSkillLevelable(const struct FName& SkillItem)
 	params.SkillItem = SkillItem;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -113,12 +111,12 @@ bool UBP_S3BattleStatsManager_C::IsSkillLevelable(const struct FName& SkillItem)
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.GetDojoRankMax
-// (Exec, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EDojoPlace>        Dojo                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3DojoRank                    Rank                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3BattleStatsManager_C::STATIC_GetDojoRankMax(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank* Rank)
+void UBP_S3BattleStatsManager_C::GetDojoRankMax(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank* Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.GetDojoRankMax");
 
@@ -137,7 +135,7 @@ void UBP_S3BattleStatsManager_C::STATIC_GetDojoRankMax(TEnumAsByte<EDojoPlace> D
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.InitBlueprint
-// (Net, NetReliable, NetRequest, Event, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -158,7 +156,7 @@ bool UBP_S3BattleStatsManager_C::InitBlueprint()
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.SetLastAdviceData
-// (Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBattleAdviceData_C*     AdviceData                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -178,7 +176,7 @@ void UBP_S3BattleStatsManager_C::SetLastAdviceData(class UBattleAdviceData_C* Ad
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.GetLastAdviceData
-// (Net, NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBattleAdviceData_C*     AdviceData                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -200,12 +198,12 @@ void UBP_S3BattleStatsManager_C::GetLastAdviceData(class UBattleAdviceData_C** A
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.GetDojoRankIndex
-// (Exec, Native, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Dojo                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBP_S3BattleStatsManager_C::STATIC_GetDojoRankIndex(const struct FName& Dojo)
+int UBP_S3BattleStatsManager_C::GetDojoRankIndex(const struct FName& Dojo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.GetDojoRankIndex");
 
@@ -213,7 +211,6 @@ int UBP_S3BattleStatsManager_C::STATIC_GetDojoRankIndex(const struct FName& Dojo
 	params.Dojo = Dojo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -224,12 +221,12 @@ int UBP_S3BattleStatsManager_C::STATIC_GetDojoRankIndex(const struct FName& Dojo
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.DojoRankNameToEnum
-// (Exec, Static, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3DojoRank                    Rank                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3BattleStatsManager_C::STATIC_DojoRankNameToEnum(const struct FName& Name, ES3DojoRank* Rank)
+void UBP_S3BattleStatsManager_C::DojoRankNameToEnum(const struct FName& Name, ES3DojoRank* Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.DojoRankNameToEnum");
 
@@ -248,12 +245,12 @@ void UBP_S3BattleStatsManager_C::STATIC_DojoRankNameToEnum(const struct FName& N
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.DojoRankEnumToName
-// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3DojoRank                    InRank                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   OutRank                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3BattleStatsManager_C::STATIC_DojoRankEnumToName(ES3DojoRank InRank, struct FName* OutRank)
+void UBP_S3BattleStatsManager_C::DojoRankEnumToName(ES3DojoRank InRank, struct FName* OutRank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.DojoRankEnumToName");
 
@@ -261,7 +258,6 @@ void UBP_S3BattleStatsManager_C::STATIC_DojoRankEnumToName(ES3DojoRank InRank, s
 	params.InRank = InRank;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -273,7 +269,7 @@ void UBP_S3BattleStatsManager_C::STATIC_DojoRankEnumToName(ES3DojoRank InRank, s
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.GetDojoRankAsEnum
-// (Native, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EDojoPlace>        Dojo                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3DojoRank                    Rank                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -286,7 +282,6 @@ void UBP_S3BattleStatsManager_C::GetDojoRankAsEnum(TEnumAsByte<EDojoPlace> Dojo,
 	params.Dojo = Dojo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,7 +293,7 @@ void UBP_S3BattleStatsManager_C::GetDojoRankAsEnum(TEnumAsByte<EDojoPlace> Dojo,
 
 
 // Function BP_S3BattleStatsManager.BP_S3BattleStatsManager_C.SetDojoRankAsEnum
-// (Net, Exec, Native, NetResponse, MulticastDelegate, NetServer, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EDojoPlace>        Dojo                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3DojoRank                    Rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -312,7 +307,6 @@ void UBP_S3BattleStatsManager_C::SetDojoRankAsEnum(TEnumAsByte<EDojoPlace> Dojo,
 	params.Rank = Rank;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

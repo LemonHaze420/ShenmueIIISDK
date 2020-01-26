@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.DebugPrintMobility
-// (Net, Static, MulticastDelegate, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_BG_ProceduralStairs_Base_C::STATIC_DebugPrintMobility()
+void ABP_BG_ProceduralStairs_Base_C::DebugPrintMobility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.DebugPrintMobility");
 
@@ -31,12 +31,12 @@ void ABP_BG_ProceduralStairs_Base_C::STATIC_DebugPrintMobility()
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.EnsureMeshActor
-// (NetReliable, NetResponse, Static, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsStep                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Parent                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BG_ProceduralStairs_Base_C::STATIC_EnsureMeshActor(bool IsStep, class AActor** Parent)
+void ABP_BG_ProceduralStairs_Base_C::EnsureMeshActor(bool IsStep, class AActor** Parent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.EnsureMeshActor");
 
@@ -55,7 +55,7 @@ void ABP_BG_ProceduralStairs_Base_C::STATIC_EnsureMeshActor(bool IsStep, class A
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.GetGimmickInitInfo
-// (NetReliable, NetRequest, Native, NetResponse, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform              ActorTransform                 (Parm, OutParm, IsPlainOldData)
 // struct FTransform              RelativeTransform              (Parm, OutParm, IsPlainOldData)
@@ -69,7 +69,6 @@ void ABP_BG_ProceduralStairs_Base_C::GetGimmickInitInfo(struct FTransform* Actor
 	ABP_BG_ProceduralStairs_Base_C_GetGimmickInitInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,14 +86,14 @@ void ABP_BG_ProceduralStairs_Base_C::GetGimmickInitInfo(struct FTransform* Actor
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.EnsureStaticMeshComponent
-// (Net, Native, Event, Static, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMesh*             Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInterface*      Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsFloor                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UInstancedStaticMeshComponent* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UInstancedStaticMeshComponent* ABP_BG_ProceduralStairs_Base_C::STATIC_EnsureStaticMeshComponent(class UStaticMesh* Mesh, class UMaterialInterface* Material, bool IsFloor)
+class UInstancedStaticMeshComponent* ABP_BG_ProceduralStairs_Base_C::EnsureStaticMeshComponent(class UStaticMesh* Mesh, class UMaterialInterface* Material, bool IsFloor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.EnsureStaticMeshComponent");
 
@@ -104,7 +103,6 @@ class UInstancedStaticMeshComponent* ABP_BG_ProceduralStairs_Base_C::STATIC_Ensu
 	params.IsFloor = IsFloor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,7 +113,7 @@ class UInstancedStaticMeshComponent* ABP_BG_ProceduralStairs_Base_C::STATIC_Ensu
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.SpawnMesh
-// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMesh*             NewMesh                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInterface*      Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -135,7 +133,6 @@ void ABP_BG_ProceduralStairs_Base_C::SpawnMesh(class UStaticMesh* NewMesh, class
 	params.RelativeTransform = RelativeTransform;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,19 +146,18 @@ void ABP_BG_ProceduralStairs_Base_C::SpawnMesh(class UStaticMesh* NewMesh, class
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.CalcChildScaleFix
-// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bNeedFix                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 FixScale                       (Parm, OutParm, IsPlainOldData)
 
-void ABP_BG_ProceduralStairs_Base_C::STATIC_CalcChildScaleFix(bool* bNeedFix, struct FVector* FixScale)
+void ABP_BG_ProceduralStairs_Base_C::CalcChildScaleFix(bool* bNeedFix, struct FVector* FixScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.CalcChildScaleFix");
 
 	ABP_BG_ProceduralStairs_Base_C_CalcChildScaleFix_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,7 +171,7 @@ void ABP_BG_ProceduralStairs_Base_C::STATIC_CalcChildScaleFix(bool* bNeedFix, st
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.PostConstruction
-// (Net, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_BG_ProceduralStairs_Base_C::PostConstruction()
 {
@@ -192,7 +188,7 @@ void ABP_BG_ProceduralStairs_Base_C::PostConstruction()
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.CreateGimmick
-// (NetRequest, Native, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ABP_BG_ProceduralStairs_Base_C::CreateGimmick()
 {
@@ -201,7 +197,6 @@ void ABP_BG_ProceduralStairs_Base_C::CreateGimmick()
 	ABP_BG_ProceduralStairs_Base_C_CreateGimmick_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -210,16 +205,15 @@ void ABP_BG_ProceduralStairs_Base_C::CreateGimmick()
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.SetModifierBox
-// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_BG_ProceduralStairs_Base_C::STATIC_SetModifierBox()
+void ABP_BG_ProceduralStairs_Base_C::SetModifierBox()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.SetModifierBox");
 
 	ABP_BG_ProceduralStairs_Base_C_SetModifierBox_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -228,12 +222,12 @@ void ABP_BG_ProceduralStairs_Base_C::STATIC_SetModifierBox()
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.CreateLink
-// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_StairsNavLink       StairsNavLink                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BG_ProceduralStairs_Base_C::STATIC_CreateLink(struct FST_StairsNavLink* StairsNavLink, bool* Result)
+void ABP_BG_ProceduralStairs_Base_C::CreateLink(struct FST_StairsNavLink* StairsNavLink, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.CreateLink");
 
@@ -253,7 +247,7 @@ void ABP_BG_ProceduralStairs_Base_C::STATIC_CreateLink(struct FST_StairsNavLink*
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.InitializeFromLegacyChild
-// (NetReliable, Event, NetResponse, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          StepDepth                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StepWidth                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -261,7 +255,7 @@ void ABP_BG_ProceduralStairs_Base_C::STATIC_CreateLink(struct FST_StairsNavLink*
 // int                            NumSteps__1_                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NumbWidths__1_                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BG_ProceduralStairs_Base_C::STATIC_InitializeFromLegacyChild(float StepDepth, float StepWidth, float StepHeight, int NumSteps__1_, int NumbWidths__1_)
+void ABP_BG_ProceduralStairs_Base_C::InitializeFromLegacyChild(float StepDepth, float StepWidth, float StepHeight, int NumSteps__1_, int NumbWidths__1_)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.InitializeFromLegacyChild");
 
@@ -281,11 +275,11 @@ void ABP_BG_ProceduralStairs_Base_C::STATIC_InitializeFromLegacyChild(float Step
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.CalculateBaseRelativeTransform
-// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FTransform              OutTransform                   (Parm, OutParm, IsPlainOldData)
 
-void ABP_BG_ProceduralStairs_Base_C::STATIC_CalculateBaseRelativeTransform(struct FTransform* OutTransform)
+void ABP_BG_ProceduralStairs_Base_C::CalculateBaseRelativeTransform(struct FTransform* OutTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.CalculateBaseRelativeTransform");
 
@@ -303,7 +297,7 @@ void ABP_BG_ProceduralStairs_Base_C::STATIC_CalculateBaseRelativeTransform(struc
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.UserConstructionScript
-// (NetReliable, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_BG_ProceduralStairs_Base_C::UserConstructionScript()
 {
@@ -320,7 +314,7 @@ void ABP_BG_ProceduralStairs_Base_C::UserConstructionScript()
 
 
 // Function BP_BG_ProceduralStairs_Base.BP_BG_ProceduralStairs_Base_C.ExecuteUbergraph_BP_BG_ProceduralStairs_Base
-// (NetReliable, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

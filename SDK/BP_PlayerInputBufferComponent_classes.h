@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -31,11 +31,11 @@ public:
 	}
 
 
-	void STATIC_DetermineState_TargetSwitch(TEnumAsByte<EN_PC_State> State, unsigned char SubState, TEnumAsByte<EN_PC_InputRecord>* Action);
+	void DetermineState_TargetSwitch(TEnumAsByte<EN_PC_State> State, unsigned char SubState, TEnumAsByte<EN_PC_InputRecord>* Action);
 	void DetermineState_Jump(TEnumAsByte<EN_PC_State> State, unsigned char SubState, TEnumAsByte<EN_PC_InputRecord>* Action);
 	void Update(TEnumAsByte<EN_PC_State> InPCState, unsigned char INPCSubState);
 	void OnTargetSelectAction__DelegateSignature();
-	void STATIC_OnJumpAction__DelegateSignature();
+	void OnJumpAction__DelegateSignature();
 };
 
 

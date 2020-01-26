@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,12 +28,12 @@ public:
 
 	void FindClipperOnlyData(const struct FName& Label, struct FString* Clipper);
 	void GetTalkTextData(const struct FName& Label, ES3TextPathType FirstType, ES3TextDataType* TextType, struct FS3TextData* TextData);
-	void STATIC_GetTextDataStringAbridged_(const struct FName& Label, ES3TextPathType Type, struct FString* OutString, struct FString* ClipperString);
-	void STATIC_GetItemDataString(const struct FName& Label, struct FString* Name, struct FString* Description);
-	void STATIC_CreateRubyInfo(const struct FString& Text, struct FST_RubyInfo* OutInfo);
-	void STATIC_GetVoiceData(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, class UObject** Voice);
+	void GetTextDataStringAbridged_(const struct FName& Label, ES3TextPathType Type, struct FString* OutString, struct FString* ClipperString);
+	void GetItemDataString(const struct FName& Label, struct FString* Name, struct FString* Description);
+	void CreateRubyInfo(const struct FString& Text, struct FST_RubyInfo* OutInfo);
+	void GetVoiceData(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, class UObject** Voice);
 	void GetTextDataString(const struct FName& Label, ES3TextPathType Type, struct FString* OutString, struct FString* ClipperString, TArray<struct FString>* TextArray, int* LinefeedCount, TArray<struct FST_RubyInfo>* RubyInfoArray);
-	bool STATIC_Reimport(const struct FName& Label, const struct FString& RootAssetPath);
+	bool Reimport(const struct FName& Label, const struct FString& RootAssetPath);
 	void UserConstructionScript();
 };
 

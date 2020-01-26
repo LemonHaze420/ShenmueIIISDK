@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -65,17 +65,17 @@ public:
 
 	bool IsPlayerCollision(class UActorComponent* ActorComponent);
 	void SetReturnLocation(const struct FVector& Location);
-	void STATIC_AddReturnCount(int AddCount);
+	void AddReturnCount(int AddCount);
 	void SetEnabledPlayer(bool Enabled);
 	void UpdateCamera(float DeltaTime);
 	void AnimRateUpdate(float DeltaSeconds);
-	void STATIC_StopMove();
+	void StopMove();
 	void MoveUpdate(float DeltaSeconds);
-	void STATIC_SetAnimMoveRate(float Rate);
+	void SetAnimMoveRate(float Rate);
 	void PlayCatchAnim();
-	void STATIC_InputAxisLook(float LRAxis, float UDAxis);
+	void InputAxisLook(float LRAxis, float UDAxis);
 	void PreUpdate(float DeltaSec);
-	void STATIC_UserConstructionScript();
+	void UserConstructionScript();
 	void UnRagdollBlend__FinishedFunc();
 	void UnRagdollBlend__UpdateFunc();
 	void RagdollBlend__FinishedFunc();
@@ -83,7 +83,7 @@ public:
 	void Timeline_0__FinishedFunc();
 	void Timeline_0__UpdateFunc();
 	void InpActEvt_Y_K2Node_InputKeyEvent_4(const struct FKey& Key);
-	void STATIC_InpActEvt_Y_K2Node_InputKeyEvent_3(const struct FKey& Key);
+	void InpActEvt_Y_K2Node_InputKeyEvent_3(const struct FKey& Key);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ChangeLocoState(TEnumAsByte<ELocomotionState> State);
@@ -94,7 +94,7 @@ public:
 	void InputReleasedRun();
 	void InputPressedRun();
 	void InputMoveForward(float AxisValue);
-	void STATIC_InputMoveRight(float AxisValue);
+	void InputMoveRight(float AxisValue);
 	void ExecuteUbergraph_BP_MiniGame_CC_Player(int EntryPoint);
 };
 

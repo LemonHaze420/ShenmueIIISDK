@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MemoMap_Mask.WBP_MemoMap_Mask_C.PreConstruct
-// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MemoMap_Mask_C::STATIC_PreConstruct(bool IsDesignTime)
+void UWBP_MemoMap_Mask_C::PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoMap_Mask.WBP_MemoMap_Mask_C.PreConstruct");
 
@@ -34,7 +34,7 @@ void UWBP_MemoMap_Mask_C::STATIC_PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_MemoMap_Mask.WBP_MemoMap_Mask_C.ExecuteUbergraph_WBP_MemoMap_Mask
-// (NetReliable, Exec, Native, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -46,7 +46,6 @@ void UWBP_MemoMap_Mask_C::ExecuteUbergraph_WBP_MemoMap_Mask(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

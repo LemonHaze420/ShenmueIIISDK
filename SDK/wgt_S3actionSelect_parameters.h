@@ -2,7 +2,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -80,8 +80,8 @@ struct Uwgt_S3actionSelect_C_doCmd_addItem_Params
 	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function wgt_S3actionSelect.wgt_S3actionSelect_C.addSelectItem
-struct Uwgt_S3actionSelect_C_addSelectItem_Params
+// Function wgt_S3actionSelect.wgt_S3actionSelect_C.AddSelectItem
+struct Uwgt_S3actionSelect_C_AddSelectItem_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
@@ -123,7 +123,7 @@ struct Uwgt_S3actionSelect_C_doCmd_startDecide_Params
 struct Uwgt_S3actionSelect_C_doCmd_sendInput_Params
 {
 	TEnumAsByte<EN_padSwitch>                          Button;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               press;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Press;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function wgt_S3actionSelect.wgt_S3actionSelect_C.catch_onEndFadeOut(item)

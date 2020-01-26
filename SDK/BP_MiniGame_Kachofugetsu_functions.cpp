@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SetChinaTextures
-// (NetReliable, NetRequest, Native, Event, Static, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_SetChinaTextures()
+void ABP_MiniGame_Kachofugetsu_C::SetChinaTextures()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SetChinaTextures");
 
 	ABP_MiniGame_Kachofugetsu_C_SetChinaTextures_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,18 +31,17 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_SetChinaTextures()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetAppearRate
-// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_MiniGame_Kachofugetsu_C::STATIC_GetAppearRate()
+float ABP_MiniGame_Kachofugetsu_C::GetAppearRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetAppearRate");
 
 	ABP_MiniGame_Kachofugetsu_C_GetAppearRate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +52,7 @@ float ABP_MiniGame_Kachofugetsu_C::STATIC_GetAppearRate()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetChinaText
-// (NetReliable, Exec, NetResponse, Protected, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Return                         (Parm, OutParm, ZeroConstructor)
@@ -78,11 +76,11 @@ void ABP_MiniGame_Kachofugetsu_C::GetChinaText(int Index, struct FString* Return
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.MainCameraEndPos
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_MiniGame_Kachofugetsu_C::STATIC_MainCameraEndPos()
+struct FVector ABP_MiniGame_Kachofugetsu_C::MainCameraEndPos()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.MainCameraEndPos");
 
@@ -99,9 +97,9 @@ struct FVector ABP_MiniGame_Kachofugetsu_C::STATIC_MainCameraEndPos()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.InitializeGameCollision
-// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_InitializeGameCollision()
+void ABP_MiniGame_Kachofugetsu_C::InitializeGameCollision()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.InitializeGameCollision");
 
@@ -116,16 +114,15 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_InitializeGameCollision()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.UpdateBackerEventCount
-// (Native, Event, NetResponse, Static, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_UpdateBackerEventCount()
+void ABP_MiniGame_Kachofugetsu_C::UpdateBackerEventCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.UpdateBackerEventCount");
 
 	ABP_MiniGame_Kachofugetsu_C_UpdateBackerEventCount_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,7 +131,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_UpdateBackerEventCount()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetDetectAction
-// (NetRequest, Event, NetResponse, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -155,7 +152,7 @@ TArray<struct FS3DetectActionParam> ABP_MiniGame_Kachofugetsu_C::GetDetectAction
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetResultWaitTime
-// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EMiniGameKFTypeEnum> Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -178,13 +175,13 @@ float ABP_MiniGame_Kachofugetsu_C::GetResultWaitTime(TEnumAsByte<EMiniGameKFType
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetRandomResult
-// (Net, NetReliable, Exec, Native, Static, MulticastDelegate, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EMiniGameKFTypeEnum> IgnoreType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           UseIgnoreType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EMiniGameKFTypeEnum> Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_GetRandomResult(TEnumAsByte<EMiniGameKFTypeEnum> IgnoreType, bool UseIgnoreType, TEnumAsByte<EMiniGameKFTypeEnum>* Type)
+void ABP_MiniGame_Kachofugetsu_C::GetRandomResult(TEnumAsByte<EMiniGameKFTypeEnum> IgnoreType, bool UseIgnoreType, TEnumAsByte<EMiniGameKFTypeEnum>* Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetRandomResult");
 
@@ -193,7 +190,6 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_GetRandomResult(TEnumAsByte<EMiniGameKF
 	params.UseIgnoreType = UseIgnoreType;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,7 +201,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_GetRandomResult(TEnumAsByte<EMiniGameKF
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.UpdatePlayCountWinFlag
-// (NetResponse, Protected, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::UpdatePlayCountWinFlag()
 {
@@ -222,7 +218,7 @@ void ABP_MiniGame_Kachofugetsu_C::UpdatePlayCountWinFlag()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SpawnForceResultSequence
-// (Exec, Native, Event, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EMiniGameKFTypeEnum> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -234,7 +230,6 @@ void ABP_MiniGame_Kachofugetsu_C::SpawnForceResultSequence(TEnumAsByte<EMiniGame
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,7 +238,7 @@ void ABP_MiniGame_Kachofugetsu_C::SpawnForceResultSequence(TEnumAsByte<EMiniGame
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetClothMeshComponent
-// (Net, NetRequest, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -264,7 +259,7 @@ class UMeshComponent* ABP_MiniGame_Kachofugetsu_C::GetClothMeshComponent()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetLevelSequence
-// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Protected, NetServer, DLLImport, Const)
+// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EMiniGameKFTypeEnum> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ULevelSequence*          Sequence                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -277,7 +272,6 @@ void ABP_MiniGame_Kachofugetsu_C::GetLevelSequence(TEnumAsByte<EMiniGameKFTypeEn
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -289,7 +283,7 @@ void ABP_MiniGame_Kachofugetsu_C::GetLevelSequence(TEnumAsByte<EMiniGameKFTypeEn
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.InitAsyncLoad
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -311,16 +305,15 @@ void ABP_MiniGame_Kachofugetsu_C::InitAsyncLoad(bool* dummy)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.CalcForceWinRate
-// (Native, Event, NetResponse, Static, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_CalcForceWinRate()
+void ABP_MiniGame_Kachofugetsu_C::CalcForceWinRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.CalcForceWinRate");
 
 	ABP_MiniGame_Kachofugetsu_C_CalcForceWinRate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -329,18 +322,17 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_CalcForceWinRate()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.IsForceWinByFortune
-// (Exec, Native, Event, NetResponse, Static, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsForceWin                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_IsForceWinByFortune(bool* IsForceWin)
+void ABP_MiniGame_Kachofugetsu_C::IsForceWinByFortune(bool* IsForceWin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.IsForceWinByFortune");
 
 	ABP_MiniGame_Kachofugetsu_C_IsForceWinByFortune_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -352,11 +344,11 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_IsForceWinByFortune(bool* IsForceWin)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.IsBackerEvent
-// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsEvent                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_IsBackerEvent(bool* IsEvent)
+void ABP_MiniGame_Kachofugetsu_C::IsBackerEvent(bool* IsEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.IsBackerEvent");
 
@@ -374,7 +366,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_IsBackerEvent(bool* IsEvent)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SetGameCollisionEnabled
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -394,7 +386,7 @@ void ABP_MiniGame_Kachofugetsu_C::SetGameCollisionEnabled(bool Enabled)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.IsEventStep
-// (NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -405,7 +397,6 @@ bool ABP_MiniGame_Kachofugetsu_C::IsEventStep()
 	ABP_MiniGame_Kachofugetsu_C_IsEventStep_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -416,9 +407,9 @@ bool ABP_MiniGame_Kachofugetsu_C::IsEventStep()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SaveEventLosing
-// (Event, Static, NetMulticast, Public, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_SaveEventLosing()
+void ABP_MiniGame_Kachofugetsu_C::SaveEventLosing()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SaveEventLosing");
 
@@ -433,7 +424,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_SaveEventLosing()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.IsForceWin
-// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ForceWin                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -455,7 +446,7 @@ void ABP_MiniGame_Kachofugetsu_C::IsForceWin(bool* ForceWin)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.LoadEventLosing
-// (NetRequest, Native, NetResponse, Protected, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::LoadEventLosing()
 {
@@ -464,7 +455,6 @@ void ABP_MiniGame_Kachofugetsu_C::LoadEventLosing()
 	ABP_MiniGame_Kachofugetsu_C_LoadEventLosing_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -473,7 +463,7 @@ void ABP_MiniGame_Kachofugetsu_C::LoadEventLosing()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SetBoardInfo
-// (NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::SetBoardInfo()
 {
@@ -490,7 +480,7 @@ void ABP_MiniGame_Kachofugetsu_C::SetBoardInfo()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetBallThrowPower
-// (Net, Exec, Event, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Power                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -512,16 +502,15 @@ void ABP_MiniGame_Kachofugetsu_C::GetBallThrowPower(float* Power)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.DetachAndThrowBall
-// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_DetachAndThrowBall()
+void ABP_MiniGame_Kachofugetsu_C::DetachAndThrowBall()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.DetachAndThrowBall");
 
 	ABP_MiniGame_Kachofugetsu_C_DetachAndThrowBall_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -530,7 +519,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_DetachAndThrowBall()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GetAnimInstance
-// (Net, Exec, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UABP_MiniGame_KF_Ryo_C*  AsABP_Mini_Game_KF_Ryo         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -552,16 +541,15 @@ void ABP_MiniGame_Kachofugetsu_C::GetAnimInstance(class UABP_MiniGame_KF_Ryo_C**
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ForceRepay
-// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_ForceRepay()
+void ABP_MiniGame_Kachofugetsu_C::ForceRepay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ForceRepay");
 
 	ABP_MiniGame_Kachofugetsu_C_ForceRepay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -570,7 +558,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_ForceRepay()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.UpdateBallMove
-// (Net, NetRequest, Native, Event, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -582,7 +570,6 @@ void ABP_MiniGame_Kachofugetsu_C::UpdateBallMove(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -591,16 +578,15 @@ void ABP_MiniGame_Kachofugetsu_C::UpdateBallMove(float DeltaSeconds)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.InitializeValue
-// (Exec, Native, Static, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_InitializeValue()
+void ABP_MiniGame_Kachofugetsu_C::InitializeValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.InitializeValue");
 
 	ABP_MiniGame_Kachofugetsu_C_InitializeValue_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -609,7 +595,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_InitializeValue()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.UpdateGameMainCamera
-// (NetReliable, Exec, Native, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -621,7 +607,6 @@ void ABP_MiniGame_Kachofugetsu_C::UpdateGameMainCamera(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -630,16 +615,15 @@ void ABP_MiniGame_Kachofugetsu_C::UpdateGameMainCamera(float DeltaSeconds)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SpawnBall
-// (NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_SpawnBall()
+void ABP_MiniGame_Kachofugetsu_C::SpawnBall()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SpawnBall");
 
 	ABP_MiniGame_Kachofugetsu_C_SpawnBall_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -648,7 +632,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_SpawnBall()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.DecideType
-// (Net, NetReliable, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -670,7 +654,7 @@ void ABP_MiniGame_Kachofugetsu_C::DecideType(bool* Return)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SetPlayerMeshPos
-// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 pos                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -690,7 +674,7 @@ void ABP_MiniGame_Kachofugetsu_C::SetPlayerMeshPos(const struct FVector& pos)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.InterpPlayerMeshPos
-// (NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -702,7 +686,6 @@ void ABP_MiniGame_Kachofugetsu_C::InterpPlayerMeshPos(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -711,7 +694,7 @@ void ABP_MiniGame_Kachofugetsu_C::InterpPlayerMeshPos(float DeltaSeconds)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.InputAction
-// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EMiniGameKFTypeEnum> Command                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -731,11 +714,11 @@ void ABP_MiniGame_Kachofugetsu_C::InputAction(TEnumAsByte<EMiniGameKFTypeEnum> C
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SpawnInputControlActor
-// (NetRequest, NetResponse, Static, NetMulticast, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_MiniGameInputBase_C* ABP_MiniGame_Kachofugetsu_C::STATIC_SpawnInputControlActor()
+class ABP_MiniGameInputBase_C* ABP_MiniGame_Kachofugetsu_C::SpawnInputControlActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.SpawnInputControlActor");
 
@@ -752,7 +735,7 @@ class ABP_MiniGameInputBase_C* ABP_MiniGame_Kachofugetsu_C::STATIC_SpawnInputCon
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.UserConstructionScript
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::UserConstructionScript()
 {
@@ -769,7 +752,7 @@ void ABP_MiniGame_Kachofugetsu_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__FlowerCol_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -791,7 +774,6 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__FlowerCol_K2Node_ComponentBoundEvent_0
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -800,14 +782,14 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__FlowerCol_K2Node_ComponentBoundEvent_0
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__FlowerCol_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__FlowerCol_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_MiniGame_Kachofugetsu_C::BndEvt__FlowerCol_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__FlowerCol_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -818,7 +800,6 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__FlowerCol_K2Node_ComponentBound
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -827,7 +808,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__FlowerCol_K2Node_ComponentBound
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BirdCol_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-// (NetRequest, Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -849,7 +830,6 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__BirdCol_K2Node_ComponentBoundEvent_2_C
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -858,14 +838,14 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__BirdCol_K2Node_ComponentBoundEvent_2_C
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BirdCol_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature
-// (NetReliable, Exec, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__BirdCol_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_MiniGame_Kachofugetsu_C::BndEvt__BirdCol_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BirdCol_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -876,7 +856,6 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__BirdCol_K2Node_ComponentBoundEv
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -885,7 +864,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__BirdCol_K2Node_ComponentBoundEv
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__WindCol_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature
-// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -894,7 +873,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__BirdCol_K2Node_ComponentBoundEv
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__WindCol_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_MiniGame_Kachofugetsu_C::BndEvt__WindCol_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__WindCol_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -907,7 +886,6 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__WindCol_K2Node_ComponentBoundEv
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -916,14 +894,14 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__WindCol_K2Node_ComponentBoundEv
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__WindCol_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature
-// (Exec, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__WindCol_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_MiniGame_Kachofugetsu_C::BndEvt__WindCol_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__WindCol_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -934,7 +912,6 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__WindCol_K2Node_ComponentBoundEv
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -943,7 +920,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__WindCol_K2Node_ComponentBoundEv
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__MoonCol_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature
-// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -952,7 +929,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__WindCol_K2Node_ComponentBoundEv
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__MoonCol_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_MiniGame_Kachofugetsu_C::BndEvt__MoonCol_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__MoonCol_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -973,14 +950,14 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__MoonCol_K2Node_ComponentBoundEv
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__MoonCol_K2Node_ComponentBoundEvent_7_ComponentEndOverlapSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__MoonCol_K2Node_ComponentBoundEvent_7_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_MiniGame_Kachofugetsu_C::BndEvt__MoonCol_K2Node_ComponentBoundEvent_7_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__MoonCol_K2Node_ComponentBoundEvent_7_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -991,7 +968,6 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__MoonCol_K2Node_ComponentBoundEv
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1000,14 +976,14 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__MoonCol_K2Node_ComponentBoundEv
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__GameArea_K2Node_ComponentBoundEvent_656_ComponentEndOverlapSignature__DelegateSignature
-// (Net, NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, Const)
+// (BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__GameArea_K2Node_ComponentBoundEvent_656_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_MiniGame_Kachofugetsu_C::BndEvt__GameArea_K2Node_ComponentBoundEvent_656_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__GameArea_K2Node_ComponentBoundEvent_656_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1018,7 +994,6 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__GameArea_K2Node_ComponentBoundE
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1027,7 +1002,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_BndEvt__GameArea_K2Node_ComponentBoundE
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__CoverCollision_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1055,7 +1030,7 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__CoverCollision_K2Node_ComponentBoundEv
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BowlCol1_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1083,7 +1058,7 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__BowlCol1_K2Node_ComponentBoundEvent_0_
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BowlCol2_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature
-// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1111,7 +1086,7 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__BowlCol2_K2Node_ComponentBoundEvent_1_
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BowlCol3_K2Node_ComponentBoundEvent_2_ComponentHitSignature__DelegateSignature
-// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1139,7 +1114,7 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__BowlCol3_K2Node_ComponentBoundEvent_2_
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BowlCol4_K2Node_ComponentBoundEvent_3_ComponentHitSignature__DelegateSignature
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1167,7 +1142,7 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__BowlCol4_K2Node_ComponentBoundEvent_3_
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BowlCol5_K2Node_ComponentBoundEvent_4_ComponentHitSignature__DelegateSignature
-// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (HasOutParms, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1195,7 +1170,7 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__BowlCol5_K2Node_ComponentBoundEvent_4_
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.WinMiniGame
-// (NetReliable, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::WinMiniGame()
 {
@@ -1204,7 +1179,6 @@ void ABP_MiniGame_Kachofugetsu_C::WinMiniGame()
 	ABP_MiniGame_Kachofugetsu_C_WinMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1213,7 +1187,7 @@ void ABP_MiniGame_Kachofugetsu_C::WinMiniGame()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.LoseMiniGame
-// (NetReliable, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::LoseMiniGame()
 {
@@ -1222,7 +1196,6 @@ void ABP_MiniGame_Kachofugetsu_C::LoseMiniGame()
 	ABP_MiniGame_Kachofugetsu_C_LoseMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1231,7 +1204,7 @@ void ABP_MiniGame_Kachofugetsu_C::LoseMiniGame()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.DrawMiniGame
-// (Net, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::DrawMiniGame()
 {
@@ -1240,7 +1213,6 @@ void ABP_MiniGame_Kachofugetsu_C::DrawMiniGame()
 	ABP_MiniGame_Kachofugetsu_C_DrawMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1249,7 +1221,7 @@ void ABP_MiniGame_Kachofugetsu_C::DrawMiniGame()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.StartMiniGame
-// (Net, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::StartMiniGame()
 {
@@ -1258,7 +1230,6 @@ void ABP_MiniGame_Kachofugetsu_C::StartMiniGame()
 	ABP_MiniGame_Kachofugetsu_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1267,7 +1238,7 @@ void ABP_MiniGame_Kachofugetsu_C::StartMiniGame()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.EndMiniGame
-// (Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::EndMiniGame()
 {
@@ -1276,7 +1247,6 @@ void ABP_MiniGame_Kachofugetsu_C::EndMiniGame()
 	ABP_MiniGame_Kachofugetsu_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1285,7 +1255,7 @@ void ABP_MiniGame_Kachofugetsu_C::EndMiniGame()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.FinalizeTalk
-// (Net, NetReliable, Exec, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::FinalizeTalk()
 {
@@ -1302,7 +1272,7 @@ void ABP_MiniGame_Kachofugetsu_C::FinalizeTalk()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.OnFinishedFade
-// (Net, NetReliable, NetRequest, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::OnFinishedFade()
 {
@@ -1319,7 +1289,7 @@ void ABP_MiniGame_Kachofugetsu_C::OnFinishedFade()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ReceiveBeginPlay
-// (Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::ReceiveBeginPlay()
 {
@@ -1328,7 +1298,6 @@ void ABP_MiniGame_Kachofugetsu_C::ReceiveBeginPlay()
 	ABP_MiniGame_Kachofugetsu_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1337,11 +1306,11 @@ void ABP_MiniGame_Kachofugetsu_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ReceiveTick
-// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_Kachofugetsu_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ReceiveTick");
 
@@ -1349,7 +1318,6 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1358,7 +1326,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature
-// (NetReliable, NetRequest, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
 {
@@ -1375,7 +1343,7 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Com
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
 {
@@ -1392,11 +1360,11 @@ void ABP_MiniGame_Kachofugetsu_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Com
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.OnTalkScriptEvent
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_OnTalkScriptEvent(int EventNumber)
+void ABP_MiniGame_Kachofugetsu_C::OnTalkScriptEvent(int EventNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.OnTalkScriptEvent");
 
@@ -1412,11 +1380,11 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ResumeMiniGame
-// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword)
+void ABP_MiniGame_Kachofugetsu_C::ResumeMiniGame(const struct FString& ResumeKeyword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ResumeMiniGame");
 
@@ -1432,7 +1400,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_ResumeMiniGame(const struct FString& Re
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ThrowBall
-// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::ThrowBall()
 {
@@ -1449,7 +1417,7 @@ void ABP_MiniGame_Kachofugetsu_C::ThrowBall()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.FlowSelectDecideEvent
-// (Net, NetRequest, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::FlowSelectDecideEvent()
 {
@@ -1466,7 +1434,7 @@ void ABP_MiniGame_Kachofugetsu_C::FlowSelectDecideEvent()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ThrowBallFromAnim
-// (Net, NetRequest, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::ThrowBallFromAnim()
 {
@@ -1483,7 +1451,7 @@ void ABP_MiniGame_Kachofugetsu_C::ThrowBallFromAnim()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.StopThrowBallSE
-// (NetRequest, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::StopThrowBallSE()
 {
@@ -1500,7 +1468,7 @@ void ABP_MiniGame_Kachofugetsu_C::StopThrowBallSE()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BindBallHitXEvent
-// (NetRequest, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::BindBallHitXEvent()
 {
@@ -1517,7 +1485,7 @@ void ABP_MiniGame_Kachofugetsu_C::BindBallHitXEvent()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ForceWin
-// (Net, NetReliable, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::ForceWin()
 {
@@ -1534,7 +1502,7 @@ void ABP_MiniGame_Kachofugetsu_C::ForceWin()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.CancelMiniGame
-// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::CancelMiniGame()
 {
@@ -1551,7 +1519,7 @@ void ABP_MiniGame_Kachofugetsu_C::CancelMiniGame()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ConsumeGamblePrice
-// (Net, NetReliable, Exec, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::ConsumeGamblePrice()
 {
@@ -1568,7 +1536,7 @@ void ABP_MiniGame_Kachofugetsu_C::ConsumeGamblePrice()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ForceLoseEvent
-// (Net, NetReliable, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::ForceLoseEvent()
 {
@@ -1585,7 +1553,7 @@ void ABP_MiniGame_Kachofugetsu_C::ForceLoseEvent()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.DelayedInitialize
-// (NetReliable, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::DelayedInitialize()
 {
@@ -1602,11 +1570,11 @@ void ABP_MiniGame_Kachofugetsu_C::DelayedInitialize()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GameFlowForChina
-// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EMiniGameKFTypeEnum> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Kachofugetsu_C::STATIC_GameFlowForChina(TEnumAsByte<EMiniGameKFTypeEnum> Result)
+void ABP_MiniGame_Kachofugetsu_C::GameFlowForChina(TEnumAsByte<EMiniGameKFTypeEnum> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.GameFlowForChina");
 
@@ -1614,7 +1582,6 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_GameFlowForChina(TEnumAsByte<EMiniGameK
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1623,7 +1590,7 @@ void ABP_MiniGame_Kachofugetsu_C::STATIC_GameFlowForChina(TEnumAsByte<EMiniGameK
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ActionForChina
-// (Net, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::ActionForChina()
 {
@@ -1640,7 +1607,7 @@ void ABP_MiniGame_Kachofugetsu_C::ActionForChina()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.PlayAppearUIAnim
-// (Net, Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::PlayAppearUIAnim()
 {
@@ -1657,7 +1624,7 @@ void ABP_MiniGame_Kachofugetsu_C::PlayAppearUIAnim()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.DecideResultForChina
-// (Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::DecideResultForChina()
 {
@@ -1674,7 +1641,7 @@ void ABP_MiniGame_Kachofugetsu_C::DecideResultForChina()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.BeginPause
-// (Exec, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::BeginPause()
 {
@@ -1691,7 +1658,7 @@ void ABP_MiniGame_Kachofugetsu_C::BeginPause()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.EndPause
-// (Net, NetReliable, NetRequest, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Kachofugetsu_C::EndPause()
 {
@@ -1708,7 +1675,7 @@ void ABP_MiniGame_Kachofugetsu_C::EndPause()
 
 
 // Function BP_MiniGame_Kachofugetsu.BP_MiniGame_Kachofugetsu_C.ExecuteUbergraph_BP_MiniGame_Kachofugetsu
-// (Net, NetRequest, Native, NetResponse, NetMulticast, Protected, Delegate, HasOutParms, BlueprintEvent)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1720,7 +1687,6 @@ void ABP_MiniGame_Kachofugetsu_C::ExecuteUbergraph_BP_MiniGame_Kachofugetsu(int 
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,11 +25,11 @@ public:
 	}
 
 
-	void ForbidAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
-	void PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
+	void STATIC_ForbidAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
+	void STATIC_PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
 	void STATIC_ForbidWindowUI(class AActor* Actor, class UObject* __WorldContext);
 	void STATIC_PermitWindowUI(class AActor* Actor, class UObject* __WorldContext);
-	void getS3DetectAction(class UObject* __WorldContext, class ABP_S3DetectAction_C** BP_S3DetectAction);
+	void STATIC_getS3DetectAction(class UObject* __WorldContext, class ABP_S3DetectAction_C** BP_S3DetectAction);
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,12 +47,12 @@ public:
 	void UpdateAnim();
 	void SetResultCamera();
 	void ResetCamera();
-	void STATIC_DeleteRodMeshData();
-	void STATIC_SetRodMeshData(class USkeletalMesh* MeshData, class UMaterialInstance* Material, bool IsBacker);
-	void STATIC_UserConstructionScript();
-	void STATIC_Set_Active(bool is_active);
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_ReceiveBeginPlay();
+	void DeleteRodMeshData();
+	void SetRodMeshData(class USkeletalMesh* MeshData, class UMaterialInstance* Material, bool IsBacker);
+	void UserConstructionScript();
+	void Set_Active(bool is_active);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_Fishing_Ryo(int EntryPoint);
 };
 

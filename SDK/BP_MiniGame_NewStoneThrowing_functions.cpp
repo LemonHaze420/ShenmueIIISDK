@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.RotateUpdate
-// (Exec, Native, NetResponse, Static, Private, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_RotateUpdate()
+void ABP_MiniGame_NewStoneThrowing_C::RotateUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.RotateUpdate");
 
 	ABP_MiniGame_NewStoneThrowing_C_RotateUpdate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_RotateUpdate()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ClacArmPower
-// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -45,7 +44,6 @@ float ABP_MiniGame_NewStoneThrowing_C::ClacArmPower(float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,11 +54,11 @@ float ABP_MiniGame_NewStoneThrowing_C::ClacArmPower(float Value)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.GetMiniGameBGMID
-// (Net, NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   ID                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_GetMiniGameBGMID(struct FName* ID)
+void ABP_MiniGame_NewStoneThrowing_C::GetMiniGameBGMID(struct FName* ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.GetMiniGameBGMID");
 
@@ -78,7 +76,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_GetMiniGameBGMID(struct FName* ID)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.GetDetectAction
-// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -99,7 +97,7 @@ TArray<struct FS3DetectActionParam> ABP_MiniGame_NewStoneThrowing_C::GetDetectAc
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetBlockingVolume
-// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -119,7 +117,7 @@ void ABP_MiniGame_NewStoneThrowing_C::SetBlockingVolume(bool Enabled)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.GetMiniGameHelpName
-// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 String                         (Parm, OutParm, ZeroConstructor)
 
@@ -130,7 +128,6 @@ void ABP_MiniGame_NewStoneThrowing_C::GetMiniGameHelpName(struct FString* String
 	ABP_MiniGame_NewStoneThrowing_C_GetMiniGameHelpName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,7 +139,7 @@ void ABP_MiniGame_NewStoneThrowing_C::GetMiniGameHelpName(struct FString* String
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetBoardInfo
-// (Native, NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::SetBoardInfo()
 {
@@ -151,7 +148,6 @@ void ABP_MiniGame_NewStoneThrowing_C::SetBoardInfo()
 	ABP_MiniGame_NewStoneThrowing_C_SetBoardInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,7 +156,7 @@ void ABP_MiniGame_NewStoneThrowing_C::SetBoardInfo()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.InitializeArrow
-// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::InitializeArrow()
 {
@@ -169,7 +165,6 @@ void ABP_MiniGame_NewStoneThrowing_C::InitializeArrow()
 	ABP_MiniGame_NewStoneThrowing_C_InitializeArrow_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,14 +173,14 @@ void ABP_MiniGame_NewStoneThrowing_C::InitializeArrow()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetAndInterpHandRotate
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsInterp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InterpSpeed                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_SetAndInterpHandRotate(bool IsInterp, float Target, float DeltaTime, float InterpSpeed)
+void ABP_MiniGame_NewStoneThrowing_C::SetAndInterpHandRotate(bool IsInterp, float Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetAndInterpHandRotate");
 
@@ -196,7 +191,6 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_SetAndInterpHandRotate(bool IsInter
 	params.InterpSpeed = InterpSpeed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,7 +199,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_SetAndInterpHandRotate(bool IsInter
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.IsChangePowerAngle
-// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -226,18 +220,17 @@ bool ABP_MiniGame_NewStoneThrowing_C::IsChangePowerAngle()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.GetInputPowerLength
-// (Native, Static, Protected, NetClient, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_MiniGame_NewStoneThrowing_C::STATIC_GetInputPowerLength()
+float ABP_MiniGame_NewStoneThrowing_C::GetInputPowerLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.GetInputPowerLength");
 
 	ABP_MiniGame_NewStoneThrowing_C_GetInputPowerLength_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -248,18 +241,17 @@ float ABP_MiniGame_NewStoneThrowing_C::STATIC_GetInputPowerLength()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.AddItem
-// (Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ItemCount                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_AddItem(int* ItemCount)
+void ABP_MiniGame_NewStoneThrowing_C::AddItem(int* ItemCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.AddItem");
 
 	ABP_MiniGame_NewStoneThrowing_C_AddItem_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -271,11 +263,11 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_AddItem(int* ItemCount)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.AddGiftList
-// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   GiftName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_AddGiftList(const struct FName& GiftName)
+void ABP_MiniGame_NewStoneThrowing_C::AddGiftList(const struct FName& GiftName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.AddGiftList");
 
@@ -283,7 +275,6 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_AddGiftList(const struct FName& Gif
 	params.GiftName = GiftName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -292,11 +283,11 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_AddGiftList(const struct FName& Gif
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.UpdateArrow
-// (Net, NetRequest, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_UpdateArrow(float DeltaSeconds)
+void ABP_MiniGame_NewStoneThrowing_C::UpdateArrow(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.UpdateArrow");
 
@@ -312,7 +303,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_UpdateArrow(float DeltaSeconds)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.UpdateShaking
-// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -324,7 +315,6 @@ void ABP_MiniGame_NewStoneThrowing_C::UpdateShaking(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -333,7 +323,7 @@ void ABP_MiniGame_NewStoneThrowing_C::UpdateShaking(float DeltaSeconds)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.InitializeValue
-// (Net, NetRequest, Exec, Native, NetResponse, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::InitializeValue()
 {
@@ -342,7 +332,6 @@ void ABP_MiniGame_NewStoneThrowing_C::InitializeValue()
 	ABP_MiniGame_NewStoneThrowing_C_InitializeValue_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -351,11 +340,11 @@ void ABP_MiniGame_NewStoneThrowing_C::InitializeValue()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.CameraUpdate
-// (NetReliable, NetResponse, Static, MulticastDelegate, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_CameraUpdate(float DeltaSeconds)
+void ABP_MiniGame_NewStoneThrowing_C::CameraUpdate(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.CameraUpdate");
 
@@ -371,7 +360,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_CameraUpdate(float DeltaSeconds)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetRightAxisY
-// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -383,7 +372,6 @@ void ABP_MiniGame_NewStoneThrowing_C::SetRightAxisY(float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -392,7 +380,7 @@ void ABP_MiniGame_NewStoneThrowing_C::SetRightAxisY(float Value)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetRightAxisX
-// (Net, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -404,7 +392,6 @@ void ABP_MiniGame_NewStoneThrowing_C::SetRightAxisX(float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -413,7 +400,7 @@ void ABP_MiniGame_NewStoneThrowing_C::SetRightAxisX(float Value)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.HideUI
-// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::HideUI()
 {
@@ -430,18 +417,17 @@ void ABP_MiniGame_NewStoneThrowing_C::HideUI()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SpawnInputControlActor
-// (Net, Native, NetResponse, Static, Private, Delegate, NetServer)
+// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_MiniGameInputBase_C* ABP_MiniGame_NewStoneThrowing_C::STATIC_SpawnInputControlActor()
+class ABP_MiniGameInputBase_C* ABP_MiniGame_NewStoneThrowing_C::SpawnInputControlActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SpawnInputControlActor");
 
 	ABP_MiniGame_NewStoneThrowing_C_SpawnInputControlActor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -452,13 +438,13 @@ class ABP_MiniGameInputBase_C* ABP_MiniGame_NewStoneThrowing_C::STATIC_SpawnInpu
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ShowUIThrowResult
-// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsSuccess                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Point                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsVisible                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_ShowUIThrowResult(bool IsSuccess, int Point, bool IsVisible)
+void ABP_MiniGame_NewStoneThrowing_C::ShowUIThrowResult(bool IsSuccess, int Point, bool IsVisible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ShowUIThrowResult");
 
@@ -468,7 +454,6 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_ShowUIThrowResult(bool IsSuccess, i
 	params.IsVisible = IsVisible;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -477,7 +462,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_ShowUIThrowResult(bool IsSuccess, i
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ShowUIGameResult
-// (Net, Native, Event, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::ShowUIGameResult()
 {
@@ -486,7 +471,6 @@ void ABP_MiniGame_NewStoneThrowing_C::ShowUIGameResult()
 	ABP_MiniGame_NewStoneThrowing_C_ShowUIGameResult_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -495,11 +479,11 @@ void ABP_MiniGame_NewStoneThrowing_C::ShowUIGameResult()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetUIScore
-// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            InScore                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_SetUIScore(int InScore)
+void ABP_MiniGame_NewStoneThrowing_C::SetUIScore(int InScore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetUIScore");
 
@@ -507,7 +491,6 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_SetUIScore(int InScore)
 	params.InScore = InScore;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -516,11 +499,11 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_SetUIScore(int InScore)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetUIThrowCount
-// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Count                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_SetUIThrowCount(int Count)
+void ABP_MiniGame_NewStoneThrowing_C::SetUIThrowCount(int Count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.SetUIThrowCount");
 
@@ -528,7 +511,6 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_SetUIThrowCount(int Count)
 	params.Count = Count;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -537,9 +519,9 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_SetUIThrowCount(int Count)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.UserConstructionScript
-// (Exec, NetResponse, Static, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_UserConstructionScript()
+void ABP_MiniGame_NewStoneThrowing_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.UserConstructionScript");
 
@@ -554,7 +536,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.Timeline_Arm__FinishedFunc
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::Timeline_Arm__FinishedFunc()
 {
@@ -563,7 +545,6 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_Arm__FinishedFunc()
 	ABP_MiniGame_NewStoneThrowing_C_Timeline_Arm__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -572,7 +553,7 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_Arm__FinishedFunc()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.Timeline_Arm__UpdateFunc
-// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::Timeline_Arm__UpdateFunc()
 {
@@ -581,7 +562,6 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_Arm__UpdateFunc()
 	ABP_MiniGame_NewStoneThrowing_C_Timeline_Arm__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -590,7 +570,7 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_Arm__UpdateFunc()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.Timeline_2__FinishedFunc
-// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::Timeline_2__FinishedFunc()
 {
@@ -599,7 +579,6 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_2__FinishedFunc()
 	ABP_MiniGame_NewStoneThrowing_C_Timeline_2__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -608,7 +587,7 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_2__FinishedFunc()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.Timeline_2__UpdateFunc
-// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::Timeline_2__UpdateFunc()
 {
@@ -617,7 +596,6 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_2__UpdateFunc()
 	ABP_MiniGame_NewStoneThrowing_C_Timeline_2__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -626,7 +604,7 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_2__UpdateFunc()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.Timeline_0__FinishedFunc
-// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::Timeline_0__FinishedFunc()
 {
@@ -635,7 +613,6 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_0__FinishedFunc()
 	ABP_MiniGame_NewStoneThrowing_C_Timeline_0__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -644,7 +621,7 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_0__FinishedFunc()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.Timeline_0__UpdateFunc
-// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::Timeline_0__UpdateFunc()
 {
@@ -653,7 +630,6 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_0__UpdateFunc()
 	ABP_MiniGame_NewStoneThrowing_C_Timeline_0__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -662,11 +638,11 @@ void ABP_MiniGame_NewStoneThrowing_C::Timeline_0__UpdateFunc()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ReceiveTick
-// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_NewStoneThrowing_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ReceiveTick");
 
@@ -682,7 +658,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.StartTakeOut
-// (Net, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::StartTakeOut()
 {
@@ -691,7 +667,6 @@ void ABP_MiniGame_NewStoneThrowing_C::StartTakeOut()
 	ABP_MiniGame_NewStoneThrowing_C_StartTakeOut_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -700,7 +675,7 @@ void ABP_MiniGame_NewStoneThrowing_C::StartTakeOut()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.OnFinishedTakeOutAnim
-// (Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::OnFinishedTakeOutAnim()
 {
@@ -709,7 +684,6 @@ void ABP_MiniGame_NewStoneThrowing_C::OnFinishedTakeOutAnim()
 	ABP_MiniGame_NewStoneThrowing_C_OnFinishedTakeOutAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -718,7 +692,7 @@ void ABP_MiniGame_NewStoneThrowing_C::OnFinishedTakeOutAnim()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.PlayArmUpDown
-// (Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::PlayArmUpDown()
 {
@@ -727,7 +701,6 @@ void ABP_MiniGame_NewStoneThrowing_C::PlayArmUpDown()
 	ABP_MiniGame_NewStoneThrowing_C_PlayArmUpDown_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -736,7 +709,7 @@ void ABP_MiniGame_NewStoneThrowing_C::PlayArmUpDown()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.StopArmUpDown
-// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::StopArmUpDown()
 {
@@ -745,7 +718,6 @@ void ABP_MiniGame_NewStoneThrowing_C::StopArmUpDown()
 	ABP_MiniGame_NewStoneThrowing_C_StopArmUpDown_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -754,7 +726,7 @@ void ABP_MiniGame_NewStoneThrowing_C::StopArmUpDown()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.OnThorwObject
-// (Net, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::OnThorwObject()
 {
@@ -763,7 +735,6 @@ void ABP_MiniGame_NewStoneThrowing_C::OnThorwObject()
 	ABP_MiniGame_NewStoneThrowing_C_OnThorwObject_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -772,7 +743,7 @@ void ABP_MiniGame_NewStoneThrowing_C::OnThorwObject()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.OnFinishedFade
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::OnFinishedFade()
 {
@@ -781,7 +752,6 @@ void ABP_MiniGame_NewStoneThrowing_C::OnFinishedFade()
 	ABP_MiniGame_NewStoneThrowing_C_OnFinishedFade_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -790,7 +760,7 @@ void ABP_MiniGame_NewStoneThrowing_C::OnFinishedFade()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.DrawMiniGame
-// (NetRequest, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::DrawMiniGame()
 {
@@ -807,7 +777,7 @@ void ABP_MiniGame_NewStoneThrowing_C::DrawMiniGame()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.RestartMiniGame
-// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::RestartMiniGame()
 {
@@ -824,7 +794,7 @@ void ABP_MiniGame_NewStoneThrowing_C::RestartMiniGame()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.OnDecideThrowingResult
-// (Net, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bSuccess                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Point                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -852,7 +822,7 @@ void ABP_MiniGame_NewStoneThrowing_C::OnDecideThrowingResult(bool bSuccess, int 
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.LoseMiniGame
-// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::LoseMiniGame()
 {
@@ -869,7 +839,7 @@ void ABP_MiniGame_NewStoneThrowing_C::LoseMiniGame()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.WinMiniGame
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::WinMiniGame()
 {
@@ -886,7 +856,7 @@ void ABP_MiniGame_NewStoneThrowing_C::WinMiniGame()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.EndMiniGame
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::EndMiniGame()
 {
@@ -903,7 +873,7 @@ void ABP_MiniGame_NewStoneThrowing_C::EndMiniGame()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.StartMiniGame
-// (Net, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::StartMiniGame()
 {
@@ -920,7 +890,7 @@ void ABP_MiniGame_NewStoneThrowing_C::StartMiniGame()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ReceiveBeginPlay
-// (Net, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::ReceiveBeginPlay()
 {
@@ -937,11 +907,11 @@ void ABP_MiniGame_NewStoneThrowing_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.OnTalkScriptEvent
-// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_OnTalkScriptEvent(int EventNumber)
+void ABP_MiniGame_NewStoneThrowing_C::OnTalkScriptEvent(int EventNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.OnTalkScriptEvent");
 
@@ -957,7 +927,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature
-// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
 {
@@ -966,7 +936,6 @@ void ABP_MiniGame_NewStoneThrowing_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node
 	ABP_MiniGame_NewStoneThrowing_C_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -975,7 +944,7 @@ void ABP_MiniGame_NewStoneThrowing_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature
-// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
 {
@@ -984,7 +953,6 @@ void ABP_MiniGame_NewStoneThrowing_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node
 	ABP_MiniGame_NewStoneThrowing_C_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -993,11 +961,11 @@ void ABP_MiniGame_NewStoneThrowing_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ResumeMiniGame
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_MiniGame_NewStoneThrowing_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword)
+void ABP_MiniGame_NewStoneThrowing_C::ResumeMiniGame(const struct FString& ResumeKeyword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ResumeMiniGame");
 
@@ -1013,7 +981,7 @@ void ABP_MiniGame_NewStoneThrowing_C::STATIC_ResumeMiniGame(const struct FString
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.EndGame
-// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::EndGame()
 {
@@ -1022,7 +990,6 @@ void ABP_MiniGame_NewStoneThrowing_C::EndGame()
 	ABP_MiniGame_NewStoneThrowing_C_EndGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1031,7 +998,7 @@ void ABP_MiniGame_NewStoneThrowing_C::EndGame()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.OnFinishedFadeEndGame
-// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::OnFinishedFadeEndGame()
 {
@@ -1040,7 +1007,6 @@ void ABP_MiniGame_NewStoneThrowing_C::OnFinishedFadeEndGame()
 	ABP_MiniGame_NewStoneThrowing_C_OnFinishedFadeEndGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1049,7 +1015,7 @@ void ABP_MiniGame_NewStoneThrowing_C::OnFinishedFadeEndGame()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ConsumeGamblePrice
-// (Net, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::ConsumeGamblePrice()
 {
@@ -1066,7 +1032,7 @@ void ABP_MiniGame_NewStoneThrowing_C::ConsumeGamblePrice()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.OnStopped
-// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bResult                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Score                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1096,7 +1062,7 @@ void ABP_MiniGame_NewStoneThrowing_C::OnStopped(bool bResult, int Score, const s
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.FinalizeTalk
-// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_NewStoneThrowing_C::FinalizeTalk()
 {
@@ -1113,7 +1079,7 @@ void ABP_MiniGame_NewStoneThrowing_C::FinalizeTalk()
 
 
 // Function BP_MiniGame_NewStoneThrowing.BP_MiniGame_NewStoneThrowing_C.ExecuteUbergraph_BP_MiniGame_NewStoneThrowing
-// (Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

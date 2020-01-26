@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,23 +50,23 @@ public:
 
 
 	void OnClickedButtonQTEForceSuccess();
-	void STATIC_OnCheckStateChangedQTEForceSuccess(bool IsChecked);
+	void OnCheckStateChangedQTEForceSuccess(bool IsChecked);
 	void InitializeForQTEForceSuccess();
-	class UBW_DebugCutsceneListItem_C* STATIC_SearchLastSelectedDebugMenuCutsceneItem();
+	class UBW_DebugCutsceneListItem_C* SearchLastSelectedDebugMenuCutsceneItem();
 	void OnClickedButtonSwitchSort();
 	void OnCheckStateChangedSwitchSort(bool IsChecked);
 	void ConvertCutsceneIDForIDSort(const struct FString& InCutsceneID, struct FString* ConvertedCutsceneID);
 	void InitializeForIDSort();
-	bool STATIC_CheckGotoCategory(int NewIndex);
+	bool CheckGotoCategory(int NewIndex);
 	void UpdateFocus();
-	struct FEventReply STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void STATIC_SetFocusToCategory();
+	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void SetFocusToCategory();
 	void SetFocusToItem(int Index);
-	struct FEventReply STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void STATIC_UpdateCutsceneList();
+	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void UpdateCutsceneList();
 	void BuildCutsceneList();
 	void Construct();
-	void STATIC_EventOnCategoryChanged(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void EventOnCategoryChanged(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void OnClickedButtonUseAnother();
 	void OnCheckStateChangedUseAnother(bool bIsChecked);
 	void SetupAnotherSkeletalMesh();

@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.IsLoading
-// (Exec, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,12 +35,12 @@ bool ABP_SkillDisplayScene_Base_C::IsLoading()
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.GetWidgetVisible
-// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UWidget*                 self2                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SkillDisplayScene_Base_C::STATIC_GetWidgetVisible(class UWidget* self2)
+bool ABP_SkillDisplayScene_Base_C::GetWidgetVisible(class UWidget* self2)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.GetWidgetVisible");
 
@@ -58,7 +58,7 @@ bool ABP_SkillDisplayScene_Base_C::STATIC_GetWidgetVisible(class UWidget* self2)
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.CaptureSingleFrame
-// (Net, NetReliable, Exec, Event, NetResponse, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -82,7 +82,7 @@ void ABP_SkillDisplayScene_Base_C::CaptureSingleFrame(const struct FName& Item, 
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.SetRenderTexture
-// (Net, NetRequest, Native, NetResponse, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTextureRenderTarget2D*  TextureRenderTarget2D          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -94,7 +94,6 @@ void ABP_SkillDisplayScene_Base_C::SetRenderTexture(class UTextureRenderTarget2D
 	params.TextureRenderTarget2D = TextureRenderTarget2D;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,7 +102,7 @@ void ABP_SkillDisplayScene_Base_C::SetRenderTexture(class UTextureRenderTarget2D
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.EnableDrawToTexture
-// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bRender                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -123,7 +122,7 @@ void ABP_SkillDisplayScene_Base_C::EnableDrawToTexture(bool bRender)
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.StopMotion
-// (Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -145,7 +144,7 @@ void ABP_SkillDisplayScene_Base_C::StopMotion(bool* bSuccess)
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.PlayMotionForItem
-// (Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   Skill                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -169,7 +168,7 @@ void ABP_SkillDisplayScene_Base_C::PlayMotionForItem(const struct FName& Skill, 
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.UserConstructionScript
-// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_SkillDisplayScene_Base_C::UserConstructionScript()
 {
@@ -186,11 +185,11 @@ void ABP_SkillDisplayScene_Base_C::UserConstructionScript()
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.ReceiveTick
-// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SkillDisplayScene_Base_C::STATIC_ReceiveTick(float DeltaSeconds)
+void ABP_SkillDisplayScene_Base_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.ReceiveTick");
 
@@ -198,7 +197,6 @@ void ABP_SkillDisplayScene_Base_C::STATIC_ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -207,7 +205,7 @@ void ABP_SkillDisplayScene_Base_C::STATIC_ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.ReceiveEndPlay
-// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -219,7 +217,6 @@ void ABP_SkillDisplayScene_Base_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -228,11 +225,11 @@ void ABP_SkillDisplayScene_Base_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 
 
 // Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.ExecuteUbergraph_BP_SkillDisplayScene_Base
-// (Exec, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SkillDisplayScene_Base_C::STATIC_ExecuteUbergraph_BP_SkillDisplayScene_Base(int EntryPoint)
+void ABP_SkillDisplayScene_Base_C::ExecuteUbergraph_BP_SkillDisplayScene_Base(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SkillDisplayScene_Base.BP_SkillDisplayScene_Base_C.ExecuteUbergraph_BP_SkillDisplayScene_Base");
 

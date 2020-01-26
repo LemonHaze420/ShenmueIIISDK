@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.InitAsyncLoad
-// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void ABP_MiniGame_Maho_C::InitAsyncLoad(bool* dummy)
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.UpdateMahoAccumulation
-// (NetReliable, Exec, Native, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::UpdateMahoAccumulation()
 {
@@ -45,7 +45,6 @@ void ABP_MiniGame_Maho_C::UpdateMahoAccumulation()
 	ABP_MiniGame_Maho_C_UpdateMahoAccumulation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +53,7 @@ void ABP_MiniGame_Maho_C::UpdateMahoAccumulation()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.SetDifficulty
-// (NetReliable, NetRequest, Native, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -66,7 +65,6 @@ void ABP_MiniGame_Maho_C::SetDifficulty(int Level)
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,18 +73,17 @@ void ABP_MiniGame_Maho_C::SetDifficulty(int Level)
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.GetDetectAction
-// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintEvent)
+// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FS3DetectActionParam> ABP_MiniGame_Maho_C::STATIC_GetDetectAction()
+TArray<struct FS3DetectActionParam> ABP_MiniGame_Maho_C::GetDetectAction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.GetDetectAction");
 
 	ABP_MiniGame_Maho_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,12 +94,12 @@ TArray<struct FS3DetectActionParam> ABP_MiniGame_Maho_C::STATIC_GetDetectAction(
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.GetPlayLabel
-// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGame_MahoPartnerState> State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   labelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Maho_C::STATIC_GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName)
+void ABP_MiniGame_Maho_C::GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.GetPlayLabel");
 
@@ -121,11 +118,11 @@ void ABP_MiniGame_Maho_C::STATIC_GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartner
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.CanGameUpdate
-// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_MiniGame_Maho_C::STATIC_CanGameUpdate()
+bool ABP_MiniGame_Maho_C::CanGameUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.CanGameUpdate");
 
@@ -142,7 +139,7 @@ bool ABP_MiniGame_Maho_C::STATIC_CanGameUpdate()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.UpdateUILine
-// (Net, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::UpdateUILine()
 {
@@ -159,11 +156,11 @@ void ABP_MiniGame_Maho_C::UpdateUILine()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.SetNPCVisible
-// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, Const)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Maho_C::STATIC_SetNPCVisible(bool Visible)
+void ABP_MiniGame_Maho_C::SetNPCVisible(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.SetNPCVisible");
 
@@ -179,16 +176,15 @@ void ABP_MiniGame_Maho_C::STATIC_SetNPCVisible(bool Visible)
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.UpdateAnim
-// (NetRequest, Native, Event, NetResponse, Static, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Maho_C::STATIC_UpdateAnim()
+void ABP_MiniGame_Maho_C::UpdateAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.UpdateAnim");
 
 	ABP_MiniGame_Maho_C_UpdateAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -197,16 +193,15 @@ void ABP_MiniGame_Maho_C::STATIC_UpdateAnim()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.UserConstructionScript
-// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_Maho_C::STATIC_UserConstructionScript()
+void ABP_MiniGame_Maho_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.UserConstructionScript");
 
 	ABP_MiniGame_Maho_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,7 +210,7 @@ void ABP_MiniGame_Maho_C::STATIC_UserConstructionScript()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.Timeline_CollisionScaleInitialize__FinishedFunc
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::Timeline_CollisionScaleInitialize__FinishedFunc()
 {
@@ -232,7 +227,7 @@ void ABP_MiniGame_Maho_C::Timeline_CollisionScaleInitialize__FinishedFunc()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.Timeline_CollisionScaleInitialize__UpdateFunc
-// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::Timeline_CollisionScaleInitialize__UpdateFunc()
 {
@@ -249,7 +244,7 @@ void ABP_MiniGame_Maho_C::Timeline_CollisionScaleInitialize__UpdateFunc()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.Timiline_SafeBar__FinishedFunc
-// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::Timiline_SafeBar__FinishedFunc()
 {
@@ -266,7 +261,7 @@ void ABP_MiniGame_Maho_C::Timiline_SafeBar__FinishedFunc()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.Timiline_SafeBar__UpdateFunc
-// (NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::Timiline_SafeBar__UpdateFunc()
 {
@@ -283,7 +278,7 @@ void ABP_MiniGame_Maho_C::Timiline_SafeBar__UpdateFunc()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.StartMiniGame
-// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::StartMiniGame()
 {
@@ -292,7 +287,6 @@ void ABP_MiniGame_Maho_C::StartMiniGame()
 	ABP_MiniGame_Maho_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -301,7 +295,7 @@ void ABP_MiniGame_Maho_C::StartMiniGame()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.EndMiniGame
-// (Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::EndMiniGame()
 {
@@ -318,7 +312,7 @@ void ABP_MiniGame_Maho_C::EndMiniGame()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.CollisionInitialize
-// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::CollisionInitialize()
 {
@@ -335,7 +329,7 @@ void ABP_MiniGame_Maho_C::CollisionInitialize()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.InputAction_ButtonRight
-// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::InputAction_ButtonRight()
 {
@@ -352,7 +346,7 @@ void ABP_MiniGame_Maho_C::InputAction_ButtonRight()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.ReceiveBeginPlay
-// (Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Protected, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::ReceiveBeginPlay()
 {
@@ -369,7 +363,7 @@ void ABP_MiniGame_Maho_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.ReceiveTick
-// (Net, Exec, Native, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Event, Public, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -381,7 +375,6 @@ void ABP_MiniGame_Maho_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -390,7 +383,7 @@ void ABP_MiniGame_Maho_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.UpdateElapsedTime
-// (Exec, Native, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -402,7 +395,6 @@ void ABP_MiniGame_Maho_C::UpdateElapsedTime(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -411,7 +403,7 @@ void ABP_MiniGame_Maho_C::UpdateElapsedTime(float DeltaSeconds)
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.ReStartPlaying
-// (Net, Exec, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::ReStartPlaying()
 {
@@ -428,7 +420,7 @@ void ABP_MiniGame_Maho_C::ReStartPlaying()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.TransEndFallDown
-// (Net, Exec, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::TransEndFallDown()
 {
@@ -445,7 +437,7 @@ void ABP_MiniGame_Maho_C::TransEndFallDown()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.InitializeAnimValue
-// (Exec, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::InitializeAnimValue()
 {
@@ -462,7 +454,7 @@ void ABP_MiniGame_Maho_C::InitializeAnimValue()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.StartGame
-// (Exec, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::StartGame()
 {
@@ -479,7 +471,7 @@ void ABP_MiniGame_Maho_C::StartGame()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.AfterFadeInEvent
-// (Net, NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::AfterFadeInEvent()
 {
@@ -496,7 +488,7 @@ void ABP_MiniGame_Maho_C::AfterFadeInEvent()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.SetEnabledSafeLine
-// (Net, NetReliable, NetRequest, Native, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -508,7 +500,6 @@ void ABP_MiniGame_Maho_C::SetEnabledSafeLine(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -517,7 +508,7 @@ void ABP_MiniGame_Maho_C::SetEnabledSafeLine(bool Enabled)
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.Event_OnChangeAnimState
-// (NetReliable, NetRequest, Native, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<E_MiniGame_MahoPartnerState> State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -529,7 +520,6 @@ void ABP_MiniGame_Maho_C::Event_OnChangeAnimState(TEnumAsByte<E_MiniGame_MahoPar
 	params.State = State;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -538,7 +528,7 @@ void ABP_MiniGame_Maho_C::Event_OnChangeAnimState(TEnumAsByte<E_MiniGame_MahoPar
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.SetKungFuDifficulty
-// (NetReliable, NetRequest, Native, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -550,7 +540,6 @@ void ABP_MiniGame_Maho_C::SetKungFuDifficulty(int Level)
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -559,7 +548,7 @@ void ABP_MiniGame_Maho_C::SetKungFuDifficulty(int Level)
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.TimeUpEvent
-// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::TimeUpEvent()
 {
@@ -576,7 +565,7 @@ void ABP_MiniGame_Maho_C::TimeUpEvent()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.OnTimeUp
-// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::OnTimeUp()
 {
@@ -593,7 +582,7 @@ void ABP_MiniGame_Maho_C::OnTimeUp()
 
 
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.PlayScriptMaho
-// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
+// (BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_Maho_C::PlayScriptMaho()
 {
@@ -609,12 +598,29 @@ void ABP_MiniGame_Maho_C::PlayScriptMaho()
 }
 
 
+// Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.ReachedMaxKungFuLevel
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MiniGame_Maho_C::ReachedMaxKungFuLevel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.ReachedMaxKungFuLevel");
+
+	ABP_MiniGame_Maho_C_ReachedMaxKungFuLevel_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.ExecuteUbergraph_BP_MiniGame_Maho
-// (Net, NetRequest, Exec, NetResponse, Static, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Maho_C::STATIC_ExecuteUbergraph_BP_MiniGame_Maho(int EntryPoint)
+void ABP_MiniGame_Maho_C::ExecuteUbergraph_BP_MiniGame_Maho(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Maho.BP_MiniGame_Maho_C.ExecuteUbergraph_BP_MiniGame_Maho");
 

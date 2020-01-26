@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_PlayerFollow_AdjustSpeed.BTT_PlayerFollow_AdjustSpeed_C.ReceiveTickAI
-// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -30,7 +30,6 @@ void UBTT_PlayerFollow_AdjustSpeed_C::ReceiveTickAI(class AAIController* OwnerCo
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,12 +38,12 @@ void UBTT_PlayerFollow_AdjustSpeed_C::ReceiveTickAI(class AAIController* OwnerCo
 
 
 // Function BTT_PlayerFollow_AdjustSpeed.BTT_PlayerFollow_AdjustSpeed_C.ReceiveAbortAI
-// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_PlayerFollow_AdjustSpeed_C::STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_PlayerFollow_AdjustSpeed_C::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_AdjustSpeed.BTT_PlayerFollow_AdjustSpeed_C.ReceiveAbortAI");
 
@@ -61,11 +60,11 @@ void UBTT_PlayerFollow_AdjustSpeed_C::STATIC_ReceiveAbortAI(class AAIController*
 
 
 // Function BTT_PlayerFollow_AdjustSpeed.BTT_PlayerFollow_AdjustSpeed_C.ExecuteUbergraph_BTT_PlayerFollow_AdjustSpeed
-// (Event, Static, Public, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_PlayerFollow_AdjustSpeed_C::STATIC_ExecuteUbergraph_BTT_PlayerFollow_AdjustSpeed(int EntryPoint)
+void UBTT_PlayerFollow_AdjustSpeed_C::ExecuteUbergraph_BTT_PlayerFollow_AdjustSpeed(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_AdjustSpeed.BTT_PlayerFollow_AdjustSpeed_C.ExecuteUbergraph_BTT_PlayerFollow_AdjustSpeed");
 

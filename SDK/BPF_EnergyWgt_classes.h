@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,7 +27,7 @@ public:
 
 	void STATIC_GetAdventureBarColorEnum(class UObject* __WorldContext, TEnumAsByte<EHealthOrbColor>* AsEnum);
 	void STATIC_GetAdventureBarColor(class UObject* __WorldContext, struct FLinearColor* AsColor);
-	void GetFormattedEnergyStrings(class UObject* __WorldContext, struct FString* HP, struct FString* MaxHP);
+	void STATIC_GetFormattedEnergyStrings(class UObject* __WorldContext, struct FString* HP, struct FString* MaxHP);
 };
 
 

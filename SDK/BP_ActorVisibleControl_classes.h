@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -38,19 +38,19 @@ public:
 	}
 
 
-	float STATIC_GetFadeTime();
+	float GetFadeTime();
 	void GetCharFadeComponent(class AActor* Target, bool* IsValid, class UBTL_MeshFaderComponent** MeshFader);
-	void STATIC_SetFadeTime(float FadeTime);
+	void SetFadeTime(float FadeTime);
 	void AddIgnoreActor(class AActor* Actor);
 	void CanEndOverlapEvent(bool* CAN);
 	void SetVisibleControlRadius(float NewRadius);
-	void STATIC_SetEnbledVisibleControl(bool Enabled);
-	void STATIC_ShowNPC(class AActor* Actor);
+	void SetEnbledVisibleControl(bool Enabled);
+	void ShowNPC(class AActor* Actor);
 	void HideNPC(class AActor* Actor, bool* Hide);
 	void UserConstructionScript();
-	void STATIC_ReceiveBeginPlay();
-	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void STATIC_BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void ExecuteUbergraph_BP_ActorVisibleControl(int EntryPoint);
 };

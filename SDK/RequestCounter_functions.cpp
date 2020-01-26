@@ -1,7 +1,7 @@
 
 #include "../SDK.h"
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function RequestCounter.RequestCounter_C.CreateDebugString
-// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString URequestCounter_C::STATIC_CreateDebugString()
+struct FString URequestCounter_C::CreateDebugString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.CreateDebugString");
 
@@ -35,9 +35,9 @@ struct FString URequestCounter_C::STATIC_CreateDebugString()
 
 
 // Function RequestCounter.RequestCounter_C.Clean
-// (NetRequest, Event, NetResponse, Static, NetMulticast, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void URequestCounter_C::STATIC_Clean()
+void URequestCounter_C::Clean()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.Clean");
 
@@ -52,7 +52,7 @@ void URequestCounter_C::STATIC_Clean()
 
 
 // Function RequestCounter.RequestCounter_C.HasRequestsFast
-// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bHasRequests                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -74,11 +74,11 @@ void URequestCounter_C::HasRequestsFast(bool* bHasRequests)
 
 
 // Function RequestCounter.RequestCounter_C.HasRequests
-// (Net, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bHasRequests                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void URequestCounter_C::STATIC_HasRequests(bool* bHasRequests)
+void URequestCounter_C::HasRequests(bool* bHasRequests)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.HasRequests");
 
@@ -96,12 +96,12 @@ void URequestCounter_C::STATIC_HasRequests(bool* bHasRequests)
 
 
 // Function RequestCounter.RequestCounter_C.RemoveRequester
-// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Requester                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bNewlyRemoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void URequestCounter_C::STATIC_RemoveRequester(class UObject* Requester, bool* bNewlyRemoved)
+void URequestCounter_C::RemoveRequester(class UObject* Requester, bool* bNewlyRemoved)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.RemoveRequester");
 
@@ -109,7 +109,6 @@ void URequestCounter_C::STATIC_RemoveRequester(class UObject* Requester, bool* b
 	params.Requester = Requester;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,12 +120,12 @@ void URequestCounter_C::STATIC_RemoveRequester(class UObject* Requester, bool* b
 
 
 // Function RequestCounter.RequestCounter_C.AddRequester
-// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Requester                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bnewlyAdded                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void URequestCounter_C::STATIC_AddRequester(class UObject* Requester, bool* bnewlyAdded)
+void URequestCounter_C::AddRequester(class UObject* Requester, bool* bnewlyAdded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.AddRequester");
 
@@ -134,7 +133,6 @@ void URequestCounter_C::STATIC_AddRequester(class UObject* Requester, bool* bnew
 	params.Requester = Requester;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,16 +144,15 @@ void URequestCounter_C::STATIC_AddRequester(class UObject* Requester, bool* bnew
 
 
 // Function RequestCounter.RequestCounter_C.OnLastRequestRemove__DelegateSignature
-// (Net, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void URequestCounter_C::STATIC_OnLastRequestRemove__DelegateSignature()
+void URequestCounter_C::OnLastRequestRemove__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.OnLastRequestRemove__DelegateSignature");
 
 	URequestCounter_C_OnLastRequestRemove__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,16 +161,15 @@ void URequestCounter_C::STATIC_OnLastRequestRemove__DelegateSignature()
 
 
 // Function RequestCounter.RequestCounter_C.OnFirstRequestAdd__DelegateSignature
-// (Net, NetReliable, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void URequestCounter_C::STATIC_OnFirstRequestAdd__DelegateSignature()
+void URequestCounter_C::OnFirstRequestAdd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.OnFirstRequestAdd__DelegateSignature");
 
 	URequestCounter_C_OnFirstRequestAdd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

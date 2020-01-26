@@ -1,6 +1,6 @@
 #pragma once
 
-// Name: Shenmue3, Version: 1.0.2
+// Name: Shenmue3SDK, Version: 1.4.1
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,19 +47,19 @@ public:
 	}
 
 
-	void STATIC_FlatteningMorph();
+	void FlatteningMorph();
 	void IsPlayingLabelVoice(bool* Playing);
-	void STATIC_GetActionData(bool IsSuccess, bool Just, bool Unbeli, struct FST_MG_SupportNPCAction* Data);
-	void STATIC_SetLookAtLocation(const struct FVector& LookAtLocation);
+	void GetActionData(bool IsSuccess, bool Just, bool Unbeli, struct FST_MG_SupportNPCAction* Data);
+	void SetLookAtLocation(const struct FVector& LookAtLocation);
 	void UpdateClipper();
-	void STATIC_PlayScript(const struct FName& Label, const struct FName& CharaName);
+	void PlayScript(const struct FName& Label, const struct FName& CharaName);
 	void SetMesh(class USkeletalMesh* NewMesh);
-	void STATIC_ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli);
-	void STATIC_SetEnabled(bool Enabled);
-	void STATIC_UserConstructionScript();
+	void ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli);
+	void SetEnabled(bool Enabled);
+	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void STATIC_ReceiveTick(float DeltaSeconds);
-	void STATIC_Event_ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli);
+	void ReceiveTick(float DeltaSeconds);
+	void Event_ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli);
 	void ExecuteUbergraph_BP_MiniGame_SupportNPC(int EntryPoint);
 };
 
