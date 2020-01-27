@@ -14,7 +14,7 @@ namespace SDK
 
 // BlueprintGeneratedClass SL_Chobu_Sky.SL_Hakkason_Sky_C
 // 0x0020 (0x0350 - 0x0330)
-class ASL_Hakkason_Sky_C : public ALevelScriptActor
+/*class ASL_Hakkason_Sky_C : public ALevelScriptActor
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0330(0x0008) (Transient, DuplicateTransient)
@@ -32,7 +32,7 @@ public:
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_SL_Chobu_Sky(int EntryPoint);
-};
+};*/
 
 
 }

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 // Parameters
 //---------------------------------------------------------------------------
-
+	/*
 // Function SL_Chobu_Sky.SL_Hakkason_Sky_C.ReceiveBeginPlay
 struct ASL_Hakkason_Sky_C_ReceiveBeginPlay_Params
 {
@@ -30,7 +30,7 @@ struct ASL_Hakkason_Sky_C_ExecuteUbergraph_SL_Chobu_Sky_Params
 {
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
-
+*/
 }
 
 #ifdef _MSC_VER
