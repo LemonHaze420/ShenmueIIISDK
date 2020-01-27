@@ -240,11 +240,11 @@ void UBP_CheatManagerBase_C::OnKeyInput_2()
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num+
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_CheatManagerBase_C::OnKeyInput_Num_()
+void UBP_CheatManagerBase_C::OnKeyInput_Num_Plus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num+");
 
-	UBP_CheatManagerBase_C_OnKeyInput_Num__Params params;
+	UBP_CheatManagerBase_C_OnKeyInput_Num_Plus_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -257,11 +257,11 @@ void UBP_CheatManagerBase_C::OnKeyInput_Num_()
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num-
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_CheatManagerBase_C::OnKeyInput_Num_()
+void UBP_CheatManagerBase_C::OnKeyInput_Num_Minus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num-");
 
-	UBP_CheatManagerBase_C_OnKeyInput_Num__Params params;
+	UBP_CheatManagerBase_C_OnKeyInput_Num_Minus_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -206,14 +206,14 @@ void UBP_CheatManager_C::DisplayNPCNum()
 // bool                           signed                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_CheatManager_C::dbgCalcAddtime(float Base, float Bias, bool signed, float* Result)
+void UBP_CheatManager_C::dbgCalcAddtime(float Base, float Bias, bool Signed, float* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManager.BP_CheatManager_C.dbgCalcAddtime");
 
 	UBP_CheatManager_C_dbgCalcAddtime_Params params;
 	params.Base = Base;
 	params.Bias = Bias;
-	params.signed = signed;
+	params.Signed = Signed;
 
 	auto flags = fn->FunctionFlags;
 
@@ -416,11 +416,11 @@ void UBP_CheatManager_C::OnKeyInput_2()
 // Function BP_CheatManager.BP_CheatManager_C.OnKeyInput_Num+
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_CheatManager_C::OnKeyInput_Num_()
+void UBP_CheatManager_C::OnKeyInput_Num_Plus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManager.BP_CheatManager_C.OnKeyInput_Num+");
 
-	UBP_CheatManager_C_OnKeyInput_Num__Params params;
+	UBP_CheatManager_C_OnKeyInput_Num_Plus_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -433,11 +433,11 @@ void UBP_CheatManager_C::OnKeyInput_Num_()
 // Function BP_CheatManager.BP_CheatManager_C.OnKeyInput_Num-
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_CheatManager_C::OnKeyInput_Num_()
+void UBP_CheatManager_C::OnKeyInput_Num_Minus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManager.BP_CheatManager_C.OnKeyInput_Num-");
 
-	UBP_CheatManager_C_OnKeyInput_Num__Params params;
+	UBP_CheatManager_C_OnKeyInput_Num_Minus_Params params;
 
 	auto flags = fn->FunctionFlags;
 
