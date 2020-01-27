@@ -182,11 +182,11 @@ void UBPF_MiniMapMath_C::STATIC_Math_LineLineIntersection(const struct FVector2D
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           _                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* _)
+void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_LessThan(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* _)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D < Vector2D (AND)");
 
-	UBPF_MiniMapMath_C_Vector2D___Vector2D__AND__Params params;
+	UBPF_MiniMapMath_C_Vector2D___Vector2D__AND_LessThan_Params params;
 	params.In_1 = In_1;
 	params.In_2 = In_2;
 	params.__WorldContext = __WorldContext;
@@ -240,11 +240,11 @@ void UBPF_MiniMapMath_C::STATIC_IsPointInRectangle(const struct FVector2D& Rect_
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           _                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* _)
+void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_GreaterThan(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* _)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D > Vector2D (AND)");
 
-	UBPF_MiniMapMath_C_Vector2D___Vector2D__AND__Params params;
+	UBPF_MiniMapMath_C_Vector2D___Vector2D__AND_GreaterThan_Params params;
 	params.In_1 = In_1;
 	params.In_2 = In_2;
 	params.__WorldContext = __WorldContext;
@@ -356,11 +356,11 @@ void UBPF_MiniMapMath_C::STATIC_MapRange_Vector2D(float In, const struct FVector
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Out                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__OR_(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* Out)
+void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__OR_LessThan(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* Out)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D < Vector2D (OR)");
 
-	UBPF_MiniMapMath_C_Vector2D___Vector2D__OR__Params params;
+	UBPF_MiniMapMath_C_Vector2D___Vector2D__OR_LessThan_Params params;
 	params.In_1 = In_1;
 	params.In_2 = In_2;
 	params.__WorldContext = __WorldContext;
@@ -384,11 +384,11 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__OR_(const struct FVector2D&
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Out                            (Parm, OutParm, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_Vector2D_*_Vector2D(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, struct FVector2D* Out)
+void UBPF_MiniMapMath_C::STATIC_Vector2D_Mult_Vector2D(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, struct FVector2D* Out)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D * Vector2D");
 
-	UBPF_MiniMapMath_C_Vector2D_*_Vector2D_Params params;
+	UBPF_MiniMapMath_C_Vector2D_Mult_Vector2D_Params params;
 	params.In_1 = In_1;
 	params.In_2 = In_2;
 	params.__WorldContext = __WorldContext;

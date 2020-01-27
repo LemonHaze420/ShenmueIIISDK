@@ -67,11 +67,11 @@ void ABP_DoorMascot_C::Timeline_0__UpdateFunc()
 // Function BP_DoorMascot.BP_DoorMascot_C.򠪦􆖐񍳔_
 // (BlueprintEvent)
 
-void ABP_DoorMascot_C::򠪦􆖐񍳔_()
+void ABP_DoorMascot_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DoorMascot.BP_DoorMascot_C.򠪦􆖐񍳔_");
 
-	ABP_DoorMascot_C_򠪦􆖐񍳔__Params params;
+	ABP_DoorMascot_C_UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 

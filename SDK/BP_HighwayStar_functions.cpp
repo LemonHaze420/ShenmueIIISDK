@@ -512,11 +512,11 @@ void ABP_HighwayStar_C::UserConstructionScript()
 // Function BP_HighwayStar.BP_HighwayStar_C.򠪦􆖐񍳔_
 // (BlueprintEvent)
 
-void ABP_HighwayStar_C::򠪦􆖐񍳔_()
+void ABP_HighwayStar_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HighwayStar.BP_HighwayStar_C.򠪦􆖐񍳔_");
 
-	ABP_HighwayStar_C_򠪦􆖐񍳔__Params params;
+	ABP_HighwayStar_C_UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 

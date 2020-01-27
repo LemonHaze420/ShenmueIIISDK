@@ -50,7 +50,7 @@ public:
 	void DisplayLightInfo();
 	void DebugAddMoney(bool Add);
 	void DisplayNPCNum();
-	void dbgCalcAddtime(float Base, float Bias, bool signed, float* Result);
+	void dbgCalcAddtime(float Base, float Bias, bool Signed, float* Result);
 	void UserConstructionScript();
 	void ReceiveInitCheatManager();
 	void OnInputKey_Cmd_Insert();
@@ -62,8 +62,8 @@ public:
 	void OnInputKey_CmdAltPageDown();
 	void OnKeyInput_3();
 	void OnKeyInput_2();
-	void OnKeyInput_Num_();
-	void OnKeyInput_Num_();
+	void OnKeyInput_Num_Plus();
+	void OnKeyInput_Num_Minus();
 	void OnInputKey_Alt_L();
 	void OnInputKey_Alt_Shift_L();
 	void OnKeyInput_F9Ctrl();

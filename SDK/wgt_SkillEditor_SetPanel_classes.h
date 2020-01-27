@@ -36,7 +36,7 @@ public:
 
 
 	void ButtonSelect(bool Select);
-	void SetButtonImage(bool auto);
+	void SetButtonImage(bool Auto);
 	void GetSelectedSkillItem_Int_(int* ItemIntID);
 	void SetFocus(bool Focus);
 	void GetSelectedSkillItem_Name_(struct FName* ItemLabel);

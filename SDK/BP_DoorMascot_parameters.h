@@ -30,7 +30,7 @@ struct ABP_DoorMascot_C_Timeline_0__UpdateFunc_Params
 };
 
 // Function BP_DoorMascot.BP_DoorMascot_C.򠪦􆖐񍳔_
-struct ABP_DoorMascot_C_򠪦􆖐񍳔__Params
+struct ABP_DoorMascot_C_UnknownFunc01__Params
 {
 };
 

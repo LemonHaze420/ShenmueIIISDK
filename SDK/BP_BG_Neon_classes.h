@@ -28,7 +28,7 @@ public:
 
 
 	void UserConstructionScript();
-	void 򠪦􆖐񍳔_();
+	void UnknownFunc01();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 };

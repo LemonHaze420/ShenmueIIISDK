@@ -69,7 +69,7 @@ struct UBPF_MiniMapMath_C_Math_LineLineIntersection_Params
 };
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D < Vector2D (AND)
-struct UBPF_MiniMapMath_C_Vector2D___Vector2D__AND__Params
+struct UBPF_MiniMapMath_C_Vector2D___Vector2D__AND_LessThan_Params
 {
 	struct FVector2D                                   In_1;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FVector2D                                   In_2;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -88,7 +88,7 @@ struct UBPF_MiniMapMath_C_IsPointInRectangle_Params
 };
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D > Vector2D (AND)
-struct UBPF_MiniMapMath_C_Vector2D___Vector2D__AND__Params
+struct UBPF_MiniMapMath_C_Vector2D___Vector2D__AND_GreaterThan_Params
 {
 	struct FVector2D                                   In_1;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FVector2D                                   In_2;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -125,16 +125,23 @@ struct UBPF_MiniMapMath_C_MapRange_Vector2D_Params
 };
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D < Vector2D (OR)
-struct UBPF_MiniMapMath_C_Vector2D___Vector2D__OR__Params
+struct UBPF_MiniMapMath_C_Vector2D___Vector2D__OR_LessThan_Params
 {
 	struct FVector2D                                   In_1;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FVector2D                                   In_2;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Out;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
-
+// Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D > Vector2D (OR)
+struct UBPF_MiniMapMath_C_Vector2D___Vector2D__OR_GreaterThan_Params
+{
+	struct FVector2D                                   In_1;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FVector2D                                   In_2;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	class UObject* __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Out;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D * Vector2D
-struct UBPF_MiniMapMath_C_Vector2D_*_Vector2D_Params
+struct UBPF_MiniMapMath_C_Vector2D_Mult_Vector2D_Params
 {
 	struct FVector2D                                   In_1;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FVector2D                                   In_2;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)

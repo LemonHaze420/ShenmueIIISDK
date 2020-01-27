@@ -46,7 +46,7 @@ public:
 	float                                              _______0_FOV_B763085E4A668793E8440AADBCC3DC69;            // 0x06C0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_B763085E4A668793E8440AADBCC3DC69;     // 0x06C4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x06C5(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_1;                                           // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          UnknownVar01;                                           // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               IsPlaying;                                                // 0x06D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsEnd;                                                    // 0x06D1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               right_hit;                                                // 0x06D2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -147,7 +147,7 @@ public:
 	void updateLocation();
 	void setCarRotation();
 	void UserConstructionScript();
-	void 򠪦􆖐񍳔_();
+	void UnknownFunc01();
 	void LightFlickerTimeline__FinishedFunc();
 	void LightFlickerTimeline__UpdateFunc();
 	void Lamp_Flashing__FinishedFunc();

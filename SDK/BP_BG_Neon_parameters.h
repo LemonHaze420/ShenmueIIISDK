@@ -20,7 +20,7 @@ struct ABP_BG_Neon_C_UserConstructionScript_Params
 };
 
 // Function BP_BG_Neon.BP_BG_Neon_C.򠪦􆖐񍳔_
-struct ABP_BG_Neon_C_򠪦􆖐񍳔__Params
+struct ABP_BG_Neon_C_UnknownFunc01__Params
 {
 };
 

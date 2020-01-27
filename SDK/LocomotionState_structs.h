@@ -13,13 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedEnum LocomotionState.LocomotionState
-enum class ELocomotionState : uint8_t
+/*enum class ELocomotionState : uint8_t
 {
 	LocomotionState__NewEnumerator0 = 0,
 	LocomotionState__NewEnumerator1 = 1,
 	LocomotionState__NewEnumerator2 = 2,
 	LocomotionState__LocomotionState_MAX = 3
-};
+};*/
 
 
 

@@ -119,11 +119,11 @@ void ABP_AddressBook_C::UserConstructionScript()
 // Function BP_AddressBook.BP_AddressBook_C.򠪦􆖐񍳔_
 // (BlueprintEvent)
 
-void ABP_AddressBook_C::򠪦􆖐񍳔_()
+void ABP_AddressBook_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.򠪦􆖐񍳔_");
 
-	ABP_AddressBook_C_򠪦􆖐񍳔__Params params;
+	ABP_AddressBook_C_UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 

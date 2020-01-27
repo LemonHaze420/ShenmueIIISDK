@@ -40,7 +40,7 @@ struct UBPC_BTL_CommandSolverBase_C_FindAttackInputsIncludingCombo_Params
 struct UBPC_BTL_CommandSolverBase_C_FindAttackCommand_Params
 {
 	struct FName                                       Attack;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	TArray<TEnumAsByte<EBattleAttackInput>>            OutCommand;                                               // (Parm, OutParm, ZeroConstructor)
+	TArray<TEnumAsByte<SDK::EBattleAttackInput>>       OutCommand;                                               // (Parm, OutParm, ZeroConstructor)
 	bool                                               bFound;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

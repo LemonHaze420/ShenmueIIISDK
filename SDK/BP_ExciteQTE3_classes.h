@@ -27,14 +27,14 @@ public:
 	class US3WidgetToRenderTargetComponent*            S3WidgetToRenderTarget;                                   // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______2__Direction_CB3DEBB842DE3B170505139AF622A3AB;     // 0x0648(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0649(0x0007) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_3;                                           // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          UnknownVar01;                                           // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______1__Direction_FFBABF144E519BFC8B093F910B63891F;     // 0x0658(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0659(0x0007) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_2;                                           // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar02;                                           // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              _______0_FOV_1FF4F8B6467771CCB64E9BB67983957A;            // 0x0668(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_1FF4F8B6467771CCB64E9BB67983957A;     // 0x066C(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x066D(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_1;                                           // 0x0670(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar03;                                           // 0x0670(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              BeepRate;                                                 // 0x0678(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                BeepCount;                                                // 0x067C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                HighScore;                                                // 0x0680(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -83,7 +83,7 @@ public:
 	void ReplayBeep();
 	void PlayQTEBeep(bool Condition);
 	void UserConstructionScript();
-	void 򠪦􆖐񍳔_();
+	void UnknownFunc01();
 	void Push_D_Right();
 	void Push_D_Left();
 	void Push_A();

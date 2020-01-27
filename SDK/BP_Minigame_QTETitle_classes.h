@@ -35,19 +35,19 @@ public:
 	class UStaticMeshComponent*                        VideoCabinet_UE;                                          // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_CDCC615B427228829B5412909D5FD5B0;     // 0x0688(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0689(0x0007) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_1;                                           // 0x0690(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar01;                                           // 0x0690(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______4__Direction_000B4B2540C3627E8191098599E7E246;     // 0x0698(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0699(0x0007) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_5;                                           // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar02;                                           // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    ScoreFlashTimeline__Direction_EFC8C32C4F94B5C66A70CB8B770FBF93;// 0x06A8(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x7];                                       // 0x06A9(0x0007) MISSED OFFSET
 	class UTimelineComponent*                          ScoreFlashTimeline;                                       // 0x06B0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______2__Direction_E811283B4F5239BBADB2249A4FBA65C4;     // 0x06B8(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x7];                                       // 0x06B9(0x0007) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_3;                                           // 0x06C0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar03;                                           // 0x06C0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______1__Direction_0991D76A40F1B706D91C0687CB3F8CC9;     // 0x06C8(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData05[0x7];                                       // 0x06C9(0x0007) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_2;                                           // 0x06D0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar04;                                           // 0x06D0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              MovingPadRightTimeline_Roll_EE297A3644AA70B51E67E2912169A19E;// 0x06D8(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    MovingPadRightTimeline__Direction_EE297A3644AA70B51E67E2912169A19E;// 0x06DC(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x3];                                       // 0x06DD(0x0003) MISSED OFFSET
@@ -199,7 +199,7 @@ public:
 	void MovingPadRightTimeline__SE_Timing__EventFunc();
 	void MovingPadRightTimeline__Feint_Finish__EventFunc();
 	void MovingPadRightTimeline__ShowIcon__EventFunc();
-	void 򠪦􆖐񍳔_();
+	void UnknownFunc01();
 	void ScoreFlashTimeline__FinishedFunc();
 	void ScoreFlashTimeline__UpdateFunc();
 	void ScoreFlashTimeline__test2__EventFunc();

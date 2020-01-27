@@ -39,8 +39,8 @@ public:
 	void OnKeyInput_3();
 	void OnInputKey_P();
 	void OnKeyInput_2();
-	void OnKeyInput_Num_();
-	void OnKeyInput_Num_();
+	void OnKeyInput_Num_Plus();
+	void OnKeyInput_Num_Minus();
 	void OnKeyInput_L();
 	void OnInputKey_Alt_Shift_L();
 	void OnInputKey_Alt_L();

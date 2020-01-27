@@ -23,7 +23,7 @@ public:
 	float                                              _______2_cv_loc_z_263E67B64926CB0BCCC6D3A5BB7A7374;       // 0x0748(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______2__Direction_263E67B64926CB0BCCC6D3A5BB7A7374;     // 0x074C(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x074D(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_3;                                           // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          UnknownVar01;                                           // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               ButtonExec;                                               // 0x0758(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -38,7 +38,7 @@ public:
 	void PushButton(const struct FVector2D& CursorPosition);
 	void AddressBook_NextPage(bool IsNext, bool* Success);
 	void UserConstructionScript();
-	void 򠪦􆖐񍳔_();
+	void UnknownFunc01();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void Destroy();

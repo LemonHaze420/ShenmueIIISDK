@@ -38,7 +38,7 @@ public:
 	void AlertSet();
 	void SetTitleText(const struct FText& InText);
 	void PlayArrowAnim(bool Play);
-	void SetButtonImage(bool auto);
+	void SetButtonImage(bool Auto);
 	void SetSkillSetIndex(const struct FText& SkillSetText, int Index);
 	void Construct();
 	void ExecuteUbergraph_wgt_SkillEditorSetSelector(int EntryPoint);

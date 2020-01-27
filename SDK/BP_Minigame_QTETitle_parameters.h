@@ -297,7 +297,7 @@ struct ABP_Minigame_QTETitle_C_MovingPadRightTimeline__ShowIcon__EventFunc_Param
 };
 
 // Function BP_Minigame_QTETitle.BP_Minigame_QTETitle_C.򠪦􆖐񍳔_
-struct ABP_Minigame_QTETitle_C_򠪦􆖐񍳔__Params
+struct ABP_Minigame_QTETitle_C_UnknownFunc01__Params
 {
 };
 

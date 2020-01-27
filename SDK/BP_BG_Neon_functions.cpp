@@ -33,11 +33,11 @@ void ABP_BG_Neon_C::UserConstructionScript()
 // Function BP_BG_Neon.BP_BG_Neon_C.򠪦􆖐񍳔_
 // (BlueprintEvent)
 
-void ABP_BG_Neon_C::򠪦􆖐񍳔_()
+void ABP_BG_Neon_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_Neon.BP_BG_Neon_C.򠪦􆖐񍳔_");
 
-	ABP_BG_Neon_C_򠪦􆖐񍳔__Params params;
+	ABP_BG_Neon_C_UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 

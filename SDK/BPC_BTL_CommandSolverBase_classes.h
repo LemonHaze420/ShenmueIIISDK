@@ -30,7 +30,7 @@ public:
 	bool STATIC_FindCurrentComboInputs(const struct FName& AttackID, TArray<struct FName>* Inputs, EBTL_HoldInputType* HoldInput);
 	void Init();
 	void STATIC_FindAttackInputsIncludingCombo(const struct FName& Attack, TArray<struct FName>* InputEvents, bool* Found);
-	void FindAttackCommand(const struct FName& Attack, TArray<TEnumAsByte<EBattleAttackInput>>* OutCommand, bool* bFound);
+	void FindAttackCommand(const struct FName& Attack, TArray<TEnumAsByte<SDK::EBattleAttackInput>>* OutCommand, bool* bFound);
 	void STATIC_FindAttackInputs(const struct FName& Attack, TArray<struct FName>* InputEvents, bool* Found);
 	void FindSpecialAttackByItemName(const struct FName& SkillName, struct FName* Attack, bool* bFound);
 	void STATIC_ReceiveBeginPlay();

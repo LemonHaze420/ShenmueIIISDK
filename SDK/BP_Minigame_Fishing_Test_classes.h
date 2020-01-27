@@ -51,7 +51,7 @@ public:
 	float                                              _______0___Track_0_2095B74949F288C1966B6DBB4380FF0B;      // 0x06C0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_2095B74949F288C1966B6DBB4380FF0B;     // 0x06C4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData06[0x3];                                       // 0x06C5(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_1;                                           // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar01;                                           // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              qte_timeline_type2_move_rate_C741B8E845C9E4594DB8EFAF77E262A6;// 0x06D0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    qte_timeline_type2__Direction_C741B8E845C9E4594DB8EFAF77E262A6;// 0x06D4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData07[0x3];                                       // 0x06D5(0x0003) MISSED OFFSET
@@ -402,7 +402,7 @@ public:
 	void qte_timeline_type2__qte_show__EventFunc();
 	void qte_timeline_type2__qte_wait_start__EventFunc();
 	void qte_timeline_type2__qte_start__EventFunc();
-	void 򠪦􆖐񍳔_();
+	void UnknownFunc01();
 	void Particle_Start_Timeline__FinishedFunc();
 	void Particle_Start_Timeline__UpdateFunc();
 	void P();

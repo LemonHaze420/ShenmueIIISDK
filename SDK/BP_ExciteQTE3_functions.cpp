@@ -391,11 +391,11 @@ void ABP_ExciteQTE3_C::UserConstructionScript()
 // Function BP_ExciteQTE3.BP_ExciteQTE3_C.򠪦􆖐񍳔_
 // (BlueprintEvent)
 
-void ABP_ExciteQTE3_C::򠪦􆖐񍳔_()
+void ABP_ExciteQTE3_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExciteQTE3.BP_ExciteQTE3_C.򠪦􆖐񍳔_");
 
-	ABP_ExciteQTE3_C_򠪦􆖐񍳔__Params params;
+	ABP_ExciteQTE3_C_UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 

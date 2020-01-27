@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // UserDefinedEnum EBattleAttackInput.EBattleAttackInput
-enum class EBattleAttackInput : uint8_t
+/*enum class EBattleAttackInput : uint8_t
 {
 	EBattleAttackInput__NewEnumerator6 = 0,
 	EBattleAttackInput__NewEnumerator0 = 1,
@@ -21,7 +21,7 @@ enum class EBattleAttackInput : uint8_t
 	EBattleAttackInput__NewEnumerator7 = 3,
 	EBattleAttackInput__NewEnumerator8 = 4,
 	EBattleAttackInput__EBattleAttackInput_MAX = 5
-};
+};*/
 
 
 

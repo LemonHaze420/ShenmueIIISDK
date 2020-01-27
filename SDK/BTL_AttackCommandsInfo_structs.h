@@ -16,7 +16,7 @@ namespace SDK
 // 0x0010
 struct FBTL_AttackCommandsInfo
 {
-	TArray<TEnumAsByte<EBattleAttackInput>>            Commands_3_4BEE966F44749044515042B652717E04;              // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<TEnumAsByte<SDK::EBattleAttackInput>>            Commands_3_4BEE966F44749044515042B652717E04;              // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

@@ -23,7 +23,7 @@ struct Uwgt_SkillEditor_SetPanel_C_ButtonSelect_Params
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.SetButtonImage
 struct Uwgt_SkillEditor_SetPanel_C_SetButtonImage_Params
 {
-	bool                                               auto;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Auto;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.GetSelectedSkillItem(Int)

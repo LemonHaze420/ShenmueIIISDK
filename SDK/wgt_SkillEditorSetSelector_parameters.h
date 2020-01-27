@@ -34,7 +34,7 @@ struct Uwgt_SkillEditorSetSelector_C_PlayArrowAnim_Params
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.SetButtonImage
 struct Uwgt_SkillEditorSetSelector_C_SetButtonImage_Params
 {
-	bool                                               auto;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Auto;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function wgt_SkillEditorSetSelector.wgt_SkillEditorSetSelector_C.SetSkillSetIndex

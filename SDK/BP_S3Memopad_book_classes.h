@@ -43,11 +43,11 @@ public:
 	float                                              _______1_StartAnimation_EF8A9FB941319A27239E7DBE68118300; // 0x03E0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______1__Direction_EF8A9FB941319A27239E7DBE68118300;     // 0x03E4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x03E5(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_2;                                           // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar01;                                           // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              _______0_cv_loc_z_BE8233C546C12613E4B38BB9D9BA6E76;       // 0x03F0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_BE8233C546C12613E4B38BB9D9BA6E76;     // 0x03F4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x03F5(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          򠪦􆖐񍳔_1;                                           // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar02;                                           // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              fade_cv_loc_z_C110FCD04B072CBAE08CF8B5238DB168;           // 0x0400(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    fade__Direction_C110FCD04B072CBAE08CF8B5238DB168;         // 0x0404(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0405(0x0003) MISSED OFFSET
@@ -247,7 +247,7 @@ public:
 	void tl_PageMove2__UpdateFunc();
 	void fade__FinishedFunc();
 	void fade__UpdateFunc();
-	void 򠪦􆖐񍳔_();
+	void UnknownFunc01();
 	void InpActEvt_Ctrl_Gamepad_RightThumbstick_K2Node_InputKeyEvent_2(const struct FKey& Key);
 	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_20(const struct FKey& Key);
 	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_19(const struct FKey& Key);

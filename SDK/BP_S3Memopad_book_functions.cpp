@@ -1324,11 +1324,11 @@ void ABP_S3Memopad_book_C::fade__UpdateFunc()
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.򠪦􆖐񍳔_
 // (BlueprintEvent)
 
-void ABP_S3Memopad_book_C::򠪦􆖐񍳔_()
+void ABP_S3Memopad_book_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.򠪦􆖐񍳔_");
 
-	ABP_S3Memopad_book_C_򠪦􆖐񍳔__Params params;
+	ABP_S3Memopad_book_C_UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 

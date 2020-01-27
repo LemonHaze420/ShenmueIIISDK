@@ -114,9 +114,9 @@ public:
 	void ForceEndMiniGame(bool* SuccessEnd);
 	void StopBGM();
 	struct FVector GetSightCheckLocation();
-	void UnBindEventToSequenceFinished(const struct FScriptDelegate& ¤0Ù0ó0È0);
+	void UnBindEventToSequenceFinished(const struct FScriptDelegate& UnknownVar01);
 	void SetMeshUpdateEnabled(bool Enabled, class USkeletalMeshComponent* SkeltalMesh);
-	void BindEventToSequenceFinished(class ULevelSequencePlayer* SequencePlayer, const struct FScriptDelegate& ¤0Ù0ó0È0);
+	void BindEventToSequenceFinished(class ULevelSequencePlayer* SequencePlayer, const struct FScriptDelegate& UnknownVar01);
 	void GetMiniGameHelpName(struct FString* String);
 	void SetMiniGameCategory(ES3MiniGameCategory MiniGameCategory);
 	void IsDebugScriptMode(bool* bDebugMode);

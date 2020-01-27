@@ -77,7 +77,7 @@ struct UBW_UDSController_C_FloatPropertyChanged_Event_2_Params
 };
 
 // Function BW_UDSController.BW_UDSController_C.«0¹0¿0à0¤0Ù0ó0È0_1
-struct UBW_UDSController_C_«0¹0¿0à0¤0Ù0ó0È0_1_Params
+struct UBW_UDSController_C_UnknownVar01_Params
 {
 };
 

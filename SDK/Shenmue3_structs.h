@@ -1110,6 +1110,16 @@ enum class ELocomotionState : uint8_t
 };
 
 
+enum class EBattleAttackInput : uint8_t
+{
+	EBattleAttackInput__NewEnumerator6 = 0,
+	EBattleAttackInput__NewEnumerator0 = 1,
+	EBattleAttackInput__NewEnumerator1 = 2,
+	EBattleAttackInput__NewEnumerator7 = 3,
+	EBattleAttackInput__NewEnumerator8 = 4,
+	EBattleAttackInput__EBattleAttackInput_MAX = 5
+};
+
 // Enum Shenmue3.EPositionCorrectionMode
 enum class EPositionCorrectionMode : uint8_t
 {

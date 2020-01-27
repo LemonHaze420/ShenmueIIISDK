@@ -601,7 +601,7 @@ struct ABP_Minigame_Fishing_Test_C_qte_timeline_type2__qte_start__EventFunc_Para
 };
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.򠪦􆖐񍳔_
-struct ABP_Minigame_Fishing_Test_C_򠪦􆖐񍳔__Params
+struct ABP_Minigame_Fishing_Test_C_UnknownFunc01__Params
 {
 };
 

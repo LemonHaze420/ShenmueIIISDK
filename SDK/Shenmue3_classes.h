@@ -7280,7 +7280,7 @@ public:
 	void ResetFingerPointingType();
 	void RequestTurnInPlace(float Angle);
 	void RequestTalkMotion(bool bNewTalking);
-	void RequestReactionChange(TEnumAsByte<EReactionOnTalk> NewTalkReaction);
+	void RequestReactionChange(TEnumAsByte<SDK::EReactionOnTalk> NewTalkReaction);
 	void RequestAnimation(class UAnimSequence* Sequence);
 	void OutputAttachLog(const struct FName& soketName, bool bOn);
 	void OnTalkStart();

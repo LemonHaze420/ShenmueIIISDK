@@ -74,7 +74,7 @@ struct UBP_CheatManager_C_dbgCalcAddtime_Params
 {
 	float                                              Base;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Bias;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               signed;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Signed;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -134,12 +134,12 @@ struct UBP_CheatManager_C_OnKeyInput_2_Params
 };
 
 // Function BP_CheatManager.BP_CheatManager_C.OnKeyInput_Num+
-struct UBP_CheatManager_C_OnKeyInput_Num__Params
+struct UBP_CheatManager_C_OnKeyInput_Num_Plus_Params
 {
 };
 
 // Function BP_CheatManager.BP_CheatManager_C.OnKeyInput_Num-
-struct UBP_CheatManager_C_OnKeyInput_Num__Params
+struct UBP_CheatManager_C_OnKeyInput_Num_Minus_Params
 {
 };
 

@@ -2050,11 +2050,11 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__qte_start__EventFunc()
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.򠪦􆖐񍳔_
 // (BlueprintEvent)
 
-void ABP_Minigame_Fishing_Test_C::򠪦􆖐񍳔_()
+void ABP_Minigame_Fishing_Test_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.򠪦􆖐񍳔_");
 
-	ABP_Minigame_Fishing_Test_C_򠪦􆖐񍳔__Params params;
+	ABP_Minigame_Fishing_Test_C_UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 

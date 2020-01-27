@@ -30,7 +30,7 @@ public:
 	void UserConstructionScript();
 	void Timeline_0__FinishedFunc();
 	void Timeline_0__UpdateFunc();
-	void 򠪦􆖐񍳔_();
+	void UnknownFunc01();
 	void ReceiveBeginPlay();
 };
 

@@ -81,12 +81,12 @@ struct UBP_CheatManagerBase_C_OnKeyInput_2_Params
 };
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num+
-struct UBP_CheatManagerBase_C_OnKeyInput_Num__Params
+struct UBP_CheatManagerBase_C_OnKeyInput_Num_Plus_Params
 {
 };
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num-
-struct UBP_CheatManagerBase_C_OnKeyInput_Num__Params
+struct UBP_CheatManagerBase_C_OnKeyInput_Num_Minus_Params
 {
 };
 

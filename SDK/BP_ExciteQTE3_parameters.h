@@ -126,7 +126,7 @@ struct ABP_ExciteQTE3_C_UserConstructionScript_Params
 };
 
 // Function BP_ExciteQTE3.BP_ExciteQTE3_C.򠪦􆖐񍳔_
-struct ABP_ExciteQTE3_C_򠪦􆖐񍳔__Params
+struct ABP_ExciteQTE3_C_UnknownFunc01__Params
 {
 };
 
