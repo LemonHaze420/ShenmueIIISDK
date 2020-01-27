@@ -246,7 +246,7 @@ void ABP_MiniGame_FL_Manager_C::SpawnActorVisibleController()
 // bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FST_MiniGame_FL_Difficulty YtPn0R                       (Parm, OutParm)
 
-void ABP_MiniGame_FL_Manager_C::GetLoadLevelData(bool* Found, struct FST_MiniGame_FL_Difficulty* YtPn0R)
+void ABP_MiniGame_FL_Manager_C::GetLoadLevelData(bool* Found, struct FST_MiniGame_FL_Difficulty* UnknownVar01)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FL_Manager.BP_MiniGame_FL_Manager_C.GetLoadLevelData");
 
@@ -260,8 +260,8 @@ void ABP_MiniGame_FL_Manager_C::GetLoadLevelData(bool* Found, struct FST_MiniGam
 
 	if (Found != nullptr)
 		*Found = params.Found;
-	if (YtPn0R != nullptr)
-		*YtPn0R = params.YtPn0R;
+	if (UnknownVar01 != nullptr)
+		*UnknownVar01 = params.UnknownVar01;
 }
 
 
@@ -272,7 +272,7 @@ void ABP_MiniGame_FL_Manager_C::GetLoadLevelData(bool* Found, struct FST_MiniGam
 // bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FST_MiniGame_FL_Difficulty YtPn0R                       (Parm, OutParm)
 
-void ABP_MiniGame_FL_Manager_C::GetDataTableByName(const struct FName& RowName, bool* Found, struct FST_MiniGame_FL_Difficulty* YtPn0R)
+void ABP_MiniGame_FL_Manager_C::GetDataTableByName(const struct FName& RowName, bool* Found, struct FST_MiniGame_FL_Difficulty* UnknownVar01)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FL_Manager.BP_MiniGame_FL_Manager_C.GetDataTableByName");
 
@@ -287,8 +287,8 @@ void ABP_MiniGame_FL_Manager_C::GetDataTableByName(const struct FName& RowName, 
 
 	if (Found != nullptr)
 		*Found = params.Found;
-	if (YtPn0R != nullptr)
-		*YtPn0R = params.YtPn0R;
+	if (UnknownVar01 != nullptr)
+		*UnknownVar01 = params.UnknownVar01;
 }
 
 

@@ -83,7 +83,7 @@ struct ABP_MiniGame_FL_Manager_C_SpawnActorVisibleController_Params
 struct ABP_MiniGame_FL_Manager_C_GetLoadLevelData_Params
 {
 	bool                                               Found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FST_MiniGame_FL_Difficulty                  YtPn0R;                                                 // (Parm, OutParm)
+	struct FST_MiniGame_FL_Difficulty                  UnknownVar01;                                                 // (Parm, OutParm)
 };
 
 // Function BP_MiniGame_FL_Manager.BP_MiniGame_FL_Manager_C.GetDataTableByName
@@ -91,7 +91,7 @@ struct ABP_MiniGame_FL_Manager_C_GetDataTableByName_Params
 {
 	struct FName                                       RowName;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Found;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FST_MiniGame_FL_Difficulty                  YtPn0R;                                                 // (Parm, OutParm)
+	struct FST_MiniGame_FL_Difficulty                  UnknownVar01;                                                 // (Parm, OutParm)
 };
 
 // Function BP_MiniGame_FL_Manager.BP_MiniGame_FL_Manager_C.SpawnInputControlActor

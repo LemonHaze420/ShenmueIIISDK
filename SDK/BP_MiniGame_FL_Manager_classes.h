@@ -88,8 +88,8 @@ public:
 	void UpdateDifficulty();
 	void UpdateWidget();
 	void SpawnActorVisibleController();
-	void GetLoadLevelData(bool* Found, struct FST_MiniGame_FL_Difficulty* YtPn0R);
-	void GetDataTableByName(const struct FName& RowName, bool* Found, struct FST_MiniGame_FL_Difficulty* YtPn0R);
+	void GetLoadLevelData(bool* Found, struct FST_MiniGame_FL_Difficulty* UnknownVar01);
+	void GetDataTableByName(const struct FName& RowName, bool* Found, struct FST_MiniGame_FL_Difficulty* UnknownVar01);
 	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
 	void SpawnPlayer();
 	void UserConstructionScript();

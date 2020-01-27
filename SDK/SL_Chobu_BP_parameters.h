@@ -155,7 +155,7 @@ struct ASL_Chobu_BP_C_TimeMarkAPS_Params
 // Function SL_Chobu_BP.SL_Chobu_BP_C.SetReturnRyosyaAPS
 struct ASL_Chobu_BP_C_SetReturnRyosyaAPS_Params
 {
-	int                                                typeid;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Typeid;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function SL_Chobu_BP.SL_Chobu_BP_C.TimeDebugDisp
@@ -403,7 +403,7 @@ struct ASL_Chobu_BP_C_IsDuringFreeConversation_Params
 };
 
 // Function SL_Chobu_BP.SL_Chobu_BP_C.InpActEvt_Ctrl+Shift_@_K2Node_InputKeyEvent_2
-struct ASL_Chobu_BP_C_InpActEvt_Ctrl_Shift_@_K2Node_InputKeyEvent_2_Params
+struct ASL_Chobu_BP_C_InpActEvt_Ctrl_Shift_At_K2Node_InputKeyEvent_2_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };

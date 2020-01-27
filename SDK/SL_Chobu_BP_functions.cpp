@@ -477,12 +477,12 @@ void ASL_Chobu_BP_C::TimeMarkAPS(int ApsHour, bool Ryosya_Aps)
 // Parameters:
 // int                            typeid                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ASL_Chobu_BP_C::SetReturnRyosyaAPS(int typeid)
+void ASL_Chobu_BP_C::SetReturnRyosyaAPS(int Typeid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SL_Chobu_BP.SL_Chobu_BP_C.SetReturnRyosyaAPS");
 
 	ASL_Chobu_BP_C_SetReturnRyosyaAPS_Params params;
-	params.typeid = typeid;
+	params.Typeid = Typeid;
 
 	auto flags = fn->FunctionFlags;
 

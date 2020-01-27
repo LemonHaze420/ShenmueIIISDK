@@ -233,7 +233,7 @@ public:
 	void MakeMaxTimerControl_Chobu(float limit_time);
 	void Branch_StepAPS_Chobu(const struct FName& save_id, const struct FString& step_aps_id);
 	void TimeMarkAPS(int ApsHour, bool Ryosya_Aps);
-	void SetReturnRyosyaAPS(int typeid);
+	void SetReturnRyosyaAPS(int Typeid);
 	void TimeDebugDisp();
 	void TimeScheduleCtrl(bool onSchedule);
 	void GroupSetMemoFlag(const struct FString& SetMemoID, bool SetFlag);
@@ -269,7 +269,7 @@ public:
 	void EnableDetection(bool isTalk, bool isMemo, bool isMenu);
 	void IsFreeOperationState(bool* DuringEvent);
 	void IsDuringFreeConversation(bool* Talking);
-	void InpActEvt_Ctrl_Shift_@_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void InpActEvt_Ctrl_Shift_At_K2Node_InputKeyEvent_2(const struct FKey& Key);
 	void ReceiveBeginPlay();
 	void BindEvent_StartTimerCutscene();
 	void StartTimerCutscene(const struct FName& CutsceneName);
