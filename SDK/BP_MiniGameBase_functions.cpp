@@ -597,12 +597,12 @@ struct FVector ABP_MiniGameBase_C::GetSightCheckLocation()
 // Parameters:
 // struct FScriptDelegate         ¤0Ù0ó0È0                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_MiniGameBase_C::UnBindEventToSequenceFinished(const struct FScriptDelegate& ¤0Ù0ó0È0)
+void ABP_MiniGameBase_C::UnBindEventToSequenceFinished(const struct FScriptDelegate& UnknownVar01)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameBase.BP_MiniGameBase_C.UnBindEventToSequenceFinished");
 
 	ABP_MiniGameBase_C_UnBindEventToSequenceFinished_Params params;
-	params.¤0Ù0ó0È0 = ¤0Ù0ó0È0;
+	params.UnknownVar01 = UnknownVar01;
 
 	auto flags = fn->FunctionFlags;
 
@@ -640,13 +640,13 @@ void ABP_MiniGameBase_C::SetMeshUpdateEnabled(bool Enabled, class USkeletalMeshC
 // class ULevelSequencePlayer*    SequencePlayer                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FScriptDelegate         ¤0Ù0ó0È0                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_MiniGameBase_C::BindEventToSequenceFinished(class ULevelSequencePlayer* SequencePlayer, const struct FScriptDelegate& ¤0Ù0ó0È0)
+void ABP_MiniGameBase_C::BindEventToSequenceFinished(class ULevelSequencePlayer* SequencePlayer, const struct FScriptDelegate& UnknownVar01)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameBase.BP_MiniGameBase_C.BindEventToSequenceFinished");
 
 	ABP_MiniGameBase_C_BindEventToSequenceFinished_Params params;
 	params.SequencePlayer = SequencePlayer;
-	params.¤0Ù0ó0È0 = ¤0Ù0ó0È0;
+	params.UnknownVar01 = UnknownVar01;
 
 	auto flags = fn->FunctionFlags;
 

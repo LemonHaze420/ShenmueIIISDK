@@ -16,7 +16,7 @@ namespace SDK
 // Function SL_Hakkason_Sky.SL_Hakkason_Sky_C.ReceiveBeginPlay
 // (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ASL_Hakkason_Sky_C::STATIC_ReceiveBeginPlay()
+void ASL_Hakkason_Sky_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SL_Hakkason_Sky.SL_Hakkason_Sky_C.ReceiveBeginPlay");
 
@@ -56,7 +56,7 @@ void ASL_Hakkason_Sky_C::ReceiveTick(float DeltaSeconds)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ASL_Hakkason_Sky_C::STATIC_ExecuteUbergraph_SL_Hakkason_Sky(int EntryPoint)
+void ASL_Hakkason_Sky_C::ExecuteUbergraph_SL_Hakkason_Sky(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SL_Hakkason_Sky.SL_Hakkason_Sky_C.ExecuteUbergraph_SL_Hakkason_Sky");
 

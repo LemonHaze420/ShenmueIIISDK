@@ -228,11 +228,11 @@ void UBW_UDSController_C::FloatPropertyChanged_Event_2()
 // Function BW_UDSController.BW_UDSController_C.«0¹0¿0à0¤0Ù0ó0È0_1
 // (BlueprintCallable, BlueprintEvent)
 
-void UBW_UDSController_C::«0¹0¿0à0¤0Ù0ó0È0_1()
+void UBW_UDSController_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_UDSController.BW_UDSController_C.«0¹0¿0à0¤0Ù0ó0È0_1");
 
-	UBW_UDSController_C_«0¹0¿0à0¤0Ù0ó0È0_1_Params params;
+	UBW_UDSController_C_UnknownFunc01_1_Params params;
 
 	auto flags = fn->FunctionFlags;
 

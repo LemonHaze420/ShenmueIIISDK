@@ -1296,11 +1296,11 @@ void ASL_Chobu_BP_C::IsDuringFreeConversation(bool* Talking)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ASL_Chobu_BP_C::InpActEvt_Ctrl_Shift_@_K2Node_InputKeyEvent_2(const struct FKey& Key)
+void ASL_Chobu_BP_C::InpActEvt_Ctrl_Shift_At_K2Node_InputKeyEvent_2(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SL_Chobu_BP.SL_Chobu_BP_C.InpActEvt_Ctrl+Shift_@_K2Node_InputKeyEvent_2");
 
-	ASL_Chobu_BP_C_InpActEvt_Ctrl_Shift_@_K2Node_InputKeyEvent_2_Params params;
+	ASL_Chobu_BP_C_InpActEvt_Ctrl_Shift_At_K2Node_InputKeyEvent_2_Params params;
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;

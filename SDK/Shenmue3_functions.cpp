@@ -28049,7 +28049,7 @@ void US3NPCAnimInstance::RequestTalkMotion(bool bNewTalking)
 // Parameters:
 // TEnumAsByte<EReactionOnTalk>   NewTalkReaction                (Parm, ZeroConstructor, IsPlainOldData)
 
-void US3NPCAnimInstance::RequestReactionChange(TEnumAsByte<EReactionOnTalk> NewTalkReaction)
+void US3NPCAnimInstance::RequestReactionChange(TEnumAsByte<SDK::EReactionOnTalk> NewTalkReaction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Shenmue3.S3NPCAnimInstance.RequestReactionChange");
 

@@ -29,9 +29,10 @@ public:
 	}
 
 
-	void STATIC_ReceiveBeginPlay();
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void STATIC_ExecuteUbergraph_SL_Hakkason_Sky(int EntryPoint);
+	void ExecuteUbergraph_SL_Hakkason_Sky(int EntryPoint);
+	void ExecuteUbergraph_SL_Chobu_Sky(int EntryPoint);
 };
 
 

@@ -31,6 +31,11 @@ struct ASL_Hakkason_Sky_C_ExecuteUbergraph_SL_Hakkason_Sky_Params
 	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function SL_Hakkason_Sky.SL_Hakkason_Sky_C.ExecuteUbergraph_SL_Hakkason_Sky
+struct ASL_Hakkason_Sky_C_ExecuteUbergraph_SL_Chobu_Sky_Params
+{
+	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
 }
 
 #ifdef _MSC_VER

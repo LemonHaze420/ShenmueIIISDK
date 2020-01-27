@@ -38,12 +38,12 @@ void Uwgt_SkillEditor_SetPanel_C::ButtonSelect(bool Select)
 // Parameters:
 // bool                           auto                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SetPanel_C::SetButtonImage(bool auto)
+void Uwgt_SkillEditor_SetPanel_C::SetButtonImage(bool Auto)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.SetButtonImage");
 
 	Uwgt_SkillEditor_SetPanel_C_SetButtonImage_Params params;
-	params.auto = auto;
+	params.Auto = Auto;
 
 	auto flags = fn->FunctionFlags;
 
