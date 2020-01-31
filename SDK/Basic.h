@@ -4,9 +4,13 @@
 #define GOBJECTS_COUNT_OFFSET_V102	0x32C985C
 #define GNAMES_OFFSET_V102			0x32C0BA0
 
+#define GOBJECTS_OFFSET_V10501		0x32CA838
+#define GNAMES_OFFSET_V10501		0x32C1BA0
+
 #define UE4_VERSTRING_V102			0x22EF8F0
 #define UE4_VERSTRING_V10201		0x22EF7F0
 #define UE4_VERSTRING_V10401		0x22EF140
+#define UE4_VERSTRING_V10501		0x22F0230
 
 #define WIN32_LEAN_AND_MEAN         // Exclude rarely-used stuff from Windows headers
 
@@ -59,6 +63,7 @@ namespace SDK
 					Build:		02947
 	*/
 	enum Version {
+		V10501,
 		V10401,
 		V102,
 		V10201,
