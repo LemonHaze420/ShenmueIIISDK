@@ -7,10 +7,14 @@
 #define GOBJECTS_OFFSET_V10501		0x32CA838
 #define GNAMES_OFFSET_V10501		0x32C1BA0
 
+#define GOBJECTS_OFFSET_V10600_STEAM	0x32CA8B8
+#define GNAMES_OFFSET_V10600_STEAM		0x32C1C20
+
 #define UE4_VERSTRING_V102			0x22EF8F0
 #define UE4_VERSTRING_V10201		0x22EF7F0
 #define UE4_VERSTRING_V10401		0x22EF140
 #define UE4_VERSTRING_V10501		0x22F0230
+#define UE4_VERSTRING_V10600_STEAM	0x22EFD40
 
 #define WIN32_LEAN_AND_MEAN         // Exclude rarely-used stuff from Windows headers
 
@@ -61,8 +65,16 @@ namespace SDK
 		*	v1.04.01
 					Version:	1.04.01
 					Build:		02947
+		*	v1.06.00
+		*		*EGS*
+					Version:	1.06.00
+					Build:		03112
+		*		*Steam*
+					Version:	1.06.01
+					Build:		01798
 	*/
 	enum Version {
+		V10601_STEAM,
 		V10501,
 		V10401,
 		V102,

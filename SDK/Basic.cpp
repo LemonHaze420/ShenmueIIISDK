@@ -72,6 +72,12 @@ namespace SDK
 	//---------------------------------------------------------------------------
 	Version determineVersion()
 	{
+		if (!memcmp((void*)(g_BaseAddress + UE4_VERSTRING_V10600_STEAM), "\x2B\x00\x2B\x00\x55\x00\x45\x00\x34\x00\x2B\x00\x52\x00\x65\x00", 16)) {		// "++UE4+Release-4.20"
+#ifdef _DEBUG
+			printf("Detected full game - v1.06.00 - Steam\n");
+#endif
+			return V10601_STEAM;
+		}
 		if (!memcmp((void*)(g_BaseAddress + UE4_VERSTRING_V10501), "\x2B\x00\x2B\x00\x55\x00\x45\x00\x34\x00\x2B\x00\x52\x00\x65\x00", 16)) {		// "++UE4+Release-4.20"
 #ifdef _DEBUG
 			printf("Detected full game - v1.05.01\n");
@@ -118,7 +124,8 @@ namespace SDK
 		// Detect version and set offsets
 		Version ver = determineVersion();
 		auto objectsOffs = g_BaseAddress, nameOffs = g_BaseAddress;
-		if		(ver == V10501)									objectsOffs += GOBJECTS_OFFSET_V10501, nameOffs += GNAMES_OFFSET_V10501;
+		if		(ver == V10601_STEAM)								objectsOffs += GOBJECTS_OFFSET_V10600_STEAM, nameOffs += GNAMES_OFFSET_V10600_STEAM;
+		else if		(ver == V10501)									objectsOffs += GOBJECTS_OFFSET_V10501, nameOffs += GNAMES_OFFSET_V10501;
 		else if (ver == V102 || ver == V10201 || ver == V10401)	objectsOffs += GOBJECTS_OFFSET_V102, nameOffs += GNAMES_OFFSET_V102;
 		else if (ver == INVALID) {
 			MessageBoxA(NULL, "Error detecting game version. Exiting.", "Shenmue III SDK", MB_OK);
