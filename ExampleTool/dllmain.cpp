@@ -37,6 +37,12 @@ void Detach() {
 	printf(MOD_STRING " detached\n");
 }
 
+namespace SDK {
+	void customPECall(UObject* _this, UFunction* pFunction, void* pParms) {
+		// ... code goes here ...
+	}
+};
+
 // ---------------------------------------------------------------------------------
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 {
